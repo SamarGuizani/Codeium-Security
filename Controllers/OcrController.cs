@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Codeium_Security.OCR;
+﻿using Codeium_Security.OCR;
+using Codeium_Security.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Codeium_Security.Controllers
 {
@@ -8,10 +9,12 @@ namespace Codeium_Security.Controllers
     public class OcrController : ControllerBase
     {
         private readonly IOcrService _ocrService;
+        private readonly BankDocumentParser _parser;
 
-        public OcrController(IOcrService ocrService)
+        public OcrController(IOcrService ocrService, BankDocumentParser parser)
         {
             _ocrService = ocrService;
+            _parser = parser;
         }
 
         [HttpPost]
@@ -19,6 +22,8 @@ namespace Codeium_Security.Controllers
         {
             if (file == null || file.Length == 0)
                 return BadRequest("No file uploaded.");
+
+            Directory.CreateDirectory("Images");
 
             var filePath = Path.Combine("Images", file.FileName);
 
@@ -29,7 +34,13 @@ namespace Codeium_Security.Controllers
 
             var result = await _ocrService.ExtractTextAsync(filePath);
 
-            return Ok(result);
+            var document = _parser.Parse(result.FullText);
+
+            return Ok(new
+            {
+                Ocr = result,
+                Document = document
+            });
         }
     }
 }

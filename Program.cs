@@ -1,23 +1,25 @@
 using Codeium_Security.OCR;
+using Codeium_Security.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
 builder.Services.AddControllers();
 
-// Swagger : g√©n√®re la doc + l'interface
+// Swagger UI (l'interface visuelle de test)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IOcrService, TesseractOcrService>();
+builder.Services.AddScoped<BankDocumentParser>();
 
 var app = builder.Build();
 
-// Active Swagger UI toujours (pas seulement en Development, pour l'instant, le temps de tester)
+// Configure the HTTP request pipeline.
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// On d√©sactive temporairement HTTPS redirect (comme not√© dans ton doc, √ßa bloquait)
-// app.UseHttpsRedirection();
+// app.UseHttpsRedirection(); // dÈsactivÈ temporairement pour Èviter l'erreur de port pendant le dev
 
 app.UseAuthorization();
 app.MapControllers();

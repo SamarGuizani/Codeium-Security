@@ -24,7 +24,6 @@
     <Folder Include="Output\" />
     <Folder Include="TrainingData\" />
     <Folder Include="Utilities\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
