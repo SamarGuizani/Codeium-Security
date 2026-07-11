@@ -14,6 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IOcrService, TesseractOcrService>();
 builder.Services.AddScoped<BankDocumentParser>();
 builder.Services.AddScoped<DocumentAnalysisEngine>();
+builder.Services.AddScoped<PdfToImageConverter>();
 
 var app = builder.Build();
 
