@@ -26,7 +26,11 @@ namespace Codeium_Security.Services
         {
             var transactions = new List<Transaction>();
             var dateRegex = new Regex(@"\d{2}/\d{2}/\d{4}");
-            var numberRegex = new Regex(@"-?\d[\d\s]*[.,]\d{2,3}");
+
+            // Regex STRICTE : chiffres (1-3), puis groupes EXACTS de 3 chiffres séparés
+            // par un seul espace, puis un séparateur décimal et 2-3 décimales.
+            // Ça empêche d'avaler des numéros de chèque ou des dates par erreur.
+            var numberRegex = new Regex(@"-?\d{1,3}(?:\s\d{3})*[.,]\d{2,3}");
 
             foreach (var line in lines)
             {
@@ -35,25 +39,21 @@ namespace Codeium_Security.Services
                 var dateMatches = dateRegex.Matches(lineText);
                 if (dateMatches.Count == 0) continue;
 
-                // On prend la DERNIÈRE date de la ligne comme point de départ
-                // (il peut y avoir 2 dates : date opération + date valeur)
-                var lastDate = dateMatches[dateMatches.Count - 1];
-                int searchStart = lastDate.Index + lastDate.Length;
+                var numberMatches = numberRegex.Matches(lineText);
+                if (numberMatches.Count == 0) continue;
 
-                // Description = tout ce qui est ENTRE la première et la dernière date
                 var firstDate = dateMatches[0];
+
                 int descStart = firstDate.Index + firstDate.Length;
-                int descEnd = lastDate.Index;
+                int descEnd = numberMatches[0].Index;
 
                 string description = descEnd > descStart
-                    ? lineText.Substring(descStart, descEnd - descStart).Trim(' ', '|', '[', ']')
+                    ? lineText.Substring(descStart, descEnd - descStart)
                     : "";
 
-                // On cherche les montants SEULEMENT après la dernière date
-                string remainder = lineText.Substring(searchStart);
-                var numberMatches = numberRegex.Matches(remainder);
-
-                if (numberMatches.Count == 0) continue;
+                // On retire une éventuelle 2ème date (date de valeur) qui traînerait
+                // dans le texte de la description, puis on nettoie les symboles parasites
+                description = dateRegex.Replace(description, "").Trim(' ', '|', '[', ']', '-', '_');
 
                 var tx = new Transaction
                 {
