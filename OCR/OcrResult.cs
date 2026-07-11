@@ -1,4 +1,5 @@
-﻿namespace Codeium_Security.OCR
+﻿using Tesseract;
+namespace Codeium_Security.OCR
 {
     public class OcrResult
     {

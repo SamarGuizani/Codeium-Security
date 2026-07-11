@@ -13,5 +13,7 @@
         public decimal Balance { get; set; }
 
         public DateTime? StatementDate { get; set; }
+
+        public List<Transaction> Transactions { get; set; } = new();
     }
 }

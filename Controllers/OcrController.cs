@@ -10,11 +10,13 @@ namespace Codeium_Security.Controllers
     {
         private readonly IOcrService _ocrService;
         private readonly BankDocumentParser _parser;
+        private readonly DocumentAnalysisEngine _engine;
 
-        public OcrController(IOcrService ocrService, BankDocumentParser parser)
+        public OcrController(IOcrService ocrService, BankDocumentParser parser, DocumentAnalysisEngine engine)
         {
             _ocrService = ocrService;
             _parser = parser;
+            _engine = engine;
         }
 
         [HttpPost]
@@ -34,7 +36,9 @@ namespace Codeium_Security.Controllers
 
             var result = await _ocrService.ExtractTextAsync(filePath);
 
-            var document = _parser.Parse(result.FullText);
+            var lines = _engine.GroupWordsIntoLines(result.Words);
+
+            var document = _parser.Parse(result.FullText, lines);
 
             return Ok(new
             {
