@@ -1,5 +1,6 @@
 using Codeium_Security.OCR;
 using Codeium_Security.Services;
+using Codeium_Security.Services.DocumentParsers;
 
 var builder = WebApplication.CreateBuilder(args);
 

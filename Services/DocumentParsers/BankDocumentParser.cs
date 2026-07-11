@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using Codeium_Security.Models;
 
-namespace Codeium_Security.Services
+namespace Codeium_Security.Services.DocumentParsers
 {
     public class BankDocumentParser
     {

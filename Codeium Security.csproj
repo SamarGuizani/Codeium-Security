@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Folder Include="MachineLearning\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Logs\" />
     <Folder Include="FeatureExtraction\" />
     <Folder Include="Images\" />
