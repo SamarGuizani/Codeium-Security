@@ -24,6 +24,7 @@ builder.Services.AddScoped<IDocumentParser, ReceiptDocumentParser>();
 builder.Services.AddScoped<DocumentParserFactory>();
 builder.Services.AddScoped<ImageFormatConverter>();
 builder.Services.AddScoped<IDocumentParser, AcademicDocumentParser>();
+builder.Services.AddScoped<DocumentProcessingService>();
 
 
 var app = builder.Build();

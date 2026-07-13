@@ -1,9 +1,7 @@
-﻿using Codeium_Security.Factories;
-using Codeium_Security.OCR;
+﻿using Codeium_Security.Models;
 using Codeium_Security.Services;
-using Codeium_Security.Services.DocumentClassification;
-using Codeium_Security.Utilities;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace Codeium_Security.Controllers
 {
@@ -11,29 +9,19 @@ namespace Codeium_Security.Controllers
     [Route("api/[controller]")]
     public class OcrController : ControllerBase
     {
-        private readonly IOcrService _ocrService;
-        private readonly DocumentAnalysisEngine _engine;
-        private readonly PdfToImageConverter _pdfConverter;
-        private readonly IDocumentClassifier _classifier;
-        private readonly DocumentParserFactory _parserFactory;
-        private readonly ImageFormatConverter _formatConverter;
-    
+        private readonly DocumentProcessingService _processingService;
+        private static readonly string[] SupportedExtensions =
+            { ".pdf", ".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".gif", ".webp" };
 
-        public OcrController(
-            IOcrService ocrService,
-            DocumentAnalysisEngine engine,
-            PdfToImageConverter pdfConverter,
-            IDocumentClassifier classifier,
-            DocumentParserFactory parserFactory,
-            ImageFormatConverter formatConverter)
+        private static readonly JsonSerializerOptions JsonOptions = new()
         {
-            _ocrService = ocrService;
-            _engine = engine;
-            _pdfConverter = pdfConverter;
-            _classifier = classifier;
-            _parserFactory = parserFactory;
-            _formatConverter = formatConverter;
-           
+            WriteIndented = true,
+            PropertyNamingPolicy = null
+        };
+
+        public OcrController(DocumentProcessingService processingService)
+        {
+            _processingService = processingService;
         }
 
         [HttpPost]
@@ -42,7 +30,7 @@ namespace Codeium_Security.Controllers
             if (files == null || files.Count == 0)
                 return BadRequest("No file uploaded.");
 
-            var allResults = new List<object>();
+            var allResults = new List<DocumentProcessingResult>();
 
             foreach (var file in files)
             {
@@ -52,59 +40,64 @@ namespace Codeium_Security.Controllers
                 var filePath = Path.Combine("Images", file.FileName);
 
                 using (var stream = new FileStream(filePath, FileMode.Create))
-                {
                     await file.CopyToAsync(stream);
-                }
 
-                OcrResult ocrResult;
-
-                // Si le format n'est pas supporté par Tesseract (webp, etc.), on convertit d'abord
-                if (!_pdfConverter.IsPdf(file.FileName) && _formatConverter.NeedsConversion(file.FileName))
-                {
-                    filePath = _formatConverter.ConvertToPng(filePath);
-                }
-
-                if (_pdfConverter.IsPdf(file.FileName))
-                {
-                    string pdfImagesFolder = Path.Combine("Images", "pdf_pages_" + Path.GetFileNameWithoutExtension(file.FileName));
-                    var pageImagePaths = _pdfConverter.ConvertPdfToImages(filePath, pdfImagesFolder);
-
-                    var pageResults = new List<OcrResult>();
-                    foreach (var pageImagePath in pageImagePaths)
-                        pageResults.Add(await _ocrService.ExtractTextAsync(pageImagePath));
-
-                    ocrResult = OcrResult.Merge(pageResults);
-                }
-                else
-                {
-                    ocrResult = await _ocrService.ExtractTextAsync(filePath);
-                }
-              
-
-                // Nettoyage des caractères invisibles AVANT tout traitement
-                ocrResult.FullText = TextCleaner.RemoveInvisibleMarks(ocrResult.FullText);
-                foreach (var word in ocrResult.Words)
-                {
-                    word.Text = TextCleaner.RemoveInvisibleMarks(word.Text);
-                }
-                // ── C'est ici que le diagramme prend vie ──
-                var lines = _engine.GroupWordsIntoLines(ocrResult.Words);
-                var documentType = _classifier.Classify(ocrResult.FullText);
-                var parser = _parserFactory.GetParser(documentType);
-                object? document = parser?.Parse(ocrResult.FullText, lines);
-
-                allResults.Add(new
-                {
-                    FileName = file.FileName,
-                    DetectedType = documentType.ToString(),
-                    PageCount = ocrResult.PageCount,
-                    Document = document,
-                    DebugLines = lines.Select(l => l.FullLineText).ToList()   // ← TEMPORAIRE, à retirer après debug
-                });
+                var result = await _processingService.ProcessFileAsync(filePath, file.FileName);
+                allResults.Add(result);
             }
 
             return Ok(allResults);
         }
 
+        [HttpPost("process-batch")]
+        public async Task<IActionResult> ProcessBatch()
+        {
+            const string imagesFolder = "Images";
+            const string outputFolder = "TrainingData/RawResults";
+
+            Directory.CreateDirectory(imagesFolder);
+            Directory.CreateDirectory(outputFolder);
+
+            var files = Directory.GetFiles(imagesFolder)
+                .Where(f => SupportedExtensions.Contains(Path.GetExtension(f), StringComparer.OrdinalIgnoreCase))
+                .OrderBy(f => f)
+                .ToList();
+
+            if (files.Count == 0)
+                return BadRequest($"No supported files found in {imagesFolder}/.");
+
+            var savedFiles = new List<string>();
+            var errors = new List<object>();
+
+            foreach (var filePath in files)
+            {
+                var fileName = Path.GetFileName(filePath);
+                var outputPath = Path.Combine(outputFolder, Path.GetFileNameWithoutExtension(fileName) + ".json");
+                var errorPath = Path.Combine(outputFolder, Path.GetFileNameWithoutExtension(fileName) + ".error.txt");
+
+                try
+                {
+                    if (System.IO.File.Exists(errorPath))
+                        System.IO.File.Delete(errorPath);
+
+                    var result = await _processingService.ProcessFileAsync(filePath, fileName);
+                    var json = JsonSerializer.Serialize(result, JsonOptions);
+                    await System.IO.File.WriteAllTextAsync(outputPath, json);
+                    savedFiles.Add(outputPath);
+                }
+                catch (Exception ex)
+                {
+                    await System.IO.File.WriteAllTextAsync(errorPath, ex.ToString());
+                    errors.Add(new { FileName = fileName, Error = ex.Message });
+                }
+            }
+
+            return Ok(new
+            {
+                Count = savedFiles.Count,
+                Files = savedFiles,
+                Errors = errors
+            });
+        }
     }
 }

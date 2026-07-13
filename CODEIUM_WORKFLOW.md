@@ -4,8 +4,8 @@ But
 - Exécuter le pipeline OCR + parsing sur tous les fichiers présents dans Images/ et sauvegarder les résultats JSON dans TrainingData/RawResults/.
 
 Endpoint
-- POST /api/ocr/process-batch
-- Retourne: { Count: n, Files: ["TrainingData/RawResults/foo.json", ...] }
+- POST /api/Ocr/process-batch
+- Retourne: { Count: n, Files: ["TrainingData/RawResults/foo.json", ...], Errors: [...] }
 
 Recommandations
 - Pour un grand volume (>50 fichiers) préférer exécution hors HTTP (script PowerShell) car le traitement peut être long.
@@ -16,8 +16,15 @@ Script PowerShell minimal
 ```powershell
 # Depuis la racine du projet
 dotnet run --project "Codeium Security.csproj"
-# puis appeler l'endpoint via curl ou Postman
-curl -X POST http://localhost:5000/api/ocr/process-batch
+# puis dans une autre console:
+.\scripts\run-batch.ps1
+```
+
+Mesure de qualité
+```powershell
+# Après avoir rempli TrainingData/ground_truth.csv:
+.\scripts\compare-quality.ps1
+# Produit TrainingData/quality_report.csv
 ```
 
 Fichiers générés

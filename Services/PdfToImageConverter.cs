@@ -7,16 +7,24 @@ namespace Codeium_Security.Services
 {
     public class PdfToImageConverter
     {
-        // Convertit chaque page d'un PDF en fichier PNG, retourne la liste des chemins créés
+        private readonly IConfiguration _configuration;
+
+        public PdfToImageConverter(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         public List<string> ConvertPdfToImages(string pdfPath, string outputFolder)
         {
             var imagePaths = new List<string>();
+            int maxWidth = _configuration.GetValue("Ocr:PdfMaxWidth", 2480);
+            int maxHeight = _configuration.GetValue("Ocr:PdfMaxHeight", 3508);
 
             Directory.CreateDirectory(outputFolder);
 
             using var docReader = DocLib.Instance.GetDocReader(
                 pdfPath,
-                new PageDimensions(1920, 2560)); // haute résolution pour un meilleur OCR
+                new PageDimensions(maxWidth, maxHeight));
 
             int pageCount = docReader.GetPageCount();
 

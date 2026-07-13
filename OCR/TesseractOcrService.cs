@@ -5,22 +5,33 @@ namespace Codeium_Security.OCR
 {
     public class TesseractOcrService : IOcrService
     {
+        private readonly IConfiguration _configuration;
+
+        public TesseractOcrService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         public async Task<OcrResult> ExtractTextAsync(string imagePath)
         {
             return await Task.Run(() =>
             {
+                var languages = _configuration.GetValue("Ocr:Languages", "eng+fra+ara")!;
+                var pageSegMode = _configuration.GetValue("Ocr:PageSegMode", 6);
+
                 using var engine = new TesseractEngine(
                     "./tessdata",
-                    "eng+fra+ara",
+                    languages,
                     EngineMode.Default);
 
-                using var img = Pix.LoadFromFile(imagePath);
+                engine.SetVariable("tessedit_pageseg_mode", pageSegMode.ToString());
+                engine.SetVariable("user_defined_dpi", "300");
 
+                using var img = Pix.LoadFromFile(imagePath);
                 using var page = engine.Process(img);
 
                 var text = page.GetText();
                 var confidence = page.GetMeanConfidence();
-
                 var words = new List<OcrWord>();
 
                 using (var iter = page.GetIterator())
@@ -48,14 +59,13 @@ namespace Codeium_Security.OCR
                         }
                     } while (iter.Next(PageIteratorLevel.Word));
                 }
-                var result = new OcrResult
+
+                return new OcrResult
                 {
                     FullText = text,
                     Confidence = confidence * 100,
-                    Words = words   // ← la ligne qui manquait
+                    Words = words
                 };
-
-                return result;
             });
         }
     }
