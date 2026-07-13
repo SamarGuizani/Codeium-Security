@@ -17,6 +17,7 @@ namespace Codeium_Security.Controllers
         private readonly IDocumentClassifier _classifier;
         private readonly DocumentParserFactory _parserFactory;
         private readonly ImageFormatConverter _formatConverter;
+    
 
         public OcrController(
             IOcrService ocrService,
@@ -32,6 +33,7 @@ namespace Codeium_Security.Controllers
             _classifier = classifier;
             _parserFactory = parserFactory;
             _formatConverter = formatConverter;
+           
         }
 
         [HttpPost]
@@ -103,5 +105,6 @@ namespace Codeium_Security.Controllers
 
             return Ok(allResults);
         }
+
     }
 }

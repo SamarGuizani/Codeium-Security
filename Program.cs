@@ -5,6 +5,7 @@ using Codeium_Security.Services;
 using Codeium_Security.Services.DocumentClassification;
 using Codeium_Security.Services.DocumentParsers;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,6 +24,7 @@ builder.Services.AddScoped<IDocumentParser, ReceiptDocumentParser>();
 builder.Services.AddScoped<DocumentParserFactory>();
 builder.Services.AddScoped<ImageFormatConverter>();
 builder.Services.AddScoped<IDocumentParser, AcademicDocumentParser>();
+
 
 var app = builder.Build();
 
