@@ -8,25 +8,41 @@ namespace Codeium_Security.Services.DocumentClassification
         {
             string text = fullText.ToUpperInvariant();
 
-            bool looksLikeBank =
-                text.Contains("RELEVE") || text.Contains("COMPTE") ||
-                text.Contains("SOLDE") || text.Contains("RIB") ||
-                (text.Contains("DEBIT") && text.Contains("CREDIT"));
+            var scores = new Dictionary<DocumentType, int>
+            {
+                { DocumentType.Bank, 0 },
+                { DocumentType.Invoice, 0 },
+                { DocumentType.Receipt, 0 },
+                { DocumentType.Academic, 0 }
+            };
 
-            bool looksLikeInvoice =
-                text.Contains("FACTURE") || text.Contains("INVOICE") ||
-                text.Contains("TOTAL HT") || text.Contains("TOTAL TTC") ||
-                text.Contains("TVA");
+            // Chaque mot-clé trouvé ajoute 1 point à sa catégorie
+            AddScoreIfContains(scores, text, DocumentType.Bank,
+                "RELEVE", "COMPTE", "SOLDE", "RIB", "IBAN", "BANQUE");
 
-            bool looksLikeReceipt =
-                text.Contains("TICKET") || text.Contains("RECU") ||
-                text.Contains("REÇU") || text.Contains("CAISSE");
+            AddScoreIfContains(scores, text, DocumentType.Invoice,
+                "FACTURE", "INVOICE", "TOTAL HT", "TOTAL TTC", "TVA", "FOURNISSEUR");
 
-            if (looksLikeBank) return DocumentType.Bank;
-            if (looksLikeInvoice) return DocumentType.Invoice;
-            if (looksLikeReceipt) return DocumentType.Receipt;
+            AddScoreIfContains(scores, text, DocumentType.Receipt,
+                "TICKET", "RECU", "REÇU", "CAISSE", "PAIEMENT", "MERCI DE VOTRE VISITE", "ESPECES");
 
-            return DocumentType.Unknown;
+            AddScoreIfContains(scores, text, DocumentType.Academic,
+                "RELEVE DE NOTES", "UNIVERSITE", "FACULTE", "SEMESTRE", "MOYENNE",
+                "MATIERE", "CREDIT ECTS", "ETUDIANT", "ISIMM", "INSCRIPTION");
+
+            // On prend la catégorie avec le score le plus élevé (si > 0)
+            var best = scores.OrderByDescending(s => s.Value).First();
+
+            return best.Value > 0 ? best.Key : DocumentType.Unknown;
+        }
+
+        private void AddScoreIfContains(Dictionary<DocumentType, int> scores, string text, DocumentType type, params string[] keywords)
+        {
+            foreach (var keyword in keywords)
+            {
+                if (text.Contains(keyword))
+                    scores[type]++;
+            }
         }
     }
 }

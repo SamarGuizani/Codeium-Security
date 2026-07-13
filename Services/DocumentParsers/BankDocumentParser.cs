@@ -1,23 +1,33 @@
 ﻿using System.Globalization;
 using System.Text.RegularExpressions;
+using Codeium_Security.Interfaces;
 using Codeium_Security.Models;
 
 namespace Codeium_Security.Services.DocumentParsers
 {
-    public class BankDocumentParser
+    public class BankDocumentParser : IDocumentParser
     {
-        public BankDocument Parse(string text, List<TextLine>? lines = null)
+        public DocumentType SupportedType => DocumentType.Bank;
+
+        // Accepte JJ/MM/AAAA (BNA) OU JJMMAAAA collé (BIAT)
+        private static readonly Regex DateRegex =
+            new(@"\d{2}[/\-.]\d{2}[/\-.]\d{4}|\d{8}");
+
+        // Accepte les montants avec séparateur milliers en espace, point ou virgule
+        private static readonly Regex AmountRegex =
+            new(@"-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3}");
+
+        public object Parse(string fullText, List<TextLine> lines)
         {
-            var document = new BankDocument();
-
-            document.AccountNumber = ExtractAccountNumber(text);
-            document.Currency = ExtractCurrency(text);
-            document.Balance = ExtractBalance(text);
-            document.CustomerName = ExtractCustomerName(text);
-            document.BankName = ExtractBankName(text);
-
-            if (lines != null)
-                document.Transactions = ExtractTransactions(lines);
+            var document = new BankDocument
+            {
+                AccountNumber = ExtractAccountNumber(fullText),
+                Currency = ExtractCurrency(fullText),
+                Balance = ExtractBalance(fullText),
+                CustomerName = ExtractCustomerName(fullText),
+                BankName = ExtractBankName(fullText),
+                Transactions = ExtractTransactions(lines)
+            };
 
             return document;
         }
@@ -25,57 +35,37 @@ namespace Codeium_Security.Services.DocumentParsers
         private List<Transaction> ExtractTransactions(List<TextLine> lines)
         {
             var transactions = new List<Transaction>();
-            var dateRegex = new Regex(@"\d{2}/\d{2}/\d{4}");
-
-            // Regex STRICTE : chiffres (1-3), puis groupes EXACTS de 3 chiffres séparés
-            // par un seul espace, puis un séparateur décimal et 2-3 décimales.
-            // Ça empêche d'avaler des numéros de chèque ou des dates par erreur.
-            var numberRegex = new Regex(@"-?\d{1,3}(?:\s\d{3})*[.,]\d{2,3}");
 
             foreach (var line in lines)
             {
                 var lineText = line.FullLineText;
 
-                var dateMatches = dateRegex.Matches(lineText);
+                var dateMatches = DateRegex.Matches(lineText);
                 if (dateMatches.Count == 0) continue;
 
-                var numberMatches = numberRegex.Matches(lineText);
-                if (numberMatches.Count == 0) continue;
+                // On prend la DERNIÈRE date de la ligne (= date de valeur, la plus fiable)
+                var dateMatch = dateMatches[dateMatches.Count - 1];
 
-                var firstDate = dateMatches[0];
+                string remainder = lineText.Substring(dateMatch.Index + dateMatch.Length);
+                var amountMatches = AmountRegex.Matches(remainder);
+                if (amountMatches.Count == 0) continue;
 
-                int descStart = firstDate.Index + firstDate.Length;
-                int descEnd = numberMatches[0].Index;
+                string description = lineText.Substring(0, dateMatch.Index)
+                    .Trim(' ', '|', '[', ']', '-', '_');
 
-                string description = descEnd > descStart
-                    ? lineText.Substring(descStart, descEnd - descStart)
-                    : "";
-
-                // On retire une éventuelle 2ème date (date de valeur) qui traînerait
-                // dans le texte de la description, puis on nettoie les symboles parasites
-                description = dateRegex.Replace(description, "").Trim(' ', '|', '[', ']', '-', '_');
+                // Retire un numéro jour/mois isolé en début de description (ex: "03 01 ")
+                description = Regex.Replace(description, @"^\d{1,2}\s?\d{0,2}\s*", "").Trim();
 
                 var tx = new Transaction
                 {
-                    Date = firstDate.Value,
+                    Date = NormalizeDate(dateMatch.Value),
                     Description = description
                 };
 
-                var cleanedNumbers = numberMatches
-                    .Select(m => m.Value.Replace(" ", "").Replace(',', '.'))
-                    .ToList();
+                var amounts = amountMatches.Select(m => ParseAmount(m.Value)).ToList();
 
-                if (cleanedNumbers.Count >= 1)
-                {
-                    decimal.TryParse(cleanedNumbers[0], NumberStyles.Any, CultureInfo.InvariantCulture, out var amount);
-                    tx.Debit = amount;
-                }
-
-                if (cleanedNumbers.Count >= 2)
-                {
-                    decimal.TryParse(cleanedNumbers[^1], NumberStyles.Any, CultureInfo.InvariantCulture, out var balance);
-                    tx.BalanceAfterOperation = balance;
-                }
+                if (amounts.Count >= 1) tx.Debit = amounts[0];
+                if (amounts.Count >= 2) tx.Credit = amounts[1];
 
                 transactions.Add(tx);
             }
@@ -83,10 +73,50 @@ namespace Codeium_Security.Services.DocumentParsers
             return transactions;
         }
 
+        // Transforme "04012023" en "04/01/2023" ; laisse "01/07/2025" tel quel
+        private string NormalizeDate(string raw)
+        {
+            if (raw.Length == 8 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.'))
+                return $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}/{raw.Substring(4, 4)}";
+
+            return raw;
+        }
+
+        // Convertit "5.385,866" OU "1 500.01" en decimal correct,
+        // en détectant automatiquement quel est le séparateur décimal (le dernier)
+        private decimal ParseAmount(string raw)
+        {
+            int lastSepIndex = -1;
+            for (int i = raw.Length - 1; i >= 0; i--)
+            {
+                if (raw[i] == '.' || raw[i] == ',' || raw[i] == ' ')
+                {
+                    lastSepIndex = i;
+                    break;
+                }
+            }
+
+            if (lastSepIndex == -1)
+            {
+                decimal.TryParse(raw, NumberStyles.Any, CultureInfo.InvariantCulture, out var direct);
+                return direct;
+            }
+
+            string integerPart = raw.Substring(0, lastSepIndex).Replace(".", "").Replace(",", "").Replace(" ", "");
+            string decimalPart = raw.Substring(lastSepIndex + 1);
+
+            decimal.TryParse(integerPart + "." + decimalPart, NumberStyles.Any, CultureInfo.InvariantCulture, out var result);
+            return result;
+        }
+
         private string ExtractAccountNumber(string text)
         {
             var match = Regex.Match(text, @"Compte\s*:?\s*([0-9A-Z\s]+?)(?=Relation|\\n|\n)");
-            return match.Success ? match.Groups[1].Value.Trim() : "";
+            if (match.Success) return match.Groups[1].Value.Trim();
+
+            // Format RIB (utilisé par BIAT) : "RIB : 08 307 00059 10 02049 0 36"
+            var ribMatch = Regex.Match(text, @"RIB\s*:?\s*([0-9\s]+)");
+            return ribMatch.Success ? ribMatch.Groups[1].Value.Trim() : "";
         }
 
         private string ExtractCurrency(string text)
@@ -100,14 +130,10 @@ namespace Codeium_Security.Services.DocumentParsers
 
         private decimal ExtractBalance(string text)
         {
-            var matches = Regex.Matches(text, @"-?\d[\d\s]*[.,]\d{2,3}");
+            var matches = AmountRegex.Matches(text);
             if (matches.Count == 0) return 0;
 
-            var lastMatch = matches[matches.Count - 1];
-            var cleaned = lastMatch.Value.Replace(" ", "").Replace(',', '.');
-
-            decimal.TryParse(cleaned, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal balance);
-            return balance;
+            return ParseAmount(matches[matches.Count - 1].Value);
         }
 
         private string ExtractCustomerName(string text)
@@ -130,10 +156,8 @@ namespace Codeium_Security.Services.DocumentParsers
             };
 
             foreach (var bank in knownBanks)
-            {
                 if (text.Contains(bank.Keyword))
                     return bank.FullName;
-            }
 
             return "";
         }

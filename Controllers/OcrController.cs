@@ -1,6 +1,8 @@
-﻿using Codeium_Security.OCR;
+﻿using Codeium_Security.Factories;
+using Codeium_Security.OCR;
 using Codeium_Security.Services;
-using Codeium_Security.Services.DocumentParsers;
+using Codeium_Security.Services.DocumentClassification;
+using Codeium_Security.Utilities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Codeium_Security.Controllers
@@ -10,20 +12,26 @@ namespace Codeium_Security.Controllers
     public class OcrController : ControllerBase
     {
         private readonly IOcrService _ocrService;
-        private readonly BankDocumentParser _parser;
         private readonly DocumentAnalysisEngine _engine;
         private readonly PdfToImageConverter _pdfConverter;
+        private readonly IDocumentClassifier _classifier;
+        private readonly DocumentParserFactory _parserFactory;
+        private readonly ImageFormatConverter _formatConverter;
 
         public OcrController(
             IOcrService ocrService,
-            BankDocumentParser parser,
             DocumentAnalysisEngine engine,
-            PdfToImageConverter pdfConverter)
+            PdfToImageConverter pdfConverter,
+            IDocumentClassifier classifier,
+            DocumentParserFactory parserFactory,
+            ImageFormatConverter formatConverter)
         {
             _ocrService = ocrService;
-            _parser = parser;
             _engine = engine;
             _pdfConverter = pdfConverter;
+            _classifier = classifier;
+            _parserFactory = parserFactory;
+            _formatConverter = formatConverter;
         }
 
         [HttpPost]
@@ -48,36 +56,48 @@ namespace Codeium_Security.Controllers
 
                 OcrResult ocrResult;
 
+                // Si le format n'est pas supporté par Tesseract (webp, etc.), on convertit d'abord
+                if (!_pdfConverter.IsPdf(file.FileName) && _formatConverter.NeedsConversion(file.FileName))
+                {
+                    filePath = _formatConverter.ConvertToPng(filePath);
+                }
+
                 if (_pdfConverter.IsPdf(file.FileName))
                 {
-                    // PDF : convertir chaque page en image, OCR chaque page, fusionner
                     string pdfImagesFolder = Path.Combine("Images", "pdf_pages_" + Path.GetFileNameWithoutExtension(file.FileName));
                     var pageImagePaths = _pdfConverter.ConvertPdfToImages(filePath, pdfImagesFolder);
 
                     var pageResults = new List<OcrResult>();
                     foreach (var pageImagePath in pageImagePaths)
-                    {
-                        var pageResult = await _ocrService.ExtractTextAsync(pageImagePath);
-                        pageResults.Add(pageResult);
-                    }
+                        pageResults.Add(await _ocrService.ExtractTextAsync(pageImagePath));
 
                     ocrResult = OcrResult.Merge(pageResults);
                 }
                 else
                 {
-                    // Image simple (PNG, JPG...)
                     ocrResult = await _ocrService.ExtractTextAsync(filePath);
                 }
+              
 
+                // Nettoyage des caractères invisibles AVANT tout traitement
+                ocrResult.FullText = TextCleaner.RemoveInvisibleMarks(ocrResult.FullText);
+                foreach (var word in ocrResult.Words)
+                {
+                    word.Text = TextCleaner.RemoveInvisibleMarks(word.Text);
+                }
+                // ── C'est ici que le diagramme prend vie ──
                 var lines = _engine.GroupWordsIntoLines(ocrResult.Words);
-                var document = _parser.Parse(ocrResult.FullText, lines);
+                var documentType = _classifier.Classify(ocrResult.FullText);
+                var parser = _parserFactory.GetParser(documentType);
+                object? document = parser?.Parse(ocrResult.FullText, lines);
 
                 allResults.Add(new
                 {
                     FileName = file.FileName,
+                    DetectedType = documentType.ToString(),
                     PageCount = ocrResult.PageCount,
-                    Ocr = ocrResult,
-                    Document = document
+                    Document = document,
+                    DebugLines = lines.Select(l => l.FullLineText).ToList()   // ← TEMPORAIRE, à retirer après debug
                 });
             }
 

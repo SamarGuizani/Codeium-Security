@@ -24,7 +24,6 @@
     <Folder Include="tessdata\" />
     <Folder Include="Output\" />
     <Folder Include="TrainingData\" />
-    <Folder Include="Utilities\" />
   </ItemGroup>
 
 </Project>

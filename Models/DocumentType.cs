@@ -7,6 +7,8 @@
         Invoice,
         Receipt,
         DeliveryNote,
-        Contract
+        Contract,
+        Academic
+
     }
 }
