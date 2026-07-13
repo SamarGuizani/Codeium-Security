@@ -36,7 +36,8 @@ namespace Codeium_Security.OCR
                     });
                 }
 
-                verticalOffset += 3000; // grand espace arbitraire entre pages
+                int pageMaxBottom = page.Words.Count > 0 ? page.Words.Max(w => w.Bottom) : 0;
+                verticalOffset += pageMaxBottom + 500; // +500 = marge de sécurité entre pages
             }
 
             merged.FullText = string.Join("\n\n", textParts);

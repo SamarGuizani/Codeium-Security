@@ -1,6 +1,10 @@
-﻿namespace Codeium_Security.Services.DocumentClassification
+﻿using Codeium_Security.Models;
+
+namespace Codeium_Security.Services.DocumentClassification
 {
-    public class IDocumentClassifier
+    public interface  IDocumentClassifier
     {
+
+        DocumentType Classify(string fullText);
     }
 }

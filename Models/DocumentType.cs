@@ -3,7 +3,7 @@
     public enum DocumentType
     {
         Unknown,
-        BankStatement,
+        Bank,
         Invoice,
         Receipt,
         DeliveryNote,

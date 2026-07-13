@@ -20,6 +20,7 @@
     <Folder Include="Logs\" />
     <Folder Include="FeatureExtraction\" />
     <Folder Include="Images\" />
+    <Folder Include="RawResults\" />
     <Folder Include="tessdata\" />
     <Folder Include="Output\" />
     <Folder Include="TrainingData\" />
