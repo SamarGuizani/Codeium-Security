@@ -10,5 +10,7 @@ namespace Codeium_Security.Models
         public string? RawOcrText { get; set; }
         public object? Document { get; set; }
         public List<string> DebugLines { get; set; } = new();
+
+        public List<WordCoordinate> Words { get; set; } = new();
     }
 }

@@ -76,5 +76,1959 @@
     "Je m\u0027engage \u00E0 respecter le r\u00E8glement int\u00E9rieur de l\u0027institution commission du mast\u00E8re",
     "Tunisle: 14/07/2026",
     "Signature du candidat"
+  ],
+  "Words": [
+    {
+      "Text": "INSTITUT",
+      "Confidence": 90.01302,
+      "Left": 159,
+      "Top": 216,
+      "Right": 314,
+      "Bottom": 238
+    },
+    {
+      "Text": "SUPERIEUR",
+      "Confidence": 91.37838,
+      "Left": 159,
+      "Top": 244,
+      "Right": 315,
+      "Bottom": 262
+    },
+    {
+      "Text": "I",
+      "Confidence": 86.9164,
+      "Left": 308,
+      "Top": 220,
+      "Right": 352,
+      "Bottom": 283
+    },
+    {
+      "Text": "I",
+      "Confidence": 86.35417,
+      "Left": 409,
+      "Top": 220,
+      "Right": 436,
+      "Bottom": 283
+    },
+    {
+      "Text": "INFORMATIQUE",
+      "Confidence": 90.850235,
+      "Left": 159,
+      "Top": 268,
+      "Right": 319,
+      "Bottom": 287
+    },
+    {
+      "Text": "\u0627\u0644\u0645\u0639\u0647\u062F",
+      "Confidence": 92.70708,
+      "Left": 370,
+      "Top": 290,
+      "Right": 441,
+      "Bottom": 325
+    },
+    {
+      "Text": "\u0627\u0644\u0639\u0627\u0644\u0649",
+      "Confidence": 34.76159,
+      "Left": 292,
+      "Top": 286,
+      "Right": 360,
+      "Bottom": 340
+    },
+    {
+      "Text": "\u0644\u0644\u0625\u0639\u0644\u0627\u0645\u064A\u0629",
+      "Confidence": 90.71705,
+      "Left": 158,
+      "Top": 290,
+      "Right": 441,
+      "Bottom": 325
+    },
+    {
+      "Text": "Formulaire",
+      "Confidence": 92.25776,
+      "Left": 734,
+      "Top": 194,
+      "Right": 897,
+      "Bottom": 221
+    },
+    {
+      "Text": "de",
+      "Confidence": 92.93346,
+      "Left": 908,
+      "Top": 194,
+      "Right": 943,
+      "Bottom": 221
+    },
+    {
+      "Text": "pr\u00E9-inscription",
+      "Confidence": 88.74763,
+      "Left": 955,
+      "Top": 194,
+      "Right": 1178,
+      "Bottom": 228
+    },
+    {
+      "Text": "Institut",
+      "Confidence": 92.766,
+      "Left": 708,
+      "Top": 257,
+      "Right": 815,
+      "Bottom": 282
+    },
+    {
+      "Text": "Sup\u00E9rieur",
+      "Confidence": 92.78092,
+      "Left": 825,
+      "Top": 256,
+      "Right": 973,
+      "Bottom": 289
+    },
+    {
+      "Text": "d\u0027Informatique",
+      "Confidence": 90.703865,
+      "Left": 983,
+      "Top": 256,
+      "Right": 1205,
+      "Bottom": 289
+    },
+    {
+      "Text": "Master",
+      "Confidence": 92.944595,
+      "Left": 668,
+      "Top": 319,
+      "Right": 774,
+      "Bottom": 344
+    },
+    {
+      "Text": "de",
+      "Confidence": 92.704575,
+      "Left": 784,
+      "Top": 317,
+      "Right": 820,
+      "Bottom": 344
+    },
+    {
+      "Text": "Recherche",
+      "Confidence": 91.442116,
+      "Left": 831,
+      "Top": 317,
+      "Right": 992,
+      "Bottom": 344
+    },
+    {
+      "Text": "en",
+      "Confidence": 93.121086,
+      "Left": 1002,
+      "Top": 325,
+      "Right": 1037,
+      "Bottom": 344
+    },
+    {
+      "Text": "Informatique",
+      "Confidence": 90.59285,
+      "Left": 1049,
+      "Top": 317,
+      "Right": 1245,
+      "Bottom": 351
+    },
+    {
+      "Text": "Informations",
+      "Confidence": 92.40201,
+      "Left": 108,
+      "Top": 592,
+      "Right": 380,
+      "Bottom": 629
+    },
+    {
+      "Text": "g\u00E9n\u00E9rales",
+      "Confidence": 92.10445,
+      "Left": 395,
+      "Top": 592,
+      "Right": 603,
+      "Bottom": 639
+    },
+    {
+      "Text": "Cin/Identifiant",
+      "Confidence": 84.54191,
+      "Left": 122,
+      "Top": 781,
+      "Right": 326,
+      "Bottom": 807
+    },
+    {
+      "Text": "unique",
+      "Confidence": 92.757454,
+      "Left": 336,
+      "Top": 781,
+      "Right": 431,
+      "Bottom": 812
+    },
+    {
+      "Text": ":",
+      "Confidence": 92.99652,
+      "Left": 442,
+      "Top": 788,
+      "Right": 447,
+      "Bottom": 805
+    },
+    {
+      "Text": "Nom",
+      "Confidence": 92.962006,
+      "Left": 123,
+      "Top": 901,
+      "Right": 187,
+      "Bottom": 924
+    },
+    {
+      "Text": "et",
+      "Confidence": 92.28826,
+      "Left": 198,
+      "Top": 903,
+      "Right": 224,
+      "Bottom": 924
+    },
+    {
+      "Text": "pr\u00E9nom",
+      "Confidence": 92.93246,
+      "Left": 234,
+      "Top": 900,
+      "Right": 341,
+      "Bottom": 930
+    },
+    {
+      "Text": ":",
+      "Confidence": 91.98354,
+      "Left": 353,
+      "Top": 906,
+      "Right": 358,
+      "Bottom": 924
+    },
+    {
+      "Text": "E-mail",
+      "Confidence": 89.935905,
+      "Left": 123,
+      "Top": 1017,
+      "Right": 211,
+      "Bottom": 1041
+    },
+    {
+      "Text": ":",
+      "Confidence": 93.0385,
+      "Left": 223,
+      "Top": 1024,
+      "Right": 228,
+      "Bottom": 1041
+    },
+    {
+      "Text": "T\u00E9l\u00E9phone",
+      "Confidence": 91.70402,
+      "Left": 121,
+      "Top": 1135,
+      "Right": 270,
+      "Bottom": 1166
+    },
+    {
+      "Text": ":",
+      "Confidence": 92.51501,
+      "Left": 281,
+      "Top": 1142,
+      "Right": 286,
+      "Bottom": 1159
+    },
+    {
+      "Text": "Situation",
+      "Confidence": 92.51059,
+      "Left": 122,
+      "Top": 1253,
+      "Right": 248,
+      "Bottom": 1277
+    },
+    {
+      "Text": ":",
+      "Confidence": 93.169716,
+      "Left": 259,
+      "Top": 1260,
+      "Right": 265,
+      "Bottom": 1277
+    },
+    {
+      "Text": "Date",
+      "Confidence": 90.03708,
+      "Left": 123,
+      "Top": 1372,
+      "Right": 186,
+      "Bottom": 1395
+    },
+    {
+      "Text": "de",
+      "Confidence": 91.92208,
+      "Left": 196,
+      "Top": 1371,
+      "Right": 229,
+      "Bottom": 1395
+    },
+    {
+      "Text": "soumission",
+      "Confidence": 90.85034,
+      "Left": 239,
+      "Top": 1371,
+      "Right": 402,
+      "Bottom": 1395
+    },
+    {
+      "Text": ":",
+      "Confidence": 92.94701,
+      "Left": 413,
+      "Top": 1378,
+      "Right": 418,
+      "Bottom": 1395
+    },
+    {
+      "Text": "Besoin",
+      "Confidence": 90.87565,
+      "Left": 123,
+      "Top": 1490,
+      "Right": 217,
+      "Bottom": 1514
+    },
+    {
+      "Text": "sp\u00E9cifique",
+      "Confidence": 89.86478,
+      "Left": 228,
+      "Top": 1490,
+      "Right": 375,
+      "Bottom": 1521
+    },
+    {
+      "Text": ":",
+      "Confidence": 93.18421,
+      "Left": 386,
+      "Top": 1497,
+      "Right": 391,
+      "Bottom": 1514
+    },
+    {
+      "Text": "15264606",
+      "Confidence": 96.293076,
+      "Left": 579,
+      "Top": 782,
+      "Right": 722,
+      "Bottom": 805
+    },
+    {
+      "Text": "Guizani",
+      "Confidence": 92.28102,
+      "Left": 578,
+      "Top": 900,
+      "Right": 683,
+      "Bottom": 924
+    },
+    {
+      "Text": "Samar",
+      "Confidence": 91.35783,
+      "Left": 693,
+      "Top": 901,
+      "Right": 785,
+      "Bottom": 924
+    },
+    {
+      "Text": "guizanisamarz@gmail.com",
+      "Confidence": 88.82277,
+      "Left": 578,
+      "Top": 1017,
+      "Right": 965,
+      "Bottom": 1048
+    },
+    {
+      "Text": "99544206",
+      "Confidence": 96.55017,
+      "Left": 578,
+      "Top": 1137,
+      "Right": 722,
+      "Bottom": 1160
+    },
+    {
+      "Text": "Externe",
+      "Confidence": 93.13598,
+      "Left": 579,
+      "Top": 1254,
+      "Right": 685,
+      "Bottom": 1277
+    },
+    {
+      "Text": "2026-07-12",
+      "Confidence": 91.30076,
+      "Left": 578,
+      "Top": 1372,
+      "Right": 747,
+      "Bottom": 1395
+    },
+    {
+      "Text": "17:36:34",
+      "Confidence": 91.44017,
+      "Left": 759,
+      "Top": 1372,
+      "Right": 883,
+      "Bottom": 1395
+    },
+    {
+      "Text": "Non",
+      "Confidence": 92.29641,
+      "Left": 579,
+      "Top": 1491,
+      "Right": 633,
+      "Bottom": 1514
+    },
+    {
+      "Text": "Dossier",
+      "Confidence": 91.96365,
+      "Left": 1416,
+      "Top": 402,
+      "Right": 1523,
+      "Bottom": 426
+    },
+    {
+      "Text": ":",
+      "Confidence": 92.57024,
+      "Left": 1532,
+      "Top": 409,
+      "Right": 1538,
+      "Bottom": 426
+    },
+    {
+      "Text": "13445",
+      "Confidence": 96.651344,
+      "Left": 1550,
+      "Top": 403,
+      "Right": 1638,
+      "Bottom": 426
+    },
+    {
+      "Text": "Master",
+      "Confidence": 92.43203,
+      "Left": 108,
+      "Top": 2069,
+      "Right": 256,
+      "Bottom": 2104
+    },
+    {
+      "Text": "Intitul\u00E9",
+      "Confidence": 92.286934,
+      "Left": 123,
+      "Top": 2258,
+      "Right": 221,
+      "Bottom": 2282
+    },
+    {
+      "Text": ":",
+      "Confidence": 91.8934,
+      "Left": 231,
+      "Top": 2264,
+      "Right": 236,
+      "Bottom": 2281
+    },
+    {
+      "Text": "Master",
+      "Confidence": 90.254,
+      "Left": 579,
+      "Top": 2259,
+      "Right": 678,
+      "Bottom": 2282
+    },
+    {
+      "Text": "de",
+      "Confidence": 90.254,
+      "Left": 687,
+      "Top": 2257,
+      "Right": 720,
+      "Bottom": 2282
+    },
+    {
+      "Text": "Recherche",
+      "Confidence": 91.768036,
+      "Left": 731,
+      "Top": 2257,
+      "Right": 881,
+      "Bottom": 2282
+    },
+    {
+      "Text": "en",
+      "Confidence": 92.17084,
+      "Left": 890,
+      "Top": 2264,
+      "Right": 923,
+      "Bottom": 2282
+    },
+    {
+      "Text": "Informatique",
+      "Confidence": 91.61964,
+      "Left": 934,
+      "Top": 2257,
+      "Right": 1117,
+      "Bottom": 2288
+    },
+    {
+      "Text": "Parcours",
+      "Confidence": 90.038315,
+      "Left": 123,
+      "Top": 2376,
+      "Right": 249,
+      "Bottom": 2399
+    },
+    {
+      "Text": ":",
+      "Confidence": 90.038315,
+      "Left": 260,
+      "Top": 2382,
+      "Right": 265,
+      "Bottom": 2399
+    },
+    {
+      "Text": "Informatique",
+      "Confidence": 90.88142,
+      "Left": 579,
+      "Top": 2375,
+      "Right": 761,
+      "Bottom": 2406
+    },
+    {
+      "Text": "Niveau",
+      "Confidence": 88.57091,
+      "Left": 123,
+      "Top": 2493,
+      "Right": 218,
+      "Bottom": 2517
+    },
+    {
+      "Text": ":",
+      "Confidence": 71.51982,
+      "Left": 230,
+      "Top": 2500,
+      "Right": 234,
+      "Bottom": 2517
+    },
+    {
+      "Text": "M1",
+      "Confidence": 95.868225,
+      "Left": 579,
+      "Top": 2494,
+      "Right": 617,
+      "Bottom": 2517
+    },
+    {
+      "Text": "Ann\u00E9e",
+      "Confidence": 92.09287,
+      "Left": 121,
+      "Top": 2612,
+      "Right": 211,
+      "Bottom": 2636
+    },
+    {
+      "Text": "universitaire",
+      "Confidence": 91.91576,
+      "Left": 222,
+      "Top": 2612,
+      "Right": 398,
+      "Bottom": 2636
+    },
+    {
+      "Text": ":",
+      "Confidence": 92.914856,
+      "Left": 408,
+      "Top": 2619,
+      "Right": 413,
+      "Bottom": 2636
+    },
+    {
+      "Text": "o",
+      "Confidence": 48.196606,
+      "Left": 578,
+      "Top": 2623,
+      "Right": 600,
+      "Bottom": 2627
+    },
+    {
+      "Text": "Score",
+      "Confidence": 91.50153,
+      "Left": 122,
+      "Top": 2730,
+      "Right": 203,
+      "Bottom": 2753
+    },
+    {
+      "Text": ":",
+      "Confidence": 78.44781,
+      "Left": 214,
+      "Top": 2736,
+      "Right": 219,
+      "Bottom": 2753
+    },
+    {
+      "Text": "56.57",
+      "Confidence": 93.16348,
+      "Left": 578,
+      "Top": 2730,
+      "Right": 658,
+      "Bottom": 2753
+    },
+    {
+      "Text": "Statut",
+      "Confidence": 90.63689,
+      "Left": 122,
+      "Top": 2849,
+      "Right": 207,
+      "Bottom": 2872
+    },
+    {
+      "Text": "dossier",
+      "Confidence": 90.08005,
+      "Left": 217,
+      "Top": 2848,
+      "Right": 321,
+      "Bottom": 2872
+    },
+    {
+      "Text": ":",
+      "Confidence": 90.08005,
+      "Left": 331,
+      "Top": 2855,
+      "Right": 337,
+      "Bottom": 2872
+    },
+    {
+      "Text": "en",
+      "Confidence": 88.969246,
+      "Left": 578,
+      "Top": 2854,
+      "Right": 610,
+      "Bottom": 2872
+    },
+    {
+      "Text": "cours",
+      "Confidence": 91.73599,
+      "Left": 620,
+      "Top": 2854,
+      "Right": 699,
+      "Bottom": 2872
+    },
+    {
+      "Text": "D\u00E9tails",
+      "Confidence": 89.6857,
+      "Left": 108,
+      "Top": 3053,
+      "Right": 252,
+      "Bottom": 3090
+    },
+    {
+      "Text": "du",
+      "Confidence": 91.221176,
+      "Left": 266,
+      "Top": 3053,
+      "Right": 317,
+      "Bottom": 3090
+    },
+    {
+      "Text": "calcul",
+      "Confidence": 92.30409,
+      "Left": 332,
+      "Top": 3053,
+      "Right": 456,
+      "Bottom": 3090
+    },
+    {
+      "Text": "Formule",
+      "Confidence": 92.078445,
+      "Left": 123,
+      "Top": 3243,
+      "Right": 238,
+      "Bottom": 3267
+    },
+    {
+      "Text": "initiale",
+      "Confidence": 91.16464,
+      "Left": 248,
+      "Top": 3243,
+      "Right": 343,
+      "Bottom": 3267
+    },
+    {
+      "Text": ":",
+      "Confidence": 91.77557,
+      "Left": 353,
+      "Top": 3250,
+      "Right": 359,
+      "Bottom": 3267
+    },
+    {
+      "Text": "((11.49",
+      "Confidence": 84.55054,
+      "Left": 146,
+      "Top": 3320,
+      "Right": 249,
+      "Bottom": 3340
+    },
+    {
+      "Text": "*",
+      "Confidence": 96.50393,
+      "Left": 264,
+      "Top": 3321,
+      "Right": 272,
+      "Bottom": 3330
+    },
+    {
+      "Text": "3",
+      "Confidence": 92.965836,
+      "Left": 287,
+      "Top": 3322,
+      "Right": 297,
+      "Bottom": 3336
+    },
+    {
+      "Text": ")",
+      "Confidence": 71.2034,
+      "Left": 312,
+      "Top": 3319,
+      "Right": 319,
+      "Bottom": 3340
+    },
+    {
+      "Text": "\u002B",
+      "Confidence": 96.84274,
+      "Left": 338,
+      "Top": 3324,
+      "Right": 345,
+      "Bottom": 3336
+    },
+    {
+      "Text": "10.46",
+      "Confidence": 93.26884,
+      "Left": 359,
+      "Top": 3322,
+      "Right": 416,
+      "Bottom": 3336
+    },
+    {
+      "Text": "\u002B",
+      "Confidence": 96.106285,
+      "Left": 432,
+      "Top": 3324,
+      "Right": 440,
+      "Bottom": 3336
+    },
+    {
+      "Text": "11.64",
+      "Confidence": 93.26909,
+      "Left": 457,
+      "Top": 3322,
+      "Right": 512,
+      "Bottom": 3336
+    },
+    {
+      "Text": ")",
+      "Confidence": 95.952446,
+      "Left": 526,
+      "Top": 3320,
+      "Right": 533,
+      "Bottom": 3340
+    },
+    {
+      "Text": "-",
+      "Confidence": 95.25663,
+      "Left": 552,
+      "Top": 3328,
+      "Right": 557,
+      "Bottom": 3331
+    },
+    {
+      "Text": "\u00A9",
+      "Confidence": 96.45826,
+      "Left": 577,
+      "Top": 3322,
+      "Right": 583,
+      "Bottom": 3336
+    },
+    {
+      "Text": "\u002B",
+      "Confidence": 96.3734,
+      "Left": 597,
+      "Top": 3324,
+      "Right": 606,
+      "Bottom": 3335
+    },
+    {
+      "Text": "\u00A9",
+      "Confidence": 96.3734,
+      "Left": 620,
+      "Top": 3322,
+      "Right": 631,
+      "Bottom": 3336
+    },
+    {
+      "Text": "Score",
+      "Confidence": 91.94255,
+      "Left": 122,
+      "Top": 3445,
+      "Right": 203,
+      "Bottom": 3468
+    },
+    {
+      "Text": "sur",
+      "Confidence": 90.680916,
+      "Left": 213,
+      "Top": 3450,
+      "Right": 257,
+      "Bottom": 3468
+    },
+    {
+      "Text": "dossier",
+      "Confidence": 89.38068,
+      "Left": 266,
+      "Top": 3444,
+      "Right": 371,
+      "Bottom": 3468
+    },
+    {
+      "Text": ":",
+      "Confidence": 89.38068,
+      "Left": 381,
+      "Top": 3450,
+      "Right": 386,
+      "Bottom": 3468
+    },
+    {
+      "Text": "56.57",
+      "Confidence": 92.82361,
+      "Left": 498,
+      "Top": 3442,
+      "Right": 561,
+      "Bottom": 3461
+    },
+    {
+      "Text": "Score",
+      "Confidence": 91.88569,
+      "Left": 122,
+      "Top": 3563,
+      "Right": 203,
+      "Bottom": 3586
+    },
+    {
+      "Text": "final",
+      "Confidence": 92.93794,
+      "Left": 212,
+      "Top": 3562,
+      "Right": 273,
+      "Bottom": 3586
+    },
+    {
+      "Text": ":",
+      "Confidence": 92.93794,
+      "Left": 284,
+      "Top": 3569,
+      "Right": 289,
+      "Bottom": 3586
+    },
+    {
+      "Text": "Bac",
+      "Confidence": 92.17086,
+      "Left": 108,
+      "Top": 4134,
+      "Right": 185,
+      "Bottom": 4169
+    },
+    {
+      "Text": "Baccalaur\u00E9at",
+      "Confidence": 91.84593,
+      "Left": 123,
+      "Top": 4321,
+      "Right": 308,
+      "Bottom": 4345
+    },
+    {
+      "Text": ":",
+      "Confidence": 91.84593,
+      "Left": 318,
+      "Top": 4328,
+      "Right": 323,
+      "Bottom": 4345
+    },
+    {
+      "Text": "Etablissement",
+      "Confidence": 91.40904,
+      "Left": 123,
+      "Top": 4434,
+      "Right": 324,
+      "Bottom": 4463
+    },
+    {
+      "Text": ":",
+      "Confidence": 91.198235,
+      "Left": 335,
+      "Top": 4446,
+      "Right": 340,
+      "Bottom": 4463
+    },
+    {
+      "Text": "Session",
+      "Confidence": 91.793884,
+      "Left": 122,
+      "Top": 4557,
+      "Right": 233,
+      "Bottom": 4581
+    },
+    {
+      "Text": ":",
+      "Confidence": 92.82672,
+      "Left": 245,
+      "Top": 4564,
+      "Right": 250,
+      "Bottom": 4581
+    },
+    {
+      "Text": "Ann\u00E9e",
+      "Confidence": 91.97593,
+      "Left": 121,
+      "Top": 4676,
+      "Right": 211,
+      "Bottom": 4700
+    },
+    {
+      "Text": ":",
+      "Confidence": 87.177475,
+      "Left": 222,
+      "Top": 4683,
+      "Right": 227,
+      "Bottom": 4700
+    },
+    {
+      "Text": "Mention",
+      "Confidence": 92.298904,
+      "Left": 123,
+      "Top": 4793,
+      "Right": 237,
+      "Bottom": 4817
+    },
+    {
+      "Text": ":",
+      "Confidence": 90.21381,
+      "Left": 249,
+      "Top": 4800,
+      "Right": 254,
+      "Bottom": 4817
+    },
+    {
+      "Text": "Moyenne",
+      "Confidence": 91.1139,
+      "Left": 123,
+      "Top": 4913,
+      "Right": 252,
+      "Bottom": 4942
+    },
+    {
+      "Text": ":",
+      "Confidence": 93.1449,
+      "Left": 262,
+      "Top": 4918,
+      "Right": 267,
+      "Bottom": 4936
+    },
+    {
+      "Text": "Adresse",
+      "Confidence": 92.42355,
+      "Left": 105,
+      "Top": 5119,
+      "Right": 281,
+      "Bottom": 5156
+    },
+    {
+      "Text": "Pays",
+      "Confidence": 89.6992,
+      "Left": 123,
+      "Top": 5309,
+      "Right": 189,
+      "Bottom": 5339
+    },
+    {
+      "Text": ":",
+      "Confidence": 89.6992,
+      "Left": 200,
+      "Top": 5315,
+      "Right": 205,
+      "Bottom": 5332
+    },
+    {
+      "Text": "Gouvernorat",
+      "Confidence": 92.70037,
+      "Left": 122,
+      "Top": 5428,
+      "Right": 298,
+      "Bottom": 5451
+    },
+    {
+      "Text": ":",
+      "Confidence": 92.70037,
+      "Left": 308,
+      "Top": 5433,
+      "Right": 313,
+      "Bottom": 5451
+    },
+    {
+      "Text": "Ville",
+      "Confidence": 93.21299,
+      "Left": 121,
+      "Top": 5545,
+      "Right": 183,
+      "Bottom": 5569
+    },
+    {
+      "Text": "(d\u00E9l\u00E9gation)",
+      "Confidence": 90.42479,
+      "Left": 194,
+      "Top": 5544,
+      "Right": 364,
+      "Bottom": 5576
+    },
+    {
+      "Text": ":",
+      "Confidence": 90.42479,
+      "Left": 376,
+      "Top": 5552,
+      "Right": 381,
+      "Bottom": 5569
+    },
+    {
+      "Text": "Adresse",
+      "Confidence": 92.94036,
+      "Left": 121,
+      "Top": 5662,
+      "Right": 238,
+      "Bottom": 5686
+    },
+    {
+      "Text": "(Rue)",
+      "Confidence": 74.13887,
+      "Left": 248,
+      "Top": 5662,
+      "Right": 323,
+      "Bottom": 5693
+    },
+    {
+      "Text": ":",
+      "Confidence": 93.15818,
+      "Left": 334,
+      "Top": 5669,
+      "Right": 339,
+      "Bottom": 5686
+    },
+    {
+      "Text": "Code",
+      "Confidence": 93.14851,
+      "Left": 122,
+      "Top": 5781,
+      "Right": 194,
+      "Bottom": 5805
+    },
+    {
+      "Text": "postale",
+      "Confidence": 91.58208,
+      "Left": 204,
+      "Top": 5781,
+      "Right": 308,
+      "Bottom": 5812
+    },
+    {
+      "Text": ":",
+      "Confidence": 93.2096,
+      "Left": 318,
+      "Top": 5788,
+      "Right": 323,
+      "Bottom": 5805
+    },
+    {
+      "Text": "Parcours",
+      "Confidence": 92.6456,
+      "Left": 76,
+      "Top": 5980,
+      "Right": 265,
+      "Bottom": 6015
+    },
+    {
+      "Text": "universitaire",
+      "Confidence": 91.91841,
+      "Left": 281,
+      "Top": 5979,
+      "Right": 546,
+      "Bottom": 6015
+    },
+    {
+      "Text": "Ann\u00E9e",
+      "Confidence": 89.44859,
+      "Left": 138,
+      "Top": 6101,
+      "Right": 190,
+      "Bottom": 6128
+    },
+    {
+      "Text": "Statut",
+      "Confidence": 87.15806,
+      "Left": 327,
+      "Top": 6107,
+      "Right": 370,
+      "Bottom": 6118
+    },
+    {
+      "Text": "ann\u00E9e",
+      "Confidence": 87.15806,
+      "Left": 375,
+      "Top": 6105,
+      "Right": 418,
+      "Bottom": 6118
+    },
+    {
+      "Text": "2023-2024",
+      "Confidence": 91.616486,
+      "Left": 127,
+      "Top": 6165,
+      "Right": 202,
+      "Bottom": 6176
+    },
+    {
+      "Text": "Ann\u00E9e",
+      "Confidence": 89.75553,
+      "Left": 323,
+      "Top": 6164,
+      "Right": 368,
+      "Bottom": 6176
+    },
+    {
+      "Text": "valid\u00E9e",
+      "Confidence": 90.10597,
+      "Left": 372,
+      "Top": 6164,
+      "Right": 421,
+      "Bottom": 6176
+    },
+    {
+      "Text": "2024-2025",
+      "Confidence": 92.55786,
+      "Left": 127,
+      "Top": 6242,
+      "Right": 202,
+      "Bottom": 6254
+    },
+    {
+      "Text": "Ann\u00E9e",
+      "Confidence": 90.976105,
+      "Left": 323,
+      "Top": 6241,
+      "Right": 368,
+      "Bottom": 6254
+    },
+    {
+      "Text": "valid\u00E9e",
+      "Confidence": 90.8346,
+      "Left": 372,
+      "Top": 6241,
+      "Right": 421,
+      "Bottom": 6254
+    },
+    {
+      "Text": "2025-2026",
+      "Confidence": 91.86806,
+      "Left": 127,
+      "Top": 6311,
+      "Right": 202,
+      "Bottom": 6341
+    },
+    {
+      "Text": "Obtention",
+      "Confidence": 92.627174,
+      "Left": 308,
+      "Top": 6319,
+      "Right": 376,
+      "Bottom": 6331
+    },
+    {
+      "Text": "dipl\u00F4me",
+      "Confidence": 82.135635,
+      "Left": 381,
+      "Top": 6319,
+      "Right": 437,
+      "Bottom": 6335
+    },
+    {
+      "Text": "sciences",
+      "Confidence": 92.87867,
+      "Left": 577,
+      "Top": 4321,
+      "Right": 702,
+      "Bottom": 4346
+    },
+    {
+      "Text": "Lyc\u00E9e",
+      "Confidence": 93.13181,
+      "Left": 579,
+      "Top": 4439,
+      "Right": 658,
+      "Bottom": 4470
+    },
+    {
+      "Text": "9",
+      "Confidence": 93.27117,
+      "Left": 668,
+      "Top": 4440,
+      "Right": 684,
+      "Bottom": 4463
+    },
+    {
+      "Text": "avril",
+      "Confidence": 93.11802,
+      "Left": 694,
+      "Top": 4439,
+      "Right": 753,
+      "Bottom": 4463
+    },
+    {
+      "Text": "1938",
+      "Confidence": 93.29686,
+      "Left": 765,
+      "Top": 4440,
+      "Right": 834,
+      "Bottom": 4463
+    },
+    {
+      "Text": "Sidi",
+      "Confidence": 92.261795,
+      "Left": 844,
+      "Top": 4439,
+      "Right": 897,
+      "Bottom": 4463
+    },
+    {
+      "Text": "Bouzid",
+      "Confidence": 92.750244,
+      "Left": 908,
+      "Top": 4439,
+      "Right": 1003,
+      "Bottom": 4463
+    },
+    {
+      "Text": "principale",
+      "Confidence": 92.242905,
+      "Left": 578,
+      "Top": 4557,
+      "Right": 718,
+      "Bottom": 4588
+    },
+    {
+      "Text": "2022-2023",
+      "Confidence": 91.71832,
+      "Left": 578,
+      "Top": 4677,
+      "Right": 734,
+      "Bottom": 4700
+    },
+    {
+      "Text": "Passable",
+      "Confidence": 91.713936,
+      "Left": 579,
+      "Top": 4793,
+      "Right": 707,
+      "Bottom": 4817
+    },
+    {
+      "Text": "11.49",
+      "Confidence": 96.69153,
+      "Left": 579,
+      "Top": 4913,
+      "Right": 657,
+      "Bottom": 4936
+    },
+    {
+      "Text": "Tunisie",
+      "Confidence": 91.43604,
+      "Left": 577,
+      "Top": 5308,
+      "Right": 680,
+      "Bottom": 5332
+    },
+    {
+      "Text": "Ben",
+      "Confidence": 91.5879,
+      "Left": 579,
+      "Top": 5428,
+      "Right": 631,
+      "Bottom": 5451
+    },
+    {
+      "Text": "Arous",
+      "Confidence": 90.8145,
+      "Left": 640,
+      "Top": 5428,
+      "Right": 724,
+      "Bottom": 5451
+    },
+    {
+      "Text": "Ben",
+      "Confidence": 91.5192,
+      "Left": 579,
+      "Top": 5546,
+      "Right": 631,
+      "Bottom": 5569
+    },
+    {
+      "Text": "Arous",
+      "Confidence": 90.56145,
+      "Left": 640,
+      "Top": 5546,
+      "Right": 724,
+      "Bottom": 5569
+    },
+    {
+      "Text": "Ben",
+      "Confidence": 92.89177,
+      "Left": 579,
+      "Top": 5663,
+      "Right": 631,
+      "Bottom": 5687
+    },
+    {
+      "Text": "Arous",
+      "Confidence": 91.99315,
+      "Left": 640,
+      "Top": 5663,
+      "Right": 724,
+      "Bottom": 5687
+    },
+    {
+      "Text": "centre",
+      "Confidence": 92.825584,
+      "Left": 734,
+      "Top": 5666,
+      "Right": 823,
+      "Bottom": 5687
+    },
+    {
+      "Text": "Universit\u00E9",
+      "Confidence": 93.16161,
+      "Left": 616,
+      "Top": 6101,
+      "Right": 694,
+      "Bottom": 6127
+    },
+    {
+      "Text": "\u00C9tablissement",
+      "Confidence": 87.57645,
+      "Left": 829,
+      "Top": 6103,
+      "Right": 931,
+      "Bottom": 6118
+    },
+    {
+      "Text": "Facult\u00E9",
+      "Confidence": 91.51737,
+      "Left": 840,
+      "Top": 6145,
+      "Right": 891,
+      "Bottom": 6158
+    },
+    {
+      "Text": "des",
+      "Confidence": 92.90125,
+      "Left": 895,
+      "Top": 6146,
+      "Right": 920,
+      "Bottom": 6158
+    },
+    {
+      "Text": "L\u0027Universit\u00E9",
+      "Confidence": 86.55632,
+      "Left": 580,
+      "Top": 6164,
+      "Right": 660,
+      "Bottom": 6176
+    },
+    {
+      "Text": "\u0639\u0644",
+      "Confidence": 95.9376,
+      "Left": 666,
+      "Top": 6164,
+      "Right": 682,
+      "Bottom": 6176
+    },
+    {
+      "Text": "Gab\u00E8s",
+      "Confidence": 93.03405,
+      "Left": 687,
+      "Top": 6164,
+      "Right": 731,
+      "Bottom": 6176
+    },
+    {
+      "Text": "Sciences",
+      "Confidence": 90.9942,
+      "Left": 838,
+      "Top": 6165,
+      "Right": 900,
+      "Bottom": 6176
+    },
+    {
+      "Text": "de",
+      "Confidence": 91.630356,
+      "Left": 906,
+      "Top": 6164,
+      "Right": 922,
+      "Bottom": 6176
+    },
+    {
+      "Text": "Gab\u00E8s",
+      "Confidence": 93.04635,
+      "Left": 858,
+      "Top": 6183,
+      "Right": 902,
+      "Bottom": 6196
+    },
+    {
+      "Text": "Facult\u00E9",
+      "Confidence": 92.98007,
+      "Left": 840,
+      "Top": 6223,
+      "Right": 891,
+      "Bottom": 6236
+    },
+    {
+      "Text": "des",
+      "Confidence": 93.21943,
+      "Left": 895,
+      "Top": 6223,
+      "Right": 920,
+      "Bottom": 6236
+    },
+    {
+      "Text": "L\u0027Universit\u00E9",
+      "Confidence": 70.21459,
+      "Left": 580,
+      "Top": 6241,
+      "Right": 660,
+      "Bottom": 6254
+    },
+    {
+      "Text": "\u0639\u0644",
+      "Confidence": 91.371704,
+      "Left": 666,
+      "Top": 6241,
+      "Right": 682,
+      "Bottom": 6254
+    },
+    {
+      "Text": "Gab\u00E8s",
+      "Confidence": 93.2041,
+      "Left": 687,
+      "Top": 6241,
+      "Right": 730,
+      "Bottom": 6254
+    },
+    {
+      "Text": "Sciences",
+      "Confidence": 89.1504,
+      "Left": 838,
+      "Top": 6242,
+      "Right": 900,
+      "Bottom": 6254
+    },
+    {
+      "Text": "de",
+      "Confidence": 91.95652,
+      "Left": 906,
+      "Top": 6241,
+      "Right": 922,
+      "Bottom": 6254
+    },
+    {
+      "Text": "Gab\u00E8s",
+      "Confidence": 93.0661,
+      "Left": 858,
+      "Top": 6261,
+      "Right": 902,
+      "Bottom": 6273
+    },
+    {
+      "Text": "Facult\u00E9",
+      "Confidence": 89.71486,
+      "Left": 840,
+      "Top": 6300,
+      "Right": 891,
+      "Bottom": 6313
+    },
+    {
+      "Text": "des",
+      "Confidence": 91.97268,
+      "Left": 895,
+      "Top": 6301,
+      "Right": 920,
+      "Bottom": 6313
+    },
+    {
+      "Text": "L\u0027Universit\u00E9",
+      "Confidence": 87.434456,
+      "Left": 580,
+      "Top": 6319,
+      "Right": 660,
+      "Bottom": 6331
+    },
+    {
+      "Text": "\u0639\u0644",
+      "Confidence": 95.63478,
+      "Left": 666,
+      "Top": 6319,
+      "Right": 682,
+      "Bottom": 6331
+    },
+    {
+      "Text": "Gab\u00E8s",
+      "Confidence": 93.08742,
+      "Left": 687,
+      "Top": 6319,
+      "Right": 731,
+      "Bottom": 6331
+    },
+    {
+      "Text": "Sciences",
+      "Confidence": 90.57012,
+      "Left": 838,
+      "Top": 6320,
+      "Right": 900,
+      "Bottom": 6331
+    },
+    {
+      "Text": "de",
+      "Confidence": 91.57652,
+      "Left": 906,
+      "Top": 6319,
+      "Right": 922,
+      "Bottom": 6331
+    },
+    {
+      "Text": "Gab\u00E8s",
+      "Confidence": 93.038734,
+      "Left": 858,
+      "Top": 6338,
+      "Right": 902,
+      "Bottom": 6351
+    },
+    {
+      "Text": "Session",
+      "Confidence": 76.64752,
+      "Left": 976,
+      "Top": 6105,
+      "Right": 1033,
+      "Bottom": 6118
+    },
+    {
+      "Text": "principale",
+      "Confidence": 91.57297,
+      "Left": 971,
+      "Top": 6164,
+      "Right": 1039,
+      "Bottom": 6180
+    },
+    {
+      "Text": "principale",
+      "Confidence": 92.522484,
+      "Left": 971,
+      "Top": 6241,
+      "Right": 1039,
+      "Bottom": 6257
+    },
+    {
+      "Text": "principale",
+      "Confidence": 91.91876,
+      "Left": 971,
+      "Top": 6319,
+      "Right": 1039,
+      "Bottom": 6334
+    },
+    {
+      "Text": "Niveau",
+      "Confidence": 92.74368,
+      "Left": 1114,
+      "Top": 6099,
+      "Right": 1162,
+      "Bottom": 6127
+    },
+    {
+      "Text": "Mention",
+      "Confidence": 93.02583,
+      "Left": 1259,
+      "Top": 6106,
+      "Right": 1316,
+      "Bottom": 6118
+    },
+    {
+      "Text": "1",
+      "Confidence": 96.8358,
+      "Left": 1135,
+      "Top": 6165,
+      "Right": 1139,
+      "Bottom": 6176
+    },
+    {
+      "Text": "Passable",
+      "Confidence": 92.16725,
+      "Left": 1256,
+      "Top": 6164,
+      "Right": 1319,
+      "Bottom": 6176
+    },
+    {
+      "Text": "2",
+      "Confidence": 96.844444,
+      "Left": 1134,
+      "Top": 6242,
+      "Right": 1142,
+      "Bottom": 6254
+    },
+    {
+      "Text": "Passable",
+      "Confidence": 92.48384,
+      "Left": 1256,
+      "Top": 6241,
+      "Right": 1319,
+      "Bottom": 6254
+    },
+    {
+      "Text": "3",
+      "Confidence": 96.93598,
+      "Left": 1134,
+      "Top": 6320,
+      "Right": 1142,
+      "Bottom": 6331
+    },
+    {
+      "Text": "Bien",
+      "Confidence": 93.13696,
+      "Left": 1273,
+      "Top": 6320,
+      "Right": 1302,
+      "Bottom": 6331
+    },
+    {
+      "Text": "Moyenne",
+      "Confidence": 90.65688,
+      "Left": 1372,
+      "Top": 6107,
+      "Right": 1437,
+      "Bottom": 6122
+    },
+    {
+      "Text": "10.46",
+      "Confidence": 90.09494,
+      "Left": 1385,
+      "Top": 6165,
+      "Right": 1423,
+      "Bottom": 6176
+    },
+    {
+      "Text": "11.64",
+      "Confidence": 90.27861,
+      "Left": 1385,
+      "Top": 6242,
+      "Right": 1423,
+      "Bottom": 6254
+    },
+    {
+      "Text": "Cr\u00E9dit",
+      "Confidence": 89.16096,
+      "Left": 1507,
+      "Top": 6105,
+      "Right": 1551,
+      "Bottom": 6118
+    },
+    {
+      "Text": "41",
+      "Confidence": 96.81488,
+      "Left": 1520,
+      "Top": 6165,
+      "Right": 1534,
+      "Bottom": 6176
+    },
+    {
+      "Text": "42",
+      "Confidence": 95.51476,
+      "Left": 1520,
+      "Top": 6242,
+      "Right": 1537,
+      "Bottom": 6254
+    },
+    {
+      "Text": "Nature",
+      "Confidence": 93.12914,
+      "Left": 1613,
+      "Top": 6107,
+      "Right": 1661,
+      "Bottom": 6118
+    },
+    {
+      "Text": "de",
+      "Confidence": 93.07706,
+      "Left": 1665,
+      "Top": 6105,
+      "Right": 1682,
+      "Bottom": 6118
+    },
+    {
+      "Text": "dipl\u00F4me",
+      "Confidence": 92.52975,
+      "Left": 1686,
+      "Top": 6105,
+      "Right": 1744,
+      "Bottom": 6122
+    },
+    {
+      "Text": "Licence",
+      "Confidence": 93.08819,
+      "Left": 1652,
+      "Top": 6320,
+      "Right": 1706,
+      "Bottom": 6331
+    },
+    {
+      "Text": "Je",
+      "Confidence": 92.89147,
+      "Left": 191,
+      "Top": 7030,
+      "Right": 224,
+      "Bottom": 7054
+    },
+    {
+      "Text": "d\u00E9clare",
+      "Confidence": 92.44456,
+      "Left": 234,
+      "Top": 7029,
+      "Right": 336,
+      "Bottom": 7054
+    },
+    {
+      "Text": "sur",
+      "Confidence": 91.202774,
+      "Left": 347,
+      "Top": 7036,
+      "Right": 390,
+      "Bottom": 7054
+    },
+    {
+      "Text": "l\u0027honneur",
+      "Confidence": 90.693436,
+      "Left": 401,
+      "Top": 7029,
+      "Right": 527,
+      "Bottom": 7054
+    },
+    {
+      "Text": "que",
+      "Confidence": 91.08747,
+      "Left": 537,
+      "Top": 7036,
+      "Right": 588,
+      "Bottom": 7060
+    },
+    {
+      "Text": "les",
+      "Confidence": 92.35479,
+      "Left": 599,
+      "Top": 7029,
+      "Right": 636,
+      "Bottom": 7054
+    },
+    {
+      "Text": "informations",
+      "Confidence": 92.36731,
+      "Left": 648,
+      "Top": 7029,
+      "Right": 825,
+      "Bottom": 7054
+    },
+    {
+      "Text": "fournies",
+      "Confidence": 92.2043,
+      "Left": 836,
+      "Top": 7029,
+      "Right": 950,
+      "Bottom": 7054
+    },
+    {
+      "Text": "sont",
+      "Confidence": 92.71321,
+      "Left": 960,
+      "Top": 7033,
+      "Right": 1021,
+      "Bottom": 7054
+    },
+    {
+      "Text": "exactes.",
+      "Confidence": 92.665474,
+      "Left": 1031,
+      "Top": 7033,
+      "Right": 1146,
+      "Bottom": 7054
+    },
+    {
+      "Text": "Je",
+      "Confidence": 91.92098,
+      "Left": 241,
+      "Top": 7085,
+      "Right": 274,
+      "Bottom": 7108
+    },
+    {
+      "Text": "m\u0027engage",
+      "Confidence": 92.72437,
+      "Left": 284,
+      "Top": 7084,
+      "Right": 417,
+      "Bottom": 7115
+    },
+    {
+      "Text": "\u00E0",
+      "Confidence": 93.27138,
+      "Left": 428,
+      "Top": 7084,
+      "Right": 442,
+      "Bottom": 7108
+    },
+    {
+      "Text": "respecter",
+      "Confidence": 85.971,
+      "Left": 453,
+      "Top": 7087,
+      "Right": 585,
+      "Bottom": 7115
+    },
+    {
+      "Text": "le",
+      "Confidence": 91.5351,
+      "Left": 595,
+      "Top": 7084,
+      "Right": 617,
+      "Bottom": 7108
+    },
+    {
+      "Text": "r\u00E8glement",
+      "Confidence": 91.483955,
+      "Left": 628,
+      "Top": 7084,
+      "Right": 768,
+      "Bottom": 7115
+    },
+    {
+      "Text": "int\u00E9rieur",
+      "Confidence": 92.5639,
+      "Left": 779,
+      "Top": 7084,
+      "Right": 893,
+      "Bottom": 7108
+    },
+    {
+      "Text": "de",
+      "Confidence": 93.17861,
+      "Left": 902,
+      "Top": 7084,
+      "Right": 935,
+      "Bottom": 7108
+    },
+    {
+      "Text": "l\u0027institution",
+      "Confidence": 92.186676,
+      "Left": 946,
+      "Top": 7084,
+      "Right": 1097,
+      "Bottom": 7108
+    },
+    {
+      "Text": "Tunisle:",
+      "Confidence": 91.253006,
+      "Left": 496,
+      "Top": 7139,
+      "Right": 618,
+      "Bottom": 7163
+    },
+    {
+      "Text": "14/07/2026",
+      "Confidence": 91.96174,
+      "Left": 654,
+      "Top": 7140,
+      "Right": 821,
+      "Bottom": 7165
+    },
+    {
+      "Text": "Signature",
+      "Confidence": 92.50899,
+      "Left": 516,
+      "Top": 7196,
+      "Right": 649,
+      "Bottom": 7227
+    },
+    {
+      "Text": "du",
+      "Confidence": 91.99985,
+      "Left": 659,
+      "Top": 7196,
+      "Right": 692,
+      "Bottom": 7220
+    },
+    {
+      "Text": "candidat",
+      "Confidence": 91.97465,
+      "Left": 703,
+      "Top": 7196,
+      "Right": 824,
+      "Bottom": 7220
+    },
+    {
+      "Text": "Avis",
+      "Confidence": 92.49805,
+      "Left": 1457,
+      "Top": 7029,
+      "Right": 1515,
+      "Bottom": 7054
+    },
+    {
+      "Text": "de",
+      "Confidence": 93.26984,
+      "Left": 1526,
+      "Top": 7029,
+      "Right": 1558,
+      "Bottom": 7054
+    },
+    {
+      "Text": "la",
+      "Confidence": 93.028946,
+      "Left": 1570,
+      "Top": 7029,
+      "Right": 1591,
+      "Bottom": 7054
+    },
+    {
+      "Text": "commission",
+      "Confidence": 88.89543,
+      "Left": 1354,
+      "Top": 7084,
+      "Right": 1526,
+      "Bottom": 7108
+    },
+    {
+      "Text": "du",
+      "Confidence": 90.13438,
+      "Left": 1537,
+      "Top": 7084,
+      "Right": 1569,
+      "Bottom": 7108
+    },
+    {
+      "Text": "mast\u00E8re",
+      "Confidence": 92.864105,
+      "Left": 1581,
+      "Top": 7084,
+      "Right": 1695,
+      "Bottom": 7108
+    }
   ]
 }

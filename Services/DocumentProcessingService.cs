@@ -89,7 +89,16 @@ namespace Codeium_Security.Services
                 OcrConfidence = ocrResult.Confidence,
                 NeedsReview = needsReview,
                 Document = document,
-                DebugLines = lines.Select(l => l.FullLineText).ToList()
+                DebugLines = lines.Select(l => l.FullLineText).ToList(),
+                Words = ocrResult.Words.Select(w => new WordCoordinate
+                {
+                    Text = w.Text,
+                    Confidence = w.Confidence,
+                    Left = w.Left,
+                    Top = w.Top,
+                    Right = w.Right,
+                    Bottom = w.Bottom
+                }).ToList()
             };
         }
 
