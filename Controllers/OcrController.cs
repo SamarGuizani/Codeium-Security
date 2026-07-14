@@ -49,6 +49,26 @@ namespace Codeium_Security.Controllers
             return Ok(allResults);
         }
 
+        [HttpPost("text")]
+        public async Task<IActionResult> ExtractPlainText(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("No file uploaded.");
+
+            Directory.CreateDirectory("Images");
+            var filePath = Path.Combine("Images", file.FileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            var ocrResult = await _processingService.RunOcrOnlyAsync(filePath, file.FileName);
+            string plainText = _processingService.FormatAsPlainText(file.FileName, ocrResult.PageCount, ocrResult.FullText);
+
+            return Content(plainText, "text/plain; charset=utf-8");
+        }
+
         [HttpPost("process-batch")]
         public async Task<IActionResult> ProcessBatch()
         {

@@ -34,24 +34,21 @@ namespace Codeium_Security.Services
             _configuration = configuration;
         }
 
-        public async Task<DocumentProcessingResult> ProcessFileAsync(string filePath, string displayFileName)
+        public async Task<OcrResult> RunOcrOnlyAsync(string filePath, string originalFileName)
         {
-            var workingPath = filePath;
-
-            if (!_pdfConverter.IsPdf(displayFileName) && _formatConverter.NeedsConversion(displayFileName))
-                workingPath = _formatConverter.ConvertToPng(filePath);
+            if (!_pdfConverter.IsPdf(originalFileName) && _formatConverter.NeedsConversion(originalFileName))
+            {
+                filePath = _formatConverter.ConvertToPng(filePath);
+            }
 
             OcrResult ocrResult;
 
-            if (_pdfConverter.IsPdf(displayFileName))
+            if (_pdfConverter.IsPdf(originalFileName))
             {
-                string pdfImagesFolder = Path.Combine(
-                    Path.GetDirectoryName(filePath) ?? "Images",
-                    "pdf_pages_" + Path.GetFileNameWithoutExtension(displayFileName));
+                string pdfImagesFolder = Path.Combine("Images", "pdf_pages_" + Path.GetFileNameWithoutExtension(originalFileName));
+                var pageImagePaths = _pdfConverter.ConvertPdfToImages(filePath, pdfImagesFolder);
 
-                var pageImagePaths = _pdfConverter.ConvertPdfToImages(workingPath, pdfImagesFolder);
                 var pageResults = new List<OcrResult>();
-
                 foreach (var pageImagePath in pageImagePaths)
                     pageResults.Add(await _ocrService.ExtractTextAsync(pageImagePath));
 
@@ -59,44 +56,64 @@ namespace Codeium_Security.Services
             }
             else
             {
-                ocrResult = await _ocrService.ExtractTextAsync(workingPath);
+                ocrResult = await _ocrService.ExtractTextAsync(filePath);
             }
 
             ocrResult.FullText = TextCleaner.RemoveInvisibleMarks(ocrResult.FullText);
             foreach (var word in ocrResult.Words)
                 word.Text = TextCleaner.RemoveInvisibleMarks(word.Text);
 
+            return ocrResult;
+        }
+
+        public async Task<DocumentProcessingResult> ProcessFileAsync(string filePath, string originalFileName)
+        {
+            var ocrResult = await RunOcrOnlyAsync(filePath, originalFileName);
+
             var lines = _engine.GroupWordsIntoLines(ocrResult.Words);
             var documentType = _classifier.Classify(ocrResult.FullText);
             var parser = _parserFactory.GetParser(documentType);
             object? document = parser?.Parse(ocrResult.FullText, lines);
 
-            bool includeRawOcr = _configuration.GetValue("Ocr:IncludeRawText", true);
-            int rawTextMaxLength = _configuration.GetValue("Ocr:RawTextMaxLength", 500);
-            float reviewThreshold = _configuration.GetValue("Ocr:ReviewConfidenceThreshold", 85f);
+            bool needsReview = EvaluateNeedsReview(documentType, document, ocrResult.Confidence);
 
             return new DocumentProcessingResult
             {
-                FileName = displayFileName,
+                FileName = originalFileName,
                 DetectedType = documentType.ToString(),
                 PageCount = ocrResult.PageCount,
                 OcrConfidence = ocrResult.Confidence,
-                NeedsReview = EvaluateNeedsReview(documentType, document, ocrResult.Confidence, reviewThreshold),
-                RawOcrText = includeRawOcr
-                    ? TruncateText(ocrResult.FullText, rawTextMaxLength)
-                    : null,
-                Document = document,
-                DebugLines = lines.Select(l => l.FullLineText).ToList()
+                NeedsReview = needsReview,
+                Document = document
             };
         }
 
-        private static bool EvaluateNeedsReview(
-            DocumentType documentType,
-            object? document,
-            float confidence,
-            float reviewThreshold)
+        public string FormatAsPlainText(string fileName, int pageCount, string fullText)
         {
-            if (confidence < reviewThreshold)
+            var sb = new System.Text.StringBuilder();
+
+            if (pageCount <= 1)
+            {
+                sb.AppendLine($"****** Résultat pour {fileName} ******");
+                sb.AppendLine(fullText.Trim());
+            }
+            else
+            {
+                var pages = fullText.Split(new[] { "\n\n" }, StringSplitOptions.None);
+                for (int i = 0; i < pages.Length; i++)
+                {
+                    sb.AppendLine($"****** Résultat pour {fileName} - Page {i + 1} ******");
+                    sb.AppendLine(pages[i].Trim());
+                    sb.AppendLine();
+                }
+            }
+
+            return sb.ToString();
+        }
+
+        private static bool EvaluateNeedsReview(DocumentType documentType, object? document, float confidence)
+        {
+            if (confidence < 85)
                 return true;
 
             if (documentType == DocumentType.Unknown)
