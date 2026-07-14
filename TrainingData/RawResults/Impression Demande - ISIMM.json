@@ -1,0 +1,15 @@
+{
+  "FileName": "Impression Demande - ISIMM.pdf",
+  "DetectedType": "Academic",
+  "PageCount": 1,
+  "OcrConfidence": 91,
+  "NeedsReview": false,
+  "RawOcrText": null,
+  "Document": {
+    "StudentName": "",
+    "University": "",
+    "Semester": "",
+    "Average": null
+  },
+  "DebugLines": []
+}

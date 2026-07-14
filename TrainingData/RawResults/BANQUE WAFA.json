@@ -1,0 +1,1930 @@
+{
+  "FileName": "BANQUE WAFA.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 16,
+  "OcrConfidence": 74.4375,
+  "NeedsReview": true,
+  "RawOcrText": null,
+  "Document": {
+    "AccountNumber": "24011040582251230122",
+    "CustomerName": "",
+    "BankName": "Banque Nationale Agricole (BNA)",
+    "Currency": "TND",
+    "Balance": 3943.810,
+    "StatementDate": null,
+    "Transactions": [
+      {
+        "Date": "31/12/2024",
+        "Description": "Solde au:",
+        "Debit": 170.062,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/01/2025",
+        "Description": "",
+        "Debit": 150.000,
+        "Credit": 1320.062,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/01/2025",
+        "Description": "",
+        "Debit": 200.000,
+        "Credit": 520.062,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "77/65/6558",
+        "Description": "/01/2025 MEME AG N\u00B0: 7105618",
+        "Debit": 501.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/12/2024",
+        "Description": "123",
+        "Debit": 1.750,
+        "Credit": 982.688,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/12/2024",
+        "Description": "",
+        "Debit": 983.020,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2025",
+        "Description": "",
+        "Debit": 538.973,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2025",
+        "Description": "/12/24",
+        "Debit": 0.143,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2025",
+        "Description": "CHQ COMP N\u00B0 l 8",
+        "Debit": 472.754,
+        "Credit": 66.076,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/01/2025",
+        "Description": "PC N\u00B0 \u2014",
+        "Debit": 5000.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/01/2025",
+        "Description": "1125",
+        "Debit": 0,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/01/2025",
+        "Description": "\u2014 j1271125",
+        "Debit": 553.776,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/31/2940",
+        "Description": "",
+        "Debit": 109.406,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/01/2025",
+        "Description": "",
+        "Debit": 939.196,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/10/1720",
+        "Description": "CHQ",
+        "Debit": 590.155,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "73/00/0000",
+        "Description": "",
+        "Debit": 858.845,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/10/2024",
+        "Description": "Solde",
+        "Debit": 8.535,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2025",
+        "Description": "619",
+        "Debit": 472.754,
+        "Credit": 66.076,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/01/2025",
+        "Description": "868",
+        "Debit": 522.000,
+        "Credit": 588.076,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/01/2025",
+        "Description": "",
+        "Debit": 967.782,
+        "Credit": 555.858,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/01/2025",
+        "Description": "9344",
+        "Debit": 5000000555.858,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/01/2025",
+        "Description": "CHQ 1271125",
+        "Debit": 332553.776,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/01/2025",
+        "Description": "957",
+        "Debit": 836.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/01/2025",
+        "Description": "",
+        "Debit": 1719.630,
+        "Credit": 109.406,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/01/2025",
+        "Description": "ESPECES PC N\u00B0 03129401",
+        "Debit": 2000.000,
+        "Credit": 109.406,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/01/2025",
+        "Description": "5",
+        "Debit": 166789842.617,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "35/10/1720",
+        "Description": "",
+        "Debit": 2000940.617,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/04/2025",
+        "Description": "o",
+        "Debit": 940.237,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "21/01/2025",
+        "Description": "",
+        "Debit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/91/7202",
+        "Description": "CHQ (\u2122~ 1271128 \u00EB\u201D",
+        "Debit": 0.875,
+        "Credit": 590.321,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/01/2025",
+        "Description": "REMISE 12711288 A",
+        "Debit": 0.166,
+        "Credit": 590.155,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/01/2025",
+        "Description": "15/",
+        "Debit": 551.000,
+        "Credit": 141.155,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "22/01/2025",
+        "Description": "/01/2025 |RETRA\u00CET ESPECES 1031268070",
+        "Debit": 0.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/01/2025",
+        "Description": "/01/2025 | | \u0647\u0627 1271129",
+        "Debit": 860.595,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/01/2025",
+        "Description": "(2410172025 CHQ 1271129",
+        "Debit": 0.332,
+        "Credit": 860.927,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "27/01/2025",
+        "Description": "",
+        "Debit": 150.000,
+        "Credit": 710.927,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/01/2025",
+        "Description": "/0172025 |ENC CHQ N\u00B0 210 1210",
+        "Debit": 150.000,
+        "Credit": 320.062,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/01/2025",
+        "Description": "172025 02235212",
+        "Debit": 4200.000,
+        "Credit": 5520.062,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "02/01/2025",
+        "Description": "",
+        "Debit": 6501000980.938,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/12/2024",
+        "Description": "",
+        "Debit": 1.750,
+        "Credit": 982.688,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/12/2024",
+        "Description": "TVAICOMM REMISE CHQ 1271123",
+        "Debit": 332983.020,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/01/2025",
+        "Description": "/01/2025 |ENC CHQ N\u00B0 4000718 4000718",
+        "Debit": 100000883.020,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/01/2025",
+        "Description": "j",
+        "Debit": 2564.298,
+        "Credit": 681.278,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/01/2025",
+        "Description": "/01/2025 | AGIOS AU 31/12/24 /AGIOS",
+        "Debit": 140.514,
+        "Credit": 540.764,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "02/01/2025",
+        "Description": "/01/2025 | COMM REMISE CHQ [1271122",
+        "Debit": 0.875,
+        "Credit": 539.889,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "02/01/2025",
+        "Description": "/01/2025 | TVA/ICOMM REMISE CHQ \u0641",
+        "Debit": 0.166,
+        "Credit": 539.723,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2025",
+        "Description": "/01/2025 | RECUPERATION FRAIS PDL 01/12/24",
+        "Debit": 0.750,
+        "Credit": 538.973,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2025",
+        "Description": "172025 |TVAIRECUPERATION FRAIS \u062702 4",
+        "Debit": 0.143,
+        "Credit": 538.830,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2025",
+        "Description": "/01/2025 |CHQ COMP N\u00B0 7105619 7105619",
+        "Debit": 472.754,
+        "Credit": 66.076,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "19/33/4868",
+        "Description": "/01/2025 |ENC",
+        "Debit": 522.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/01/2025",
+        "Description": "CHQ N\u00B0 9334868",
+        "Debit": 588.076,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/12/9344",
+        "Description": "/01/2025 ?522?5 ESPECES PC N\u00B0 \u2019",
+        "Debit": 0,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/01/2025",
+        "Description": "pate",
+        "Debit": 555.858,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/01/2025",
+        "Description": "6 au",
+        "Debit": 804.365,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/02/2025",
+        "Description": "\u0022 03/02/2025 COMM ANNIVERSAIRE - VCENA\\045107",
+        "Debit": 65.000,
+        "Credit": 1869.365,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/02/2025",
+        "Description": "/02/2025 TVA/COMM ANNIVERSAIRE [VCENA\\045107",
+        "Debit": 12350881.715,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/02/2025",
+        "Description": "/02/2025 RECUPERATION FRAIS PDL 01/01/25",
+        "Debit": 750882.465,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/02/2025",
+        "Description": "/02/2025 TVA/RECUPERATION i FRAIS PDL ] 01/01/25 N",
+        "Debit": 0.143,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/02/2025",
+        "Description": "VR CPM/120225",
+        "Debit": 959.200,
+        "Credit": 76.592,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "06/02/2025",
+        "Description": "/02/2025 COMM VIRT RECU J VR CPM/120225",
+        "Debit": 3.000,
+        "Credit": 73.592,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/02/2025",
+        "Description": "/02/2025 RETRAIT ESPECES PC N\u00B0 3189967",
+        "Debit": 0.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/02/2025",
+        "Description": "/02/2025 COMM REMISE CHQ 1271130 1",
+        "Debit": 0.875,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/02/2025",
+        "Description": "/02/2025 \u0027 TVA/COMM REMISE CHQ 1274130",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "21/02/2025",
+        "Description": "/02/2025 ENC CHQ N\u00B0 400880 AC0EB0 1",
+        "Debit": 300.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/02/2025",
+        "Description": "/02/2025 TVAICOMM REMISE CHO 1271131 - 1",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/02/2025",
+        "Description": "/02/2025 COM OP PASSAGERES \u2014 1011200225170 \u0027",
+        "Debit": 25.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/02/2025",
+        "Description": "/02/2025 COMM COMPTE DEBITEUR/COP 011200225170",
+        "Debit": 0.103,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/02/2025",
+        "Description": "!",
+        "Debit": 380.220,
+        "Credit": 39.153,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/02/2025",
+        "Description": "/02/2025 TVACOMM REG EFF 009694079217",
+        "Debit": 1.045,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/02/2025",
+        "Description": "/02/2025 COMM PREL",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/02/2025",
+        "Description": "/02/2025 RETRAIT ESPECES PC N\u00B0 3190114",
+        "Debit": 3000.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/02/2025",
+        "Description": "/02/2025 COMM COMPTE DEBITEUR/COP 011280225701",
+        "Debit": 0.118,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/02/2025",
+        "Description": "/02/2025 TVA/COMM COMPTE \u2018 011280225701 \u2014 1",
+        "Debit": 0.022,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "26/92/2025",
+        "Description": "/03/2025 COMM REMISE CHQ \u2018 1312683 .",
+        "Debit": 0.875,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "26/02/2025",
+        "Description": "/03/2025 COMM ENC EFF \u2014 0224695 \u201C",
+        "Debit": 5.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "26/02/2025",
+        "Description": "/03/2025 \u0027 TVAICOMM ENC EFF \u2014 0224695 \u2018",
+        "Debit": 0.950,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/03/2025",
+        "Description": "RELEVE",
+        "Debit": 0.143,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/03/2025",
+        "Description": "2025 RETRAIT ESPECES PC N\u00B0 3189681",
+        "Debit": 3500.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "18/03/2025",
+        "Description": "",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "21/03/2025",
+        "Description": "2025 PRL COMP N\u00B0 40045",
+        "Debit": 126.815,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "21/03/2025",
+        "Description": "2025 RETRAIT ESPECES PC N\u00B0 3189779",
+        "Debit": 1500.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/03/2025",
+        "Description": "2025 TVA/COMM PREL",
+        "Debit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "19/03/2025",
+        "Description": "/032025 COMM PREL",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/03/2025",
+        "Description": "/03/2025 PRL COMP N\u00B0 32157",
+        "Debit": 932.802,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "19/03/2025",
+        "Description": "/03/2025 TVA/COMM REMISE CHQ",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/03/2025",
+        "Description": "/03/2025 COMM VIRT RECU",
+        "Debit": 3.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/03/2025",
+        "Description": "",
+        "Debit": 0.570,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/03/2025",
+        "Description": "Solde au:",
+        "Debit": 1543.139,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/03/2025",
+        "Description": "/04/2025 TVAICOMM VIRT RECU VR CPM/020425",
+        "Debit": 0.570,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/03/2025",
+        "Description": "N 02/04/2025 |COMM REMISE CHQ 1312689 \\",
+        "Debit": 0.875,
+        "Credit": 538.694,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/04/2025",
+        "Description": "*08/04/2025 ENC CHQ N\u00B0 92533 92533",
+        "Debit": 325.000,
+        "Credit": 3863.528,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/04/2025",
+        "Description": "",
+        "Debit": 0.060,
+        "Credit": 136.472,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "27/03/2025",
+        "Description": "J 04/04/2025 [COMM 1312690",
+        "Debit": 0.815,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/09/2025",
+        "Description": "\u0628\u0644\u0643 | COMM DEBITEUR/COP (011070425342",
+        "Debit": 0,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/03/2025",
+        "Description": "/04/2025 | TVAICOMM COMPTE 011070425342",
+        "Debit": 43273.206,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/04/2025",
+        "Description": "p | L",
+        "Debit": 1495.830,
+        "Credit": 769.036,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/03/2025",
+        "Description": "/04/2025",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/03/2025",
+        "Description": "242 1",
+        "Debit": 771.416,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "02/04/2025",
+        "Description": "/04/2025 |RETRAIT SUR: ATM BNA BEN 520801",
+        "Debit": 502.500,
+        "Credit": 273.971,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/04/2025",
+        "Description": "/04/2025 |ENC CHQ N\u00B0 524287 524287",
+        "Debit": 1846.350,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/04/2025",
+        "Description": "- 8",
+        "Debit": 0.143,
+        "Credit": 4428.459,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/04/2025",
+        "Description": "",
+        "Debit": 25181000247.459,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/04/2025",
+        "Description": "/04/2025 COMMVIRTRECU \u2014 CPM/100425",
+        "Debit": 250.459,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/04/2025",
+        "Description": "/04/2025 TVA/COMM VIRT RECU VR CPM/100425",
+        "Debit": 251.029,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/04/2025",
+        "Description": "472025 | REMISE 1312691 \u2014",
+        "Debit": 251.904,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/04/2025",
+        "Description": "/04/2025 | TVAICOMM REMISE CHQ 1312691",
+        "Debit": 252.070,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/04/2025",
+        "Description": "2025 206 CHQ \u00222009 |20C",
+        "Debit": 300.000,
+        "Credit": 47.930,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/04/2025",
+        "Description": "/04/2025 VIR ORD SAVONNERIE LE T VR CPM/160425",
+        "Debit": 553.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/04/2025",
+        "Description": "\u0627 16/04/2025 | TVAICOMM VIRT RECU VR CPM/ 160425 5 M",
+        "Debit": 2600.360,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/04/2025",
+        "Description": "/04/2025 ESPECES",
+        "Debit": 97.360,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/10/4720",
+        "Description": "/04/2025 [1240348",
+        "Debit": 0.875,
+        "Credit": 96.485,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/04/2025",
+        "Description": "/04/2025 TVAICOMM REMISE CHQ \u0022 [1240348 T 1",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "22/04/2025",
+        "Description": "ENC CHQ",
+        "Debit": 110.715,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/03/2025",
+        "Description": "Solde",
+        "Debit": 1543.139,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/04/2025",
+        "Description": "",
+        "Debit": 3.000,
+        "Credit": 607.715,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/04/2025",
+        "Description": "",
+        "Debit": 0.570,
+        "Credit": 3607.145,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/10/4202",
+        "Description": "",
+        "Debit": 127.426,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "55/04/1200",
+        "Description": "",
+        "Debit": 477.339,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/11/0472",
+        "Description": "",
+        "Debit": 822.661,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/04/2025",
+        "Description": "",
+        "Debit": 148.072,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/04/2025",
+        "Description": "Solde",
+        "Debit": 148.072,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/04/2025",
+        "Description": "Solde au.",
+        "Debit": 488.428,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/04/2025",
+        "Description": "/05/2025 \u0633\u062D\u0627 REMISECHO \u201D 1312694 1",
+        "Debit": 1488.262,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/04/2025",
+        "Description": "/05/2025 | COMM REMISE CHQ 1312694",
+        "Debit": 487.387,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "02/05/2025",
+        "Description": "PRL N\u00B0 \u2014 1379984 \u2014 \u201C71",
+        "Debit": 495.830,
+        "Credit": 432.957,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/10/4120",
+        "Description": "-0",
+        "Debit": 2.000,
+        "Credit": 480.557,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/10/4720",
+        "Description": "/05/2025 | TVAICOMM PREL \u2014 1379984",
+        "Debit": 0.380,
+        "Credit": 1486.177,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/04/2025",
+        "Description": "2025 | RETRAIT SUR: ATM MEGRINE 057044 \u2014 \u0627",
+        "Debit": 101.300,
+        "Credit": 328.877,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/04/2025",
+        "Description": ". e",
+        "Debit": 201.600,
+        "Credit": 127.277,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/04/2025",
+        "Description": "\u0022 | o",
+        "Debit": 0.875,
+        "Credit": 126.402,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/04/2025",
+        "Description": "/05/2025 | REMISE CHQ 1312695 \u2014",
+        "Debit": 166126.236,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/05/2025",
+        "Description": "/05/2025 4000750 4000750",
+        "Debit": 407.600,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "05/05/2025",
+        "Description": "/05/2025 | TVA/ICOMM VIRTRECU VR CPM/090525",
+        "Debit": 30.266,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/05/2025",
+        "Description": "/05/2025 RETRAIT ESPECES PC N\u00B0 3230501",
+        "Debit": 969.734,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/05/2025",
+        "Description": "/05/2025 | \u00A9 [13126%",
+        "Debit": 970.609,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/05/2025",
+        "Description": "/05/2025 TVAICOMM REMISE CHQ 1312696 1",
+        "Debit": 0.166,
+        "Credit": 970.775,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/05/2025",
+        "Description": "TVAICOMM REMISE CHQ 1312697",
+        "Debit": 771.816,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "19/05/2025",
+        "Description": "/05/2025 | ENC CHQ N\u00B0 620197 \u201C 1620197 T1",
+        "Debit": 617.009,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "19/05/2025",
+        "Description": "/05/2025 | RETRAIT ESPECES PC N\u00B0 03165229",
+        "Debit": 5000.000,
+        "Credit": 382.991,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/05/2025",
+        "Description": "(21/05/2025 N\u00B038877 38877 \u2014",
+        "Debit": 499.407,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/05/2025",
+        "Description": "/05/2025 [COMM PREL \u2014 7188877",
+        "Debit": 501.407,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/05/2025",
+        "Description": "/05/2025 | TVAICOMM PREL 38877",
+        "Debit": 380501.787,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/48/0820",
+        "Description": "REMISE CHQ \u2014 T",
+        "Debit": 502.662,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/05/2025",
+        "Description": "/05/2025 | TVAICOMM REMISE CHQ 1312699",
+        "Debit": 0.166,
+        "Credit": 502.828,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "19/05/2025",
+        "Description": "/05/2025 |TVA/COMM REMISE 1312700 \u201C1",
+        "Debit": 0.166,
+        "Credit": 2700.37,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/05/2025",
+        "Description": "/05/2025 |RETRAIT ESPECES PC N\u00B0 326682 326682 1",
+        "Debit": 5000.000,
+        "Credit": 328.871,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/05/2025",
+        "Description": "/05/2025 REGL EFF N\u00B0 010450347768 010450347768",
+        "Debit": 541.740,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "26/05/2025",
+        "Description": "/05/2025 COMM REG EFF 010450347768",
+        "Debit": 5500218.369,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/05/2025",
+        "Description": "(",
+        "Debit": 0.875,
+        "Credit": 220.289,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/04/2025",
+        "Description": "Solde au:",
+        "Debit": 488.428,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/06/2025",
+        "Description": "/06/2025 |ENC CHQ N\u00B0 9951309 9951309",
+        "Debit": 417.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/05/2025",
+        "Description": "/06/2025 TVA/ICOMM REMISE 1277407 \u2014",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/06/2025",
+        "Description": "( 05/06/2025 | PRL COMP N\u00B0 379521 \u2014 379521 7",
+        "Debit": 495.830,
+        "Credit": 699.674,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/05/2025",
+        "Description": "521",
+        "Debit": 2.000,
+        "Credit": 697.674,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/05/2025",
+        "Description": "",
+        "Debit": 0.380,
+        "Credit": 697.294,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/06/2025",
+        "Description": "RECUPERATION FRAIS PDL \u201C1",
+        "Debit": 0.750,
+        "Credit": 696.544,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/06/2025",
+        "Description": "Ju\u00E9 01/05/25 1",
+        "Debit": 0.143,
+        "Credit": 696.401,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/06/2025",
+        "Description": "L u LR 010540803566 E L E",
+        "Debit": 4600.000,
+        "Credit": 96.401,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/06/2025",
+        "Description": "REG 0106546603566",
+        "Debit": 5.500,
+        "Credit": 90.901,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/06/2025",
+        "Description": "/06/2025 | TVAICOMM REG EFF \u2014 010540803566",
+        "Debit": 1.045,
+        "Credit": 789.856,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/06/2025",
+        "Description": "\u201C10/06/2025 REGL EFF 010540803663 - 010540803663",
+        "Debit": 594.376,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/06/2025",
+        "Description": "COMMREGEFF \u2014 1010540803663 \u2014",
+        "Debit": 5.500,
+        "Credit": 599.876,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/06/2025",
+        "Description": "/06/20\u00272\u00275wa COLD SYSTEM [VR CPM/110625",
+        "Debit": 884000283.079,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/06/2025",
+        "Description": "COMM VIRT RECU VR CPM/110625",
+        "Debit": 3.000,
+        "Credit": 280.079,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/06/2025",
+        "Description": "/06/2025 TVA/ICOMM VIRT RECU T VRCPM/110625",
+        "Debit": 0.570,
+        "Credit": 279.509,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "05/06/2025",
+        "Description": "/06/2025 COMM REMISE CHQ \u2014 \u2014 01345367",
+        "Debit": 0.875,
+        "Credit": 278.634,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "05/06/2025",
+        "Description": "/06/2025 TVACOMM REMISE CHQ - 345367",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/06/2025",
+        "Description": "410",
+        "Debit": 875277.593,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/06/2025",
+        "Description": "/062025 |TVA/COMM REMISE \u2014",
+        "Debit": 0.166,
+        "Credit": 277.427,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/06/2025",
+        "Description": "/06/2025 |ENC CHQ N\u00B0 267 267 \u2014",
+        "Debit": 450.000,
+        "Credit": 1727.427,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "/06/2025 ENC 4003062 \u2014 4003062 7",
+        "Debit": 104.427,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/06/2025",
+        "Description": "\u0027RETRAIT ESPECES PCN\u00B0 \u2014 3256739",
+        "Debit": 500.000,
+        "Credit": 395.573,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/06/2025",
+        "Description": "/06/2025 SAVONNERIE LE [VRCPM/230625",
+        "Debit": 302.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "VIRT RECU __ p VR CPM/230625",
+        "Debit": 3.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "/06/2025 TVA/COMM VIRT RECU - VRCPM/230625",
+        "Debit": 802.857,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/06/2025",
+        "Description": "(23/06/2025 | COMP N\u00B0 - \u0644\u0646\u062A T",
+        "Debit": 124.427,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/10/6120",
+        "Description": "/06/2025 \u0631\u064A\u062C PREL T",
+        "Debit": 2000776.430,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "/06/2025 TVAICOMM PREL 6811",
+        "Debit": 0.380,
+        "Credit": 776.050,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "/06/2025 | COMM REMISE CHQ 1277411 \u2014",
+        "Debit": 1.750,
+        "Credit": 774.300,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/71/0672",
+        "Description": "171",
+        "Debit": 773.968,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/06/2025",
+        "Description": "/06/2025 RETRAIT ESPECES PC - 8256885",
+        "Debit": 500.000,
+        "Credit": 726.032,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/06/2025",
+        "Description": "/06/2025 N\u00B0 9998626",
+        "Debit": 751.000,
+        "Credit": 24.968,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/06/2025",
+        "Description": "/06/2025 ENC CHQ N\u00B0 7861805 17861805",
+        "Debit": 984.000,
+        "Credit": 8.968,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/07/2025",
+        "Description": "Extrait Edit\u00E9 le:",
+        "Debit": 10.59,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/04/2025",
+        "Description": "Solde au:",
+        "Debit": 1488.428,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/06/2025",
+        "Description": "/06/2025 RETRAIT 566665 660 - 3256607",
+        "Debit": 491.032,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/30/06/2025 | VIR ORD AROUA AMEN ALLAH VR CPM/300625",
+        "Debit": 500.000,
+        "Credit": 8.968,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/06/2025",
+        "Description": "\u0022 VIRT RECU _ VR CPM/300625 fl E el",
+        "Debit": 0.570,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/06/2025",
+        "Description": "/06/2025 | RECU \u0022 VR CPM/300625",
+        "Debit": 3.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/06/2025",
+        "Description": "COMP N\u00B0 2083 2083 \u201C1",
+        "Debit": 368.377,
+        "Credit": 362.979,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/06/2025",
+        "Description": "/07/2025 PREL 12088 0",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/06/2025",
+        "Description": "/07/2025 TVACOMMPREL - \u201C 12083 \u2014 E",
+        "Debit": 0.380,
+        "Credit": 365.359,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "27/06/2025",
+        "Description": "/07/2025 TVAICOMM REMISE CHQ 127424 \u2014",
+        "Debit": 366.400,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/07/2025",
+        "Description": "ENC CHQ 275 B 275",
+        "Debit": 200000166.400,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "TVAICOM OP PASSAGERES 011070725284",
+        "Debit": 196.150,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 COMM COMPTE DEBITEUR/COP 011070725284 \u2014",
+        "Debit": 0.167,
+        "Credit": 196.317,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 TVAICOMM COMPTE 011070725284",
+        "Debit": 32196.349,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 ] | PRL COMP N\u00B0 378368 __ 378368 \u0627\u062C E",
+        "Debit": 495.830,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 \u0027 TVAICOMM PREL \u2014 1378368",
+        "Debit": 694.559,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "/",
+        "Debit": 71.912,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/05/2025",
+        "Description": "Soldeau:",
+        "Debit": 220.455,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/06/2025",
+        "Description": "(03/06/2025 |ENC CHQ N\u00B0 9951309 9951309 \u2014",
+        "Debit": 196.545,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/05/2025",
+        "Description": "REMISECHQ \u2014 [1277407",
+        "Debit": 0.875,
+        "Credit": 195.670,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/05/2025",
+        "Description": "/06/2025 TVAICOMM REMISE CHQ | 127740 \u2014",
+        "Debit": 0.166,
+        "Credit": 195.504,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/06/2025",
+        "Description": "T[379521",
+        "Debit": 495.830,
+        "Credit": 0,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/70/5720",
+        "Description": "/06/2025 (",
+        "Debit": 25697.674,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/69/2025",
+        "Description": "21 \u0661",
+        "Debit": 697.294,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/06/2025",
+        "Description": "/06/2025 RECUPERATION FRAISPDL 01/05/25",
+        "Debit": 96.544,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/06/2025",
+        "Description": "/| 10/06/2025 __ TVA/RECUPERATION FRAIS \u0628 PDL 4 01/05/25 us \u2014A",
+        "Debit": 5696.401,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/06/2025",
+        "Description": ". 10/06/2025 |REGL EFF N\u00B0 010540803566 _ 010540803566 e TR RRN",
+        "Debit": 600.000,
+        "Credit": 96.401,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/65/4660",
+        "Description": "",
+        "Debit": 90.901,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/06/2025",
+        "Description": "/06/2025 | TVAICOMM REG EFF [010540803566",
+        "Debit": 1.045,
+        "Credit": 89.856,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/06/2025",
+        "Description": "/06/2025 |REGL EFF N\u00B0 010540803663 010540803663",
+        "Debit": 594.376,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/06/2025",
+        "Description": "/06/2025 TVAICOMM REG EFF |010540803663",
+        "Debit": 500.921,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/06/2025",
+        "Description": "JS COLD SYSTEM",
+        "Debit": 283.079,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/06/2025",
+        "Description": "/06/2025 COMM VIRT RECU VR CPM/110625",
+        "Debit": 73.000,
+        "Credit": 280.079,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/06/2025",
+        "Description": "(1106/2025 TVACOMMVIRTRECU - \\VR\u00A9PWi0625",
+        "Debit": 278.509,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "05/06/2025",
+        "Description": "/06/2025 \u0647\u0647",
+        "Debit": 278.634,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "05/06/2025",
+        "Description": "( 12/06/2025 TVA/ICOMM REMISE CHQ 01345367 1",
+        "Debit": 0.166,
+        "Credit": 278.468,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/06/2025",
+        "Description": "/06/2025 COMM REMISE CHQ\u0027 277410",
+        "Debit": 875277.593,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/06/2025",
+        "Description": "/06/2025 ENCCHON\u00B0267 \u2014 1267 \u201C",
+        "Debit": 727.427,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "\u0022\u0622\u0645 4003062 \u2014 4003062",
+        "Debit": 104.427,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/06/2025",
+        "Description": "(16/06/2025 | RETRAIT ESPECES PC N\u00B0 3256739 \u2018",
+        "Debit": 500.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "/06/2025 \u0627 | COMM VIRT RECU __ \u0627 VR CPM/230625 1",
+        "Debit": 3.000,
+        "Credit": 903.427,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "l 23/06/2025 TVAICOMMVIRTRECU VR CPM/230625",
+        "Debit": 902.857,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "20/06/2025",
+        "Description": "/06/2025 PRL COMPN\u00B0 6811 \u2014 - 6811 E",
+        "Debit": 778.430,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "/06/2025 | COMM PREL 6811",
+        "Debit": 776.430,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "47/06/2025",
+        "Description": "/06/2025 | TVAICOMM PREL 6811 7",
+        "Debit": 776.050,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/06/2025",
+        "Description": "/06/2025 | COMM REMISE CHQ 1277411",
+        "Debit": 1.750,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/70/6202",
+        "Description": "/06/2025 | TVA/ICOMM REMISE CHO 1277411 7",
+        "Debit": 0.332,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/06/2025",
+        "Description": "",
+        "Debit": 726.032,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/06/2025",
+        "Description": "8626 T 1",
+        "Debit": 24.968,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/06/2025",
+        "Description": "/06/2025 ENCCHON\u00B0 7861805 7861605 - 1",
+        "Debit": 8.968,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/06/2025",
+        "Description": "/06/2025 \u0027 RETRAIT ESPECES PC N\u00B0 3256607",
+        "Debit": 500.000,
+        "Credit": 491.032,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/06/2025",
+        "Description": "\u0644\u0642\u0627\u0646 | \u062F\u0633\u0627 72083 - S",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/06/2025",
+        "Description": "",
+        "Debit": 0.380,
+        "Credit": 365.359,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/07/2025",
+        "Description": "Solde",
+        "Debit": 365.359,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/06/2025",
+        "Description": "Solde au",
+        "Debit": 5.398,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/06/2025",
+        "Description": "COMP 12083 7 \u00B0",
+        "Debit": 368.377,
+        "Credit": 362.979,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "27/06/2025",
+        "Description": "( 03/07/2025 [COMM REMISE CHQ \u2014 T |1277424",
+        "Debit": 366.234,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "27/70/6120",
+        "Description": "",
+        "Debit": 366.400,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/07/2025",
+        "Description": "2025 |ENCCHON\u00B0275 -- 1275",
+        "Debit": 200000166.400,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "COM OP PASSAGERES 011070725284 1",
+        "Debit": 25.000,
+        "Credit": 191.400,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 | TVAICOM",
+        "Debit": 196.150,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 COMM COMPTE DEBITEUR/COP [011070725284",
+        "Debit": 0.167,
+        "Credit": 196.317,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 [ TVAICOMM COMPTE 011070725284",
+        "Debit": 0.032,
+        "Credit": 196.349,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 |PRL COMP N\u00B0 378368 378368 S",
+        "Debit": 1495.830,
+        "Credit": 1692.179,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 | TVAICOMM PREL 378368",
+        "Debit": 0.380,
+        "Credit": 694.559,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/07/2025",
+        "Description": "/07/2025 RECUPERATION FRAIS PDL 01/06/25",
+        "Debit": 767.221,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/07/2025",
+        "Description": "/07/2025 __ \u0027 TVA/RECUPERATION FRAIS \u062F\u0645\u064A PDL 01/06/25 \u0644 \u0627\u0644\u0644",
+        "Debit": 0.143,
+        "Credit": 767.364,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "(S, 11/07/2025 COMM REMISE CHQ __ 8 1287802",
+        "Debit": 0.875,
+        "Credit": 768.239,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/07/2025",
+        "Description": "",
+        "Debit": 0.166,
+        "Credit": 768.405,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/10/7720",
+        "Description": "",
+        "Debit": 0.875,
+        "Credit": 769.280,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/70/7720",
+        "Description": "/07/2025 | TVA/ICOMM REMISE CHQ - 01353734",
+        "Debit": 0.166,
+        "Credit": 769.446,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/07/2025",
+        "Description": "",
+        "Debit": 2663.606,
+        "Credit": 583.760,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "44/07/2025",
+        "Description": "/07/2025 \u2018\u00CA\u00CBQTOF\u00CA\u00CA\u00C8T ESPECES PC N\u00B0 }3290782 U 1",
+        "Debit": 83.760,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "45/07/2025",
+        "Description": "(",
+        "Debit": 916.240,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/07/2025",
+        "Description": "/07/2025 CHQ N",
+        "Debit": 0.875,
+        "Credit": 917.115,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/07/2025",
+        "Description": "/07/2025 TVA/COMM REMISE CHQ 11277425",
+        "Debit": 0.166,
+        "Credit": 917.281,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "18/07/2025",
+        "Description": "/07/2025 ENC CHQ N\u00B0 30165 30165",
+        "Debit": 5846.434,
+        "Credit": 929.153,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "18/07/2025",
+        "Description": "",
+        "Debit": 772.400,
+        "Credit": 701.553,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/07/2025",
+        "Description": "\u201C18/07/2025 | COMM VIRT RECU \u2014VR CPM/180725",
+        "Debit": 3.000,
+        "Credit": 698.553,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/07/2025",
+        "Description": "TVAICOMM",
+        "Debit": 697.983,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "22/00/7720",
+        "Description": "(",
+        "Debit": 520.935,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "22/07/2025",
+        "Description": "7427",
+        "Debit": 1.750,
+        "Credit": 519.185,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "22/07/2025",
+        "Description": "/07/2025 |TVAICOMMREMISECHO 277427 \u2014",
+        "Debit": 0.332,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/07/2025",
+        "Description": "/07/2025 |ENC CHQ N\u00B0 304 T304 0",
+        "Debit": 1309.000,
+        "Credit": 827.853,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/06/2025",
+        "Description": "Solde au.",
+        "Debit": 5.398,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/07/7202",
+        "Description": "\u2014 3799 e",
+        "Debit": 150.355,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "/07/2025 | REGL EFF N\u00B0 010836840194 010836840194",
+        "Debit": 200.000,
+        "Credit": 8950.355,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/08/3684",
+        "Description": "/07/2025 |COMM REG EFF \u2014",
+        "Debit": 5.500,
+        "Credit": 944.855,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/07/2025",
+        "Description": "Solde au:",
+        "Debit": 3943.810,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      }
+    ]
+  },
+  "DebugLines": []
+}

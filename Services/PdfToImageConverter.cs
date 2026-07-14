@@ -16,15 +16,18 @@ namespace Codeium_Security.Services
 
         public List<string> ConvertPdfToImages(string pdfPath, string outputFolder)
         {
-            var imagePaths = new List<string>();
-            int maxWidth = _configuration.GetValue("Ocr:PdfMaxWidth", 2480);
-            int maxHeight = _configuration.GetValue("Ocr:PdfMaxHeight", 3508);
-
+            // Nettoyage : supprime les anciennes images d'un test précédent sur ce même fichier
+            if (Directory.Exists(outputFolder))
+            {
+                Directory.Delete(outputFolder, true);
+            }
             Directory.CreateDirectory(outputFolder);
+
+            var imagePaths = new List<string>();
 
             using var docReader = DocLib.Instance.GetDocReader(
                 pdfPath,
-                new PageDimensions(maxWidth, maxHeight));
+                new PageDimensions(1920, 2560));
 
             int pageCount = docReader.GetPageCount();
 

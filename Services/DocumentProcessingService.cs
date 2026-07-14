@@ -57,9 +57,13 @@ namespace Codeium_Security.Services
             else
             {
                 ocrResult = await _ocrService.ExtractTextAsync(filePath);
+                ocrResult.PageTexts = new List<string> { ocrResult.FullText };
+                ocrResult.PageCount = 1;
             }
 
             ocrResult.FullText = TextCleaner.RemoveInvisibleMarks(ocrResult.FullText);
+            ocrResult.PageTexts = ocrResult.PageTexts.Select(TextCleaner.RemoveInvisibleMarks).ToList();
+
             foreach (var word in ocrResult.Words)
                 word.Text = TextCleaner.RemoveInvisibleMarks(word.Text);
 
@@ -84,26 +88,26 @@ namespace Codeium_Security.Services
                 PageCount = ocrResult.PageCount,
                 OcrConfidence = ocrResult.Confidence,
                 NeedsReview = needsReview,
-                Document = document
+                Document = document,
+                DebugLines = lines.Select(l => l.FullLineText).ToList()
             };
         }
 
-        public string FormatAsPlainText(string fileName, int pageCount, string fullText)
+        public string FormatAsPlainText(string fileName, List<string> pageTexts)
         {
             var sb = new System.Text.StringBuilder();
 
-            if (pageCount <= 1)
+            if (pageTexts.Count <= 1)
             {
                 sb.AppendLine($"****** Résultat pour {fileName} ******");
-                sb.AppendLine(fullText.Trim());
+                sb.AppendLine((pageTexts.Count == 1 ? pageTexts[0] : "").Trim());
             }
             else
             {
-                var pages = fullText.Split(new[] { "\n\n" }, StringSplitOptions.None);
-                for (int i = 0; i < pages.Length; i++)
+                for (int i = 0; i < pageTexts.Count; i++)
                 {
                     sb.AppendLine($"****** Résultat pour {fileName} - Page {i + 1} ******");
-                    sb.AppendLine(pages[i].Trim());
+                    sb.AppendLine(pageTexts[i].Trim());
                     sb.AppendLine();
                 }
             }

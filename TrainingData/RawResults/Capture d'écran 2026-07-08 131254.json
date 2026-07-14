@@ -1,0 +1,75 @@
+{
+  "FileName": "Capture d\u0027\u00E9cran 2026-07-08 131254.png",
+  "DetectedType": "Bank",
+  "PageCount": 1,
+  "OcrConfidence": 85,
+  "NeedsReview": false,
+  "RawOcrText": null,
+  "Document": {
+    "AccountNumber": "08 307 00059 10 02049 0 36",
+    "CustomerName": "",
+    "BankName": "",
+    "Currency": "",
+    "Balance": 25178.000,
+    "StatementDate": null,
+    "Transactions": [
+      {
+        "Date": "03/01/2025",
+        "Description": "VERSEMENT ESPECES 02651514",
+        "Debit": 1660.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/01/2025",
+        "Description": "VERSEMENT ESPECES 02659483",
+        "Debit": 1515.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/01/2025",
+        "Description": "VERSEMENT ESPECES 67679066",
+        "Debit": 400.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/01/2025",
+        "Description": "VERSEMENT ESPECES 92964183",
+        "Debit": 160.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "06/01/2025",
+        "Description": "ENCAISSEMENT CHEQUE 3559810",
+        "Debit": 24354.603,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "06/01/2025",
+        "Description": "ENCAISSEMENT CHEQUE 3559811",
+        "Debit": 5317.249,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/01/2025",
+        "Description": "VERSEMENT ESPECES 04220235",
+        "Debit": 964.699,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/01/2025",
+        "Description": "VERSEMENT ESPECES 68004268",
+        "Debit": 178.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      }
+    ]
+  },
+  "DebugLines": []
+}

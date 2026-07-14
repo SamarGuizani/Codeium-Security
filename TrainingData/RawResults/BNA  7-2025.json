@@ -1,0 +1,1069 @@
+{
+  "FileName": "BNA  7-2025.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 89.25,
+  "NeedsReview": false,
+  "RawOcrText": null,
+  "Document": {
+    "AccountNumber": "010 0115008772 K",
+    "CustomerName": "",
+    "BankName": "Banque Nationale Agricole (BNA)",
+    "Currency": "TND",
+    "Balance": -13825.390,
+    "StatementDate": null,
+    "Transactions": [
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 | R\u00E9servation montant ch\u00E8que n\u00B0 8868040",
+        "Debit": 1500.000,
+        "Credit": 9300.498,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/06/2025",
+        "Description": "/07/2025 | Retrait GAB 833345 ATM BZ BORJ CE 01/07/25",
+        "Debit": 100.000,
+        "Credit": 9199.198,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/06/2025",
+        "Description": "TVA",
+        "Debit": 0.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025",
+        "Debit": 0.00,
+        "Credit": 9187.298,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "Com abonnement BNA eBANKING PRO",
+        "Debit": 10.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "TVA",
+        "Debit": 1.900,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "02/07/2025",
+        "Description": "",
+        "Debit": 0.00,
+        "Credit": 7640.298,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "Com recherche / cr\u00E9dits d\u0027exploitation courante, eng/ sign \u0026",
+        "Debit": 300.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "TVA",
+        "Debit": 247.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 | Retrait m\u00EAme compte client OM N\u00B00005262798",
+        "Debit": 3000.000,
+        "Credit": 4640.298,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "02/07/2025",
+        "Description": "/07/2025 |D\u00E9r\u00E9servation Montant ch\u00E8que 8868037",
+        "Debit": 902.178,
+        "Credit": 5542.47,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 |Paiement ch\u00E8que n\u00B0 8868037",
+        "Debit": 902.178,
+        "Credit": 4640.298,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "02/07/2025",
+        "Description": "/07/2025 |D\u00E9r\u00E9servation Montant ch\u00E8que 8868039",
+        "Debit": 800.000,
+        "Credit": 5440.298,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/07/2025",
+        "Description": "/07/2025 |Paiement ch\u00E8que n\u00B0 8868039",
+        "Debit": 800.000,
+        "Credit": 4640.298,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "02/07/2025",
+        "Description": "/07/2025 | Paiement achats 937116 TUNISIE TELECO 03/07/25",
+        "Debit": 90.000,
+        "Credit": 4550.298,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/07/2025",
+        "Description": "/07/2025 | Ex\u00E9cution virement ponctuel \u00E0 \u00E9ch\u00E9ance 010202506713",
+        "Debit": 1600.000,
+        "Credit": 947.323,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/07/2025",
+        "Description": "Com virement \u00E9mis ponctuel",
+        "Debit": 2.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "03/07/2025",
+        "Description": "/07/2025 | Retrait m\u00E9me 296008 sur compte client OM N\u00B00005323774",
+        "Debit": 4500.000,
+        "Credit": -1552.677,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 |Pr\u00E9l\u00E8vement p\u00E9riodique des commissions CREDIT EPS N\u00B0",
+        "Debit": 0.000,
+        "Credit": -1600.277,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 40.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 7.600,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025",
+        "Debit": 0.00,
+        "Credit": 621.102,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 17.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 CREDIT EPS N\u00B0",
+        "Debit": 0.00,
+        "Credit": -1680.602,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 50.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 9.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025",
+        "Debit": 0.00,
+        "Credit": 682.982,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 CREDIT EPS N\u00B0",
+        "Debit": 0.00,
+        "Credit": -1700.832,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 15.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 2.850,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025",
+        "Debit": 0.00,
+        "Credit": 748.432,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 40.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 7.600,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 CREDIT EPS N\u00B0",
+        "Debit": 0.00,
+        "Credit": -1778.182,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 25.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 4.750,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 | CREDIT EPS N\u00B0",
+        "Debit": 0.00,
+        "Credit": 784.132,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 0.95,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 | CREDIT EPS N\u00B0",
+        "Debit": 0.000,
+        "Credit": -1801.982,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 15.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 2.850,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 | CREDIT EPS N\u00B0",
+        "Debit": 813.882,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 10.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 1.900,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 CREDIT EPS N\u00B0",
+        "Debit": 0.000,
+        "Credit": -1834.707,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 17.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 CREDIT EPS N\u00B0",
+        "Debit": 0.000,
+        "Credit": -2024.519,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com cautions sur march\u00E9s \u0026 cautions bancaires",
+        "Debit": 159.506,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 | CREDIT EPS N\u00B0",
+        "Debit": 0.000,
+        "Credit": -2037.008,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com cautions sur march\u00E9s \u0026 cautions bancaires",
+        "Debit": 10.495,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 1.994,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 CREDIT EPS N\u00B0",
+        "Debit": 0.000,
+        "Credit": -2120.146,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "Com cautions sur march\u00E9s \u0026 cautions bancaires",
+        "Debit": 69.864,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "TVA",
+        "Debit": 13.274,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "/07/2025 | Apurement automatique",
+        "Debit": 0.000,
+        "Credit": -2120.146,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "/07/2025 | D\u00E9r\u00E9servation Montant ch\u00E9que 8868040",
+        "Debit": 1500.000,
+        "Credit": -620.146,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/07/2025",
+        "Description": "/07/2025 | Paiement ch\u00E8que n\u00B0 8868040",
+        "Debit": 1500.000,
+        "Credit": -2120.146,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/07/2025",
+        "Description": "/07/2025 | Apurement automatique",
+        "Debit": 0.000,
+        "Credit": -2120.146,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "/07/2025 |R\u00E8glement des pr\u00E9l\u00E8vements",
+        "Debit": 224.180,
+        "Credit": -2346.706,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "Com de pr\u00E9l\u00E8vement (client payeur)",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "/07/2025",
+        "Debit": 2382.408,
+        "Credit": -4731.494,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "Com de pr\u00E9l\u00E9vement (client payeur)",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "/07/2025",
+        "Debit": 100.000,
+        "Credit": -4832.684,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "Com retrait guichet/Mon\u00E9tique sur compte d\u00E9biteur",
+        "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "07/07/2025",
+        "Description": "TVA",
+        "Debit": 0.190,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/07/2025",
+        "Description": "/07/2025 | n\u00B0",
+        "Debit": 2399.005,
+        "Credit": -7231.689,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/07/2025",
+        "Description": "/07/2025 | GAB 09/07/25",
+        "Debit": 500000732.879,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/07/2025",
+        "Description": "Com retrait guichet/Mon\u00E9tique sur compte d\u00E9biteur",
+        "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "08/07/2025",
+        "Description": "TVA",
+        "Debit": 0.190,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/07/2025",
+        "Description": "/07/2025 | GENERAL",
+        "Debit": 1634.623,
+        "Credit": -9369.882,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/07/2025",
+        "Description": "Com de pr\u00E9l\u00E8vement (client payeur)",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/07/2025",
+        "Description": "/07/2025 | GAB 5",
+        "Debit": 500.000,
+        "Credit": -9871.072,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/07/2025",
+        "Description": "Com retrait guichet/Mon\u00E9tique sur compte d\u00E9biteur",
+        "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/07/2025",
+        "Description": "TVA",
+        "Debit": 0.190,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/07/2025",
+        "Description": "/07/2025 | Retrait m\u00E9me agence sur compte client OM N\u00B00005495230",
+        "Debit": 4500.000,
+        "Credit": -14371.072,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/07/2025",
+        "Description": "/07/2025 | Paiement achats 422518 FTT EL MENZAH 11/07/25",
+        "Debit": 40.000,
+        "Credit": -14412.262,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/07/2025",
+        "Description": "Com retrait guichet/Mon\u00E9tique sur compte d\u00E9biteur",
+        "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/07/2025",
+        "Description": "TVA",
+        "Debit": 0.190,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/07/2025",
+        "Description": "/07/2025 | 11/07/25",
+        "Debit": 40.000,
+        "Credit": -14453.452,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/07/2025",
+        "Description": "Com retrait guichet/Mon\u00E9tique sur compte d\u00E9biteur",
+        "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/07/2025",
+        "Description": "TVA",
+        "Debit": 0.190,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/07/2025",
+        "Description": "/07/2025 | TUNISIE TELECO 14/07/25",
+        "Debit": 310.410,
+        "Credit": -14765.052,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/07/2025",
+        "Description": "Com retrait guichet/Mon\u00E9tique sur compte d\u00E9biteur",
+        "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/07/2025",
+        "Description": "TVA",
+        "Debit": 0.190,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/07/2025",
+        "Description": "/07/2025",
+        "Debit": 349.000,
+        "Credit": -15115.242,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/07/2025",
+        "Description": "Com retrait guichet/Mon\u00E9tique sur compte d\u00E9biteur",
+        "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/07/2025",
+        "Description": "TVA",
+        "Debit": 0.190,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/07/2025",
+        "Description": "/07/2025 | GAB GOULETT 15/07/25",
+        "Debit": 200.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/07/2025",
+        "Description": "Com retrait esp\u00E9ce par nos porteurs sur GAB BNA",
+        "Debit": 1.600,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/07/2025",
+        "Description": "Com retrait guichet/Mon\u00E9tique sur compte d\u00E9biteur",
+        "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "14/07/2025",
+        "Description": "TVA",
+        "Debit": 0.190,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/07/2025",
+        "Description": "/07/2025",
+        "Debit": 2500.000,
+        "Credit": -17820.412,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/07/2025",
+        "Description": "Com virement de masse",
+        "Debit": 2.00,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/07/2025",
+        "Description": "TVA",
+        "Debit": 0.38,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/06/2025",
+        "Description": "/07/2025 | Arr\u00EAt\u00E9 de compte",
+        "Debit": 1300.448,
+        "Credit": -19120.860,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/07/2025",
+        "Description": "/07/2025 | Ex\u00E9cution virement ponctuel \u00E0 \u00E9ch\u00E9ance 010202507079",
+        "Debit": 6647.342,
+        "Credit": -25771.177,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "15/07/2025",
+        "Description": "Com virement \u00E9mis ponctuel",
+        "Debit": 2.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/07/2025",
+        "Description": "/07/2025 | Apurement total EPS",
+        "Debit": 0.000,
+        "Credit": -25771.177,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/07/2025",
+        "Description": "/07/2025 | Paiement achats 836281 STE DE GESTION 18/07/25",
+        "Debit": 445.995,
+        "Credit": -26218.362,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/07/2025",
+        "Description": "Com retrait guichet/Mon\u00E9tique sur compte d\u00E9biteur",
+        "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/07/2025",
+        "Description": "TVA",
+        "Debit": 0.190,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "21/07/2025",
+        "Description": "/07/2025 | REGLE DECLARATION:",
+        "Debit": 3541.538,
+        "Credit": -29762.28,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "21/07/2025",
+        "Description": "Com de pr\u00E9l\u00E8vement (client payeur)",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "21/07/2025",
+        "Description": "TVA",
+        "Debit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/07/2025",
+        "Description": "/07/2025 | S/C",
+        "Debit": 0.000,
+        "Credit": -29839.630,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/07/2025",
+        "Description": "Com relative \u00E0 une autorisation ponctuelle",
+        "Debit": 65.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/07/2025",
+        "Description": "TVA",
+        "Debit": 12.350,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "/07/2025 | Ex\u00E9cution utilisation cr\u00E9dits \u0639\u0644 gestion",
+        "Debit": 29156.667,
+        "Credit": -682.963,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/07/2025",
+        "Description": "/07/2025 | Ex\u00E9cution virement ponctuel \u00E0 \u00E9ch\u00E9ance 010202507375",
+        "Debit": 3364.627,
+        "Credit": -4050.565,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/07/2025",
+        "Description": "Com virement \u00E9mis ponctuel",
+        "Debit": 2.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/07/2025",
+        "Description": "/07/2025 | Retrait d\u00E9plac\u00E9 re\u00E7u en dinars OM 06",
+        "Debit": 2003.570,
+        "Credit": -6054.138,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "/07/2025 | R\u00E9ception agence contrats de domiciliation 1310001",
+        "Debit": 0.000,
+        "Credit": -6054.135,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/07/2025",
+        "Description": "/07/2025 |R\u00E8glement des pr\u00E9l\u00E8vements Tarek CHAHED",
+        "Debit": 3533.707,
+        "Credit": -9590.222,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/07/2025",
+        "Description": "Com de pr\u00E9l\u00E8vement (client payeur)",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/07/2025",
+        "Description": "/07/2025",
+        "Debit": 382.466,
+        "Credit": -10975.068,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/07/2025",
+        "Description": "Com de pr\u00E9l\u00E8vement (client payeur)",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/07/2025",
+        "Description": "/07/2025 | EPS",
+        "Debit": 0.000,
+        "Credit": -11034.568,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/07/2025",
+        "Description": "Com frais d\u0027\u00E9mission",
+        "Debit": 50.004,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/07/2025",
+        "Description": "TVA",
+        "Debit": 9.50,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/07/2025",
+        "Description": "l 29/07/2025 | CREDIT EPS N\u00B0",
+        "Debit": 0.000,
+        "Credit": -11155.644,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/07/2025",
+        "Description": "Com aval op\u00E9rations courantes",
+        "Debit": 101.745,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/07/2025",
+        "Description": "TVA",
+        "Debit": 19.331,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/07/2025",
+        "Description": "/07/2025 | S/C",
+        "Debit": 0.000,
+        "Credit": -11232.994,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "Com relative \u00E0 une autorisation ponctuelle",
+        "Debit": 65.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "TVA",
+        "Debit": 12.350,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "/07/2025 | CREDIT EPS N\u00B0",
+        "Debit": 0.000,
+        "Credit": -11262.744,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Debit": 25.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "TVA",
+        "Debit": 4.750,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "/07/2025 | EPS",
+        "Debit": 0.000,
+        "Credit": -11322.244,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "Com frais d\u0027\u00E9mission",
+        "Debit": 50.004,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "28/07/2025",
+        "Description": "TVA",
+        "Debit": 9.50,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "/07/2025 | EPS",
+        "Debit": 0.000,
+        "Credit": -11381.744,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "Com frais d\u0027\u00E9mission",
+        "Debit": 50.004,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "TVA",
+        "Debit": 9.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "/07/2025 CREDIT EPS N\u00B0",
+        "Debit": 0.000,
+        "Credit": -11509.669,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "Com aval op\u00E9rations courantes",
+        "Debit": 107.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "TVA",
+        "Debit": 20.428,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "/07/2025 | EPS",
+        "Debit": 0.000,
+        "Credit": -11569.169,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "Com frais d\u0027\u00E9mission",
+        "Debit": 50.004,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "TVA",
+        "Debit": 9.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "/07/2025",
+        "Debit": 0.000,
+        "Credit": -11697.689,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "Com aval op\u00E9rations courantes",
+        "Debit": 108.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "TVA",
+        "Debit": 20.520,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "/07/2025 | EPS",
+        "Debit": 0.000,
+        "Credit": -11757.189,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "Com frais d\u0027\u00E9mission",
+        "Debit": 50.004,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "TVA",
+        "Debit": 9.50,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "/07/2025",
+        "Debit": 0.000,
+        "Credit": -11809.920,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "Com cautions sur march\u00E9s \u0026 cautions bancaires",
+        "Debit": 44.31,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/07/2025",
+        "Description": "VA",
+        "Debit": 8.419,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      }
+    ]
+  },
+  "DebugLines": []
+}

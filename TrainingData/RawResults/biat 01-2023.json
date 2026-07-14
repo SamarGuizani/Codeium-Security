@@ -1,0 +1,474 @@
+{
+  "FileName": "biat 01-2023.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 3,
+  "OcrConfidence": 86.666664,
+  "NeedsReview": false,
+  "RawOcrText": null,
+  "Document": {
+    "AccountNumber": "08 307 00059 10 02049 0 36",
+    "CustomerName": "",
+    "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
+    "Currency": "TND",
+    "Balance": 170000.000,
+    "StatementDate": null,
+    "Transactions": [
+      {
+        "Date": "04/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 2365174",
+        "Debit": 5385.866,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "29/12/2022",
+        "Description": "COM TVA/REM CHQ ENC 2365174",
+        "Debit": 1.785,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/01/2023",
+        "Description": "VIREMENT TN MEME BQ 30610149",
+        "Debit": 357.430,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/01/2023",
+        "Description": "VIREMENT TN MEME BQ 30610149",
+        "Debit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/01/2023",
+        "Description": "VIREMENT TN MEME BQ 30610149",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "05/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 0220588",
+        "Debit": 500.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/12/2022",
+        "Description": "COM TVA/REM CHQ ENC 0220588",
+        "Debit": 0.893,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "04/01/2023",
+        "Description": "RETRAIT CHEQUE 0000113",
+        "Debit": 3000.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "05/01/2023",
+        "Description": "COMMISSION REM EFFETS 1041125",
+        "Debit": 2.090,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "05/01/2023",
+        "Description": "COMMISSION REM EFFETS 1041125",
+        "Debit": 11.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "06/01/2023",
+        "Description": "REGLEMENT CHEQUE 0000109",
+        "Debit": 102.600,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "06/01/2023",
+        "Description": "REGLEMENT CHEQUE 0000114",
+        "Debit": 337.532,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 0387567",
+        "Debit": 1824.382,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "05/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 0387567",
+        "Debit": 1.785,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/01/2023",
+        "Description": "VIREMENT TN MEME BQ 39059571",
+        "Debit": 278.830,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/01/2023",
+        "Description": "VIREMENT TN MEME BQ 39059571",
+        "Debit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/01/2023",
+        "Description": "VIREMENT TN MEME BQ 39059571",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/01/2023",
+        "Description": "REGLEMENT CHEQUE 0000106",
+        "Debit": 1066.348,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/01/2023",
+        "Description": "ENCAISSEMENT EFFETTN 84347062",
+        "Debit": 492.182,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/01/2023",
+        "Description": "ENCAISSEMENT EFFETTN 84403128",
+        "Debit": 3035.662,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 0387569",
+        "Debit": 1201.677,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "06/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 0387569",
+        "Debit": 4.463,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/01/2023",
+        "Description": "VIREMENT TN AUTRE BQ 1362838",
+        "Debit": 2.618,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/01/2023",
+        "Description": "VIREMENT TN AUTRE BQ 1362838",
+        "Debit": 24902.139,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "13/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 0220591",
+        "Debit": 570.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 0220591",
+        "Debit": 0.893,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/01/2023",
+        "Description": "RETRAIT CHEQUE 0000118",
+        "Debit": 2000.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 0387573",
+        "Debit": 673.788,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "11/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 0387573",
+        "Debit": 0.893,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "16/01/2023",
+        "Description": "VIREMENT TN MEME BQ 1362839",
+        "Debit": 30000.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/01/2023",
+        "Description": "VIREMENT TN MEME BQ 92202333",
+        "Debit": 324.790,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/01/2023",
+        "Description": "VIREMENT TN MEME BQ 92202333",
+        "Debit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "17/01/2023",
+        "Description": "VIREMENT TN MEME BQ 92202333",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "18/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 0387575",
+        "Debit": 263.795,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "12/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 0387575",
+        "Debit": 0.893,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/01/2023",
+        "Description": "VERSEMENT ESPECES 40532085",
+        "Debit": 895.250,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/01/2023",
+        "Description": "COMMISSION REM EFFETS 1041133",
+        "Debit": 2.565,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/01/2023",
+        "Description": "COMMISSION REM EFFETS 1041133",
+        "Debit": 13.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/01/2023",
+        "Description": "COMMISSION REM EFFETS 1041134",
+        "Debit": 1.045,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/01/2023",
+        "Description": "COMMISSION REM EFFETS 1041134",
+        "Debit": 5.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 0387578",
+        "Debit": 63.994,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "19/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 0387578",
+        "Debit": 0.893,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/01/2023",
+        "Description": "VIREMENT TN MEME BQ 32794883",
+        "Debit": 713.570,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/01/2023",
+        "Description": "VIREMENT TN MEME BQ 32794883",
+        "Debit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/01/2023",
+        "Description": "VIREMENT TN MEME BQ 32794883",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/01/2023",
+        "Description": "COMMISSION REM EFFETS 0138361",
+        "Debit": 1.045,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "24/01/2023",
+        "Description": "COMMISSION REM EFFETS 0138361",
+        "Debit": 5.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "27/01/2023",
+        "Description": "VERSEMENT ESPECES 51036473",
+        "Debit": 90.470,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "27/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 0276961",
+        "Debit": 224.720,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "23/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 0276961",
+        "Debit": 0.893,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/01/2023",
+        "Description": "VERSEMENT ESPECES 70787201",
+        "Debit": 1501.250,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "26/01/2023",
+        "Description": "REGLEMENT CHEQUE 0000119",
+        "Debit": 3993.759,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/01/2023",
+        "Description": "ENCAISSEMENT EFFETTN 69113826",
+        "Debit": 1221.005,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 0276963",
+        "Debit": 863.576,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/01/2023",
+        "Description": "ENCAISSEMENT CHEQUE 1092706",
+        "Debit": 1332.142,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 0276963",
+        "Debit": 0.893,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 1092706",
+        "Debit": 0.893,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/01/2023",
+        "Description": "VIREMENT TN MEME BQ 68440594",
+        "Debit": 420.950,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/01/2023",
+        "Description": "VIREMENT TN MEME BQ 68440594",
+        "Debit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/01/2023",
+        "Description": "VIREMENT TN MEME BQ 68440594",
+        "Debit": 2.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/01/2023",
+        "Description": "PRELEVEMENT BANCAIRE 10105073",
+        "Debit": 2.975,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "30/01/2023",
+        "Description": "PRELEVEMENT BANCAIRE 10105073",
+        "Debit": 541.308,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/02/2023",
+        "Description": "ENCAISSEMENT EFFETTN 65315904",
+        "Debit": 15365.246,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "01/02/2023",
+        "Description": "ENCAISSEMENT CHEQUE 1092709",
+        "Debit": 1930.074,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "26/01/2023",
+        "Description": "COM TVA/REM CHQ ENC 1092709",
+        "Debit": 0.893,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      }
+    ]
+  },
+  "DebugLines": []
+}

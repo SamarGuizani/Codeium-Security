@@ -1,0 +1,18 @@
+{
+  "FileName": "relevedenote1-1.jpeg",
+  "DetectedType": "Bank",
+  "PageCount": 1,
+  "OcrConfidence": 76,
+  "NeedsReview": true,
+  "RawOcrText": null,
+  "Document": {
+    "AccountNumber": "",
+    "CustomerName": "",
+    "BankName": "",
+    "Currency": "",
+    "Balance": 10.46,
+    "StatementDate": null,
+    "Transactions": []
+  },
+  "DebugLines": []
+}
