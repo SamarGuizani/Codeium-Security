@@ -11,5 +11,10 @@ namespace Codeium_Security.Utilities
             return Regex.Replace(text,
                 @"[\u200B-\u200F\u202A-\u202E\u2060-\u2064\uFEFF]", "");
         }
+        public static string RemoveStrayTableBorders(string text)
+        {
+            // Supprime un "|" isolé collé en début de mot (bug de lecture des lignes de tableau)
+            return System.Text.RegularExpressions.Regex.Replace(text, @"^\|+", "");
+        }
     }
 }

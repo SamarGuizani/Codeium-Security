@@ -12,5 +12,7 @@ namespace Codeium_Security.Models
         public List<string> DebugLines { get; set; } = new();
 
         public List<WordCoordinate> Words { get; set; } = new();
+
+        public List<LineOutput> Lines { get; set; } = new();
     }
 }

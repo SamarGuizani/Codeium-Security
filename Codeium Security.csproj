@@ -22,6 +22,7 @@
     <Folder Include="Images\" />
     <Folder Include="RawResults\" />
     <Folder Include="Output\" />
+    <Folder Include="TrainingData\SourceDocuments\" />
     <Folder Include="TrainingData\RawResults\" />
   </ItemGroup>
 

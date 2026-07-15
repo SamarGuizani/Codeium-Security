@@ -17,7 +17,8 @@ namespace Codeium_Security.Controllers
         private static readonly JsonSerializerOptions JsonOptions = new()
         {
             WriteIndented = true,
-            PropertyNamingPolicy = null
+            PropertyNamingPolicy = null,
+            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.Create(System.Text.Unicode.UnicodeRanges.All)
         };
 
         public OcrController(DocumentProcessingService processingService)
@@ -80,7 +81,7 @@ namespace Codeium_Security.Controllers
         [HttpPost("process-batch")]
         public async Task<IActionResult> ProcessBatch(List<IFormFile>? files)
         {
-            const string imagesFolder = "Images";
+            const string imagesFolder = "TrainingData/SourceDocuments";
             const string outputFolder = "TrainingData/RawResults";
 
             Directory.CreateDirectory(imagesFolder);

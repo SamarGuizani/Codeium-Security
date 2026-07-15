@@ -1,0 +1,2945 @@
+{
+  "FileName": "BANK-USD (1).pdf",
+  "DetectedType": "Bank",
+  "PageCount": 2,
+  "OcrConfidence": 86,
+  "NeedsReview": true,
+  "RawOcrText": null,
+  "Document": {
+    "AccountNumber": "",
+    "CustomerName": "",
+    "BankName": "",
+    "Currency": "USD",
+    "Balance": 8000.00,
+    "StatementDate": null,
+    "Transactions": [
+      {
+        "Date": "25/11/2024",
+        "Description": "/11/2024",
+        "Debit": 9.71,
+        "Credit": 3291.10,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/11/2024",
+        "Description": "/11/2024",
+        "Debit": 0.10,
+        "Credit": 3291.00,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "25/11/2024",
+        "Description": "/11/2024",
+        "Debit": 0.02,
+        "Credit": 3290.98,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "10/12/2024",
+        "Description": "/12/2024",
+        "Debit": 4000.00,
+        "Credit": 7290.98,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2025",
+        "Description": "/01/2025",
+        "Debit": 11290.98,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "09/01/2025",
+        "Description": "/01/2025",
+        "Debit": 3000.00,
+        "Credit": 8290.98,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Date": "31/01/2025",
+        "Description": "/02/2025",
+        "Debit": 3000.00,
+        "Credit": 5290.98,
+        "BalanceAfterOperation": null
+      }
+    ]
+  },
+  "DebugLines": [
+    "3/5/25, 2:41 PM BTK@DIRECT",
+    "\u003C",
+    "[ Bank  EXTRAIT DE COMPTE",
+    "Code client : 0510291",
+    "Nom du client : SOCIETE IT CAPACITIES",
+    "Numéro de compte : 02222-25100815949-69 USD",
+    "Libellé du compte : Compte Professionnel en Devise",
+    "Iban : TN5920022222510081594969",
+    "Date : 05/03/2025",
+    "Solde initial (USD): 3 300,81",
+    "Date de",
+    "Date valeur Opération Débit (USD) Crédit(USD) Solde (USD)",
+    "25/11/2024 25/11/2024 PAIEMENT TPE 9,71 3 291,10",
+    "INTERNATIONAL",
+    "25/11/2024 25/11/2024 COM \u0026 TVA RET. CARTE 0,10 3 291,00",
+    "25/11/2024 25/11/2024 COM \u0026 TVA RET. CARTE 0,02 3 290,98",
+    "10/12/2024 10/12/2024 E\u0026TRANSFERT RECU 4 000,00 7 290,98",
+    "24007858",
+    "ا ORD: THE RAINMAKER",
+    "INSTITUTE LLC",
+    "09/01/2025 09/01/2025 \u0026@TRANSFERT RECU 4 0 11 290,98",
+    "25000082",
+    "ا ORD: THE RAINMAKER",
+    "INSTITUTE LLC",
+    "13/01/2025 09/01/2025 @ VIREMENT EMIS MEM AG 3 000,00 8 290,98",
+    "ا En faveur SOCIETE IT",
+    "CAPACITIES",
+    "04/02/2025 31/01/2025 \u0026@VIREMENT EMIS MEM مح 3 000,00 5 290,98",
+    "ا En faveur SOCIETE IT",
+    "CAPACITIES",
+    "Total 6 009,83 8 000,00",
+    "Impriméle 05/03/2025",
+    "Fermer cette fenêtre Imprimer",
+    "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk",
+    "3/5/25, 2:41 PM BTK@DIRECT",
+    "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 2/2"
+  ],
+  "Words": [
+    {
+      "Text": "3/5/25,",
+      "Confidence": 87.825134,
+      "Left": 75,
+      "Top": 51,
+      "Right": 146,
+      "Bottom": 71
+    },
+    {
+      "Text": "2:41",
+      "Confidence": 90.95988,
+      "Left": 155,
+      "Top": 51,
+      "Right": 198,
+      "Bottom": 68
+    },
+    {
+      "Text": "PM",
+      "Confidence": 91.98961,
+      "Left": 211,
+      "Top": 51,
+      "Right": 244,
+      "Bottom": 68
+    },
+    {
+      "Text": "BTK@DIRECT",
+      "Confidence": 91.720825,
+      "Left": 958,
+      "Top": 51,
+      "Right": 1119,
+      "Bottom": 73
+    },
+    {
+      "Text": "\u003C",
+      "Confidence": 70.810905,
+      "Left": 176,
+      "Top": 156,
+      "Right": 302,
+      "Bottom": 216
+    },
+    {
+      "Text": "[",
+      "Confidence": 56.253654,
+      "Left": 170,
+      "Top": 269,
+      "Right": 189,
+      "Bottom": 324
+    },
+    {
+      "Text": "Bank",
+      "Confidence": 32.830086,
+      "Left": 202,
+      "Top": 269,
+      "Right": 271,
+      "Bottom": 324
+    },
+    {
+      "Text": "",
+      "Confidence": 73.31994,
+      "Left": 289,
+      "Top": 269,
+      "Right": 308,
+      "Bottom": 324
+    },
+    {
+      "Text": "EXTRAIT",
+      "Confidence": 91.31596,
+      "Left": 1192,
+      "Top": 272,
+      "Right": 1337,
+      "Bottom": 299
+    },
+    {
+      "Text": "DE",
+      "Confidence": 93.300156,
+      "Left": 1350,
+      "Top": 272,
+      "Right": 1392,
+      "Bottom": 299
+    },
+    {
+      "Text": "COMPTE",
+      "Confidence": 90.56187,
+      "Left": 1406,
+      "Top": 272,
+      "Right": 1553,
+      "Bottom": 299
+    },
+    {
+      "Text": "Code",
+      "Confidence": 90.49084,
+      "Left": 148,
+      "Top": 350,
+      "Right": 222,
+      "Bottom": 374
+    },
+    {
+      "Text": "client",
+      "Confidence": 92.58568,
+      "Left": 234,
+      "Top": 349,
+      "Right": 312,
+      "Bottom": 374
+    },
+    {
+      "Text": ":",
+      "Confidence": 93.26074,
+      "Left": 331,
+      "Top": 356,
+      "Right": 335,
+      "Bottom": 374
+    },
+    {
+      "Text": "0510291",
+      "Confidence": 96.10258,
+      "Left": 473,
+      "Top": 351,
+      "Right": 592,
+      "Bottom": 374
+    },
+    {
+      "Text": "Nom",
+      "Confidence": 90.836784,
+      "Left": 150,
+      "Top": 397,
+      "Right": 217,
+      "Bottom": 420
+    },
+    {
+      "Text": "du",
+      "Confidence": 90.640755,
+      "Left": 230,
+      "Top": 395,
+      "Right": 264,
+      "Bottom": 420
+    },
+    {
+      "Text": "client",
+      "Confidence": 90.82509,
+      "Left": 277,
+      "Top": 395,
+      "Right": 355,
+      "Bottom": 420
+    },
+    {
+      "Text": ":",
+      "Confidence": 90.745636,
+      "Left": 375,
+      "Top": 402,
+      "Right": 378,
+      "Bottom": 420
+    },
+    {
+      "Text": "SOCIETE",
+      "Confidence": 92.34785,
+      "Left": 473,
+      "Top": 397,
+      "Right": 594,
+      "Bottom": 420
+    },
+    {
+      "Text": "IT",
+      "Confidence": 87.674225,
+      "Left": 607,
+      "Top": 397,
+      "Right": 630,
+      "Bottom": 420
+    },
+    {
+      "Text": "CAPACITIES",
+      "Confidence": 88.56325,
+      "Left": 641,
+      "Top": 396,
+      "Right": 808,
+      "Bottom": 420
+    },
+    {
+      "Text": "Numéro",
+      "Confidence": 91.36209,
+      "Left": 150,
+      "Top": 441,
+      "Right": 268,
+      "Bottom": 466
+    },
+    {
+      "Text": "de",
+      "Confidence": 92.22298,
+      "Left": 280,
+      "Top": 441,
+      "Right": 315,
+      "Bottom": 466
+    },
+    {
+      "Text": "compte",
+      "Confidence": 92.22298,
+      "Left": 326,
+      "Top": 444,
+      "Right": 436,
+      "Bottom": 473
+    },
+    {
+      "Text": ":",
+      "Confidence": 91.29441,
+      "Left": 456,
+      "Top": 448,
+      "Right": 460,
+      "Bottom": 466
+    },
+    {
+      "Text": "02222-25100815949-69",
+      "Confidence": 91.29441,
+      "Left": 473,
+      "Top": 442,
+      "Right": 818,
+      "Bottom": 466
+    },
+    {
+      "Text": "USD",
+      "Confidence": 90.71895,
+      "Left": 831,
+      "Top": 442,
+      "Right": 891,
+      "Bottom": 466
+    },
+    {
+      "Text": "Libellé",
+      "Confidence": 92.04274,
+      "Left": 150,
+      "Top": 486,
+      "Right": 241,
+      "Bottom": 511
+    },
+    {
+      "Text": "du",
+      "Confidence": 90.54551,
+      "Left": 253,
+      "Top": 487,
+      "Right": 288,
+      "Bottom": 511
+    },
+    {
+      "Text": "compte",
+      "Confidence": 90.41917,
+      "Left": 300,
+      "Top": 490,
+      "Right": 410,
+      "Bottom": 519
+    },
+    {
+      "Text": ":",
+      "Confidence": 88.653534,
+      "Left": 431,
+      "Top": 493,
+      "Right": 434,
+      "Bottom": 511
+    },
+    {
+      "Text": "Compte",
+      "Confidence": 74.31689,
+      "Left": 473,
+      "Top": 488,
+      "Right": 587,
+      "Bottom": 519
+    },
+    {
+      "Text": "Professionnel",
+      "Confidence": 92.05175,
+      "Left": 600,
+      "Top": 486,
+      "Right": 798,
+      "Bottom": 511
+    },
+    {
+      "Text": "en",
+      "Confidence": 93.28297,
+      "Left": 810,
+      "Top": 493,
+      "Right": 844,
+      "Bottom": 511
+    },
+    {
+      "Text": "Devise",
+      "Confidence": 92.341125,
+      "Left": 858,
+      "Top": 487,
+      "Right": 952,
+      "Bottom": 511
+    },
+    {
+      "Text": "Iban",
+      "Confidence": 88.06078,
+      "Left": 149,
+      "Top": 532,
+      "Right": 210,
+      "Bottom": 557
+    },
+    {
+      "Text": ":",
+      "Confidence": 91.710655,
+      "Left": 231,
+      "Top": 539,
+      "Right": 235,
+      "Bottom": 557
+    },
+    {
+      "Text": "TN5920022222510081594969",
+      "Confidence": 90.68945,
+      "Left": 471,
+      "Top": 533,
+      "Right": 913,
+      "Bottom": 557
+    },
+    {
+      "Text": "Date",
+      "Confidence": 91.6185,
+      "Left": 150,
+      "Top": 579,
+      "Right": 215,
+      "Bottom": 602
+    },
+    {
+      "Text": ":",
+      "Confidence": 91.6185,
+      "Left": 236,
+      "Top": 584,
+      "Right": 240,
+      "Bottom": 602
+    },
+    {
+      "Text": "05/03/2025",
+      "Confidence": 91.92902,
+      "Left": 473,
+      "Top": 579,
+      "Right": 639,
+      "Bottom": 602
+    },
+    {
+      "Text": "Solde",
+      "Confidence": 91.973465,
+      "Left": 1225,
+      "Top": 769,
+      "Right": 1300,
+      "Bottom": 794
+    },
+    {
+      "Text": "initial",
+      "Confidence": 92.80908,
+      "Left": 1310,
+      "Top": 769,
+      "Right": 1389,
+      "Bottom": 794
+    },
+    {
+      "Text": "(USD):",
+      "Confidence": 82.732056,
+      "Left": 1406,
+      "Top": 771,
+      "Right": 1514,
+      "Bottom": 799
+    },
+    {
+      "Text": "3",
+      "Confidence": 91.179115,
+      "Left": 1532,
+      "Top": 771,
+      "Right": 1548,
+      "Bottom": 794
+    },
+    {
+      "Text": "300,81",
+      "Confidence": 91.179115,
+      "Left": 1558,
+      "Top": 771,
+      "Right": 1649,
+      "Bottom": 798
+    },
+    {
+      "Text": "Date",
+      "Confidence": 92.27809,
+      "Left": 374,
+      "Top": 850,
+      "Right": 446,
+      "Bottom": 874
+    },
+    {
+      "Text": "de",
+      "Confidence": 91.94919,
+      "Left": 456,
+      "Top": 849,
+      "Right": 493,
+      "Bottom": 874
+    },
+    {
+      "Text": "Date",
+      "Confidence": 91.792786,
+      "Left": 168,
+      "Top": 896,
+      "Right": 239,
+      "Bottom": 920
+    },
+    {
+      "Text": "valeur",
+      "Confidence": 91.07659,
+      "Left": 371,
+      "Top": 895,
+      "Right": 472,
+      "Bottom": 920
+    },
+    {
+      "Text": "Opération",
+      "Confidence": 91.52637,
+      "Left": 579,
+      "Top": 895,
+      "Right": 738,
+      "Bottom": 927
+    },
+    {
+      "Text": "Débit",
+      "Confidence": 91.1475,
+      "Left": 1025,
+      "Top": 895,
+      "Right": 1107,
+      "Bottom": 920
+    },
+    {
+      "Text": "(USD)",
+      "Confidence": 85.99056,
+      "Left": 1117,
+      "Top": 896,
+      "Right": 1202,
+      "Bottom": 924
+    },
+    {
+      "Text": "Crédit(USD)",
+      "Confidence": 90.49637,
+      "Left": 1242,
+      "Top": 895,
+      "Right": 1432,
+      "Bottom": 924
+    },
+    {
+      "Text": "Solde",
+      "Confidence": 89.69575,
+      "Left": 1471,
+      "Top": 895,
+      "Right": 1554,
+      "Bottom": 920
+    },
+    {
+      "Text": "(USD)",
+      "Confidence": 89.74774,
+      "Left": 1565,
+      "Top": 896,
+      "Right": 1650,
+      "Bottom": 924
+    },
+    {
+      "Text": "25/11/2024",
+      "Confidence": 91.220634,
+      "Left": 166,
+      "Top": 983,
+      "Right": 334,
+      "Bottom": 1006
+    },
+    {
+      "Text": "25/11/2024",
+      "Confidence": 86.625595,
+      "Left": 373,
+      "Top": 983,
+      "Right": 540,
+      "Bottom": 1006
+    },
+    {
+      "Text": "PAIEMENT",
+      "Confidence": 84.34245,
+      "Left": 580,
+      "Top": 983,
+      "Right": 732,
+      "Bottom": 1006
+    },
+    {
+      "Text": "TPE",
+      "Confidence": 95.75735,
+      "Left": 740,
+      "Top": 983,
+      "Right": 793,
+      "Bottom": 1006
+    },
+    {
+      "Text": "9,71",
+      "Confidence": 92.39926,
+      "Left": 1142,
+      "Top": 983,
+      "Right": 1196,
+      "Bottom": 1010
+    },
+    {
+      "Text": "3",
+      "Confidence": 55.29087,
+      "Left": 1530,
+      "Top": 983,
+      "Right": 1546,
+      "Bottom": 1006
+    },
+    {
+      "Text": "291,10",
+      "Confidence": 55.29087,
+      "Left": 1556,
+      "Top": 983,
+      "Right": 1651,
+      "Bottom": 1010
+    },
+    {
+      "Text": "INTERNATIONAL",
+      "Confidence": 91.480515,
+      "Left": 581,
+      "Top": 1028,
+      "Right": 822,
+      "Bottom": 1052
+    },
+    {
+      "Text": "25/11/2024",
+      "Confidence": 91.77906,
+      "Left": 166,
+      "Top": 1113,
+      "Right": 334,
+      "Bottom": 1136
+    },
+    {
+      "Text": "25/11/2024",
+      "Confidence": 88.68679,
+      "Left": 373,
+      "Top": 1113,
+      "Right": 540,
+      "Bottom": 1136
+    },
+    {
+      "Text": "COM",
+      "Confidence": 80.264046,
+      "Left": 579,
+      "Top": 1113,
+      "Right": 648,
+      "Bottom": 1136
+    },
+    {
+      "Text": "\u0026",
+      "Confidence": 93.206375,
+      "Left": 661,
+      "Top": 1113,
+      "Right": 682,
+      "Bottom": 1136
+    },
+    {
+      "Text": "TVA",
+      "Confidence": 88.58306,
+      "Left": 691,
+      "Top": 1113,
+      "Right": 748,
+      "Bottom": 1136
+    },
+    {
+      "Text": "RET.",
+      "Confidence": 91.04784,
+      "Left": 759,
+      "Top": 1113,
+      "Right": 818,
+      "Bottom": 1136
+    },
+    {
+      "Text": "CARTE",
+      "Confidence": 92.44321,
+      "Left": 830,
+      "Top": 1113,
+      "Right": 922,
+      "Bottom": 1136
+    },
+    {
+      "Text": "0,10",
+      "Confidence": 90.07427,
+      "Left": 1142,
+      "Top": 1112,
+      "Right": 1202,
+      "Bottom": 1140
+    },
+    {
+      "Text": "3",
+      "Confidence": 63.292522,
+      "Left": 1530,
+      "Top": 1113,
+      "Right": 1546,
+      "Bottom": 1136
+    },
+    {
+      "Text": "291,00",
+      "Confidence": 63.292522,
+      "Left": 1556,
+      "Top": 1113,
+      "Right": 1651,
+      "Bottom": 1140
+    },
+    {
+      "Text": "25/11/2024",
+      "Confidence": 91.3714,
+      "Left": 166,
+      "Top": 1197,
+      "Right": 334,
+      "Bottom": 1221
+    },
+    {
+      "Text": "25/11/2024",
+      "Confidence": 89.26659,
+      "Left": 373,
+      "Top": 1197,
+      "Right": 540,
+      "Bottom": 1221
+    },
+    {
+      "Text": "COM",
+      "Confidence": 82.76669,
+      "Left": 579,
+      "Top": 1197,
+      "Right": 648,
+      "Bottom": 1221
+    },
+    {
+      "Text": "\u0026",
+      "Confidence": 93.1613,
+      "Left": 661,
+      "Top": 1197,
+      "Right": 682,
+      "Bottom": 1221
+    },
+    {
+      "Text": "TVA",
+      "Confidence": 89.11189,
+      "Left": 691,
+      "Top": 1197,
+      "Right": 748,
+      "Bottom": 1220
+    },
+    {
+      "Text": "RET.",
+      "Confidence": 90.9505,
+      "Left": 759,
+      "Top": 1197,
+      "Right": 818,
+      "Bottom": 1221
+    },
+    {
+      "Text": "CARTE",
+      "Confidence": 92.00876,
+      "Left": 830,
+      "Top": 1197,
+      "Right": 922,
+      "Bottom": 1221
+    },
+    {
+      "Text": "0,02",
+      "Confidence": 92.79271,
+      "Left": 1142,
+      "Top": 1197,
+      "Right": 1202,
+      "Bottom": 1224
+    },
+    {
+      "Text": "3",
+      "Confidence": 82.65811,
+      "Left": 1530,
+      "Top": 1197,
+      "Right": 1546,
+      "Bottom": 1221
+    },
+    {
+      "Text": "290,98",
+      "Confidence": 82.65811,
+      "Left": 1556,
+      "Top": 1197,
+      "Right": 1651,
+      "Bottom": 1224
+    },
+    {
+      "Text": "10/12/2024",
+      "Confidence": 92.37974,
+      "Left": 168,
+      "Top": 1281,
+      "Right": 334,
+      "Bottom": 1305
+    },
+    {
+      "Text": "10/12/2024",
+      "Confidence": 85.52863,
+      "Left": 374,
+      "Top": 1281,
+      "Right": 540,
+      "Bottom": 1305
+    },
+    {
+      "Text": "E\u0026TRANSFERT",
+      "Confidence": 31.83471,
+      "Left": 577,
+      "Top": 1281,
+      "Right": 777,
+      "Bottom": 1308
+    },
+    {
+      "Text": "RECU",
+      "Confidence": 91.96428,
+      "Left": 789,
+      "Top": 1281,
+      "Right": 864,
+      "Bottom": 1305
+    },
+    {
+      "Text": "4",
+      "Confidence": 88.1026,
+      "Left": 1308,
+      "Top": 1281,
+      "Right": 1325,
+      "Bottom": 1305
+    },
+    {
+      "Text": "000,00",
+      "Confidence": 88.1026,
+      "Left": 1335,
+      "Top": 1281,
+      "Right": 1431,
+      "Bottom": 1309
+    },
+    {
+      "Text": "7",
+      "Confidence": 91.303474,
+      "Left": 1533,
+      "Top": 1282,
+      "Right": 1547,
+      "Bottom": 1305
+    },
+    {
+      "Text": "290,98",
+      "Confidence": 91.303474,
+      "Left": 1556,
+      "Top": 1281,
+      "Right": 1651,
+      "Bottom": 1309
+    },
+    {
+      "Text": "24007858",
+      "Confidence": 96.3887,
+      "Left": 579,
+      "Top": 1327,
+      "Right": 722,
+      "Bottom": 1351
+    },
+    {
+      "Text": "ORD:",
+      "Confidence": 90.22171,
+      "Left": 640,
+      "Top": 1373,
+      "Right": 712,
+      "Bottom": 1396
+    },
+    {
+      "Text": "THE",
+      "Confidence": 91.8822,
+      "Left": 723,
+      "Top": 1373,
+      "Right": 780,
+      "Bottom": 1396
+    },
+    {
+      "Text": "RAINMAKER",
+      "Confidence": 91.88417,
+      "Left": 793,
+      "Top": 1373,
+      "Right": 968,
+      "Bottom": 1396
+    },
+    {
+      "Text": "ا",
+      "Confidence": 91.185555,
+      "Left": 587,
+      "Top": 1372,
+      "Right": 622,
+      "Bottom": 1396
+    },
+    {
+      "Text": "INSTITUTE",
+      "Confidence": 90.45749,
+      "Left": 581,
+      "Top": 1418,
+      "Right": 729,
+      "Bottom": 1442
+    },
+    {
+      "Text": "LLC",
+      "Confidence": 90.94813,
+      "Left": 742,
+      "Top": 1418,
+      "Right": 791,
+      "Bottom": 1442
+    },
+    {
+      "Text": "09/01/2025",
+      "Confidence": 93.97001,
+      "Left": 166,
+      "Top": 1503,
+      "Right": 333,
+      "Bottom": 1526
+    },
+    {
+      "Text": "09/01/2025",
+      "Confidence": 93.59235,
+      "Left": 373,
+      "Top": 1503,
+      "Right": 539,
+      "Bottom": 1526
+    },
+    {
+      "Text": "\u0026@TRANSFERT",
+      "Confidence": 52.90003,
+      "Left": 577,
+      "Top": 1503,
+      "Right": 777,
+      "Bottom": 1529
+    },
+    {
+      "Text": "RECU",
+      "Confidence": 92.9049,
+      "Left": 789,
+      "Top": 1503,
+      "Right": 864,
+      "Bottom": 1526
+    },
+    {
+      "Text": "4",
+      "Confidence": 92.84391,
+      "Left": 1308,
+      "Top": 1503,
+      "Right": 1325,
+      "Bottom": 1526
+    },
+    {
+      "Text": "0",
+      "Confidence": 87.606064,
+      "Left": 1335,
+      "Top": 1503,
+      "Right": 1431,
+      "Bottom": 1530
+    },
+    {
+      "Text": "11",
+      "Confidence": 92.54628,
+      "Left": 1517,
+      "Top": 1503,
+      "Right": 1543,
+      "Bottom": 1526
+    },
+    {
+      "Text": "290,98",
+      "Confidence": 30.57,
+      "Left": 1556,
+      "Top": 1503,
+      "Right": 1651,
+      "Bottom": 1530
+    },
+    {
+      "Text": "25000082",
+      "Confidence": 96.67489,
+      "Left": 579,
+      "Top": 1548,
+      "Right": 722,
+      "Bottom": 1572
+    },
+    {
+      "Text": "ا",
+      "Confidence": 91.112236,
+      "Left": 587,
+      "Top": 1593,
+      "Right": 622,
+      "Bottom": 1617
+    },
+    {
+      "Text": "ORD:",
+      "Confidence": 92.198006,
+      "Left": 640,
+      "Top": 1594,
+      "Right": 712,
+      "Bottom": 1617
+    },
+    {
+      "Text": "THE",
+      "Confidence": 91.81238,
+      "Left": 723,
+      "Top": 1594,
+      "Right": 780,
+      "Bottom": 1617
+    },
+    {
+      "Text": "RAINMAKER",
+      "Confidence": 92.27816,
+      "Left": 793,
+      "Top": 1594,
+      "Right": 968,
+      "Bottom": 1617
+    },
+    {
+      "Text": "INSTITUTE",
+      "Confidence": 92.73407,
+      "Left": 581,
+      "Top": 1639,
+      "Right": 729,
+      "Bottom": 1663
+    },
+    {
+      "Text": "LLC",
+      "Confidence": 92.573166,
+      "Left": 742,
+      "Top": 1639,
+      "Right": 791,
+      "Bottom": 1663
+    },
+    {
+      "Text": "13/01/2025",
+      "Confidence": 94.384094,
+      "Left": 168,
+      "Top": 1724,
+      "Right": 333,
+      "Bottom": 1747
+    },
+    {
+      "Text": "09/01/2025",
+      "Confidence": 87.601845,
+      "Left": 373,
+      "Top": 1724,
+      "Right": 539,
+      "Bottom": 1747
+    },
+    {
+      "Text": "@",
+      "Confidence": 6.5308,
+      "Left": 577,
+      "Top": 1728,
+      "Right": 597,
+      "Bottom": 1750
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 6.5308,
+      "Left": 606,
+      "Top": 1724,
+      "Right": 760,
+      "Bottom": 1747
+    },
+    {
+      "Text": "EMIS",
+      "Confidence": 92.29678,
+      "Left": 771,
+      "Top": 1724,
+      "Right": 840,
+      "Bottom": 1747
+    },
+    {
+      "Text": "MEM",
+      "Confidence": 92.68993,
+      "Left": 852,
+      "Top": 1724,
+      "Right": 922,
+      "Bottom": 1747
+    },
+    {
+      "Text": "AG",
+      "Confidence": 92.37017,
+      "Left": 933,
+      "Top": 1724,
+      "Right": 974,
+      "Bottom": 1747
+    },
+    {
+      "Text": "3",
+      "Confidence": 32.68663,
+      "Left": 1079,
+      "Top": 1724,
+      "Right": 1094,
+      "Bottom": 1747
+    },
+    {
+      "Text": "000,00",
+      "Confidence": 32.68663,
+      "Left": 1106,
+      "Top": 1724,
+      "Right": 1202,
+      "Bottom": 1751
+    },
+    {
+      "Text": "8",
+      "Confidence": 12.186356,
+      "Left": 1531,
+      "Top": 1724,
+      "Right": 1547,
+      "Bottom": 1747
+    },
+    {
+      "Text": "290,98",
+      "Confidence": 12.186356,
+      "Left": 1556,
+      "Top": 1724,
+      "Right": 1651,
+      "Bottom": 1751
+    },
+    {
+      "Text": "ا",
+      "Confidence": 92.38176,
+      "Left": 587,
+      "Top": 1769,
+      "Right": 622,
+      "Bottom": 1793
+    },
+    {
+      "Text": "En",
+      "Confidence": 93.23668,
+      "Left": 641,
+      "Top": 1770,
+      "Right": 673,
+      "Bottom": 1793
+    },
+    {
+      "Text": "faveur",
+      "Confidence": 92.42243,
+      "Left": 684,
+      "Top": 1768,
+      "Right": 778,
+      "Bottom": 1793
+    },
+    {
+      "Text": "SOCIETE",
+      "Confidence": 67.16232,
+      "Left": 789,
+      "Top": 1769,
+      "Right": 910,
+      "Bottom": 1793
+    },
+    {
+      "Text": "IT",
+      "Confidence": 89.13439,
+      "Left": 923,
+      "Top": 1770,
+      "Right": 947,
+      "Bottom": 1793
+    },
+    {
+      "Text": "CAPACITIES",
+      "Confidence": 91.47805,
+      "Left": 579,
+      "Top": 1815,
+      "Right": 747,
+      "Bottom": 1838
+    },
+    {
+      "Text": "04/02/2025",
+      "Confidence": 95.42712,
+      "Left": 166,
+      "Top": 1899,
+      "Right": 333,
+      "Bottom": 1923
+    },
+    {
+      "Text": "31/01/2025",
+      "Confidence": 90.93549,
+      "Left": 372,
+      "Top": 1899,
+      "Right": 539,
+      "Bottom": 1923
+    },
+    {
+      "Text": "\u0026@VIREMENT",
+      "Confidence": 37.274643,
+      "Left": 577,
+      "Top": 1900,
+      "Right": 760,
+      "Bottom": 1925
+    },
+    {
+      "Text": "EMIS",
+      "Confidence": 91.73633,
+      "Left": 771,
+      "Top": 1899,
+      "Right": 840,
+      "Bottom": 1923
+    },
+    {
+      "Text": "MEM",
+      "Confidence": 91.73633,
+      "Left": 852,
+      "Top": 1900,
+      "Right": 922,
+      "Bottom": 1923
+    },
+    {
+      "Text": "مح",
+      "Confidence": 78.78724,
+      "Left": 934,
+      "Top": 1899,
+      "Right": 974,
+      "Bottom": 1923
+    },
+    {
+      "Text": "3",
+      "Confidence": 54.776848,
+      "Left": 1079,
+      "Top": 1899,
+      "Right": 1094,
+      "Bottom": 1923
+    },
+    {
+      "Text": "000,00",
+      "Confidence": 54.776848,
+      "Left": 1106,
+      "Top": 1899,
+      "Right": 1202,
+      "Bottom": 1927
+    },
+    {
+      "Text": "5",
+      "Confidence": 87.53238,
+      "Left": 1531,
+      "Top": 1900,
+      "Right": 1547,
+      "Bottom": 1923
+    },
+    {
+      "Text": "290,98",
+      "Confidence": 87.53238,
+      "Left": 1556,
+      "Top": 1899,
+      "Right": 1651,
+      "Bottom": 1927
+    },
+    {
+      "Text": "ا",
+      "Confidence": 96.022514,
+      "Left": 587,
+      "Top": 1945,
+      "Right": 622,
+      "Bottom": 1968
+    },
+    {
+      "Text": "En",
+      "Confidence": 93.22667,
+      "Left": 641,
+      "Top": 1945,
+      "Right": 673,
+      "Bottom": 1968
+    },
+    {
+      "Text": "faveur",
+      "Confidence": 92.818375,
+      "Left": 684,
+      "Top": 1944,
+      "Right": 778,
+      "Bottom": 1969
+    },
+    {
+      "Text": "SOCIETE",
+      "Confidence": 70.596,
+      "Left": 789,
+      "Top": 1945,
+      "Right": 910,
+      "Bottom": 1969
+    },
+    {
+      "Text": "IT",
+      "Confidence": 87.735596,
+      "Left": 923,
+      "Top": 1945,
+      "Right": 947,
+      "Bottom": 1968
+    },
+    {
+      "Text": "CAPACITIES",
+      "Confidence": 91.028404,
+      "Left": 579,
+      "Top": 1990,
+      "Right": 747,
+      "Bottom": 2014
+    },
+    {
+      "Text": "Total",
+      "Confidence": 92.332565,
+      "Left": 911,
+      "Top": 2070,
+      "Right": 983,
+      "Bottom": 2109
+    },
+    {
+      "Text": "6",
+      "Confidence": 93.22737,
+      "Left": 1079,
+      "Top": 2075,
+      "Right": 1094,
+      "Bottom": 2099
+    },
+    {
+      "Text": "009,83",
+      "Confidence": 92.772736,
+      "Left": 1106,
+      "Top": 2075,
+      "Right": 1202,
+      "Bottom": 2102
+    },
+    {
+      "Text": "8",
+      "Confidence": 89.30237,
+      "Left": 1309,
+      "Top": 2075,
+      "Right": 1324,
+      "Bottom": 2099
+    },
+    {
+      "Text": "000,00",
+      "Confidence": 89.30237,
+      "Left": 1335,
+      "Top": 2075,
+      "Right": 1431,
+      "Bottom": 2102
+    },
+    {
+      "Text": "Impriméle",
+      "Confidence": 59.815125,
+      "Left": 1316,
+      "Top": 2188,
+      "Right": 1473,
+      "Bottom": 2220
+    },
+    {
+      "Text": "05/03/2025",
+      "Confidence": 92.15642,
+      "Left": 1501,
+      "Top": 2189,
+      "Right": 1667,
+      "Bottom": 2213
+    },
+    {
+      "Text": "Fermer",
+      "Confidence": 91.27954,
+      "Left": 1054,
+      "Top": 2300,
+      "Right": 1170,
+      "Bottom": 2327
+    },
+    {
+      "Text": "cette",
+      "Confidence": 92.49912,
+      "Left": 1181,
+      "Top": 2301,
+      "Right": 1257,
+      "Bottom": 2327
+    },
+    {
+      "Text": "fenêtre",
+      "Confidence": 92.65435,
+      "Left": 1269,
+      "Top": 2300,
+      "Right": 1381,
+      "Bottom": 2327
+    },
+    {
+      "Text": "Imprimer",
+      "Confidence": 91.26964,
+      "Left": 1465,
+      "Top": 2300,
+      "Right": 1606,
+      "Bottom": 2334
+    },
+    {
+      "Text": "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk",
+      "Confidence": 84.923645,
+      "Left": 75,
+      "Top": 2493,
+      "Right": 882,
+      "Bottom": 2516
+    },
+    {
+      "Text": "3/5/25,",
+      "Confidence": 87.825134,
+      "Left": 75,
+      "Top": 3067,
+      "Right": 146,
+      "Bottom": 3087
+    },
+    {
+      "Text": "2:41",
+      "Confidence": 90.95988,
+      "Left": 155,
+      "Top": 3067,
+      "Right": 198,
+      "Bottom": 3084
+    },
+    {
+      "Text": "PM",
+      "Confidence": 91.98961,
+      "Left": 211,
+      "Top": 3067,
+      "Right": 244,
+      "Bottom": 3084
+    },
+    {
+      "Text": "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk",
+      "Confidence": 84.923645,
+      "Left": 75,
+      "Top": 5509,
+      "Right": 882,
+      "Bottom": 5532
+    },
+    {
+      "Text": "BTK@DIRECT",
+      "Confidence": 92.4071,
+      "Left": 958,
+      "Top": 3067,
+      "Right": 1119,
+      "Bottom": 3089
+    },
+    {
+      "Text": "2/2",
+      "Confidence": 92.67835,
+      "Left": 1706,
+      "Top": 5509,
+      "Right": 1739,
+      "Bottom": 5527
+    }
+  ],
+  "Lines": [
+    {
+      "LineText": "3/5/25, 2:41 PM BTK@DIRECT",
+      "Words": [
+        {
+          "Text": "3/5/25,",
+          "Confidence": 87.825134,
+          "Left": 75,
+          "Top": 51,
+          "Right": 146,
+          "Bottom": 71
+        },
+        {
+          "Text": "2:41",
+          "Confidence": 90.95988,
+          "Left": 155,
+          "Top": 51,
+          "Right": 198,
+          "Bottom": 68
+        },
+        {
+          "Text": "PM",
+          "Confidence": 91.98961,
+          "Left": 211,
+          "Top": 51,
+          "Right": 244,
+          "Bottom": 68
+        },
+        {
+          "Text": "BTK@DIRECT",
+          "Confidence": 91.720825,
+          "Left": 958,
+          "Top": 51,
+          "Right": 1119,
+          "Bottom": 73
+        }
+      ]
+    },
+    {
+      "LineText": "\u003C",
+      "Words": [
+        {
+          "Text": "\u003C",
+          "Confidence": 70.810905,
+          "Left": 176,
+          "Top": 156,
+          "Right": 302,
+          "Bottom": 216
+        }
+      ]
+    },
+    {
+      "LineText": "[ Bank  EXTRAIT DE COMPTE",
+      "Words": [
+        {
+          "Text": "[",
+          "Confidence": 56.253654,
+          "Left": 170,
+          "Top": 269,
+          "Right": 189,
+          "Bottom": 324
+        },
+        {
+          "Text": "Bank",
+          "Confidence": 32.830086,
+          "Left": 202,
+          "Top": 269,
+          "Right": 271,
+          "Bottom": 324
+        },
+        {
+          "Text": "",
+          "Confidence": 73.31994,
+          "Left": 289,
+          "Top": 269,
+          "Right": 308,
+          "Bottom": 324
+        },
+        {
+          "Text": "EXTRAIT",
+          "Confidence": 91.31596,
+          "Left": 1192,
+          "Top": 272,
+          "Right": 1337,
+          "Bottom": 299
+        },
+        {
+          "Text": "DE",
+          "Confidence": 93.300156,
+          "Left": 1350,
+          "Top": 272,
+          "Right": 1392,
+          "Bottom": 299
+        },
+        {
+          "Text": "COMPTE",
+          "Confidence": 90.56187,
+          "Left": 1406,
+          "Top": 272,
+          "Right": 1553,
+          "Bottom": 299
+        }
+      ]
+    },
+    {
+      "LineText": "Code client : 0510291",
+      "Words": [
+        {
+          "Text": "client",
+          "Confidence": 92.58568,
+          "Left": 234,
+          "Top": 349,
+          "Right": 312,
+          "Bottom": 374
+        },
+        {
+          "Text": "Code",
+          "Confidence": 90.49084,
+          "Left": 148,
+          "Top": 350,
+          "Right": 222,
+          "Bottom": 374
+        },
+        {
+          "Text": "0510291",
+          "Confidence": 96.10258,
+          "Left": 473,
+          "Top": 351,
+          "Right": 592,
+          "Bottom": 374
+        },
+        {
+          "Text": ":",
+          "Confidence": 93.26074,
+          "Left": 331,
+          "Top": 356,
+          "Right": 335,
+          "Bottom": 374
+        }
+      ]
+    },
+    {
+      "LineText": "Nom du client : SOCIETE IT CAPACITIES",
+      "Words": [
+        {
+          "Text": "du",
+          "Confidence": 90.640755,
+          "Left": 230,
+          "Top": 395,
+          "Right": 264,
+          "Bottom": 420
+        },
+        {
+          "Text": "client",
+          "Confidence": 90.82509,
+          "Left": 277,
+          "Top": 395,
+          "Right": 355,
+          "Bottom": 420
+        },
+        {
+          "Text": "CAPACITIES",
+          "Confidence": 88.56325,
+          "Left": 641,
+          "Top": 396,
+          "Right": 808,
+          "Bottom": 420
+        },
+        {
+          "Text": "Nom",
+          "Confidence": 90.836784,
+          "Left": 150,
+          "Top": 397,
+          "Right": 217,
+          "Bottom": 420
+        },
+        {
+          "Text": "SOCIETE",
+          "Confidence": 92.34785,
+          "Left": 473,
+          "Top": 397,
+          "Right": 594,
+          "Bottom": 420
+        },
+        {
+          "Text": "IT",
+          "Confidence": 87.674225,
+          "Left": 607,
+          "Top": 397,
+          "Right": 630,
+          "Bottom": 420
+        },
+        {
+          "Text": ":",
+          "Confidence": 90.745636,
+          "Left": 375,
+          "Top": 402,
+          "Right": 378,
+          "Bottom": 420
+        }
+      ]
+    },
+    {
+      "LineText": "Numéro de compte : 02222-25100815949-69 USD",
+      "Words": [
+        {
+          "Text": "Numéro",
+          "Confidence": 91.36209,
+          "Left": 150,
+          "Top": 441,
+          "Right": 268,
+          "Bottom": 466
+        },
+        {
+          "Text": "de",
+          "Confidence": 92.22298,
+          "Left": 280,
+          "Top": 441,
+          "Right": 315,
+          "Bottom": 466
+        },
+        {
+          "Text": "02222-25100815949-69",
+          "Confidence": 91.29441,
+          "Left": 473,
+          "Top": 442,
+          "Right": 818,
+          "Bottom": 466
+        },
+        {
+          "Text": "USD",
+          "Confidence": 90.71895,
+          "Left": 831,
+          "Top": 442,
+          "Right": 891,
+          "Bottom": 466
+        },
+        {
+          "Text": "compte",
+          "Confidence": 92.22298,
+          "Left": 326,
+          "Top": 444,
+          "Right": 436,
+          "Bottom": 473
+        },
+        {
+          "Text": ":",
+          "Confidence": 91.29441,
+          "Left": 456,
+          "Top": 448,
+          "Right": 460,
+          "Bottom": 466
+        }
+      ]
+    },
+    {
+      "LineText": "Libellé du compte : Compte Professionnel en Devise",
+      "Words": [
+        {
+          "Text": "Libellé",
+          "Confidence": 92.04274,
+          "Left": 150,
+          "Top": 486,
+          "Right": 241,
+          "Bottom": 511
+        },
+        {
+          "Text": "Professionnel",
+          "Confidence": 92.05175,
+          "Left": 600,
+          "Top": 486,
+          "Right": 798,
+          "Bottom": 511
+        },
+        {
+          "Text": "du",
+          "Confidence": 90.54551,
+          "Left": 253,
+          "Top": 487,
+          "Right": 288,
+          "Bottom": 511
+        },
+        {
+          "Text": "Devise",
+          "Confidence": 92.341125,
+          "Left": 858,
+          "Top": 487,
+          "Right": 952,
+          "Bottom": 511
+        },
+        {
+          "Text": "Compte",
+          "Confidence": 74.31689,
+          "Left": 473,
+          "Top": 488,
+          "Right": 587,
+          "Bottom": 519
+        },
+        {
+          "Text": "compte",
+          "Confidence": 90.41917,
+          "Left": 300,
+          "Top": 490,
+          "Right": 410,
+          "Bottom": 519
+        },
+        {
+          "Text": ":",
+          "Confidence": 88.653534,
+          "Left": 431,
+          "Top": 493,
+          "Right": 434,
+          "Bottom": 511
+        },
+        {
+          "Text": "en",
+          "Confidence": 93.28297,
+          "Left": 810,
+          "Top": 493,
+          "Right": 844,
+          "Bottom": 511
+        }
+      ]
+    },
+    {
+      "LineText": "Iban : TN5920022222510081594969",
+      "Words": [
+        {
+          "Text": "Iban",
+          "Confidence": 88.06078,
+          "Left": 149,
+          "Top": 532,
+          "Right": 210,
+          "Bottom": 557
+        },
+        {
+          "Text": "TN5920022222510081594969",
+          "Confidence": 90.68945,
+          "Left": 471,
+          "Top": 533,
+          "Right": 913,
+          "Bottom": 557
+        },
+        {
+          "Text": ":",
+          "Confidence": 91.710655,
+          "Left": 231,
+          "Top": 539,
+          "Right": 235,
+          "Bottom": 557
+        }
+      ]
+    },
+    {
+      "LineText": "Date : 05/03/2025",
+      "Words": [
+        {
+          "Text": "Date",
+          "Confidence": 91.6185,
+          "Left": 150,
+          "Top": 579,
+          "Right": 215,
+          "Bottom": 602
+        },
+        {
+          "Text": "05/03/2025",
+          "Confidence": 91.92902,
+          "Left": 473,
+          "Top": 579,
+          "Right": 639,
+          "Bottom": 602
+        },
+        {
+          "Text": ":",
+          "Confidence": 91.6185,
+          "Left": 236,
+          "Top": 584,
+          "Right": 240,
+          "Bottom": 602
+        }
+      ]
+    },
+    {
+      "LineText": "Solde initial (USD): 3 300,81",
+      "Words": [
+        {
+          "Text": "Solde",
+          "Confidence": 91.973465,
+          "Left": 1225,
+          "Top": 769,
+          "Right": 1300,
+          "Bottom": 794
+        },
+        {
+          "Text": "initial",
+          "Confidence": 92.80908,
+          "Left": 1310,
+          "Top": 769,
+          "Right": 1389,
+          "Bottom": 794
+        },
+        {
+          "Text": "(USD):",
+          "Confidence": 82.732056,
+          "Left": 1406,
+          "Top": 771,
+          "Right": 1514,
+          "Bottom": 799
+        },
+        {
+          "Text": "3",
+          "Confidence": 91.179115,
+          "Left": 1532,
+          "Top": 771,
+          "Right": 1548,
+          "Bottom": 794
+        },
+        {
+          "Text": "300,81",
+          "Confidence": 91.179115,
+          "Left": 1558,
+          "Top": 771,
+          "Right": 1649,
+          "Bottom": 798
+        }
+      ]
+    },
+    {
+      "LineText": "Date de",
+      "Words": [
+        {
+          "Text": "de",
+          "Confidence": 91.94919,
+          "Left": 456,
+          "Top": 849,
+          "Right": 493,
+          "Bottom": 874
+        },
+        {
+          "Text": "Date",
+          "Confidence": 92.27809,
+          "Left": 374,
+          "Top": 850,
+          "Right": 446,
+          "Bottom": 874
+        }
+      ]
+    },
+    {
+      "LineText": "Date valeur Opération Débit (USD) Crédit(USD) Solde (USD)",
+      "Words": [
+        {
+          "Text": "valeur",
+          "Confidence": 91.07659,
+          "Left": 371,
+          "Top": 895,
+          "Right": 472,
+          "Bottom": 920
+        },
+        {
+          "Text": "Opération",
+          "Confidence": 91.52637,
+          "Left": 579,
+          "Top": 895,
+          "Right": 738,
+          "Bottom": 927
+        },
+        {
+          "Text": "Débit",
+          "Confidence": 91.1475,
+          "Left": 1025,
+          "Top": 895,
+          "Right": 1107,
+          "Bottom": 920
+        },
+        {
+          "Text": "Crédit(USD)",
+          "Confidence": 90.49637,
+          "Left": 1242,
+          "Top": 895,
+          "Right": 1432,
+          "Bottom": 924
+        },
+        {
+          "Text": "Solde",
+          "Confidence": 89.69575,
+          "Left": 1471,
+          "Top": 895,
+          "Right": 1554,
+          "Bottom": 920
+        },
+        {
+          "Text": "Date",
+          "Confidence": 91.792786,
+          "Left": 168,
+          "Top": 896,
+          "Right": 239,
+          "Bottom": 920
+        },
+        {
+          "Text": "(USD)",
+          "Confidence": 85.99056,
+          "Left": 1117,
+          "Top": 896,
+          "Right": 1202,
+          "Bottom": 924
+        },
+        {
+          "Text": "(USD)",
+          "Confidence": 89.74774,
+          "Left": 1565,
+          "Top": 896,
+          "Right": 1650,
+          "Bottom": 924
+        }
+      ]
+    },
+    {
+      "LineText": "25/11/2024 25/11/2024 PAIEMENT TPE 9,71 3 291,10",
+      "Words": [
+        {
+          "Text": "25/11/2024",
+          "Confidence": 91.220634,
+          "Left": 166,
+          "Top": 983,
+          "Right": 334,
+          "Bottom": 1006
+        },
+        {
+          "Text": "25/11/2024",
+          "Confidence": 86.625595,
+          "Left": 373,
+          "Top": 983,
+          "Right": 540,
+          "Bottom": 1006
+        },
+        {
+          "Text": "PAIEMENT",
+          "Confidence": 84.34245,
+          "Left": 580,
+          "Top": 983,
+          "Right": 732,
+          "Bottom": 1006
+        },
+        {
+          "Text": "TPE",
+          "Confidence": 95.75735,
+          "Left": 740,
+          "Top": 983,
+          "Right": 793,
+          "Bottom": 1006
+        },
+        {
+          "Text": "9,71",
+          "Confidence": 92.39926,
+          "Left": 1142,
+          "Top": 983,
+          "Right": 1196,
+          "Bottom": 1010
+        },
+        {
+          "Text": "3",
+          "Confidence": 55.29087,
+          "Left": 1530,
+          "Top": 983,
+          "Right": 1546,
+          "Bottom": 1006
+        },
+        {
+          "Text": "291,10",
+          "Confidence": 55.29087,
+          "Left": 1556,
+          "Top": 983,
+          "Right": 1651,
+          "Bottom": 1010
+        }
+      ]
+    },
+    {
+      "LineText": "INTERNATIONAL",
+      "Words": [
+        {
+          "Text": "INTERNATIONAL",
+          "Confidence": 91.480515,
+          "Left": 581,
+          "Top": 1028,
+          "Right": 822,
+          "Bottom": 1052
+        }
+      ]
+    },
+    {
+      "LineText": "25/11/2024 25/11/2024 COM \u0026 TVA RET. CARTE 0,10 3 291,00",
+      "Words": [
+        {
+          "Text": "0,10",
+          "Confidence": 90.07427,
+          "Left": 1142,
+          "Top": 1112,
+          "Right": 1202,
+          "Bottom": 1140
+        },
+        {
+          "Text": "25/11/2024",
+          "Confidence": 91.77906,
+          "Left": 166,
+          "Top": 1113,
+          "Right": 334,
+          "Bottom": 1136
+        },
+        {
+          "Text": "25/11/2024",
+          "Confidence": 88.68679,
+          "Left": 373,
+          "Top": 1113,
+          "Right": 540,
+          "Bottom": 1136
+        },
+        {
+          "Text": "COM",
+          "Confidence": 80.264046,
+          "Left": 579,
+          "Top": 1113,
+          "Right": 648,
+          "Bottom": 1136
+        },
+        {
+          "Text": "\u0026",
+          "Confidence": 93.206375,
+          "Left": 661,
+          "Top": 1113,
+          "Right": 682,
+          "Bottom": 1136
+        },
+        {
+          "Text": "TVA",
+          "Confidence": 88.58306,
+          "Left": 691,
+          "Top": 1113,
+          "Right": 748,
+          "Bottom": 1136
+        },
+        {
+          "Text": "RET.",
+          "Confidence": 91.04784,
+          "Left": 759,
+          "Top": 1113,
+          "Right": 818,
+          "Bottom": 1136
+        },
+        {
+          "Text": "CARTE",
+          "Confidence": 92.44321,
+          "Left": 830,
+          "Top": 1113,
+          "Right": 922,
+          "Bottom": 1136
+        },
+        {
+          "Text": "3",
+          "Confidence": 63.292522,
+          "Left": 1530,
+          "Top": 1113,
+          "Right": 1546,
+          "Bottom": 1136
+        },
+        {
+          "Text": "291,00",
+          "Confidence": 63.292522,
+          "Left": 1556,
+          "Top": 1113,
+          "Right": 1651,
+          "Bottom": 1140
+        }
+      ]
+    },
+    {
+      "LineText": "25/11/2024 25/11/2024 COM \u0026 TVA RET. CARTE 0,02 3 290,98",
+      "Words": [
+        {
+          "Text": "25/11/2024",
+          "Confidence": 91.3714,
+          "Left": 166,
+          "Top": 1197,
+          "Right": 334,
+          "Bottom": 1221
+        },
+        {
+          "Text": "25/11/2024",
+          "Confidence": 89.26659,
+          "Left": 373,
+          "Top": 1197,
+          "Right": 540,
+          "Bottom": 1221
+        },
+        {
+          "Text": "COM",
+          "Confidence": 82.76669,
+          "Left": 579,
+          "Top": 1197,
+          "Right": 648,
+          "Bottom": 1221
+        },
+        {
+          "Text": "\u0026",
+          "Confidence": 93.1613,
+          "Left": 661,
+          "Top": 1197,
+          "Right": 682,
+          "Bottom": 1221
+        },
+        {
+          "Text": "TVA",
+          "Confidence": 89.11189,
+          "Left": 691,
+          "Top": 1197,
+          "Right": 748,
+          "Bottom": 1220
+        },
+        {
+          "Text": "RET.",
+          "Confidence": 90.9505,
+          "Left": 759,
+          "Top": 1197,
+          "Right": 818,
+          "Bottom": 1221
+        },
+        {
+          "Text": "CARTE",
+          "Confidence": 92.00876,
+          "Left": 830,
+          "Top": 1197,
+          "Right": 922,
+          "Bottom": 1221
+        },
+        {
+          "Text": "0,02",
+          "Confidence": 92.79271,
+          "Left": 1142,
+          "Top": 1197,
+          "Right": 1202,
+          "Bottom": 1224
+        },
+        {
+          "Text": "3",
+          "Confidence": 82.65811,
+          "Left": 1530,
+          "Top": 1197,
+          "Right": 1546,
+          "Bottom": 1221
+        },
+        {
+          "Text": "290,98",
+          "Confidence": 82.65811,
+          "Left": 1556,
+          "Top": 1197,
+          "Right": 1651,
+          "Bottom": 1224
+        }
+      ]
+    },
+    {
+      "LineText": "10/12/2024 10/12/2024 E\u0026TRANSFERT RECU 4 000,00 7 290,98",
+      "Words": [
+        {
+          "Text": "10/12/2024",
+          "Confidence": 92.37974,
+          "Left": 168,
+          "Top": 1281,
+          "Right": 334,
+          "Bottom": 1305
+        },
+        {
+          "Text": "10/12/2024",
+          "Confidence": 85.52863,
+          "Left": 374,
+          "Top": 1281,
+          "Right": 540,
+          "Bottom": 1305
+        },
+        {
+          "Text": "E\u0026TRANSFERT",
+          "Confidence": 31.83471,
+          "Left": 577,
+          "Top": 1281,
+          "Right": 777,
+          "Bottom": 1308
+        },
+        {
+          "Text": "RECU",
+          "Confidence": 91.96428,
+          "Left": 789,
+          "Top": 1281,
+          "Right": 864,
+          "Bottom": 1305
+        },
+        {
+          "Text": "4",
+          "Confidence": 88.1026,
+          "Left": 1308,
+          "Top": 1281,
+          "Right": 1325,
+          "Bottom": 1305
+        },
+        {
+          "Text": "000,00",
+          "Confidence": 88.1026,
+          "Left": 1335,
+          "Top": 1281,
+          "Right": 1431,
+          "Bottom": 1309
+        },
+        {
+          "Text": "290,98",
+          "Confidence": 91.303474,
+          "Left": 1556,
+          "Top": 1281,
+          "Right": 1651,
+          "Bottom": 1309
+        },
+        {
+          "Text": "7",
+          "Confidence": 91.303474,
+          "Left": 1533,
+          "Top": 1282,
+          "Right": 1547,
+          "Bottom": 1305
+        }
+      ]
+    },
+    {
+      "LineText": "24007858",
+      "Words": [
+        {
+          "Text": "24007858",
+          "Confidence": 96.3887,
+          "Left": 579,
+          "Top": 1327,
+          "Right": 722,
+          "Bottom": 1351
+        }
+      ]
+    },
+    {
+      "LineText": "ا ORD: THE RAINMAKER",
+      "Words": [
+        {
+          "Text": "ا",
+          "Confidence": 91.185555,
+          "Left": 587,
+          "Top": 1372,
+          "Right": 622,
+          "Bottom": 1396
+        },
+        {
+          "Text": "ORD:",
+          "Confidence": 90.22171,
+          "Left": 640,
+          "Top": 1373,
+          "Right": 712,
+          "Bottom": 1396
+        },
+        {
+          "Text": "THE",
+          "Confidence": 91.8822,
+          "Left": 723,
+          "Top": 1373,
+          "Right": 780,
+          "Bottom": 1396
+        },
+        {
+          "Text": "RAINMAKER",
+          "Confidence": 91.88417,
+          "Left": 793,
+          "Top": 1373,
+          "Right": 968,
+          "Bottom": 1396
+        }
+      ]
+    },
+    {
+      "LineText": "INSTITUTE LLC",
+      "Words": [
+        {
+          "Text": "INSTITUTE",
+          "Confidence": 90.45749,
+          "Left": 581,
+          "Top": 1418,
+          "Right": 729,
+          "Bottom": 1442
+        },
+        {
+          "Text": "LLC",
+          "Confidence": 90.94813,
+          "Left": 742,
+          "Top": 1418,
+          "Right": 791,
+          "Bottom": 1442
+        }
+      ]
+    },
+    {
+      "LineText": "09/01/2025 09/01/2025 \u0026@TRANSFERT RECU 4 0 11 290,98",
+      "Words": [
+        {
+          "Text": "09/01/2025",
+          "Confidence": 93.97001,
+          "Left": 166,
+          "Top": 1503,
+          "Right": 333,
+          "Bottom": 1526
+        },
+        {
+          "Text": "09/01/2025",
+          "Confidence": 93.59235,
+          "Left": 373,
+          "Top": 1503,
+          "Right": 539,
+          "Bottom": 1526
+        },
+        {
+          "Text": "\u0026@TRANSFERT",
+          "Confidence": 52.90003,
+          "Left": 577,
+          "Top": 1503,
+          "Right": 777,
+          "Bottom": 1529
+        },
+        {
+          "Text": "RECU",
+          "Confidence": 92.9049,
+          "Left": 789,
+          "Top": 1503,
+          "Right": 864,
+          "Bottom": 1526
+        },
+        {
+          "Text": "4",
+          "Confidence": 92.84391,
+          "Left": 1308,
+          "Top": 1503,
+          "Right": 1325,
+          "Bottom": 1526
+        },
+        {
+          "Text": "0",
+          "Confidence": 87.606064,
+          "Left": 1335,
+          "Top": 1503,
+          "Right": 1431,
+          "Bottom": 1530
+        },
+        {
+          "Text": "11",
+          "Confidence": 92.54628,
+          "Left": 1517,
+          "Top": 1503,
+          "Right": 1543,
+          "Bottom": 1526
+        },
+        {
+          "Text": "290,98",
+          "Confidence": 30.57,
+          "Left": 1556,
+          "Top": 1503,
+          "Right": 1651,
+          "Bottom": 1530
+        }
+      ]
+    },
+    {
+      "LineText": "25000082",
+      "Words": [
+        {
+          "Text": "25000082",
+          "Confidence": 96.67489,
+          "Left": 579,
+          "Top": 1548,
+          "Right": 722,
+          "Bottom": 1572
+        }
+      ]
+    },
+    {
+      "LineText": "ا ORD: THE RAINMAKER",
+      "Words": [
+        {
+          "Text": "ا",
+          "Confidence": 91.112236,
+          "Left": 587,
+          "Top": 1593,
+          "Right": 622,
+          "Bottom": 1617
+        },
+        {
+          "Text": "ORD:",
+          "Confidence": 92.198006,
+          "Left": 640,
+          "Top": 1594,
+          "Right": 712,
+          "Bottom": 1617
+        },
+        {
+          "Text": "THE",
+          "Confidence": 91.81238,
+          "Left": 723,
+          "Top": 1594,
+          "Right": 780,
+          "Bottom": 1617
+        },
+        {
+          "Text": "RAINMAKER",
+          "Confidence": 92.27816,
+          "Left": 793,
+          "Top": 1594,
+          "Right": 968,
+          "Bottom": 1617
+        }
+      ]
+    },
+    {
+      "LineText": "INSTITUTE LLC",
+      "Words": [
+        {
+          "Text": "INSTITUTE",
+          "Confidence": 92.73407,
+          "Left": 581,
+          "Top": 1639,
+          "Right": 729,
+          "Bottom": 1663
+        },
+        {
+          "Text": "LLC",
+          "Confidence": 92.573166,
+          "Left": 742,
+          "Top": 1639,
+          "Right": 791,
+          "Bottom": 1663
+        }
+      ]
+    },
+    {
+      "LineText": "13/01/2025 09/01/2025 @ VIREMENT EMIS MEM AG 3 000,00 8 290,98",
+      "Words": [
+        {
+          "Text": "13/01/2025",
+          "Confidence": 94.384094,
+          "Left": 168,
+          "Top": 1724,
+          "Right": 333,
+          "Bottom": 1747
+        },
+        {
+          "Text": "09/01/2025",
+          "Confidence": 87.601845,
+          "Left": 373,
+          "Top": 1724,
+          "Right": 539,
+          "Bottom": 1747
+        },
+        {
+          "Text": "VIREMENT",
+          "Confidence": 6.5308,
+          "Left": 606,
+          "Top": 1724,
+          "Right": 760,
+          "Bottom": 1747
+        },
+        {
+          "Text": "EMIS",
+          "Confidence": 92.29678,
+          "Left": 771,
+          "Top": 1724,
+          "Right": 840,
+          "Bottom": 1747
+        },
+        {
+          "Text": "MEM",
+          "Confidence": 92.68993,
+          "Left": 852,
+          "Top": 1724,
+          "Right": 922,
+          "Bottom": 1747
+        },
+        {
+          "Text": "AG",
+          "Confidence": 92.37017,
+          "Left": 933,
+          "Top": 1724,
+          "Right": 974,
+          "Bottom": 1747
+        },
+        {
+          "Text": "3",
+          "Confidence": 32.68663,
+          "Left": 1079,
+          "Top": 1724,
+          "Right": 1094,
+          "Bottom": 1747
+        },
+        {
+          "Text": "000,00",
+          "Confidence": 32.68663,
+          "Left": 1106,
+          "Top": 1724,
+          "Right": 1202,
+          "Bottom": 1751
+        },
+        {
+          "Text": "8",
+          "Confidence": 12.186356,
+          "Left": 1531,
+          "Top": 1724,
+          "Right": 1547,
+          "Bottom": 1747
+        },
+        {
+          "Text": "290,98",
+          "Confidence": 12.186356,
+          "Left": 1556,
+          "Top": 1724,
+          "Right": 1651,
+          "Bottom": 1751
+        },
+        {
+          "Text": "@",
+          "Confidence": 6.5308,
+          "Left": 577,
+          "Top": 1728,
+          "Right": 597,
+          "Bottom": 1750
+        }
+      ]
+    },
+    {
+      "LineText": "ا En faveur SOCIETE IT",
+      "Words": [
+        {
+          "Text": "faveur",
+          "Confidence": 92.42243,
+          "Left": 684,
+          "Top": 1768,
+          "Right": 778,
+          "Bottom": 1793
+        },
+        {
+          "Text": "ا",
+          "Confidence": 92.38176,
+          "Left": 587,
+          "Top": 1769,
+          "Right": 622,
+          "Bottom": 1793
+        },
+        {
+          "Text": "SOCIETE",
+          "Confidence": 67.16232,
+          "Left": 789,
+          "Top": 1769,
+          "Right": 910,
+          "Bottom": 1793
+        },
+        {
+          "Text": "En",
+          "Confidence": 93.23668,
+          "Left": 641,
+          "Top": 1770,
+          "Right": 673,
+          "Bottom": 1793
+        },
+        {
+          "Text": "IT",
+          "Confidence": 89.13439,
+          "Left": 923,
+          "Top": 1770,
+          "Right": 947,
+          "Bottom": 1793
+        }
+      ]
+    },
+    {
+      "LineText": "CAPACITIES",
+      "Words": [
+        {
+          "Text": "CAPACITIES",
+          "Confidence": 91.47805,
+          "Left": 579,
+          "Top": 1815,
+          "Right": 747,
+          "Bottom": 1838
+        }
+      ]
+    },
+    {
+      "LineText": "04/02/2025 31/01/2025 \u0026@VIREMENT EMIS MEM مح 3 000,00 5 290,98",
+      "Words": [
+        {
+          "Text": "04/02/2025",
+          "Confidence": 95.42712,
+          "Left": 166,
+          "Top": 1899,
+          "Right": 333,
+          "Bottom": 1923
+        },
+        {
+          "Text": "31/01/2025",
+          "Confidence": 90.93549,
+          "Left": 372,
+          "Top": 1899,
+          "Right": 539,
+          "Bottom": 1923
+        },
+        {
+          "Text": "EMIS",
+          "Confidence": 91.73633,
+          "Left": 771,
+          "Top": 1899,
+          "Right": 840,
+          "Bottom": 1923
+        },
+        {
+          "Text": "مح",
+          "Confidence": 78.78724,
+          "Left": 934,
+          "Top": 1899,
+          "Right": 974,
+          "Bottom": 1923
+        },
+        {
+          "Text": "3",
+          "Confidence": 54.776848,
+          "Left": 1079,
+          "Top": 1899,
+          "Right": 1094,
+          "Bottom": 1923
+        },
+        {
+          "Text": "000,00",
+          "Confidence": 54.776848,
+          "Left": 1106,
+          "Top": 1899,
+          "Right": 1202,
+          "Bottom": 1927
+        },
+        {
+          "Text": "290,98",
+          "Confidence": 87.53238,
+          "Left": 1556,
+          "Top": 1899,
+          "Right": 1651,
+          "Bottom": 1927
+        },
+        {
+          "Text": "\u0026@VIREMENT",
+          "Confidence": 37.274643,
+          "Left": 577,
+          "Top": 1900,
+          "Right": 760,
+          "Bottom": 1925
+        },
+        {
+          "Text": "MEM",
+          "Confidence": 91.73633,
+          "Left": 852,
+          "Top": 1900,
+          "Right": 922,
+          "Bottom": 1923
+        },
+        {
+          "Text": "5",
+          "Confidence": 87.53238,
+          "Left": 1531,
+          "Top": 1900,
+          "Right": 1547,
+          "Bottom": 1923
+        }
+      ]
+    },
+    {
+      "LineText": "ا En faveur SOCIETE IT",
+      "Words": [
+        {
+          "Text": "faveur",
+          "Confidence": 92.818375,
+          "Left": 684,
+          "Top": 1944,
+          "Right": 778,
+          "Bottom": 1969
+        },
+        {
+          "Text": "ا",
+          "Confidence": 96.022514,
+          "Left": 587,
+          "Top": 1945,
+          "Right": 622,
+          "Bottom": 1968
+        },
+        {
+          "Text": "En",
+          "Confidence": 93.22667,
+          "Left": 641,
+          "Top": 1945,
+          "Right": 673,
+          "Bottom": 1968
+        },
+        {
+          "Text": "SOCIETE",
+          "Confidence": 70.596,
+          "Left": 789,
+          "Top": 1945,
+          "Right": 910,
+          "Bottom": 1969
+        },
+        {
+          "Text": "IT",
+          "Confidence": 87.735596,
+          "Left": 923,
+          "Top": 1945,
+          "Right": 947,
+          "Bottom": 1968
+        }
+      ]
+    },
+    {
+      "LineText": "CAPACITIES",
+      "Words": [
+        {
+          "Text": "CAPACITIES",
+          "Confidence": 91.028404,
+          "Left": 579,
+          "Top": 1990,
+          "Right": 747,
+          "Bottom": 2014
+        }
+      ]
+    },
+    {
+      "LineText": "Total 6 009,83 8 000,00",
+      "Words": [
+        {
+          "Text": "Total",
+          "Confidence": 92.332565,
+          "Left": 911,
+          "Top": 2070,
+          "Right": 983,
+          "Bottom": 2109
+        },
+        {
+          "Text": "6",
+          "Confidence": 93.22737,
+          "Left": 1079,
+          "Top": 2075,
+          "Right": 1094,
+          "Bottom": 2099
+        },
+        {
+          "Text": "009,83",
+          "Confidence": 92.772736,
+          "Left": 1106,
+          "Top": 2075,
+          "Right": 1202,
+          "Bottom": 2102
+        },
+        {
+          "Text": "8",
+          "Confidence": 89.30237,
+          "Left": 1309,
+          "Top": 2075,
+          "Right": 1324,
+          "Bottom": 2099
+        },
+        {
+          "Text": "000,00",
+          "Confidence": 89.30237,
+          "Left": 1335,
+          "Top": 2075,
+          "Right": 1431,
+          "Bottom": 2102
+        }
+      ]
+    },
+    {
+      "LineText": "Impriméle 05/03/2025",
+      "Words": [
+        {
+          "Text": "Impriméle",
+          "Confidence": 59.815125,
+          "Left": 1316,
+          "Top": 2188,
+          "Right": 1473,
+          "Bottom": 2220
+        },
+        {
+          "Text": "05/03/2025",
+          "Confidence": 92.15642,
+          "Left": 1501,
+          "Top": 2189,
+          "Right": 1667,
+          "Bottom": 2213
+        }
+      ]
+    },
+    {
+      "LineText": "Fermer cette fenêtre Imprimer",
+      "Words": [
+        {
+          "Text": "Fermer",
+          "Confidence": 91.27954,
+          "Left": 1054,
+          "Top": 2300,
+          "Right": 1170,
+          "Bottom": 2327
+        },
+        {
+          "Text": "fenêtre",
+          "Confidence": 92.65435,
+          "Left": 1269,
+          "Top": 2300,
+          "Right": 1381,
+          "Bottom": 2327
+        },
+        {
+          "Text": "Imprimer",
+          "Confidence": 91.26964,
+          "Left": 1465,
+          "Top": 2300,
+          "Right": 1606,
+          "Bottom": 2334
+        },
+        {
+          "Text": "cette",
+          "Confidence": 92.49912,
+          "Left": 1181,
+          "Top": 2301,
+          "Right": 1257,
+          "Bottom": 2327
+        }
+      ]
+    },
+    {
+      "LineText": "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk",
+      "Words": [
+        {
+          "Text": "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk",
+          "Confidence": 84.923645,
+          "Left": 75,
+          "Top": 2493,
+          "Right": 882,
+          "Bottom": 2516
+        }
+      ]
+    },
+    {
+      "LineText": "3/5/25, 2:41 PM BTK@DIRECT",
+      "Words": [
+        {
+          "Text": "3/5/25,",
+          "Confidence": 87.825134,
+          "Left": 75,
+          "Top": 3067,
+          "Right": 146,
+          "Bottom": 3087
+        },
+        {
+          "Text": "2:41",
+          "Confidence": 90.95988,
+          "Left": 155,
+          "Top": 3067,
+          "Right": 198,
+          "Bottom": 3084
+        },
+        {
+          "Text": "PM",
+          "Confidence": 91.98961,
+          "Left": 211,
+          "Top": 3067,
+          "Right": 244,
+          "Bottom": 3084
+        },
+        {
+          "Text": "BTK@DIRECT",
+          "Confidence": 92.4071,
+          "Left": 958,
+          "Top": 3067,
+          "Right": 1119,
+          "Bottom": 3089
+        }
+      ]
+    },
+    {
+      "LineText": "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 2/2",
+      "Words": [
+        {
+          "Text": "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk",
+          "Confidence": 84.923645,
+          "Left": 75,
+          "Top": 5509,
+          "Right": 882,
+          "Bottom": 5532
+        },
+        {
+          "Text": "2/2",
+          "Confidence": 92.67835,
+          "Left": 1706,
+          "Top": 5509,
+          "Right": 1739,
+          "Bottom": 5527
+        }
+      ]
+    }
+  ]
+}

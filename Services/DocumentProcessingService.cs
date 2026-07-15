@@ -50,7 +50,25 @@ namespace Codeium_Security.Services
 
                 var pageResults = new List<OcrResult>();
                 foreach (var pageImagePath in pageImagePaths)
-                    pageResults.Add(await _ocrService.ExtractTextAsync(pageImagePath));
+                {
+                    try
+                    {
+                        var fileInfo = new FileInfo(pageImagePath);
+                        if (!fileInfo.Exists || fileInfo.Length == 0)
+                        {
+                            pageResults.Add(new OcrResult { FullText = "", Confidence = 0, Words = new List<OcrWord>() });
+                            continue;
+                        }
+
+                        pageResults.Add(await _ocrService.ExtractTextAsync(pageImagePath));
+                    }
+                    catch (Exception)
+                    {
+                        // Page illisible/corrompue : on l'ignore et on continue avec une page vide
+                        // plutôt que de faire planter tout le traitement du document
+                        pageResults.Add(new OcrResult { FullText = "", Confidence = 0, Words = new List<OcrWord>() });
+                    }
+                }
 
                 ocrResult = OcrResult.Merge(pageResults);
             }
@@ -66,6 +84,8 @@ namespace Codeium_Security.Services
 
             foreach (var word in ocrResult.Words)
                 word.Text = TextCleaner.RemoveInvisibleMarks(word.Text);
+            foreach (var word in ocrResult.Words)
+                word.Text = TextCleaner.RemoveStrayTableBorders(word.Text);
 
             return ocrResult;
         }
@@ -90,6 +110,20 @@ namespace Codeium_Security.Services
                 NeedsReview = needsReview,
                 Document = document,
                 DebugLines = lines.Select(l => l.FullLineText).ToList(),
+                Lines = lines.Select(l => new LineOutput
+                {
+                    LineText = l.FullLineText,
+                    Words = l.Words.Select(w => new WordCoordinate
+                    {
+                        Text = w.Text,
+                        Confidence = w.Confidence,
+                        Left = w.Left,
+                        Top = w.Top,
+                        Right = w.Right,
+                        Bottom = w.Bottom
+                    }).ToList()
+                }).ToList(),
+
                 Words = ocrResult.Words.Select(w => new WordCoordinate
                 {
                     Text = w.Text,
