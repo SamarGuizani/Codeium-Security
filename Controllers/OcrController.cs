@@ -18,7 +18,7 @@ namespace Codeium_Security.Controllers
         {
             WriteIndented = true,
             PropertyNamingPolicy = null,
-            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.Create(System.Text.Unicode.UnicodeRanges.All)
+            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
         };
 
         public OcrController(DocumentProcessingService processingService)
