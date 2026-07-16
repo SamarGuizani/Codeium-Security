@@ -393,7 +393,7 @@
       },
       {
         "Date": "03/02/2025",
-        "Description": "\u0022 03/02/2025 COMM ANNIVERSAIRE - VCENA\\045107",
+        "Description": "\" 03/02/2025 COMM ANNIVERSAIRE - VCENA\\045107",
         "Debit": 65.000,
         "Credit": 1869.365,
         "BalanceAfterOperation": null
@@ -449,7 +449,7 @@
       },
       {
         "Date": "13/02/2025",
-        "Description": "/02/2025 \u0027 TVA/COMM REMISE CHQ 1274130",
+        "Description": "/02/2025 ' TVA/COMM REMISE CHQ 1274130",
         "Debit": 0.166,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -470,7 +470,7 @@
       },
       {
         "Date": "14/02/2025",
-        "Description": "/02/2025 COM OP PASSAGERES — 1011200225170 \u0027",
+        "Description": "/02/2025 COM OP PASSAGERES — 1011200225170 '",
         "Debit": 25.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -540,7 +540,7 @@
       },
       {
         "Date": "26/02/2025",
-        "Description": "/03/2025 \u0027 TVAICOMM ENC EFF — 0224695 ‘",
+        "Description": "/03/2025 ' TVAICOMM ENC EFF — 0224695 ‘",
         "Debit": 0.950,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -757,7 +757,7 @@
       },
       {
         "Date": "16/04/2025",
-        "Description": "2025 206 CHQ \u00222009 20C",
+        "Description": "2025 206 CHQ \"2009 20C",
         "Debit": 300.000,
         "Credit": 47.930,
         "BalanceAfterOperation": null
@@ -792,7 +792,7 @@
       },
       {
         "Date": "14/04/2025",
-        "Description": "/04/2025 TVAICOMM REMISE CHQ \u0022 [1240348 T 1",
+        "Description": "/04/2025 TVAICOMM REMISE CHQ \" [1240348 T 1",
         "Debit": 0.166,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -918,7 +918,7 @@
       },
       {
         "Date": "30/04/2025",
-        "Description": "\u0022  o",
+        "Description": "\"  o",
         "Debit": 0.875,
         "Credit": 126.402,
         "BalanceAfterOperation": null
@@ -1149,7 +1149,7 @@
       },
       {
         "Date": "12/06/2025",
-        "Description": "/06/20\u00272\u00275wa COLD SYSTEM [VR CPM/110625",
+        "Description": "/06/20'2'5wa COLD SYSTEM [VR CPM/110625",
         "Debit": 884000283.079,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1212,7 +1212,7 @@
       },
       {
         "Date": "13/06/2025",
-        "Description": "\u0027RETRAIT ESPECES PCN° — 3256739",
+        "Description": "'RETRAIT ESPECES PCN° — 3256739",
         "Debit": 500.000,
         "Credit": 395.573,
         "BalanceAfterOperation": null
@@ -1324,14 +1324,14 @@
       },
       {
         "Date": "23/06/2025",
-        "Description": "\u0022 VIRT RECU _ VR CPM/300625 fl E el",
+        "Description": "\" VIRT RECU _ VR CPM/300625 fl E el",
         "Debit": 0.570,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Date": "23/06/2025",
-        "Description": "/06/2025  RECU \u0022 VR CPM/300625",
+        "Description": "/06/2025  RECU \" VR CPM/300625",
         "Debit": 3.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1401,7 +1401,7 @@
       },
       {
         "Date": "01/07/2025",
-        "Description": "/07/2025 \u0027 TVAICOMM PREL — 1378368",
+        "Description": "/07/2025 ' TVAICOMM PREL — 1378368",
         "Debit": 694.559,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1548,7 +1548,7 @@
       },
       {
         "Date": "09/06/2025",
-        "Description": "/06/2025 COMM REMISE CHQ\u0027 277410",
+        "Description": "/06/2025 COMM REMISE CHQ' 277410",
         "Debit": 875277.593,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1562,7 +1562,7 @@
       },
       {
         "Date": "17/06/2025",
-        "Description": "\u0022آم 4003062 — 4003062",
+        "Description": "\"آم 4003062 — 4003062",
         "Debit": 104.427,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1646,7 +1646,7 @@
       },
       {
         "Date": "25/06/2025",
-        "Description": "/06/2025 \u0027 RETRAIT ESPECES PC N° 3256607",
+        "Description": "/06/2025 ' RETRAIT ESPECES PC N° 3256607",
         "Debit": 500.000,
         "Credit": 491.032,
         "BalanceAfterOperation": null
@@ -1765,7 +1765,7 @@
       },
       {
         "Date": "09/07/2025",
-        "Description": "/07/2025 __ \u0027 TVA/RECUPERATION FRAIS دمي PDL 01/06/25 ل الل",
+        "Description": "/07/2025 __ ' TVA/RECUPERATION FRAIS دمي PDL 01/06/25 ل الل",
         "Debit": 0.143,
         "Credit": 767.364,
         "BalanceAfterOperation": null
@@ -1945,7 +1945,7 @@
     "1210  03/01/2025 150.000 o 1 320.062 CR",
     "102/01/2025 [VERS ESPECES BV N° 02235212 02235212 ",
     "03/01/2025 - 4200.000 5520.062 CR",
-    "\u0027CHQ 7",
+    "'CHQ 7",
     "02/01/2025 MEME AG N°: 7105618 - 77656558 4 6501.000",
     "980.938 DB",
     "06/01/2025 [ COMM REMISE CHQ [",
@@ -1953,7 +1953,7 @@
     "",
     "06/01/2025 TVAICOMM REMISE CHQ 2M3 — T 0332 7",
     "30/12/2024 B “ 983.020 DB",
-    "27/01/2025 \u0027ENC CHQON° 4000718 — \\4000718 او  08/01/2025",
+    "27/01/2025 'ENC CHQON° 4000718 — \\4000718 او  08/01/2025",
     " 100.000 — 883.020 DB|",
     "",
     "v7/01/2025 ENC CHQ N° 97 = 97 — “108/01/2025 — 72564258",
@@ -2013,7 +2013,7 @@
     "— [ 18/01/2025 00878 , 939362 (R",
     "21/01/2025 TVAICOMM REMISE CHQ - - 271127",
     " 15/01/2025 - 0166 n u 939.196 CR",
-    "ENC — fmﬁ/\u0027zi)z*sJ‘ ",
+    "ENC — fmﬁ/'zi)z*sJ‘ ",
     "22/0172025 CHQ N° 655 “ \\655 — —",
     "C0 882000 1591.196 CR",
     "22/01/2025  COMM REMISE CHQ — 22",
@@ -2033,9 +2033,9 @@
     "24/01/2025 TVA/COMM REMISE CHQ 12741297 20002025 9 0332",
     "( — ; ; “ 860.927",
     "DB",
-    "27/01/2025 \u0022ENC CHQ N° 215 215 28/01/2025",
+    "27/01/2025 \"ENC CHQ N° 215 215 28/01/2025",
     "150.000 710.927 DB",
-    "2022 CHQ N° 4000658 — 4000658 \u0022\u002228/01”/’2025”‘;“ 301.000",
+    "2022 CHQ N° 4000658 — 4000658 \"\"28/01”/’2025”‘;“ 301.000",
     "o - — 409.927 D,",
     "27/01/2025 DEBLOCAGE CHQ N° 7105614 7105614  27/01/2025 ",
     "605.562 195.635 CR",
@@ -2048,13 +2048,13 @@
     "= ;",
     "",
     "04053225125@\\ « PV Agence BEN AROUS",
-    "Compte N° o : \u0022م\u0022 :",
+    "Compte N° o : \"م\" :",
     "( \\e A",
     "; ; RIB : 42",
     "Intitulé : WT ® عون",
-    "1 22 \u0022",
+    "1 22 \"",
     "للم ع“ Devise: e TND",
-    "Adresse :\u002709 DE FRANCE",
+    "Adresse :'09 DE FRANCE",
     "-",
     "— 203 0 cDc",
     "عا م BENAROUS :",
@@ -2090,7 +2090,7 @@
     "21/01/2025 COMM PREL 69955",
     "o 15/04/2025 940.237 CR",
     "21/01/2025  TVAICOMM PREL 69955 À 0.380",
-    " TEZN \\\u003E 15/0112025 0.875 939.362 CR",
+    " TEZN \\> 15/0112025 0.875 939.362 CR",
     "21/01/2025 COMM REMISE CHQ",
     "[ TVAICOMM REMISE CHQ _/131 0.166 939.196 CR",
     "21/01/2025",
@@ -2124,7 +2124,7 @@
     "4",
     "حي",
     "ا",
-    "Nos écritures s\u0027entendent sauf erreur ou omission.",
+    "Nos écritures s'entendent sauf erreur ou omission.",
     "بي",
     "Extrait de compte Edité le: 13/01/2025 10:30",
     "Compte N° : 0405822512301 Agenee : BEN AROUS",
@@ -2134,7 +2134,7 @@
     "ذا A",
     "Adresse 09 AV DE FRANCE Devise: م",
     ":",
-    "00 \u0022,",
+    "00 \",",
     "Ville ل P",
     "2013 BEN AROUS طعي :",
     ":",
@@ -2142,7 +2142,7 @@
     "poteir au 13/01/2025",
     "/~/",
     "~\\ ل",
-    "\u003E 1170.062 CR",
+    "> 1170.062 CR",
     "Solde au: 31/12/2024",
     "D. Opé. Libellé Référence D. Valeur Débit Crédit [ Solde",
     "[02/0172025 ENC CHQ N° 210 1210 03/01/2025  150.000 1320.062 CR",
@@ -2173,19 +2173,19 @@
     "(0072025 277672 - 292 £  — 5565.858 CR",
     "ENCMPLOCHON mmms 3067782",
     "_— c",
-    "13/01/2025 ?522?5 ESPECES PC N° ’03129344 fg\u0026e%ﬂﬁ‘b\\\\_\\\u0026emoo% ١ 555.858 CR|",
+    "13/01/2025 ?522?5 ESPECES PC N° ’03129344 fg&e%ﬂﬁ‘b\\\\_\\&emoo% ١ 555.858 CR|",
     "_ \\",
     " ",
     "مان 21",
-    "Encours chèques : 0.000 les mou…\u0026c 12 118.284 11 504.080",
+    "Encours chèques : 0.000 les mou…&c 12 118.284 11 504.080",
     "\\ “ددسي",
     "pate 13/01/2025 555.858 CR",
     "ا",
     "\\ لقو",
     "نين",
-    "Nos écritures s\u0027entendent sauf erreur ou omission.",
+    "Nos écritures s'entendent sauf erreur ou omission.",
     "o compte",
-    "Extrait de sC\u0022",
+    "Extrait de sC\"",
     "Compte N° : 0405822512301 Agence BEN AROUS",
     ":",
     "Intitulé : WTM SARL RIB : 2",
@@ -2196,7 +2196,7 @@
     "Du 01/02/2025 يدياه 5",
     "50106 au 31/01/2025 804.365 DB",
     "( DOpé.  Libellé Référence  D. Valeur  Débit  Credit Solde",
-    "\u0022 03/02/2025 COMM ANNIVERSAIRE - VCENA\\045107 03/02/2025 ‘ 65.000 — 1 869.365",
+    "\" 03/02/2025 COMM ANNIVERSAIRE - VCENA\\045107 03/02/2025 ‘ 65.000 — 1 869.365",
     "DB",
     "CARTE/2025 “لمعا",
     "ï e .",
@@ -2220,15 +2220,15 @@
     "318996/ 1",
     "19/02/2025 COMM REMISE CHQ 1271130 1 13/02/2025 0.875",
     "927.853 DH",
-    "19/02/2025 \u0027 TVA/COMM REMISE CHQ 1274130 13/02/2025 0.166",
+    "19/02/2025 ' TVA/COMM REMISE CHQ 1274130 13/02/2025 0.166",
     "928.019 DR",
     "20/02/2025 ENC CHQ N° 400880 AC0EB0 1 21/02/2025 “ 300.000 628 019",
     "DB",
-    "20/02/2025 \u0027 COMM REMISE CHQ Ë 11271131 14/02/2025",
+    "20/02/2025 ' COMM REMISE CHQ Ë 11271131 14/02/2025",
     "0.875١ 628.894 DB",
-    "20/02/2025 TVAICOMM REMISE CHO 1271131 - 1 14/02/2025\u0022 “0.166 e",
+    "20/02/2025 TVAICOMM REMISE CHO 1271131 - 1 14/02/2025\" “0.166 e",
     "629.060 DB",
-    "20/02/2025 COM OP PASSAGERES — 1011200225170 \u0027 14/02/2025 25.000;",
+    "20/02/2025 COM OP PASSAGERES — 1011200225170 ' 14/02/2025 25.000;",
     "654.060 D3",
     "20/02/2025 TVA/ICOM OP PASSAGERES 011200225170 14/92/2025 4750 658 810",
     "DR",
@@ -2245,7 +2245,7 @@
     "1 045.698 DB",
     "1022025 FNC CHQ N° 7629936 ١ 2410212025 ‘",
     "3571.002 2 525.304 CR",
-    "21/02/2025 \u0027PRL COMP N° 8138 20/02/2025",
+    "21/02/2025 'PRL COMP N° 8138 20/02/2025",
     "130.333 2394 971 CR",
     "21/02/2025 COMM PREL 17/02/2025 2.000 2392971",
     "CR",
@@ -2257,7 +2257,7 @@
     "3190114",
     "28/02/2025 COM OF FASSAGERES 011280225701 24/02/2025 25 000 632 409",
     "DI",
-    "28/02/2025 TVA/COM OP PASSAGERES 011280225701 \u00221 24/02/2025 - 4750",
+    "28/02/2025 TVA/COM OP PASSAGERES 011280225701 \"1 24/02/2025 - 4750",
     "637.159 DB",
     "28/02/2025 COMM COMPTE DEBITEUR/COP 011280225701 24/02/2025  “ 0.118) E",
     "637.275 DB",
@@ -2272,7 +2272,7 @@
     "1.045 1159 084 DB",
     "04/03/2025 COMM REMISE CHQ ‘ 1312683 . 26/92/2025 0.875",
     "1159 659 3",
-    "04/03/2925 \u0022TVAICOMM REMISE CHQ 1312683 26/02/2025",
+    "04/03/2925 \"TVAICOMM REMISE CHQ 1312683 26/02/2025",
     "0.166 1160.125 DB",
     "",
     "04/03/2025 COMM ENC EFF — 0224695 “ 26/02/2025 B 5.000 ‘ “",
@@ -2290,13 +2290,13 @@
     "Du 01/02/2025 au 05/03/2025",
     "Solde au: 31/01/2025 804 365 DB",
     "D. Opé. ‘ P Libellé -  Référence  D.Valeur Débit Crédit Solde",
-    "04/03/2025 \u0027 TVAICOMM ENC EFF — 0224695 ‘ 26/02/2025 E 0.950",
+    "04/03/2025 ' TVAICOMM ENC EFF — 0224695 ‘ 26/02/2025 E 0.950",
     "1166.075 DR",
     "Encours chèques : 541.000 Total des 830.202",
     "mouvements 5 191.912 4",
     "Solde : 166.075",
     "au 05/03/2025 1 DB",
-    "Nos écritures s\u0027entendent sauf erreur ou omission.",
+    "Nos écritures s'entendent sauf erreur ou omission.",
     "الإمارات و تونس بنك",
     "Banque de Tunisie et des Emirats",
     "RELEVE MENSUEL DU COMPTE",
@@ -2311,13 +2311,13 @@
     "-",
     "Y",
     "-",
-    "Cher(e) Client(e), nous avons \u0022ا de vous i ci-d le Relevé détaillé des opérations inscrites à votre livres. Nous",
+    "Cher(e) Client(e), nous avons \"ا de vous i ci-d le Relevé détaillé des opérations inscrites à votre livres. Nous",
     "… compte sur كمه",
     "vous en souhaitons bonne réception.",
     "Page: 1/2",
-    "D,\u0027u",
+    "D,'u",
     "Ordre| Libellé Opération Date de Valeur Débit Crédit",
-    "d\u0027opération ,",
+    "d'opération ,",
     "Solde départ 1 159.084",
     "1 04/03/2025  COMM REMISE CHQ 26/02/2025",
     "0.875",
@@ -2351,7 +2351,7 @@
     "0.380",
     "16 06/03/2025  COMM REMISE CHQ 28/02/2025",
     "0.875",
-    "Suite\u003E\u003E",
+    "Suite>>",
     "S.A. au Capital عل 108 744 320 DT - RC . B14083 1996 — M.F: 015094 B/A/M/000 — Boulevard Béji Caïd Essebsi - - - - Tunis",
     "lot AFH BCS Centre Urbain Nord 1082",
     "18 : 71 112 000 - Fax : 71 287 409 - Télex : 14772 Swift : BTEXTNTT 5 1082 الشمالي العمراني المركز - قابد الباجي",
@@ -2361,7 +2361,7 @@
     "و",
     "Banque de Tunisie et des Emirats",
     "Page: 2/2",
-    "d\u0027o:))é:\u0027a\u0022ﬁon Date de Valeur Débit Crédit",
+    "d'o:))é:'a\"ﬁon Date de Valeur Débit Crédit",
     "Ordre Libellé Opération",
     "  28/02/2025",
     "TVA/COMM REMISE CHQ 0.166",
@@ -2448,13 +2448,13 @@
     "45 28/03/2025 VIRT RECU 0.570",
     "Solde final 1 543.139",
     "Fin",
-    "présent compte est assujetti ما réglementation en vigueur en matière عل fonds عل garantie des dépôts bancaires et au fond d\u0027indemnisation stipulé pour les comptes individuets et conjoints.",
+    "présent compte est assujetti ما réglementation en vigueur en matière عل fonds عل garantie des dépôts bancaires et au fond d'indemnisation stipulé pour les comptes individuets et conjoints.",
     "Le ous pouvez consulter mode à عل calcul عل intérêts après avoir déposé une demande cet effet.",
     "V ا à",
-    "Tout débit ponctuel et tout dépassement éventuel d\u0027une cote de facilité عل caisse accordée par ها banque doivent être résorbés dans les meilleurs délais et ce conformément à l\u0027article 672 du Code de",
+    "Tout débit ponctuel et tout dépassement éventuel d'une cote de facilité عل caisse accordée par ها banque doivent être résorbés dans les meilleurs délais et ce conformément à l'article 672 du Code de",
     "Commerce. En cas de contestation sur le contenu de ce Relevé, merci de bien vouloir nous en aviser par écrit dans un délai maximum عل trente jours à compter de sa réception.",
     "Pour Réclamation : reclamationgitte com in Tél : 71 112 000.",
-    "Médiateur Bancaire Mr. Sadok Adresse Villa 2050 - Tél / \u002B216 71 292 297 Mobile \u002B216 97 40 10 68 Email hattay@chf sadok orgin",
+    "Médiateur Bancaire Mr. Sadok Adresse Villa 2050 - Tél / +216 71 292 297 Mobile +216 97 40 10 68 Email hattay@chf sadok orgin",
     "HATTAY N°10 LOTISSEMENT HACHICHA BOUMHAL Fax : - : - :",
     ": - :",
     "سه de 108 744 320 - . - 015094 B/A/M/000 Boulevard Béji Caïd Essebsi lot AFH - 368 Centre Urbain Nord 1082 Tunis",
@@ -2482,7 +2482,7 @@
     "CPM/020425 03/04/2025  - [ 3543139",
     "[02/0472025 [VIR ORD AROUA AMEN ALLAH VR",
     " مه o",
-    "\u0022FOURNI PROD\u0022 _ 6R]",
+    "\"FOURNI PROD\" _ 6R]",
     "S 02/04/2025 COMM VIRT RECU VR CPM/020425 N 25/03/2025 30004",
     "IN   ___85s0-138 539.569 CR",
     "02/04/2025 TVAICOMM VIRT RECU VR CPM/020425 25/03/2025 0.5707 3",
@@ -2496,9 +2496,9 @@
     " 7137347 DB|",
     "J 04/04/2025 [COMM 1312690 27/03/2025 0.815 ",
     "REMISE CHQ",
-    "\u003E أل التق",
+    "> أل التق",
     "U 04/04/2025 TVAICOMM REMISE CHQ 1312690 27/03/2025 0166",
-    "Îﬁ/dA/zosz\u0027Aelos  105.674| [ T 243187 DB",
+    "Îﬁ/dA/zosz'Aelos  105.674| [ T 243187 DB",
     "— AU 31/03/25 AGIOS  01/04/2025 ",
     "02 5 25.000 ke  U 266.187 DB",
     "07/04/2025 COM OP PASSAGERES",
@@ -2522,7 +2522,7 @@
     "AROUS DU 04/04/2025 الت",
     " E Es E 427.566 .",
     " 08/04/2025 ENC CHQ N° 524287 524287 10/04/2025 1 846.350 DB|",
-    "أ 0750 — 5 = \u0022 428316 DB|",
+    "أ 0750 — 5 = \" 428316 DB|",
     "RECUPERATION FRAIS PDL 01/03/25 08/04/2025",
     "ENVOIRELEVE e",
     "  5 5 - 8 08/04/2025 0.143 4 428.459 لحي DB,",
@@ -2535,7 +2535,7 @@
     "[ 1170472025  REMISE 1312691 — 04/04/2025  u 251.904 DB",
     "COMM CHQ",
     "11/04/2025  TVAICOMM REMISE CHQ 1312691 04/04/2025  252.070 DB",
-    "70472025 206 CHQ \u00222009 20C 16/04/2025 300.000 47.930 CR",
+    "70472025 206 CHQ \"2009 20C 16/04/2025 300.000 47.930 CR",
     "",
     "[ 16/04/2025 VIR ORD SAVONNERIE LE T VR CPM/160425 17/04/2025 2553.000 “ 2600930 CR",
     "_|PRINTEMPS",
@@ -2547,10 +2547,10 @@
     "ggr?aﬁ?fews‘ebno f .",
     "[18/04/2025 [1240348 1410472025 0.875 7 96.485 CR|",
     "96315 CR|",
-    "[18/04/2025 TVAICOMM REMISE CHQ \u0022 [1240348 T 114/04/2025 0.166",
+    "[18/04/2025 TVAICOMM REMISE CHQ \" [1240348 T 114/04/2025 0.166",
     "",
     " ENC CHQ 22/04/2025 جح لمي ا ا 110.715 CR",
-    "[21/04/2025 N° 10104 10104\u0022 ا",
+    "[21/04/2025 N° 10104 10104\" ا",
     " 22/04/2025 11 ORD AROUA AMEN ALLAH 716 CPM/220425  23/04/2025 = [ 500000 - 36107150",
     "“ compte",
     "Extraitde Edité le: 29/04/2025 14:48",
@@ -2570,7 +2570,7 @@
     "Libellé Référence Valeur Débit ] Crédit Solde ]",
     "[ D. Opé.  D. ",
     "  -",
-    "[\u0022FOURNI PROD\u0022 Ï",
+    "[\"FOURNI PROD\" Ï",
     " 16/04/2025 3.000 3607.715 CR|",
     "[22/0472025 COMM VIRT RECU VR CPM/220425  !",
     "16/04/2025 0.570/ 3 607.145 CR",
@@ -2602,7 +2602,7 @@
     "Encours chèques : :",
     "Solde 29/04/2025 148.072 DB",
     "au:",
-    "Nos écritures s\u0027entendent sauf erreur ou omission.",
+    "Nos écritures s'entendent sauf erreur ou omission.",
     "Extraitdecompte",
     "Edité le- 08/07/2025 10:59",
     "\\",
@@ -2633,7 +2633,7 @@
     "107/05/2025 RETRAIT 506: AB 384496",
     "DU [ كنا وال",
     "BENAROUS 04/05/2025",
-    "\u0022  o  __ 30/04/2025 ليسي 0.875 \u003E ار ل 126.402 وجي CR",
+    "\"  o  __ 30/04/2025 ليسي 0.875 > ار ل 126.402 وجي CR",
     "07/05/2025 COMM REMISE CHQ 1312695",
     " TVAICOMM  r ü CR",
     "07/05/2025  REMISE CHQ 1312695 —  30/04/2025  0.166 126.236",
@@ -2645,7 +2645,7 @@
     "09/05/2025 VR CPM/090525  05/05/2025 3000 — 1030836 (R",
     "09/05/2025  TVA/ICOMM VIRTRECU VR CPM/090525 05/05/2025 0570 = T 1030.266 CR",
     "13/05/2025 RETRAIT ESPECES PC N° 3230501 [ 12/05/2025 ” 2000000 I 969.734 DB",
-    "Êz\u0027osræïgäemlse",
+    "Êz'osræïgäemlse",
     "13/05/2025  © [13126% 07/05/2025 0875  ” 970.609 DB",
     "13/05/2025 TVAICOMM REMISE CHQ 1312696 1 07052025 — 0.166 ù  970.775 DB",
     "14/05/2025 6 60 263 ا 15062025 — ا 220000 770775 8",
@@ -2723,12 +2723,12 @@
     "10/06/2025",
     "10/06/2025 TVAICOMM REG ان 08062025 — ur -  T 600921 DB",
     "©",
-    "[ 1/06/20\u00272\u00275wa COLD SYSTEM [VR CPM/110625  12/06/2025 — T 884.000 283.079 CR",
+    "[ 1/06/20'2'5wa COLD SYSTEM [VR CPM/110625  12/06/2025 — T 884.000 283.079 CR",
     "ORD JS",
     " COMM VIRT RECU VR CPM/110625  04/06/2025 — 3.000 - à 280.079 CR",
     "11/06/2025",
     "11/06/2025 TVA/ICOMM VIRT RECU T VRCPM/110625  04/06/2025 0.570 7 i 279.509 CR",
-    "12/06/2025 COMM REMISE CHQ — — 01345367 _ 05/06/2025  0.875 =\u0022 = “278.634 CR",
+    "12/06/2025 COMM REMISE CHQ — — 01345367 _ 05/06/2025  0.875 =\" = “278.634 CR",
     "12/06/2025 TVACOMM REMISE CHQ - 345367 05/06/2025 0.166 — 278468 CR",
     "1277410 09/06/2025 0.875 277.593 ©",
     "13/06/2025 COMM REMISE CHQ",
@@ -2738,7 +2738,7 @@
     "377.000",
     "16/06/2025 ENC 4003062 — 4003062 7 17/06/2025 n 1104.427 CR",
     "CHON°",
-    "\u0027RETRAIT ESPECES PCN° — 3256739  13/06/2025 1500.000 o 395.573 DB",
+    "'RETRAIT ESPECES PCN° — 3256739  13/06/2025 1500.000 o 395.573 DB",
     "16/06/2025",
     "“م 0 ا",
     "23/06/2025 SAVONNERIE LE [VRCPM/230625  24/06/2025 1302.000 906427 CR",
@@ -2757,7 +2757,7 @@
     "23/06/2025 TVAICOMM REMISE CHQ ~ CR",
     "[23/06/2025 RETRAIT ESPECES PC - 8256885 - 20062025 1500.000 . T 726.032 DB",
     "N°",
-    "‘ENSCS\u0027%}:d 19998626",
+    "‘ENSCS'%}:d 19998626",
     "24/06/2025 N° 9998626 25/06/2025 751.000 24.968 CR",
     "24/06/2025 ENC CHQ N° 7861805 17861805 25/06/2025 1984.000 “ 2008.968 CR",
     "عل compte",
@@ -2774,14 +2774,14 @@
     "Solde au: 30/04/2025 1 488.428 CR",
     "[H v 7 Référence “D.Valeur   Débit Créait Solde",
     " ",
-    "[27/06/2025 RETRAIT 566665 660 - 3256607 25/06/2025 2500000 —  \u0022 491.032 DB",
+    "[27/06/2025 RETRAIT 566665 660 - 3256607 25/06/2025 2500000 —  \" 491.032 DB",
     "3256607 oy",
     "  = = B",
     "/30/06/2025  VIR ORD AROUA AMEN ALLAH VR CPM/300625  01/07/2025 = F 500.000 8.968 CR",
-    "I\u0022FOURNIPROD\u0022 e",
-    "\u0022 VIRT RECU _ VR CPM/300625 fl E el 23/06/2025 S = 0 0.570 ey Es 8398 = CR",
+    "I\"FOURNIPROD\" e",
+    "\" VIRT RECU _ VR CPM/300625 fl E el 23/06/2025 S = 0 0.570 ey Es 8398 = CR",
     "30/06/2025 TVA/COMM",
-    "30/06/2025  RECU \u0022 VR CPM/300625 23/06/2025 \u0026 3.000 = 5398 CR",
+    "30/06/2025  RECU \" VR CPM/300625 23/06/2025 & 3.000 = 5398 CR",
     "COMM VIRT",
     "COMP N° 2083 2083 “130/06/2025 — 368.377 ‘ 362.979 DB",
     "01/07/2025 PRL",
@@ -2793,7 +2793,7 @@
     "03/07/2025 TVAICOMM REMISE CHQ 127424 — 27062025 6 q “ 366.400 DB",
     " ENC CHQ 275 B 275 08/07/2025 B 200.000 166.400 DB",
     "07/07/2025 N°",
-    "07/07/2025 \u0027COM OP PASSAGERES “ 011070725284 01/07/2025 - 25000 =5 7481400 DB",
+    "07/07/2025 'COM OP PASSAGERES “ 011070725284 01/07/2025 - 25000 =5 7481400 DB",
     "TVAICOM OP PASSAGERES 011070725284 01/07/2025 4750 — T 196.150 DB",
     "07/07/2025",
     "07/07/2025 COMM COMPTE DEBITEUR/COP 011070725284 — 01/07/2025  0.167] — ) 196.317 DB",
@@ -2801,11 +2801,11 @@
     "\\DEBITEUR/COP",
     "07/07/2025 ]  PRL COMP N° 378368 __ 378368 اج E 04/07/2025 - 1 1495.830 بير تست كات 1692179 y DB",
     "07/07/2025 COMM  PREL 378368  01/07/2025 — 2.000 7771694179 DB|",
-    "07/07/2025 \u0027 TVAICOMM PREL — 1378368 01072025 — 0380 — S 1694.559 DB",
+    "07/07/2025 ' TVAICOMM PREL — 1378368 01072025 — 0380 — S 1694.559 DB",
     "/07/07/2025 AGIOS AU 30/06/25 — “ AGIOS 7 10107/2025 / 71.912 - 1766471 DB",
     "Encours chèques : 0.000 Total قعل mouvements ٠ 24 890.064 21 5",
     "50106 ن2 : 5 1766.471 DB",
-    "Nos écritures s\u0027entendent sauf erreur ou omission.",
+    "Nos écritures s'entendent sauf erreur ou omission.",
     "Extrait",
     "- عل compte",
     "Compte N° : 0405822512301 Agence : BEN AROUS",
@@ -2839,7 +2839,7 @@
     "10/06/2025 COMM REG EFF T 8602025 - CR",
     "10/06/2025  TVAICOMM REG EFF [010540803566 03/06/2025 1.045 89.856 CR",
     "[10/06/2025 REGL EFF N° 010540803663 010540803663 10/06/2025  B 594.376 DB/",
-    "{10/06/2025 [COMM REG - 7 _io\u002716540803663 03/06/2025 o",
+    "{10/06/2025 [COMM REG - 7 _io'16540803663 03/06/2025 o",
     "EFF 599.876 DB",
     "10/06/2025 TVAICOMM REG EFF 010540803663 03/06/2025 500.921 DB",
     "l41706/2025 VIR ORD \\VRCPM/110625 - p 884.000",
@@ -2850,16 +2850,16 @@
     "[12/06/2025 هه  05/06/2025 0875,  278.634 CR|",
     "REMISECHQ 01345367",
     "( 12/06/2025 TVA/ICOMM REMISE CHQ 01345367 105/06/2025 - 0.166 ‘ 278.468 CR|",
-    "13/06/2025 COMM REMISE CHQ\u0027 277410 09/06/2025 0875 277.593 CR|",
+    "13/06/2025 COMM REMISE CHQ' 277410 09/06/2025 0875 277.593 CR|",
     "[13/06/2025 TVAICOMM REMISE CHQ 1277410 T 09/06/2025 0166  278278",
     "»~",
     "13/06/2025 ENCCHON°267 — 1267 “ 16/06/2025 e ü 727.427 CR|",
-    "\u003C",
-    "\u0022آم 4003062 — 4003062 - 17/06/2025 ‘ 1104.427 CR",
+    "<",
+    "\"آم 4003062 — 4003062 - 17/06/2025 ‘ 1104.427 CR",
     "p",
     "(16/06/2025  RETRAIT ESPECES PC N° 3256739 ‘ 13/06/2025 7 1500.0001 395573 DB]",
-    "\u0027\\S/ËËÊ;Ê?:)",
-    "[23/06/2025 SAVONNERIE LE VR CPM/230625 24/06/2025\u0022 - 74302000 806427 CR",
+    "'\\S/ËËÊ;Ê?:)",
+    "[23/06/2025 SAVONNERIE LE VR CPM/230625 24/06/2025\" - 74302000 806427 CR",
     "لما 8172065",
     "23/06/2025 ا  COMM VIRT RECU __ ا VR CPM/230625 1 17/06/2025 ا متا ساون 3.000,— FRPR00S T 903.427 _ CR ",
     "l 23/06/2025 TVAICOMMVIRTRECU VR CPM/230625 17/06/2025 7 050 - 902.857 CR",
@@ -2873,7 +2873,7 @@
     "ESPECES PC N° 20/06/2025 DB",
     "19998626 T 125/06/2025 T 7510000 24.968 CR",
     "[24/06/2025 ENCCHON° 7861805 7861605 - 1 25/06/2025 T 4 1964000 2008.968 CR",
-    "27/06/2025 \u0027 RETRAIT ESPECES PC N° 3256607 25/06/2025 2500.000~\u0022 1E E B 491.032 DB",
+    "27/06/2025 ' RETRAIT ESPECES PC N° 3256607 25/06/2025 2500.000~\" 1E E B 491.032 DB",
     "de 03/07/2025 10:12",
     "Extralt compte Edité le",
     "Puge 2 sur 2",
@@ -2895,14 +2895,14 @@
     "- 3256607 — ‘ L",
     "500.000 8.968 CR|",
     "30/06/2025 VIR ORD AROUA AMEN ALLAH VR CPM/300625 01/07/2025 7.",
-    "FOURNIPROB\u0022  r",
+    "FOURNIPROB\"  r",
     "e e . 0570— ور d 8398 CR",
     "30/06/2025 _ TVA/COMM VIRT RECU _— es VR CPM/300625 23/06/2025",
-    "23/06/2025 3000~ اتا \u0026 5398 CR",
+    "23/06/2025 3000~ اتا & 5398 CR",
     "30/06/2025 COMM VIRT RECU — - VR CPM/300625 ",
     ")25 =i - 362.979 DB,",
     "- T 368.377",
-    "\u002201/07/2025 PRL COMP N° 2083 2083",
+    "\"01/07/2025 PRL COMP N° 2083 2083",
     "اليا اسح ! SP - 364.979 e DB",
     "لقان  دسا 72083 - S 24/06/2025 2.0002",
     "01/07/2025 COMM PREL",
@@ -2912,7 +2912,7 @@
     "Encours chèques :",
     "Solde 03/07/2025 365.359 DB",
     "au:",
-    "Nos écritures s\u0027entendent sauf erreur ou omission.",
+    "Nos écritures s'entendent sauf erreur ou omission.",
     "ص - Extrait compte",
     "de Edité le. 31/07/2025 09-05",
     "È% سيم 2",
@@ -2938,7 +2938,7 @@
     "[03/07/2025  TVAICOMM REMISE CHQ - 277127",
     "2770612025 E 366,400 DB",
     "07072025 ENCCHON°275 -- 1275 08/07/2025 S 200.000 166.400 DB",
-    "COM OP PASSAGERES 011070725284 1 01/07/2025 ” 25.000 \u0026 191.400 DB",
+    "COM OP PASSAGERES 011070725284 1 01/07/2025 ” 25.000 & 191.400 DB",
     "07/07/2025",
     "07/07/2025  TVAICOM 01/07/2025 750 0 196.150 DB",
     "OP PASSAGERES [011070725284 4",
@@ -2954,7 +2954,7 @@
     " 07/07/2025 AGIOS AU 30/06/25 905 10107025 71912 1766471 DB",
     "10/07/2025 RECUPERATION FRAIS PDL 01/06/25 09/07/2025  0750 1767.221 DB",
     "ENVOI RELEVE حص",
-    "10/07/2025 __ \u0027 TVA/RECUPERATION FRAIS دمي PDL 01/06/25 ل الل 09/07/2025 æ 0.143 [ ا 1767.364 DB",
+    "10/07/2025 __ ' TVA/RECUPERATION FRAIS دمي PDL 01/06/25 ل الل 09/07/2025 æ 0.143 [ ا 1767.364 DB",
     "ENVOIRELEVE ",
     " p °N",
     "(S, 11/07/2025 COMM REMISE CHQ __ 8 1287802 [07/07/2025 0.875 1768.239 DB",
@@ -2963,7 +2963,7 @@
     "1287802",
     " 0810772025 0.875 1769.280 DB|",
     "14/07/2025 COMM REMISE CHQ 01353734",
-    "14/07/2025  TVA/ICOMM REMISE CHQ - 01353734  0870772025 0.166 \u0022\u003E - 1769.446 DB",
+    "14/07/2025  TVA/ICOMM REMISE CHQ - 01353734  0870772025 0.166 \"> - 1769.446 DB",
     "",
     "15/07/2025 8225 - - 89600 1079846",
     " ENC CHQ N° 4003100 ا 4003100 7 7 DB",
@@ -2975,9 +2975,9 @@
     "%ZOQI\\%:/??REMISE 31277425",
     "[16/07/2025 CHQ N 10/07/2025 0.875 u 917.115 DB",
     "16/07/2025 TVA/COMM REMISE CHQ 11277425 10/07/2025 0.166  917.281 DB",
-    "17/07/2025 ENC CHQ N° 30165 30165 18/07/2025 د\u0022 5 846.434 4929.153 CR",
+    "17/07/2025 ENC CHQ N° 30165 30165 18/07/2025 د\" 5 846.434 4929.153 CR",
     "[",
-    "18/07/2025  VIR ORD JS COLD SYSTE \u0022 VR CPM/180725 o 772.400 5701.553 CR ",
+    "18/07/2025  VIR ORD JS COLD SYSTE \" VR CPM/180725 o 772.400 5701.553 CR ",
     "21/07/2025 ",
     "“18/07/2025  COMM VIRT RECU —VR CPM/180725 14/07/2025  3.000 B 5698.553 ©",
     " TVAICOMM  14/07/2025  “ 0570 TT 5697.983 CR|",
@@ -2985,7 +2985,7 @@
     "22/07/2025 PRL COMP N° 31019 — 81019  21/07/2025 174668 ” 5523315",
     "CR",
     "22/07/2025 COMM 1670772025",
-    "PREL 181019\u0022 - - 2000 T 5521315 CR",
+    "PREL 181019\" - - 2000 T 5521315 CR",
     "(2200772025  }31019  5520.935",
     "16/07/2025  — 0380 CR",
     "11277427 22/07/2025 1.750 5519.185 CR",
@@ -3013,7 +3013,7 @@
     "ESPECES PC N° 3319033",
     "Encours cheques : Total des mouvements 9 865.130 13 803.542",
     "Solde au: 31/07/2025 3 943.810 CR",
-    "Nos écritures s\u0027entendent sauf erreur ou omission."
+    "Nos écritures s'entendent sauf erreur ou omission."
   ],
   "Words": [
     {
@@ -3761,7 +3761,7 @@
       "Bottom": 848
     },
     {
-      "Text": "\u0027CHQ",
+      "Text": "'CHQ",
       "Confidence": 51.50574,
       "Left": 190,
       "Top": 815,
@@ -4089,7 +4089,7 @@
       "Bottom": 972
     },
     {
-      "Text": "\u0027ENC",
+      "Text": "'ENC",
       "Confidence": 68.505646,
       "Left": 188,
       "Top": 949,
@@ -6617,7 +6617,7 @@
       "Bottom": 1906
     },
     {
-      "Text": "fmﬁ/\u0027zi)z*sJ‘",
+      "Text": "fmﬁ/'zi)z*sJ‘",
       "Confidence": 37.362858,
       "Left": 815,
       "Top": 1871,
@@ -7329,7 +7329,7 @@
       "Bottom": 2206
     },
     {
-      "Text": "\u0022ENC",
+      "Text": "\"ENC",
       "Confidence": 64.63701,
       "Left": 184,
       "Top": 2188,
@@ -7449,7 +7449,7 @@
       "Bottom": 2254
     },
     {
-      "Text": "\u0022\u002228/01”/’2025”‘;“",
+      "Text": "\"\"28/01”/’2025”‘;“",
       "Confidence": 37.286182,
       "Left": 824,
       "Top": 2232,
@@ -7801,7 +7801,7 @@
       "Bottom": 3221
     },
     {
-      "Text": "\u0022م\u0022",
+      "Text": "\"م\"",
       "Confidence": 57.608185,
       "Left": 585,
       "Top": 3179,
@@ -7961,7 +7961,7 @@
       "Bottom": 3267
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 36.270393,
       "Left": 584,
       "Top": 3257,
@@ -7993,7 +7993,7 @@
       "Bottom": 3309
     },
     {
-      "Text": ":\u002709",
+      "Text": ":'09",
       "Confidence": 51.46466,
       "Left": 286,
       "Top": 3284,
@@ -9409,7 +9409,7 @@
       "Bottom": 4012
     },
     {
-      "Text": "\\\u003E",
+      "Text": "\\>",
       "Confidence": 0,
       "Left": 774,
       "Top": 3985,
@@ -10577,7 +10577,7 @@
       "Bottom": 4760
     },
     {
-      "Text": "s\u0027entendent",
+      "Text": "s'entendent",
       "Confidence": 91.33861,
       "Left": 359,
       "Top": 4738,
@@ -10881,7 +10881,7 @@
       "Bottom": 5757
     },
     {
-      "Text": "\u0022,",
+      "Text": "\",",
       "Confidence": 29.85051,
       "Left": 981,
       "Top": 5768,
@@ -11041,7 +11041,7 @@
       "Bottom": 5892
     },
     {
-      "Text": "\u003E",
+      "Text": ">",
       "Confidence": 0,
       "Left": 824,
       "Top": 5895,
@@ -12657,7 +12657,7 @@
       "Bottom": 6609
     },
     {
-      "Text": "fg\u0026e%ﬂﬁ‘b\\\\_\\\u0026emoo%",
+      "Text": "fg&e%ﬂﬁ‘b\\\\_\\&emoo%",
       "Confidence": 38.085007,
       "Left": 863,
       "Top": 6565,
@@ -12753,7 +12753,7 @@
       "Bottom": 6661
     },
     {
-      "Text": "mou…\u0026c",
+      "Text": "mou…&c",
       "Confidence": 57.82335,
       "Left": 884,
       "Top": 6628,
@@ -12889,7 +12889,7 @@
       "Bottom": 6962
     },
     {
-      "Text": "s\u0027entendent",
+      "Text": "s'entendent",
       "Confidence": 91.92602,
       "Left": 377,
       "Top": 6942,
@@ -12961,7 +12961,7 @@
       "Bottom": 7555
     },
     {
-      "Text": "sC\u0022",
+      "Text": "sC\"",
       "Confidence": 35.397385,
       "Left": 1304,
       "Top": 7487,
@@ -13377,7 +13377,7 @@
       "Bottom": 8191
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 34.36969,
       "Left": 57,
       "Top": 8203,
@@ -14377,7 +14377,7 @@
       "Bottom": 8672
     },
     {
-      "Text": "\u0027",
+      "Text": "'",
       "Confidence": 88.92613,
       "Left": 197,
       "Top": 8650,
@@ -14561,7 +14561,7 @@
       "Bottom": 8756
     },
     {
-      "Text": "\u0027",
+      "Text": "'",
       "Confidence": 41.460995,
       "Left": 197,
       "Top": 8732,
@@ -14697,7 +14697,7 @@
       "Bottom": 8783
     },
     {
-      "Text": "14/02/2025\u0022",
+      "Text": "14/02/2025\"",
       "Confidence": 10.545792,
       "Left": 868,
       "Top": 8779,
@@ -14785,7 +14785,7 @@
       "Bottom": 8842
     },
     {
-      "Text": "\u0027",
+      "Text": "'",
       "Confidence": 39.89273,
       "Left": 850,
       "Top": 8819,
@@ -15465,7 +15465,7 @@
       "Bottom": 9185
     },
     {
-      "Text": "\u0027PRL",
+      "Text": "'PRL",
       "Confidence": 43.519703,
       "Left": 193,
       "Top": 9161,
@@ -15905,7 +15905,7 @@
       "Bottom": 9409
     },
     {
-      "Text": "\u00221",
+      "Text": "\"1",
       "Confidence": 40.888935,
       "Left": 832,
       "Top": 9387,
@@ -16553,7 +16553,7 @@
       "Bottom": 9711
     },
     {
-      "Text": "\u0022TVAICOMM",
+      "Text": "\"TVAICOMM",
       "Confidence": 54.11355,
       "Left": 189,
       "Top": 9689,
@@ -17233,7 +17233,7 @@
       "Bottom": 11039
     },
     {
-      "Text": "\u0027",
+      "Text": "'",
       "Confidence": 51.58833,
       "Left": 215,
       "Top": 11015,
@@ -17489,7 +17489,7 @@
       "Bottom": 11457
     },
     {
-      "Text": "s\u0027entendent",
+      "Text": "s'entendent",
       "Confidence": 88.39153,
       "Left": 313,
       "Top": 11436,
@@ -17969,7 +17969,7 @@
       "Bottom": 13083
     },
     {
-      "Text": "\u0022ا",
+      "Text": "\"ا",
       "Confidence": 38.75901,
       "Left": 413,
       "Top": 13067,
@@ -18193,7 +18193,7 @@
       "Bottom": 13208
     },
     {
-      "Text": "D,\u0027u",
+      "Text": "D,'u",
       "Confidence": 58.87436,
       "Left": 216,
       "Top": 13168,
@@ -18257,7 +18257,7 @@
       "Bottom": 13213
     },
     {
-      "Text": "d\u0027opération",
+      "Text": "d'opération",
       "Confidence": 91.11351,
       "Left": 175,
       "Top": 13200,
@@ -19377,7 +19377,7 @@
       "Bottom": 14072
     },
     {
-      "Text": "Suite\u003E\u003E",
+      "Text": "Suite>>",
       "Confidence": 91.6305,
       "Left": 1606,
       "Top": 14099,
@@ -20089,7 +20089,7 @@
       "Bottom": 15389
     },
     {
-      "Text": "d\u0027o:))é:\u0027a\u0022ﬁon",
+      "Text": "d'o:))é:'a\"ﬁon",
       "Confidence": 57.94216,
       "Left": 182,
       "Top": 15343,
@@ -22633,7 +22633,7 @@
       "Bottom": 17201
     },
     {
-      "Text": "d\u0027indemnisation",
+      "Text": "d'indemnisation",
       "Confidence": 88.895035,
       "Left": 1097,
       "Top": 17164,
@@ -22897,7 +22897,7 @@
       "Bottom": 17263
     },
     {
-      "Text": "d\u0027une",
+      "Text": "d'une",
       "Confidence": 78.96992,
       "Left": 503,
       "Top": 17226,
@@ -23065,7 +23065,7 @@
       "Bottom": 17245
     },
     {
-      "Text": "l\u0027article",
+      "Text": "l'article",
       "Confidence": 72.73411,
       "Left": 1454,
       "Top": 17226,
@@ -23609,7 +23609,7 @@
       "Bottom": 17359
     },
     {
-      "Text": "\u002B216",
+      "Text": "+216",
       "Confidence": 95.786865,
       "Left": 1114,
       "Top": 17352,
@@ -23665,7 +23665,7 @@
       "Bottom": 17363
     },
     {
-      "Text": "\u002B216",
+      "Text": "+216",
       "Confidence": 95.81612,
       "Left": 1326,
       "Top": 17350,
@@ -24969,7 +24969,7 @@
       "Bottom": 18751
     },
     {
-      "Text": "\u0022FOURNI",
+      "Text": "\"FOURNI",
       "Confidence": 90.725,
       "Left": 276,
       "Top": 18728,
@@ -24977,7 +24977,7 @@
       "Bottom": 18744
     },
     {
-      "Text": "PROD\u0022",
+      "Text": "PROD\"",
       "Confidence": 91.680016,
       "Left": 371,
       "Top": 18727,
@@ -25745,7 +25745,7 @@
       "Bottom": 19029
     },
     {
-      "Text": "\u003E",
+      "Text": ">",
       "Confidence": 70.479355,
       "Left": 1250,
       "Top": 19002,
@@ -25777,7 +25777,7 @@
       "Bottom": 19064
     },
     {
-      "Text": "Îﬁ/dA/zosz\u0027Aelos",
+      "Text": "Îﬁ/dA/zosz'Aelos",
       "Confidence": 39.92479,
       "Left": 148,
       "Top": 19046,
@@ -27033,7 +27033,7 @@
       "Bottom": 19434
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 23.642654,
       "Left": 1409,
       "Top": 19432,
@@ -27697,7 +27697,7 @@
       "Bottom": 19750
     },
     {
-      "Text": "\u00222009",
+      "Text": "\"2009",
       "Confidence": 55.92436,
       "Left": 412,
       "Top": 19718,
@@ -28297,7 +28297,7 @@
       "Bottom": 19982
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 29.588287,
       "Left": 614,
       "Top": 19961,
@@ -28409,7 +28409,7 @@
       "Bottom": 20019
     },
     {
-      "Text": "10104\u0022",
+      "Text": "10104\"",
       "Confidence": 54.998894,
       "Left": 627,
       "Top": 19998,
@@ -29137,7 +29137,7 @@
       "Bottom": 21254
     },
     {
-      "Text": "[\u0022FOURNI",
+      "Text": "[\"FOURNI",
       "Confidence": 43.780693,
       "Left": 272,
       "Top": 21290,
@@ -29145,7 +29145,7 @@
       "Bottom": 21308
     },
     {
-      "Text": "PROD\u0022",
+      "Text": "PROD\"",
       "Confidence": 86.547775,
       "Left": 374,
       "Top": 21290,
@@ -30649,7 +30649,7 @@
       "Bottom": 22086
     },
     {
-      "Text": "s\u0027entendent",
+      "Text": "s'entendent",
       "Confidence": 91.0961,
       "Left": 370,
       "Top": 22064,
@@ -32113,7 +32113,7 @@
       "Bottom": 23571
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 32.300636,
       "Left": 158,
       "Top": 23607,
@@ -32217,7 +32217,7 @@
       "Bottom": 23604
     },
     {
-      "Text": "\u003E",
+      "Text": ">",
       "Confidence": 52.821877,
       "Left": 1141,
       "Top": 23603,
@@ -32985,7 +32985,7 @@
       "Bottom": 23890
     },
     {
-      "Text": "Êz\u0027osræïgäemlse",
+      "Text": "Êz'osræïgäemlse",
       "Confidence": 47.65146,
       "Left": 284,
       "Top": 23867,
@@ -37265,7 +37265,7 @@
       "Bottom": 26456
     },
     {
-      "Text": "1/06/20\u00272\u00275wa",
+      "Text": "1/06/20'2'5wa",
       "Confidence": 59.327606,
       "Left": 181,
       "Top": 26435,
@@ -37689,7 +37689,7 @@
       "Bottom": 26560
     },
     {
-      "Text": "=\u0022",
+      "Text": "=\"",
       "Confidence": 58.53672,
       "Left": 1252,
       "Top": 26534,
@@ -38177,7 +38177,7 @@
       "Bottom": 26783
     },
     {
-      "Text": "\u0027RETRAIT",
+      "Text": "'RETRAIT",
       "Confidence": 83.988045,
       "Left": 283,
       "Top": 26758,
@@ -39217,7 +39217,7 @@
       "Bottom": 27195
     },
     {
-      "Text": "‘ENSCS\u0027%}:d",
+      "Text": "‘ENSCS'%}:d",
       "Confidence": 50.876465,
       "Left": 282,
       "Top": 27145,
@@ -39921,7 +39921,7 @@
       "Bottom": 28446
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 17.238068,
       "Left": 1441,
       "Top": 28434,
@@ -40129,7 +40129,7 @@
       "Bottom": 28502
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 38.132812,
       "Left": 174,
       "Top": 28538,
@@ -40137,7 +40137,7 @@
       "Bottom": 28539
     },
     {
-      "Text": "I\u0022FOURNIPROD\u0022",
+      "Text": "I\"FOURNIPROD\"",
       "Confidence": 50.65319,
       "Left": 291,
       "Top": 28517,
@@ -40353,7 +40353,7 @@
       "Bottom": 28594
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 10.630829,
       "Left": 625,
       "Top": 28573,
@@ -40385,7 +40385,7 @@
       "Bottom": 28601
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 48.18895,
       "Left": 1039,
       "Top": 28571,
@@ -41049,7 +41049,7 @@
       "Bottom": 28850
     },
     {
-      "Text": "\u0027COM",
+      "Text": "'COM",
       "Confidence": 56.837997,
       "Left": 291,
       "Top": 28829,
@@ -41665,7 +41665,7 @@
       "Bottom": 29082
     },
     {
-      "Text": "\u0027",
+      "Text": "'",
       "Confidence": 53.99904,
       "Left": 296,
       "Top": 29062,
@@ -42033,7 +42033,7 @@
       "Bottom": 29485
     },
     {
-      "Text": "s\u0027entendent",
+      "Text": "s'entendent",
       "Confidence": 83.85294,
       "Left": 382,
       "Top": 29465,
@@ -43897,7 +43897,7 @@
       "Bottom": 31145
     },
     {
-      "Text": "_io\u002716540803663",
+      "Text": "_io'16540803663",
       "Confidence": 37.950302,
       "Left": 615,
       "Top": 31143,
@@ -44505,7 +44505,7 @@
       "Bottom": 31419
     },
     {
-      "Text": "CHQ\u0027",
+      "Text": "CHQ'",
       "Confidence": 67.56472,
       "Left": 439,
       "Top": 31399,
@@ -44697,7 +44697,7 @@
       "Bottom": 31471
     },
     {
-      "Text": "\u003C",
+      "Text": "<",
       "Confidence": 67.88278,
       "Left": 1147,
       "Top": 31480,
@@ -44729,7 +44729,7 @@
       "Bottom": 31488
     },
     {
-      "Text": "\u0022آم",
+      "Text": "\"آم",
       "Confidence": 25.808723,
       "Left": 376,
       "Top": 31504,
@@ -44921,7 +44921,7 @@
       "Bottom": 31623
     },
     {
-      "Text": "\u0027\\S/ËËÊ;Ê?:)",
+      "Text": "'\\S/ËËÊ;Ê?:)",
       "Confidence": 51.23535,
       "Left": 272,
       "Top": 31572,
@@ -44961,7 +44961,7 @@
       "Bottom": 31613
     },
     {
-      "Text": "24/06/2025\u0022",
+      "Text": "24/06/2025\"",
       "Confidence": 16.733788,
       "Left": 860,
       "Top": 31591,
@@ -46017,7 +46017,7 @@
       "Bottom": 32038
     },
     {
-      "Text": "\u0027",
+      "Text": "'",
       "Confidence": 26.848465,
       "Left": 276,
       "Top": 32014,
@@ -46073,7 +46073,7 @@
       "Bottom": 32037
     },
     {
-      "Text": "2500.000~\u0022",
+      "Text": "2500.000~\"",
       "Confidence": 0,
       "Left": 1017,
       "Top": 32017,
@@ -46225,7 +46225,7 @@
       "Bottom": 33867
     },
     {
-      "Text": "s\u0027entendent",
+      "Text": "s'entendent",
       "Confidence": 90.37007,
       "Left": 400,
       "Top": 33846,
@@ -46841,7 +46841,7 @@
       "Bottom": 33339
     },
     {
-      "Text": "FOURNIPROB\u0022",
+      "Text": "FOURNIPROB\"",
       "Confidence": 0,
       "Left": 310,
       "Top": 33314,
@@ -47097,7 +47097,7 @@
       "Bottom": 33359
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 40.98121,
       "Left": 1364,
       "Top": 33356,
@@ -47121,7 +47121,7 @@
       "Bottom": 33373
     },
     {
-      "Text": "\u002201/07/2025",
+      "Text": "\"01/07/2025",
       "Confidence": 11.071976,
       "Left": 184,
       "Top": 33409,
@@ -48745,7 +48745,7 @@
       "Bottom": 35301
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 69.763336,
       "Left": 1306,
       "Top": 35281,
@@ -49601,7 +49601,7 @@
       "Bottom": 35657
     },
     {
-      "Text": "\u0027",
+      "Text": "'",
       "Confidence": 53.81813,
       "Left": 285,
       "Top": 35632,
@@ -50121,7 +50121,7 @@
       "Bottom": 35814
     },
     {
-      "Text": "\u0022\u003E",
+      "Text": "\">",
       "Confidence": 32.03562,
       "Left": 1239,
       "Top": 35793,
@@ -50841,7 +50841,7 @@
       "Bottom": 36095
     },
     {
-      "Text": "د\u0022",
+      "Text": "د\"",
       "Confidence": 57.21996,
       "Left": 1077,
       "Top": 36074,
@@ -50937,7 +50937,7 @@
       "Bottom": 36131
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 22.230392,
       "Left": 615,
       "Top": 36111,
@@ -51369,7 +51369,7 @@
       "Bottom": 36277
     },
     {
-      "Text": "181019\u0022",
+      "Text": "181019\"",
       "Confidence": 0,
       "Left": 595,
       "Top": 36257,
@@ -52753,7 +52753,7 @@
       "Bottom": 38186
     },
     {
-      "Text": "s\u0027entendent",
+      "Text": "s'entendent",
       "Confidence": 91.341324,
       "Left": 378,
       "Top": 38166,
@@ -53701,7 +53701,7 @@
       ]
     },
     {
-      "LineText": "\u0027CHQ 7",
+      "LineText": "'CHQ 7",
       "Words": [
         {
           "Text": "7",
@@ -53712,7 +53712,7 @@
           "Bottom": 862
         },
         {
-          "Text": "\u0027CHQ",
+          "Text": "'CHQ",
           "Confidence": 51.50574,
           "Left": 190,
           "Top": 815,
@@ -54069,7 +54069,7 @@
       ]
     },
     {
-      "LineText": "27/01/2025 \u0027ENC CHQON° 4000718 — \\4000718 او  08/01/2025",
+      "LineText": "27/01/2025 'ENC CHQON° 4000718 — \\4000718 او  08/01/2025",
       "Words": [
         {
           "Text": "27/01/2025",
@@ -54080,7 +54080,7 @@
           "Bottom": 972
         },
         {
-          "Text": "\u0027ENC",
+          "Text": "'ENC",
           "Confidence": 68.505646,
           "Left": 188,
           "Top": 949,
@@ -56825,7 +56825,7 @@
       ]
     },
     {
-      "LineText": "ENC — fmﬁ/\u0027zi)z*sJ‘ ",
+      "LineText": "ENC — fmﬁ/'zi)z*sJ‘ ",
       "Words": [
         {
           "Text": "",
@@ -56852,7 +56852,7 @@
           "Bottom": 1901
         },
         {
-          "Text": "fmﬁ/\u0027zi)z*sJ‘",
+          "Text": "fmﬁ/'zi)z*sJ‘",
           "Confidence": 37.362858,
           "Left": 815,
           "Top": 1871,
@@ -57709,7 +57709,7 @@
       ]
     },
     {
-      "LineText": "27/01/2025 \u0022ENC CHQ N° 215 215 28/01/2025",
+      "LineText": "27/01/2025 \"ENC CHQ N° 215 215 28/01/2025",
       "Words": [
         {
           "Text": "27/01/2025",
@@ -57720,7 +57720,7 @@
           "Bottom": 2206
         },
         {
-          "Text": "\u0022ENC",
+          "Text": "\"ENC",
           "Confidence": 64.63701,
           "Left": 184,
           "Top": 2188,
@@ -57799,7 +57799,7 @@
       ]
     },
     {
-      "LineText": "2022 CHQ N° 4000658 — 4000658 \u0022\u002228/01”/’2025”‘;“ 301.000",
+      "LineText": "2022 CHQ N° 4000658 — 4000658 \"\"28/01”/’2025”‘;“ 301.000",
       "Words": [
         {
           "Text": "2022",
@@ -57850,7 +57850,7 @@
           "Bottom": 2254
         },
         {
-          "Text": "\u0022\u002228/01”/’2025”‘;“",
+          "Text": "\"\"28/01”/’2025”‘;“",
           "Confidence": 37.286182,
           "Left": 824,
           "Top": 2232,
@@ -58256,7 +58256,7 @@
       ]
     },
     {
-      "LineText": "Compte N° o : \u0022م\u0022 :",
+      "LineText": "Compte N° o : \"م\" :",
       "Words": [
         {
           "Text": ":",
@@ -58291,7 +58291,7 @@
           "Bottom": 3195
         },
         {
-          "Text": "\u0022م\u0022",
+          "Text": "\"م\"",
           "Confidence": 57.608185,
           "Left": 585,
           "Top": 3179,
@@ -58428,7 +58428,7 @@
       ]
     },
     {
-      "LineText": "1 22 \u0022",
+      "LineText": "1 22 \"",
       "Words": [
         {
           "Text": "22",
@@ -58439,7 +58439,7 @@
           "Bottom": 3267
         },
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 36.270393,
           "Left": 584,
           "Top": 3257,
@@ -58502,10 +58502,10 @@
       ]
     },
     {
-      "LineText": "Adresse :\u002709 DE FRANCE",
+      "LineText": "Adresse :'09 DE FRANCE",
       "Words": [
         {
-          "Text": ":\u002709",
+          "Text": ":'09",
           "Confidence": 51.46466,
           "Left": 286,
           "Top": 3284,
@@ -60034,10 +60034,10 @@
       ]
     },
     {
-      "LineText": " TEZN \\\u003E 15/0112025 0.875 939.362 CR",
+      "LineText": " TEZN \\> 15/0112025 0.875 939.362 CR",
       "Words": [
         {
-          "Text": "\\\u003E",
+          "Text": "\\>",
           "Confidence": 0,
           "Left": 774,
           "Top": 3985,
@@ -61404,7 +61404,7 @@
       ]
     },
     {
-      "LineText": "Nos écritures s\u0027entendent sauf erreur ou omission.",
+      "LineText": "Nos écritures s'entendent sauf erreur ou omission.",
       "Words": [
         {
           "Text": "omission.",
@@ -61423,7 +61423,7 @@
           "Bottom": 4758
         },
         {
-          "Text": "s\u0027entendent",
+          "Text": "s'entendent",
           "Confidence": 91.33861,
           "Left": 359,
           "Top": 4738,
@@ -61790,7 +61790,7 @@
       ]
     },
     {
-      "LineText": "00 \u0022,",
+      "LineText": "00 \",",
       "Words": [
         {
           "Text": "00",
@@ -61801,7 +61801,7 @@
           "Bottom": 5814
         },
         {
-          "Text": "\u0022,",
+          "Text": "\",",
           "Confidence": 29.85051,
           "Left": 981,
           "Top": 5768,
@@ -61982,10 +61982,10 @@
       ]
     },
     {
-      "LineText": "\u003E 1170.062 CR",
+      "LineText": "> 1170.062 CR",
       "Words": [
         {
-          "Text": "\u003E",
+          "Text": ">",
           "Confidence": 0,
           "Left": 824,
           "Top": 5895,
@@ -63673,10 +63673,10 @@
       ]
     },
     {
-      "LineText": "13/01/2025 ?522?5 ESPECES PC N° ’03129344 fg\u0026e%ﬂﬁ‘b\\\\_\\\u0026emoo% ١ 555.858 CR|",
+      "LineText": "13/01/2025 ?522?5 ESPECES PC N° ’03129344 fg&e%ﬂﬁ‘b\\\\_\\&emoo% ١ 555.858 CR|",
       "Words": [
         {
-          "Text": "fg\u0026e%ﬂﬁ‘b\\\\_\\\u0026emoo%",
+          "Text": "fg&e%ﬂﬁ‘b\\\\_\\&emoo%",
           "Confidence": 38.085007,
           "Left": 863,
           "Top": 6565,
@@ -63821,7 +63821,7 @@
       ]
     },
     {
-      "LineText": "Encours chèques : 0.000 les mou…\u0026c 12 118.284 11 504.080",
+      "LineText": "Encours chèques : 0.000 les mou…&c 12 118.284 11 504.080",
       "Words": [
         {
           "Text": "0.000",
@@ -63840,7 +63840,7 @@
           "Bottom": 6661
         },
         {
-          "Text": "mou…\u0026c",
+          "Text": "mou…&c",
           "Confidence": 57.82335,
           "Left": 884,
           "Top": 6628,
@@ -64011,7 +64011,7 @@
       ]
     },
     {
-      "LineText": "Nos écritures s\u0027entendent sauf erreur ou omission.",
+      "LineText": "Nos écritures s'entendent sauf erreur ou omission.",
       "Words": [
         {
           "Text": "Nos",
@@ -64030,7 +64030,7 @@
           "Bottom": 6962
         },
         {
-          "Text": "s\u0027entendent",
+          "Text": "s'entendent",
           "Confidence": 91.92602,
           "Left": 377,
           "Top": 6942,
@@ -64093,7 +64093,7 @@
       ]
     },
     {
-      "LineText": "Extrait de sC\u0022",
+      "LineText": "Extrait de sC\"",
       "Words": [
         {
           "Text": "Extrait",
@@ -64112,7 +64112,7 @@
           "Bottom": 7539
         },
         {
-          "Text": "sC\u0022",
+          "Text": "sC\"",
           "Confidence": 35.397385,
           "Left": 1304,
           "Top": 7487,
@@ -64580,10 +64580,10 @@
       ]
     },
     {
-      "LineText": "\u0022 03/02/2025 COMM ANNIVERSAIRE - VCENA\\045107 03/02/2025 ‘ 65.000 — 1 869.365",
+      "LineText": "\" 03/02/2025 COMM ANNIVERSAIRE - VCENA\\045107 03/02/2025 ‘ 65.000 — 1 869.365",
       "Words": [
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 34.36969,
           "Left": 57,
           "Top": 8203,
@@ -65692,10 +65692,10 @@
       ]
     },
     {
-      "LineText": "19/02/2025 \u0027 TVA/COMM REMISE CHQ 1274130 13/02/2025 0.166",
+      "LineText": "19/02/2025 ' TVA/COMM REMISE CHQ 1274130 13/02/2025 0.166",
       "Words": [
         {
-          "Text": "\u0027",
+          "Text": "'",
           "Confidence": 88.92613,
           "Left": 197,
           "Top": 8650,
@@ -65896,10 +65896,10 @@
       ]
     },
     {
-      "LineText": "20/02/2025 \u0027 COMM REMISE CHQ Ë 11271131 14/02/2025",
+      "LineText": "20/02/2025 ' COMM REMISE CHQ Ë 11271131 14/02/2025",
       "Words": [
         {
-          "Text": "\u0027",
+          "Text": "'",
           "Confidence": 41.460995,
           "Left": 197,
           "Top": 8732,
@@ -65994,7 +65994,7 @@
       ]
     },
     {
-      "LineText": "20/02/2025 TVAICOMM REMISE CHO 1271131 - 1 14/02/2025\u0022 “0.166 e",
+      "LineText": "20/02/2025 TVAICOMM REMISE CHO 1271131 - 1 14/02/2025\" “0.166 e",
       "Words": [
         {
           "Text": "REMISE",
@@ -66045,7 +66045,7 @@
           "Bottom": 8798
         },
         {
-          "Text": "14/02/2025\u0022",
+          "Text": "14/02/2025\"",
           "Confidence": 10.545792,
           "Left": 868,
           "Top": 8779,
@@ -66100,7 +66100,7 @@
       ]
     },
     {
-      "LineText": "20/02/2025 COM OP PASSAGERES — 1011200225170 \u0027 14/02/2025 25.000;",
+      "LineText": "20/02/2025 COM OP PASSAGERES — 1011200225170 ' 14/02/2025 25.000;",
       "Words": [
         {
           "Text": "—",
@@ -66119,7 +66119,7 @@
           "Bottom": 8842
         },
         {
-          "Text": "\u0027",
+          "Text": "'",
           "Confidence": 39.89273,
           "Left": 850,
           "Top": 8819,
@@ -66905,10 +66905,10 @@
       ]
     },
     {
-      "LineText": "21/02/2025 \u0027PRL COMP N° 8138 20/02/2025",
+      "LineText": "21/02/2025 'PRL COMP N° 8138 20/02/2025",
       "Words": [
         {
-          "Text": "\u0027PRL",
+          "Text": "'PRL",
           "Confidence": 43.519703,
           "Left": 193,
           "Top": 9161,
@@ -67373,7 +67373,7 @@
       ]
     },
     {
-      "LineText": "28/02/2025 TVA/COM OP PASSAGERES 011280225701 \u00221 24/02/2025 - 4750",
+      "LineText": "28/02/2025 TVA/COM OP PASSAGERES 011280225701 \"1 24/02/2025 - 4750",
       "Words": [
         {
           "Text": "TVA/COM",
@@ -67400,7 +67400,7 @@
           "Bottom": 9405
         },
         {
-          "Text": "\u00221",
+          "Text": "\"1",
           "Confidence": 40.888935,
           "Left": 832,
           "Top": 9387,
@@ -68128,10 +68128,10 @@
       ]
     },
     {
-      "LineText": "04/03/2925 \u0022TVAICOMM REMISE CHQ 1312683 26/02/2025",
+      "LineText": "04/03/2925 \"TVAICOMM REMISE CHQ 1312683 26/02/2025",
       "Words": [
         {
-          "Text": "\u0022TVAICOMM",
+          "Text": "\"TVAICOMM",
           "Confidence": 54.11355,
           "Left": 189,
           "Top": 9689,
@@ -68898,10 +68898,10 @@
       ]
     },
     {
-      "LineText": "04/03/2025 \u0027 TVAICOMM ENC EFF — 0224695 ‘ 26/02/2025 E 0.950",
+      "LineText": "04/03/2025 ' TVAICOMM ENC EFF — 0224695 ‘ 26/02/2025 E 0.950",
       "Words": [
         {
-          "Text": "\u0027",
+          "Text": "'",
           "Confidence": 51.58833,
           "Left": 215,
           "Top": 11015,
@@ -69176,7 +69176,7 @@
       ]
     },
     {
-      "LineText": "Nos écritures s\u0027entendent sauf erreur ou omission.",
+      "LineText": "Nos écritures s'entendent sauf erreur ou omission.",
       "Words": [
         {
           "Text": "Nos",
@@ -69195,7 +69195,7 @@
           "Bottom": 11457
         },
         {
-          "Text": "s\u0027entendent",
+          "Text": "s'entendent",
           "Confidence": 88.39153,
           "Left": 313,
           "Top": 11436,
@@ -69715,7 +69715,7 @@
       ]
     },
     {
-      "LineText": "Cher(e) Client(e), nous avons \u0022ا de vous i ci-d le Relevé détaillé des opérations inscrites à votre livres. Nous",
+      "LineText": "Cher(e) Client(e), nous avons \"ا de vous i ci-d le Relevé détaillé des opérations inscrites à votre livres. Nous",
       "Words": [
         {
           "Text": "Cher(e)",
@@ -69734,7 +69734,7 @@
           "Bottom": 13085
         },
         {
-          "Text": "\u0022ا",
+          "Text": "\"ا",
           "Confidence": 38.75901,
           "Left": 413,
           "Top": 13067,
@@ -69975,10 +69975,10 @@
       ]
     },
     {
-      "LineText": "D,\u0027u",
+      "LineText": "D,'u",
       "Words": [
         {
-          "Text": "D,\u0027u",
+          "Text": "D,'u",
           "Confidence": 58.87436,
           "Left": 216,
           "Top": 13168,
@@ -70057,7 +70057,7 @@
       ]
     },
     {
-      "LineText": "d\u0027opération ,",
+      "LineText": "d'opération ,",
       "Words": [
         {
           "Text": ",",
@@ -70068,7 +70068,7 @@
           "Bottom": 13208
         },
         {
-          "Text": "d\u0027opération",
+          "Text": "d'opération",
           "Confidence": 91.11351,
           "Left": 175,
           "Top": 13200,
@@ -71355,10 +71355,10 @@
       ]
     },
     {
-      "LineText": "Suite\u003E\u003E",
+      "LineText": "Suite>>",
       "Words": [
         {
-          "Text": "Suite\u003E\u003E",
+          "Text": "Suite>>",
           "Confidence": 91.6305,
           "Left": 1606,
           "Top": 14099,
@@ -72109,10 +72109,10 @@
       ]
     },
     {
-      "LineText": "d\u0027o:))é:\u0027a\u0022ﬁon Date de Valeur Débit Crédit",
+      "LineText": "d'o:))é:'a\"ﬁon Date de Valeur Débit Crédit",
       "Words": [
         {
-          "Text": "d\u0027o:))é:\u0027a\u0022ﬁon",
+          "Text": "d'o:))é:'a\"ﬁon",
           "Confidence": 57.94216,
           "Left": 182,
           "Top": 15343,
@@ -74920,7 +74920,7 @@
       ]
     },
     {
-      "LineText": "présent compte est assujetti ما réglementation en vigueur en matière عل fonds عل garantie des dépôts bancaires et au fond d\u0027indemnisation stipulé pour les comptes individuets et conjoints.",
+      "LineText": "présent compte est assujetti ما réglementation en vigueur en matière عل fonds عل garantie des dépôts bancaires et au fond d'indemnisation stipulé pour les comptes individuets et conjoints.",
       "Words": [
         {
           "Text": "présent",
@@ -75083,7 +75083,7 @@
           "Bottom": 17201
         },
         {
-          "Text": "d\u0027indemnisation",
+          "Text": "d'indemnisation",
           "Confidence": 88.895035,
           "Left": 1097,
           "Top": 17164,
@@ -75319,7 +75319,7 @@
       ]
     },
     {
-      "LineText": "Tout débit ponctuel et tout dépassement éventuel d\u0027une cote de facilité عل caisse accordée par ها banque doivent être résorbés dans les meilleurs délais et ce conformément à l\u0027article 672 du Code de",
+      "LineText": "Tout débit ponctuel et tout dépassement éventuel d'une cote de facilité عل caisse accordée par ها banque doivent être résorbés dans les meilleurs délais et ce conformément à l'article 672 du Code de",
       "Words": [
         {
           "Text": "Tout",
@@ -75378,7 +75378,7 @@
           "Bottom": 17263
         },
         {
-          "Text": "d\u0027une",
+          "Text": "d'une",
           "Confidence": 78.96992,
           "Left": 503,
           "Top": 17226,
@@ -75538,7 +75538,7 @@
           "Bottom": 17263
         },
         {
-          "Text": "l\u0027article",
+          "Text": "l'article",
           "Confidence": 72.73411,
           "Left": 1454,
           "Top": 17226,
@@ -75942,7 +75942,7 @@
       ]
     },
     {
-      "LineText": "Médiateur Bancaire Mr. Sadok Adresse Villa 2050 - Tél / \u002B216 71 292 297 Mobile \u002B216 97 40 10 68 Email hattay@chf sadok orgin",
+      "LineText": "Médiateur Bancaire Mr. Sadok Adresse Villa 2050 - Tél / +216 71 292 297 Mobile +216 97 40 10 68 Email hattay@chf sadok orgin",
       "Words": [
         {
           "Text": "Médiateur",
@@ -76113,7 +76113,7 @@
           "Bottom": 17364
         },
         {
-          "Text": "\u002B216",
+          "Text": "+216",
           "Confidence": 95.81612,
           "Left": 1326,
           "Top": 17350,
@@ -76129,7 +76129,7 @@
           "Bottom": 17362
         },
         {
-          "Text": "\u002B216",
+          "Text": "+216",
           "Confidence": 95.786865,
           "Left": 1114,
           "Top": 17352,
@@ -77610,10 +77610,10 @@
       ]
     },
     {
-      "LineText": "\u0022FOURNI PROD\u0022 _ 6R]",
+      "LineText": "\"FOURNI PROD\" _ 6R]",
       "Words": [
         {
-          "Text": "PROD\u0022",
+          "Text": "PROD\"",
           "Confidence": 91.680016,
           "Left": 371,
           "Top": 18727,
@@ -77621,7 +77621,7 @@
           "Bottom": 18744
         },
         {
-          "Text": "\u0022FOURNI",
+          "Text": "\"FOURNI",
           "Confidence": 90.725,
           "Left": 276,
           "Top": 18728,
@@ -78376,7 +78376,7 @@
       ]
     },
     {
-      "LineText": "\u003E أل التق",
+      "LineText": "> أل التق",
       "Words": [
         {
           "Text": "التق",
@@ -78387,7 +78387,7 @@
           "Bottom": 19032
         },
         {
-          "Text": "\u003E",
+          "Text": ">",
           "Confidence": 70.479355,
           "Left": 1250,
           "Top": 19002,
@@ -78474,7 +78474,7 @@
       ]
     },
     {
-      "LineText": "Îﬁ/dA/zosz\u0027Aelos  105.674| [ T 243187 DB",
+      "LineText": "Îﬁ/dA/zosz'Aelos  105.674| [ T 243187 DB",
       "Words": [
         {
           "Text": "243187",
@@ -78525,7 +78525,7 @@
           "Bottom": 19079
         },
         {
-          "Text": "Îﬁ/dA/zosz\u0027Aelos",
+          "Text": "Îﬁ/dA/zosz'Aelos",
           "Confidence": 39.92479,
           "Left": 148,
           "Top": 19046,
@@ -79786,7 +79786,7 @@
       ]
     },
     {
-      "LineText": "أ 0750 — 5 = \u0022 428316 DB|",
+      "LineText": "أ 0750 — 5 = \" 428316 DB|",
       "Words": [
         {
           "Text": "428316",
@@ -79821,7 +79821,7 @@
           "Bottom": 19434
         },
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 23.642654,
           "Left": 1409,
           "Top": 19432,
@@ -80571,7 +80571,7 @@
       ]
     },
     {
-      "LineText": "70472025 206 CHQ \u00222009 20C 16/04/2025 300.000 47.930 CR",
+      "LineText": "70472025 206 CHQ \"2009 20C 16/04/2025 300.000 47.930 CR",
       "Words": [
         {
           "Text": "CR",
@@ -80630,7 +80630,7 @@
           "Bottom": 19734
         },
         {
-          "Text": "\u00222009",
+          "Text": "\"2009",
           "Confidence": 55.92436,
           "Left": 412,
           "Top": 19718,
@@ -81239,7 +81239,7 @@
       ]
     },
     {
-      "LineText": "[18/04/2025 TVAICOMM REMISE CHQ \u0022 [1240348 T 114/04/2025 0.166",
+      "LineText": "[18/04/2025 TVAICOMM REMISE CHQ \" [1240348 T 114/04/2025 0.166",
       "Words": [
         {
           "Text": "[1240348",
@@ -81266,7 +81266,7 @@
           "Bottom": 19980
         },
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 29.588287,
           "Left": 614,
           "Top": 19961,
@@ -81414,7 +81414,7 @@
       ]
     },
     {
-      "LineText": "[21/04/2025 N° 10104 10104\u0022 ا",
+      "LineText": "[21/04/2025 N° 10104 10104\" ا",
       "Words": [
         {
           "Text": "ا",
@@ -81425,7 +81425,7 @@
           "Bottom": 19996
         },
         {
-          "Text": "10104\u0022",
+          "Text": "10104\"",
           "Confidence": 54.998894,
           "Left": 627,
           "Top": 19998,
@@ -82234,7 +82234,7 @@
       ]
     },
     {
-      "LineText": "[\u0022FOURNI PROD\u0022 Ï",
+      "LineText": "[\"FOURNI PROD\" Ï",
       "Words": [
         {
           "Text": "Ï",
@@ -82245,7 +82245,7 @@
           "Bottom": 21297
         },
         {
-          "Text": "[\u0022FOURNI",
+          "Text": "[\"FOURNI",
           "Confidence": 43.780693,
           "Left": 272,
           "Top": 21290,
@@ -82253,7 +82253,7 @@
           "Bottom": 21308
         },
         {
-          "Text": "PROD\u0022",
+          "Text": "PROD\"",
           "Confidence": 86.547775,
           "Left": 374,
           "Top": 21290,
@@ -83866,7 +83866,7 @@
       ]
     },
     {
-      "LineText": "Nos écritures s\u0027entendent sauf erreur ou omission.",
+      "LineText": "Nos écritures s'entendent sauf erreur ou omission.",
       "Words": [
         {
           "Text": "omission.",
@@ -83885,7 +83885,7 @@
           "Bottom": 22083
         },
         {
-          "Text": "s\u0027entendent",
+          "Text": "s'entendent",
           "Confidence": 91.0961,
           "Left": 370,
           "Top": 22064,
@@ -85549,7 +85549,7 @@
       ]
     },
     {
-      "LineText": "\u0022  o  __ 30/04/2025 ليسي 0.875 \u003E ار ل 126.402 وجي CR",
+      "LineText": "\"  o  __ 30/04/2025 ليسي 0.875 > ار ل 126.402 وجي CR",
       "Words": [
         {
           "Text": "",
@@ -85584,7 +85584,7 @@
           "Bottom": 23604
         },
         {
-          "Text": "\u003E",
+          "Text": ">",
           "Confidence": 52.821877,
           "Left": 1141,
           "Top": 23603,
@@ -85632,7 +85632,7 @@
           "Bottom": 23621
         },
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 32.300636,
           "Left": 158,
           "Top": 23607,
@@ -86417,10 +86417,10 @@
       ]
     },
     {
-      "LineText": "Êz\u0027osræïgäemlse",
+      "LineText": "Êz'osræïgäemlse",
       "Words": [
         {
-          "Text": "Êz\u0027osræïgäemlse",
+          "Text": "Êz'osræïgäemlse",
           "Confidence": 47.65146,
           "Left": 284,
           "Top": 23867,
@@ -91095,7 +91095,7 @@
       ]
     },
     {
-      "LineText": "[ 1/06/20\u00272\u00275wa COLD SYSTEM [VR CPM/110625  12/06/2025 — T 884.000 283.079 CR",
+      "LineText": "[ 1/06/20'2'5wa COLD SYSTEM [VR CPM/110625  12/06/2025 — T 884.000 283.079 CR",
       "Words": [
         {
           "Text": "283.079",
@@ -91170,7 +91170,7 @@
           "Bottom": 26456
         },
         {
-          "Text": "1/06/20\u00272\u00275wa",
+          "Text": "1/06/20'2'5wa",
           "Confidence": 59.327606,
           "Left": 181,
           "Top": 26435,
@@ -91464,10 +91464,10 @@
       ]
     },
     {
-      "LineText": "12/06/2025 COMM REMISE CHQ — — 01345367 _ 05/06/2025  0.875 =\u0022 = “278.634 CR",
+      "LineText": "12/06/2025 COMM REMISE CHQ — — 01345367 _ 05/06/2025  0.875 =\" = “278.634 CR",
       "Words": [
         {
-          "Text": "=\u0022",
+          "Text": "=\"",
           "Confidence": 58.53672,
           "Left": 1252,
           "Top": 26534,
@@ -92082,7 +92082,7 @@
       ]
     },
     {
-      "LineText": "\u0027RETRAIT ESPECES PCN° — 3256739  13/06/2025 1500.000 o 395.573 DB",
+      "LineText": "'RETRAIT ESPECES PCN° — 3256739  13/06/2025 1500.000 o 395.573 DB",
       "Words": [
         {
           "Text": "DB",
@@ -92109,7 +92109,7 @@
           "Bottom": 26759
         },
         {
-          "Text": "\u0027RETRAIT",
+          "Text": "'RETRAIT",
           "Confidence": 83.988045,
           "Left": 283,
           "Top": 26758,
@@ -93217,10 +93217,10 @@
       ]
     },
     {
-      "LineText": "‘ENSCS\u0027%}:d 19998626",
+      "LineText": "‘ENSCS'%}:d 19998626",
       "Words": [
         {
-          "Text": "‘ENSCS\u0027%}:d",
+          "Text": "‘ENSCS'%}:d",
           "Confidence": 50.876465,
           "Left": 282,
           "Top": 27145,
@@ -93934,7 +93934,7 @@
       ]
     },
     {
-      "LineText": "[27/06/2025 RETRAIT 566665 660 - 3256607 25/06/2025 2500000 —  \u0022 491.032 DB",
+      "LineText": "[27/06/2025 RETRAIT 566665 660 - 3256607 25/06/2025 2500000 —  \" 491.032 DB",
       "Words": [
         {
           "Text": "[27/06/2025",
@@ -93969,7 +93969,7 @@
           "Bottom": 28453
         },
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 17.238068,
           "Left": 1441,
           "Top": 28434,
@@ -94242,10 +94242,10 @@
       ]
     },
     {
-      "LineText": "I\u0022FOURNIPROD\u0022 e",
+      "LineText": "I\"FOURNIPROD\" e",
       "Words": [
         {
-          "Text": "I\u0022FOURNIPROD\u0022",
+          "Text": "I\"FOURNIPROD\"",
           "Confidence": 50.65319,
           "Left": 291,
           "Top": 28517,
@@ -94263,7 +94263,7 @@
       ]
     },
     {
-      "LineText": "\u0022 VIRT RECU _ VR CPM/300625 fl E el 23/06/2025 S = 0 0.570 ey Es 8398 = CR",
+      "LineText": "\" VIRT RECU _ VR CPM/300625 fl E el 23/06/2025 S = 0 0.570 ey Es 8398 = CR",
       "Words": [
         {
           "Text": "=",
@@ -94362,7 +94362,7 @@
           "Bottom": 28551
         },
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 38.132812,
           "Left": 174,
           "Top": 28538,
@@ -94441,7 +94441,7 @@
       ]
     },
     {
-      "LineText": "30/06/2025  RECU \u0022 VR CPM/300625 23/06/2025 \u0026 3.000 = 5398 CR",
+      "LineText": "30/06/2025  RECU \" VR CPM/300625 23/06/2025 & 3.000 = 5398 CR",
       "Words": [
         {
           "Text": "23/06/2025",
@@ -94468,7 +94468,7 @@
           "Bottom": 28590
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 48.18895,
           "Left": 1039,
           "Top": 28571,
@@ -94492,7 +94492,7 @@
           "Bottom": 28588
         },
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 10.630829,
           "Left": 625,
           "Top": 28573,
@@ -95229,7 +95229,7 @@
       ]
     },
     {
-      "LineText": "07/07/2025 \u0027COM OP PASSAGERES “ 011070725284 01/07/2025 - 25000 =5 7481400 DB",
+      "LineText": "07/07/2025 'COM OP PASSAGERES “ 011070725284 01/07/2025 - 25000 =5 7481400 DB",
       "Words": [
         {
           "Text": "7481400",
@@ -95296,7 +95296,7 @@
           "Bottom": 28850
         },
         {
-          "Text": "\u0027COM",
+          "Text": "'COM",
           "Confidence": 56.837997,
           "Left": 291,
           "Top": 28829,
@@ -95885,7 +95885,7 @@
       ]
     },
     {
-      "LineText": "07/07/2025 \u0027 TVAICOMM PREL — 1378368 01072025 — 0380 — S 1694.559 DB",
+      "LineText": "07/07/2025 ' TVAICOMM PREL — 1378368 01072025 — 0380 — S 1694.559 DB",
       "Words": [
         {
           "Text": "1378368",
@@ -95952,7 +95952,7 @@
           "Bottom": 29082
         },
         {
-          "Text": "\u0027",
+          "Text": "'",
           "Confidence": 53.99904,
           "Left": 296,
           "Top": 29062,
@@ -96265,7 +96265,7 @@
       ]
     },
     {
-      "LineText": "Nos écritures s\u0027entendent sauf erreur ou omission.",
+      "LineText": "Nos écritures s'entendent sauf erreur ou omission.",
       "Words": [
         {
           "Text": "omission.",
@@ -96276,7 +96276,7 @@
           "Bottom": 29484
         },
         {
-          "Text": "s\u0027entendent",
+          "Text": "s'entendent",
           "Confidence": 83.85294,
           "Left": 382,
           "Top": 29465,
@@ -98267,7 +98267,7 @@
       ]
     },
     {
-      "LineText": "{10/06/2025 [COMM REG - 7 _io\u002716540803663 03/06/2025 o",
+      "LineText": "{10/06/2025 [COMM REG - 7 _io'16540803663 03/06/2025 o",
       "Words": [
         {
           "Text": "[COMM",
@@ -98310,7 +98310,7 @@
           "Bottom": 31145
         },
         {
-          "Text": "_io\u002716540803663",
+          "Text": "_io'16540803663",
           "Confidence": 37.950302,
           "Left": 615,
           "Top": 31143,
@@ -98954,7 +98954,7 @@
       ]
     },
     {
-      "LineText": "13/06/2025 COMM REMISE CHQ\u0027 277410 09/06/2025 0875 277.593 CR|",
+      "LineText": "13/06/2025 COMM REMISE CHQ' 277410 09/06/2025 0875 277.593 CR|",
       "Words": [
         {
           "Text": "CR|",
@@ -98981,7 +98981,7 @@
           "Bottom": 31418
         },
         {
-          "Text": "CHQ\u0027",
+          "Text": "CHQ'",
           "Confidence": 67.56472,
           "Left": 439,
           "Top": 31399,
@@ -99214,10 +99214,10 @@
       ]
     },
     {
-      "LineText": "\u003C",
+      "LineText": "<",
       "Words": [
         {
-          "Text": "\u003C",
+          "Text": "<",
           "Confidence": 67.88278,
           "Left": 1147,
           "Top": 31480,
@@ -99227,10 +99227,10 @@
       ]
     },
     {
-      "LineText": "\u0022آم 4003062 — 4003062 - 17/06/2025 ‘ 1104.427 CR",
+      "LineText": "\"آم 4003062 — 4003062 - 17/06/2025 ‘ 1104.427 CR",
       "Words": [
         {
-          "Text": "\u0022آم",
+          "Text": "\"آم",
           "Confidence": 25.808723,
           "Left": 376,
           "Top": 31504,
@@ -99426,10 +99426,10 @@
       ]
     },
     {
-      "LineText": "\u0027\\S/ËËÊ;Ê?:)",
+      "LineText": "'\\S/ËËÊ;Ê?:)",
       "Words": [
         {
-          "Text": "\u0027\\S/ËËÊ;Ê?:)",
+          "Text": "'\\S/ËËÊ;Ê?:)",
           "Confidence": 51.23535,
           "Left": 272,
           "Top": 31572,
@@ -99439,7 +99439,7 @@
       ]
     },
     {
-      "LineText": "[23/06/2025 SAVONNERIE LE VR CPM/230625 24/06/2025\u0022 - 74302000 806427 CR",
+      "LineText": "[23/06/2025 SAVONNERIE LE VR CPM/230625 24/06/2025\" - 74302000 806427 CR",
       "Words": [
         {
           "Text": "[23/06/2025",
@@ -99474,7 +99474,7 @@
           "Bottom": 31611
         },
         {
-          "Text": "24/06/2025\u0022",
+          "Text": "24/06/2025\"",
           "Confidence": 16.733788,
           "Left": 860,
           "Top": 31591,
@@ -100597,10 +100597,10 @@
       ]
     },
     {
-      "LineText": "27/06/2025 \u0027 RETRAIT ESPECES PC N° 3256607 25/06/2025 2500.000~\u0022 1E E B 491.032 DB",
+      "LineText": "27/06/2025 ' RETRAIT ESPECES PC N° 3256607 25/06/2025 2500.000~\" 1E E B 491.032 DB",
       "Words": [
         {
-          "Text": "\u0027",
+          "Text": "'",
           "Confidence": 26.848465,
           "Left": 276,
           "Top": 32014,
@@ -100648,7 +100648,7 @@
           "Bottom": 32037
         },
         {
-          "Text": "2500.000~\u0022",
+          "Text": "2500.000~\"",
           "Confidence": 0,
           "Left": 1017,
           "Top": 32017,
@@ -101475,7 +101475,7 @@
       ]
     },
     {
-      "LineText": "FOURNIPROB\u0022  r",
+      "LineText": "FOURNIPROB\"  r",
       "Words": [
         {
           "Text": "",
@@ -101486,7 +101486,7 @@
           "Bottom": 33313
         },
         {
-          "Text": "FOURNIPROB\u0022",
+          "Text": "FOURNIPROB\"",
           "Confidence": 0,
           "Left": 310,
           "Top": 33314,
@@ -101658,7 +101658,7 @@
       ]
     },
     {
-      "LineText": "23/06/2025 3000~ اتا \u0026 5398 CR",
+      "LineText": "23/06/2025 3000~ اتا & 5398 CR",
       "Words": [
         {
           "Text": "CR",
@@ -101677,7 +101677,7 @@
           "Bottom": 33389
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 40.98121,
           "Left": 1364,
           "Top": 33356,
@@ -101862,7 +101862,7 @@
       ]
     },
     {
-      "LineText": "\u002201/07/2025 PRL COMP N° 2083 2083",
+      "LineText": "\"01/07/2025 PRL COMP N° 2083 2083",
       "Words": [
         {
           "Text": "2083",
@@ -101881,7 +101881,7 @@
           "Bottom": 33428
         },
         {
-          "Text": "\u002201/07/2025",
+          "Text": "\"01/07/2025",
           "Confidence": 11.071976,
           "Left": 184,
           "Top": 33409,
@@ -102336,7 +102336,7 @@
       ]
     },
     {
-      "LineText": "Nos écritures s\u0027entendent sauf erreur ou omission.",
+      "LineText": "Nos écritures s'entendent sauf erreur ou omission.",
       "Words": [
         {
           "Text": "omission.",
@@ -102355,7 +102355,7 @@
           "Bottom": 33864
         },
         {
-          "Text": "s\u0027entendent",
+          "Text": "s'entendent",
           "Confidence": 90.37007,
           "Left": 400,
           "Top": 33846,
@@ -103586,7 +103586,7 @@
       ]
     },
     {
-      "LineText": "COM OP PASSAGERES 011070725284 1 01/07/2025 ” 25.000 \u0026 191.400 DB",
+      "LineText": "COM OP PASSAGERES 011070725284 1 01/07/2025 ” 25.000 & 191.400 DB",
       "Words": [
         {
           "Text": "1",
@@ -103645,7 +103645,7 @@
           "Bottom": 35301
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 69.763336,
           "Left": 1306,
           "Top": 35281,
@@ -104538,10 +104538,10 @@
       ]
     },
     {
-      "LineText": "10/07/2025 __ \u0027 TVA/RECUPERATION FRAIS دمي PDL 01/06/25 ل الل 09/07/2025 æ 0.143 [ ا 1767.364 DB",
+      "LineText": "10/07/2025 __ ' TVA/RECUPERATION FRAIS دمي PDL 01/06/25 ل الل 09/07/2025 æ 0.143 [ ا 1767.364 DB",
       "Words": [
         {
-          "Text": "\u0027",
+          "Text": "'",
           "Confidence": 53.81813,
           "Left": 285,
           "Top": 35632,
@@ -105071,7 +105071,7 @@
       ]
     },
     {
-      "LineText": "14/07/2025  TVA/ICOMM REMISE CHQ - 01353734  0870772025 0.166 \u0022\u003E - 1769.446 DB",
+      "LineText": "14/07/2025  TVA/ICOMM REMISE CHQ - 01353734  0870772025 0.166 \"> - 1769.446 DB",
       "Words": [
         {
           "Text": "",
@@ -105114,7 +105114,7 @@
           "Bottom": 35813
         },
         {
-          "Text": "\u0022\u003E",
+          "Text": "\">",
           "Confidence": 32.03562,
           "Left": 1239,
           "Top": 35793,
@@ -105875,7 +105875,7 @@
       ]
     },
     {
-      "LineText": "17/07/2025 ENC CHQ N° 30165 30165 18/07/2025 د\u0022 5 846.434 4929.153 CR",
+      "LineText": "17/07/2025 ENC CHQ N° 30165 30165 18/07/2025 د\" 5 846.434 4929.153 CR",
       "Words": [
         {
           "Text": "4929.153",
@@ -105886,7 +105886,7 @@
           "Bottom": 36094
         },
         {
-          "Text": "د\u0022",
+          "Text": "د\"",
           "Confidence": 57.21996,
           "Left": 1077,
           "Top": 36074,
@@ -105989,7 +105989,7 @@
       ]
     },
     {
-      "LineText": "18/07/2025  VIR ORD JS COLD SYSTE \u0022 VR CPM/180725 o 772.400 5701.553 CR ",
+      "LineText": "18/07/2025  VIR ORD JS COLD SYSTE \" VR CPM/180725 o 772.400 5701.553 CR ",
       "Words": [
         {
           "Text": "",
@@ -106072,7 +106072,7 @@
           "Bottom": 36131
         },
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 22.230392,
           "Left": 615,
           "Top": 36111,
@@ -106517,7 +106517,7 @@
       ]
     },
     {
-      "LineText": "PREL 181019\u0022 - - 2000 T 5521315 CR",
+      "LineText": "PREL 181019\" - - 2000 T 5521315 CR",
       "Words": [
         {
           "Text": "2000",
@@ -106568,7 +106568,7 @@
           "Bottom": 36277
         },
         {
-          "Text": "181019\u0022",
+          "Text": "181019\"",
           "Confidence": 0,
           "Left": 595,
           "Top": 36257,
@@ -108105,7 +108105,7 @@
       ]
     },
     {
-      "LineText": "Nos écritures s\u0027entendent sauf erreur ou omission.",
+      "LineText": "Nos écritures s'entendent sauf erreur ou omission.",
       "Words": [
         {
           "Text": "Nos",
@@ -108124,7 +108124,7 @@
           "Bottom": 38186
         },
         {
-          "Text": "s\u0027entendent",
+          "Text": "s'entendent",
           "Confidence": 91.341324,
           "Left": 378,
           "Top": 38166,

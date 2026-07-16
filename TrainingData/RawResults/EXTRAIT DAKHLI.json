@@ -1180,7 +1180,7 @@
     "CIF CLIENT : 000001814 AVENUE 2 MARS N 73 2034 EZZAHRA",
     "2034 EZZAHRA 2034",
     "AGENCE : BOUMHEL",
-    "BD DE L\u0027ENVIRONNEMENT 2097 BOUMHEL",
+    "BD DE L'ENVIRONNEMENT 2097 BOUMHEL",
     "EXTRAIT DE COMPTE",
     "الذي حسابكم كشف لكم نقدم بأن الشرف لنا",
     "حساب كشف التالي الرصيد السهو الخطأ عدى ما يحتوي",
@@ -1619,7 +1619,7 @@
     "Toioz2025 INTERNATIONALE DE LEASING — e",
     "(CIL) 2504104138318087 2565263",
     " POL : DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE OTM2RCIE",
-    "10/02/2025 DE LEASING (CIL) 2504104138318087 \u0022٠.",
+    "10/02/2025 DE LEASING (CIL) 2504104138318087 \"٠.",
     " 0,750",
     "COMMISSION SUR PRELEVEMENT DAKHLI RENT A CAR",
     "‘00272025 COMPAGNIE INTERNATIONALE DE : LEASING (CIL) 2504104138318085 2,000 r",
@@ -1906,7 +1906,7 @@
     ":",
     " A 4,600,000",
     "18022025 POL DAKHLIRENT CAR COMPAGNIE INTERNATIONALE",
-    " DE LEASING (CIL) 2504902138331015 0,750 \u0022 =",
+    " DE LEASING (CIL) 2504902138331015 0,750 \" =",
     "PRELEVEMENT COMPAGNIE",
     "180272025 RECU DE : DAKHLI RENT À CAR",
     "INTERNATIONALE LEASING 18.138,666",
@@ -2154,7 +2154,7 @@
     "200272025 LEASE 2505101137683136",
     " 0750",
     "200272025 LEASE TVA: REPRESENTATION 2505101137683136 PP2388067 ARAB INTERNATIONAL",
-    "0,380 \u0022",
+    "0,380 \"",
     "ESPECE",
     "2 T ESPECES : 552505200495383",
     "i",
@@ -2639,7 +2639,7 @@
       "Bottom": 452
     },
     {
-      "Text": "L\u0027ENVIRONNEMENT",
+      "Text": "L'ENVIRONNEMENT",
       "Confidence": 91.761604,
       "Left": 240,
       "Top": 434,
@@ -20631,7 +20631,7 @@
       "Bottom": 9961
     },
     {
-      "Text": "\u0022٠.",
+      "Text": "\"٠.",
       "Confidence": 0,
       "Left": 1498,
       "Top": 9926,
@@ -32559,7 +32559,7 @@
       "Bottom": 16108
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 64.7343,
       "Left": 1333,
       "Top": 16108,
@@ -42367,7 +42367,7 @@
       "Bottom": 21362
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 53.625626,
       "Left": 1660,
       "Top": 21360,
@@ -54198,7 +54198,7 @@
       ]
     },
     {
-      "LineText": "BD DE L\u0027ENVIRONNEMENT 2097 BOUMHEL",
+      "LineText": "BD DE L'ENVIRONNEMENT 2097 BOUMHEL",
       "Words": [
         {
           "Text": "BOUMHEL",
@@ -54217,7 +54217,7 @@
           "Bottom": 452
         },
         {
-          "Text": "L\u0027ENVIRONNEMENT",
+          "Text": "L'ENVIRONNEMENT",
           "Confidence": 91.761604,
           "Left": 240,
           "Top": 434,
@@ -74225,7 +74225,7 @@
       ]
     },
     {
-      "LineText": "10/02/2025 DE LEASING (CIL) 2504104138318087 \u0022٠.",
+      "LineText": "10/02/2025 DE LEASING (CIL) 2504104138318087 \"٠.",
       "Words": [
         {
           "Text": "10/02/2025",
@@ -74236,7 +74236,7 @@
           "Bottom": 9940
         },
         {
-          "Text": "\u0022٠.",
+          "Text": "\"٠.",
           "Confidence": 0,
           "Left": 1498,
           "Top": 9926,
@@ -87652,10 +87652,10 @@
       ]
     },
     {
-      "LineText": " DE LEASING (CIL) 2504902138331015 0,750 \u0022 =",
+      "LineText": " DE LEASING (CIL) 2504902138331015 0,750 \" =",
       "Words": [
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 64.7343,
           "Left": 1333,
           "Top": 16108,
@@ -98716,10 +98716,10 @@
       ]
     },
     {
-      "LineText": "0,380 \u0022",
+      "LineText": "0,380 \"",
       "Words": [
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 53.625626,
           "Left": 1660,
           "Top": 21360,

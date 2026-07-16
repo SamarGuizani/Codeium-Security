@@ -258,7 +258,7 @@
     "Code Iban : TN5904000010008269342555",
     "Date : 20/06/2024",
     "Solde initial (TND) : -2,677.639",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "IABONNEMENT 001235",
     "02/01/2024 29/12/2023 PACK BUSINESS SOLUTIONS S C 35.700 -2,713.339",
     "DONT TVA: 5,700",
@@ -268,7 +268,7 @@
     "IABONNEMENT 001306",
     "30/01/2024 29/01/2024 PACK BUSINESS SOLUTIONS S C 35.700 -4,539.776",
     "DONT TVA: 5,700",
-    "16/02/2024 15/02/2024 COM \u0026 TVA/ REJET CHQ 23 119.000 -4,658.776",
+    "16/02/2024 15/02/2024 COM & TVA/ REJET CHQ 23 119.000 -4,658.776",
     "COMMISSION VIR MEME BQ 005353",
     "21/02/2024 22/02/2024 2.380 _ 4,661.156",
     "DONT TVA: 0,380",
@@ -280,14 +280,14 @@
     "IABONNEMENT 001375",
     "29/02/2024 28/02/2024 PACK BUSINESS SOLUTIONS S C 35.700 -3,960.789",
     "DONT TVA: 5,700",
-    "22/03/2024 21/03/2024 COM \u0026 TVA/ REJET CHQ 24 119.000 -4,079.789",
+    "22/03/2024 21/03/2024 COM & TVA/ REJET CHQ 24 119.000 -4,079.789",
     "27/03/2024 21/03/2024 REGLEMENT CHEQUE N 24 1,816.976 -5,896.765",
     "27/03/2024 27/03/2024 COM DEPASSEMENT PONCTUEL 11.900 -5,908.665",
     "IABONNEMENT 001454",
     "29/03/2024 28/03/2024 PACK BUSINESS SOLUTIONS S C 35.700 -5,944.365",
     "DONT TVA: 5,700",
     "01/04/2024 31/03/2024 AGIOS DU 31/12/23 AU 31/03/24 170.132 -6,114.497",
-    "16/04/2024 15/04/2024 COM \u0026 TVA/ REJET CHQ 25 119.000 -6,233.497",
+    "16/04/2024 15/04/2024 COM & TVA/ REJET CHQ 25 119.000 -6,233.497",
     "COMMISSION VIR MEME BQ 005444",
     "22/04/2024 23/04/2024 2.380 1 6,235.877",
     "DONT TVA: 0,380",
@@ -312,7 +312,7 @@
     "16/05/2024 15/05/2024 REGLEMENT CHEQUE N 26 1,547.366 -0.675",
     "16/05/2024 16/05/2024 COM DEPASSEMENT PONCTUEL 11.900 -12.575",
     "Page 1 sur 2",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "IABONNEMENT 001605",
     "29/05/2024 28/05/2024 PACK BUSINESS SOLUTIONS S C 35.700 -48.275",
     "DONT TVA: 5,700",
@@ -710,7 +710,7 @@
       "Bottom": 609
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 591,
@@ -1206,7 +1206,7 @@
       "Bottom": 975
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.242645,
       "Left": 447,
       "Top": 959,
@@ -1742,7 +1742,7 @@
       "Bottom": 1346
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 92.399796,
       "Left": 447,
       "Top": 1330,
@@ -2126,7 +2126,7 @@
       "Bottom": 1641
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.01969,
       "Left": 447,
       "Top": 1625,
@@ -3238,7 +3238,7 @@
       "Bottom": 3116
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 3098,
@@ -4071,7 +4071,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -4082,7 +4082,7 @@
           "Bottom": 609
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 591,
@@ -4625,7 +4625,7 @@
       ]
     },
     {
-      "LineText": "16/02/2024 15/02/2024 COM \u0026 TVA/ REJET CHQ 23 119.000 -4,658.776",
+      "LineText": "16/02/2024 15/02/2024 COM & TVA/ REJET CHQ 23 119.000 -4,658.776",
       "Words": [
         {
           "Text": "16/02/2024",
@@ -4652,7 +4652,7 @@
           "Bottom": 975
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.242645,
           "Left": 447,
           "Top": 959,
@@ -5221,7 +5221,7 @@
       ]
     },
     {
-      "LineText": "22/03/2024 21/03/2024 COM \u0026 TVA/ REJET CHQ 24 119.000 -4,079.789",
+      "LineText": "22/03/2024 21/03/2024 COM & TVA/ REJET CHQ 24 119.000 -4,079.789",
       "Words": [
         {
           "Text": "22/03/2024",
@@ -5248,7 +5248,7 @@
           "Bottom": 1346
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 92.399796,
           "Left": 447,
           "Top": 1330,
@@ -5640,7 +5640,7 @@
       ]
     },
     {
-      "LineText": "16/04/2024 15/04/2024 COM \u0026 TVA/ REJET CHQ 25 119.000 -6,233.497",
+      "LineText": "16/04/2024 15/04/2024 COM & TVA/ REJET CHQ 25 119.000 -6,233.497",
       "Words": [
         {
           "Text": "16/04/2024",
@@ -5667,7 +5667,7 @@
           "Bottom": 1641
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.01969,
           "Left": 447,
           "Top": 1625,
@@ -6869,7 +6869,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -6880,7 +6880,7 @@
           "Bottom": 3116
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 3098,

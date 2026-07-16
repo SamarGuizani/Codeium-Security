@@ -304,7 +304,7 @@
   },
   "DebugLines": [
     "8/9/25, 10:14 AM BTK@DIRECT",
-    "\u003C",
+    "<",
     "EXTRAIT DE COMPTE",
     "Code client : 0510291",
     "Nom du client : SOCIETE IT CAPACITIES",
@@ -329,7 +329,7 @@
     "21/05/2025 20/05/2025 PRELEV. RECU AUT BQE 648,248 15 470,469",
     "166172",
     "23/05/2025 22/05/2025 FRAIS ADHESION CARTE 107,100 15 363,369",
-    "02/06/2025 30/05/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 15 362,179",
+    "02/06/2025 30/05/2025 & COM. & TVA VIR. EMIS 1,190 15 362,179",
     "ا Comm. Virement E-",
     "banking 1,000",
     "سا TVA/Comm. Virement",
@@ -341,7 +341,7 @@
     "8/9/25, 10:14 AM BTK@DIRECT",
     "Date de",
     "Date valeur Opération Débit (TND) Crédit (TND) Solde (TND)",
-    "02/06/2025 30/05/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 13 915,147",
+    "02/06/2025 30/05/2025 & COM. & TVA VIR. EMIS 1,190 13 915,147",
     "ا Comm. Virement E-",
     "banking 1,000",
     "ا TVA/Comm. Virement",
@@ -349,21 +349,21 @@
     "02/06/2025 30/05/2025 B VIREMENT EMIS AUT BQ 1 2 12 469,305",
     "ا En faveur Safa",
     "Ghandri",
-    "09/06/2025 05/06/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 12 468,115",
+    "09/06/2025 05/06/2025 & COM. & TVA VIR. EMIS 1,190 12 468,115",
     "ا Comm. Virement E-",
     "banking 1,000",
     "سا TVA/Comm. Virement",
     "E-banking 0,190",
-    "09/06/2025 05/06/2025 \u0026 VIREMENT EMIS AUT BQ 1 950,000 10 518,115",
+    "09/06/2025 05/06/2025 & VIREMENT EMIS AUT BQ 1 950,000 10 518,115",
     "ا En faveur Sinda",
     "Ardhaoui",
-    "09/06/2025 09/06/2025 \u0026 VIREMENT EMIS MEM 1 000,000 9518,115",
+    "09/06/2025 09/06/2025 & VIREMENT EMIS MEM 1 000,000 9518,115",
     "AG",
     "ا En faveur OUEDERNI",
     "MOHAMED",
     "23/06/2025 20/06/2025 PRELEV. RECU AUT BQE 682,654 8 835,461",
     "166677",
-    "24/06/2025 13/06/2025 \u0026 COM \u0026 TVA TRS نعي 88,341 8 747,120",
+    "24/06/2025 13/06/2025 & COM & TVA TRS نعي 88,341 8 747,120",
     "25004107",
     "ا com. RFJ 20,000",
     "ا com. transfert recu",
@@ -372,19 +372,19 @@
     "14,105",
     "30/06/2025 30/06/2025 AGIOS DU 31/03/25 AU 40,460 8 706,660",
     "30/06/25",
-    "01/07/2025 30/06/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 8 705,470",
+    "01/07/2025 30/06/2025 & COM. & TVA VIR. EMIS 1,190 8 705,470",
     "ا Comm. Virement E-",
     "banking 1,000",
     "سا TVA/Comm. Virement",
     "E-banking 0,190",
-    "01/07/2025 30/06/2025 \u0026 VIREMENT EMIS AUT BQ 1445,842 7 259,628",
+    "01/07/2025 30/06/2025 & VIREMENT EMIS AUT BQ 1445,842 7 259,628",
     "ا En faveur Jihed",
     "Werdien",
     "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 2/4",
     "8/9/25, 10:14 AM BTK@DIRECT",
     "Date de",
     "Date valeur Opération Débit (TND) Crédit (TND) Solde (TND)",
-    "01/07/2025 30/06/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 7 258,438",
+    "01/07/2025 30/06/2025 & COM. & TVA VIR. EMIS 1,190 7 258,438",
     "ا Comm. Virement E-",
     "banking 1,000",
     "ا TVA/Comm. Virement",
@@ -398,15 +398,15 @@
     "03/07/2025",
     "07/07/2025 02/07/2025 ATM BTK JERBA  DU 800,000 3412,596",
     "03/07/2025",
-    "08/07/2025 08/07/2025 COM \u0026 TVA VIR. EMIS 11,900 3400,696",
+    "08/07/2025 08/07/2025 COM & TVA VIR. EMIS 11,900 3400,696",
     "08/07/2025 09/07/2025 VIREMENT RECU MEM AG 28 400,000 31 800,696",
-    "09/07/2025 08/07/2025 \u0026 RETRAIT ESP. DEPLACE 5 000,000 26 800,696",
+    "09/07/2025 08/07/2025 & RETRAIT ESP. DEPLACE 5 000,000 26 800,696",
     "ا ref. 060695",
-    "09/07/2025 08/07/2025 COM\u0026TVA RETRAIT DEPL 2,380 26 798,316",
+    "09/07/2025 08/07/2025 COM&TVA RETRAIT DEPL 2,380 26 798,316",
     "60695",
-    "11/07/2025 10/07/2025 \u0026 RETRAIT ESP. DEPLACE 6 000,000 20798316",
+    "11/07/2025 10/07/2025 & RETRAIT ESP. DEPLACE 6 000,000 20798316",
     "ا ref. 060736",
-    "11/07/2025 10/07/2025 COM\u0026TVA RETRAIT DEPL 2,380 20 795,936",
+    "11/07/2025 10/07/2025 COM&TVA RETRAIT DEPL 2,380 20 795,936",
     "60736",
     "17/07/2025 16/07/2025 PRELEV. RECU AUT BQE 2 960,617 17 835,319",
     "166970",
@@ -420,20 +420,20 @@
     "8/9/25, 10:14 AM BTK@DIRECT",
     "Date de",
     "Date valeur Opération Débit (TND) Crédit (TND) Solde (TND)",
-    "04/08/2025 01/08/2025 \u0026COM. \u0026 TVA VIR. EMIS 1,190 16 116,813",
+    "04/08/2025 01/08/2025 &COM. & TVA VIR. EMIS 1,190 16 116,813",
     "ا Comm. Virement E-",
     "banking 1,000",
     "ا TVA/Comm. Virement",
     "E-banking 0,190",
-    "04/08/2025 01/08/2025 \u0026VIREMENT EMIS AUT BQ 1 445,842 14 670,971",
+    "04/08/2025 01/08/2025 &VIREMENT EMIS AUT BQ 1 445,842 14 670,971",
     "ا En faveur Jihed",
     "Werdien",
-    "04/08/2025 01/08/2025 \u0026COM. \u0026 TVA VIR. EMIS 1,190 14 669,781",
+    "04/08/2025 01/08/2025 &COM. & TVA VIR. EMIS 1,190 14 669,781",
     "ا Comm. Virement E-",
     "banking 1,000",
     "سا TVA/Comm. Virement",
     "E-banking 0,190",
-    "04/08/2025 01/08/2025 \u0026VIREMENT EMIS AUT BQ 1 445,842 13 223,939",
+    "04/08/2025 01/08/2025 &VIREMENT EMIS AUT BQ 1 445,842 13 223,939",
     "سا En faveur Safa",
     "Ghandri",
     "08/08/2025 05/08/2025 ATM BTK CHARGUIA DU 800,000 12 423,939",
@@ -471,7 +471,7 @@
       "Bottom": 68
     },
     {
-      "Text": "\u003C",
+      "Text": "<",
       "Confidence": 89.355804,
       "Left": 176,
       "Top": 156,
@@ -1319,7 +1319,7 @@
       "Bottom": 1909
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 71.51134,
       "Left": 582,
       "Top": 1974,
@@ -1335,7 +1335,7 @@
       "Bottom": 1993
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.07151,
       "Left": 704,
       "Top": 1970,
@@ -2175,7 +2175,7 @@
       "Bottom": 3207
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 78.22505,
       "Left": 582,
       "Top": 3265,
@@ -2191,7 +2191,7 @@
       "Bottom": 3287
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.09908,
       "Left": 704,
       "Top": 3263,
@@ -2391,7 +2391,7 @@
       "Bottom": 3645
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 84.89253,
       "Left": 582,
       "Top": 3708,
@@ -2407,7 +2407,7 @@
       "Bottom": 3729
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.06531,
       "Left": 704,
       "Top": 3706,
@@ -2527,7 +2527,7 @@
       "Bottom": 3915
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 51.39293,
       "Left": 582,
       "Top": 3974,
@@ -2607,7 +2607,7 @@
       "Bottom": 4087
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 62.774044,
       "Left": 582,
       "Top": 4150,
@@ -2727,7 +2727,7 @@
       "Bottom": 4438
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 82.7374,
       "Left": 582,
       "Top": 4501,
@@ -2743,7 +2743,7 @@
       "Bottom": 4523
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.03223,
       "Left": 695,
       "Top": 4499,
@@ -2919,7 +2919,7 @@
       "Bottom": 4926
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 81.14552,
       "Left": 582,
       "Top": 4989,
@@ -2935,7 +2935,7 @@
       "Bottom": 5011
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.14724,
       "Left": 704,
       "Top": 4987,
@@ -3055,7 +3055,7 @@
       "Bottom": 5197
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 65.34363,
       "Left": 582,
       "Top": 5256,
@@ -3759,7 +3759,7 @@
       "Bottom": 6222
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 80.234856,
       "Left": 582,
       "Top": 6280,
@@ -3775,7 +3775,7 @@
       "Bottom": 6302
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 91.9077,
       "Left": 711,
       "Top": 6278,
@@ -4167,7 +4167,7 @@
       "Bottom": 7134
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.271416,
       "Left": 666,
       "Top": 7111,
@@ -4231,7 +4231,7 @@
       "Bottom": 7218
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 89.685875,
       "Left": 582,
       "Top": 7281,
@@ -4287,7 +4287,7 @@
       "Bottom": 7348
     },
     {
-      "Text": "COM\u0026TVA",
+      "Text": "COM&TVA",
       "Confidence": 89.71579,
       "Left": 585,
       "Top": 7409,
@@ -4319,7 +4319,7 @@
       "Bottom": 7478
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 81.7648,
       "Left": 582,
       "Top": 7541,
@@ -4375,7 +4375,7 @@
       "Bottom": 7608
     },
     {
-      "Text": "COM\u0026TVA",
+      "Text": "COM&TVA",
       "Confidence": 89.34996,
       "Left": 585,
       "Top": 7669,
@@ -5103,7 +5103,7 @@
       "Bottom": 9317
     },
     {
-      "Text": "\u0026COM.",
+      "Text": "&COM.",
       "Confidence": 80.2285,
       "Left": 582,
       "Top": 9293,
@@ -5111,7 +5111,7 @@
       "Bottom": 9317
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 92.980354,
       "Left": 704,
       "Top": 9293,
@@ -5271,7 +5271,7 @@
       "Bottom": 9584
     },
     {
-      "Text": "\u0026VIREMENT",
+      "Text": "&VIREMENT",
       "Confidence": 41.758232,
       "Left": 582,
       "Top": 9560,
@@ -5391,7 +5391,7 @@
       "Bottom": 9759
     },
     {
-      "Text": "\u0026COM.",
+      "Text": "&COM.",
       "Confidence": 84.05409,
       "Left": 582,
       "Top": 9736,
@@ -5399,7 +5399,7 @@
       "Bottom": 9760
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 92.15526,
       "Left": 704,
       "Top": 9736,
@@ -5559,7 +5559,7 @@
       "Bottom": 10026
     },
     {
-      "Text": "\u0026VIREMENT",
+      "Text": "&VIREMENT",
       "Confidence": 80.650024,
       "Left": 582,
       "Top": 10002,
@@ -5966,10 +5966,10 @@
       ]
     },
     {
-      "LineText": "\u003C",
+      "LineText": "<",
       "Words": [
         {
-          "Text": "\u003C",
+          "Text": "<",
           "Confidence": 89.355804,
           "Left": 176,
           "Top": 156,
@@ -7243,7 +7243,7 @@
       ]
     },
     {
-      "LineText": "02/06/2025 30/05/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 15 362,179",
+      "LineText": "02/06/2025 30/05/2025 & COM. & TVA VIR. EMIS 1,190 15 362,179",
       "Words": [
         {
           "Text": "02/06/2025",
@@ -7270,7 +7270,7 @@
           "Bottom": 1993
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.07151,
           "Left": 704,
           "Top": 1970,
@@ -7326,7 +7326,7 @@
           "Bottom": 1997
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 71.51134,
           "Left": 582,
           "Top": 1974,
@@ -7735,7 +7735,7 @@
       ]
     },
     {
-      "LineText": "02/06/2025 30/05/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 13 915,147",
+      "LineText": "02/06/2025 30/05/2025 & COM. & TVA VIR. EMIS 1,190 13 915,147",
       "Words": [
         {
           "Text": "02/06/2025",
@@ -7762,7 +7762,7 @@
           "Bottom": 3287
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.09908,
           "Left": 704,
           "Top": 3263,
@@ -7818,7 +7818,7 @@
           "Bottom": 3290
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 78.22505,
           "Left": 582,
           "Top": 3265,
@@ -8079,7 +8079,7 @@
       ]
     },
     {
-      "LineText": "09/06/2025 05/06/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 12 468,115",
+      "LineText": "09/06/2025 05/06/2025 & COM. & TVA VIR. EMIS 1,190 12 468,115",
       "Words": [
         {
           "Text": "09/06/2025",
@@ -8106,7 +8106,7 @@
           "Bottom": 3729
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.06531,
           "Left": 704,
           "Top": 3706,
@@ -8162,7 +8162,7 @@
           "Bottom": 3733
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 84.89253,
           "Left": 582,
           "Top": 3708,
@@ -8280,7 +8280,7 @@
       ]
     },
     {
-      "LineText": "09/06/2025 05/06/2025 \u0026 VIREMENT EMIS AUT BQ 1 950,000 10 518,115",
+      "LineText": "09/06/2025 05/06/2025 & VIREMENT EMIS AUT BQ 1 950,000 10 518,115",
       "Words": [
         {
           "Text": "09/06/2025",
@@ -8363,7 +8363,7 @@
           "Bottom": 3996
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 51.39293,
           "Left": 582,
           "Top": 3974,
@@ -8423,7 +8423,7 @@
       ]
     },
     {
-      "LineText": "09/06/2025 09/06/2025 \u0026 VIREMENT EMIS MEM 1 000,000 9518,115",
+      "LineText": "09/06/2025 09/06/2025 & VIREMENT EMIS MEM 1 000,000 9518,115",
       "Words": [
         {
           "Text": "09/06/2025",
@@ -8490,7 +8490,7 @@
           "Bottom": 4175
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 62.774044,
           "Left": 582,
           "Top": 4150,
@@ -8653,7 +8653,7 @@
       ]
     },
     {
-      "LineText": "24/06/2025 13/06/2025 \u0026 COM \u0026 TVA TRS نعي 88,341 8 747,120",
+      "LineText": "24/06/2025 13/06/2025 & COM & TVA TRS نعي 88,341 8 747,120",
       "Words": [
         {
           "Text": "24/06/2025",
@@ -8680,7 +8680,7 @@
           "Bottom": 4523
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.03223,
           "Left": 695,
           "Top": 4499,
@@ -8736,7 +8736,7 @@
           "Bottom": 4526
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 82.7374,
           "Left": 582,
           "Top": 4501,
@@ -8970,7 +8970,7 @@
       ]
     },
     {
-      "LineText": "01/07/2025 30/06/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 8 705,470",
+      "LineText": "01/07/2025 30/06/2025 & COM. & TVA VIR. EMIS 1,190 8 705,470",
       "Words": [
         {
           "Text": "01/07/2025",
@@ -8997,7 +8997,7 @@
           "Bottom": 5011
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.14724,
           "Left": 704,
           "Top": 4987,
@@ -9053,7 +9053,7 @@
           "Bottom": 5014
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 81.14552,
           "Left": 582,
           "Top": 4989,
@@ -9171,7 +9171,7 @@
       ]
     },
     {
-      "LineText": "01/07/2025 30/06/2025 \u0026 VIREMENT EMIS AUT BQ 1445,842 7 259,628",
+      "LineText": "01/07/2025 30/06/2025 & VIREMENT EMIS AUT BQ 1445,842 7 259,628",
       "Words": [
         {
           "Text": "01/07/2025",
@@ -9246,7 +9246,7 @@
           "Bottom": 5281
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 65.34363,
           "Left": 582,
           "Top": 5256,
@@ -9462,7 +9462,7 @@
       ]
     },
     {
-      "LineText": "01/07/2025 30/06/2025 \u0026 COM. \u0026 TVA VIR. EMIS 1,190 7 258,438",
+      "LineText": "01/07/2025 30/06/2025 & COM. & TVA VIR. EMIS 1,190 7 258,438",
       "Words": [
         {
           "Text": "01/07/2025",
@@ -9489,7 +9489,7 @@
           "Bottom": 6302
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 91.9077,
           "Left": 711,
           "Top": 6278,
@@ -9545,7 +9545,7 @@
           "Bottom": 6305
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 80.234856,
           "Left": 582,
           "Top": 6280,
@@ -10084,7 +10084,7 @@
       ]
     },
     {
-      "LineText": "08/07/2025 08/07/2025 COM \u0026 TVA VIR. EMIS 11,900 3400,696",
+      "LineText": "08/07/2025 08/07/2025 COM & TVA VIR. EMIS 11,900 3400,696",
       "Words": [
         {
           "Text": "TVA",
@@ -10119,7 +10119,7 @@
           "Bottom": 7134
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.271416,
           "Left": 666,
           "Top": 7111,
@@ -10246,7 +10246,7 @@
       ]
     },
     {
-      "LineText": "09/07/2025 08/07/2025 \u0026 RETRAIT ESP. DEPLACE 5 000,000 26 800,696",
+      "LineText": "09/07/2025 08/07/2025 & RETRAIT ESP. DEPLACE 5 000,000 26 800,696",
       "Words": [
         {
           "Text": "09/07/2025",
@@ -10321,7 +10321,7 @@
           "Bottom": 7307
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 89.685875,
           "Left": 582,
           "Top": 7281,
@@ -10360,7 +10360,7 @@
       ]
     },
     {
-      "LineText": "09/07/2025 08/07/2025 COM\u0026TVA RETRAIT DEPL 2,380 26 798,316",
+      "LineText": "09/07/2025 08/07/2025 COM&TVA RETRAIT DEPL 2,380 26 798,316",
       "Words": [
         {
           "Text": "09/07/2025",
@@ -10379,7 +10379,7 @@
           "Bottom": 7433
         },
         {
-          "Text": "COM\u0026TVA",
+          "Text": "COM&TVA",
           "Confidence": 89.71579,
           "Left": 585,
           "Top": 7409,
@@ -10442,7 +10442,7 @@
       ]
     },
     {
-      "LineText": "11/07/2025 10/07/2025 \u0026 RETRAIT ESP. DEPLACE 6 000,000 20798316",
+      "LineText": "11/07/2025 10/07/2025 & RETRAIT ESP. DEPLACE 6 000,000 20798316",
       "Words": [
         {
           "Text": "11/07/2025",
@@ -10509,7 +10509,7 @@
           "Bottom": 7567
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 81.7648,
           "Left": 582,
           "Top": 7541,
@@ -10548,7 +10548,7 @@
       ]
     },
     {
-      "LineText": "11/07/2025 10/07/2025 COM\u0026TVA RETRAIT DEPL 2,380 20 795,936",
+      "LineText": "11/07/2025 10/07/2025 COM&TVA RETRAIT DEPL 2,380 20 795,936",
       "Words": [
         {
           "Text": "11/07/2025",
@@ -10567,7 +10567,7 @@
           "Bottom": 7693
         },
         {
-          "Text": "COM\u0026TVA",
+          "Text": "COM&TVA",
           "Confidence": 89.34996,
           "Left": 585,
           "Top": 7669,
@@ -11154,7 +11154,7 @@
       ]
     },
     {
-      "LineText": "04/08/2025 01/08/2025 \u0026COM. \u0026 TVA VIR. EMIS 1,190 16 116,813",
+      "LineText": "04/08/2025 01/08/2025 &COM. & TVA VIR. EMIS 1,190 16 116,813",
       "Words": [
         {
           "Text": "04/08/2025",
@@ -11173,7 +11173,7 @@
           "Bottom": 9317
         },
         {
-          "Text": "\u0026COM.",
+          "Text": "&COM.",
           "Confidence": 80.2285,
           "Left": 582,
           "Top": 9293,
@@ -11181,7 +11181,7 @@
           "Bottom": 9317
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 92.980354,
           "Left": 704,
           "Top": 9293,
@@ -11347,7 +11347,7 @@
       ]
     },
     {
-      "LineText": "04/08/2025 01/08/2025 \u0026VIREMENT EMIS AUT BQ 1 445,842 14 670,971",
+      "LineText": "04/08/2025 01/08/2025 &VIREMENT EMIS AUT BQ 1 445,842 14 670,971",
       "Words": [
         {
           "Text": "04/08/2025",
@@ -11366,7 +11366,7 @@
           "Bottom": 9584
         },
         {
-          "Text": "\u0026VIREMENT",
+          "Text": "&VIREMENT",
           "Confidence": 41.758232,
           "Left": 582,
           "Top": 9560,
@@ -11482,7 +11482,7 @@
       ]
     },
     {
-      "LineText": "04/08/2025 01/08/2025 \u0026COM. \u0026 TVA VIR. EMIS 1,190 14 669,781",
+      "LineText": "04/08/2025 01/08/2025 &COM. & TVA VIR. EMIS 1,190 14 669,781",
       "Words": [
         {
           "Text": "04/08/2025",
@@ -11501,7 +11501,7 @@
           "Bottom": 9759
         },
         {
-          "Text": "\u0026COM.",
+          "Text": "&COM.",
           "Confidence": 84.05409,
           "Left": 582,
           "Top": 9736,
@@ -11509,7 +11509,7 @@
           "Bottom": 9760
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 92.15526,
           "Left": 704,
           "Top": 9736,
@@ -11675,7 +11675,7 @@
       ]
     },
     {
-      "LineText": "04/08/2025 01/08/2025 \u0026VIREMENT EMIS AUT BQ 1 445,842 13 223,939",
+      "LineText": "04/08/2025 01/08/2025 &VIREMENT EMIS AUT BQ 1 445,842 13 223,939",
       "Words": [
         {
           "Text": "04/08/2025",
@@ -11694,7 +11694,7 @@
           "Bottom": 10026
         },
         {
-          "Text": "\u0026VIREMENT",
+          "Text": "&VIREMENT",
           "Confidence": 80.650024,
           "Left": 582,
           "Top": 10002,

@@ -8,7 +8,7 @@
   "Document": {
     "AccountNumber": "8901769223",
     "CustomerName": "",
-    "BankName": "Banque de l\u0027Habitat (BH)",
+    "BankName": "Banque de l'Habitat (BH)",
     "Currency": "TND",
     "Balance": 346.360,
     "StatementDate": null,
@@ -305,7 +305,7 @@
     "20 JUN 23 Commission et TVA FT231713G3MW\\S98 19JUN23 2975",
     "prelevement",
     "00000000LD2202400024",
-    "20 JUN 23 Paiement FT231713G3MW\\S98 _19JUN23 \u002B6",
+    "20 JUN 23 Paiement FT231713G3MW\\S98 _19JUN23 +6",
     "Prelevement 000115",
     "00000000LD2202400024",
     "20 JUN 23 TVA sur Com 546810 CHG2317159563\\TN1 19JUN23 0",
@@ -4010,7 +4010,7 @@
       "Bottom": 5128
     },
     {
-      "Text": "\u002B6",
+      "Text": "+6",
       "Confidence": 63.78164,
       "Left": 1226,
       "Top": 5106,
@@ -12397,7 +12397,7 @@
       ]
     },
     {
-      "LineText": "20 JUN 23 Paiement FT231713G3MW\\S98 _19JUN23 \u002B6",
+      "LineText": "20 JUN 23 Paiement FT231713G3MW\\S98 _19JUN23 +6",
       "Words": [
         {
           "Text": "Paiement",
@@ -12448,7 +12448,7 @@
           "Bottom": 5128
         },
         {
-          "Text": "\u002B6",
+          "Text": "+6",
           "Confidence": 63.78164,
           "Left": 1226,
           "Top": 5106,

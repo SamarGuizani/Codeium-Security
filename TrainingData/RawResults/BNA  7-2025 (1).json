@@ -64,7 +64,7 @@
       },
       {
         "Date": "01/07/2025",
-        "Description": "Com recherche / crédits d\u0027exploitation courante, eng/ sign \u0026",
+        "Description": "Com recherche / crédits d'exploitation courante, eng/ sign &",
         "Debit": 300.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -148,7 +148,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 40.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -169,7 +169,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 17.500,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -183,7 +183,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 50.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -204,7 +204,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 2.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -218,7 +218,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 15.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -239,7 +239,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 40.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -260,7 +260,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 25.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -295,7 +295,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 15.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -316,7 +316,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 10.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -337,7 +337,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 17.500,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -351,7 +351,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com cautions sur marchés \u0026 cautions bancaires",
+        "Description": "Com cautions sur marchés & cautions bancaires",
         "Debit": 159.506,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -365,7 +365,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com cautions sur marchés \u0026 cautions bancaires",
+        "Description": "Com cautions sur marchés & cautions bancaires",
         "Debit": 10.495,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -386,7 +386,7 @@
       },
       {
         "Date": "04/07/2025",
-        "Description": "Com cautions sur marchés \u0026 cautions bancaires",
+        "Description": "Com cautions sur marchés & cautions bancaires",
         "Debit": 69.864,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -841,7 +841,7 @@
       },
       {
         "Date": "29/07/2025",
-        "Description": "Com frais d\u0027émission",
+        "Description": "Com frais d'émission",
         "Debit": 50.004,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -904,7 +904,7 @@
       },
       {
         "Date": "28/07/2025",
-        "Description": "Com autres cautions \u0026 autres engagements par signature",
+        "Description": "Com autres cautions & autres engagements par signature",
         "Debit": 25.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -925,7 +925,7 @@
       },
       {
         "Date": "28/07/2025",
-        "Description": "Com frais d\u0027émission",
+        "Description": "Com frais d'émission",
         "Debit": 50.004,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -946,7 +946,7 @@
       },
       {
         "Date": "30/07/2025",
-        "Description": "Com frais d\u0027émission",
+        "Description": "Com frais d'émission",
         "Debit": 50.004,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -988,7 +988,7 @@
       },
       {
         "Date": "30/07/2025",
-        "Description": "Com frais d\u0027émission",
+        "Description": "Com frais d'émission",
         "Debit": 50.004,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1030,7 +1030,7 @@
       },
       {
         "Date": "30/07/2025",
-        "Description": "Com frais d\u0027émission",
+        "Description": "Com frais d'émission",
         "Debit": 50.004,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1051,7 +1051,7 @@
       },
       {
         "Date": "30/07/2025",
-        "Description": "Com cautions sur marchés \u0026 cautions bancaires",
+        "Description": "Com cautions sur marchés & cautions bancaires",
         "Debit": 44.31,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1070,7 +1070,7 @@
     "BNA BANK",
     "BANQUE NATIONALE AGRICOLE الفلاحي",
     "الفلاحي الوطني البنك",
-    "Société Anonyme au capital de 320.000.000 \u0022\u0022 320.000.000* مالها رأس اللسم خفية شركة",
+    "Société Anonyme au capital de 320.000.000 \"\" 320.000.000* مالها رأس اللسم خفية شركة",
     "Tunis le :03/08/25 14:28",
     "BNA E-BANKING Page 1 /1",
     "EXTRAIT DU COMPTE",
@@ -1088,12 +1088,12 @@
     "Com retrait espèce par nos porteurs sur GAB BNA 30/06/2025 1300",
     "TVA 30/06/2025 0.000",
     " 02/07/2025  01/07/2025 0.00 9 187.298",
-    "Prélèvement frais d\u0027abonnement BNA eBanking 73122020",
+    "Prélèvement frais d'abonnement BNA eBanking 73122020",
     "Com abonnement BNA eBANKING PRO 01/07/2025 10.000",
     "TVA 01/07/2025 1.900",
     " 02/07/2025    5 0.00 7 640.298",
     "Perception de commission de mise en place décision autre que",
-    "Com recherche / crédits d\u0027exploitation courante, eng/ sign \u0026  01/07/2025 300.000",
+    "Com recherche / crédits d'exploitation courante, eng/ sign &  01/07/2025 300.000",
     "1",
     "TVA 01/07/2025 247.000",
     "02/07/2025  Retrait même compte client OM N°0005262798 01/07/2025 3 000.000 4 640.298",
@@ -1108,35 +1108,35 @@
     "TVA 03/07/2025 035",
     "04/07/2025  Retrait méme 296008 sur compte client OM N°0005323774 03/07/2025 4 500.000 -1 552.677",
     "04/07/2025 Prélèvement périodique des commissions CREDIT EPS N° 04/07/2025 0.000 -1 600.277",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 40.000",
+    "Com autres cautions & autres engagements par signature 04/07/2025 40.000",
     "TVA 04/07/2025 7.600",
     " 04/07/2025  04/07/2025 0.00 621.102",
     "Prélèvement périodique des commissions CREDIT EPS N° -1",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 17.500",
+    "Com autres cautions & autres engagements par signature 04/07/2025 17.500",
     "TVA 04/07/2025 3-58",
     " 04/07/2025 CREDIT EPS N° 04/07/2025 0.00 -1 680.602",
     "Prélèvement périodique des commissions",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 50.000",
+    "Com autres cautions & autres engagements par signature 04/07/2025 50.000",
     "TVA 04/07/2025 9.500",
     " 04/07/2025  04/07/2025 0.00 682.982",
     "Prélèvement périodique des commissions CREDIT EPS N° -1",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 2.000",
+    "Com autres cautions & autres engagements par signature 04/07/2025 2.000",
     "TVA 04/07/2025 0-0",
     " 04/07/2025 CREDIT EPS N° 04/07/2025 0.00 -1 700.832",
     "Prélèvement périodique des commissions",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 15.000",
+    "Com autres cautions & autres engagements par signature 04/07/2025 15.000",
     "TVA 04/07/2025 2.850",
     " 04/07/2025 04/07/2025 0.00 748.432",
     "Prélèvement périodique des commissions CREDIT EPS N° -1",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 40.000",
+    "Com autres cautions & autres engagements par signature 04/07/2025 40.000",
     "TVA 04/07/2025 7.600",
     " 04/07/2025 CREDIT EPS N° 04/07/2025 0.00 -1 778.182",
     "Prélèvement périodique des commissions",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 25.000",
+    "Com autres cautions & autres engagements par signature 04/07/2025 25.000",
     "TVA 04/07/2025 4.750",
     " 04/07/2025  CREDIT EPS N° 04/07/2025 0.00 -1784.132",
     "Prélèvement périodique قعل commissions",
-    "Com autres cautions \u0026 autres engagements signature 5.000",
+    "Com autres cautions & autres engagements signature 5.000",
     "par 04/07/2025",
     "50106",
     "à ce jour sauf erreur ناه 7 -13 825.390",
@@ -1147,27 +1147,27 @@
     "TVA 04/07/2025 0.95",
     " 04/07/2025  CREDIT EPS N° 04/07/2025 0.000 -1 801.982",
     "Prélèvement périodique des commissions",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 15.000",
+    "Com autres cautions & autres engagements par signature 04/07/2025 15.000",
     "TVA 04/07/2025 2.850",
     " 04/07/2025  CREDIT EPS N° 04/07/2025 0.000 813.882",
     "Prélèvement périodique قعل commissions -1",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 10.000",
+    "Com autres cautions & autres engagements par signature 04/07/2025 10.000",
     "TVA 04/07/2025 1.900",
     " 04/07/2025 CREDIT EPS N° 04/07/2025 0.000 -1 834.707",
     "Prélèvement périodique des commissions",
-    "Com autres cautions \u0026 autres engagements par signature 04/07/2025 17.500",
+    "Com autres cautions & autres engagements par signature 04/07/2025 17.500",
     "TVA 04/07/2025 3-58",
     " 04/07/2025 CREDIT EPS N° 04/07/2025 0.000 -2 024.519",
     "Prélèvement périodique des commissions",
-    "Com cautions sur marchés \u0026 cautions bancaires 04/07/2025 159.506",
+    "Com cautions sur marchés & cautions bancaires 04/07/2025 159.506",
     "TVA 04/07/2025 30-86",
     " 04/07/2025  CREDIT EPS N° 04/07/2025 0.000 -2 037.008",
     "Prélèvement périodique des commissions",
-    "Com cautions sur marchés \u0026 cautions bancaires 04/07/2025 10.495",
+    "Com cautions sur marchés & cautions bancaires 04/07/2025 10.495",
     "TVA 04/07/2025 1.994",
     " 04/07/2025 CREDIT EPS N° 04/07/2025 0.000 -2 120.146",
     "Prélèvement périodique des commissions",
-    "Com cautions sur marchés \u0026 cautions bancaires 04/07/2025 69.864",
+    "Com cautions sur marchés & cautions bancaires 04/07/2025 69.864",
     "TVA 04/07/2025 13.274",
     "07/07/2025  Apurement automatique 07/07/2025 0.000 -2 120.146",
     "07/07/2025  Déréservation Montant chéque 8868040 07/07/2025 1 500.000 -620.146",
@@ -1220,13 +1220,13 @@
     "Com retrait guichet/Monétique sur compte débiteur 14/07/2025 1.000",
     "TVA 14/07/2025 0.190",
     " 16/07/2025  16/07/2025 2 500.000 -17 820.412",
-    "Exécution virement permanent à I\u0027échéance 010202506072",
+    "Exécution virement permanent à I'échéance 010202506072",
     "lSolde",
     "à ce jour sauf erreur ou omission -13 825.390",
     "Page 4",
     " ",
     "Date Libellé Valeur Débit Crédit Solde",
-    "Exécution virement permanent à I\u0027échéance 010202506072",
+    "Exécution virement permanent à I'échéance 010202506072",
     "Com virement de masse 15/07/2025 2.00",
     "TVA 15/07/2025 0.38",
     "16/07/2025  Arrêté de compte 30/06/2025 1 300.448j -19 120.860",
@@ -1260,7 +1260,7 @@
     "TVA 24/07/2025 0-0",
     " 29/07/2025  EPS 29/07/2025 0.000 -11 034.568",
     "Utilisation",
-    "Com frais d\u0027émission 29/07/2025 50.004",
+    "Com frais d'émission 29/07/2025 50.004",
     "TVA 29/07/2025 9.50",
     "l 29/07/2025  CREDIT EPS N° 29/07/2025 0.000 -11 155.644",
     "Prélèvement périodique قعل commissions",
@@ -1272,15 +1272,15 @@
     "TVA 28/07/2025 12.350",
     " 29/07/2025  CREDIT EPS N° 28/07/2025 0.000 -11 262.744",
     "Prélèvement périodique قعل commissions",
-    "Com autres cautions \u0026 autres engagements par signature 28/07/2025 25.000",
+    "Com autres cautions & autres engagements par signature 28/07/2025 25.000",
     "TVA 28/07/2025 4.750",
     " 29/07/2025  EPS 28/07/2025 0.000 -11 322.244",
     "Utilisation",
-    "Com frais d\u0027émission 28/07/2025 50.004",
+    "Com frais d'émission 28/07/2025 50.004",
     "TVA 28/07/2025 9.50",
     " 30/07/2025  EPS 30/07/2025 0.000 -11 381.744",
     "Utilisation",
-    "Com frais d\u0027émission 30/07/2025 50.004",
+    "Com frais d'émission 30/07/2025 50.004",
     "TVA 30/07/2025 9.500",
     " 30/07/2025 CREDIT EPS N° 30/07/2025 0.000 -11 509.669",
     "Prélèvement périodique des commissions",
@@ -1288,7 +1288,7 @@
     "TVA 30/07/2025 20.428",
     " 30/07/2025  EPS 30/07/2025 0.000 -11 569.169",
     "Utilisation",
-    "Com frais d\u0027émission 30/07/2025 50.004",
+    "Com frais d'émission 30/07/2025 50.004",
     "TVA 30/07/2025 9.500",
     " 30/07/2025 30/07/2025 0.000 -11 697.689",
     "Prélèvement périodique des commissions CREDIT EPS N°",
@@ -1296,11 +1296,11 @@
     "TVA 30/07/2025 20.520",
     " 30/07/2025  EPS 30/07/2025 0.000 -11 757.189",
     "Utilisation",
-    "Com frais d\u0027émission 30/07/2025 50.004",
+    "Com frais d'émission 30/07/2025 50.004",
     "TVA 30/07/2025 9.50",
     " 30/07/2025  30/07/2025 0.000 -11 809.920",
     "Prélevement périodique des commissions CREDIT EPS N°",
-    "Com cautions sur marchés \u0026 cautions bancaires 30/07/2025 44.31",
+    "Com cautions sur marchés & cautions bancaires 30/07/2025 44.31",
     "lSolde",
     "à ce jour sauf erreur ou omission -13 825.390",
     "Page 3/4",
@@ -1386,7 +1386,7 @@
       "Bottom": 94
     },
     {
-      "Text": "\u0022\u0022",
+      "Text": "\"\"",
       "Confidence": 74.187546,
       "Left": 533,
       "Top": 75,
@@ -2642,7 +2642,7 @@
       "Bottom": 945
     },
     {
-      "Text": "d\u0027abonnement",
+      "Text": "d'abonnement",
       "Confidence": 82.3448,
       "Left": 363,
       "Top": 930,
@@ -2970,7 +2970,7 @@
       "Bottom": 1084
     },
     {
-      "Text": "d\u0027exploitation",
+      "Text": "d'exploitation",
       "Confidence": 91.287125,
       "Left": 447,
       "Top": 1069,
@@ -3002,7 +3002,7 @@
       "Bottom": 1089
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 96.65545,
       "Left": 764,
       "Top": 1068,
@@ -3978,7 +3978,7 @@
       "Bottom": 1559
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.275795,
       "Left": 417,
       "Top": 1543,
@@ -4194,7 +4194,7 @@
       "Bottom": 1668
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.29851,
       "Left": 417,
       "Top": 1652,
@@ -4402,7 +4402,7 @@
       "Bottom": 1778
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.29851,
       "Left": 417,
       "Top": 1762,
@@ -4618,7 +4618,7 @@
       "Bottom": 1887
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.29851,
       "Left": 417,
       "Top": 1871,
@@ -4826,7 +4826,7 @@
       "Bottom": 1997
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.29851,
       "Left": 417,
       "Top": 1981,
@@ -5034,7 +5034,7 @@
       "Bottom": 2106
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.275795,
       "Left": 417,
       "Top": 2090,
@@ -5242,7 +5242,7 @@
       "Bottom": 2215
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.29851,
       "Left": 417,
       "Top": 2199,
@@ -5450,7 +5450,7 @@
       "Bottom": 2325
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 92.82028,
       "Left": 417,
       "Top": 2309,
@@ -5898,7 +5898,7 @@
       "Bottom": 3234
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.29851,
       "Left": 417,
       "Top": 3218,
@@ -6114,7 +6114,7 @@
       "Bottom": 3344
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.29851,
       "Left": 417,
       "Top": 3328,
@@ -6322,7 +6322,7 @@
       "Bottom": 3453
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.29851,
       "Left": 417,
       "Top": 3437,
@@ -6538,7 +6538,7 @@
       "Bottom": 3563
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.30141,
       "Left": 475,
       "Top": 3547,
@@ -6746,7 +6746,7 @@
       "Bottom": 3672
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.27138,
       "Left": 475,
       "Top": 3656,
@@ -6946,7 +6946,7 @@
       "Bottom": 3782
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.30141,
       "Left": 475,
       "Top": 3766,
@@ -9746,7 +9746,7 @@
       "Bottom": 5320
     },
     {
-      "Text": "I\u0027échéance",
+      "Text": "I'échéance",
       "Confidence": 75.6226,
       "Left": 511,
       "Top": 5305,
@@ -9994,7 +9994,7 @@
       "Bottom": 6111
     },
     {
-      "Text": "I\u0027échéance",
+      "Text": "I'échéance",
       "Confidence": 82.87526,
       "Left": 511,
       "Top": 6096,
@@ -11938,7 +11938,7 @@
       "Bottom": 7200
     },
     {
-      "Text": "d\u0027émission",
+      "Text": "d'émission",
       "Confidence": 91.994995,
       "Left": 313,
       "Top": 7185,
@@ -12522,7 +12522,7 @@
       "Bottom": 7528
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.29851,
       "Left": 417,
       "Top": 7512,
@@ -12690,7 +12690,7 @@
       "Bottom": 7637
     },
     {
-      "Text": "d\u0027émission",
+      "Text": "d'émission",
       "Confidence": 91.994995,
       "Left": 313,
       "Top": 7622,
@@ -12826,7 +12826,7 @@
       "Bottom": 7747
     },
     {
-      "Text": "d\u0027émission",
+      "Text": "d'émission",
       "Confidence": 91.994995,
       "Left": 313,
       "Top": 7732,
@@ -13138,7 +13138,7 @@
       "Bottom": 7966
     },
     {
-      "Text": "d\u0027émission",
+      "Text": "d'émission",
       "Confidence": 91.994995,
       "Left": 313,
       "Top": 7951,
@@ -13450,7 +13450,7 @@
       "Bottom": 8185
     },
     {
-      "Text": "d\u0027émission",
+      "Text": "d'émission",
       "Confidence": 91.994995,
       "Left": 313,
       "Top": 8170,
@@ -13642,7 +13642,7 @@
       "Bottom": 8294
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.30141,
       "Left": 475,
       "Top": 8278,
@@ -14192,10 +14192,10 @@
       ]
     },
     {
-      "LineText": "Société Anonyme au capital de 320.000.000 \u0022\u0022 320.000.000* مالها رأس اللسم خفية شركة",
+      "LineText": "Société Anonyme au capital de 320.000.000 \"\" 320.000.000* مالها رأس اللسم خفية شركة",
       "Words": [
         {
-          "Text": "\u0022\u0022",
+          "Text": "\"\"",
           "Confidence": 74.187546,
           "Left": 533,
           "Top": 75,
@@ -15530,7 +15530,7 @@
       ]
     },
     {
-      "LineText": "Prélèvement frais d\u0027abonnement BNA eBanking 73122020",
+      "LineText": "Prélèvement frais d'abonnement BNA eBanking 73122020",
       "Words": [
         {
           "Text": "frais",
@@ -15549,7 +15549,7 @@
           "Bottom": 945
         },
         {
-          "Text": "d\u0027abonnement",
+          "Text": "d'abonnement",
           "Confidence": 82.3448,
           "Left": 363,
           "Top": 930,
@@ -15835,7 +15835,7 @@
       ]
     },
     {
-      "LineText": "Com recherche / crédits d\u0027exploitation courante, eng/ sign \u0026  01/07/2025 300.000",
+      "LineText": "Com recherche / crédits d'exploitation courante, eng/ sign &  01/07/2025 300.000",
       "Words": [
         {
           "Text": "",
@@ -15870,7 +15870,7 @@
           "Bottom": 1089
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 96.65545,
           "Left": 764,
           "Top": 1068,
@@ -15894,7 +15894,7 @@
           "Bottom": 1084
         },
         {
-          "Text": "d\u0027exploitation",
+          "Text": "d'exploitation",
           "Confidence": 91.287125,
           "Left": 447,
           "Top": 1069,
@@ -16926,7 +16926,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 40.000",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 40.000",
       "Words": [
         {
           "Text": "Com",
@@ -16937,7 +16937,7 @@
           "Bottom": 1559
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.275795,
           "Left": 417,
           "Top": 1543,
@@ -17162,7 +17162,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 17.500",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 17.500",
       "Words": [
         {
           "Text": "Com",
@@ -17173,7 +17173,7 @@
           "Bottom": 1668
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.29851,
           "Left": 417,
           "Top": 1652,
@@ -17390,7 +17390,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 50.000",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 50.000",
       "Words": [
         {
           "Text": "Com",
@@ -17401,7 +17401,7 @@
           "Bottom": 1778
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.29851,
           "Left": 417,
           "Top": 1762,
@@ -17626,7 +17626,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 2.000",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 2.000",
       "Words": [
         {
           "Text": "Com",
@@ -17637,7 +17637,7 @@
           "Bottom": 1887
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.29851,
           "Left": 417,
           "Top": 1871,
@@ -17854,7 +17854,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 15.000",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 15.000",
       "Words": [
         {
           "Text": "Com",
@@ -17865,7 +17865,7 @@
           "Bottom": 1997
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.29851,
           "Left": 417,
           "Top": 1981,
@@ -18082,7 +18082,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 40.000",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 40.000",
       "Words": [
         {
           "Text": "Com",
@@ -18093,7 +18093,7 @@
           "Bottom": 2106
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.275795,
           "Left": 417,
           "Top": 2090,
@@ -18310,7 +18310,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 25.000",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 25.000",
       "Words": [
         {
           "Text": "Com",
@@ -18321,7 +18321,7 @@
           "Bottom": 2215
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.29851,
           "Left": 417,
           "Top": 2199,
@@ -18538,7 +18538,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements signature 5.000",
+      "LineText": "Com autres cautions & autres engagements signature 5.000",
       "Words": [
         {
           "Text": "5.000",
@@ -18557,7 +18557,7 @@
           "Bottom": 2325
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 92.82028,
           "Left": 417,
           "Top": 2309,
@@ -19041,7 +19041,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 15.000",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 15.000",
       "Words": [
         {
           "Text": "Com",
@@ -19052,7 +19052,7 @@
           "Bottom": 3234
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.29851,
           "Left": 417,
           "Top": 3218,
@@ -19277,7 +19277,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 10.000",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 10.000",
       "Words": [
         {
           "Text": "Com",
@@ -19288,7 +19288,7 @@
           "Bottom": 3344
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.29851,
           "Left": 417,
           "Top": 3328,
@@ -19505,7 +19505,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 04/07/2025 17.500",
+      "LineText": "Com autres cautions & autres engagements par signature 04/07/2025 17.500",
       "Words": [
         {
           "Text": "Com",
@@ -19516,7 +19516,7 @@
           "Bottom": 3453
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.29851,
           "Left": 417,
           "Top": 3437,
@@ -19733,7 +19733,7 @@
       ]
     },
     {
-      "LineText": "Com cautions sur marchés \u0026 cautions bancaires 04/07/2025 159.506",
+      "LineText": "Com cautions sur marchés & cautions bancaires 04/07/2025 159.506",
       "Words": [
         {
           "Text": "Com",
@@ -19744,7 +19744,7 @@
           "Bottom": 3563
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.30141,
           "Left": 475,
           "Top": 3547,
@@ -19961,7 +19961,7 @@
       ]
     },
     {
-      "LineText": "Com cautions sur marchés \u0026 cautions bancaires 04/07/2025 10.495",
+      "LineText": "Com cautions sur marchés & cautions bancaires 04/07/2025 10.495",
       "Words": [
         {
           "Text": "Com",
@@ -19972,7 +19972,7 @@
           "Bottom": 3672
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.27138,
           "Left": 475,
           "Top": 3656,
@@ -20181,7 +20181,7 @@
       ]
     },
     {
-      "LineText": "Com cautions sur marchés \u0026 cautions bancaires 04/07/2025 69.864",
+      "LineText": "Com cautions sur marchés & cautions bancaires 04/07/2025 69.864",
       "Words": [
         {
           "Text": "Com",
@@ -20192,7 +20192,7 @@
           "Bottom": 3782
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.30141,
           "Left": 475,
           "Top": 3766,
@@ -23286,7 +23286,7 @@
       ]
     },
     {
-      "LineText": "Exécution virement permanent à I\u0027échéance 010202506072",
+      "LineText": "Exécution virement permanent à I'échéance 010202506072",
       "Words": [
         {
           "Text": "Exécution",
@@ -23321,7 +23321,7 @@
           "Bottom": 5320
         },
         {
-          "Text": "I\u0027échéance",
+          "Text": "I'échéance",
           "Confidence": 75.6226,
           "Left": 511,
           "Top": 5305,
@@ -23524,7 +23524,7 @@
       ]
     },
     {
-      "LineText": "Exécution virement permanent à I\u0027échéance 010202506072",
+      "LineText": "Exécution virement permanent à I'échéance 010202506072",
       "Words": [
         {
           "Text": "Exécution",
@@ -23559,7 +23559,7 @@
           "Bottom": 6111
         },
         {
-          "Text": "I\u0027échéance",
+          "Text": "I'échéance",
           "Confidence": 82.87526,
           "Left": 511,
           "Top": 6096,
@@ -25654,7 +25654,7 @@
       ]
     },
     {
-      "LineText": "Com frais d\u0027émission 29/07/2025 50.004",
+      "LineText": "Com frais d'émission 29/07/2025 50.004",
       "Words": [
         {
           "Text": "Com",
@@ -25673,7 +25673,7 @@
           "Bottom": 7200
         },
         {
-          "Text": "d\u0027émission",
+          "Text": "d'émission",
           "Confidence": 91.994995,
           "Left": 313,
           "Top": 7185,
@@ -26290,7 +26290,7 @@
       ]
     },
     {
-      "LineText": "Com autres cautions \u0026 autres engagements par signature 28/07/2025 25.000",
+      "LineText": "Com autres cautions & autres engagements par signature 28/07/2025 25.000",
       "Words": [
         {
           "Text": "Com",
@@ -26301,7 +26301,7 @@
           "Bottom": 7528
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.29851,
           "Left": 417,
           "Top": 7512,
@@ -26486,7 +26486,7 @@
       ]
     },
     {
-      "LineText": "Com frais d\u0027émission 28/07/2025 50.004",
+      "LineText": "Com frais d'émission 28/07/2025 50.004",
       "Words": [
         {
           "Text": "Com",
@@ -26505,7 +26505,7 @@
           "Bottom": 7637
         },
         {
-          "Text": "d\u0027émission",
+          "Text": "d'émission",
           "Confidence": 91.994995,
           "Left": 313,
           "Top": 7622,
@@ -26642,7 +26642,7 @@
       ]
     },
     {
-      "LineText": "Com frais d\u0027émission 30/07/2025 50.004",
+      "LineText": "Com frais d'émission 30/07/2025 50.004",
       "Words": [
         {
           "Text": "Com",
@@ -26661,7 +26661,7 @@
           "Bottom": 7747
         },
         {
-          "Text": "d\u0027émission",
+          "Text": "d'émission",
           "Confidence": 91.994995,
           "Left": 313,
           "Top": 7732,
@@ -26994,7 +26994,7 @@
       ]
     },
     {
-      "LineText": "Com frais d\u0027émission 30/07/2025 50.004",
+      "LineText": "Com frais d'émission 30/07/2025 50.004",
       "Words": [
         {
           "Text": "Com",
@@ -27013,7 +27013,7 @@
           "Bottom": 7966
         },
         {
-          "Text": "d\u0027émission",
+          "Text": "d'émission",
           "Confidence": 91.994995,
           "Left": 313,
           "Top": 7951,
@@ -27346,7 +27346,7 @@
       ]
     },
     {
-      "LineText": "Com frais d\u0027émission 30/07/2025 50.004",
+      "LineText": "Com frais d'émission 30/07/2025 50.004",
       "Words": [
         {
           "Text": "Com",
@@ -27365,7 +27365,7 @@
           "Bottom": 8185
         },
         {
-          "Text": "d\u0027émission",
+          "Text": "d'émission",
           "Confidence": 91.994995,
           "Left": 313,
           "Top": 8170,
@@ -27542,7 +27542,7 @@
       ]
     },
     {
-      "LineText": "Com cautions sur marchés \u0026 cautions bancaires 30/07/2025 44.31",
+      "LineText": "Com cautions sur marchés & cautions bancaires 30/07/2025 44.31",
       "Words": [
         {
           "Text": "Com",
@@ -27553,7 +27553,7 @@
           "Bottom": 8294
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.30141,
           "Left": 475,
           "Top": 8278,

@@ -458,7 +458,7 @@
     "BANQUE",
     "الا اا د",
     "ا",
-    "Titulaire du \u0027compte",
+    "Titulaire du 'compte",
     "RIB : 08 307 00059 10 02049 0 36 STE TOPDIS",
     "Rue 8600 n92",
     ",",
@@ -507,9 +507,9 @@
     "16 06 REGLEMENT CHEQUE 0000147 15062023 3.000,000",
     "الجملة",
     "TOTAUX",
-    "TE ب \u003Eحلاابا TUNISIEN الرصيد",
+    "TE ب >حلاابا TUNISIEN الرصيد",
     "Devise SOLDE",
-    "En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو \u0026) الا",
+    "En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا",
     "» cas sur ce nous vous agence عدم .",
     "dans un délai maximum de 20 jours, à dater de ذا réception dudit relevé. له. استلامكم تاريخ من logs عشرون ا",
     "المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان *",
@@ -526,7 +526,7 @@
     "BANQUE",
     "الا اا د",
     "ا",
-    "Titulaire du \u0027compte",
+    "Titulaire du 'compte",
     "RIB : 08 307 00059 10 02049 0 36 STE TOPDIS",
     "Rue 8600 n92",
     ",",
@@ -534,8 +534,8 @@
     "N°de compte",
     "59 10 02049 0 30 06 2023 2035 TUNIS CARTHAGE",
     "Cher client, الكريم حريقنا",
-    "Nous avons l\u0027honneur de ci-dessous le relevé détaillé des opérations :",
-    "vous communiquer \u003C .",
+    "Nous avons l'honneur de ci-dessous le relevé détaillé des opérations :",
+    "vous communiquer < .",
     "inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف",
     "التاريخ el عليه",
     "العملية بيان تاريخ له",
@@ -576,7 +576,7 @@
     "TOTAUX 75.120,679 77.100,438",
     "الس T INAR v TUNISIEN الرصيد",
     "SOLDE 1.979,759",
-    "En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو \u0026) الا",
+    "En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا",
     "» cas sur ce nous vous agence عدم .",
     "dans un délai maximum de 20 jours, à dater de ذا réception dudit relevé. له. استلامكم تاريخ من logs عشرون ا",
     "dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان *",
@@ -765,7 +765,7 @@
       "Bottom": 435
     },
     {
-      "Text": "\u0027compte",
+      "Text": "'compte",
       "Confidence": 49.452446,
       "Left": 1319,
       "Top": 409,
@@ -3397,7 +3397,7 @@
       "Bottom": 2189
     },
     {
-      "Text": "\u003Eحلاابا",
+      "Text": ">حلاابا",
       "Confidence": 0,
       "Left": 179,
       "Top": 2151,
@@ -3685,7 +3685,7 @@
       "Bottom": 2253
     },
     {
-      "Text": "\u0026)",
+      "Text": "&)",
       "Confidence": 78.60198,
       "Left": 1647,
       "Top": 2237,
@@ -5189,7 +5189,7 @@
       "Bottom": 3338
     },
     {
-      "Text": "\u0027compte",
+      "Text": "'compte",
       "Confidence": 49.452446,
       "Left": 1319,
       "Top": 3312,
@@ -5485,7 +5485,7 @@
       "Bottom": 3656
     },
     {
-      "Text": "l\u0027honneur",
+      "Text": "l'honneur",
       "Confidence": 91.33359,
       "Left": 149,
       "Top": 3632,
@@ -5565,7 +5565,7 @@
       "Bottom": 3652
     },
     {
-      "Text": "\u003C",
+      "Text": "<",
       "Confidence": 66.98927,
       "Left": 1492,
       "Top": 3650,
@@ -8189,7 +8189,7 @@
       "Bottom": 5156
     },
     {
-      "Text": "\u0026)",
+      "Text": "&)",
       "Confidence": 78.60198,
       "Left": 1647,
       "Top": 5140,
@@ -9799,7 +9799,7 @@
       ]
     },
     {
-      "LineText": "Titulaire du \u0027compte",
+      "LineText": "Titulaire du 'compte",
       "Words": [
         {
           "Text": "Titulaire",
@@ -9810,7 +9810,7 @@
           "Bottom": 435
         },
         {
-          "Text": "\u0027compte",
+          "Text": "'compte",
           "Confidence": 49.452446,
           "Left": 1319,
           "Top": 409,
@@ -12684,7 +12684,7 @@
       ]
     },
     {
-      "LineText": "TE ب \u003Eحلاابا TUNISIEN الرصيد",
+      "LineText": "TE ب >حلاابا TUNISIEN الرصيد",
       "Words": [
         {
           "Text": "الرصيد",
@@ -12695,7 +12695,7 @@
           "Bottom": 2185
         },
         {
-          "Text": "\u003Eحلاابا",
+          "Text": ">حلاابا",
           "Confidence": 0,
           "Left": 179,
           "Top": 2151,
@@ -12750,7 +12750,7 @@
       ]
     },
     {
-      "LineText": "En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو \u0026) الا",
+      "LineText": "En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا",
       "Words": [
         {
           "Text": "مسخكم",
@@ -12897,7 +12897,7 @@
           "Bottom": 2254
         },
         {
-          "Text": "\u0026)",
+          "Text": "&)",
           "Confidence": 78.60198,
           "Left": 1647,
           "Top": 2237,
@@ -14563,7 +14563,7 @@
       ]
     },
     {
-      "LineText": "Titulaire du \u0027compte",
+      "LineText": "Titulaire du 'compte",
       "Words": [
         {
           "Text": "Titulaire",
@@ -14574,7 +14574,7 @@
           "Bottom": 3338
         },
         {
-          "Text": "\u0027compte",
+          "Text": "'compte",
           "Confidence": 49.452446,
           "Left": 1319,
           "Top": 3312,
@@ -14891,7 +14891,7 @@
       ]
     },
     {
-      "LineText": "Nous avons l\u0027honneur de ci-dessous le relevé détaillé des opérations :",
+      "LineText": "Nous avons l'honneur de ci-dessous le relevé détaillé des opérations :",
       "Words": [
         {
           "Text": ":",
@@ -14910,7 +14910,7 @@
           "Bottom": 3656
         },
         {
-          "Text": "l\u0027honneur",
+          "Text": "l'honneur",
           "Confidence": 91.33359,
           "Left": 149,
           "Top": 3632,
@@ -14984,7 +14984,7 @@
       ]
     },
     {
-      "LineText": "vous communiquer \u003C .",
+      "LineText": "vous communiquer < .",
       "Words": [
         {
           "Text": "vous",
@@ -15003,7 +15003,7 @@
           "Bottom": 3652
         },
         {
-          "Text": "\u003C",
+          "Text": "<",
           "Confidence": 66.98927,
           "Left": 1492,
           "Top": 3650,
@@ -17589,7 +17589,7 @@
       ]
     },
     {
-      "LineText": "En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو \u0026) الا",
+      "LineText": "En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا",
       "Words": [
         {
           "Text": "مسخكم",
@@ -17736,7 +17736,7 @@
           "Bottom": 5157
         },
         {
-          "Text": "\u0026)",
+          "Text": "&)",
           "Confidence": 78.60198,
           "Left": 1647,
           "Top": 5140,

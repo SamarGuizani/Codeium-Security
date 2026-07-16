@@ -43,7 +43,7 @@
       },
       {
         "Date": "01/04/4946",
-        "Description": "| Commission d\u0027encaissement effet ENC",
+        "Description": "| Commission d'encaissement effet ENC",
         "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -71,7 +71,7 @@
       },
       {
         "Date": "01/05/0215",
-        "Description": "| Commission d\u0027encaissement effet ENC",
+        "Description": "| Commission d'encaissement effet ENC",
         "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -316,7 +316,7 @@
       },
       {
         "Date": "01/03/2961",
-        "Description": "| Commission d\u0027encaissement effet ENC",
+        "Description": "| Commission d'encaissement effet ENC",
         "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -330,7 +330,7 @@
       },
       {
         "Date": "01/03/0728",
-        "Description": "| Commission d\u0027encaissement effet ENC",
+        "Description": "| Commission d'encaissement effet ENC",
         "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -344,7 +344,7 @@
       },
       {
         "Date": "01/02/6959",
-        "Description": "| Commission d\u0027encaissement effet ENC",
+        "Description": "| Commission d'encaissement effet ENC",
         "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -358,7 +358,7 @@
       },
       {
         "Date": "01/02/0863",
-        "Description": "| Commission d\u0027encaissement effet ENC",
+        "Description": "| Commission d'encaissement effet ENC",
         "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -372,7 +372,7 @@
       },
       {
         "Date": "01/04/4946",
-        "Description": "| Commission d\u0027encaissement effet ENC",
+        "Description": "| Commission d'encaissement effet ENC",
         "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -450,12 +450,12 @@
     " 05/02/25",
     "06| Commission sur Paiement effet 010118482832 4,000",
     "06| TvA 010118482832| 05/02/25 0,760",
-    "06| Commission d\u0027encaissement effet ENC 010449466426| 05/02/25 5,500",
+    "06| Commission d'encaissement effet ENC 010449466426| 05/02/25 5,500",
     "06| TVA ENC 010449466426| 05/02/25 1,045",
     "06| Commission sur effet impaye 010328095176| 05/02/25 7,000",
     "06| TVA 010328095176| 05/02/25 1,330",
     " 06/02/25",
-    "07| Commission d\u0027encaissement effet ENC 010502154401 5,500",
+    "07| Commission d'encaissement effet ENC 010502154401 5,500",
     "07| TVA ENC 010502154401  06/02/25 1,045",
     "07| Virement recu-TUNISIE LEASING ET FA 94| 10/02/25 20.000,000",
     "07| Commission virement repu 94| 06/02/25 2,000",
@@ -476,14 +476,14 @@
     "ivé . مصلحة له التابع البنك iy الكشف مراجعة الحريف الزجاء",
     "0 من شهر أجل في خطأ سهوأو by الحرفاء",
     "تاريخه.",
-    "\u0022 , , . ضمنيا قيولا يعذ الكشف هذا مضمون على إحتراز الحريف إبداء عدم",
+    "\" , , . ضمنيا قيولا يعذ الكشف هذا مضمون على إحتراز الحريف إبداء عدم",
     "GU *",
     "ما تمصا peut aiir بمحتواه.",
     "* e médiateurde T المخنص. البنخي بالمومق الإتصال للحريف يمخن",
     "*",
     "Siège social :9, rue Hédi Nowira - 1001 Tunis",
-    "Tel:(\u002B216) 71351155",
-    "N°centre de relation client :(\u002B216) 71 34 2852",
+    "Tel:(+216) 71351155",
+    "N°centre de relation client :(+216) 71 34 2852",
     "القع : contact@albcomin Web: بجوي رطام",
     "-",
     "ATB",
@@ -495,7 +495,7 @@
     "Fevrier 2025 W",
     "Ezzahra",
     "N°de compre / Devso ;",
-    "mn\u0027uuﬂ/g……)",
+    "mn'uuﬂ/g……)",
     "088 1100 0086 42 /",
     "STE ZIKO EMBALLAGE RIB:",
     "الوطنية المصرفية الهوية معرف",
@@ -588,7 +588,7 @@
     "مصلحة أو له التابع البنك افرع وبلاء الخشف هذا مراجعة",
     "الحريف من الزجاء",
     "تارخة. من شهر أجل في خض أو سهو gl الحرفاء »",
-    "Le client peut seisir médiateur l\u0027ATB, فمنياً قبولا بعة الكشف هذا مضمون على إحتراز لأ الحريف يدا عدم",
+    "Le client peut seisir médiateur l'ATB, فمنياً قبولا بعة الكشف هذا مضمون على إحتراز لأ الحريف يدا عدم",
     "* ما de .",
     "بمحتواه.",
     "المخنص. VB بالموقق الإتصاق لتحريف يمن",
@@ -597,7 +597,7 @@
     "rue Nouira 1001 Tunis",
     "Tél:(4216)7135 1155",
     "N° centre de relation client :",
-    ")\u002B216( 71 34 2852",
+    ")+216( 71 34 2852",
     "Emai : contact@atb.com.tn Web :",
     "- wwatbin",
     "it",
@@ -704,11 +704,11 @@
     "*",
     "Siège social -, Hédi Nouira 1001 Tunis",
     "rue -",
-    "Tél:(\u002B216)71 351155",
-    "N\u0022 centre de relation client : (\u002B216) 71 34 2852",
+    "Tél:(+216)71 351155",
+    "N\" centre de relation client : (+216) 71 34 2852",
     "E-mail: contact@atb.coman Web: wwvzatbtn",
     "-",
-    "LS \u0026 ",
+    "LS & ",
     "Relevé de compte",
     "T remmeen{ [}",
     "uus كشف",
@@ -716,7 +716,7 @@
     "حيحش ١تلكإلا Dumoiedo",
     "Fevrier w",
     "2025 Ezzahra",
-    "W de compte / ماه \u0022ىآ ; العد الحساب رتم",
+    "W de compte / ماه \"ىآ ; العد الحساب رتم",
     "088 1100 0086 42 /",
     "STE 2750 EMBALLAGE 108 الوطنية المصرفية الهوية معرف",
     "01 044 0881100008642 6",
@@ -749,16 +749,16 @@
     "010118483414 26/02/25 1,330",
     "28| Ann Pai Chq Preavis 1626 4 25.28",
     "28| Paiement CHQ-à payer avec ARP 162| 27/02/25 25.672,078",
-    "28| Commission d\u0027encaissement effet ENC 010329617106 27/02/25 5,500",
+    "28| Commission d'encaissement effet ENC 010329617106 27/02/25 5,500",
     "28| TVA ENC 010329617106| 27/02/25 1,045",
-    "28| Commission d\u0027encaissement effet ENC 010307282080| 27/02/25 5,500",
+    "28| Commission d'encaissement effet ENC 010307282080| 27/02/25 5,500",
     "28 مد ENC 010307282080| 27/02/25 1,045",
     "",
-    "28| Commission d\u0027encaissement effet ENC 010269591275| 27/02/25 5,500",
+    "28| Commission d'encaissement effet ENC 010269591275| 27/02/25 5,500",
     "28| TVA ENC 010269591275| 27/02/25 1,045",
-    "28| Commission d\u0027encaissement effet ENC 01020863288656 5 5,500",
+    "28| Commission d'encaissement effet ENC 01020863288656 5 5,500",
     "28j TVA ENC 010208632886| 27/02/25 1,045",
-    "28| Commission d\u0027encaissement effet ENC 010449469627| 27/02/25 5,500",
+    "28| Commission d'encaissement effet ENC 010449469627| 27/02/25 5,500",
     "28| TVA ENC 010449469627 27/02/25 1,045",
     "28| Encaissement effet 010145141924| 03/03/25 8.470,835",
     "28| Encaissement effet 010328611022 03/03/25",
@@ -771,11 +771,11 @@
     "تاريضه. من شهر أجل في خطأ أو سهو su اتحرفاء *",
     "o قبولا يعد A UISN هذا مضمون علن إحتراز SU الحريف إبداء عدم",
     "*",
-    "* Le client peut saisir le médiateur de l\u0027ATB.",
+    "* Le client peut saisir le médiateur de l'ATB.",
     "المختصياء اتبنخي بالموفق الإتصال لتجريف يمخن *",
     "Siège social : ,9 غيم Hédi Nouira - 1001 Tunis",
     "18:21875",
-    "N° centre de relation client : (\u002B216)71 34 2852",
+    "N° centre de relation client : (+216)71 34 2852",
     "E-mail : contact@atb.coman Web :wwvwzatbin",
     "-",
     "ا",
@@ -843,8 +843,8 @@
     "المخنص. البنخي بالموقق الإتصال لتحريف يمخن *",
     " -",
     "Siège social :9, rue Hédi Nouira 1001 Tunis",
-    "Tel:(\u002B216 71351155",
-    "N\u0022 centre de relation client: (\u002B216)71 34 28 52",
+    "Tel:(+216 71351155",
+    "N\" centre de relation client: (+216)71 34 28 52",
     "E-mai : contact@atb.com.n Web: wrwnwatbtn",
     "-"
   ],
@@ -2442,7 +2442,7 @@
       "Bottom": 1131
     },
     {
-      "Text": "d\u0027encaissement",
+      "Text": "d'encaissement",
       "Confidence": 88.177376,
       "Left": 401,
       "Top": 1118,
@@ -2658,7 +2658,7 @@
       "Bottom": 1251
     },
     {
-      "Text": "d\u0027encaissement",
+      "Text": "d'encaissement",
       "Confidence": 92.16261,
       "Left": 401,
       "Top": 1239,
@@ -3858,7 +3858,7 @@
       "Bottom": 2278
     },
     {
-      "Text": "\u0022",
+      "Text": "\"",
       "Confidence": 31.187073,
       "Left": 222,
       "Top": 2276,
@@ -4066,7 +4066,7 @@
       "Bottom": 2367
     },
     {
-      "Text": "Tel:(\u002B216)",
+      "Text": "Tel:(+216)",
       "Confidence": 19.706345,
       "Left": 1089,
       "Top": 2375,
@@ -4114,7 +4114,7 @@
       "Bottom": 2413
     },
     {
-      "Text": ":(\u002B216)",
+      "Text": ":(+216)",
       "Confidence": 61.705956,
       "Left": 1250,
       "Top": 2401,
@@ -4434,7 +4434,7 @@
       "Bottom": 3266
     },
     {
-      "Text": "mn\u0027uuﬂ/g……)",
+      "Text": "mn'uuﬂ/g……)",
       "Confidence": 40.58808,
       "Left": 1142,
       "Top": 3231,
@@ -6618,7 +6618,7 @@
       "Bottom": 5267
     },
     {
-      "Text": "l\u0027ATB,",
+      "Text": "l'ATB,",
       "Confidence": 41.982468,
       "Left": 370,
       "Top": 5246,
@@ -7162,7 +7162,7 @@
       "Bottom": 5391
     },
     {
-      "Text": ")\u002B216(",
+      "Text": ")+216(",
       "Confidence": 59.566574,
       "Left": 1206,
       "Top": 5372,
@@ -10490,7 +10490,7 @@
       "Bottom": 8309
     },
     {
-      "Text": "Tél:(\u002B216)71",
+      "Text": "Tél:(+216)71",
       "Confidence": 16.801514,
       "Left": 1041,
       "Top": 8307,
@@ -10506,7 +10506,7 @@
       "Bottom": 8324
     },
     {
-      "Text": "N\u0022",
+      "Text": "N\"",
       "Confidence": 57.23146,
       "Left": 1041,
       "Top": 8331,
@@ -10554,7 +10554,7 @@
       "Bottom": 8356
     },
     {
-      "Text": "(\u002B216)",
+      "Text": "(+216)",
       "Confidence": 86.386345,
       "Left": 1208,
       "Top": 8335,
@@ -10690,7 +10690,7 @@
       "Bottom": 9051
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 94.73647,
       "Left": 1197,
       "Top": 9007,
@@ -10850,7 +10850,7 @@
       "Bottom": 9198
     },
     {
-      "Text": "\u0022ىآ",
+      "Text": "\"ىآ",
       "Confidence": 17.890839,
       "Left": 1125,
       "Top": 9147,
@@ -12394,7 +12394,7 @@
       "Bottom": 10073
     },
     {
-      "Text": "d\u0027encaissement",
+      "Text": "d'encaissement",
       "Confidence": 91.05513,
       "Left": 388,
       "Top": 10061,
@@ -12506,7 +12506,7 @@
       "Bottom": 10133
     },
     {
-      "Text": "d\u0027encaissement",
+      "Text": "d'encaissement",
       "Confidence": 92.29353,
       "Left": 387,
       "Top": 10121,
@@ -12618,7 +12618,7 @@
       "Bottom": 10194
     },
     {
-      "Text": "d\u0027encaissement",
+      "Text": "d'encaissement",
       "Confidence": 92.2636,
       "Left": 387,
       "Top": 10182,
@@ -12738,7 +12738,7 @@
       "Bottom": 10255
     },
     {
-      "Text": "d\u0027encaissement",
+      "Text": "d'encaissement",
       "Confidence": 92.09618,
       "Left": 386,
       "Top": 10243,
@@ -12850,7 +12850,7 @@
       "Bottom": 10315
     },
     {
-      "Text": "d\u0027encaissement",
+      "Text": "d'encaissement",
       "Confidence": 90.87111,
       "Left": 385,
       "Top": 10304,
@@ -13298,7 +13298,7 @@
       "Bottom": 11202
     },
     {
-      "Text": "l\u0027ATB.",
+      "Text": "l'ATB.",
       "Confidence": 50.526436,
       "Left": 393,
       "Top": 11189,
@@ -13938,7 +13938,7 @@
       "Bottom": 11313
     },
     {
-      "Text": "(\u002B216)71",
+      "Text": "(+216)71",
       "Confidence": 35.94471,
       "Left": 1230,
       "Top": 11292,
@@ -16178,7 +16178,7 @@
       "Bottom": 14222
     },
     {
-      "Text": "Tel:(\u002B216",
+      "Text": "Tel:(+216",
       "Confidence": 38.66789,
       "Left": 1036,
       "Top": 14225,
@@ -16194,7 +16194,7 @@
       "Bottom": 14243
     },
     {
-      "Text": "N\u0022",
+      "Text": "N\"",
       "Confidence": 45.179718,
       "Left": 1036,
       "Top": 14249,
@@ -16234,7 +16234,7 @@
       "Bottom": 14267
     },
     {
-      "Text": "(\u002B216)71",
+      "Text": "(+216)71",
       "Confidence": 82.63252,
       "Left": 1203,
       "Top": 14253,
@@ -18102,7 +18102,7 @@
       ]
     },
     {
-      "LineText": "06| Commission d\u0027encaissement effet ENC 010449466426| 05/02/25 5,500",
+      "LineText": "06| Commission d'encaissement effet ENC 010449466426| 05/02/25 5,500",
       "Words": [
         {
           "Text": "010449466426|",
@@ -18145,7 +18145,7 @@
           "Bottom": 1131
         },
         {
-          "Text": "d\u0027encaissement",
+          "Text": "d'encaissement",
           "Confidence": 88.177376,
           "Left": 401,
           "Top": 1118,
@@ -18359,10 +18359,10 @@
       ]
     },
     {
-      "LineText": "07| Commission d\u0027encaissement effet ENC 010502154401 5,500",
+      "LineText": "07| Commission d'encaissement effet ENC 010502154401 5,500",
       "Words": [
         {
-          "Text": "d\u0027encaissement",
+          "Text": "d'encaissement",
           "Confidence": 92.16261,
           "Left": 401,
           "Top": 1239,
@@ -19536,7 +19536,7 @@
       ]
     },
     {
-      "LineText": "\u0022 , , . ضمنيا قيولا يعذ الكشف هذا مضمون على إحتراز الحريف إبداء عدم",
+      "LineText": "\" , , . ضمنيا قيولا يعذ الكشف هذا مضمون على إحتراز الحريف إبداء عدم",
       "Words": [
         {
           "Text": "عدم",
@@ -19651,7 +19651,7 @@
           "Bottom": 2278
         },
         {
-          "Text": "\u0022",
+          "Text": "\"",
           "Confidence": 31.187073,
           "Left": 222,
           "Top": 2276,
@@ -19902,10 +19902,10 @@
       ]
     },
     {
-      "LineText": "Tel:(\u002B216) 71351155",
+      "LineText": "Tel:(+216) 71351155",
       "Words": [
         {
-          "Text": "Tel:(\u002B216)",
+          "Text": "Tel:(+216)",
           "Confidence": 19.706345,
           "Left": 1089,
           "Top": 2375,
@@ -19923,7 +19923,7 @@
       ]
     },
     {
-      "LineText": "N°centre de relation client :(\u002B216) 71 34 2852",
+      "LineText": "N°centre de relation client :(+216) 71 34 2852",
       "Words": [
         {
           "Text": "N°centre",
@@ -19958,7 +19958,7 @@
           "Bottom": 2413
         },
         {
-          "Text": ":(\u002B216)",
+          "Text": ":(+216)",
           "Confidence": 61.705956,
           "Left": 1250,
           "Top": 2401,
@@ -20295,10 +20295,10 @@
       ]
     },
     {
-      "LineText": "mn\u0027uuﬂ/g……)",
+      "LineText": "mn'uuﬂ/g……)",
       "Words": [
         {
-          "Text": "mn\u0027uuﬂ/g……)",
+          "Text": "mn'uuﬂ/g……)",
           "Confidence": 40.58808,
           "Left": 1142,
           "Top": 3231,
@@ -23152,7 +23152,7 @@
       ]
     },
     {
-      "LineText": "Le client peut seisir médiateur l\u0027ATB, فمنياً قبولا بعة الكشف هذا مضمون على إحتراز لأ الحريف يدا عدم",
+      "LineText": "Le client peut seisir médiateur l'ATB, فمنياً قبولا بعة الكشف هذا مضمون على إحتراز لأ الحريف يدا عدم",
       "Words": [
         {
           "Text": "عدم",
@@ -23291,7 +23291,7 @@
           "Bottom": 5273
         },
         {
-          "Text": "l\u0027ATB,",
+          "Text": "l'ATB,",
           "Confidence": 41.982468,
           "Left": 370,
           "Top": 5246,
@@ -23573,10 +23573,10 @@
       ]
     },
     {
-      "LineText": ")\u002B216( 71 34 2852",
+      "LineText": ")+216( 71 34 2852",
       "Words": [
         {
-          "Text": ")\u002B216(",
+          "Text": ")+216(",
           "Confidence": 59.566574,
           "Left": 1206,
           "Top": 5372,
@@ -27436,10 +27436,10 @@
       ]
     },
     {
-      "LineText": "Tél:(\u002B216)71 351155",
+      "LineText": "Tél:(+216)71 351155",
       "Words": [
         {
-          "Text": "Tél:(\u002B216)71",
+          "Text": "Tél:(+216)71",
           "Confidence": 16.801514,
           "Left": 1041,
           "Top": 8307,
@@ -27457,7 +27457,7 @@
       ]
     },
     {
-      "LineText": "N\u0022 centre de relation client : (\u002B216) 71 34 2852",
+      "LineText": "N\" centre de relation client : (+216) 71 34 2852",
       "Words": [
         {
           "Text": ":",
@@ -27468,7 +27468,7 @@
           "Bottom": 8356
         },
         {
-          "Text": "N\u0022",
+          "Text": "N\"",
           "Confidence": 57.23146,
           "Left": 1041,
           "Top": 8331,
@@ -27508,7 +27508,7 @@
           "Bottom": 8346
         },
         {
-          "Text": "(\u002B216)",
+          "Text": "(+216)",
           "Confidence": 86.386345,
           "Left": 1208,
           "Top": 8335,
@@ -27592,7 +27592,7 @@
       ]
     },
     {
-      "LineText": "LS \u0026 ",
+      "LineText": "LS & ",
       "Words": [
         {
           "Text": "LS",
@@ -27611,7 +27611,7 @@
           "Bottom": 9051
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 94.73647,
           "Left": 1197,
           "Top": 9007,
@@ -27792,7 +27792,7 @@
       ]
     },
     {
-      "LineText": "W de compte / ماه \u0022ىآ ; العد الحساب رتم",
+      "LineText": "W de compte / ماه \"ىآ ; العد الحساب رتم",
       "Words": [
         {
           "Text": "رتم",
@@ -27811,7 +27811,7 @@
           "Bottom": 9198
         },
         {
-          "Text": "\u0022ىآ",
+          "Text": "\"ىآ",
           "Confidence": 17.890839,
           "Left": 1125,
           "Top": 9147,
@@ -29549,7 +29549,7 @@
       ]
     },
     {
-      "LineText": "28| Commission d\u0027encaissement effet ENC 010329617106 27/02/25 5,500",
+      "LineText": "28| Commission d'encaissement effet ENC 010329617106 27/02/25 5,500",
       "Words": [
         {
           "Text": "28|",
@@ -29568,7 +29568,7 @@
           "Bottom": 10073
         },
         {
-          "Text": "d\u0027encaissement",
+          "Text": "d'encaissement",
           "Confidence": 91.05513,
           "Left": 388,
           "Top": 10061,
@@ -29671,7 +29671,7 @@
       ]
     },
     {
-      "LineText": "28| Commission d\u0027encaissement effet ENC 010307282080| 27/02/25 5,500",
+      "LineText": "28| Commission d'encaissement effet ENC 010307282080| 27/02/25 5,500",
       "Words": [
         {
           "Text": "28|",
@@ -29690,7 +29690,7 @@
           "Bottom": 10133
         },
         {
-          "Text": "d\u0027encaissement",
+          "Text": "d'encaissement",
           "Confidence": 92.29353,
           "Left": 387,
           "Top": 10121,
@@ -29806,7 +29806,7 @@
       ]
     },
     {
-      "LineText": "28| Commission d\u0027encaissement effet ENC 010269591275| 27/02/25 5,500",
+      "LineText": "28| Commission d'encaissement effet ENC 010269591275| 27/02/25 5,500",
       "Words": [
         {
           "Text": "28|",
@@ -29825,7 +29825,7 @@
           "Bottom": 10194
         },
         {
-          "Text": "d\u0027encaissement",
+          "Text": "d'encaissement",
           "Confidence": 92.2636,
           "Left": 387,
           "Top": 10182,
@@ -29928,7 +29928,7 @@
       ]
     },
     {
-      "LineText": "28| Commission d\u0027encaissement effet ENC 01020863288656 5 5,500",
+      "LineText": "28| Commission d'encaissement effet ENC 01020863288656 5 5,500",
       "Words": [
         {
           "Text": "28|",
@@ -29947,7 +29947,7 @@
           "Bottom": 10255
         },
         {
-          "Text": "d\u0027encaissement",
+          "Text": "d'encaissement",
           "Confidence": 92.09618,
           "Left": 386,
           "Top": 10243,
@@ -30050,7 +30050,7 @@
       ]
     },
     {
-      "LineText": "28| Commission d\u0027encaissement effet ENC 010449469627| 27/02/25 5,500",
+      "LineText": "28| Commission d'encaissement effet ENC 010449469627| 27/02/25 5,500",
       "Words": [
         {
           "Text": "28|",
@@ -30069,7 +30069,7 @@
           "Bottom": 10315
         },
         {
-          "Text": "d\u0027encaissement",
+          "Text": "d'encaissement",
           "Confidence": 90.87111,
           "Left": 385,
           "Top": 10304,
@@ -30955,7 +30955,7 @@
       ]
     },
     {
-      "LineText": "* Le client peut saisir le médiateur de l\u0027ATB.",
+      "LineText": "* Le client peut saisir le médiateur de l'ATB.",
       "Words": [
         {
           "Text": "Le",
@@ -30998,7 +30998,7 @@
           "Bottom": 11202
         },
         {
-          "Text": "l\u0027ATB.",
+          "Text": "l'ATB.",
           "Confidence": 50.526436,
           "Left": 393,
           "Top": 11189,
@@ -31191,7 +31191,7 @@
       ]
     },
     {
-      "LineText": "N° centre de relation client : (\u002B216)71 34 2852",
+      "LineText": "N° centre de relation client : (+216)71 34 2852",
       "Words": [
         {
           "Text": ":",
@@ -31242,7 +31242,7 @@
           "Bottom": 11303
         },
         {
-          "Text": "(\u002B216)71",
+          "Text": "(+216)71",
           "Confidence": 35.94471,
           "Left": 1230,
           "Top": 11292,
@@ -33819,10 +33819,10 @@
       ]
     },
     {
-      "LineText": "Tel:(\u002B216 71351155",
+      "LineText": "Tel:(+216 71351155",
       "Words": [
         {
-          "Text": "Tel:(\u002B216",
+          "Text": "Tel:(+216",
           "Confidence": 38.66789,
           "Left": 1036,
           "Top": 14225,
@@ -33840,10 +33840,10 @@
       ]
     },
     {
-      "LineText": "N\u0022 centre de relation client: (\u002B216)71 34 28 52",
+      "LineText": "N\" centre de relation client: (+216)71 34 28 52",
       "Words": [
         {
-          "Text": "N\u0022",
+          "Text": "N\"",
           "Confidence": 45.179718,
           "Left": 1036,
           "Top": 14249,
@@ -33883,7 +33883,7 @@
           "Bottom": 14267
         },
         {
-          "Text": "(\u002B216)71",
+          "Text": "(+216)71",
           "Confidence": 82.63252,
           "Left": 1203,
           "Top": 14253,

@@ -2158,7 +2158,7 @@
     ]
   },
   "DebugLines": [
-    "\u003C",
+    "<",
     "EXTRAIT DE COMPTE",
     "Période du 30/12/2023 au 02/02/2024",
     "e",
@@ -2169,7 +2169,7 @@
     "Code Iban : TN5920005052210089321181",
     "Date : 06/02/2024",
     "50106 initial (TND) : -16,911",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "02/01/2024 02/01/2024 PRELV. LOYER TPE GPR 53,550 -70,461",
     "04/01/2024 02/01/2024 Trs TPE 2005050535 N 309547 60,000 -10,461",
     "04/01/2024 02/01/2024 [Trs TPE 2005050535 N 634691 30,000 19,539",
@@ -2218,7 +2218,7 @@
     "لي sur TPE 2005050535 N 1",
     "08/01/2024 04/01/2024 0,380 736,714",
     "Page 1 sur 8",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "ليت sur TPE 2005050535 N 958",
     "08/01/2024 04/01/2024 0,380 736,334",
     "ليت sur TPE 2005050535 N 768",
@@ -2239,11 +2239,11 @@
     "10/01/2024 08/01/2024 Trs TPE 2005050535 N 433065 80,000 1114,019",
     "لاي sur TPE 2005050535 N 264",
     "10/01/2024 08/01/2024 1,900 1112,119",
-    "ggg“\u0022 sur TPE 2005050535 N 302",
+    "ggg“\" sur TPE 2005050535 N 302",
     "10/01/2024 08/01/2024 0,380 1111,739",
     "بش sur TPE 2005050535 N 6",
     "10/01/2024 08/01/2024 0,570 1111,169",
-    "gg\u0027z“m sur TPE 2005050535 N 594",
+    "gg'z“m sur TPE 2005050535 N 594",
     "10/01/2024 08/01/2024 0,570 1110,599",
     "ليت sur TPE 2005050535 N 953",
     "10/01/2024 08/01/2024 0,570 1110,029",
@@ -2272,7 +2272,7 @@
     "18/01/2024 16/01/2024 1,520 1 446,954",
     "جايح DEPLACE",
     "18/01/2024 17/01/2024 1 300,000 146,954",
-    "18/01/2024 17/01/2024 COM\u0026TVA RETRAIT DEPL 220682 2,380 144,574",
+    "18/01/2024 17/01/2024 COM&TVA RETRAIT DEPL 220682 2,380 144,574",
     "19/01/2024 17/01/2024 Trs TPE 2005050535 N 025269 150,000 294,574",
     "19/01/2024 17/01/2024 Trs TPE 2005050535 N 501248 15,000 309,574",
     "19/01/2024 17/01/2024 Trs TPE 2005050535 N 476926 40,000 349,574",
@@ -2284,8 +2284,8 @@
     "19/01/2024 17/01/2024 0,285 436,439",
     "248",
     "Page 2 sur 8",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
-    "gâg“\u0022 sur TPE 2005050535 N 6",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
+    "gâg“\" sur TPE 2005050535 N 6",
     "19/01/2024 17/01/2024 0,760 435,679",
     "ggg‘m sur TPE 2005050535 N 129",
     "19/01/2024 17/01/2024 0,760 434,919",
@@ -2338,12 +2338,12 @@
     "23/01/2024 [20/01/2024 0,190 1 625,309",
     "4K1",
     "Page 3 sur 8",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "ليت sur TPE 2005050535 N 9",
     "23/01/2024 21/01/2024 0,190 1 625,119",
     "ليت sur TPE 2005050535 N 755",
     "23/01/2024 19/01/2024 0,380 1 624,739",
-    "g;;\u0022\u0022‘ sur TPE 2005050535 N 330",
+    "g;;\"\"‘ sur TPE 2005050535 N 330",
     "23/01/2024 21/01/2024 0,380 1 624,359",
     "ليت sur TPE 2005050535 N 4",
     "23/01/2024 19/01/2024 0,380 1 623,979",
@@ -2369,7 +2369,7 @@
     "23/01/2024 19/01/2024 0,665 1 619,210",
     "بس sur TPE 2005050535 N 8",
     "23/01/2024 21/01/2024 0,760 1 618,450",
-    "gg’ln\u0022‘ sur TPE 2005050535 N 0",
+    "gg’ln\"‘ sur TPE 2005050535 N 0",
     "23/01/2024 [20/01/2024 0,760 1 617,690",
     "ليت sur TPE 2005050535 N 335",
     "23/01/2024 20/01/2024 0,760 1 616,930",
@@ -2377,7 +2377,7 @@
     "23/01/2024 20/01/2024 0,950 1 615,980",
     "ليت sur TPE 2005050535 N 008",
     "23/01/2024 20/01/2024 0,950 1 615,030",
-    "g;;\u0022\u0022‘ sur TPE 2005050535 N 2",
+    "g;;\"\"‘ sur TPE 2005050535 N 2",
     "23/01/2024 21/01/2024 0,950 1 614,080",
     "ليت sur TPE 2005050535 N E3U",
     "23/01/2024 19/01/2024 1,140 1 612,940",
@@ -2387,7 +2387,7 @@
     "23/01/2024 20/01/2024 1,197 1 610,603",
     "Ëgg“m sur TPE 2005050535 N 5",
     "23/01/2024 19/01/2024 2,850 1 607,753",
-    "gâg“\u0022 sur TPE 2005050535 N 228",
+    "gâg“\" sur TPE 2005050535 N 228",
     "23/01/2024 21/01/2024 2,090 1 605,663",
     "بي sur TPE 2005050535 N 692",
     "23/01/2024 21/01/2024 0,190 1 605,473",
@@ -2416,12 +2416,12 @@
     "24/01/2024 22/01/2024 0,760 2 184,822",
     "250",
     "Page 4 sur 8",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "لي sur TPE 2005050535 N 756",
     "24/01/2024 22/01/2024 0,722 2 184,100",
     "يي sur TPE 2005050535 N 302",
     "24/01/2024 22/01/2024 0,570 2 183,530",
-    "ggg“\u0022 sur TPE 2005050535 N 281",
+    "ggg“\" sur TPE 2005050535 N 281",
     "24/01/2024 22/01/2024 0,380 2 183,150",
     "25/01/2024 23/01/2024 [Trs TPE 2005050535 N 992236 50,000 2 233,150",
     "25/01/2024 23/01/2024 [Trs TPE 2005050535 N 680339 50,000 2 283,150",
@@ -2449,7 +2449,7 @@
     "26/01/2024 24/01/2024 2,535 2 664,232",
     "حاار DEPLACE",
     "26/01/2024 25/01/2024 2 400,000 264,232",
-    "26/01/2024 25/01/2024 COM\u0026TVA RETRAIT DEPL 221212 2,380 261,852",
+    "26/01/2024 25/01/2024 COM&TVA RETRAIT DEPL 221212 2,380 261,852",
     "29/01/2024 25/01/2024 [Trs TPE 2005050535 N 895022 90,000 351,852",
     "29/01/2024 25/01/2024 [Trs TPE 2005050535 N 7 20,000 371,852",
     "29/01/2024 25/01/2024 [Trs TPE 2005050535 N 918266 27,000 398,852",
@@ -2479,7 +2479,7 @@
     "30/01/2024 27/01/2024 [Trs TPE 2005050535 N 866450 20,000 639,209",
     "30/01/2024 28/01/2024 [Trs TPE 2005050535 N 909054 20,000 659,209",
     "Page 5 sur 8",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "30/01/2024 [26/01/2024 Trs TPE 2005050535 N 007843 80,000 739,209",
     "30/01/2024 [27/01/2024 Trs TPE 2005050535 N 460508 30,000 769,209",
     "30/01/2024 [28/01/2024 Trs TPE 2005050535 N 886998 30,000 799,209",
@@ -2525,7 +2525,7 @@
     "30/01/2024 26/01/2024 0,570 1 422,745",
     "gîg‘m sur TPE 2005050535 N 164",
     "30/01/2024 27/01/2024 0,570 1 422,175",
-    "g;g\u0022\u0022 sur TPE 2005050535 N 886",
+    "g;g\"\" sur TPE 2005050535 N 886",
     "30/01/2024 28/01/2024 0,570 1421,605",
     "بيت sur TPE 2005050535 N 0",
     "30/01/2024 27/01/2024 0,570 1421,035",
@@ -2547,7 +2547,7 @@
     "30/01/2024 27/01/2024 0,114 1 418,451",
     "30/01/2024 [26/01/2024 Trs TPE 2005050535 N 221419 90,000 1 508,451",
     "Page 6 sur 8",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "30/01/2024 26/01/2024 [Trs TPE 2005050535 N ON4CT3 7,000 1 515,451",
     "يسا sur TPE 2005050535 N 221",
     "30/01/2024 26/01/2024 3,375 116",
@@ -2592,7 +2592,7 @@
     "01/02/2024 30/01/2024 0,190 2291,211",
     "سي sur TPE 2005050535 N 336",
     "01/02/2024 30/01/2024 1,520 2 289,691",
-    "‘7:2’1\u0022\u0022‘ sur TPE 2005050535 N 496",
+    "‘7:2’1\"\"‘ sur TPE 2005050535 N 496",
     "01/02/2024 30/01/2024 1,140 2 288,551",
     "ايت sur TPE 2005050535 N 764",
     "01/02/2024 30/01/2024 0,798 2 287,753",
@@ -2604,13 +2604,13 @@
     "01/02/2024 30/01/2024 0,190 2 286,423",
     "سر جيرا DEPLACE",
     "01/02/2024 31/01/2024 1 900,000 386,423",
-    "01/02/2024 31/01/2024 COM\u0026TVA RETRAIT DEPL 92695 2,380 384,043",
+    "01/02/2024 31/01/2024 COM&TVA RETRAIT DEPL 92695 2,380 384,043",
     "02/02/2024 31/01/2024 [Trs TPE 2005050535 N 326576 20,000 404,043",
     "02/02/2024 31/01/2024 [Trs TPE 2005050535 N 470529 20,000 424,043",
     "02/02/2024 31/01/2024 [Trs TPE 2005050535 N 944522 20,000 444,043",
     "02/02/2024 31/01/2024 [Trs TPE 2005050535 N 356032 20,000 464,043",
     "Page 7 sur 8",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "02/02/2024 31/01/2024 [Trs TPE 2005050535 N N6L4T1 30,000 494,043",
     "02/02/2024 31/01/2024 [Trs TPE 2005050535 N 472390 30,000 524,043",
     "02/02/2024 31/01/2024 [Trs TPE 2005050535 N 477109 40,000 564,043",
@@ -2621,7 +2621,7 @@
     "02/02/2024 31/01/2024 [Trs TPE 2005050535 N 371975 20,000 834,043",
     "ليت sur TPE 2005050535 N 472",
     "02/02/2024 31/01/2024 0,570 833,473",
-    "Ë;’g“\u0022 sur TPE 2005050535 N 6",
+    "Ë;’g“\" sur TPE 2005050535 N 6",
     "02/02/2024 31/01/2024 0,380 833,093",
     "ليت sur TPE 2005050535 N 371",
     "02/02/2024 31/01/2024 0,380 832,713",
@@ -2650,7 +2650,7 @@
   ],
   "Words": [
     {
-      "Text": "\u003C",
+      "Text": "<",
       "Confidence": 60.483513,
       "Left": 117,
       "Top": 69,
@@ -3074,7 +3074,7 @@
       "Bottom": 609
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 591,
@@ -5674,7 +5674,7 @@
       "Bottom": 3116
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 3098,
@@ -6802,7 +6802,7 @@
       "Bottom": 3936
     },
     {
-      "Text": "ggg“\u0022",
+      "Text": "ggg“\"",
       "Confidence": 61.914314,
       "Left": 390,
       "Top": 3904,
@@ -6962,7 +6962,7 @@
       "Bottom": 4045
     },
     {
-      "Text": "gg\u0027z“m",
+      "Text": "gg'z“m",
       "Confidence": 61.914314,
       "Left": 390,
       "Top": 4013,
@@ -8442,7 +8442,7 @@
       "Bottom": 5030
     },
     {
-      "Text": "COM\u0026TVA",
+      "Text": "COM&TVA",
       "Confidence": 88.68919,
       "Left": 390,
       "Top": 5011,
@@ -9082,7 +9082,7 @@
       "Bottom": 6116
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 6098,
@@ -9154,7 +9154,7 @@
       "Bottom": 6170
     },
     {
-      "Text": "gâg“\u0022",
+      "Text": "gâg“\"",
       "Confidence": 59.402126,
       "Left": 390,
       "Top": 6138,
@@ -12418,7 +12418,7 @@
       "Bottom": 9116
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 9098,
@@ -12666,7 +12666,7 @@
       "Bottom": 9279
     },
     {
-      "Text": "g;;\u0022\u0022‘",
+      "Text": "g;;\"\"‘",
       "Confidence": 58.15928,
       "Left": 390,
       "Top": 9247,
@@ -13802,7 +13802,7 @@
       "Bottom": 9990
     },
     {
-      "Text": "gg’ln\u0022‘",
+      "Text": "gg’ln\"‘",
       "Confidence": 60.976242,
       "Left": 390,
       "Top": 9959,
@@ -14154,7 +14154,7 @@
       "Bottom": 10209
     },
     {
-      "Text": "g;;\u0022\u0022‘",
+      "Text": "g;;\"\"‘",
       "Confidence": 59.193893,
       "Left": 390,
       "Top": 10177,
@@ -14594,7 +14594,7 @@
       "Bottom": 10483
     },
     {
-      "Text": "gâg“\u0022",
+      "Text": "gâg“\"",
       "Confidence": 59.402126,
       "Left": 390,
       "Top": 10451,
@@ -16162,7 +16162,7 @@
       "Bottom": 12116
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 12098,
@@ -16410,7 +16410,7 @@
       "Bottom": 12279
     },
     {
-      "Text": "ggg“\u0022",
+      "Text": "ggg“\"",
       "Confidence": 61.914314,
       "Left": 390,
       "Top": 12247,
@@ -17898,7 +17898,7 @@
       "Bottom": 13264
     },
     {
-      "Text": "COM\u0026TVA",
+      "Text": "COM&TVA",
       "Confidence": 64.75572,
       "Left": 390,
       "Top": 13245,
@@ -19578,7 +19578,7 @@
       "Bottom": 15116
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 15098,
@@ -22178,7 +22178,7 @@
       "Bottom": 16866
     },
     {
-      "Text": "g;g\u0022\u0022",
+      "Text": "g;g\"\"",
       "Confidence": 63.223423,
       "Left": 390,
       "Top": 16834,
@@ -23170,7 +23170,7 @@
       "Bottom": 18116
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 18098,
@@ -25786,7 +25786,7 @@
       "Bottom": 19866
     },
     {
-      "Text": "‘7:2’1\u0022\u0022‘",
+      "Text": "‘7:2’1\"\"‘",
       "Confidence": 59.28421,
       "Left": 390,
       "Top": 19834,
@@ -26290,7 +26290,7 @@
       "Bottom": 20194
     },
     {
-      "Text": "COM\u0026TVA",
+      "Text": "COM&TVA",
       "Confidence": 90.48539,
       "Left": 390,
       "Top": 20175,
@@ -26690,7 +26690,7 @@
       "Bottom": 21116
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 21098,
@@ -27418,7 +27418,7 @@
       "Bottom": 21662
     },
     {
-      "Text": "Ë;’g“\u0022",
+      "Text": "Ë;’g“\"",
       "Confidence": 61.860962,
       "Left": 390,
       "Top": 21630,
@@ -28484,10 +28484,10 @@
   ],
   "Lines": [
     {
-      "LineText": "\u003C",
+      "LineText": "<",
       "Words": [
         {
-          "Text": "\u003C",
+          "Text": "<",
           "Confidence": 60.483513,
           "Left": 117,
           "Top": 69,
@@ -28931,7 +28931,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -28942,7 +28942,7 @@
           "Bottom": 609
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 591,
@@ -31776,7 +31776,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -31787,7 +31787,7 @@
           "Bottom": 3116
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 3098,
@@ -33025,10 +33025,10 @@
       ]
     },
     {
-      "LineText": "ggg“\u0022 sur TPE 2005050535 N 302",
+      "LineText": "ggg“\" sur TPE 2005050535 N 302",
       "Words": [
         {
-          "Text": "ggg“\u0022",
+          "Text": "ggg“\"",
           "Confidence": 61.914314,
           "Left": 390,
           "Top": 3904,
@@ -33205,10 +33205,10 @@
       ]
     },
     {
-      "LineText": "gg\u0027z“m sur TPE 2005050535 N 594",
+      "LineText": "gg'z“m sur TPE 2005050535 N 594",
       "Words": [
         {
-          "Text": "gg\u0027z“m",
+          "Text": "gg'z“m",
           "Confidence": 61.914314,
           "Left": 390,
           "Top": 4013,
@@ -34830,7 +34830,7 @@
       ]
     },
     {
-      "LineText": "18/01/2024 17/01/2024 COM\u0026TVA RETRAIT DEPL 220682 2,380 144,574",
+      "LineText": "18/01/2024 17/01/2024 COM&TVA RETRAIT DEPL 220682 2,380 144,574",
       "Words": [
         {
           "Text": "18/01/2024",
@@ -34849,7 +34849,7 @@
           "Bottom": 5030
         },
         {
-          "Text": "COM\u0026TVA",
+          "Text": "COM&TVA",
           "Confidence": 88.68919,
           "Left": 390,
           "Top": 5011,
@@ -35514,7 +35514,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -35525,7 +35525,7 @@
           "Bottom": 6116
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 6098,
@@ -35607,10 +35607,10 @@
       ]
     },
     {
-      "LineText": "gâg“\u0022 sur TPE 2005050535 N 6",
+      "LineText": "gâg“\" sur TPE 2005050535 N 6",
       "Words": [
         {
-          "Text": "gâg“\u0022",
+          "Text": "gâg“\"",
           "Confidence": 59.402126,
           "Left": 390,
           "Top": 6138,
@@ -39120,7 +39120,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -39131,7 +39131,7 @@
           "Bottom": 9116
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 9098,
@@ -39409,10 +39409,10 @@
       ]
     },
     {
-      "LineText": "g;;\u0022\u0022‘ sur TPE 2005050535 N 330",
+      "LineText": "g;;\"\"‘ sur TPE 2005050535 N 330",
       "Words": [
         {
-          "Text": "g;;\u0022\u0022‘",
+          "Text": "g;;\"\"‘",
           "Confidence": 58.15928,
           "Left": 390,
           "Top": 9247,
@@ -40675,10 +40675,10 @@
       ]
     },
     {
-      "LineText": "gg’ln\u0022‘ sur TPE 2005050535 N 0",
+      "LineText": "gg’ln\"‘ sur TPE 2005050535 N 0",
       "Words": [
         {
-          "Text": "gg’ln\u0022‘",
+          "Text": "gg’ln\"‘",
           "Confidence": 60.976242,
           "Left": 390,
           "Top": 9959,
@@ -41067,10 +41067,10 @@
       ]
     },
     {
-      "LineText": "g;;\u0022\u0022‘ sur TPE 2005050535 N 2",
+      "LineText": "g;;\"\"‘ sur TPE 2005050535 N 2",
       "Words": [
         {
-          "Text": "g;;\u0022\u0022‘",
+          "Text": "g;;\"\"‘",
           "Confidence": 59.193893,
           "Left": 390,
           "Top": 10177,
@@ -41557,10 +41557,10 @@
       ]
     },
     {
-      "LineText": "gâg“\u0022 sur TPE 2005050535 N 228",
+      "LineText": "gâg“\" sur TPE 2005050535 N 228",
       "Words": [
         {
-          "Text": "gâg“\u0022",
+          "Text": "gâg“\"",
           "Confidence": 59.402126,
           "Left": 390,
           "Top": 10451,
@@ -43254,7 +43254,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -43265,7 +43265,7 @@
           "Bottom": 12116
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 12098,
@@ -43543,10 +43543,10 @@
       ]
     },
     {
-      "LineText": "ggg“\u0022 sur TPE 2005050535 N 281",
+      "LineText": "ggg“\" sur TPE 2005050535 N 281",
       "Words": [
         {
-          "Text": "ggg“\u0022",
+          "Text": "ggg“\"",
           "Confidence": 61.914314,
           "Left": 390,
           "Top": 12247,
@@ -45171,7 +45171,7 @@
       ]
     },
     {
-      "LineText": "26/01/2024 25/01/2024 COM\u0026TVA RETRAIT DEPL 221212 2,380 261,852",
+      "LineText": "26/01/2024 25/01/2024 COM&TVA RETRAIT DEPL 221212 2,380 261,852",
       "Words": [
         {
           "Text": "26/01/2024",
@@ -45190,7 +45190,7 @@
           "Bottom": 13264
         },
         {
-          "Text": "COM\u0026TVA",
+          "Text": "COM&TVA",
           "Confidence": 64.75572,
           "Left": 390,
           "Top": 13245,
@@ -46985,7 +46985,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -46996,7 +46996,7 @@
           "Bottom": 15116
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 15098,
@@ -49831,10 +49831,10 @@
       ]
     },
     {
-      "LineText": "g;g\u0022\u0022 sur TPE 2005050535 N 886",
+      "LineText": "g;g\"\" sur TPE 2005050535 N 886",
       "Words": [
         {
-          "Text": "g;g\u0022\u0022",
+          "Text": "g;g\"\"",
           "Confidence": 63.223423,
           "Left": 390,
           "Top": 16834,
@@ -50917,7 +50917,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -50928,7 +50928,7 @@
           "Bottom": 18116
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 18098,
@@ -53774,10 +53774,10 @@
       ]
     },
     {
-      "LineText": "‘7:2’1\u0022\u0022‘ sur TPE 2005050535 N 496",
+      "LineText": "‘7:2’1\"\"‘ sur TPE 2005050535 N 496",
       "Words": [
         {
-          "Text": "‘7:2’1\u0022\u0022‘",
+          "Text": "‘7:2’1\"\"‘",
           "Confidence": 59.28421,
           "Left": 390,
           "Top": 19834,
@@ -54338,7 +54338,7 @@
       ]
     },
     {
-      "LineText": "01/02/2024 31/01/2024 COM\u0026TVA RETRAIT DEPL 92695 2,380 384,043",
+      "LineText": "01/02/2024 31/01/2024 COM&TVA RETRAIT DEPL 92695 2,380 384,043",
       "Words": [
         {
           "Text": "01/02/2024",
@@ -54357,7 +54357,7 @@
           "Bottom": 20194
         },
         {
-          "Text": "COM\u0026TVA",
+          "Text": "COM&TVA",
           "Confidence": 90.48539,
           "Left": 390,
           "Top": 20175,
@@ -54752,7 +54752,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -54763,7 +54763,7 @@
           "Bottom": 21116
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 21098,
@@ -55551,10 +55551,10 @@
       ]
     },
     {
-      "LineText": "Ë;’g“\u0022 sur TPE 2005050535 N 6",
+      "LineText": "Ë;’g“\" sur TPE 2005050535 N 6",
       "Words": [
         {
-          "Text": "Ë;’g“\u0022",
+          "Text": "Ë;’g“\"",
           "Confidence": 61.860962,
           "Left": 390,
           "Top": 21630,

@@ -115,7 +115,7 @@
   },
   "DebugLines": [
     "8/9/25, 10:15 AM BTK@DIRECT",
-    "\u003C",
+    "<",
     "EXTRAIT DE COMPTE",
     "Code client : 0510291",
     "Nom du client : SOCIETE IT CAPACITIES",
@@ -128,21 +128,21 @@
     "Date valeur Opération Débit (USD) Crédit (USD) Solde (USD)",
     "14/05/2025 14/05/2025 PAIEMENT TPE 39,92 4 251,06",
     "INTERNATIONAL",
-    "14/05/2025 14/05/2025 COM \u0026 TVA RET. CARTE 0,40 4 250,66",
-    "14/05/2025 14/05/2025 COM \u0026 TVA RET. CARTE 0,08 4 250,58",
+    "14/05/2025 14/05/2025 COM & TVA RET. CARTE 0,40 4 250,66",
+    "14/05/2025 14/05/2025 COM & TVA RET. CARTE 0,08 4 250,58",
     "19/05/2025 19/05/2025 PAIEMENT TPE 1925,52 2 325,06",
     "INTERNATIONAL",
     "19/05/2025 19/05/2025 PAIEMENT TPE 24,67 2 300,39",
     "INTERNATIONAL",
     "19/05/2025 19/05/2025 PAIEMENT TPE 13,91 2 286,48",
     "INTERNATIONAL",
-    "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 19,26 2 267,22",
-    "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 0,25 2 266,97",
-    "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 0,14 2 266,83",
-    "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 0,05 2 266,78",
-    "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 0,03 2 266,75",
-    "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 3,66 2 263,09",
-    "24/06/2025 24/06/2025 \u0026 TRANSFERT نع 9 100,00 11 363,09",
+    "19/05/2025 19/05/2025 COM & TVA RET. CARTE 19,26 2 267,22",
+    "19/05/2025 19/05/2025 COM & TVA RET. CARTE 0,25 2 266,97",
+    "19/05/2025 19/05/2025 COM & TVA RET. CARTE 0,14 2 266,83",
+    "19/05/2025 19/05/2025 COM & TVA RET. CARTE 0,05 2 266,78",
+    "19/05/2025 19/05/2025 COM & TVA RET. CARTE 0,03 2 266,75",
+    "19/05/2025 19/05/2025 COM & TVA RET. CARTE 3,66 2 263,09",
+    "24/06/2025 24/06/2025 & TRANSFERT نع 9 100,00 11 363,09",
     "25004107",
     "ا ORD: Upwork Escrow",
     "Inc.",
@@ -185,7 +185,7 @@
       "Bottom": 68
     },
     {
-      "Text": "\u003C",
+      "Text": "<",
       "Confidence": 89.355804,
       "Left": 176,
       "Top": 156,
@@ -721,7 +721,7 @@
       "Bottom": 1136
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.22143,
       "Left": 661,
       "Top": 1112,
@@ -761,7 +761,7 @@
       "Bottom": 1220
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.28226,
       "Left": 661,
       "Top": 1197,
@@ -873,7 +873,7 @@
       "Bottom": 1695
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.199844,
       "Left": 661,
       "Top": 1671,
@@ -913,7 +913,7 @@
       "Bottom": 1779
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.16921,
       "Left": 661,
       "Top": 1755,
@@ -953,7 +953,7 @@
       "Bottom": 1863
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.27246,
       "Left": 661,
       "Top": 1840,
@@ -993,7 +993,7 @@
       "Bottom": 1947
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.27607,
       "Left": 661,
       "Top": 1924,
@@ -1033,7 +1033,7 @@
       "Bottom": 2032
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.13844,
       "Left": 661,
       "Top": 2008,
@@ -1073,7 +1073,7 @@
       "Bottom": 2116
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.27827,
       "Left": 661,
       "Top": 2093,
@@ -1105,7 +1105,7 @@
       "Bottom": 2116
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 70.15352,
       "Left": 577,
       "Top": 2182,
@@ -2040,10 +2040,10 @@
       ]
     },
     {
-      "LineText": "\u003C",
+      "LineText": "<",
       "Words": [
         {
-          "Text": "\u003C",
+          "Text": "<",
           "Confidence": 89.355804,
           "Left": 176,
           "Top": 156,
@@ -2577,7 +2577,7 @@
       ]
     },
     {
-      "LineText": "14/05/2025 14/05/2025 COM \u0026 TVA RET. CARTE 0,40 4 250,66",
+      "LineText": "14/05/2025 14/05/2025 COM & TVA RET. CARTE 0,40 4 250,66",
       "Words": [
         {
           "Text": "14/05/2025",
@@ -2604,7 +2604,7 @@
           "Bottom": 1136
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.22143,
           "Left": 661,
           "Top": 1112,
@@ -2662,7 +2662,7 @@
       ]
     },
     {
-      "LineText": "14/05/2025 14/05/2025 COM \u0026 TVA RET. CARTE 0,08 4 250,58",
+      "LineText": "14/05/2025 14/05/2025 COM & TVA RET. CARTE 0,08 4 250,58",
       "Words": [
         {
           "Text": "14/05/2025",
@@ -2689,7 +2689,7 @@
           "Bottom": 1220
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.28226,
           "Left": 661,
           "Top": 1197,
@@ -2969,7 +2969,7 @@
       ]
     },
     {
-      "LineText": "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 19,26 2 267,22",
+      "LineText": "19/05/2025 19/05/2025 COM & TVA RET. CARTE 19,26 2 267,22",
       "Words": [
         {
           "Text": "19/05/2025",
@@ -2996,7 +2996,7 @@
           "Bottom": 1695
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.199844,
           "Left": 661,
           "Top": 1671,
@@ -3054,7 +3054,7 @@
       ]
     },
     {
-      "LineText": "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 0,25 2 266,97",
+      "LineText": "19/05/2025 19/05/2025 COM & TVA RET. CARTE 0,25 2 266,97",
       "Words": [
         {
           "Text": "19/05/2025",
@@ -3081,7 +3081,7 @@
           "Bottom": 1779
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.16921,
           "Left": 661,
           "Top": 1755,
@@ -3139,7 +3139,7 @@
       ]
     },
     {
-      "LineText": "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 0,14 2 266,83",
+      "LineText": "19/05/2025 19/05/2025 COM & TVA RET. CARTE 0,14 2 266,83",
       "Words": [
         {
           "Text": "19/05/2025",
@@ -3166,7 +3166,7 @@
           "Bottom": 1863
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.27246,
           "Left": 661,
           "Top": 1840,
@@ -3224,7 +3224,7 @@
       ]
     },
     {
-      "LineText": "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 0,05 2 266,78",
+      "LineText": "19/05/2025 19/05/2025 COM & TVA RET. CARTE 0,05 2 266,78",
       "Words": [
         {
           "Text": "19/05/2025",
@@ -3251,7 +3251,7 @@
           "Bottom": 1947
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.27607,
           "Left": 661,
           "Top": 1924,
@@ -3309,7 +3309,7 @@
       ]
     },
     {
-      "LineText": "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 0,03 2 266,75",
+      "LineText": "19/05/2025 19/05/2025 COM & TVA RET. CARTE 0,03 2 266,75",
       "Words": [
         {
           "Text": "19/05/2025",
@@ -3336,7 +3336,7 @@
           "Bottom": 2032
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.13844,
           "Left": 661,
           "Top": 2008,
@@ -3394,7 +3394,7 @@
       ]
     },
     {
-      "LineText": "19/05/2025 19/05/2025 COM \u0026 TVA RET. CARTE 3,66 2 263,09",
+      "LineText": "19/05/2025 19/05/2025 COM & TVA RET. CARTE 3,66 2 263,09",
       "Words": [
         {
           "Text": "19/05/2025",
@@ -3421,7 +3421,7 @@
           "Bottom": 2116
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.27827,
           "Left": 661,
           "Top": 2093,
@@ -3479,7 +3479,7 @@
       ]
     },
     {
-      "LineText": "24/06/2025 24/06/2025 \u0026 TRANSFERT نع 9 100,00 11 363,09",
+      "LineText": "24/06/2025 24/06/2025 & TRANSFERT نع 9 100,00 11 363,09",
       "Words": [
         {
           "Text": "24/06/2025",
@@ -3546,7 +3546,7 @@
           "Bottom": 2200
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 70.15352,
           "Left": 577,
           "Top": 2182,

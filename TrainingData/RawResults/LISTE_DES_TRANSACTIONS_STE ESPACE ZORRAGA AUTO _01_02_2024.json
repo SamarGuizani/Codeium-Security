@@ -817,7 +817,7 @@
     "Solde actuel :1007,188",
     "Montant Min : Montant Max:",
     "Date Début :01/01/2024 Date Fin :31/01/2024",
-    "Type d\u0027opération :Débit \u0026 Crédit",
+    "Type d'opération :Débit & Crédit",
     "31/01/2024 20240131 FRAIS PDL CHG2403133652 -0.500 DT",
     "20240131",
     "FT240300RWYN",
@@ -1436,7 +1436,7 @@
       "Bottom": 719
     },
     {
-      "Text": "d\u0027opération",
+      "Text": "d'opération",
       "Confidence": 92.52327,
       "Left": 199,
       "Top": 686,
@@ -1452,7 +1452,7 @@
       "Bottom": 712
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.30484,
       "Left": 495,
       "Top": 686,
@@ -10336,7 +10336,7 @@
       ]
     },
     {
-      "LineText": "Type d\u0027opération :Débit \u0026 Crédit",
+      "LineText": "Type d'opération :Débit & Crédit",
       "Words": [
         {
           "Text": "Type",
@@ -10347,7 +10347,7 @@
           "Bottom": 719
         },
         {
-          "Text": "d\u0027opération",
+          "Text": "d'opération",
           "Confidence": 92.52327,
           "Left": 199,
           "Top": 686,
@@ -10363,7 +10363,7 @@
           "Bottom": 712
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.30484,
           "Left": 495,
           "Top": 686,

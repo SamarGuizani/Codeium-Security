@@ -66,7 +66,7 @@
   },
   "DebugLines": [
     "3/5/25, 2:41 PM BTK@DIRECT",
-    "\u003C",
+    "<",
     "[ Bank  EXTRAIT DE COMPTE",
     "Code client : 0510291",
     "Nom du client : SOCIETE IT CAPACITIES",
@@ -79,20 +79,20 @@
     "Date valeur Opération Débit (USD) Crédit(USD) Solde (USD)",
     "25/11/2024 25/11/2024 PAIEMENT TPE 9,71 3 291,10",
     "INTERNATIONAL",
-    "25/11/2024 25/11/2024 COM \u0026 TVA RET. CARTE 0,10 3 291,00",
-    "25/11/2024 25/11/2024 COM \u0026 TVA RET. CARTE 0,02 3 290,98",
-    "10/12/2024 10/12/2024 E\u0026TRANSFERT RECU 4 000,00 7 290,98",
+    "25/11/2024 25/11/2024 COM & TVA RET. CARTE 0,10 3 291,00",
+    "25/11/2024 25/11/2024 COM & TVA RET. CARTE 0,02 3 290,98",
+    "10/12/2024 10/12/2024 E&TRANSFERT RECU 4 000,00 7 290,98",
     "24007858",
     "ا ORD: THE RAINMAKER",
     "INSTITUTE LLC",
-    "09/01/2025 09/01/2025 \u0026@TRANSFERT RECU 4 0 11 290,98",
+    "09/01/2025 09/01/2025 &@TRANSFERT RECU 4 0 11 290,98",
     "25000082",
     "ا ORD: THE RAINMAKER",
     "INSTITUTE LLC",
     "13/01/2025 09/01/2025 @ VIREMENT EMIS MEM AG 3 000,00 8 290,98",
     "ا En faveur SOCIETE IT",
     "CAPACITIES",
-    "04/02/2025 31/01/2025 \u0026@VIREMENT EMIS MEM مح 3 000,00 5 290,98",
+    "04/02/2025 31/01/2025 &@VIREMENT EMIS MEM مح 3 000,00 5 290,98",
     "ا En faveur SOCIETE IT",
     "CAPACITIES",
     "Total 6 009,83 8 000,00",
@@ -136,7 +136,7 @@
       "Bottom": 73
     },
     {
-      "Text": "\u003C",
+      "Text": "<",
       "Confidence": 70.810905,
       "Left": 176,
       "Top": 156,
@@ -648,7 +648,7 @@
       "Bottom": 1136
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.206375,
       "Left": 661,
       "Top": 1113,
@@ -728,7 +728,7 @@
       "Bottom": 1221
     },
     {
-      "Text": "\u0026",
+      "Text": "&",
       "Confidence": 93.1613,
       "Left": 661,
       "Top": 1197,
@@ -800,7 +800,7 @@
       "Bottom": 1305
     },
     {
-      "Text": "E\u0026TRANSFERT",
+      "Text": "E&TRANSFERT",
       "Confidence": 31.83471,
       "Left": 577,
       "Top": 1281,
@@ -920,7 +920,7 @@
       "Bottom": 1526
     },
     {
-      "Text": "\u0026@TRANSFERT",
+      "Text": "&@TRANSFERT",
       "Confidence": 52.90003,
       "Left": 577,
       "Top": 1503,
@@ -1176,7 +1176,7 @@
       "Bottom": 1923
     },
     {
-      "Text": "\u0026@VIREMENT",
+      "Text": "&@VIREMENT",
       "Confidence": 37.274643,
       "Left": 577,
       "Top": 1900,
@@ -1471,10 +1471,10 @@
       ]
     },
     {
-      "LineText": "\u003C",
+      "LineText": "<",
       "Words": [
         {
-          "Text": "\u003C",
+          "Text": "<",
           "Confidence": 70.810905,
           "Left": 176,
           "Top": 156,
@@ -2024,7 +2024,7 @@
       ]
     },
     {
-      "LineText": "25/11/2024 25/11/2024 COM \u0026 TVA RET. CARTE 0,10 3 291,00",
+      "LineText": "25/11/2024 25/11/2024 COM & TVA RET. CARTE 0,10 3 291,00",
       "Words": [
         {
           "Text": "0,10",
@@ -2059,7 +2059,7 @@
           "Bottom": 1136
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.206375,
           "Left": 661,
           "Top": 1113,
@@ -2109,7 +2109,7 @@
       ]
     },
     {
-      "LineText": "25/11/2024 25/11/2024 COM \u0026 TVA RET. CARTE 0,02 3 290,98",
+      "LineText": "25/11/2024 25/11/2024 COM & TVA RET. CARTE 0,02 3 290,98",
       "Words": [
         {
           "Text": "25/11/2024",
@@ -2136,7 +2136,7 @@
           "Bottom": 1221
         },
         {
-          "Text": "\u0026",
+          "Text": "&",
           "Confidence": 93.1613,
           "Left": 661,
           "Top": 1197,
@@ -2194,7 +2194,7 @@
       ]
     },
     {
-      "LineText": "10/12/2024 10/12/2024 E\u0026TRANSFERT RECU 4 000,00 7 290,98",
+      "LineText": "10/12/2024 10/12/2024 E&TRANSFERT RECU 4 000,00 7 290,98",
       "Words": [
         {
           "Text": "10/12/2024",
@@ -2213,7 +2213,7 @@
           "Bottom": 1305
         },
         {
-          "Text": "E\u0026TRANSFERT",
+          "Text": "E&TRANSFERT",
           "Confidence": 31.83471,
           "Left": 577,
           "Top": 1281,
@@ -2334,7 +2334,7 @@
       ]
     },
     {
-      "LineText": "09/01/2025 09/01/2025 \u0026@TRANSFERT RECU 4 0 11 290,98",
+      "LineText": "09/01/2025 09/01/2025 &@TRANSFERT RECU 4 0 11 290,98",
       "Words": [
         {
           "Text": "09/01/2025",
@@ -2353,7 +2353,7 @@
           "Bottom": 1526
         },
         {
-          "Text": "\u0026@TRANSFERT",
+          "Text": "&@TRANSFERT",
           "Confidence": 52.90003,
           "Left": 577,
           "Top": 1503,
@@ -2625,7 +2625,7 @@
       ]
     },
     {
-      "LineText": "04/02/2025 31/01/2025 \u0026@VIREMENT EMIS MEM مح 3 000,00 5 290,98",
+      "LineText": "04/02/2025 31/01/2025 &@VIREMENT EMIS MEM مح 3 000,00 5 290,98",
       "Words": [
         {
           "Text": "04/02/2025",
@@ -2684,7 +2684,7 @@
           "Bottom": 1927
         },
         {
-          "Text": "\u0026@VIREMENT",
+          "Text": "&@VIREMENT",
           "Confidence": 37.274643,
           "Left": 577,
           "Top": 1900,

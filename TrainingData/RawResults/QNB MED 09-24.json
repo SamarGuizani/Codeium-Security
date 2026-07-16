@@ -239,7 +239,7 @@
     "Relevé bancaire",
     "MOHAMED ZARRAGA ZPA",
     "AGENCE BEN AROUS",
-    "( Resume\u0027 du compte",
+    "( Resume' du compte",
     "Account Type de Compte Devise Total Débit Total Crédit Solde Initial Solde Final",
     "2019-112548-001 Current Account- TUNISIAN -197,237 0,000 -1.463,386 -1.660,623",
     "Normal and Local DINAR",
@@ -288,7 +288,7 @@
     "23019111112548178875",
     "2019-112548-001",
     "12/07/2024",
-    "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d\u0027émission.",
+    "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
     "Pagel of 4",
     "بجا",
     "كلد 1 octobre 4",
@@ -357,7 +357,7 @@
     "COM E-SERVICE",
     "3RD QUARTER 2024",
     "2019-112548-001",
-    "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d\u0027émission.",
+    "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
     "Page2 of 4",
     "بجا",
     "كلد 1 octobre 4",
@@ -425,7 +425,7 @@
     "POS 2301910085",
     "23019111112548178875",
     "2019-112548-001",
-    "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d\u0027émission.",
+    "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
     "Page3 of 4",
     "بجا",
     "NV 1 octobre 4",
@@ -455,13 +455,13 @@
     "30/09/2024 Tax on Charges -3,230 8,705",
     "2019-112548-002",
     "SOLDE FINAL 8,705",
-    "Pour toute remarque, suggestion, ou problème concernant cet email, veuillez nous appeler au \u002B216 36 004 000 ou envoyer un e-mail",
-    "support@gnb.com.tn. Veuillez visiter http://www.gnb.com.tn pour plus d\u0027informations.",
-    "Pour toute réclamation relative à une opération qui n\u0027a pas été initiée par vos soins, veuillez appeler notre numéro hotline \u002B216 36 004 000",
+    "Pour toute remarque, suggestion, ou problème concernant cet email, veuillez nous appeler au +216 36 004 000 ou envoyer un e-mail",
+    "support@gnb.com.tn. Veuillez visiter http://www.gnb.com.tn pour plus d'informations.",
+    "Pour toute réclamation relative à une opération qui n'a pas été initiée par vos soins, veuillez appeler notre numéro hotline +216 36 004 000",
     "N.B: Veuillez noter que le Solde Final ne refléte pas nécessairement le solde disponible de votre compte. Le Solde Final est le montant indiqué",
     "dans votre situation de compte incluant les transactions à date valeur antérieure ou postérieure et exclut les éventuels montants de rectification",
     "par la banque.",
-    "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d\u0027émission.",
+    "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
     "Page4 of 4"
   ],
   "Words": [
@@ -610,7 +610,7 @@
       "Bottom": 524
     },
     {
-      "Text": "Resume\u0027",
+      "Text": "Resume'",
       "Confidence": 73.56967,
       "Left": 209,
       "Top": 503,
@@ -1994,7 +1994,7 @@
       "Bottom": 2391
     },
     {
-      "Text": "d\u0027émission.",
+      "Text": "d'émission.",
       "Confidence": 91.67765,
       "Left": 1720,
       "Top": 2376,
@@ -3418,7 +3418,7 @@
       "Bottom": 5323
     },
     {
-      "Text": "d\u0027émission.",
+      "Text": "d'émission.",
       "Confidence": 91.67765,
       "Left": 1720,
       "Top": 5308,
@@ -4850,7 +4850,7 @@
       "Bottom": 8255
     },
     {
-      "Text": "d\u0027émission.",
+      "Text": "d'émission.",
       "Confidence": 91.67765,
       "Left": 1720,
       "Top": 8240,
@@ -5706,7 +5706,7 @@
       "Bottom": 10421
     },
     {
-      "Text": "\u002B216",
+      "Text": "+216",
       "Confidence": 92.079605,
       "Left": 1189,
       "Top": 10403,
@@ -5818,7 +5818,7 @@
       "Bottom": 10452
     },
     {
-      "Text": "d\u0027informations.",
+      "Text": "d'informations.",
       "Confidence": 90.20784,
       "Left": 959,
       "Top": 10427,
@@ -5890,7 +5890,7 @@
       "Bottom": 10609
     },
     {
-      "Text": "n\u0027a",
+      "Text": "n'a",
       "Confidence": 92.84027,
       "Left": 722,
       "Top": 10585,
@@ -5986,7 +5986,7 @@
       "Bottom": 10603
     },
     {
-      "Text": "\u002B216",
+      "Text": "+216",
       "Confidence": 92.360916,
       "Left": 1505,
       "Top": 10585,
@@ -6602,7 +6602,7 @@
       "Bottom": 11187
     },
     {
-      "Text": "d\u0027émission.",
+      "Text": "d'émission.",
       "Confidence": 91.67765,
       "Left": 1719,
       "Top": 11172,
@@ -6802,7 +6802,7 @@
       ]
     },
     {
-      "LineText": "( Resume\u0027 du compte",
+      "LineText": "( Resume' du compte",
       "Words": [
         {
           "Text": "(",
@@ -6821,7 +6821,7 @@
           "Bottom": 525
         },
         {
-          "Text": "Resume\u0027",
+          "Text": "Resume'",
           "Confidence": 73.56967,
           "Left": 209,
           "Top": 503,
@@ -8239,7 +8239,7 @@
       ]
     },
     {
-      "LineText": "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d\u0027émission.",
+      "LineText": "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
       "Words": [
         {
           "Text": "déclaration",
@@ -8274,7 +8274,7 @@
           "Bottom": 2391
         },
         {
-          "Text": "d\u0027émission.",
+          "Text": "d'émission.",
           "Confidence": 91.67765,
           "Left": 1720,
           "Top": 2376,
@@ -10008,7 +10008,7 @@
       ]
     },
     {
-      "LineText": "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d\u0027émission.",
+      "LineText": "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
       "Words": [
         {
           "Text": "déclaration",
@@ -10043,7 +10043,7 @@
           "Bottom": 5323
         },
         {
-          "Text": "d\u0027émission.",
+          "Text": "d'émission.",
           "Confidence": 91.67765,
           "Left": 1720,
           "Top": 5308,
@@ -11780,7 +11780,7 @@
       ]
     },
     {
-      "LineText": "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d\u0027émission.",
+      "LineText": "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
       "Words": [
         {
           "Text": "déclaration",
@@ -11815,7 +11815,7 @@
           "Bottom": 8255
         },
         {
-          "Text": "d\u0027émission.",
+          "Text": "d'émission.",
           "Confidence": 91.67765,
           "Left": 1720,
           "Top": 8240,
@@ -12882,7 +12882,7 @@
       ]
     },
     {
-      "LineText": "Pour toute remarque, suggestion, ou problème concernant cet email, veuillez nous appeler au \u002B216 36 004 000 ou envoyer un e-mail",
+      "LineText": "Pour toute remarque, suggestion, ou problème concernant cet email, veuillez nous appeler au +216 36 004 000 ou envoyer un e-mail",
       "Words": [
         {
           "Text": "problème",
@@ -12941,7 +12941,7 @@
           "Bottom": 10421
         },
         {
-          "Text": "\u002B216",
+          "Text": "+216",
           "Confidence": 92.079605,
           "Left": 1189,
           "Top": 10403,
@@ -13055,7 +13055,7 @@
       ]
     },
     {
-      "LineText": "support@gnb.com.tn. Veuillez visiter http://www.gnb.com.tn pour plus d\u0027informations.",
+      "LineText": "support@gnb.com.tn. Veuillez visiter http://www.gnb.com.tn pour plus d'informations.",
       "Words": [
         {
           "Text": "support@gnb.com.tn.",
@@ -13098,7 +13098,7 @@
           "Bottom": 10452
         },
         {
-          "Text": "d\u0027informations.",
+          "Text": "d'informations.",
           "Confidence": 90.20784,
           "Left": 959,
           "Top": 10427,
@@ -13116,7 +13116,7 @@
       ]
     },
     {
-      "LineText": "Pour toute réclamation relative à une opération qui n\u0027a pas été initiée par vos soins, veuillez appeler notre numéro hotline \u002B216 36 004 000",
+      "LineText": "Pour toute réclamation relative à une opération qui n'a pas été initiée par vos soins, veuillez appeler notre numéro hotline +216 36 004 000",
       "Words": [
         {
           "Text": "réclamation",
@@ -13223,7 +13223,7 @@
           "Bottom": 10603
         },
         {
-          "Text": "n\u0027a",
+          "Text": "n'a",
           "Confidence": 92.84027,
           "Left": 722,
           "Top": 10585,
@@ -13231,7 +13231,7 @@
           "Bottom": 10603
         },
         {
-          "Text": "\u002B216",
+          "Text": "+216",
           "Confidence": 92.360916,
           "Left": 1505,
           "Top": 10585,
@@ -13712,7 +13712,7 @@
       ]
     },
     {
-      "LineText": "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d\u0027émission.",
+      "LineText": "Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
       "Words": [
         {
           "Text": "déclaration",
@@ -13747,7 +13747,7 @@
           "Bottom": 11187
         },
         {
-          "Text": "d\u0027émission.",
+          "Text": "d'émission.",
           "Confidence": 91.67765,
           "Left": 1719,
           "Top": 11172,

@@ -298,7 +298,7 @@
     "CIF CLIENT : 000001814 AVENUE 2 MARS N73 2034 EZZAHRA",
     "2034 EZZAHRA 2034",
     "AGENCE : BOUMHEL",
-    "BD DE L\u0027ENVIRONNEMENT 2097 BOUMHEL",
+    "BD DE L'ENVIRONNEMENT 2097 BOUMHEL",
     "EXTRAIT DE COMPTE",
     "الذي حسابكم كشف لكم نقدم بأن الشرف لنا",
     "حساب كشف .. التالي الرصيد السهو الخطأ عدى ما يحتوي",
@@ -532,7 +532,7 @@
     "0,380",
     "ا ا ا اساسا لاسا",
     "ms ممص ممصا",
-    "\u002B",
+    "+",
     "",
     "0702/2025 \\ T ESPECE VERSEMENT ESPECES : 2 10/02/2025 2503807567970000",
     "4870.00",
@@ -726,7 +726,7 @@
     "",
     "12/02/2025 COMMISSION SUR REMISE CARTE 11/02/2025 055FC11250430001",
     "58.372",
-    " CON MIS ON UR V\u0027REMENT DOMESTIQUE : 2504302150031157 STE DU LAC",
+    " CON MIS ON UR V'REMENT DOMESTIQUE : 2504302150031157 STE DU LAC",
     "1200202025 11/02/2025 900ZEXA2504303KW",
     "1500",
     "",
@@ -740,7 +740,7 @@
     "0.285",
     "",
     "13/02/2025 \\ T ESPÈCE VERSEMENT ESPECES : 0552504400424452 14/02/2025 2504407528610000",
-    "\u003E 200.000",
+    "> 200.000",
     "81100 000 الهاتف: البلفيدير  تونس 1002 الحرية. شارع 139 الإجتماعى المقر دينار, 100.007.645,000 Lallo رأس الإبسم. خفية شركة والصناعةا للتجارة البنكي الإتحاد",
     ":",
     "UBCI - Société Anonyme au capital de 100.007.645,000 Dinars Siège Social: 139, Avenue de قا Liberté - 1002 Tunis-Belvédère - Tél: 81100 000",
@@ -836,7 +836,7 @@
     " تع 2 P o0t 1118 ARAB",
     "1702/2025 14/02/2025 900ZEXA2504806H3",
     "0750",
-    "E E E \u0027 ARAB",
+    "E E E ' ARAB",
     "17022025 14/02/2025 900ZEXA2504806H3",
     "0380",
     " TS ARAB",
@@ -1145,10 +1145,10 @@
     ": 0.285",
     "21/02/2025  PDL 2505206137472036 COULEURS TUNISIENNES AUTRES_ 20/02/2025 900ZEXA2505200PW",
     ": 0750",
-    "%ŸMË\u0027ÊÊÊË îLLJJI_Rrà/ÈÊEMENT DOMESTIQUE : 2505206137472036 COULEURS",
+    "%ŸMË'ÊÊÊË îLLJJI_Rrà/ÈÊEMENT DOMESTIQUE : 2505206137472036 COULEURS",
     "21/02/2025 20/02/2025 9002225052009",
     "1.50",
-    "XIUR\u0027I\u0027ERMEESNT DOMESTIQUE RECU : 2505206137472036 COULEURS TUNISIENNES",
+    "XIUR'I'ERMEESNT DOMESTIQUE RECU : 2505206137472036 COULEURS TUNISIENNES",
     "21/02/2025 24/02/2025 9002225052009",
     " SUR : 2505201 137470335 GRAND 3.700,000 ",
     "COMMISSION VIREMENT DOMESTIQUE",
@@ -1158,7 +1158,7 @@
     ": 0.285",
     "21/02/2025  PDL 2505201137470336 GRAND MAGHREB MEDIAS S.A VIR 20/02/2025 900ZEXA250520179",
     ": 0750",
-    "XAIERÊI\u0027\\ÂËN;/È\\OII\u0027ÊESTIQUE RECU : 2505201137470336 GRAND MAGHREB",
+    "XAIERÊI'\\ÂËN;/È\\OII'ÊESTIQUE RECU : 2505201137470336 GRAND MAGHREB",
     "21/02/2025 24/02/2025 900ZEXA250520179",
     "500.000",
     "24/02/2025  COMMISSION SUR REMISE CARTE 21/02/2025 055FC11250550002",
@@ -1516,7 +1516,7 @@
       "Bottom": 424
     },
     {
-      "Text": "L\u0027ENVIRONNEMENT",
+      "Text": "L'ENVIRONNEMENT",
       "Confidence": 91.55217,
       "Left": 238,
       "Top": 408,
@@ -10260,7 +10260,7 @@
       "Bottom": 6461
     },
     {
-      "Text": "\u002B",
+      "Text": "+",
       "Confidence": 35.078445,
       "Left": 1095,
       "Top": 6458,
@@ -16356,7 +16356,7 @@
       "Bottom": 11115
     },
     {
-      "Text": "V\u0027REMENT",
+      "Text": "V'REMENT",
       "Confidence": 15.983643,
       "Left": 393,
       "Top": 11078,
@@ -16900,7 +16900,7 @@
       "Bottom": 11287
     },
     {
-      "Text": "\u003E",
+      "Text": ">",
       "Confidence": 56.45575,
       "Left": 1210,
       "Top": 11284,
@@ -20196,7 +20196,7 @@
       "Bottom": 13834
     },
     {
-      "Text": "\u0027",
+      "Text": "'",
       "Confidence": 0,
       "Left": 634,
       "Top": 13797,
@@ -30516,7 +30516,7 @@
       "Bottom": 21984
     },
     {
-      "Text": "%ŸMË\u0027ÊÊÊË",
+      "Text": "%ŸMË'ÊÊÊË",
       "Confidence": 51.62645,
       "Left": 215,
       "Top": 22005,
@@ -30596,7 +30596,7 @@
       "Bottom": 22030
     },
     {
-      "Text": "XIUR\u0027I\u0027ERMEESNT",
+      "Text": "XIUR'I'ERMEESNT",
       "Confidence": 69.8799,
       "Left": 214,
       "Top": 22051,
@@ -31004,7 +31004,7 @@
       "Bottom": 22213
     },
     {
-      "Text": "XAIERÊI\u0027\\ÂËN;/È\\OII\u0027ÊESTIQUE",
+      "Text": "XAIERÊI'\\ÂËN;/È\\OII'ÊESTIQUE",
       "Confidence": 46.23201,
       "Left": 215,
       "Top": 22234,
@@ -39347,7 +39347,7 @@
       ]
     },
     {
-      "LineText": "BD DE L\u0027ENVIRONNEMENT 2097 BOUMHEL",
+      "LineText": "BD DE L'ENVIRONNEMENT 2097 BOUMHEL",
       "Words": [
         {
           "Text": "BD",
@@ -39366,7 +39366,7 @@
           "Bottom": 424
         },
         {
-          "Text": "L\u0027ENVIRONNEMENT",
+          "Text": "L'ENVIRONNEMENT",
           "Confidence": 91.55217,
           "Left": 238,
           "Top": 408,
@@ -49205,10 +49205,10 @@
       ]
     },
     {
-      "LineText": "\u002B",
+      "LineText": "+",
       "Words": [
         {
-          "Text": "\u002B",
+          "Text": "+",
           "Confidence": 35.078445,
           "Left": 1095,
           "Top": 6458,
@@ -56175,7 +56175,7 @@
       ]
     },
     {
-      "LineText": " CON MIS ON UR V\u0027REMENT DOMESTIQUE : 2504302150031157 STE DU LAC",
+      "LineText": " CON MIS ON UR V'REMENT DOMESTIQUE : 2504302150031157 STE DU LAC",
       "Words": [
         {
           "Text": "",
@@ -56218,7 +56218,7 @@
           "Bottom": 11115
         },
         {
-          "Text": "V\u0027REMENT",
+          "Text": "V'REMENT",
           "Confidence": 15.983643,
           "Left": 393,
           "Top": 11078,
@@ -56853,10 +56853,10 @@
       ]
     },
     {
-      "LineText": "\u003E 200.000",
+      "LineText": "> 200.000",
       "Words": [
         {
-          "Text": "\u003E",
+          "Text": ">",
           "Confidence": 56.45575,
           "Left": 1210,
           "Top": 11284,
@@ -60581,7 +60581,7 @@
       ]
     },
     {
-      "LineText": "E E E \u0027 ARAB",
+      "LineText": "E E E ' ARAB",
       "Words": [
         {
           "Text": "ARAB",
@@ -60616,7 +60616,7 @@
           "Bottom": 13834
         },
         {
-          "Text": "\u0027",
+          "Text": "'",
           "Confidence": 0,
           "Left": 634,
           "Top": 13797,
@@ -72478,10 +72478,10 @@
       ]
     },
     {
-      "LineText": "%ŸMË\u0027ÊÊÊË îLLJJI_Rrà/ÈÊEMENT DOMESTIQUE : 2505206137472036 COULEURS",
+      "LineText": "%ŸMË'ÊÊÊË îLLJJI_Rrà/ÈÊEMENT DOMESTIQUE : 2505206137472036 COULEURS",
       "Words": [
         {
-          "Text": "%ŸMË\u0027ÊÊÊË",
+          "Text": "%ŸMË'ÊÊÊË",
           "Confidence": 51.62645,
           "Left": 215,
           "Top": 22005,
@@ -72573,10 +72573,10 @@
       ]
     },
     {
-      "LineText": "XIUR\u0027I\u0027ERMEESNT DOMESTIQUE RECU : 2505206137472036 COULEURS TUNISIENNES",
+      "LineText": "XIUR'I'ERMEESNT DOMESTIQUE RECU : 2505206137472036 COULEURS TUNISIENNES",
       "Words": [
         {
-          "Text": "XIUR\u0027I\u0027ERMEESNT",
+          "Text": "XIUR'I'ERMEESNT",
           "Confidence": 69.8799,
           "Left": 214,
           "Top": 22051,
@@ -73031,10 +73031,10 @@
       ]
     },
     {
-      "LineText": "XAIERÊI\u0027\\ÂËN;/È\\OII\u0027ÊESTIQUE RECU : 2505201137470336 GRAND MAGHREB",
+      "LineText": "XAIERÊI'\\ÂËN;/È\\OII'ÊESTIQUE RECU : 2505201137470336 GRAND MAGHREB",
       "Words": [
         {
-          "Text": "XAIERÊI\u0027\\ÂËN;/È\\OII\u0027ÊESTIQUE",
+          "Text": "XAIERÊI'\\ÂËN;/È\\OII'ÊESTIQUE",
           "Confidence": 46.23201,
           "Left": 215,
           "Top": 22234,

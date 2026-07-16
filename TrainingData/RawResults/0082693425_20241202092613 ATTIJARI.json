@@ -41,7 +41,7 @@
     "Code Iban : TN5904000010008269342555",
     "Date : 02/12/2024",
     "Solde initial (TND) : -309.015",
-    "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+    "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
     "IABONNEMENT 002026",
     "29/11/2024 28/11/2024 PACK BUSINESS SOLUTIONS S C 35.700 -344.715",
     "DONT TVA: 5,700",
@@ -516,7 +516,7 @@
       "Bottom": 609
     },
     {
-      "Text": "l\u0027opération",
+      "Text": "l'opération",
       "Confidence": 92.79833,
       "Left": 684,
       "Top": 591,
@@ -1189,7 +1189,7 @@
       ]
     },
     {
-      "LineText": "Date Valeur Libellé de l\u0027opération Débit (TND) Crédit (TND) Solde (TND)",
+      "LineText": "Date Valeur Libellé de l'opération Débit (TND) Crédit (TND) Solde (TND)",
       "Words": [
         {
           "Text": "Libellé",
@@ -1200,7 +1200,7 @@
           "Bottom": 609
         },
         {
-          "Text": "l\u0027opération",
+          "Text": "l'opération",
           "Confidence": 92.79833,
           "Left": 684,
           "Top": 591,
