@@ -6,20 +6,13 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "24011040582251230122",
+    "AccountNumber": "1400",
     "CustomerName": "",
     "BankName": "Banque Nationale Agricole (BNA)",
     "Currency": "TND",
     "Balance": 3943.810,
     "StatementDate": null,
     "Transactions": [
-      {
-        "Date": "31/12/2024",
-        "Description": "Solde au:",
-        "Debit": 170.062,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
       {
         "Date": "03/01/2025",
         "Description": "",
@@ -122,13 +115,6 @@
         "Date": "73/00/0000",
         "Description": "",
         "Debit": 858.845,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "31/10/2024",
-        "Description": "Solde",
-        "Debit": 8.535,
         "Credit": null,
         "BalanceAfterOperation": null
       },
@@ -623,13 +609,6 @@
         "BalanceAfterOperation": null
       },
       {
-        "Date": "31/03/2025",
-        "Description": "Solde au:",
-        "Debit": 1543.139,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "25/03/2025",
         "Description": "/04/2025 TVAICOMM VIRT RECU VR CPM/020425",
         "Debit": 0.570,
@@ -805,13 +784,6 @@
         "BalanceAfterOperation": null
       },
       {
-        "Date": "31/03/2025",
-        "Description": "Solde",
-        "Debit": 1543.139,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "16/04/2025",
         "Description": "",
         "Debit": 3.000,
@@ -850,20 +822,6 @@
         "Date": "28/04/2025",
         "Description": "",
         "Debit": 148.072,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "29/04/2025",
-        "Description": "Solde",
-        "Debit": 148.072,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "30/04/2025",
-        "Description": "Solde au.",
-        "Debit": 488.428,
         "Credit": null,
         "BalanceAfterOperation": null
       },
@@ -1054,13 +1012,6 @@
         "Description": "(",
         "Debit": 0.875,
         "Credit": 220.289,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "30/04/2025",
-        "Description": "Solde au:",
-        "Debit": 488.428,
-        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
@@ -1298,13 +1249,6 @@
         "Date": "08/07/2025",
         "Description": "Extrait Edité le:",
         "Debit": 10.59,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "30/04/2025",
-        "Description": "Solde au:",
-        "Debit": 1488.428,
         "Credit": null,
         "BalanceAfterOperation": null
       },
@@ -1666,20 +1610,6 @@
         "BalanceAfterOperation": null
       },
       {
-        "Date": "03/07/2025",
-        "Description": "Solde",
-        "Debit": 365.359,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "30/06/2025",
-        "Description": "Solde au",
-        "Debit": 5.398,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "30/06/2025",
         "Description": "COMP 12083 7 °",
         "Debit": 368.377,
@@ -1890,13 +1820,6 @@
         "BalanceAfterOperation": null
       },
       {
-        "Date": "30/06/2025",
-        "Description": "Solde au.",
-        "Debit": 5.398,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "31/07/7202",
         "Description": "— 3799 e",
         "Debit": 150.355,
@@ -1915,13 +1838,6 @@
         "Description": "/07/2025 COMM REG EFF —",
         "Debit": 5.500,
         "Credit": 944.855,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "31/07/2025",
-        "Description": "Solde au:",
-        "Debit": 3943.810,
-        "Credit": null,
         "BalanceAfterOperation": null
       }
     ]

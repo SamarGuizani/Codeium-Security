@@ -14,13 +14,6 @@
     "StatementDate": null,
     "Transactions": [
       {
-        "Date": "31/12/2023",
-        "Description": "Solde au",
-        "Debit": -16.911,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "02/01/2024",
         "Description": "/01/2024",
         "Debit": 53.550,
@@ -27766,13 +27759,6 @@
         "Description": "/12/2024",
         "Debit": 49.949,
         "Credit": 711.721,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "31/12/2024",
-        "Description": "Nouveau solde en DINAR TUNISIEN Au",
-        "Debit": 711.721,
-        "Credit": null,
         "BalanceAfterOperation": null
       }
     ]

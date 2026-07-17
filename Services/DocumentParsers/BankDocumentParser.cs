@@ -39,6 +39,8 @@ namespace Codeium_Security.Services.DocumentParsers
             foreach (var line in lines)
             {
                 var lineText = line.FullLineText;
+                if (Regex.IsMatch(lineText, @"\b(Solde|Total)\b", RegexOptions.IgnoreCase))
+                    continue;
 
                 var dateMatches = DateRegex.Matches(lineText);
                 if (dateMatches.Count == 0) continue;
@@ -113,6 +115,10 @@ namespace Codeium_Security.Services.DocumentParsers
         {
             var match = Regex.Match(text, @"Compte\s*:?\s*([0-9A-Z\s]+?)(?=Relation|\\n|\n)");
             if (match.Success) return match.Groups[1].Value.Trim();
+
+            // NOUVEAU : format "Numéro de compte : 00010-0082693425-5" (Attijari, avec tirets)
+            var numeroMatch = Regex.Match(text, @"compte\s*:?\s*([0-9][0-9A-Z\-]+)", RegexOptions.IgnoreCase);
+            if (numeroMatch.Success) return numeroMatch.Groups[1].Value.Trim();
 
             // Format RIB (utilisé par BIAT) : "RIB : 08 307 00059 10 02049 0 36"
             var ribMatch = Regex.Match(text, @"RIB\s*:?\s*([0-9\s]+)");

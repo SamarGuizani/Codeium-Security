@@ -3,10 +3,10 @@
   "DetectedType": "Bank",
   "PageCount": 2,
   "OcrConfidence": 86,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "",
+    "AccountNumber": "02222-25100815949-69",
     "CustomerName": "",
     "BankName": "",
     "Currency": "USD",

@@ -14,13 +14,6 @@
     "StatementDate": null,
     "Transactions": [
       {
-        "Date": "04-01-2024",
-        "Description": "-12-2023 Solde au: 31/12/2023",
-        "Debit": 0.000,
-        "Credit": 14620.957,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "29-12-2023",
         "Description": "-01-2024",
         "Debit": 1.000,

@@ -3,10 +3,10 @@
   "DetectedType": "Bank",
   "PageCount": 1,
   "OcrConfidence": 90,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "",
+    "AccountNumber": "00010-0082693425-5",
     "CustomerName": "",
     "BankName": "",
     "Currency": "TND",
@@ -18,13 +18,6 @@
         "Description": "/11/2024",
         "Debit": 35.700,
         "Credit": -344.715,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "30/11/2024",
-        "Description": "Solde (TND) au",
-        "Debit": -344.715,
-        "Credit": null,
         "BalanceAfterOperation": null
       }
     ]

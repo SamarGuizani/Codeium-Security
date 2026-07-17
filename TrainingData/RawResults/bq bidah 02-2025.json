@@ -14,13 +14,6 @@
     "StatementDate": null,
     "Transactions": [
       {
-        "Date": "01/02/2025",
-        "Description": "SOLDE DEBITEUR AU",
-        "Debit": 12602.543,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "03/02/2025",
         "Description": "",
         "Debit": 700.500,

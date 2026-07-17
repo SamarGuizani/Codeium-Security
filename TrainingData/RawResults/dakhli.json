@@ -14,13 +14,6 @@
     "StatementDate": null,
     "Transactions": [
       {
-        "Date": "01/02/2025",
-        "Description": "SOLDE DEBITEUR AU",
-        "Debit": -20080.474,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "38/82/4027",
         "Description": "M01661100/01022025 MODERN LEASING 25034061",
         "Debit": 2.000,

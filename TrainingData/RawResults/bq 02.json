@@ -14,13 +14,6 @@
     "StatementDate": null,
     "Transactions": [
       {
-        "Date": "31/01/2025",
-        "Description": "Solde Au",
-        "Debit": 1466.812,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "01/03/0728",
         "Description": "| Encaissement effet",
         "Debit": 3486.430,
@@ -395,13 +388,6 @@
         "Date": "01/03/2809",
         "Description": "| Paiement effet",
         "Debit": 4760.184,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "28/02/2025",
-        "Description": "Solde Au",
-        "Debit": 45295.879,
         "Credit": null,
         "BalanceAfterOperation": null
       }

@@ -700,13 +700,6 @@
         "BalanceAfterOperation": null
       },
       {
-        "Date": "16/07/2025",
-        "Description": "/07/2025  Apurement total EPS",
-        "Debit": 0.000,
-        "Credit": -25771.177,
-        "BalanceAfterOperation": null
-      },
-      {
         "Date": "17/07/2025",
         "Description": "/07/2025  Paiement achats 836281 STE DE GESTION 18/07/25",
         "Debit": 445.995,
