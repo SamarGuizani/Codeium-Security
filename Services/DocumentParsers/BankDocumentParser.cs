@@ -109,19 +109,20 @@ namespace Codeium_Security.Services.DocumentParsers
 
             decimal.TryParse(integerPart + "." + decimalPart, NumberStyles.Any, CultureInfo.InvariantCulture, out var result);
             return result;
-        }  
+        }
         private string ExtractAccountNumber(string text)
         {
-            var match = Regex.Match(text, @"Compte\s*:?\s*([0-9A-Z\s]+?)(?=Relation|\\n|\n)");
-            if (match.Success) return match.Groups[1].Value.Trim();
+            // Autorise les espaces DANS le numéro, s'arrête à un vrai saut de ligne ou 2+ espaces
+            var match = Regex.Match(text, @"Compte\s*:?\s*([0-9][0-9\s\-/]*[0-9])", RegexOptions.IgnoreCase);
+            if (match.Success) return Regex.Replace(match.Groups[1].Value.Trim(), @"\s{2,}", " ");
 
-            // NOUVEAU : format "Numéro de compte : 00010-0082693425-5" (Attijari, avec tirets)
-            var numeroMatch = Regex.Match(text, @"compte\s*:?\s*([0-9][0-9A-Z\-]+)", RegexOptions.IgnoreCase);
-            if (numeroMatch.Success) return numeroMatch.Groups[1].Value.Trim();
+            // Format RIB (BIAT) : "RIB : 08 307 00059 10 02049 0 36"
+            var ribMatch = Regex.Match(text, @"RIB\s*:?\s*([0-9][0-9\s]*[0-9])", RegexOptions.IgnoreCase);
+            if (ribMatch.Success) return ribMatch.Groups[1].Value.Trim();
 
-            // Format RIB (utilisé par BIAT) : "RIB : 08 307 00059 10 02049 0 36"
-            var ribMatch = Regex.Match(text, @"RIB\s*:?\s*([0-9\s]+)");
-            return ribMatch.Success ? ribMatch.Groups[1].Value.Trim() : "";
+            // Format IBAN tunisien 20 chiffres (dakhli, TOPDIS, ZORRAGA...)
+            var ibanMatch = Regex.Match(text, @"\b(\d{20})\b");
+            return ibanMatch.Success ? ibanMatch.Groups[1].Value : "";
         }
 
         private string ExtractCurrency(string text)
@@ -135,10 +136,17 @@ namespace Codeium_Security.Services.DocumentParsers
 
         private decimal ExtractBalance(string text)
         {
-            var matches = AmountRegex.Matches(text);
-            if (matches.Count == 0) return 0;
+            // Cherche le nombre juste après le mot "Solde" (pas n'importe où dans le document)
+            var soldeMatch = Regex.Match(text,
+                @"(?:Nouveau\s+)?Solde\s*(?:Final|Créditeur|Débiteur)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                RegexOptions.IgnoreCase);
 
-            return ParseAmount(matches[matches.Count - 1].Value);
+            if (soldeMatch.Success)
+                return ParseAmount(soldeMatch.Groups[1].Value);
+
+            // Repli : dernier montant du texte (comportement actuel, en dernier recours seulement)
+            var matches = AmountRegex.Matches(text);
+            return matches.Count > 0 ? ParseAmount(matches[matches.Count - 1].Value) : 0;
         }
 
         private string ExtractCustomerName(string text)

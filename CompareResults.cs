@@ -143,42 +143,78 @@ namespace Codeium_Security
         }
 
         // Lit le CSV en gérant correctement les guillemets ajoutés par Excel autour des valeurs
+        // Lit le CSV entier d'un coup, en gérant les guillemets Excel
+        // (y compris quand une cellule contient un retour à la ligne à l'intérieur)
         private static List<List<string>> ParseCsvLines(string path)
         {
             var result = new List<List<string>>();
-            var rawText = File.ReadAllText(path);
-            var lines = rawText.Split('\n');
+            var text = File.ReadAllText(path);
 
-            foreach (var rawLine in lines)
+            var fields = new List<string>();
+            var current = new System.Text.StringBuilder();
+            bool inQuotes = false;
+
+            for (int i = 0; i < text.Length; i++)
             {
-                var line = rawLine.TrimEnd('\r');
-                if (string.IsNullOrWhiteSpace(line)) continue;
+                char c = text[i];
 
-                var fields = new List<string>();
-                var current = new System.Text.StringBuilder();
-                bool inQuotes = false;
-
-                for (int i = 0; i < line.Length; i++)
+                if (inQuotes)
                 {
-                    char c = line[i];
-
                     if (c == '"')
                     {
-                        inQuotes = !inQuotes;
+                        // "" à l'intérieur de guillemets = un seul " littéral (échappement Excel)
+                        if (i + 1 < text.Length && text[i + 1] == '"')
+                        {
+                            current.Append('"');
+                            i++;
+                        }
+                        else
+                        {
+                            inQuotes = false;
+                        }
                     }
-                    else if (c == ';' && !inQuotes)
+                    else
+                    {
+                        current.Append(c); // même un \n ou \r est gardé tel quel, PAS une nouvelle ligne
+                    }
+                }
+                else
+                {
+                    if (c == '"')
+                    {
+                        inQuotes = true;
+                    }
+                    else if (c == ';')
                     {
                         fields.Add(current.ToString());
                         current.Clear();
+                    }
+                    else if (c == '\r')
+                    {
+                        // ignoré, on gère la fin de ligne avec \n
+                    }
+                    else if (c == '\n')
+                    {
+                        fields.Add(current.ToString());
+                        current.Clear();
+
+                        // on ignore les lignes complètement vides
+                        if (fields.Count > 1 || !string.IsNullOrWhiteSpace(fields[0]))
+                            result.Add(fields);
+
+                        fields = new List<string>();
                     }
                     else
                     {
                         current.Append(c);
                     }
                 }
-                fields.Add(current.ToString());
-                result.Add(fields);
             }
+
+            // dernière ligne si le fichier ne finit pas par \n
+            fields.Add(current.ToString());
+            if (fields.Count > 1 || !string.IsNullOrWhiteSpace(fields[0]))
+                result.Add(fields);
 
             return result;
         }
