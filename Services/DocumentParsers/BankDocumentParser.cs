@@ -109,8 +109,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
             decimal.TryParse(integerPart + "." + decimalPart, NumberStyles.Any, CultureInfo.InvariantCulture, out var result);
             return result;
-        }
-
+        }  
         private string ExtractAccountNumber(string text)
         {
             var match = Regex.Match(text, @"Compte\s*:?\s*([0-9A-Z\s]+?)(?=Relation|\\n|\n)");

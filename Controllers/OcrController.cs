@@ -26,6 +26,7 @@ namespace Codeium_Security.Controllers
             _processingService = processingService;
         }
 
+
         [HttpPost]
         public async Task<IActionResult> Extract(List<IFormFile> files)
         {
@@ -76,6 +77,18 @@ namespace Codeium_Security.Controllers
             string plainText = _processingService.FormatAsPlainText(file.FileName, ocrResult.PageTexts);
 
             return Content(plainText, "text/plain; charset=utf-8");
+        }
+        [HttpGet("compare")]
+        public IActionResult Compare()
+        {
+            var writer = new StringWriter();
+            var originalOut = Console.Out;
+            Console.SetOut(writer);
+
+            CompareResults.Run();
+
+            Console.SetOut(originalOut);
+            return Content(writer.ToString(), "text/plain; charset=utf-8");
         }
 
         [HttpPost("process-batch")]
