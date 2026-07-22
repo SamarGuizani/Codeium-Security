@@ -32,7 +32,7 @@ namespace Codeium_Security
                     continue;
                 }
 
-                using var doc = JsonDocument.Parse(File.ReadAllText(jsonPath));
+                using var doc = JsonDocument.Parse(ReadAllTextWithRetry(jsonPath));
                 var document = doc.RootElement.GetProperty("Document");
 
                 string predAccount = document.TryGetProperty("AccountNumber", out var accEl) ? accEl.GetString() ?? "" : "";
@@ -83,7 +83,6 @@ namespace Codeium_Security
             null => "N/A"
         };
 
-        // Enlève espaces et tirets, met en minuscule -> pour comparer les numéros de compte
         private static string NormalizeAccount(string value)
         {
             if (string.IsNullOrEmpty(value)) return "";
@@ -92,26 +91,22 @@ namespace Codeium_Security
             return value;
         }
 
-        // Convertit "2 281,290" ou "-13 825.390" ou "170000.000" en vrai nombre decimal, peu importe le format
         private static decimal? NormalizeNumber(string value)
         {
             if (string.IsNullOrWhiteSpace(value)) return null;
 
             value = value.Trim();
-            value = Regex.Replace(value, @"[\s]", ""); // enlève tous les espaces (milliers)
+            value = Regex.Replace(value, @"[\s]", "");
 
-            // Remplace la virgule décimale par un point, uniquement si c'est la dernière séparation
             int lastComma = value.LastIndexOf(',');
             int lastDot = value.LastIndexOf('.');
 
             if (lastComma > lastDot)
             {
-                // virgule = séparateur décimal (format tunisien/français)
                 value = value.Replace(".", "").Replace(",", ".");
             }
             else if (lastDot > lastComma)
             {
-                // point = séparateur décimal (format anglais), enlève les virgules de milliers
                 value = value.Replace(",", "");
             }
 
@@ -142,13 +137,10 @@ namespace Codeium_Security
             return rows;
         }
 
-        // Lit le CSV en gérant correctement les guillemets ajoutés par Excel autour des valeurs
-        // Lit le CSV entier d'un coup, en gérant les guillemets Excel
-        // (y compris quand une cellule contient un retour à la ligne à l'intérieur)
         private static List<List<string>> ParseCsvLines(string path)
         {
             var result = new List<List<string>>();
-            var text = File.ReadAllText(path);
+            var text = ReadAllTextWithRetry(path);
 
             var fields = new List<string>();
             var current = new System.Text.StringBuilder();
@@ -162,7 +154,6 @@ namespace Codeium_Security
                 {
                     if (c == '"')
                     {
-                        // "" à l'intérieur de guillemets = un seul " littéral (échappement Excel)
                         if (i + 1 < text.Length && text[i + 1] == '"')
                         {
                             current.Append('"');
@@ -175,7 +166,7 @@ namespace Codeium_Security
                     }
                     else
                     {
-                        current.Append(c); // même un \n ou \r est gardé tel quel, PAS une nouvelle ligne
+                        current.Append(c);
                     }
                 }
                 else
@@ -191,14 +182,13 @@ namespace Codeium_Security
                     }
                     else if (c == '\r')
                     {
-                        // ignoré, on gère la fin de ligne avec \n
+                        // ignoré
                     }
                     else if (c == '\n')
                     {
                         fields.Add(current.ToString());
                         current.Clear();
 
-                        // on ignore les lignes complètement vides
                         if (fields.Count > 1 || !string.IsNullOrWhiteSpace(fields[0]))
                             result.Add(fields);
 
@@ -211,12 +201,31 @@ namespace Codeium_Security
                 }
             }
 
-            // dernière ligne si le fichier ne finit pas par \n
             fields.Add(current.ToString());
             if (fields.Count > 1 || !string.IsNullOrWhiteSpace(fields[0]))
                 result.Add(fields);
 
             return result;
+        }
+
+        // Lit un fichier en réessayant s'il est momentanément verrouillé par un autre processus
+        private static string ReadAllTextWithRetry(string path, int maxAttempts = 5, int delayMs = 200)
+        {
+            for (int attempt = 1; attempt <= maxAttempts; attempt++)
+            {
+                try
+                {
+                    using var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                    using var sr = new StreamReader(fs, System.Text.Encoding.UTF8);
+                    return sr.ReadToEnd();
+                }
+                catch (IOException) when (attempt < maxAttempts)
+                {
+                    System.Threading.Thread.Sleep(delayMs);
+                }
+            }
+
+            return File.ReadAllText(path);
         }
     }
 }
