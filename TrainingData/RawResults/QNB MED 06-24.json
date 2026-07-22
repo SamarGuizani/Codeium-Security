@@ -3,14 +3,14 @@
   "DetectedType": "Bank",
   "PageCount": 4,
   "OcrConfidence": 89.25,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "",
+    "AccountNumber": "23019111112548178875",
     "CustomerName": "",
     "BankName": "",
     "Currency": "TND",
-    "Balance": 28.935,
+    "Balance": -1391.986,
     "StatementDate": null,
     "Transactions": [
       {

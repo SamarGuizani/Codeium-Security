@@ -6,7 +6,7 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "",
+    "AccountNumber": "2",
     "CustomerName": "",
     "BankName": "Arab Tunisian Bank (ATB)",
     "Currency": "TND",

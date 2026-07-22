@@ -112,19 +112,23 @@ namespace Codeium_Security.Services.DocumentParsers
         }
         private string ExtractAccountNumber(string text)
         {
-            // Autorise les espaces DANS le numéro, s'arrête à un vrai saut de ligne ou 2+ espaces
-            var match = Regex.Match(text, @"Compte\s*:?\s*([0-9][0-9\s\-/]*[0-9])", RegexOptions.IgnoreCase);
-            if (match.Success) return Regex.Replace(match.Groups[1].Value.Trim(), @"\s{2,}", " ");
+            // "Compte" (français) OU "Account" (anglais, vu chez QNB)
+            // "N°" ou "No" optionnel entre le mot et les chiffres (corrige WAFA)
+            // Limité à 4 groupes de chiffres max (corrige BIAT qui avalait la date)
+            // On prend le DERNIER trouvé, pas le premier (corrige QNB : 2 comptes dans le même doc)
+            var matches = Regex.Matches(text,
+                @"(?:Compte|Account)\s*(?:N[°o]?)?\s*(?:\(IBAN\))?\s*:?\s*([0-9]+(?:[\s\-/][0-9]+){0,3})",
+                RegexOptions.IgnoreCase);
+            if (matches.Count > 0)
+                return Regex.Replace(matches[matches.Count - 1].Groups[1].Value.Trim(), @"\s{2,}", " ");
 
-            // Format RIB (BIAT) : "RIB : 08 307 00059 10 02049 0 36"
-            var ribMatch = Regex.Match(text, @"RIB\s*:?\s*([0-9][0-9\s]*[0-9])", RegexOptions.IgnoreCase);
-            if (ribMatch.Success) return ribMatch.Groups[1].Value.Trim();
+            var ribMatches = Regex.Matches(text, @"RIB\s*:?\s*([0-9]+(?:[\s][0-9]+){0,6})", RegexOptions.IgnoreCase);
+            if (ribMatches.Count > 0)
+                return ribMatches[ribMatches.Count - 1].Groups[1].Value.Trim();
 
-            // Format IBAN tunisien 20 chiffres (dakhli, TOPDIS, ZORRAGA...)
-            var ibanMatch = Regex.Match(text, @"\b(\d{20})\b");
-            return ibanMatch.Success ? ibanMatch.Groups[1].Value : "";
+            var ibanMatches = Regex.Matches(text, @"\b(\d{20})\b");
+            return ibanMatches.Count > 0 ? ibanMatches[ibanMatches.Count - 1].Groups[1].Value : "";
         }
-
         private string ExtractCurrency(string text)
         {
             if (text.Contains("TND")) return "TND";
@@ -134,21 +138,34 @@ namespace Codeium_Security.Services.DocumentParsers
             return "";
         }
 
+
         private decimal ExtractBalance(string text)
         {
-            // Cherche le nombre juste après le mot "Solde" (pas n'importe où dans le document)
-            var soldeMatch = Regex.Match(text,
-                @"(?:Nouveau\s+)?Solde\s*(?:Final|Créditeur|Débiteur)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+            // Priorité 1 : "Solde Final" (format QNB)
+            var soldeFinal = Regex.Matches(text,
+                @"Solde\s*Final\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
                 RegexOptions.IgnoreCase);
+            if (soldeFinal.Count > 0)
+                return ParseAmount(soldeFinal[soldeFinal.Count - 1].Groups[1].Value);
 
-            if (soldeMatch.Success)
-                return ParseAmount(soldeMatch.Groups[1].Value);
+            // Priorité 2 : "Solde au JJ/MM/AAAA montant" (format WAFA)
+            var soldeAu = Regex.Matches(text,
+                @"Solde\s+au\s*:?\s*\d{2}[/\-.]\d{2}[/\-.]\d{4}\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                RegexOptions.IgnoreCase);
+            if (soldeAu.Count > 0)
+                return ParseAmount(soldeAu[soldeAu.Count - 1].Groups[1].Value);
 
-            // Repli : dernier montant du texte (comportement actuel, en dernier recours seulement)
+            // Priorité 3 : dernier "Solde" générique dans le texte (BIAT, BNA...)
+            var solde = Regex.Matches(text,
+                @"Solde\s*(?:Créditeur|Débiteur)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                RegexOptions.IgnoreCase);
+            if (solde.Count > 0)
+                return ParseAmount(solde[solde.Count - 1].Groups[1].Value);
+
+            // Dernier recours : dernier montant du document, peu importe le contexte
             var matches = AmountRegex.Matches(text);
             return matches.Count > 0 ? ParseAmount(matches[matches.Count - 1].Value) : 0;
         }
-
         private string ExtractCustomerName(string text)
         {
             var match = Regex.Match(text, @"Relation\s*:?\s*(.+?)(?=Devise)");

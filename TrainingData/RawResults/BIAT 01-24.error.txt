@@ -1,0 +1,7 @@
+System.IO.IOException: The process cannot access the file 'page_7.png' because it is being used by another process.
+   at System.IO.FileSystem.RemoveDirectoryRecursive(String fullPath, WIN32_FIND_DATA& findData, Boolean topLevel)
+   at System.IO.FileSystem.RemoveDirectory(String fullPath, Boolean recursive)
+   at Codeium_Security.Services.PdfToImageConverter.ConvertPdfToImages(String pdfPath, String outputFolder) in C:\Users\USER\OneDrive\Desktop\Codeium Security\Codeium Security\Services\PdfToImageConverter.cs:line 22
+   at Codeium_Security.Services.DocumentProcessingService.RunOcrOnlyAsync(String filePath, String originalFileName) in C:\Users\USER\OneDrive\Desktop\Codeium Security\Codeium Security\Services\DocumentProcessingService.cs:line 49
+   at Codeium_Security.Services.DocumentProcessingService.ProcessFileAsync(String filePath, String originalFileName) in C:\Users\USER\OneDrive\Desktop\Codeium Security\Codeium Security\Services\DocumentProcessingService.cs:line 95
+   at Codeium_Security.Controllers.OcrController.ProcessBatch(List`1 files) in C:\Users\USER\OneDrive\Desktop\Codeium Security\Codeium Security\Controllers\OcrController.cs:line 159

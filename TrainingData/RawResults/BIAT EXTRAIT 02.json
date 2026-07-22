@@ -3,10 +3,10 @@
   "DetectedType": "Bank",
   "PageCount": 7,
   "OcrConfidence": 91.28571,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "",
+    "AccountNumber": "8908744188-202406",
     "CustomerName": "",
     "BankName": "",
     "Currency": "TND",

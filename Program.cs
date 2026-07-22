@@ -4,6 +4,7 @@ using Codeium_Security.OCR;
 using Codeium_Security.Services;
 using Codeium_Security.Services.DocumentClassification;
 using Codeium_Security.Services.DocumentParsers;
+Codeium_Security.Tools.TestParser.RunTests();
 
 
 var builder = WebApplication.CreateBuilder(args);

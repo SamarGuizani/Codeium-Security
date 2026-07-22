@@ -6,11 +6,11 @@
   "NeedsReview": false,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "59",
+    "AccountNumber": "59 10 02049 0 31102023",
     "CustomerName": "",
     "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
     "Currency": "TND",
-    "Balance": 170000.000,
+    "Balance": 1667.523,
     "StatementDate": null,
     "Transactions": [
       {
