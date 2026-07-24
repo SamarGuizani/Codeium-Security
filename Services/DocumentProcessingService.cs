@@ -168,10 +168,17 @@ namespace Codeium_Security.Services
 
             if (document is BankDocument bank)
             {
-                if (string.IsNullOrWhiteSpace(bank.AccountNumber))
+                if (bank.Accounts.Count == 0)
                     return true;
-                if (bank.Balance == 0 && bank.Transactions.Count == 0)
-                    return true;
+
+                // Verifie chaque sous-compte : si un seul est incomplet, le document est signale pour revue
+                foreach (var account in bank.Accounts)
+                {
+                    if (string.IsNullOrWhiteSpace(account.AccountNumber))
+                        return true;
+                    if (account.Balance == 0 && account.Transactions.Count == 0)
+                        return true;
+                }
             }
 
             return false;
