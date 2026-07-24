@@ -10,6 +10,10 @@
     "CustomerName": "",
     "TotalDebit": 0,
     "TotalCredit": 0,
+    "SumOfDebits": 35.700,
+    "SumOfCredits": 0,
+    "DebitTotalMatches": false,
+    "CreditTotalMatches": true,
     "BankName": "",
     "Currency": "TND",
     "Balance": -344.715,
@@ -17,17 +21,10 @@
     "Transactions": [
       {
         "Solde": -344.715,
-        "Date": "28/11/2024",
-        "Description": "/11/2024",
+        "Date": "29/11/2024",
+        "Description": "28/11/2024 PACK BUSINESS SOLUTIONS S C",
+        "SoldeType": null,
         "Debit": 35.700,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": -344.715,
-        "Date": "30/11/2024",
-        "Description": "Solde (TND) au",
-        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }

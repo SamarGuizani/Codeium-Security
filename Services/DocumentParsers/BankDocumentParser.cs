@@ -67,12 +67,18 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (cellTexts.Count == 0) continue;
 
                 string joined = string.Join(" ", cellTexts);
-                if (Regex.IsMatch(joined, @"\b(Total|Solde\s*Initial|Solde\s*Final|Page\s*\d)\b", RegexOptions.IgnoreCase))
+
+                // NOUVEAU : "SOLDE INITIAL" signale le début d'un nouveau sous-compte -> on reset la reference
+                if (Regex.IsMatch(joined, @"Solde\s*Initial", RegexOptions.IgnoreCase))
+                {
+                    var initMatch = AmountRegex.Match(joined);
+                    previousSolde = initMatch.Success ? ParseAmount(initMatch.Value) : null;
+                    continue;
+                }
+
+                if (Regex.IsMatch(joined, @"\b(Total|Solde\s*Final|Page\s*\d)\b", RegexOptions.IgnoreCase))
                     continue;
 
-                // Cellule 0 (la plus a gauche) = date d'operation attendue.
-                // NormalizeDate retourne "" si la date n'est pas reelle -> la ligne est rejetee ici,
-                // donc les en-tetes repetes / numeros de page / lignes sans date ne deviennent jamais des transactions.
                 string normalizedDate = NormalizeDate(cellTexts[0].Trim());
                 if (string.IsNullOrEmpty(normalizedDate)) continue;
 
@@ -109,7 +115,6 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                 }
 
-                // BUG 15 : detecte CR/DB accole au solde, ex "1 320.062 CR"
                 var crdb = Regex.Match(joined, @"\b(CR|DB)\b");
                 if (crdb.Success) tx.SoldeType = crdb.Groups[1].Value;
 

@@ -10,6 +10,10 @@
     "CustomerName": "",
     "TotalDebit": 0,
     "TotalCredit": 0,
+    "SumOfDebits": 1027.89,
+    "SumOfCredits": 9100.00,
+    "DebitTotalMatches": false,
+    "CreditTotalMatches": false,
     "BankName": "",
     "Currency": "USD",
     "Balance": 12027.89,
@@ -18,7 +22,8 @@
       {
         "Solde": 4251.06,
         "Date": "14/05/2025",
-        "Description": "/05/2025",
+        "Description": "14/05/2025 PAIEMENT TPE",
+        "SoldeType": null,
         "Debit": 39.92,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -26,7 +31,8 @@
       {
         "Solde": 4250.66,
         "Date": "14/05/2025",
-        "Description": "/05/2025",
+        "Description": "14/05/2025 COM & TVA RET. CARTE",
+        "SoldeType": null,
         "Debit": 0.40,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -34,7 +40,8 @@
       {
         "Solde": 4250.58,
         "Date": "14/05/2025",
-        "Description": "/05/2025",
+        "Description": "14/05/2025 COM & TVA RET. CARTE",
+        "SoldeType": null,
         "Debit": 0.08,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -42,7 +49,8 @@
       {
         "Solde": 2325.06,
         "Date": "19/05/2025",
-        "Description": "/05/2025",
+        "Description": "19/05/2025 PAIEMENT TPE",
+        "SoldeType": null,
         "Debit": 925.52,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -50,7 +58,8 @@
       {
         "Solde": 2300.39,
         "Date": "19/05/2025",
-        "Description": "/05/2025",
+        "Description": "19/05/2025 PAIEMENT TPE",
+        "SoldeType": null,
         "Debit": 24.67,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -58,7 +67,8 @@
       {
         "Solde": 2286.48,
         "Date": "19/05/2025",
-        "Description": "/05/2025",
+        "Description": "19/05/2025 PAIEMENT TPE",
+        "SoldeType": null,
         "Debit": 13.91,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -66,7 +76,8 @@
       {
         "Solde": 2267.22,
         "Date": "19/05/2025",
-        "Description": "/05/2025",
+        "Description": "19/05/2025 COM & TVA RET. CARTE",
+        "SoldeType": null,
         "Debit": 19.26,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -74,7 +85,8 @@
       {
         "Solde": 2266.97,
         "Date": "19/05/2025",
-        "Description": "/05/2025",
+        "Description": "19/05/2025 COM & TVA RET. CARTE",
+        "SoldeType": null,
         "Debit": 0.25,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -82,7 +94,8 @@
       {
         "Solde": 2266.83,
         "Date": "19/05/2025",
-        "Description": "/05/2025",
+        "Description": "19/05/2025 COM & TVA RET. CARTE",
+        "SoldeType": null,
         "Debit": 0.14,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -90,7 +103,8 @@
       {
         "Solde": 2266.78,
         "Date": "19/05/2025",
-        "Description": "/05/2025",
+        "Description": "19/05/2025 COM & TVA RET. CARTE",
+        "SoldeType": null,
         "Debit": 0.05,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -98,7 +112,8 @@
       {
         "Solde": 2266.75,
         "Date": "19/05/2025",
-        "Description": "/05/2025",
+        "Description": "19/05/2025 COM & TVA RET. CARTE",
+        "SoldeType": null,
         "Debit": 0.03,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -106,7 +121,8 @@
       {
         "Solde": 2263.09,
         "Date": "19/05/2025",
-        "Description": "/05/2025",
+        "Description": "19/05/2025 COM & TVA RET. CARTE",
+        "SoldeType": null,
         "Debit": 3.66,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -114,15 +130,17 @@
       {
         "Solde": 11363.09,
         "Date": "24/06/2025",
-        "Description": "/06/2025",
+        "Description": "24/06/2025 & TRANSFERT نع",
+        "SoldeType": null,
         "Debit": null,
         "Credit": 9100.00,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 10000.00,
-        "Date": "04/07/2025",
-        "Description": "/07/2025",
+        "Date": "08/07/2025",
+        "Description": "04/07/2025 EVIREMENT EMIS MEM كح 17 9",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null

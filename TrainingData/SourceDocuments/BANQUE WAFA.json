@@ -10,128 +10,423 @@
     "CustomerName": "",
     "TotalDebit": 42894.322,
     "TotalCredit": 42475.860,
-    "SumOfDebits": 14828.152,
-    "SumOfCredits": 15325.163,
-    "DebitTotalMatches": false,
-    "CreditTotalMatches": false,
     "BankName": "Banque Nationale Agricole (BNA)",
     "Currency": "TND",
     "Balance": 1543.139,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 170.062,
+        "Date": "31/12/2024",
+        "Description": "Solde au:",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 1320.062,
+        "Date": "03/01/2025",
+        "Description": "",
+        "Debit": null,
+        "Credit": 150.000,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 520.062,
         "Date": "03/01/2025",
-        "Description": "CR",
-        "SoldeType": "CR",
+        "Description": "",
         "Debit": 200.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 501.000,
-        "Date": "02/01/2025",
-        "Description": "MEME AG N°: 7105618 - 77656558 4",
-        "SoldeType": null,
+        "Date": "77/65/6558",
+        "Description": "/01/2025 MEME AG N°: 7105618",
         "Debit": null,
         "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 982.688,
+        "Date": "30/12/2024",
+        "Description": "123",
+        "Debit": null,
+        "Credit": 1.750,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 983.020,
         "Date": "30/12/2024",
-        "Description": "B DB",
-        "SoldeType": "DB",
+        "Description": "",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 538.973,
+        "Date": "09/01/2025",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0.143,
+        "Date": "09/01/2025",
+        "Description": "/12/24",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 66.076,
+        "Date": "09/01/2025",
+        "Description": "CHQ COMP N° l 8",
+        "Debit": null,
+        "Credit": 472.754,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 5000.000,
+        "Date": "10/01/2025",
+        "Description": "PC N° —",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0,
+        "Date": "07/01/2025",
+        "Description": "1125",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 553.776,
+        "Date": "07/01/2025",
+        "Description": "— j1271125",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 109.406,
+        "Date": "10/31/2940",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 939.196,
+        "Date": "15/01/2025",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 590.155,
+        "Date": "16/10/1720",
+        "Description": "CHQ",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 858.845,
+        "Date": "73/00/0000",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 8.535,
+        "Date": "31/10/2024",
+        "Description": "Solde",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 66.076,
+        "Date": "09/01/2025",
+        "Description": "619",
+        "Debit": null,
+        "Credit": 472.754,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 588.076,
+        "Date": "13/01/2025",
+        "Description": "868",
+        "Debit": null,
+        "Credit": 522.000,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 555.858,
         "Date": "20/01/2025",
-        "Description": "CR",
-        "SoldeType": "CR",
+        "Description": "",
         "Debit": 967.782,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 5000000555.858,
+        "Date": "10/01/2025",
+        "Description": "9344",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 332553.776,
+        "Date": "07/01/2025",
+        "Description": "CHQ 1271125",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 836.000,
+        "Date": "15/01/2025",
+        "Description": "957",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 109.406,
+        "Date": "15/01/2025",
+        "Description": "",
+        "Debit": 1719.630,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 109.406,
+        "Date": "16/01/2025",
+        "Description": "ESPECES PC N° 03129401",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 166789842.617,
+        "Date": "20/01/2025",
+        "Description": "5",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2000940.617,
+        "Date": "35/10/1720",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 940.237,
+        "Date": "15/04/2025",
+        "Description": "o",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.380,
         "Date": "21/01/2025",
-        "Description": "TVAICOMM PREL 69955 À",
-        "SoldeType": null,
+        "Description": "",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 590.321,
+        "Date": "16/91/7202",
+        "Description": "CHQ (™~ 1271128 ë”",
+        "Debit": null,
+        "Credit": 0.875,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 590.155,
+        "Date": "16/01/2025",
+        "Description": "REMISE 12711288 A",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 141.155,
+        "Date": "24/01/2025",
+        "Description": "15/",
+        "Debit": 551.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 0.000,
-        "Date": "23/01/2025",
-        "Description": "RETRAÎT ESPECES 1031268070 22/01/2025",
-        "SoldeType": null,
+        "Date": "22/01/2025",
+        "Description": "/01/2025 RETRAÎT ESPECES 1031268070",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 860.595,
-        "Date": "24/01/2025",
-        "Description": "ها 1271129 20/01/2025 1750  DB",
-        "SoldeType": "DB",
+        "Date": "20/01/2025",
+        "Description": "/01/2025   ها 1271129",
         "Debit": null,
         "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 860.927,
+        "Date": "20/01/2025",
+        "Description": "(2410172025 CHQ 1271129",
+        "Debit": null,
+        "Credit": 0.332,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 710.927,
         "Date": "27/01/2025",
-        "Description": "DB",
-        "SoldeType": "DB",
+        "Description": "",
         "Debit": 150.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 980.938,
-        "Date": "02/01/2025",
-        "Description": "CHQ MEME AG N°: 7105618 7105618 DB",
-        "SoldeType": "DB",
+        "Solde": 320.062,
+        "Date": "03/01/2025",
+        "Description": "/0172025 ENC CHQ N° 210 1210",
+        "Debit": 150.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 5520.062,
+        "Date": "03/01/2025",
+        "Description": "172025 02235212",
         "Debit": null,
-        "Credit": 6501.000,
+        "Credit": 4200.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 6501000980.938,
+        "Date": "02/01/2025",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 982.688,
+        "Date": "30/12/2024",
+        "Description": "",
+        "Debit": 1.750,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 332983.020,
+        "Date": "30/12/2024",
+        "Description": "TVAICOMM REMISE CHQ 1271123",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 100000883.020,
+        "Date": "08/01/2025",
+        "Description": "/01/2025 ENC CHQ N° 4000718 4000718",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 681.278,
+        "Date": "08/01/2025",
+        "Description": "j",
+        "Debit": 2564.298,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 540.764,
+        "Date": "01/01/2025",
+        "Description": "/01/2025  AGIOS AU 31/12/24 /AGIOS",
+        "Debit": 140.514,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 539.889,
-        "Date": "08/01/2025",
-        "Description": "COMM REMISE CHQ [1271122 02/01/2025  CR",
-        "SoldeType": "CR",
+        "Date": "02/01/2025",
+        "Description": "/01/2025  COMM REMISE CHQ [1271122",
         "Debit": 0.875,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 539.723,
-        "Date": "08/01/2025",
-        "Description": "TVA/ICOMM REMISE CHQ ف 02/01/2025 CR",
-        "SoldeType": "CR",
+        "Date": "02/01/2025",
+        "Description": "/01/2025  TVA/ICOMM REMISE CHQ ف",
         "Debit": 0.166,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 538.973,
-        "Date": "10/01/2025",
-        "Description": "RECUPERATION FRAIS PDL 01/12/24 09/01/2025 CR",
-        "SoldeType": "CR",
+        "Date": "09/01/2025",
+        "Description": "/01/2025  RECUPERATION FRAIS PDL 01/12/24",
         "Debit": 0.750,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 538.830,
+        "Date": "09/01/2025",
+        "Description": "172025 TVAIRECUPERATION FRAIS ا02 4",
+        "Debit": 0.143,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 66.076,
+        "Date": "09/01/2025",
+        "Description": "/01/2025 CHQ COMP N° 7105619 7105619",
+        "Debit": 472.754,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 522.000,
-        "Date": "10/01/2025",
-        "Description": "ENC 19334868",
-        "SoldeType": null,
+        "Date": "19/33/4868",
+        "Description": "/01/2025 ENC",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 588.076,
+        "Date": "13/01/2025",
+        "Description": "CHQ N° 9334868",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0,
+        "Date": "03/12/9344",
+        "Description": "/01/2025 ?522?5 ESPECES PC N° ’",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -139,188 +434,207 @@
       {
         "Solde": 555.858,
         "Date": "13/01/2025",
-        "Description": "?522?5 ESPECES PC N° ’03129344 fg&e%ﬂﬁ‘b\\\\_\\&emoo% ١",
-        "SoldeType": "CR",
+        "Description": "pate",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 881.715,
-        "Date": "03/02/2025",
-        "Description": "TVA/COMM ANNIVERSAIRE [VCENA\\045107  03/02/2025 DB",
-        "SoldeType": "DB",
+        "Solde": 804.365,
+        "Date": "31/01/2025",
+        "Description": "6 au",
         "Debit": null,
-        "Credit": 12.350,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 882.465,
-        "Date": "10/02/2025",
-        "Description": "RECUPERATION FRAIS PDL 01/01/25 07/02/2025 :",
-        "SoldeType": null,
+        "Solde": 1869.365,
+        "Date": "03/02/2025",
+        "Description": "\" 03/02/2025 COMM ANNIVERSAIRE - VCENA\\045107",
         "Debit": null,
-        "Credit": 0.750,
+        "Credit": 65.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 12350881.715,
+        "Date": "03/02/2025",
+        "Description": "/02/2025 TVA/COMM ANNIVERSAIRE [VCENA\\045107",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 750882.465,
+        "Date": "07/02/2025",
+        "Description": "/02/2025 RECUPERATION FRAIS PDL 01/01/25",
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.143,
-        "Date": "10/02/2025",
-        "Description": "TVA/RECUPERATION i FRAIS PDL ] 01/01/25 N 07/02/2025",
-        "SoldeType": null,
+        "Date": "07/02/2025",
+        "Description": "/02/2025 TVA/RECUPERATION i FRAIS PDL ] 01/01/25 N",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 73.592,
-        "Date": "12/02/2025",
-        "Description": "COMM VIRT RECU J VR CPM/120225 06/02/2025 - T “",
-        "SoldeType": null,
+        "Solde": 76.592,
+        "Date": "13/02/2025",
+        "Description": "VR CPM/120225",
         "Debit": null,
-        "Credit": 3.000,
+        "Credit": 959.200,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 73.592,
+        "Date": "06/02/2025",
+        "Description": "/02/2025 COMM VIRT RECU J VR CPM/120225",
+        "Debit": 3.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.000,
-        "Date": "14/02/2025",
-        "Description": "RETRAIT ESPECES PC N° 3189967 13/02/2025",
-        "SoldeType": null,
+        "Date": "13/02/2025",
+        "Description": "/02/2025 RETRAIT ESPECES PC N° 3189967",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.875,
-        "Date": "19/02/2025",
-        "Description": "COMM REMISE CHQ 1271130 1 13/02/2025",
-        "SoldeType": null,
+        "Date": "13/02/2025",
+        "Description": "/02/2025 COMM REMISE CHQ 1271130 1",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.166,
-        "Date": "19/02/2025",
-        "Description": "' TVA/COMM REMISE CHQ 1274130 13/02/2025",
-        "SoldeType": null,
+        "Date": "13/02/2025",
+        "Description": "/02/2025 ' TVA/COMM REMISE CHQ 1274130",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 300.000,
-        "Date": "20/02/2025",
-        "Description": "ENC CHQ N° 400880 AC0EB0 1 21/02/2025 628 019",
-        "SoldeType": null,
+        "Date": "21/02/2025",
+        "Description": "/02/2025 ENC CHQ N° 400880 AC0EB0 1",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.166,
-        "Date": "20/02/2025",
-        "Description": "TVAICOMM REMISE CHO 1271131 - 1 14/02/2025\" e",
-        "SoldeType": null,
+        "Date": "14/02/2025",
+        "Description": "/02/2025 TVAICOMM REMISE CHO 1271131 - 1",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 25.000,
-        "Date": "20/02/2025",
-        "Description": "COM OP PASSAGERES — 1011200225170 ' 14/02/2025",
-        "SoldeType": null,
+        "Date": "14/02/2025",
+        "Description": "/02/2025 COM OP PASSAGERES — 1011200225170 '",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.103,
-        "Date": "20/02/2025",
-        "Description": "COMM COMPTE DEBITEUR/COP 011200225170  14/02/2025",
-        "SoldeType": null,
+        "Date": "14/02/2025",
+        "Description": "/02/2025 COMM COMPTE DEBITEUR/COP 011200225170",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.045,
+        "Solde": 39.153,
         "Date": "20/02/2025",
-        "Description": "TVACOMM REG EFF 009694079217 14/02/2025",
-        "SoldeType": null,
+        "Description": "!",
+        "Debit": null,
+        "Credit": 380.220,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 1.045,
+        "Date": "14/02/2025",
+        "Description": "/02/2025 TVACOMM REG EFF 009694079217",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 2.000,
-        "Date": "21/02/2025",
-        "Description": "COMM PREL 17/02/2025 2392971",
-        "SoldeType": null,
+        "Date": "17/02/2025",
+        "Description": "/02/2025 COMM PREL",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 3000.000,
-        "Date": "21/02/2025",
-        "Description": "RETRAIT ESPECES PC N° 3190114 20/02/2025 607 409",
-        "SoldeType": null,
+        "Date": "20/02/2025",
+        "Description": "/02/2025 RETRAIT ESPECES PC N° 3190114",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.118,
-        "Date": "28/02/2025",
-        "Description": "COMM COMPTE DEBITEUR/COP 011280225701 24/02/2025  E",
-        "SoldeType": null,
+        "Date": "24/02/2025",
+        "Description": "/02/2025 COMM COMPTE DEBITEUR/COP 011280225701",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.022,
-        "Date": "28/02/2025",
-        "Description": "TVA/COMM COMPTE ‘ 011280225701 — 1 24/02/2025 —",
-        "SoldeType": null,
+        "Date": "24/02/2025",
+        "Description": "/02/2025 TVA/COMM COMPTE ‘ 011280225701 — 1",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.875,
-        "Date": "04/03/2025",
-        "Description": "COMM REMISE CHQ ‘ 1312683 . 26/92/2025",
-        "SoldeType": null,
+        "Date": "26/92/2025",
+        "Description": "/03/2025 COMM REMISE CHQ ‘ 1312683 .",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 5.000,
-        "Date": "04/03/2025",
-        "Description": "COMM ENC EFF — 0224695 “ 26/02/2025 B ‘ “",
-        "SoldeType": null,
+        "Date": "26/02/2025",
+        "Description": "/03/2025 COMM ENC EFF — 0224695 “",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.950,
-        "Date": "04/03/2025",
-        "Description": "' TVAICOMM ENC EFF — 0224695 ‘ 26/02/2025 E",
-        "SoldeType": null,
+        "Date": "26/02/2025",
+        "Description": "/03/2025 ' TVAICOMM ENC EFF — 0224695 ‘",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0.143,
+        "Date": "07/03/2025",
+        "Description": "RELEVE",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 3500.000,
-        "Date": "18/03/2025",
-        "Description": "RETRAIT ESPECES PC N° 3189681 17/03/2025",
-        "SoldeType": null,
+        "Date": "17/03/2025",
+        "Description": "2025 RETRAIT ESPECES PC N° 3189681",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -328,323 +642,543 @@
       {
         "Solde": 0.166,
         "Date": "18/03/2025",
-        "Description": "TVA/COMM REMISE CHQ",
-        "SoldeType": null,
+        "Description": "",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 126.815,
-        "Date": "24/03/2025",
-        "Description": "PRL COMP N° 40045 21/03/2025",
-        "SoldeType": null,
+        "Date": "21/03/2025",
+        "Description": "2025 PRL COMP N° 40045",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 1500.000,
-        "Date": "24/03/2025",
-        "Description": "RETRAIT ESPECES PC N° 3189779 21/03/2025",
-        "SoldeType": null,
+        "Date": "21/03/2025",
+        "Description": "2025 RETRAIT ESPECES PC N° 3189779",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.380,
-        "Date": "24/03/2025",
-        "Description": "TVA/COMM PREL 17/03/2025",
-        "SoldeType": null,
+        "Date": "17/03/2025",
+        "Description": "2025 TVA/COMM PREL",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "19/03/2025",
+        "Description": "/032025 COMM PREL",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 932.802,
-        "Date": "26/03/2025",
-        "Description": "PRL COMP N° 32157 25/03/2025",
-        "SoldeType": null,
+        "Date": "25/03/2025",
+        "Description": "/03/2025 PRL COMP N° 32157",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.166,
-        "Date": "26/03/2025",
-        "Description": "TVA/COMM REMISE CHQ 19/03/2025",
-        "SoldeType": null,
+        "Date": "19/03/2025",
+        "Description": "/03/2025 TVA/COMM REMISE CHQ",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 3.000,
-        "Date": "28/03/2025",
-        "Description": "COMM VIRT RECU 24/03/2025",
-        "SoldeType": null,
+        "Date": "24/03/2025",
+        "Description": "/03/2025 COMM VIRT RECU",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.570,
-        "Date": "02/04/2025",
-        "Description": "TVAICOMM VIRT RECU VR CPM/020425 25/03/2025 3",
-        "SoldeType": null,
+        "Date": "28/03/2025",
+        "Description": "",
         "Debit": null,
         "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 1543.139,
+        "Date": "31/03/2025",
+        "Description": "Solde au:",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/03/2025",
+        "Description": "/04/2025 TVAICOMM VIRT RECU VR CPM/020425",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 538.694,
+        "Date": "25/03/2025",
+        "Description": "N 02/04/2025 COMM REMISE CHQ 1312689 \\",
+        "Debit": null,
+        "Credit": 0.875,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 3863.528,
+        "Date": "04/04/2025",
+        "Description": "*08/04/2025 ENC CHQ N° 92533 92533",
+        "Debit": null,
+        "Credit": 325.000,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 136.472,
         "Date": "03/04/2025",
         "Description": "",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": 0.060,
+        "Debit": 0.060,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 273.206,
-        "Date": "07/04/2025",
-        "Description": "TVAICOMM COMPTE 011070425342 28/03/2025 DB",
-        "SoldeType": "DB",
+        "Solde": 0.815,
+        "Date": "27/03/2025",
+        "Description": "J 04/04/2025 [COMM 1312690",
         "Debit": null,
-        "Credit": 0.043,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0,
+        "Date": "28/09/2025",
+        "Description": "بلك  COMM DEBITEUR/COP (011070425342",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 43273.206,
+        "Date": "28/03/2025",
+        "Description": "/04/2025  TVAICOMM COMPTE 011070425342",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 769.036,
+        "Date": "04/04/2025",
+        "Description": "p  L",
+        "Debit": 1495.830,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 2.000,
-        "Date": "07/04/2025",
-        "Description": "28/03/2025 T  1771036 08",
-        "SoldeType": null,
+        "Date": "28/03/2025",
+        "Description": "/04/2025",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 771.416,
+        "Date": "28/03/2025",
+        "Description": "242 1",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 273.971,
-        "Date": "08/04/2025",
-        "Description": "RETRAIT SUR: ATM BNA BEN 520801 02/04/2025 DB",
-        "SoldeType": "DB",
-        "Debit": null,
-        "Credit": 502.500,
+        "Date": "02/04/2025",
+        "Description": "/04/2025 RETRAIT SUR: ATM BNA BEN 520801",
+        "Debit": 502.500,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 1846.350,
-        "Date": "08/04/2025",
-        "Description": "ENC CHQ N° 524287 524287 10/04/2025 DB",
-        "SoldeType": "DB",
+        "Date": "10/04/2025",
+        "Description": "/04/2025 ENC CHQ N° 524287 524287",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 247.459,
+        "Solde": 4428.459,
+        "Date": "08/04/2025",
+        "Description": "- 8",
+        "Debit": null,
+        "Credit": 0.143,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 25181000247.459,
         "Date": "10/04/2025",
-        "Description": "VIR ORD JS COLD SYSTEM VR CPM/100425 11704/2025 DB",
-        "SoldeType": "DB",
-        "Debit": 181.000,
+        "Description": "",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 250.459,
-        "Date": "10/04/2025",
-        "Description": "COMMVIRTRECU — CPM/100425 03/04/2025 - T",
-        "SoldeType": "DB",
+        "Date": "03/04/2025",
+        "Description": "/04/2025 COMMVIRTRECU — CPM/100425",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 251.029,
-        "Date": "10/04/2025",
-        "Description": "TVA/COMM VIRT RECU VR CPM/100425 03/04/2025  DB",
-        "SoldeType": "DB",
+        "Date": "03/04/2025",
+        "Description": "/04/2025 TVA/COMM VIRT RECU VR CPM/100425",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 251.904,
+        "Date": "04/04/2025",
+        "Description": "472025  REMISE 1312691 —",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 252.070,
-        "Date": "11/04/2025",
-        "Description": "TVAICOMM REMISE CHQ 1312691 04/04/2025  DB",
-        "SoldeType": "DB",
+        "Date": "04/04/2025",
+        "Description": "/04/2025  TVAICOMM REMISE CHQ 1312691",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 47.930,
+        "Date": "16/04/2025",
+        "Description": "2025 206 CHQ \"2009 20C",
+        "Debit": 300.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 553.000,
+        "Date": "17/04/2025",
+        "Description": "/04/2025 VIR ORD SAVONNERIE LE T VR CPM/160425",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2600.360,
+        "Date": "10/04/2025",
+        "Description": "ا 16/04/2025  TVAICOMM VIRT RECU VR CPM/ 160425 5 M",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 97.360,
-        "Date": "17/04/2025",
-        "Description": "ESPECES 16/04/2025 25000",
-        "SoldeType": "CR",
+        "Date": "16/04/2025",
+        "Description": "/04/2025 ESPECES",
         "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 96.485,
+        "Date": "14/10/4720",
+        "Description": "/04/2025 [1240348",
+        "Debit": 0.875,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0.166,
+        "Date": "14/04/2025",
+        "Description": "/04/2025 TVAICOMM REMISE CHQ \" [1240348 T 1",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 110.715,
+        "Date": "22/04/2025",
+        "Description": "ENC CHQ",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 1543.139,
+        "Date": "31/03/2025",
+        "Description": "Solde",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 607.715,
+        "Date": "16/04/2025",
+        "Description": "",
+        "Debit": 3.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 3607.145,
         "Date": "16/04/2025",
-        "Description": "CR",
-        "SoldeType": "CR",
+        "Description": "",
         "Debit": null,
         "Credit": 0.570,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 127.426,
+        "Date": "12/10/4202",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 477.339,
+        "Date": "55/04/1200",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 822.661,
+        "Date": "12/11/0472",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 148.072,
+        "Date": "28/04/2025",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 148.072,
+        "Date": "29/04/2025",
+        "Description": "Solde",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 488.428,
+        "Date": "30/04/2025",
+        "Description": "Solde au.",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 1488.262,
-        "Date": "02/05/2025",
-        "Description": "سحا REMISECHO ” 1312694 1 25/04/2025 را T CR",
-        "SoldeType": "CR",
+        "Date": "25/04/2025",
+        "Description": "/05/2025 سحا REMISECHO ” 1312694 1",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 487.387,
-        "Date": "02/05/2025",
-        "Description": "COMM REMISE CHQ 1312694 25/04/2025  CR",
-        "SoldeType": "CR",
+        "Date": "25/04/2025",
+        "Description": "/05/2025  COMM REMISE CHQ 1312694",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 486.177,
-        "Date": "05/05/2025",
-        "Description": "TVAICOMM PREL — 1379984 -  2810472025 ‘ 1 CR",
-        "SoldeType": "CR",
-        "Debit": 0.380,
+        "Solde": 432.957,
+        "Date": "02/05/2025",
+        "Description": "PRL N° — 1379984 — “71",
+        "Debit": 495.830,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 480.557,
+        "Date": "28/10/4120",
+        "Description": "-0",
+        "Debit": null,
+        "Credit": 2.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 1486.177,
+        "Date": "28/10/4720",
+        "Description": "/05/2025  TVAICOMM PREL — 1379984",
+        "Debit": null,
+        "Credit": 0.380,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 328.877,
-        "Date": "06/05/2025",
-        "Description": "RETRAIT SUR: ATM MEGRINE 057044 — ا 29/04/2025 - نس ; CR!",
-        "SoldeType": "CR",
+        "Date": "29/04/2025",
+        "Description": "2025  RETRAIT SUR: ATM MEGRINE 057044 — ا",
         "Debit": 101.300,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 126.236,
-        "Date": "07/05/2025",
-        "Description": "REMISE CHQ 1312695 —  30/04/2025",
-        "SoldeType": null,
-        "Debit": 0.166,
+        "Solde": 127.277,
+        "Date": "30/04/2025",
+        "Description": ". e",
+        "Debit": 201.600,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 126.402,
+        "Date": "30/04/2025",
+        "Description": "\"  o",
+        "Debit": 0.875,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 166126.236,
+        "Date": "30/04/2025",
+        "Description": "/05/2025  REMISE CHQ 1312695 —",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 407.600,
-        "Date": "08/05/2025",
-        "Description": "4000750 4000750 09/05/2025  - E ” 533836 CR",
-        "SoldeType": "CR",
+        "Date": "09/05/2025",
+        "Description": "/05/2025 4000750 4000750",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 30.266,
-        "Date": "09/05/2025",
-        "Description": "TVA/ICOMM VIRTRECU VR CPM/090525 05/05/2025 0570 = T CR",
-        "SoldeType": "CR",
+        "Date": "05/05/2025",
+        "Description": "/05/2025  TVA/ICOMM VIRTRECU VR CPM/090525",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 969.734,
-        "Date": "13/05/2025",
-        "Description": "RETRAIT ESPECES PC N° 3230501 [ 12/05/2025 ” 2000000 I DB",
-        "SoldeType": "DB",
+        "Date": "12/05/2025",
+        "Description": "/05/2025 RETRAIT ESPECES PC N° 3230501",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 970.609,
-        "Date": "13/05/2025",
-        "Description": "© [13126% 07/05/2025 0875  DB",
-        "SoldeType": "DB",
+        "Date": "07/05/2025",
+        "Description": "/05/2025  © [13126%",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 970.775,
-        "Date": "13/05/2025",
-        "Description": "TVAICOMM REMISE CHQ 1312696 1 07052025 — ù",
-        "SoldeType": "DB",
+        "Date": "07/05/2025",
+        "Description": "/05/2025 TVAICOMM REMISE CHQ 1312696 1",
         "Debit": null,
         "Credit": 0.166,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 771.816,
+        "Date": "09/05/2025",
+        "Description": "TVAICOMM REMISE CHQ 1312697",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 617.009,
-        "Date": "16/05/2025",
-        "Description": "ENC CHQ N° 620197 “ 1620197 T1 19/05/2025 7 I 5386825 CR",
-        "SoldeType": "CR",
+        "Date": "19/05/2025",
+        "Description": "/05/2025  ENC CHQ N° 620197 “ 1620197 T1",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 382.991,
-        "Date": "20/05/2025",
-        "Description": "RETRAIT ESPECES PC N° 03165229 19/05/2025 DB",
-        "SoldeType": "DB",
+        "Date": "19/05/2025",
+        "Description": "/05/2025  RETRAIT ESPECES PC N° 03165229",
         "Debit": 5000.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 501.407,
-        "Date": "21/05/2025",
-        "Description": "COMM PREL — 7188877 - 15/05/2025 - 2000 — DB",
-        "SoldeType": "DB",
+        "Solde": 499.407,
+        "Date": "20/05/2025",
+        "Description": "(21/05/2025 N°38877 38877 —",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 501.787,
-        "Date": "21/05/2025",
-        "Description": "TVAICOMM PREL 38877 15/05/2025 DB",
-        "SoldeType": "DB",
+        "Solde": 501.407,
+        "Date": "15/05/2025",
+        "Description": "/05/2025 [COMM PREL — 7188877",
         "Debit": null,
-        "Credit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 380501.787,
+        "Date": "15/05/2025",
+        "Description": "/05/2025  TVAICOMM PREL 38877",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 502.662,
+        "Date": "11/48/0820",
+        "Description": "REMISE CHQ — T",
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 502.828,
-        "Date": "21/05/2025",
-        "Description": "TVAICOMM REMISE CHQ 1312699 15/05/2025 ”",
-        "SoldeType": "DB",
+        "Date": "15/05/2025",
+        "Description": "/05/2025  TVAICOMM REMISE CHQ 1312699",
         "Debit": null,
         "Credit": 0.166,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 2700.37,
-        "Date": "23/05/2025",
-        "Description": "TVA/COMM REMISE 1312700 “119/05/2025 - ست",
-        "SoldeType": null,
+        "Date": "19/05/2025",
+        "Description": "/05/2025 TVA/COMM REMISE 1312700 “1",
         "Debit": null,
         "Credit": 0.166,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 328.871,
-        "Date": "30/05/2025",
-        "Description": "RETRAIT ESPECES PC N° 326682 326682 1 29/05/2025 — CR",
-        "SoldeType": "CR",
+        "Date": "29/05/2025",
+        "Description": "/05/2025 RETRAIT ESPECES PC N° 326682 326682 1",
         "Debit": 5000.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -652,332 +1186,671 @@
       {
         "Solde": 541.740,
         "Date": "30/05/2025",
-        "Description": "REGL EFF N° 010450347768 010450347768 30/05/2025 ds z ” 212869 DB",
-        "SoldeType": "DB",
+        "Description": "/05/2025 REGL EFF N° 010450347768 010450347768",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 218.369,
+        "Solde": 5500218.369,
+        "Date": "26/05/2025",
+        "Description": "/05/2025 COMM REG EFF 010450347768",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 220.289,
         "Date": "30/05/2025",
-        "Description": "COMM REG EFF 010450347768 26/05/2025 DB",
-        "SoldeType": "DB",
-        "Debit": 5.500,
+        "Description": "(",
+        "Debit": 0.875,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 488.428,
+        "Date": "30/04/2025",
+        "Description": "Solde au:",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 417.000,
-        "Date": "03/06/2025",
-        "Description": "ENC CHQ N° 9951309 9951309 04/06/2025 CR",
-        "SoldeType": "CR",
+        "Date": "04/06/2025",
+        "Description": "/06/2025 ENC CHQ N° 9951309 9951309",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.166,
-        "Date": "03/06/2025",
-        "Description": "TVA/ICOMM REMISE 1277407 — 28/05/2025  s=— 2195 504 CR",
-        "SoldeType": "CR",
+        "Date": "28/05/2025",
+        "Description": "/06/2025 TVA/ICOMM REMISE 1277407 —",
         "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 699.674,
+        "Date": "04/06/2025",
+        "Description": "( 05/06/2025  PRL COMP N° 379521 — 379521 7",
+        "Debit": null,
+        "Credit": 495.830,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 697.674,
+        "Date": "30/05/2025",
+        "Description": "521",
+        "Debit": 2.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 697.294,
         "Date": "30/05/2025",
-        "Description": "un CR",
-        "SoldeType": "CR",
-        "Debit": null,
-        "Credit": 0.380,
+        "Description": "",
+        "Debit": 0.380,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 696.544,
+        "Date": "09/06/2025",
+        "Description": "RECUPERATION FRAIS PDL “1",
+        "Debit": 0.750,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 696.401,
+        "Date": "09/06/2025",
+        "Description": "Jué 01/05/25 1",
+        "Debit": 0.143,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 96.401,
+        "Date": "10/06/2025",
+        "Description": "L u LR 010540803566 E L E",
+        "Debit": 4600.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 90.901,
+        "Date": "03/06/2025",
+        "Description": "REG 0106546603566",
+        "Debit": 5.500,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 789.856,
-        "Date": "10/06/2025",
-        "Description": "TVAICOMM REG EFF — 010540803566 03/06/2025  =i ü CR",
-        "SoldeType": "CR",
+        "Date": "03/06/2025",
+        "Description": "/06/2025  TVAICOMM REG EFF — 010540803566",
         "Debit": null,
         "Credit": 1.045,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 594.376,
+        "Date": "10/06/2025",
+        "Description": "“10/06/2025 REGL EFF 010540803663 - 010540803663",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 599.876,
+        "Date": "08/06/2025",
+        "Description": "COMMREGEFF — 1010540803663 —",
+        "Debit": null,
+        "Credit": 5.500,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 884000283.079,
+        "Date": "12/06/2025",
+        "Description": "/06/20'2'5wa COLD SYSTEM [VR CPM/110625",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 280.079,
+        "Date": "04/06/2025",
+        "Description": "COMM VIRT RECU VR CPM/110625",
+        "Debit": 3.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 279.509,
-        "Date": "11/06/2025",
-        "Description": "TVA/ICOMM VIRT RECU T VRCPM/110625  04/06/2025 7 i",
-        "SoldeType": "CR",
+        "Date": "04/06/2025",
+        "Description": "/06/2025 TVA/ICOMM VIRT RECU T VRCPM/110625",
         "Debit": 0.570,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 278.634,
-        "Date": "12/06/2025",
-        "Description": "COMM REMISE CHQ — — 01345367 _ 05/06/2025  =\" =",
-        "SoldeType": "CR",
+        "Date": "05/06/2025",
+        "Description": "/06/2025 COMM REMISE CHQ — — 01345367",
         "Debit": 0.875,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.166,
-        "Date": "12/06/2025",
-        "Description": "TVACOMM REMISE CHQ - 345367 05/06/2025 — 278468 CR",
-        "SoldeType": "CR",
+        "Date": "05/06/2025",
+        "Description": "/06/2025 TVACOMM REMISE CHQ - 345367",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 727.427,
-        "Date": "13/06/2025",
-        "Description": "ENC CHQ N° 267 267 — 16/06/2025",
-        "SoldeType": "CR",
+        "Solde": 875277.593,
+        "Date": "09/06/2025",
+        "Description": "410",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 277.427,
+        "Date": "09/06/2025",
+        "Description": "/062025 TVA/COMM REMISE —",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 1727.427,
+        "Date": "16/06/2025",
+        "Description": "/06/2025 ENC CHQ N° 267 267 —",
         "Debit": null,
         "Credit": 450.000,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 104.427,
-        "Date": "16/06/2025",
-        "Description": "ENC 4003062 — 4003062 7 17/06/2025 n CR",
-        "SoldeType": "CR",
+        "Date": "17/06/2025",
+        "Description": "/06/2025 ENC 4003062 — 4003062 7",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 395.573,
+        "Date": "13/06/2025",
+        "Description": "'RETRAIT ESPECES PCN° — 3256739",
+        "Debit": null,
+        "Credit": 500.000,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 302.000,
-        "Date": "23/06/2025",
-        "Description": "SAVONNERIE LE [VRCPM/230625  24/06/2025 906427 CR",
-        "SoldeType": "CR",
+        "Date": "24/06/2025",
+        "Description": "/06/2025 SAVONNERIE LE [VRCPM/230625",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "17/06/2025",
+        "Description": "VIRT RECU __ p VR CPM/230625",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 802.857,
-        "Date": "23/06/2025",
-        "Description": "TVA/COMM VIRT RECU - VRCPM/230625 17/06/2025  T 0570 — CR",
-        "SoldeType": "CR",
+        "Date": "17/06/2025",
+        "Description": "/06/2025 TVA/COMM VIRT RECU - VRCPM/230625",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 776.430,
-        "Date": "23/06/2025",
-        "Description": "ريج PREL T 1710612025",
-        "SoldeType": "CR",
-        "Debit": 2.000,
+        "Solde": 124.427,
+        "Date": "20/06/2025",
+        "Description": "(23/06/2025  COMP N° - لنت T",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2000776.430,
+        "Date": "17/10/6120",
+        "Description": "/06/2025 ريج PREL T",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 776.050,
-        "Date": "23/06/2025",
-        "Description": "TVAICOMM PREL 6811 17/06/2025 Ï CR",
-        "SoldeType": "CR",
+        "Date": "17/06/2025",
+        "Description": "/06/2025 TVAICOMM PREL 6811",
         "Debit": 0.380,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 774.300,
-        "Date": "23/06/2025",
-        "Description": "COMM REMISE CHQ 1277411 —  17062025 7 =",
-        "SoldeType": "CR",
+        "Date": "17/06/2025",
+        "Description": "/06/2025  COMM REMISE CHQ 1277411 —",
         "Debit": 1.750,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 773.968,
+        "Date": "11/71/0672",
+        "Description": "171",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 726.032,
+        "Date": "20/06/2025",
+        "Description": "/06/2025 RETRAIT ESPECES PC - 8256885",
+        "Debit": 500.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 24.968,
-        "Date": "24/06/2025",
-        "Description": "N° 9998626 25/06/2025",
-        "SoldeType": "CR",
+        "Date": "25/06/2025",
+        "Description": "/06/2025 N° 9998626",
         "Debit": 751.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 8.968,
-        "Date": "24/06/2025",
-        "Description": "ENC CHQ N° 7861805 17861805 25/06/2025 CR",
-        "SoldeType": "CR",
+        "Date": "25/06/2025",
+        "Description": "/06/2025 ENC CHQ N° 7861805 17861805",
         "Debit": 984.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 3.000,
-        "Date": "30/06/2025",
-        "Description": "RECU \" VR CPM/300625 23/06/2025 & = 5398 CR",
-        "SoldeType": "CR",
+        "Solde": 10.59,
+        "Date": "08/07/2025",
+        "Description": "Extrait Edité le:",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 2.000,
+        "Solde": 1488.428,
+        "Date": "30/04/2025",
+        "Description": "Solde au:",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 491.032,
+        "Date": "25/06/2025",
+        "Description": "/06/2025 RETRAIT 566665 660 - 3256607",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 8.968,
         "Date": "01/07/2025",
-        "Description": "PREL 12088 0 24062025 — ‘ — 364979 DB",
-        "SoldeType": "DB",
+        "Description": "/30/06/2025  VIR ORD AROUA AMEN ALLAH VR CPM/300625",
+        "Debit": 500.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "23/06/2025",
+        "Description": "\" VIRT RECU _ VR CPM/300625 fl E el",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "23/06/2025",
+        "Description": "/06/2025  RECU \" VR CPM/300625",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 362.979,
+        "Date": "30/06/2025",
+        "Description": "COMP N° 2083 2083 “1",
+        "Debit": null,
+        "Credit": 368.377,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "24/06/2025",
+        "Description": "/07/2025 PREL 12088 0",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 365.359,
-        "Date": "01/07/2025",
-        "Description": "TVACOMMPREL - “ 12083 — E 24/06/2025 ; DB",
-        "SoldeType": "DB",
+        "Date": "24/06/2025",
+        "Description": "/07/2025 TVACOMMPREL - “ 12083 — E",
         "Debit": null,
         "Credit": 0.380,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 366.400,
-        "Date": "03/07/2025",
-        "Description": "TVAICOMM REMISE CHQ 127424 — 27062025 6 q DB",
-        "SoldeType": "DB",
+        "Date": "27/06/2025",
+        "Description": "/07/2025 TVAICOMM REMISE CHQ 127424 —",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 200000166.400,
+        "Date": "08/07/2025",
+        "Description": "ENC CHQ 275 B 275",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 196.150,
+        "Date": "01/07/2025",
+        "Description": "TVAICOM OP PASSAGERES 011070725284",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 196.317,
-        "Date": "07/07/2025",
-        "Description": "COMM COMPTE DEBITEUR/COP 011070725284 — 01/07/2025  — ) DB",
-        "SoldeType": "DB",
-        "Debit": 0.167,
+        "Date": "01/07/2025",
+        "Description": "/07/2025 COMM COMPTE DEBITEUR/COP 011070725284 —",
+        "Debit": null,
+        "Credit": 0.167,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 32196.349,
+        "Date": "01/07/2025",
+        "Description": "/07/2025 TVAICOMM COMPTE 011070725284",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 196.349,
-        "Date": "07/07/2025",
-        "Description": "TVAICOMM COMPTE 011070725284 01/07/2025",
-        "SoldeType": "DB",
-        "Debit": null,
-        "Credit": 0.032,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "07/07/2025",
-        "Description": "COMM  PREL 378368  01/07/2025 — 7771694179 DB",
-        "SoldeType": "DB",
+        "Solde": 495.830,
+        "Date": "04/07/2025",
+        "Description": "/07/2025 ]  PRL COMP N° 378368 __ 378368 اج E",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 694.559,
-        "Date": "07/07/2025",
-        "Description": "' TVAICOMM PREL — 1378368 01072025 — 0380 — S DB",
-        "SoldeType": "DB",
+        "Date": "01/07/2025",
+        "Description": "/07/2025 ' TVAICOMM PREL — 1378368",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 71.912,
+        "Date": "07/07/2025",
+        "Description": "/",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 220.455,
+        "Date": "31/05/2025",
+        "Description": "Soldeau:",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 196.545,
+        "Date": "04/06/2025",
+        "Description": "(03/06/2025 ENC CHQ N° 9951309 9951309 —",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 195.670,
+        "Date": "28/05/2025",
+        "Description": "REMISECHQ — [1277407",
+        "Debit": 0.875,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 195.504,
-        "Date": "03/06/2025",
-        "Description": "TVAICOMM REMISE CHQ  127740 — 28/05/2025 m CR",
-        "SoldeType": "CR",
+        "Date": "28/05/2025",
+        "Description": "/06/2025 TVAICOMM REMISE CHQ  127740 —",
         "Debit": 0.166,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 697.674,
-        "Date": "05/06/2025",
-        "Description": "( 3070572025 CR",
-        "SoldeType": "CR",
+        "Solde": 0,
+        "Date": "04/06/2025",
+        "Description": "T[379521",
+        "Debit": 495.830,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 25697.674,
+        "Date": "30/70/5720",
+        "Description": "/06/2025 (",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 697.294,
+        "Date": "30/69/2025",
+        "Description": "21 ١",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 96.544,
+        "Date": "09/06/2025",
+        "Description": "/06/2025 RECUPERATION FRAISPDL 01/05/25",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 5696.401,
+        "Date": "09/06/2025",
+        "Description": "/| 10/06/2025 __ TVA/RECUPERATION FRAIS ب PDL 4 01/05/25 us —A",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 96.401,
         "Date": "10/06/2025",
-        "Description": "RECUPERATION FRAISPDL 01/05/25 09/06/2025 — 0750  - CR",
-        "SoldeType": "CR",
+        "Description": ". 10/06/2025 REGL EFF N° 010540803566 _ 010540803566 e TR RRN",
+        "Debit": 600.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 90.901,
+        "Date": "01/65/4660",
+        "Description": "",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 89.856,
-        "Date": "10/06/2025",
-        "Description": "TVAICOMM REG EFF [010540803566 03/06/2025",
-        "SoldeType": "CR",
+        "Date": "03/06/2025",
+        "Description": "/06/2025  TVAICOMM REG EFF [010540803566",
         "Debit": 1.045,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 500.921,
+        "Solde": 594.376,
         "Date": "10/06/2025",
-        "Description": "TVAICOMM REG EFF 010540803663 03/06/2025",
-        "SoldeType": "DB",
+        "Description": "/06/2025 REGL EFF N° 010540803663 010540803663",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 277.593,
+        "Solde": 500.921,
+        "Date": "03/06/2025",
+        "Description": "/06/2025 TVAICOMM REG EFF 010540803663",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 283.079,
+        "Date": "12/06/2025",
+        "Description": "JS COLD SYSTEM",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 280.079,
+        "Date": "04/06/2025",
+        "Description": "/06/2025 COMM VIRT RECU VR CPM/110625",
+        "Debit": 73.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 278.509,
+        "Date": "04/06/2025",
+        "Description": "(1106/2025 TVACOMMVIRTRECU - \\VR©PWi0625",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 278.634,
+        "Date": "05/06/2025",
+        "Description": "/06/2025 هه",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 278.468,
+        "Date": "05/06/2025",
+        "Description": "( 12/06/2025 TVA/ICOMM REMISE CHQ 01345367 1",
+        "Debit": 0.166,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 875277.593,
+        "Date": "09/06/2025",
+        "Description": "/06/2025 COMM REMISE CHQ' 277410",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 727.427,
+        "Date": "16/06/2025",
+        "Description": "/06/2025 ENCCHON°267 — 1267 “",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 104.427,
+        "Date": "17/06/2025",
+        "Description": "\"آم 4003062 — 4003062",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 500.000,
         "Date": "13/06/2025",
-        "Description": "COMM REMISE CHQ' 277410 09/06/2025 0875",
-        "SoldeType": "CR",
+        "Description": "(16/06/2025  RETRAIT ESPECES PC N° 3256739 ‘",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 903.427,
+        "Date": "17/06/2025",
+        "Description": "/06/2025 ا  COMM VIRT RECU __ ا VR CPM/230625 1",
+        "Debit": null,
+        "Credit": 3.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 902.857,
+        "Date": "17/06/2025",
+        "Description": "l 23/06/2025 TVAICOMMVIRTRECU VR CPM/230625",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 778.430,
-        "Date": "25/06/2025",
-        "Description": "PRL COMPN° 6811 — - 6811 E 20/06/2025  124427, 0",
-        "SoldeType": "CR",
+        "Date": "20/06/2025",
+        "Description": "/06/2025 PRL COMPN° 6811 — - 6811 E",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 776.430,
-        "Date": "23/06/2025",
-        "Description": "COMM PREL 6811 17/06/2025 2000 CR",
-        "SoldeType": "CR",
+        "Date": "17/06/2025",
+        "Description": "/06/2025  COMM PREL 6811",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 776.050,
-        "Date": "23/06/2025",
-        "Description": "TVAICOMM PREL 6811 7 47/06/2025 03807 “",
-        "SoldeType": "CR",
+        "Date": "47/06/2025",
+        "Description": "/06/2025  TVAICOMM PREL 6811 7",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 1.750,
-        "Date": "23/06/2025",
-        "Description": "COMM REMISE CHQ 1277411 17/06/2025 — 77300 CR",
-        "SoldeType": "CR",
+        "Date": "17/06/2025",
+        "Description": "/06/2025  COMM REMISE CHQ 1277411",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.332,
-        "Date": "23/06/2025",
-        "Description": "TVA/ICOMM REMISE CHO 1277411 7 147062025177 = 773968 CR",
-        "SoldeType": "CR",
+        "Date": "14/70/6202",
+        "Description": "/06/2025  TVA/ICOMM REMISE CHO 1277411 7",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -985,71 +1858,135 @@
       {
         "Solde": 726.032,
         "Date": "23/06/2025",
-        "Description": "77 — 3256885 “ = 5‘06‘.000’;",
-        "SoldeType": null,
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 24.968,
+        "Date": "25/06/2025",
+        "Description": "8626 T 1",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 8.968,
+        "Date": "25/06/2025",
+        "Description": "/06/2025 ENCCHON° 7861805 7861605 - 1",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 491.032,
-        "Date": "27/06/2025",
-        "Description": "' RETRAIT ESPECES PC N° 3256607 25/06/2025 1E E B DB",
-        "SoldeType": "DB",
-        "Debit": 500.000,
+        "Date": "25/06/2025",
+        "Description": "/06/2025 ' RETRAIT ESPECES PC N° 3256607",
+        "Debit": null,
+        "Credit": 500.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "24/06/2025",
+        "Description": "لقان  دسا 72083 - S",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 365.359,
         "Date": "24/06/2025",
-        "Description": "DB",
-        "SoldeType": "DB",
-        "Debit": 0.380,
+        "Description": "",
+        "Debit": null,
+        "Credit": 0.380,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 365.359,
+        "Date": "03/07/2025",
+        "Description": "Solde",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 166.400,
-        "Date": "07/07/2025",
-        "Description": "ENCCHON°275 -- 1275 08/07/2025 S",
-        "SoldeType": "DB",
-        "Debit": 200.000,
+        "Solde": 5.398,
+        "Date": "30/06/2025",
+        "Description": "Solde au",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 362.979,
+        "Date": "30/06/2025",
+        "Description": "COMP 12083 7 °",
+        "Debit": null,
+        "Credit": 368.377,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 366.234,
+        "Date": "27/06/2025",
+        "Description": "( 03/07/2025 [COMM REMISE CHQ — T 1277424",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 366.400,
+        "Date": "27/70/6120",
+        "Description": "",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 200000166.400,
+        "Date": "08/07/2025",
+        "Description": "2025 ENCCHON°275 -- 1275",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 191.400,
+        "Date": "01/07/2025",
+        "Description": "COM OP PASSAGERES 011070725284 1",
+        "Debit": 25.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 196.150,
-        "Date": "07/07/2025",
-        "Description": "TVAICOM 01/07/2025 750 0",
-        "SoldeType": "DB",
+        "Date": "01/07/2025",
+        "Description": "/07/2025  TVAICOM",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 196.317,
-        "Date": "07/07/2025",
-        "Description": "COMM COMPTE DEBITEUR/COP [011070725284 01/07/2025",
-        "SoldeType": "DB",
+        "Date": "01/07/2025",
+        "Description": "/07/2025 COMM COMPTE DEBITEUR/COP [011070725284",
         "Debit": null,
         "Credit": 0.167,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 196.349,
-        "Date": "07/07/2025",
-        "Description": "TVAICOMM COMPTE 011070725284 [ 01/07/2025",
-        "SoldeType": "DB",
+        "Date": "01/07/2025",
+        "Description": "/07/2025 [ TVAICOMM COMPTE 011070725284",
         "Debit": null,
         "Credit": 0.032,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 1692.179,
-        "Date": "07/07/2025",
-        "Description": "PRL COMP N° 378368 378368 S 04/07/2025",
-        "SoldeType": "DB",
+        "Date": "04/07/2025",
+        "Description": "/07/2025 PRL COMP N° 378368 378368 S",
         "Debit": null,
         "Credit": 1495.830,
         "BalanceAfterOperation": null
@@ -1057,62 +1994,111 @@
       {
         "Solde": 2.000,
         "Date": "01/07/2025",
-        "Description": "DB",
-        "SoldeType": "DB",
+        "Description": "",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 694.559,
-        "Date": "07/07/2025",
-        "Description": "TVAICOMM PREL 378368 [ 01/07/2025 o DB",
-        "SoldeType": "DB",
+        "Date": "01/07/2025",
+        "Description": "/07/2025  TVAICOMM PREL 378368",
         "Debit": null,
         "Credit": 0.380,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 767.221,
-        "Date": "10/07/2025",
-        "Description": "RECUPERATION FRAIS PDL 01/06/25 09/07/2025  0750 DB",
-        "SoldeType": "DB",
+        "Date": "09/07/2025",
+        "Description": "/07/2025 RECUPERATION FRAIS PDL 01/06/25",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 769.446,
-        "Date": "14/07/2025",
-        "Description": "TVA/ICOMM REMISE CHQ - 01353734  0870772025 \"> DB",
-        "SoldeType": "DB",
+        "Solde": 767.364,
+        "Date": "09/07/2025",
+        "Description": "/07/2025 __ ' TVA/RECUPERATION FRAIS دمي PDL 01/06/25 ل الل",
+        "Debit": null,
+        "Credit": 0.143,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 768.239,
+        "Date": "07/07/2025",
+        "Description": "(S, 11/07/2025 COMM REMISE CHQ __ 8 1287802",
+        "Debit": null,
+        "Credit": 0.875,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 768.405,
+        "Date": "11/07/2025",
+        "Description": "",
         "Debit": null,
         "Credit": 0.166,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 83.760,
+        "Solde": 769.280,
+        "Date": "08/10/7720",
+        "Description": "",
+        "Debit": null,
+        "Credit": 0.875,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 769.446,
+        "Date": "08/70/7720",
+        "Description": "/07/2025  TVA/ICOMM REMISE CHQ - 01353734",
+        "Debit": null,
+        "Credit": 0.166,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 583.760,
         "Date": "15/07/2025",
-        "Description": "‘ÊËQTOFÊÊÈT ESPECES PC N° }3290782 U 144/07/2025 1500000 —  “",
-        "SoldeType": "CR",
+        "Description": "",
+        "Debit": 2663.606,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 83.760,
+        "Date": "44/07/2025",
+        "Description": "/07/2025 ‘ÊËQTOFÊÊÈT ESPECES PC N° }3290782 U 1",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 916.240,
+        "Date": "45/07/2025",
+        "Description": "(",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 917.115,
+        "Date": "10/07/2025",
+        "Description": "/07/2025 CHQ N",
+        "Debit": null,
+        "Credit": 0.875,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 917.281,
-        "Date": "16/07/2025",
-        "Description": "TVA/COMM REMISE CHQ 11277425 10/07/2025  DB",
-        "SoldeType": "DB",
+        "Date": "10/07/2025",
+        "Description": "/07/2025 TVA/COMM REMISE CHQ 11277425",
         "Debit": null,
         "Credit": 0.166,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 929.153,
-        "Date": "17/07/2025",
-        "Description": "ENC CHQ N° 30165 30165 18/07/2025 د\" CR",
-        "SoldeType": "CR",
+        "Date": "18/07/2025",
+        "Description": "/07/2025 ENC CHQ N° 30165 30165",
         "Debit": null,
         "Credit": 5846.434,
         "BalanceAfterOperation": null
@@ -1120,45 +2106,96 @@
       {
         "Solde": 701.553,
         "Date": "18/07/2025",
-        "Description": "VIR ORD JS COLD SYSTE \" VR CPM/180725 o CR",
-        "SoldeType": "CR",
+        "Description": "",
         "Debit": 772.400,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 698.553,
+        "Date": "14/07/2025",
+        "Description": "“18/07/2025  COMM VIRT RECU —VR CPM/180725",
+        "Debit": 3.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 697.983,
+        "Date": "14/07/2025",
+        "Description": "TVAICOMM",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 520.935,
+        "Date": "22/00/7720",
+        "Description": "(",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 519.185,
+        "Date": "22/07/2025",
+        "Description": "7427",
+        "Debit": 1.750,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
         "Solde": 0.332,
-        "Date": "29/07/2025",
-        "Description": "TVAICOMMREMISECHO 277427 — 22072025 5518853",
-        "SoldeType": null,
+        "Date": "22/07/2025",
+        "Description": "/07/2025 TVAICOMMREMISECHO 277427 —",
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 827.853,
-        "Date": "30/07/2025",
-        "Description": "ENC CHQ N° 304 T304 0  31/07/2025 d 1 — CR",
-        "SoldeType": "CR",
+        "Date": "31/07/2025",
+        "Description": "/07/2025 ENC CHQ N° 304 T304 0",
         "Debit": null,
-        "Credit": 309.000,
+        "Credit": 1309.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 5.398,
+        "Date": "30/06/2025",
+        "Description": "Solde au.",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 150.355,
+        "Date": "31/07/7202",
+        "Description": "— 3799 e",
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 8950.355,
         "Date": "30/07/2025",
-        "Description": "REGL EFF N° 010836840194 010836840194 30/07/2025  CR",
-        "SoldeType": "CR",
+        "Description": "/07/2025  REGL EFF N° 010836840194 010836840194",
         "Debit": null,
         "Credit": 200.000,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 944.855,
-        "Date": "30/07/2025",
-        "Description": "COMM REG EFF — 010836840194  - = æ CR",
-        "SoldeType": "CR",
+        "Date": "01/08/3684",
+        "Description": "/07/2025 COMM REG EFF —",
         "Debit": 5.500,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 3943.810,
+        "Date": "31/07/2025",
+        "Description": "Solde au:",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }

@@ -10,6 +10,10 @@
     "CustomerName": "",
     "TotalDebit": 0,
     "TotalCredit": 0,
+    "SumOfDebits": -366.494,
+    "SumOfCredits": -17.000,
+    "DebitTotalMatches": false,
+    "CreditTotalMatches": false,
     "BankName": "",
     "Currency": "TND",
     "Balance": 49.165,
@@ -18,7 +22,8 @@
       {
         "Solde": -650.005,
         "Date": "04/03/2024",
-        "Description": "",
+        "Description": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "SoldeType": null,
         "Debit": -6.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -26,7 +31,8 @@
       {
         "Solde": -651.145,
         "Date": "04/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -1.140,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -34,7 +40,8 @@
       {
         "Solde": -653.145,
         "Date": "11/03/2024",
-        "Description": "",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
         "Debit": -2.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -42,7 +49,8 @@
       {
         "Solde": -659.145,
         "Date": "11/03/2024",
-        "Description": "",
+        "Description": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "SoldeType": null,
         "Debit": -6.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -50,7 +58,8 @@
       {
         "Solde": -659.525,
         "Date": "11/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -0.380,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -58,7 +67,8 @@
       {
         "Solde": -660.665,
         "Date": "11/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -1.140,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -66,7 +76,8 @@
       {
         "Solde": -666.665,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "SoldeType": null,
         "Debit": -6.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -74,7 +85,8 @@
       {
         "Solde": -672.665,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "SoldeType": null,
         "Debit": -6.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -82,7 +94,8 @@
       {
         "Solde": -678.665,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "SoldeType": null,
         "Debit": -6.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -90,7 +103,8 @@
       {
         "Solde": -684.665,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "SoldeType": null,
         "Debit": -6.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -98,7 +112,8 @@
       {
         "Solde": -690.665,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "SoldeType": null,
         "Debit": -6.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -106,7 +121,8 @@
       {
         "Solde": -691.805,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -1.140,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -114,7 +130,8 @@
       {
         "Solde": -692.945,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -1.140,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -122,7 +139,8 @@
       {
         "Solde": -694.085,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -1.140,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -130,7 +148,8 @@
       {
         "Solde": -695.225,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -1.140,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -138,7 +157,8 @@
       {
         "Solde": -696.365,
         "Date": "15/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -1.140,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -146,7 +166,8 @@
       {
         "Solde": -706.365,
         "Date": "25/03/2024",
-        "Description": "",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
         "Debit": -10.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -154,7 +175,8 @@
       {
         "Solde": -716.365,
         "Date": "25/03/2024",
-        "Description": "",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
         "Debit": -10.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -162,7 +184,8 @@
       {
         "Solde": -718.265,
         "Date": "25/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -1.900,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -170,7 +193,8 @@
       {
         "Solde": -720.165,
         "Date": "25/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -1.900,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -178,7 +202,8 @@
       {
         "Solde": -820.165,
         "Date": "25/03/2024",
-        "Description": "",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
         "Debit": -100.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -186,7 +211,8 @@
       {
         "Solde": -920.165,
         "Date": "25/03/2024",
-        "Description": "",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
         "Debit": -100.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -194,7 +220,8 @@
       {
         "Solde": -939.165,
         "Date": "25/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -19.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -202,7 +229,8 @@
       {
         "Solde": -958.165,
         "Date": "25/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -19.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -210,7 +238,8 @@
       {
         "Solde": -960.165,
         "Date": "26/03/2024",
-        "Description": "",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
         "Debit": -2.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -218,7 +247,8 @@
       {
         "Solde": -962.165,
         "Date": "26/03/2024",
-        "Description": "",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
         "Debit": -2.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -226,7 +256,8 @@
       {
         "Solde": -962.545,
         "Date": "26/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -0.380,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -234,7 +265,8 @@
       {
         "Solde": -962.925,
         "Date": "26/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -0.380,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -242,7 +274,8 @@
       {
         "Solde": -964.494,
         "Date": "29/03/2024",
-        "Description": "",
+        "Description": "COMMISSION",
+        "SoldeType": null,
         "Debit": -1.569,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -250,7 +283,8 @@
       {
         "Solde": -964.984,
         "Date": "29/03/2024",
-        "Description": "",
+        "Description": "COMMISSION",
+        "SoldeType": null,
         "Debit": -0.490,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -258,7 +292,8 @@
       {
         "Solde": -981.984,
         "Date": "29/03/2024",
-        "Description": "",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
         "Debit": -17.000,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -266,7 +301,8 @@
       {
         "Solde": -985.214,
         "Date": "29/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -3.230,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -274,7 +310,8 @@
       {
         "Solde": -1007.269,
         "Date": "29/03/2024",
-        "Description": "",
+        "Description": "INTEREST",
+        "SoldeType": null,
         "Debit": -22.055,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -282,7 +319,8 @@
       {
         "Solde": 52.395,
         "Date": "29/03/2024",
-        "Description": "",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
         "Debit": null,
         "Credit": -17.000,
         "BalanceAfterOperation": null
@@ -290,7 +328,8 @@
       {
         "Solde": 49.165,
         "Date": "29/03/2024",
-        "Description": "",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
         "Debit": -3.230,
         "Credit": null,
         "BalanceAfterOperation": null

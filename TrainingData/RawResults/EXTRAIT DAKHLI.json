@@ -6,67 +6,24 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "11055000120000278810",
+    "AccountNumber": "",
     "CustomerName": "",
     "TotalDebit": 0,
     "TotalCredit": 0,
+    "SumOfDebits": 0,
+    "SumOfCredits": 0,
+    "DebitTotalMatches": true,
+    "CreditTotalMatches": true,
     "BankName": "Attijari Bank",
     "Currency": "TND",
     "Balance": 100007645.000,
     "StatementDate": null,
     "Transactions": [
       {
-        "Solde": 2.000,
-        "Date": "38/82/4027",
-        "Description": "212025 (M01661100/01022025 MODERN LEASING 25034061",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "39/48/4010",
-        "Description": "وومودمي DE LEASING (CIL) 25035051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "39/48/4010",
-        "Description": "025 DE LEASING (CIL) 25035051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "39/48/4010",
-        "Description": "22025 COMPAGNIE INTERNATIONALE DE LEASING (CIL) 25035051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Solde": 0.380,
         "Date": "05/02/2025",
         "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/68/0003",
-        "Description": "2025 LEASING 25036041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 1.500,
-        "Date": "05/10/2120",
-        "Description": "",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -75,38 +32,7 @@
         "Solde": 2.000,
         "Date": "05/02/2025",
         "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4612.806,
-        "Date": "05/00/2120",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/67/8003",
-        "Description": "LEASING 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/67/8003",
-        "Description": "LEASING 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2382.536,
-        "Date": "37/68/7015",
-        "Description": "6061",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -115,158 +41,7 @@
         "Solde": 2.000,
         "Date": "05/02/2025",
         "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4333.736,
-        "Date": "37/67/7013",
-        "Description": "LEASE 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/67/7013",
-        "Description": "HANNIBAL LEASE 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/68/7098",
-        "Description": "LEASE 25036061",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/67/8080",
-        "Description": "ATTIJARI LEASING RECU 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4499.668,
-        "Date": "37/67/8080",
-        "Description": "LEASING : 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/67/8080",
-        "Description": "6021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/67/7023",
-        "Description": "6021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/67/7023",
-        "Description": "HANNIBAL TVA STE DAKHLI LEASE 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 5363.567,
-        "Date": "37/67/7023",
-        "Description": "LEASE 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 7408.376,
-        "Date": "37/68/7099",
-        "Description": "6061",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/68/7009",
-        "Description": "(EASE 25036061",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 6557.573,
-        "Date": "37/67/7017",
-        "Description": "LEASE COMMISSION 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/67/7017",
-        "Description": "HANNIBAL TVA STE DAKHLI LEASE 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/67/7017",
-        "Description": "PDL 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/67/7007",
-        "Description": "6021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 5117.223,
-        "Date": "37/67/7007",
-        "Description": "LEASE TVA: STE 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/67/7007",
-        "Description": "HANNIBAL LEASE 25036021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/68/2090",
-        "Description": "6051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4904.208,
-        "Date": "37/68/2090",
-        "Description": "LEASE TVA STE 25036051",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -274,7 +49,8 @@
       {
         "Solde": 0.750,
         "Date": "06/02/2025",
-        "Description": "",
+        "Description": ": =",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -283,46 +59,34 @@
         "Solde": 2.000,
         "Date": "06/02/2025",
         "Description": "",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 2778.061,
-        "Date": "06/02/1202",
-        "Description": "",
+        "Solde": 600.000,
+        "Date": "10/02/2025",
+        "Description": "REMISE TPE 1167550019",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.380,
-        "Date": "06/10/2202",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 19600.000,
-        "Date": "11/67/5500",
-        "Description": "/02/2025 REMISE TPE",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 225735.000,
-        "Date": "11/67/5500",
-        "Description": "/02/2025 REMISE TPE",
+        "Solde": 735.000,
+        "Date": "10/02/2025",
+        "Description": "REMISE TPE 1167550019 REMISE NUM 101041 DU 100225",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 488.000,
-        "Date": "11/62/4100",
-        "Description": "/02/2025 REMISE TPE",
+        "Date": "10/02/2025",
+        "Description": "REMISE TPE 1162410011 NUM",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -330,287 +94,53 @@
       {
         "Solde": 2000.000,
         "Date": "10/02/2025",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 60.000,
-        "Date": "00/39/2760",
-        "Description": "T ESPECE T ESPECES : 05525041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/31/8050",
-        "Description": "72025 LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "38/31/8050",
-        "Description": "272025 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 6120.186,
-        "Date": "38/31/8050",
-        "Description": "72025 INTERNATIONALE DE LEASING (CIL) 25041041",
+        "Description": "VERSEMENT :",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.380,
-        "Date": "38/31/8050",
-        "Description": "/02/2025 DE LEASING (CIL) 25041041",
+        "Date": "10/02/2025",
+        "Description": "DE LEASING (CIL) 2504104138318050",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 2.000,
-        "Date": "38/31/8060",
-        "Description": "2025 COMPAGNIE INTERNATIONALE DE (CIL) 25041041",
+        "Date": "10/02/2025",
+        "Description": "COMPAGNIE INTERNATIONALE DE (CIL) 2504104138318060",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.750,
-        "Date": "38/31/8060",
-        "Description": "2025 LEASING (CIL) 25041041",
+        "Date": "10/02/2025",
+        "Description": "LEASING (CIL) 2504104138318060",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 4663.439,
-        "Date": "38/31/8060",
-        "Description": "INTERNATIONALE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4663.439,
-        "Date": "38/31/8061",
-        "Description": "2025 DE 25041041",
+        "Date": "10/02/2025",
+        "Description": "DE 2504104138318061 e",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.380,
-        "Date": "10/10/2120",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "10/02/7202",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/31/8061",
-        "Description": "72025 COMPAGNIE INTERNATIONALE DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4242.069,
-        "Date": "38/31/8062",
-        "Description": "INTERNATIONALE DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/31/8062",
-        "Description": "2025 LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/31/8062",
-        "Description": "72025 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "38/31/8068",
-        "Description": "DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/31/8068",
-        "Description": "COMPAGNIE INTERNATIONALE DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/31/8068",
-        "Description": "LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4048.740,
-        "Date": "38/31/8071",
-        "Description": "INTERNATIONALE : DE LEASING (C1) 26061041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "00/27/2025",
-        "Description": "T",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/31/8074",
-        "Description": "COMPAGNIE INTERNATIONALE DE (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 1945.279,
-        "Date": "38/31/8074",
-        "Description": "INTERNATIONALE : DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "10/02/7202",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/31/8074",
-        "Description": "DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/31/8075",
-        "Description": "(CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/31/8077",
-        "Description": "DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 5283.225,
-        "Date": "38/31/8077",
-        "Description": "INTERNATIONALE DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/31/8087",
-        "Description": "COMPAGNIE INTERNATIONALE A DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/31/8085",
-        "Description": "‘00272025 COMPAGNIE INTERNATIONALE DE : LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "10/10/2720",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "10/02/7202",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/31/8081",
-        "Description": "DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "38/31/8086",
-        "Description": "DE LEASING (CIL) 25041041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "00/27/2025",
-        "Description": "‘",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 58.372,
-        "Date": "50/03/1157",
-        "Description": "COMMISSION SUR VIREMENT DOMESTIQUE 25043021",
+        "Date": "10/02/2025",
+        "Description": "LEASING (CIL) 2504104138318062",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -618,367 +148,17 @@
       {
         "Solde": 1.500,
         "Date": "12/02/2025",
-        "Description": "",
+        "Description": ": NG e ct",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 2.000,
-        "Date": "39/35/3059",
-        "Description": "ARAB INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "39/35/3059",
-        "Description": "INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "39/35/3059",
-        "Description": "INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "25/04/8041",
-        "Description": "ARAB INTERNATIONAL - LEASE",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "00/55/1586",
-        "Description": "INTERNATIONAL POL ECHEANCE LEASE 15022025 2504804139353053",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "15/02/2025",
-        "Description": "TVA",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "15/02/2025",
-        "Description": "RECU :",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "39/35/3058",
-        "Description": "INTERNATIONAL LEASE : 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2646.268,
-        "Date": "13/93/5306",
-        "Description": "ARAB INTERNATIONAL LEASE 2504804",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "39/35/3060",
-        "Description": "INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "39/35/3060",
-        "Description": "ARAB INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "39/35/3061",
-        "Description": "INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "39/35/3075",
-        "Description": "INTERNATIONAL LEASE : 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 16720.500,
-        "Date": "39/35/3085",
-        "Description": "INTERNATIONAL 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "39/35/3085",
-        "Description": "ARAB PDL INTERNATIONAL ECHEANCE 15022025 LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "39/35/3094",
-        "Description": "INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "39/35/3094",
-        "Description": "ARAB INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "39/35/3094",
-        "Description": "INTERNATIONAL LEASE : 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2134.093,
-        "Date": "25/04/8041",
-        "Description": "قمعم INTERNATIONAL LEASE",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "39/35/3095",
-        "Description": "ARAB : INTERNATIONAL 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "25/04/8041",
-        "Description": "INTERNATIONAL LEASE :",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 1996.931,
-        "Date": "39/35/3095",
-        "Description": "ARAB : INTERNATIONAL 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "39/35/3095",
-        "Description": "INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "39/35/3105",
-        "Description": "ARAB PDL: INTERNATIONAL ECHEANCE 15022025 LEASE DOSSIER 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "39/35/3105",
-        "Description": "INTERNATIONAL TVA: ECHEANCE LEASE 15022025 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "39/35/3105",
-        "Description": "INTERNATIONAL LEASE 25048041",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "38/33/1015",
-        "Description": "DE LEASING (CIL) 25049021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "00/33/1015",
-        "Description": ": INTERNATIONALE DE LEASING (o) 25069021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/33/1015",
-        "Description": "LEASING (CIL) 25049021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "38/33/1018",
-        "Description": "DE LEASING (CIL) 25049021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/33/1018",
-        "Description": "(CIL) 25049021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/33/1020",
-        "Description": "COMPAGNIE INTERNATIONALE A DE LEASING (CIL) 25049021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/33/1020",
-        "Description": "DE COMMISSION LEASING (CIL) SUR 25048021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/33/1021",
-        "Description": "COMPAGNIE INTERNATIONALE DE LEASING (CIL) 25049021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "38/33/1021",
-        "Description": "DE LEASING (CIL) 25049021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/33/1021",
-        "Description": "DE LEASING (CIL) 25049021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "38/91/1060",
-        "Description": "FINANCES : 25050021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "36/91/1060",
-        "Description": "FINANCES 25050021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "38/91/1060",
-        "Description": "MINISTERE DES FINANCES : 25050021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 857.773,
-        "Date": "38/91/1060",
-        "Description": "MINISTERE 065 FINANCES 25050021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4900.000,
-        "Date": "20/10/2202",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/68/6266",
-        "Description": "1021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "25/05/1021",
-        "Description": "HANNIBAL LEASE",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/68/7041",
-        "Description": "POL HANNIBAL STE DAKHLI LEASE 25051021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/68/7056",
-        "Description": "1021",
+        "Date": "18/02/2025",
+        "Description": "17022005 COUTRE",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -986,167 +166,26 @@
       {
         "Solde": 0.380,
         "Date": "20/02/2025",
-        "Description": "TVA: SOCIETE DAKHLI RENT A CAR - LM01656030/",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/68/6284",
-        "Description": "(M01656930/20022025 RECU : LEASING 25051021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 5882.723,
-        "Date": "37/68/6284",
-        "Description": "MODERN LEASING 25051021",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "20/10/2220",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/68/3072",
-        "Description": "ATTIARI 25051011",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/68/3072",
-        "Description": "TVA 25051011",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/68/3072",
-        "Description": "2025 25051011",
+        "Description": "2505101137683072",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.285,
-        "Date": "37/47/0336",
-        "Description": "/02/2025 TVA : 25052011",
+        "Date": "21/02/2025",
+        "Description": "TVA : 2505201137470336 GRAND MAGHREB MEDIAS S.A VIR 79",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 225180.000,
-        "Date": "11/62/4100",
-        "Description": "/02/2025 REMISE TPE",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "75/02/2025",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "13/78/5105",
-        "Description": "72025 LEASING (CIL)",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/85/1057",
-        "Description": "2025 DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/85/1056",
-        "Description": "272025 INTERNATIONALE DE : LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/85/1056",
-        "Description": "72025 DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/85/1063",
-        "Description": "2025 COMPAGNIE INTERNATIONALE DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/85/1063",
-        "Description": "2025 LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/85/1058",
-        "Description": "2025 COMPAGNIE INTERNATIONALE DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/85/1058",
-        "Description": "72025 DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/85/1058",
-        "Description": "2025 DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/85/1055",
-        "Description": "72025 COMPAGNIE INTERNATIONALE DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "97/85/1055",
-        "Description": "72025 DE LEASING (C1) 25056051",
+        "Solde": 180.000,
+        "Date": "25/02/2025",
+        "Description": "REMISE TPE 1162410011 REMISE NUM N01123 DU 250225 0ssFC1",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1154,23 +193,53 @@
       {
         "Solde": 0.380,
         "Date": "25/02/2025",
-        "Description": "",
+        "Description": "DE LEASING (CIL) 2505605137851057",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.750,
-        "Date": "37/85/1050",
-        "Description": "72025 LEASING (CIL) 25056051",
+        "Solde": 2.000,
+        "Date": "25/02/2025",
+        "Description": "COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851063 s",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.380,
-        "Date": "37/85/1050",
-        "Description": "2025 DE LEASING (CIL) 25056051",
+        "Date": "25/02/2025",
+        "Description": "LEASING (CIL) 2505605137851063",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "25/02/2025",
+        "Description": "COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851058",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "25/02/2025",
+        "Description": "DE LEASING (CI.) e",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "25/02/2025",
+        "Description": "DE LEASING (CIL) 2505605137851050",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1178,87 +247,17 @@
       {
         "Solde": 0.750,
         "Date": "25/02/2025",
-        "Description": "",
+        "Description": "LEASING (CIL) po=",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 0.380,
-        "Date": "37/85/1037",
-        "Description": "025 DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/85/1054",
-        "Description": "025 COMPAGNIE INTERNATIONALE DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/85/1054",
-        "Description": "72025 DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/85/1054",
-        "Description": "72025 DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/85/4032",
-        "Description": "2025 LEASE 25056011",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "37/85/4032",
-        "Description": "72025 LEASE 25056011",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/85/4032",
-        "Description": "272025 LEASE 25056011",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/85/1061",
-        "Description": "72025 COMPAGNIE INTERNATIONALE DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "37/85/1061",
-        "Description": "2025 DE LEASING (CIL) 25056051",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 2.000,
-        "Date": "37/85/1036",
-        "Description": "72025 INTERNAT!ONALE DE LEASING (CIL) 25056051",
+        "Date": "25/02/2025",
+        "Description": "DE LEASING (CIL) 2505605137851061",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1266,23 +265,8 @@
       {
         "Solde": 0.750,
         "Date": "25/02/2025",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "20/27/2025",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 1.500,
-        "Date": "77/02/2025",
-        "Description": "",
+        "Description": "…unswœ F",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1290,7 +274,8 @@
       {
         "Solde": 3100.000,
         "Date": "27/02/2025",
-        "Description": "",
+        "Description": "MOIS DE MARS",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1298,31 +283,8 @@
       {
         "Solde": 0.750,
         "Date": "27/02/2025",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4000.000,
-        "Date": "00/55/6171",
-        "Description": "ESPECE ESPECES 05525058",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4000.000,
-        "Date": "00/55/6422",
-        "Description": "5059",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 4300.000,
-        "Date": "05/52/5059",
-        "Description": "",
+        "Description": "PDL : DAKHLI RENT À",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -1331,6 +293,7 @@
         "Solde": 317.269,
         "Date": "28/02/2025",
         "Description": "",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null

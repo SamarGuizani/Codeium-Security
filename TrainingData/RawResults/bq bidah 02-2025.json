@@ -10,23 +10,20 @@
     "CustomerName": "",
     "TotalDebit": 0,
     "TotalCredit": 0,
+    "SumOfDebits": 0,
+    "SumOfCredits": 0,
+    "DebitTotalMatches": true,
+    "CreditTotalMatches": true,
     "BankName": "",
     "Currency": "TND",
     "Balance": 100007645.000,
     "StatementDate": null,
     "Transactions": [
       {
-        "Solde": 12602.543,
-        "Date": "01/02/2025",
-        "Description": "SOLDE DEBITEUR AU",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
         "Solde": 700.500,
         "Date": "03/02/2025",
         "Description": "",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -35,14 +32,7 @@
         "Solde": 5.550,
         "Date": "05/02/2025",
         "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.380,
-        "Date": "05/10/2120",
-        "Description": "",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -50,7 +40,8 @@
       {
         "Solde": 3800.000,
         "Date": "10/02/2025",
-        "Description": "",
+        "Description": "7 V :",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -58,23 +49,17 @@
       {
         "Solde": 3150.000,
         "Date": "10/02/2025",
-        "Description": "",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 0.750,
-        "Date": "40/02/2025",
-        "Description": "",
+        "Description": "\\ T T :",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
         "Solde": 9.785,
-        "Date": "38/37/9251",
-        "Description": "/02/2025 TVA 25041051",
+        "Date": "10/02/2025",
+        "Description": "TVA 2504105138379251 MME BEN MEDDEB NOURA VIR",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -83,6 +68,7 @@
         "Solde": 0.380,
         "Date": "10/02/2025",
         "Description": "",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -91,6 +77,7 @@
         "Solde": 4105.856,
         "Date": "10/02/2026",
         "Description": "",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
@@ -99,14 +86,16 @@
         "Solde": 0.750,
         "Date": "10/02/2025",
         "Description": "",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 2.000,
-        "Date": "39/35/3074",
-        "Description": "ARAB INTERNATIONAL LEASE 25048041",
+        "Solde": 0.380,
+        "Date": "10/02/2025",
+        "Description": "07/02/2025 S00zEXAZS0ATD8",
+        "SoldeType": null,
         "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
