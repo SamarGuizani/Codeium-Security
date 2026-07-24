@@ -17,49 +17,29 @@ namespace Codeium_Security.Services.DocumentParsers
 
         public object Parse(string fullText, List<TextLine> lines)
         {
-            var totalDebit = ExtractTotalDebit(fullText);
-            var totalCredit = ExtractTotalCredit(fullText);
-
-            if (totalDebit == 0 && totalCredit == 0)
-            {
-                var (debit, credit) = ExtractTotalMouvements(fullText);
-                totalDebit = debit;
-                totalCredit = credit;
-            }
-
-            var transactions = ExtractTransactions(lines);
+            var engine = new DocumentAnalysisEngine();
+            var rows = engine.BuildTable(lines);
 
             var document = new BankDocument
             {
-                AccountNumber = ExtractAccountNumber(fullText),
-                Currency = ExtractCurrency(fullText),
-                Balance = ExtractBalance(fullText),
-                SoldeInitial = ExtractSoldeInitial(fullText),
-                SoldeDisponible = ExtractSoldeDisponible(fullText),
-                TotalDebit = totalDebit,
-                TotalCredit = totalCredit,
                 CustomerName = ExtractCustomerName(fullText),
                 BankName = ExtractBankName(fullText),
-                Transactions = transactions
+                Accounts = ExtractAccountSections(rows, fullText)
             };
-
-            // BUG 16 : vérification totaux déclarés vs somme réelle des transactions extraites
-            document.SumOfDebits = transactions.Where(t => t.Debit.HasValue).Sum(t => t.Debit!.Value);
-            document.SumOfCredits = transactions.Where(t => t.Credit.HasValue).Sum(t => t.Credit!.Value);
-            document.DebitTotalMatches = Math.Abs(document.SumOfDebits - Math.Abs(document.TotalDebit)) < 1m;
-            document.CreditTotalMatches = Math.Abs(document.SumOfCredits - Math.Abs(document.TotalCredit)) < 1m;
 
             return document;
         }
 
-        // Reconstruit les transactions à partir du tableau (lignes x colonnes) au lieu du texte plat.
-        // Utilise DocumentAnalysisEngine.BuildTable, qui existait déjà mais n'était jamais appelée avant.
-        private List<Transaction> ExtractTransactions(List<TextLine> lines)
+        // Detecte chaque "Solde Initial" comme le debut d'un nouveau sous-compte,
+        // et rattache toutes les transactions jusqu'au "Solde Final" suivant a ce sous-compte.
+        // La logique interne de chaque transaction (debit/credit par comparaison de solde,
+        // CR/DB, validation de date) est IDENTIQUE a l'ancienne ExtractTransactions, inchangee.
+        private List<BankAccountSection> ExtractAccountSections(List<TableRow> rows, string fullText)
         {
-            var transactions = new List<Transaction>();
-            var engine = new DocumentAnalysisEngine();
-            var rows = engine.BuildTable(lines);
+            var sections = new List<BankAccountSection>();
+            BankAccountSection? current = null;
             decimal? previousSolde = null;
+            string lastSeenAccountNumber = "";
 
             foreach (var row in rows)
             {
@@ -68,16 +48,46 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 string joined = string.Join(" ", cellTexts);
 
-                // NOUVEAU : "SOLDE INITIAL" signale le début d'un nouveau sous-compte -> on reset la reference
+                // Garde en memoire le dernier numero de compte au format avec tirets vu dans le document,
+                // meme en dehors du tableau de transactions (ex: dans l'en-tete "Account (IBAN)")
+                var accMatch = Regex.Match(joined, @"\b(\d{2,5}-\d{4,8}-\d{1,4})\b");
+                if (accMatch.Success) lastSeenAccountNumber = accMatch.Groups[1].Value;
+
+                // "SOLDE INITIAL" signale le debut d'un nouveau sous-compte -> on ferme la section
+                // precedente (si elle existe) et on en ouvre une nouvelle avec sa propre reference de solde
                 if (Regex.IsMatch(joined, @"Solde\s*Initial", RegexOptions.IgnoreCase))
                 {
+                    if (current != null) sections.Add(current);
+
                     var initMatch = AmountRegex.Match(joined);
-                    previousSolde = initMatch.Success ? ParseAmount(initMatch.Value) : null;
+                    decimal soldeInit = initMatch.Success ? ParseAmount(initMatch.Value) : 0;
+
+                    current = new BankAccountSection
+                    {
+                        AccountNumber = lastSeenAccountNumber,
+                        Currency = ExtractCurrency(fullText),
+                        SoldeInitial = soldeInit
+                    };
+                    previousSolde = soldeInit;
                     continue;
                 }
 
-                if (Regex.IsMatch(joined, @"\b(Total|Solde\s*Final|Page\s*\d)\b", RegexOptions.IgnoreCase))
+                if (Regex.IsMatch(joined, @"Solde\s*Final", RegexOptions.IgnoreCase))
+                {
+                    if (current != null)
+                    {
+                        var finalMatch = AmountRegex.Match(joined);
+                        current.Balance = finalMatch.Success ? ParseAmount(finalMatch.Value) : (previousSolde ?? 0);
+                    }
                     continue;
+                }
+
+                if (Regex.IsMatch(joined, @"\b(Total|Page\s*\d)\b", RegexOptions.IgnoreCase))
+                    continue;
+
+                if (current == null) continue; // lignes avant le premier "Solde Initial" (en-tetes generales)
+
+                // ===== A PARTIR D'ICI : logique de transaction inchangee =====
 
                 string normalizedDate = NormalizeDate(cellTexts[0].Trim());
                 if (string.IsNullOrEmpty(normalizedDate)) continue;
@@ -119,14 +129,27 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (crdb.Success) tx.SoldeType = crdb.Groups[1].Value;
 
                 previousSolde = tx.Solde;
-                transactions.Add(tx);
+                current.Transactions.Add(tx);
+
+                // ===== fin logique de transaction inchangee =====
             }
 
-            return transactions;
+            if (current != null) sections.Add(current);
+
+            // Totaux + verification par section (BUG 16, adapte a la structure par sous-compte)
+            foreach (var sec in sections)
+            {
+                sec.SumOfDebits = sec.Transactions.Where(t => t.Debit.HasValue).Sum(t => t.Debit!.Value);
+                sec.SumOfCredits = sec.Transactions.Where(t => t.Credit.HasValue).Sum(t => t.Credit!.Value);
+                sec.DebitTotalMatches = Math.Abs(sec.SumOfDebits - Math.Abs(sec.TotalDebit)) < 1m;
+                sec.CreditTotalMatches = Math.Abs(sec.SumOfCredits - Math.Abs(sec.TotalCredit)) < 1m;
+            }
+
+            return sections;
         }
 
         // BUG 5 : valide reellement la date (jour/mois/annee reels), rejette les dates impossibles.
-        // Retourne "" si invalide -> c'est ce "" que ExtractTransactions verifie pour rejeter la ligne.
+        // Retourne "" si invalide -> c'est ce "" qui fait rejeter la ligne comme transaction.
         private string NormalizeDate(string raw)
         {
             string candidate = raw;
@@ -143,6 +166,8 @@ namespace Codeium_Security.Services.DocumentParsers
             return "";
         }
 
+        // Convertit "5.385,866" OU "1 500.01" en decimal correct,
+        // en detectant automatiquement quel est le separateur decimal (le dernier)
         private decimal ParseAmount(string raw)
         {
             int lastSepIndex = -1;
@@ -168,114 +193,7 @@ namespace Codeium_Security.Services.DocumentParsers
             return result;
         }
 
-        private string ExtractAccountNumber(string text)
-        {
-            string cleanText = Regex.Replace(text, @"\([^)]*\)", "");
-
-            var dashMatches = Regex.Matches(cleanText, @"\b(\d{2,5}-\d{4,8}-\d{1,4})\b");
-            if (dashMatches.Count > 0)
-                return dashMatches[0].Groups[1].Value.Trim();
-
-            var matches = Regex.Matches(cleanText,
-                @"(?:Compte|Account)\s*(?:N[°o]?)?\s*:?\s*([0-9]+(?:[\s\-/][0-9]+){0,3})",
-                RegexOptions.IgnoreCase);
-
-            for (int i = matches.Count - 1; i >= 0; i--)
-            {
-                var candidate = Regex.Replace(matches[i].Groups[1].Value.Trim(), @"\s{2,}", " ");
-                if (candidate.Replace(" ", "").Replace("-", "").Length >= 6
-                    && !Regex.IsMatch(candidate, @"^\d{1,2}[\s/]\d{1,2}[\s/]\d{4}"))
-                {
-                    return candidate;
-                }
-            }
-
-            var ribMatches = Regex.Matches(cleanText, @"RIB\s*:?\s*([0-9]+(?:[\s][0-9]+){0,6})", RegexOptions.IgnoreCase);
-            if (ribMatches.Count > 0)
-                return ribMatches[ribMatches.Count - 1].Groups[1].Value.Trim();
-
-            // BUG 13 : ne plus deviner via un IBAN générique de 20 chiffres — retourne vide plutôt que d'inventer
-            return "";
-        }
-
         private string CleanWhitespace(string text) => text.Replace('\u00A0', ' ').Replace('\u202F', ' ');
-
-        private decimal ExtractSoldeInitial(string text)
-        {
-            text = CleanWhitespace(text);
-            var m = Regex.Matches(text,
-                @"Solde\s*Initial\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
-                RegexOptions.IgnoreCase);
-            return m.Count > 0 ? ParseAmount(m[0].Groups[1].Value) : 0;
-        }
-
-        private decimal ExtractBalance(string text)
-        {
-            text = CleanWhitespace(text);
-
-            var soldeFinal = Regex.Matches(text,
-                @"Solde\s*Final\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
-                RegexOptions.IgnoreCase);
-            if (soldeFinal.Count > 0)
-                return ParseAmount(soldeFinal[soldeFinal.Count - 1].Groups[1].Value);
-
-            var soldeAu = Regex.Matches(text,
-                @"Solde\s+au\s*:?\s*\d{2}[/\-.]\d{2}[/\-.]\d{4}\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
-                RegexOptions.IgnoreCase);
-            if (soldeAu.Count > 0)
-                return ParseAmount(soldeAu[soldeAu.Count - 1].Groups[1].Value);
-
-            var solde = Regex.Matches(text,
-                @"Solde\s*(?:Créditeur|Débiteur)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
-                RegexOptions.IgnoreCase);
-            if (solde.Count > 0)
-                return ParseAmount(solde[solde.Count - 1].Groups[1].Value);
-
-            var matches = AmountRegex.Matches(text);
-            return matches.Count > 0 ? ParseAmount(matches[matches.Count - 1].Value) : 0;
-        }
-
-        private decimal ExtractSoldeDisponible(string text)
-        {
-            text = CleanWhitespace(text);
-            var m = Regex.Matches(text,
-                @"Solde\s*Disponible\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
-                RegexOptions.IgnoreCase);
-            return m.Count > 0 ? ParseAmount(m[m.Count - 1].Groups[1].Value) : 0;
-        }
-
-        private decimal ExtractTotalDebit(string text)
-        {
-            text = CleanWhitespace(text);
-            var m = Regex.Matches(text,
-                @"Total\s*(?:des\s*)?D[ée]bit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
-                RegexOptions.IgnoreCase);
-            if (m.Count > 0)
-                return ParseAmount(m[0].Groups[1].Value);
-            return 0;
-        }
-
-        private decimal ExtractTotalCredit(string text)
-        {
-            text = CleanWhitespace(text);
-            var m = Regex.Matches(text,
-                @"Total\s*(?:des\s*)?Cr[ée]dit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
-                RegexOptions.IgnoreCase);
-            if (m.Count > 0)
-                return ParseAmount(m[0].Groups[1].Value);
-            return 0;
-        }
-
-        private (decimal debit, decimal credit) ExtractTotalMouvements(string text)
-        {
-            text = CleanWhitespace(text);
-            var m = Regex.Match(text,
-                @"Total\s*des\s*mouvements\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
-                RegexOptions.IgnoreCase);
-            if (m.Success)
-                return (ParseAmount(m.Groups[1].Value), ParseAmount(m.Groups[2].Value));
-            return (0, 0);
-        }
 
         private string ExtractCurrency(string text)
         {
