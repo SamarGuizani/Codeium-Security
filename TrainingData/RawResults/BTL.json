@@ -8,670 +8,776 @@
   "Document": {
     "AccountNumber": "",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "TND",
     "Balance": 8029.559,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 14620.957,
+        "Date": "04-01-2024",
+        "Description": "-12-2023 Solde au: 31/12/2023",
+        "Debit": 0.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0.000,
         "Date": "29-12-2023",
         "Description": "-01-2024",
         "Debit": 1.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2725.000,
+        "Date": "03-01-2024",
+        "Description": "-01-2024",
+        "Debit": null,
         "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "03-01-2024",
-        "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 2725.000,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 0.000,
         "Date": "29-12-2023",
         "Description": "-01-2024",
         "Debit": 8.000,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "29-12-2023",
         "Description": "-01-2024",
-        "Debit": 6.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "29-12-2023",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 7613.285,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "29-12-2023",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 1.520,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "29-12-2023",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 0.190,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "29-12-2023",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 1.140,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "04-01-2024",
         "Description": "-01-2024 Rejet Cheque",
-        "Debit": 500.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "02-01-2024",
         "Description": "-01-2024 Retrait TND CHQ",
-        "Debit": 900.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "02-01-2024",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 877.895,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 3433.400,
+        "Date": "04-01-2024",
+        "Description": "-01-2024",
+        "Debit": null,
         "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1000.000,
         "Date": "04-01-2024",
         "Description": "-01-2024",
         "Debit": 0.000,
-        "Credit": 3433.400,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4360.000,
         "Date": "04-01-2024",
         "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 1000.000,
+        "Debit": null,
+        "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "04-01-2024",
-        "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 4360.000,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 0.000,
         "Date": "02-01-2024",
         "Description": "-01-2024 Reglement Cheque",
         "Debit": 890.000,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "03-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 0.190,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "03-01-2024",
         "Description": "-01-2024",
-        "Debit": 1.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "04-01-2024",
         "Description": "-01-2024",
-        "Debit": 50.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "04-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 9.500,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "04-01-2024",
         "Description": "-01-2024 Retrait TND CHQ",
-        "Debit": 10000.000,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 15000.000,
+        "Date": "08-01-2024",
+        "Description": "-01-2024",
+        "Debit": null,
         "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "08-01-2024",
-        "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 15000.000,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 0.000,
         "Date": "04-01-2024",
         "Description": "-01-2024 Reglement Cheque",
         "Debit": 1700.000,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "05-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 1.140,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "05-01-2024",
         "Description": "-01-2024",
-        "Debit": 8.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "05-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 1.520,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "05-01-2024",
         "Description": "-01-2024",
-        "Debit": 10650.936,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "05-01-2024",
         "Description": "-01-2024 prelevement",
-        "Debit": 2.975,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "05-01-2024",
         "Description": "-01-2024",
-        "Debit": 6.000,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 5820.000,
+        "Date": "10-01-2024",
+        "Description": "-01-2024",
+        "Debit": null,
         "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1900.000,
         "Date": "10-01-2024",
         "Description": "-01-2024",
         "Debit": 0.000,
-        "Credit": 5820.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "10-01-2024",
-        "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 1900.000,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 0.000,
         "Date": "08-01-2024",
         "Description": "-01-2024 TVA sur Com",
         "Debit": 0.190,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "08-01-2024",
         "Description": "-01-2024",
-        "Debit": 1.000,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 14000.000,
+        "Date": "11-01-2024",
+        "Description": "-01-2024",
+        "Debit": null,
         "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "11-01-2024",
-        "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 14000.000,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 0.000,
         "Date": "09-01-2024",
         "Description": "-01-2024 Retrait TND CHQ",
         "Debit": 17000.000,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-01-2024",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 1289.627,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "10-01-2024",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 12141.742,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "10-01-2024",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 1500.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4000.000,
         "Date": "12-01-2024",
         "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 4000.000,
+        "Debit": null,
+        "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "12-01-2024",
         "Description": "-01-2024 Retrait TND",
         "Debit": 600.000,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "12-01-2024",
         "Description": "-01-2024",
-        "Debit": 7.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "12-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 0.190,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "12-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 1.330,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "12-01-2024",
         "Description": "-01-2024 Commission",
-        "Debit": 1.000,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 7900.000,
+        "Date": "17-01-2024",
+        "Description": "-01-2024",
+        "Debit": null,
         "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "17-01-2024",
-        "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 7900.000,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 0.000,
         "Date": "16-01-2024",
         "Description": "",
         "Debit": 24646.184,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "15-01-2024",
         "Description": "-01-2024 prelevement",
-        "Debit": 2.975,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "18-01-2024",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 4000.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19000.000,
         "Date": "23-01-2024",
         "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 19000.000,
+        "Debit": null,
+        "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "-01-2024 prelevement",
         "Debit": 2.975,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "-01-2024",
-        "Debit": 2736.189,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "-01-2024 prelevement",
-        "Debit": 2.975,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "-01-2024",
-        "Debit": 4870.268,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "19-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 0.190,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "19-01-2024",
         "Description": "-01-2024",
-        "Debit": 1.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "19-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 0.380,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "19-01-2024",
         "Description": "-01-2024",
-        "Debit": 2.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "-01-2024 prelevement",
-        "Debit": 2.975,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "-01-2024",
-        "Debit": 2496.966,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "-01-2024 prelevement",
-        "Debit": 2.975,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "-01-2024",
-        "Debit": 9179.499,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "19-01-2024",
         "Description": "-01-2024 prelevement",
-        "Debit": 2.975,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "",
-        "Debit": 3526.060,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "22-01-2024",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 3000.000,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 10980.000,
+        "Date": "24-01-2024",
+        "Description": "-01-2024",
+        "Debit": null,
         "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 22000.000,
         "Date": "24-01-2024",
         "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 10980.000,
+        "Debit": null,
+        "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "24-01-2024",
-        "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 22000.000,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 0.000,
         "Date": "23-01-2024",
         "Description": "-01-2024",
         "Debit": 1.785,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "23-01-2024",
         "Description": "-01-2024",
-        "Debit": 27000.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "25-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 0.285,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "24-01-2024",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 900.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "24-01-2024",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 4092.992,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "25-01-2024",
         "Description": "-01-2024",
-        "Debit": 1.500,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "24-01-2024",
         "Description": "-01-2024 Reglement Cheque",
-        "Debit": 2500.000,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 5000.000,
+        "Date": "25-01-2024",
+        "Description": "-01-2024",
+        "Debit": null,
         "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "25-01-2024",
-        "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 5000.000,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 0.000,
         "Date": "26-01-2024",
         "Description": "-01-2024 TVA sur Com",
         "Debit": 0.570,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "26-01-2024",
         "Description": "-01-2024",
-        "Debit": 3.000,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 17050.000,
+        "Date": "31-01-2024",
+        "Description": "-01-2024",
+        "Debit": null,
         "Credit": 0.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "31-01-2024",
-        "Description": "-01-2024",
-        "Debit": 0.000,
-        "Credit": 17050.000,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 0.000,
         "Date": "30-01-2024",
         "Description": "-01-2024",
         "Debit": 7.000,
-        "Credit": 0.000,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "30-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 1.330,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "30-01-2024",
         "Description": "-01-2024",
-        "Debit": 2.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "30-01-2024",
         "Description": "-01-2024 TVA sur Com",
-        "Debit": 0.380,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "30-01-2024",
         "Description": "-01-2024 Retrait TND",
-        "Debit": 10000.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.000,
         "Date": "09-03-2024",
         "Description": "-03-2024",
-        "Debit": 0.000,
-        "Credit": 0.000,
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "الليبي نسي التو البتك",

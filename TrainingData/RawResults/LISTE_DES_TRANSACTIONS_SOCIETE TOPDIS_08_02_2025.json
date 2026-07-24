@@ -8,978 +8,1120 @@
   "Document": {
     "AccountNumber": "25104000000077491924",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "TND",
     "Balance": -0.500,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": -0.500,
         "Date": "25/03/1494",
         "Description": "/01/2025 31/01/2025 FRAIS PDL 20250131 FT25030Z0S9V CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/03/1604",
         "Description": "/01/2025 51/01/2025 FRAIS PDL 20250151 FT2502993K3S CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/03/1823",
         "Description": "/01/2025 31/01/2025 FRAIS PDL 20250131 FT25029C0F9K CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "10/50/5000",
         "Description": "/01/2025 31/01/2025 COM VIR TN AUTRE BQ AC-TND",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4200.000,
         "Date": "31/01/2025",
         "Description": "/01/2025",
-        "Debit": -4200.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7263",
         "Description": "/01/2025 30/01/2025 COM VIREMENT MM BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2250.000,
         "Date": "30/01/2025",
         "Description": "/01/2025",
-        "Debit": -2250.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "10/50/5000",
         "Description": "/01/2025 31/01/2025 COM VIR TN AUTRE BQ AC-TND",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3108.922,
         "Date": "31/01/2025",
         "Description": "/01/2025",
-        "Debit": 3108.922,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 31/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3952.347,
         "Date": "31/01/2025",
         "Description": "/01/2025",
-        "Debit": 3952.347,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 31/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1186.395,
         "Date": "31/01/2025",
         "Description": "/01/2025",
-        "Debit": 1186.395,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 31/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/03/0052",
         "Description": "/01/2025 30/01/2025 FRAIS PDL 20250150 9 CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/03/0098",
         "Description": "/01/2025 30/01/2025 FRAIS PDL 20250130 FT250299Z08V CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/03/0647",
         "Description": "/01/2025 30/01/2025 FRAIS PDL 20250130 FT25029M)7KG CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/03/0207",
         "Description": "/01/2025 30/01/2025 FRAIS PDL 20250130 FT25029CY6HC CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3814.040,
         "Date": "30/01/2025",
         "Description": "/01/2025",
-        "Debit": 3814.040,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 30/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/25/5441",
         "Description": "/01/2025 28/01/2025 COM VIREMENT MM BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -950.501,
         "Date": "28/01/2025",
         "Description": "/01/2025",
-        "Debit": -950.501,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5628.314,
         "Date": "28/01/2025",
         "Description": "/01/2025 30/01/2025 ENC CHEQ TN NUM",
-        "Debit": 5628.314,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3.570,
         "Date": "00/00/7749",
         "Description": "/01/2025 30/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -3.570,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "10/50/5000",
         "Description": "/01/2025 29/01/2025 COM VIR TN AUTRE BQ AC-TND",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1264.079,
         "Date": "29/01/2025",
         "Description": "/01/2025",
-        "Debit": -1264.079,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/9718",
         "Description": "/01/2025 29/01/2025 FRAIS PDL 20250129 FT250283W6PQ CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/9933",
         "Description": "/01/2025 29/01/2025 FRAIS PDL 20250129 FT2502896GC6 CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/9800",
         "Description": "/01/2025 29/01/2025 FRAIS PDL 20250129 FT250285DLTK CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 173.550,
         "Date": "06/51/7350",
         "Description": "g 29/01/2025 29/01/2025 ENC CHEQ TN NUM",
-        "Debit": 173.550,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "00/00/7749",
         "Description": "/01/2025 29/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5404.000,
         "Date": "01/40/1458",
         "Description": "/01/2025 29/01/2025 ENC CHEQ TN NUM",
-        "Debit": 5404.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "00/00/7749",
         "Description": "/01/2025 29/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7263",
         "Description": "/01/2025 28/01/2025 COM VIREMENT MM BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1500.000,
         "Date": "28/01/2025",
         "Description": "/01/2025",
-        "Debit": -1500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "10/50/5000",
         "Description": "/01/2025 29/01/2025 COM VIR TN AUTRE BQ AC-TND",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 137.067,
         "Date": "29/01/2025",
         "Description": "/01/2025",
-        "Debit": 137.067,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "12/50/2907",
         "Description": "/01/2025 29/01/2025 COM VIR TN AUTRE BQ AC-TND105050001",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -25000.000,
         "Date": "29/01/2025",
         "Description": "/01/2025",
-        "Debit": -25000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 462.258,
         "Date": "29/01/2025",
         "Description": "/01/2025",
-        "Debit": 462.258,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 29/01/2025  COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 17190.253,
         "Date": "28/01/2025",
         "Description": "/01/2025",
-        "Debit": 17190.253,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 28/01/2025  COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 136.015,
         "Date": "28/01/2025",
         "Description": "/01/2025",
-        "Debit": 136.015,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 28/01/2025  COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4973.107,
         "Date": "27/01/2025",
         "Description": "/01/2025 28/01/2025 ENC CHEQ TN NUM",
-        "Debit": 4973.107,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.355,
         "Date": "00/00/7749",
         "Description": "/01/2025 28/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -5.355,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 998.815,
         "Date": "01/56/3693",
         "Description": "/01/2025 28/01/2025 ENC CHEQ TN NUM",
-        "Debit": 998.815,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "00/00/7749",
         "Description": "/01/2025 28/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1186.020,
         "Date": "28/01/2025",
         "Description": "/01/2025",
-        "Debit": 1186.020,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 28/01/2025  COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/7292",
         "Description": "/01/2025 27/01/2025 FRAIS PDL 20250127 FT25024BJSRK CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 457.246,
         "Date": "01/56/8206",
         "Description": "/01/2025 27/01/2025 ENC CHEQ TN NUM",
-        "Debit": 457.246,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "00/00/7749",
         "Description": "/01/2025 27/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2000.000,
         "Date": "27/01/2025",
         "Description": "/01/2025",
-        "Debit": -2000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/4002",
         "Description": "/01/2025 24/01/2025 FRAIS PDL 20250124 FT25023ZZY8N CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/4742",
         "Description": "/01/2025 24/01/2025 كلم PDL 20250124 FT25023KNLD8 CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1201.000,
         "Date": "24/01/2025",
         "Description": "/01/2025",
-        "Debit": 1201.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2517.000,
         "Date": "24/01/2025",
         "Description": "/01/2025",
-        "Debit": 2517.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7263",
         "Description": "/01/2025 23/01/2025 COM VIREMENT MM BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -11020.000,
         "Date": "23/01/2025",
         "Description": "/01/2025",
-        "Debit": -11020.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3885.733,
         "Date": "23/01/2025",
         "Description": "/01/2025",
-        "Debit": 3885.733,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 23/01/2025  COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7263",
         "Description": "/01/2025 22/01/2025 COM VIREMENT MM BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10900.000,
         "Date": "22/01/2025",
         "Description": "/01/2025",
-        "Debit": -10900.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/2651",
         "Description": "/01/2025 22/01/2025 FRAIS PDL 20250122 FT25021F3G2S CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/1384",
         "Description": "/01/2025 21/01/2025 FRAIS PDL 20250121 FT25020G11BQ CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/1921",
         "Description": "/01/2025 21/01/2025 FRAIS PDL 20250121 FT25020YC29W CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4357.405,
         "Date": "20/01/2025",
         "Description": "/01/2025 21/01/2025  ENC CHEQ TN NUM",
-        "Debit": 4357.405,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3.570,
         "Date": "00/00/7749",
         "Description": "/01/2025 21/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -3.570,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14663.872,
         "Date": "21/01/2025",
         "Description": "/01/2025",
-        "Debit": 14663.872,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 21/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/02/0050",
         "Description": "/01/2025 20/01/2025 FRAIS PDL 20250120 FT25017KW9YF CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "10/50/5000",
         "Description": "/01/2025 20/01/2025 COM VIR TN AUTRE BQ AC-TND",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -215.200,
         "Date": "20/01/2025",
         "Description": "/01/2025",
-        "Debit": -215.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14300.760,
         "Date": "20/01/2025",
         "Description": "/01/2025",
-        "Debit": 14300.760,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 20/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3348.300,
         "Date": "01/56/3692",
         "Description": "/01/2025 17/01/2025 ENC CHEQ TN NUM",
-        "Debit": 3348.300,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 17/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1566.000,
         "Date": "17/01/2025",
         "Description": "/01/2025",
-        "Debit": 1566.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 224.746,
         "Date": "17/01/2025",
         "Description": "/01/2025",
-        "Debit": 224.746,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 17/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/01/6105",
         "Description": "/01/2025 16/01/2025 FRAIS PDL 20250116 FT25015POCSS CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 522.500,
         "Date": "16/01/2025",
         "Description": "/01/2025",
-        "Debit": 522.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/01/5483",
         "Description": "/01/2025 15/01/2025 FRAIS PDL 20250115 FT250141RS06 CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/01/5869",
         "Description": "/01/2025 15/01/2025 FRAIS PDL 20250115 FT25014H891Q CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 186.395,
         "Date": "15/01/2025",
         "Description": "/01/2025",
-        "Debit": 186.395,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 15/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2731.492,
         "Date": "13/01/2025",
         "Description": "/01/2025 14/01/2025 ENC CHEQ TN NUM",
-        "Debit": 2731.492,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.355,
         "Date": "00/00/7749",
         "Description": "/01/2025 14/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -5.355,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 599.689,
         "Date": "00/03/8697",
         "Description": "/01/2025 14/01/2025 ENC CHEQ TN NUM",
-        "Debit": 599.689,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "00/00/7749",
         "Description": "/01/2025 14/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2185.219,
         "Date": "00/03/8699",
         "Description": "/01/2025 14/01/2025 ENC CHEQ TN NUM",
-        "Debit": 2185.219,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.678,
         "Date": "00/00/7749",
         "Description": "/01/2025 14/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -2.678,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2380.857,
         "Date": "14/01/2025",
         "Description": "/01/2025",
-        "Debit": 2380.857,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 14/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 121.264,
         "Date": "14/01/2025",
         "Description": "/01/2025",
-        "Debit": 121.264,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 14/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -22000.000,
         "Date": "14/01/2025",
         "Description": "/01/2025",
-        "Debit": -22000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/01/3830",
         "Description": "/01/2025 13/01/2025 FRAIS PDL 20250113 CHG2501007226 CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1294.250,
         "Date": "25/01/3406",
         "Description": "/01/2025 13/01/2025 VERSEMENT ESPECES AGENCE SOUSSE TT",
-        "Debit": 1294.250,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/01/0489",
         "Description": "/01/2025 10/01/2025 FRAIS PDL 20250110 FT25009VVTDH CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/01/0004",
         "Description": "/01/2025 10/01/2025 FRAIS PDL 20250110 FT25009N2Q7S CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.900,
         "Date": "25/01/0072",
         "Description": "/01/2025 10/01/2025 TVA CHG",
-        "Debit": -1.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10.000,
         "Date": "25/01/0072",
         "Description": "/01/2025 10/01/2025 COMMISSION TAWASSOL CHG",
-        "Debit": -10.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1439.000,
         "Date": "25/01/0682",
         "Description": "/01/2025 10/01/2025 VERSEMENT ESPECES AGENCE SFAX TT",
-        "Debit": 1439.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7400.000,
         "Date": "10/01/2025",
         "Description": "/01/2025",
-        "Debit": 7400.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/00/9392",
         "Description": "/01/2025 09/01/2025 FRAIS PDL 20250109 FT25008F4XNQ CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7263",
         "Description": "/01/2025 08/01/2025 COM VIREMENT MM BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -20000.000,
         "Date": "08/01/2025",
         "Description": "/01/2025",
-        "Debit": -20000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2250.100,
         "Date": "00/03/8696",
         "Description": "/01/2025 09/01/2025 ENC CHEQ TN NUM",
-        "Debit": 2250.100,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "00/00/7749",
         "Description": "/01/2025 09/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -119.000,
         "Date": "00/01/3640",
         "Description": "/01/2025 09/01/2025 COMMISSIONS PAYEES AC",
-        "Debit": -119.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -12950.000,
         "Date": "09/01/2025",
         "Description": "/01/2025",
-        "Debit": -12950.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/00/8495",
         "Description": "/01/2025 08/01/2025 FRAIS PDL 20250108 FT25007B4BXX CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/00/8826",
         "Description": "/01/2025 08/01/2025 FRAIS PDL 20250108 FT25007HCXLZ CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/00/8445",
         "Description": "/01/2025 08/01/2025 FRAIS PDL 20250108 FT25007HY4TM CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/00/8368",
         "Description": "/01/2025 08/01/2025 FRAIS PDL 20250108 FT25007RF3DO CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "10/50/5000",
         "Description": "/01/2025 08/01/2025 COM VIR TN AUTRE BQ AC-TND",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4000.000,
         "Date": "08/01/2025",
         "Description": "/01/2025",
-        "Debit": -4000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "10/50/5000",
         "Description": "/01/2025 07/01/2025 COM VIR TN AUTRE BQ AC-TND",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -58180.000,
         "Date": "07/01/2025",
         "Description": "/01/2025",
-        "Debit": -58180.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7263",
         "Description": "/01/2025 06/01/2025 COM VIREMENT MM BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3280.000,
         "Date": "06/01/2025",
         "Description": "/01/2025",
-        "Debit": -3280.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1390.000,
         "Date": "07/01/2025",
         "Description": "/01/2025",
-        "Debit": -1390.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 141.129,
         "Date": "07/01/2025",
         "Description": "/01/2025",
-        "Debit": 141.129,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 07/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 621.552,
         "Date": "07/01/2025",
         "Description": "/01/2025",
-        "Debit": 621.552,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.785,
         "Date": "00/00/7749",
         "Description": "/01/2025 07/01/2025 COM VIR TN AUTRE BQ AC",
-        "Debit": 1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2673.634,
         "Date": "25/00/6979",
         "Description": "/01/2025 06/01/2025 ENC CHEQ TN NUM 00038691 FT",
-        "Debit": 2673.634,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "25/00/6979",
         "Description": "/01/2025 06/01/2025 COM ENC CHEQUE TN AC-0000774919 FT",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4807.638,
         "Date": "00/03/8695",
         "Description": "/01/2025 06/01/2025 ENC CHEQ TN NUM",
-        "Debit": 4807.638,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "00/00/7749",
         "Description": "/01/2025 06/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 400.126,
         "Date": "00/03/8692",
         "Description": "/01/2025 06/01/2025 ENC CHEQ TN NUM",
-        "Debit": 400.126,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "00/00/7749",
         "Description": "/01/2025 06/01/2025 COM ENC CHEQUE TN AC",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -295.000,
         "Date": "03/01/2025",
         "Description": "/01/2025",
-        "Debit": -295.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/00/2046",
         "Description": "/01/2025 02/01/2025 FRAIS PDL 20250102 FT24366HHY5L CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "25/00/2575",
         "Description": "/01/2025 02/01/2025 كلما PDL 20250102 FT24366W7S3M CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "Extrait De Compte",

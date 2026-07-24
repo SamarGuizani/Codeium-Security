@@ -9,6 +9,10 @@
         public decimal TotalDebit { get; set; }      // NOUVEAU
         public decimal TotalCredit { get; set; }
 
+        public decimal SumOfDebits { get; set; }
+        public decimal SumOfCredits { get; set; }
+        public bool DebitTotalMatches { get; set; }
+        public bool CreditTotalMatches { get; set; }
         public string BankName { get; set; } = "";
 
         public string Currency { get; set; } = "";
@@ -20,6 +24,8 @@
         public List<Transaction> Transactions { get; set; } = new();
 
         public decimal SoldeInitial { get; set; }
+
+
         public decimal SoldeDisponible { get; set; }
     }
 }

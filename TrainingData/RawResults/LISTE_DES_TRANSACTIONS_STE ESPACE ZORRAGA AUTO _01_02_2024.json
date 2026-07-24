@@ -8,803 +8,920 @@
   "Document": {
     "AccountNumber": "25047000000117778007",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "TND",
     "Balance": -0.121,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": -0.500,
         "Date": "24/03/1336",
         "Description": "/01/2024 20240131 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/03/1368",
         "Description": "/01/2024 20240131 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/03/1986",
         "Description": "/01/2024 20240131 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/03/1551",
         "Description": "/01/2024 20240131 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/03/1212",
         "Description": "/01/2024 20240131 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5544.884,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -5544.884,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 32930.000,
         "Date": "20/24/0131",
         "Description": "/01/2024",
-        "Debit": 32930.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1669.074,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -1669.074,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9760.461,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -9760.461,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -16000.000,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -16000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19000.000,
         "Date": "20/24/0131",
         "Description": "/01/2024",
-        "Debit": 19000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -12855.227,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -12855.227,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5615.667,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": -5615.667,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "24/03/0603",
         "Description": "/01/2024 20240130 RECUP FRAIS DC",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0129",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1648.262,
         "Date": "20/24/0129",
         "Description": "/01/2024",
-        "Debit": -1648.262,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5400.000,
         "Date": "20/24/0130",
         "Description": "/01/2024",
-        "Debit": 5400.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0129",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1767.503,
         "Date": "20/24/0129",
         "Description": "/01/2024",
-        "Debit": -1767.503,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0129",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1966.798,
         "Date": "20/24/0129",
         "Description": "/01/2024",
-        "Debit": -1966.798,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19000.000,
         "Date": "20/24/0129",
         "Description": "/01/2024",
-        "Debit": 19000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -19000.000,
         "Date": "20/24/0126",
         "Description": "/01/2024",
-        "Debit": -19000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/02/5043",
         "Description": "/01/2024 20240125 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/02/4846",
         "Description": "/01/2024 20240124 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19260.000,
         "Date": "20/24/0124",
         "Description": "/01/2024",
-        "Debit": 19260.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "20/24/0123",
         "Description": "/01/2024",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -18994.051,
         "Date": "20/24/0123",
         "Description": "/01/2024",
-        "Debit": -18994.051,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/02/3050",
         "Description": "/01/2024 20240123 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.190,
         "Date": "20/24/0123",
         "Description": "/01/2024",
-        "Debit": -1.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6319.130,
         "Date": "20/24/0123",
         "Description": "/01/2024",
-        "Debit": -6319.130,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/02/2080",
         "Description": "/01/2024 20240122 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 16000.000,
         "Date": "20/24/0122",
         "Description": "/01/2024",
-        "Debit": 16000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0119",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10000.000,
         "Date": "20/24/0119",
         "Description": "/01/2024",
-        "Debit": -10000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "24/02/2603",
         "Description": "/01/2024 20240122 RECUP FRAIS DC",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 447.998,
         "Date": "20/24/0119",
         "Description": "/01/2024",
-        "Debit": 447.998,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "20/24/0119",
         "Description": "/01/2024",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/8654",
         "Description": "/01/2024 20240118 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/8814",
         "Description": "/01/2024 20240118 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2000.000,
         "Date": "20/24/0117",
         "Description": "/01/2024",
-        "Debit": 2000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.190,
         "Date": "20/24/0117",
         "Description": "/01/2024",
-        "Debit": -1.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1169.268,
         "Date": "20/24/0117",
         "Description": "/01/2024",
-        "Debit": -1169.268,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2000.000,
         "Date": "20/24/0117",
         "Description": "/01/2024",
-        "Debit": 2000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.190,
         "Date": "20/24/0117",
         "Description": "/01/2024",
-        "Debit": -1.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6470.614,
         "Date": "20/24/0117",
         "Description": "/01/2024",
-        "Debit": -6470.614,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/6006",
         "Description": "/01/2024 20240116 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/6979",
         "Description": "/01/2024 20240116 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/6640",
         "Description": "/01/2024 20240116 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/6621",
         "Description": "/01/2024 20240116 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/6175",
         "Description": "/01/2024 20240116 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/6048",
         "Description": "/01/2024 20240116 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.520,
         "Date": "20/24/0116",
         "Description": "/01/2024",
-        "Debit": -9.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/5201",
         "Description": "/01/2024 20240115 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 37500.000,
         "Date": "20/24/0115",
         "Description": "/01/2024",
-        "Debit": 37500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0112",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1402.212,
         "Date": "20/24/0112",
         "Description": "/01/2024",
-        "Debit": -1402.212,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0112",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4406.830,
         "Date": "20/24/0112",
         "Description": "/01/2024",
-        "Debit": -4406.830,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "24/01/5643",
         "Description": "/01/2024 20240112 COMM FT",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9000.000,
         "Date": "24/01/5643",
         "Description": "/01/2024 20240112 PAIEMENT FT",
-        "Debit": -9000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0112",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2372.634,
         "Date": "20/24/0112",
         "Description": "/01/2024",
-        "Debit": -2372.634,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "20/24/0115",
         "Description": "/01/2024",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3867.085,
         "Date": "20/24/0115",
         "Description": "/01/2024",
-        "Debit": -3867.085,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "20/24/0115",
         "Description": "/01/2024",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -13365.795,
         "Date": "20/24/0115",
         "Description": "/01/2024",
-        "Debit": -13365.795,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "24/01/5603",
         "Description": "/01/2024 20240115 RECUP FRAIS DC",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/2077",
         "Description": "/01/2024 20240112 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/2862",
         "Description": "/01/2024 20240112 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.900,
         "Date": "24/01/2438",
         "Description": "/01/2024 20240112 TVA CHG",
-        "Debit": -1.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10.000,
         "Date": "24/01/2438",
         "Description": "/01/2024 20240112 COMMISSION CHG",
-        "Debit": -10.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/1060",
         "Description": "/01/2024 20240111 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/1505",
         "Description": "/01/2024 20240111 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/1595",
         "Description": "/01/2024 20240111 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/01/1162",
         "Description": "/01/2024 20240111 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0110",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1166.521,
         "Date": "20/24/0110",
         "Description": "/01/2024",
-        "Debit": -1166.521,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0110",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -16373.690,
         "Date": "20/24/0110",
         "Description": "/01/2024",
-        "Debit": -16373.690,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 42000.000,
         "Date": "20/24/0110",
         "Description": "/01/2024",
-        "Debit": 42000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0109",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10000.000,
         "Date": "20/24/0109",
         "Description": "/01/2024",
-        "Debit": -10000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0109",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -586.690,
         "Date": "20/24/0109",
         "Description": "/01/2024",
-        "Debit": -586.690,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "20/24/0109",
         "Description": "/01/2024",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -16000.000,
         "Date": "20/24/0109",
         "Description": "/01/2024",
-        "Debit": -16000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1137.000,
         "Date": "20/24/0110",
         "Description": "/01/2024",
-        "Debit": 1137.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "20/24/0110",
         "Description": "/01/2024",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/00/9099",
         "Description": "/01/2024 20240109 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/00/9414",
         "Description": "/01/2024 20240109 TVA CHG",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/00/9414",
         "Description": "/01/2024 20240109 COMM REMISE CHG",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.520,
         "Date": "20/24/0109",
         "Description": "/01/2024",
-        "Debit": -9.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 430400.000,
         "Date": "20/24/0108",
         "Description": "/01/2024",
-        "Debit": 430400.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "20/24/0108",
         "Description": "/01/2024",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/00/4179",
         "Description": "/01/2024 20240104 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/00/4077",
         "Description": "/01/2024 20240104 TVA CHG",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/00/4077",
         "Description": "/01/2024 20240104 COMM REMISE CHG",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/00/3227",
         "Description": "/01/2024 20240103 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1300.000,
         "Date": "20/24/0103",
         "Description": "/01/2024",
-        "Debit": 1300.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "20/24/0103",
         "Description": "/01/2024",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1300.000,
         "Date": "20/24/0103",
         "Description": "/01/2024",
-        "Debit": -1300.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.500,
         "Date": "24/00/2001",
         "Description": "/01/2024 20240102 FRAIS PDL CHG",
-        "Debit": -0.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2600.000,
         "Date": "20/24/0102",
         "Description": "/01/2024",
-        "Debit": 2600.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.785,
         "Date": "20/23/1229",
         "Description": "/01/2024",
-        "Debit": -1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1200.000,
         "Date": "20/23/1229",
         "Description": "/01/2024",
-        "Debit": -1200.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.121,
         "Date": "00/01/1777",
         "Description": "/01/2024 20240101 COMM PERQ DE",
-        "Debit": -0.121,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "الزيتونة ف",

@@ -8,145 +8,168 @@
   "Document": {
     "AccountNumber": "8901769223",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "TND",
     "Balance": 194.793,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 500.000,
         "Date": "24/03/2007",
         "Description": "FEB 24 Reglement Cheque CFU",
-        "Debit": 500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.190,
         "Date": "24/03/6213",
         "Description": "FEB 24 TVA sur Com 571151 CHG",
-        "Debit": 0.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.000,
         "Date": "24/03/6213",
         "Description": "FEB 24 Commission Remise CHG",
-        "Debit": 1.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.700,
         "Date": "24/03/6838",
         "Description": "FEB 24 TVA sur Com CHG",
-        "Debit": 5.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30.000,
         "Date": "24/03/6838",
         "Description": "FEB 24 Com de depassement CHG",
-        "Debit": 30.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.285,
         "Date": "24/03/7135",
         "Description": "FEB 24 TVA sur Com CHG",
-        "Debit": 0.285,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.500,
         "Date": "24/03/7135",
         "Description": "FEB 24 Commission Virement CHG",
-        "Debit": 1.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8337.977,
         "Date": "24/03/7006",
         "Description": "FEB 24 Reglement Cheque CFU",
-        "Debit": 8337.977,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3856.089,
         "Date": "24/04/4002",
         "Description": "FEB 24 Reglement Cheque CFU",
-        "Debit": 3856.089,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.190,
         "Date": "24/04/5301",
         "Description": "FEB 24 TVA sur Com 571338 CHG",
-        "Debit": 0.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.000,
         "Date": "24/04/5301",
         "Description": "FEB 24 Commission Remise CHG",
-        "Debit": 1.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 24848.000,
         "Date": "24/05/1008",
         "Description": "FEB 24 Reglement Cheque CFU",
-        "Debit": 24848.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 24900.000,
         "Date": "24/05/7007",
         "Description": "FEB 24 Reglement Cheque CFU",
-        "Debit": 24900.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 24443.578,
         "Date": "24/05/8002",
         "Description": "FEB 24 Reglement Cheque CFU",
-        "Debit": 24443.578,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.330,
         "Date": "24/05/8932",
         "Description": "FEB 24 TVA sur Com 571320 CHG",
-        "Debit": 1.330,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7.000,
         "Date": "24/05/8932",
         "Description": "FEB 24 Commission Remise CHG",
-        "Debit": 7.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.140,
         "Date": "24/05/9518",
         "Description": "FEB 24 TVA sur Com 571321 CHG",
-        "Debit": 1.140,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6.000,
         "Date": "24/05/9518",
         "Description": "FEB 24 Commission Remise CHG",
-        "Debit": 6.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3750.000,
         "Date": "24/05/8725",
         "Description": "FEB 24 Encaissement remise FT",
-        "Debit": 3750.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "Page 7 of 3",

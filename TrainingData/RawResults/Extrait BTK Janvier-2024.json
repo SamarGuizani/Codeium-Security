@@ -8,2147 +8,2464 @@
   "Document": {
     "AccountNumber": "00505-22100893211-81",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "TND",
     "Balance": 825.493,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": -70.461,
         "Date": "02/01/2024",
         "Description": "/01/2024",
         "Debit": 53.550,
-        "Credit": -70.461,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10.461,
         "Date": "20/05/0505",
         "Description": "/01/2024 02/01/2024 Trs TPE",
-        "Debit": 60.000,
-        "Credit": -10.461,
+        "Debit": null,
+        "Credit": 60.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19.539,
         "Date": "20/05/0505",
         "Description": "/01/2024 02/01/2024 [Trs TPE",
-        "Debit": 30.000,
-        "Credit": 19.539,
+        "Debit": null,
+        "Credit": 30.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 49.539,
         "Date": "20/05/0505",
         "Description": "/01/2024 02/01/2024 [Trs TPE",
-        "Debit": 30.000,
-        "Credit": 49.539,
+        "Debit": null,
+        "Credit": 30.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 79.539,
         "Date": "20/05/0505",
         "Description": "/01/2024 02/01/2024 [Trs TPE",
-        "Debit": 30.000,
-        "Credit": 79.539,
+        "Debit": null,
+        "Credit": 30.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 50000129.539,
         "Date": "20/05/0505",
         "Description": "/01/2024 02/01/2024 [Trs TPE",
-        "Debit": 50000129.539,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1140128.399,
         "Date": "02/01/2024",
         "Description": "/01/2024",
-        "Debit": 1140128.399,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 570127.829,
         "Date": "02/01/2024",
         "Description": "/01/2024",
-        "Debit": 570127.829,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 570127.259,
         "Date": "02/01/2024",
         "Description": "/01/2024",
-        "Debit": 570127.259,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 570126.689,
         "Date": "02/01/2024",
         "Description": "/01/2024",
-        "Debit": 570126.689,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 950125.739,
         "Date": "02/01/2024",
         "Description": "/01/2024",
-        "Debit": 950125.739,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000155.739,
         "Date": "20/05/0505",
         "Description": "/01/2024 03/01/2024 Trs TPE",
-        "Debit": 30000155.739,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000175.739,
         "Date": "20/05/0505",
         "Description": "/01/2024 03/01/2024 [Trs TPE",
-        "Debit": 20000175.739,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000215.739,
         "Date": "20/05/0505",
         "Description": "/01/2024 03/01/2024 Trs TPE",
-        "Debit": 40000215.739,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000255.739,
         "Date": "20/05/0505",
         "Description": "/01/2024 03/01/2024 Trs TPE",
-        "Debit": 40000255.739,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 45000300.739,
         "Date": "20/05/0505",
         "Description": "/01/2024 03/01/2024 Trs TPE",
-        "Debit": 45000300.739,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 60000360.739,
         "Date": "20/05/0505",
         "Description": "/01/2024 03/01/2024 Trs TPE",
-        "Debit": 60000360.739,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 313100000460.739,
         "Date": "20/05/0505",
         "Description": "/01/2024 03/01/2024 [Trs TPE",
-        "Debit": 313100000460.739,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7120000580.739,
         "Date": "20/05/0505",
         "Description": "/01/2024 03/01/2024 [Trs TPE",
-        "Debit": 7120000580.739,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2280578.459,
         "Date": "03/01/2024",
         "Description": "/01/2024",
-        "Debit": 2280578.459,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380578.079,
         "Date": "03/01/2024",
         "Description": "/01/2024",
-        "Debit": 380578.079,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 570577.509,
         "Date": "03/01/2024",
         "Description": "/01/2024",
-        "Debit": 570577.509,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 760576.749,
         "Date": "03/01/2024",
         "Description": "/01/2024",
-        "Debit": 760576.749,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 760575.989,
         "Date": "03/01/2024",
         "Description": "/01/2024",
-        "Debit": 760575.989,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 855575.134,
         "Date": "03/01/2024",
         "Description": "/01/2024",
-        "Debit": 855575.134,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1140573.994,
         "Date": "03/01/2024",
         "Description": "/01/2024",
-        "Debit": 1140573.994,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1900572.094,
         "Date": "03/01/2024",
         "Description": "/01/2024",
-        "Debit": 1900572.094,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000592.094,
         "Date": "20/05/0505",
         "Description": "/01/2024 04/01/2024 [Trs TPE",
-        "Debit": 20000592.094,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000612.094,
         "Date": "20/05/0505",
         "Description": "/01/2024 04/01/2024 [Trs TPE",
-        "Debit": 20000612.094,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 25000637.094,
         "Date": "20/05/0505",
         "Description": "/01/2024 04/01/2024 Trs TPE",
-        "Debit": 25000637.094,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 80000717.094,
         "Date": "20/05/0505",
         "Description": "/01/2024 04/01/2024 [Trs TPE",
-        "Debit": 80000717.094,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000737.094,
         "Date": "20/05/0505",
         "Description": "/01/2024 04/01/2024 [Trs TPE",
-        "Debit": 20000737.094,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380736.714,
         "Date": "04/01/2024",
         "Description": "/01/2024",
-        "Debit": 380736.714,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380736.334,
         "Date": "04/01/2024",
         "Description": "/01/2024",
-        "Debit": 380736.334,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 475735.859,
         "Date": "04/01/2024",
         "Description": "/01/2024",
-        "Debit": 475735.859,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1520734.339,
         "Date": "04/01/2024",
         "Description": "/01/2024",
-        "Debit": 1520734.339,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380733.959,
         "Date": "04/01/2024",
         "Description": "/01/2024",
-        "Debit": 380733.959,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 17850716.109,
         "Date": "08/01/2024",
         "Description": "/01/2024",
-        "Debit": 17850716.109,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 388110000826.109,
         "Date": "20/05/0505",
         "Description": "/01/2024 05/01/2024 Trs TPE",
-        "Debit": 388110000826.109,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2090824.019,
         "Date": "05/01/2024",
         "Description": "/01/2024",
-        "Debit": 2090824.019,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 727100000924.019,
         "Date": "20/05/0505",
         "Description": "/01/2024 08/01/2024 Trs TPE",
-        "Debit": 727100000924.019,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000944.019,
         "Date": "20/05/0505",
         "Description": "/01/2024 08/01/2024 Trs TPE",
-        "Debit": 20000944.019,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000974.019,
         "Date": "20/05/0505",
         "Description": "/01/2024 08/01/2024 Trs TPE",
-        "Debit": 30000974.019,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30.000,
         "Date": "20/05/0505",
         "Description": "/01/2024 08/01/2024 Trs TPE",
-        "Debit": 30.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30.000,
         "Date": "20/05/0505",
         "Description": "/01/2024 08/01/2024 Trs TPE",
-        "Debit": 30.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 114.019,
         "Date": "20/05/0505",
         "Description": "/01/2024 08/01/2024 Trs TPE",
-        "Debit": 80.000,
-        "Credit": 114.019,
+        "Debit": null,
+        "Credit": 80.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 112.119,
         "Date": "08/01/2024",
         "Description": "/01/2024",
         "Debit": 1.900,
-        "Credit": 112.119,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 111.739,
         "Date": "08/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 111.739,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 111.169,
         "Date": "08/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 111.169,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 110.599,
         "Date": "08/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 110.599,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 110.029,
         "Date": "08/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 110.029,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1108.509,
         "Date": "08/01/2024",
         "Description": "/01/2024",
-        "Debit": 1.520,
-        "Credit": 1108.509,
+        "Debit": null,
+        "Credit": 1.520,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1208.509,
         "Date": "20/05/0505",
         "Description": "/01/2024 09/01/2024 Trs TPE",
-        "Debit": 17100.000,
-        "Credit": 1208.509,
+        "Debit": null,
+        "Credit": 17100.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1228.509,
         "Date": "20/05/0505",
         "Description": "/01/2024 09/01/2024 Trs TPE",
-        "Debit": 20.000,
-        "Credit": 1228.509,
+        "Debit": null,
+        "Credit": 20.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1253.509,
         "Date": "20/05/0505",
         "Description": "/01/2024 09/01/2024 Trs TPE",
-        "Debit": 25.000,
-        "Credit": 1253.509,
+        "Debit": null,
+        "Credit": 25.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1283.509,
         "Date": "20/05/0505",
         "Description": "/01/2024 09/01/2024 Trs TPE",
-        "Debit": 30.000,
-        "Credit": 1283.509,
+        "Debit": null,
+        "Credit": 30.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1323.509,
         "Date": "20/05/0505",
         "Description": "/01/2024 09/01/2024 Trs TPE",
-        "Debit": 40.000,
-        "Credit": 1323.509,
+        "Debit": null,
+        "Credit": 40.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1373.509,
         "Date": "20/05/0505",
         "Description": "/01/2024 09/01/2024 Trs TPE",
-        "Debit": 50.000,
-        "Credit": 1373.509,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1371.609,
         "Date": "09/01/2024",
         "Description": "/01/2024",
         "Debit": 1.900,
-        "Credit": 1371.609,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1371.229,
         "Date": "09/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1371.229,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1370.754,
         "Date": "09/01/2024",
         "Description": "/01/2024",
         "Debit": 0.475,
-        "Credit": 1370.754,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1370.184,
         "Date": "09/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 1370.184,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1369.424,
         "Date": "09/01/2024",
         "Description": "/01/2024",
         "Debit": 0.760,
-        "Credit": 1369.424,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1368.474,
         "Date": "09/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 1368.474,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1448.474,
         "Date": "20/05/0505",
         "Description": "/01/2024 16/01/2024 Trs TPE",
-        "Debit": 80.000,
-        "Credit": 1448.474,
+        "Debit": null,
+        "Credit": 80.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1446.954,
         "Date": "16/01/2024",
         "Description": "/01/2024",
         "Debit": 1.520,
-        "Credit": 1446.954,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "17/01/2024",
-        "Description": "/01/2024",
-        "Debit": 1300000146.954,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1300000146.954,
         "Date": "17/01/2024",
         "Description": "/01/2024",
-        "Debit": 2380144.574,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2380144.574,
+        "Date": "17/01/2024",
+        "Description": "/01/2024",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 269150000294.574,
         "Date": "20/05/0505",
         "Description": "/01/2024 17/01/2024 Trs TPE",
-        "Debit": 269150000294.574,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 15000309.574,
         "Date": "20/05/0505",
         "Description": "/01/2024 17/01/2024 Trs TPE",
-        "Debit": 15000309.574,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000349.574,
         "Date": "20/05/0505",
         "Description": "/01/2024 17/01/2024 Trs TPE",
-        "Debit": 40000349.574,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000389.574,
         "Date": "20/05/0505",
         "Description": "/01/2024 17/01/2024 Trs TPE",
-        "Debit": 40000389.574,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 50000439.574,
         "Date": "20/05/0505",
         "Description": "/01/2024 17/01/2024 Trs TPE",
-        "Debit": 50000439.574,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2850436.724,
         "Date": "17/01/2024",
         "Description": "/01/2024",
-        "Debit": 2850436.724,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 285436.439,
         "Date": "17/01/2024",
         "Description": "/01/2024",
-        "Debit": 285436.439,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 760435.679,
         "Date": "17/01/2024",
         "Description": "/01/2024",
-        "Debit": 760435.679,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 760434.919,
         "Date": "17/01/2024",
         "Description": "/01/2024",
-        "Debit": 760434.919,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 950433.969,
         "Date": "17/01/2024",
         "Description": "/01/2024",
-        "Debit": 950433.969,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000473.969,
         "Date": "20/05/0505",
         "Description": "/01/2024 18/01/2024 [Trs TPE",
-        "Debit": 40000473.969,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000493.969,
         "Date": "20/05/0505",
         "Description": "/01/2024 18/01/2024 [Trs TPE",
-        "Debit": 20000493.969,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000513.969,
         "Date": "20/05/0505",
         "Description": "/01/2024 18/01/2024 [Trs TPE",
-        "Debit": 20000513.969,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000533.969,
         "Date": "20/05/0505",
         "Description": "/01/2024 18/01/2024 [Trs TPE",
-        "Debit": 20000533.969,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000563.969,
         "Date": "20/05/0505",
         "Description": "/01/2024 18/01/2024 [Trs TPE",
-        "Debit": 30000563.969,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 760563.209,
         "Date": "18/01/2024",
         "Description": "/01/2024",
-        "Debit": 760563.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380562.829,
         "Date": "18/01/2024",
         "Description": "/01/2024",
-        "Debit": 380562.829,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380562.449,
         "Date": "18/01/2024",
         "Description": "/01/2024",
-        "Debit": 380562.449,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380562.069,
         "Date": "18/01/2024",
         "Description": "/01/2024",
-        "Debit": 380562.069,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 570561.499,
         "Date": "18/01/2024",
         "Description": "/01/2024",
-        "Debit": 570561.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000581.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 20/01/2024 [Trs TPE",
-        "Debit": 20000581.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000601.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 20000601.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10000611.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 20/01/2024 [Trs TPE",
-        "Debit": 10000611.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000631.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 20000631.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000651.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 20000651.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000671.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 20000671.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000691.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 19/01/2024 [Trs TPE",
-        "Debit": 20000691.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 22000713.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 19/01/2024 [Trs TPE",
-        "Debit": 22000713.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000743.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 30000743.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000773.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 20/01/2024 [Trs TPE",
-        "Debit": 30000773.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 34000807.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 34000807.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 35000842.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 19/01/2024 [Trs TPE",
-        "Debit": 35000842.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000882.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 40000882.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000922.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 20/01/2024 [Trs TPE",
-        "Debit": 40000922.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000962.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 20/01/2024 [Trs TPE",
-        "Debit": 40000962.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1012.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 20/01/2024 [Trs TPE",
         "Debit": 50.000,
-        "Credit": 1012.499,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1062.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 20/01/2024 [Trs TPE",
-        "Debit": 50.000,
-        "Credit": 1062.499,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1112.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 50.000,
-        "Credit": 1112.499,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1172.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 60.000,
-        "Credit": 1172.499,
+        "Debit": null,
+        "Credit": 60.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1232.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 19/01/2024 Trs TPE",
-        "Debit": 60.000,
-        "Credit": 1232.499,
+        "Debit": null,
+        "Credit": 60.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1295.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 20/01/2024 Trs TPE",
-        "Debit": 63.000,
-        "Credit": 1295.499,
+        "Debit": null,
+        "Credit": 63.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1405.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 828110.000,
-        "Credit": 1405.499,
+        "Debit": null,
+        "Credit": 828110.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1415.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 10.000,
-        "Credit": 1415.499,
+        "Debit": null,
+        "Credit": 10.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1565.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 19/01/2024 [Trs TPE",
-        "Debit": 563150.000,
-        "Credit": 1565.499,
+        "Debit": null,
+        "Credit": 563150.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1575.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 10.000,
-        "Credit": 1575.499,
+        "Debit": null,
+        "Credit": 10.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1585.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 10.000,
-        "Credit": 1585.499,
+        "Debit": null,
+        "Credit": 10.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1605.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 21/01/2024 [Trs TPE",
-        "Debit": 20.000,
-        "Credit": 1605.499,
+        "Debit": null,
+        "Credit": 20.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1625.499,
         "Date": "20/05/0505",
         "Description": "/01/2024 19/01/2024 [Trs TPE",
-        "Debit": 20.000,
-        "Credit": 1625.499,
+        "Debit": null,
+        "Credit": 20.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1625.309,
         "Date": "20/01/2024",
         "Description": "/01/2024",
         "Debit": 0.190,
-        "Credit": 1625.309,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1625.119,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.190,
-        "Credit": 1625.119,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1624.739,
         "Date": "19/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1624.739,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1624.359,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1624.359,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1623.979,
         "Date": "19/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1623.979,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1623.599,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1623.599,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1623.219,
         "Date": "20/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1623.219,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1622.839,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1622.839,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1622.459,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1622.459,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1622.079,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1622.079,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1621.661,
         "Date": "19/01/2024",
         "Description": "/01/2024",
         "Debit": 0.418,
-        "Credit": 1621.661,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 621.091,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 621.091,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1620.521,
         "Date": "20/01/2024",
         "Description": "/01/2024",
-        "Debit": 0.570,
-        "Credit": 1620.521,
+        "Debit": null,
+        "Credit": 0.570,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1619.875,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.646,
-        "Credit": 1619.875,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1619.210,
         "Date": "19/01/2024",
         "Description": "/01/2024",
         "Debit": 0.665,
-        "Credit": 1619.210,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1618.450,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.760,
-        "Credit": 1618.450,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1617.690,
         "Date": "20/01/2024",
         "Description": "/01/2024",
         "Debit": 0.760,
-        "Credit": 1617.690,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1616.930,
         "Date": "20/01/2024",
         "Description": "/01/2024",
         "Debit": 0.760,
-        "Credit": 1616.930,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1615.980,
         "Date": "20/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 1615.980,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1615.030,
         "Date": "20/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 1615.030,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1614.080,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 1614.080,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1612.940,
         "Date": "19/01/2024",
         "Description": "/01/2024",
         "Debit": 1.140,
-        "Credit": 1612.940,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1611.800,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 1.140,
-        "Credit": 1611.800,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1610.603,
         "Date": "20/01/2024",
         "Description": "/01/2024",
         "Debit": 1.197,
-        "Credit": 1610.603,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1607.753,
         "Date": "19/01/2024",
         "Description": "/01/2024",
         "Debit": 2.850,
-        "Credit": 1607.753,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1605.663,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 2.090,
-        "Credit": 1605.663,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1605.473,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.190,
-        "Credit": 1605.473,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1605.283,
         "Date": "21/01/2024",
         "Description": "/01/2024",
         "Debit": 0.190,
-        "Credit": 1605.283,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1655.283,
         "Date": "20/05/0505",
         "Description": "/01/2024 19/01/2024 Trs TPE",
-        "Debit": 50.000,
-        "Credit": 1655.283,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1780.283,
         "Date": "20/05/0505",
         "Description": "/01/2024 19/01/2024 Trs TPE",
-        "Debit": 14125.000,
-        "Credit": 1780.283,
+        "Debit": null,
+        "Credit": 14125.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1973.283,
         "Date": "20/05/0505",
         "Description": "/01/2024 [20/01/2024 Trs TPE",
-        "Debit": 553193.000,
-        "Credit": 1973.283,
+        "Debit": null,
+        "Credit": 553193.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1966.045,
         "Date": "20/01/2024",
         "Description": "/01/2024",
         "Debit": 7.238,
-        "Credit": 1966.045,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1964.170,
         "Date": "19/01/2024",
         "Description": "/01/2024",
         "Debit": 1.875,
-        "Credit": 1964.170,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1959.482,
         "Date": "19/01/2024",
         "Description": "/01/2024",
         "Debit": 4.688,
-        "Credit": 1959.482,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2009.482,
         "Date": "20/05/0505",
         "Description": "/01/2024 [22/01/2024 Trs TPE",
-        "Debit": 50.000,
-        "Credit": 2009.482,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2059.482,
         "Date": "20/05/0505",
         "Description": "/01/2024 [22/01/2024 Trs TPE",
-        "Debit": 50.000,
-        "Credit": 2059.482,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2099.482,
         "Date": "20/05/0505",
         "Description": "/01/2024 [22/01/2024 Trs TPE",
-        "Debit": 40.000,
-        "Credit": 2099.482,
+        "Debit": null,
+        "Credit": 40.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2137.482,
         "Date": "20/05/0505",
         "Description": "/01/2024 [22/01/2024 Trs TPE",
-        "Debit": 38.000,
-        "Credit": 2137.482,
+        "Debit": null,
+        "Credit": 38.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2167.482,
         "Date": "20/05/0505",
         "Description": "/01/2024 [22/01/2024 Trs TPE",
-        "Debit": 30.000,
-        "Credit": 2167.482,
+        "Debit": null,
+        "Credit": 30.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2187.482,
         "Date": "20/05/0505",
         "Description": "/01/2024 [22/01/2024 Trs TPE",
-        "Debit": 20.000,
-        "Credit": 2187.482,
+        "Debit": null,
+        "Credit": 20.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2186.532,
         "Date": "22/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 2186.532,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2185.582,
         "Date": "22/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 2185.582,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2184.822,
         "Date": "22/01/2024",
         "Description": "/01/2024",
         "Debit": 0.760,
-        "Credit": 2184.822,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2184.100,
         "Date": "22/01/2024",
         "Description": "/01/2024",
         "Debit": 0.722,
-        "Credit": 2184.100,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2183.530,
         "Date": "22/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 2183.530,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2183.150,
         "Date": "22/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 2183.150,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2233.150,
         "Date": "20/05/0505",
         "Description": "/01/2024 23/01/2024 [Trs TPE",
-        "Debit": 50.000,
-        "Credit": 2233.150,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2283.150,
         "Date": "20/05/0505",
         "Description": "/01/2024 23/01/2024 [Trs TPE",
-        "Debit": 50.000,
-        "Credit": 2283.150,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2343.150,
         "Date": "20/05/0505",
         "Description": "/01/2024 23/01/2024 [Trs TPE",
-        "Debit": 60.000,
-        "Credit": 2343.150,
+        "Debit": null,
+        "Credit": 60.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2443.150,
         "Date": "20/05/0505",
         "Description": "/01/2024 23/01/2024 [Trs TPE",
-        "Debit": 502100.000,
-        "Credit": 2443.150,
+        "Debit": null,
+        "Credit": 502100.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2442.200,
         "Date": "23/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 2442.200,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2440.300,
         "Date": "23/01/2024",
         "Description": "/01/2024",
         "Debit": 1.900,
-        "Credit": 2440.300,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2439.160,
         "Date": "23/01/2024",
         "Description": "/01/2024",
         "Debit": 1.140,
-        "Credit": 2439.160,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2438.210,
         "Date": "23/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 2438.210,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2571.610,
         "Date": "20/05/0505",
         "Description": "/01/2024 24/01/2024 [Trs TPE",
-        "Debit": 399133.400,
-        "Credit": 2571.610,
+        "Debit": null,
+        "Credit": 399133.400,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2578.610,
         "Date": "20/05/0505",
         "Description": "/01/2024 24/01/2024 [Trs TPE",
-        "Debit": 7.000,
-        "Credit": 2578.610,
+        "Debit": null,
+        "Credit": 7.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2618.610,
         "Date": "20/05/0505",
         "Description": "/01/2024 24/01/2024 [Trs TPE",
-        "Debit": 40.000,
-        "Credit": 2618.610,
+        "Debit": null,
+        "Credit": 40.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2668.610,
         "Date": "20/05/0505",
         "Description": "/01/2024 24/01/2024 [Trs TPE",
-        "Debit": 50.000,
-        "Credit": 2668.610,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2668.477,
         "Date": "24/01/2024",
         "Description": "/01/2024",
         "Debit": 0.133,
-        "Credit": 2668.477,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2667.527,
         "Date": "24/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 2667.527,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2666.767,
         "Date": "24/01/2024",
         "Description": "/01/2024",
         "Debit": 0.760,
-        "Credit": 2666.767,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2664.232,
         "Date": "24/01/2024",
         "Description": "/01/2024",
         "Debit": 2.535,
-        "Credit": 2664.232,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "25/01/2024",
-        "Description": "/01/2024",
-        "Debit": 2400000264.232,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2400000264.232,
         "Date": "25/01/2024",
         "Description": "/01/2024",
-        "Debit": 2380261.852,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2380261.852,
+        "Date": "25/01/2024",
+        "Description": "/01/2024",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 90000351.852,
         "Date": "20/05/0505",
         "Description": "/01/2024 25/01/2024 [Trs TPE",
-        "Debit": 90000351.852,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000371.852,
         "Date": "20/05/0505",
         "Description": "/01/2024 25/01/2024 [Trs TPE",
-        "Debit": 20000371.852,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 27000398.852,
         "Date": "20/05/0505",
         "Description": "/01/2024 25/01/2024 [Trs TPE",
-        "Debit": 27000398.852,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000428.852,
         "Date": "20/05/0505",
         "Description": "/01/2024 25/01/2024 [Trs TPE",
-        "Debit": 30000428.852,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000458.852,
         "Date": "20/05/0505",
         "Description": "/01/2024 25/01/2024 [Trs TPE",
-        "Debit": 30000458.852,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000498.852,
         "Date": "20/05/0505",
         "Description": "/01/2024 25/01/2024 [Trs TPE",
-        "Debit": 40000498.852,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 60000558.852,
         "Date": "20/05/0505",
         "Description": "/01/2024 25/01/2024 [Trs TPE",
-        "Debit": 60000558.852,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1140557.712,
         "Date": "25/01/2024",
         "Description": "/01/2024",
-        "Debit": 1140557.712,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 760556.952,
         "Date": "25/01/2024",
         "Description": "/01/2024",
-        "Debit": 760556.952,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 570556.382,
         "Date": "25/01/2024",
         "Description": "/01/2024",
-        "Debit": 570556.382,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 570555.812,
         "Date": "25/01/2024",
         "Description": "/01/2024",
-        "Debit": 570555.812,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 513555.299,
         "Date": "25/01/2024",
         "Description": "/01/2024",
-        "Debit": 513555.299,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380554.919,
         "Date": "25/01/2024",
         "Description": "/01/2024",
-        "Debit": 380554.919,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1710553.209,
         "Date": "25/01/2024",
         "Description": "/01/2024",
-        "Debit": 1710553.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6000559.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 27/01/2024 [Trs TPE",
-        "Debit": 6000559.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10000569.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 26/01/2024 [Trs TPE",
-        "Debit": 10000569.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10000579.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 26/01/2024 [Trs TPE",
-        "Debit": 10000579.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000599.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 28/01/2024 [Trs TPE",
-        "Debit": 20000599.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000619.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 28/01/2024 [Trs TPE",
-        "Debit": 20000619.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000639.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 27/01/2024 [Trs TPE",
-        "Debit": 20000639.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000659.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 28/01/2024 [Trs TPE",
-        "Debit": 20000659.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 80000739.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [26/01/2024 Trs TPE",
-        "Debit": 80000739.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000769.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [27/01/2024 Trs TPE",
-        "Debit": 30000769.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000799.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [28/01/2024 Trs TPE",
-        "Debit": 30000799.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000829.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [27/01/2024 Trs TPE",
-        "Debit": 30000829.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000859.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [26/01/2024 Trs TPE",
-        "Debit": 30000859.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000899.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [28/01/2024 Trs TPE",
-        "Debit": 40000899.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000939.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [26/01/2024 Trs TPE",
-        "Debit": 40000939.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000979.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [26/01/2024 Trs TPE",
-        "Debit": 40000979.209,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1029.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [27/01/2024 Trs TPE",
         "Debit": 50.000,
-        "Credit": 1029.209,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1079.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [28/01/2024 Trs TPE",
-        "Debit": 50.000,
-        "Credit": 1079.209,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1139.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [27/01/2024 Trs TPE",
-        "Debit": 60.000,
-        "Credit": 1139.209,
+        "Debit": null,
+        "Credit": 60.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1199.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [26/01/2024 Trs TPE",
-        "Debit": 60.000,
-        "Credit": 1199.209,
+        "Debit": null,
+        "Credit": 60.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1255.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [27/01/2024 Trs TPE",
-        "Debit": 56.000,
-        "Credit": 1255.209,
+        "Debit": null,
+        "Credit": 56.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1305.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [26/01/2024 Trs TPE",
-        "Debit": 50.000,
-        "Credit": 1305.209,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1355.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [28/01/2024 Trs TPE",
-        "Debit": 50.000,
-        "Credit": 1355.209,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1405.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 27/01/2024 Trs TPE",
-        "Debit": 50.000,
-        "Credit": 1405.209,
+        "Debit": null,
+        "Credit": 50.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1435.209,
         "Date": "20/05/0505",
         "Description": "/01/2024 [28/01/2024 Trs TPE",
-        "Debit": 30.000,
-        "Credit": 1435.209,
+        "Debit": null,
+        "Credit": 30.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1433.689,
         "Date": "26/01/2024",
         "Description": "/01/2024",
         "Debit": 1.520,
-        "Credit": 1433.689,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1432.549,
         "Date": "27/01/2024",
         "Description": "/01/2024",
         "Debit": 1.140,
-        "Credit": 1432.549,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1431.409,
         "Date": "26/01/2024",
         "Description": "/01/2024",
         "Debit": 1.140,
-        "Credit": 1431.409,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1430.345,
         "Date": "27/01/2024",
         "Description": "/01/2024",
         "Debit": 1.064,
-        "Credit": 1430.345,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1429.395,
         "Date": "26/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 1429.395,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1428.445,
         "Date": "28/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 1428.445,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1427.495,
         "Date": "27/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 1427.495,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1426.545,
         "Date": "28/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 1426.545,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1425.595,
         "Date": "27/01/2024",
         "Description": "/01/2024",
         "Debit": 0.950,
-        "Credit": 1425.595,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1424.835,
         "Date": "26/01/2024",
         "Description": "/01/2024",
         "Debit": 0.760,
-        "Credit": 1424.835,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1424.075,
         "Date": "26/01/2024",
         "Description": "/01/2024",
         "Debit": 0.760,
-        "Credit": 1424.075,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1423.315,
         "Date": "28/01/2024",
         "Description": "/01/2024",
         "Debit": 0.760,
-        "Credit": 1423.315,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1422.745,
         "Date": "26/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 1422.745,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1422.175,
         "Date": "27/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 1422.175,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 421.605,
         "Date": "28/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 421.605,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 421.035,
         "Date": "27/01/2024",
         "Description": "/01/2024",
         "Debit": 0.570,
-        "Credit": 421.035,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1420.465,
         "Date": "28/01/2024",
         "Description": "/01/2024",
-        "Debit": 0.570,
-        "Credit": 1420.465,
+        "Debit": null,
+        "Credit": 0.570,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1420.085,
         "Date": "28/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1420.085,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1419.705,
         "Date": "27/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1419.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1419.325,
         "Date": "28/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1419.325,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1418.945,
         "Date": "28/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 1418.945,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1418.755,
         "Date": "26/01/2024",
         "Description": "/01/2024",
         "Debit": 0.190,
-        "Credit": 1418.755,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1418.565,
         "Date": "26/01/2024",
         "Description": "/01/2024",
         "Debit": 0.190,
-        "Credit": 1418.565,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1418.451,
         "Date": "27/01/2024",
         "Description": "/01/2024",
         "Debit": 0.114,
-        "Credit": 1418.451,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "20/05/0505",
-        "Description": "/01/2024 [26/01/2024 Trs TPE",
-        "Debit": 90.000,
-        "Credit": 1508.451,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "20/05/0505",
-        "Description": "/01/2024 26/01/2024 [Trs TPE",
-        "Debit": 7.000,
-        "Credit": 1515.451,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "26/01/2024",
-        "Description": "/01/2024",
-        "Debit": 3.375,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1508.451,
+        "Date": "20/05/0505",
+        "Description": "/01/2024 [26/01/2024 Trs TPE",
+        "Debit": null,
+        "Credit": 90.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 1515.451,
+        "Date": "20/05/0505",
+        "Description": "/01/2024 26/01/2024 [Trs TPE",
+        "Debit": null,
+        "Credit": 7.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 3.375,
+        "Date": "26/01/2024",
+        "Description": "/01/2024",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 511.813,
         "Date": "30/01/2024",
         "Description": "",
-        "Debit": 0.263,
-        "Credit": 511.813,
+        "Debit": null,
+        "Credit": 0.263,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1531.813,
         "Date": "20/05/0505",
         "Description": "/01/2024 29/01/2024 [Trs TPE",
-        "Debit": 20.000,
-        "Credit": 1531.813,
+        "Debit": null,
+        "Credit": 20.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1551.813,
         "Date": "20/05/0505",
         "Description": "/01/2024 29/01/2024 [Trs TPE",
-        "Debit": 20.000,
-        "Credit": 1551.813,
+        "Debit": null,
+        "Credit": 20.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1571.813,
         "Date": "20/05/0505",
         "Description": "/01/2024 29/01/2024 [Trs TPE",
-        "Debit": 20.000,
-        "Credit": 1571.813,
+        "Debit": null,
+        "Credit": 20.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1651.813,
         "Date": "20/05/0505",
         "Description": "/01/2024 29/01/2024 [Trs TPE",
-        "Debit": 80.000,
-        "Credit": 1651.813,
+        "Debit": null,
+        "Credit": 80.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1766.813,
         "Date": "20/05/0505",
         "Description": "/01/2024 29/01/2024 [Trs TPE",
-        "Debit": 819115.000,
-        "Credit": 1766.813,
+        "Debit": null,
+        "Credit": 819115.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1896.813,
         "Date": "20/05/0505",
         "Description": "/01/2024 29/01/2024 [Trs TPE",
-        "Debit": 146130.000,
-        "Credit": 1896.813,
+        "Debit": null,
+        "Credit": 146130.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2051.813,
         "Date": "20/05/0505",
         "Description": "/01/2024 29/01/2024 [Trs TPE",
-        "Debit": 190155.000,
-        "Credit": 2051.813,
+        "Debit": null,
+        "Credit": 190155.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2051.433,
         "Date": "29/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 2051.433,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2051.053,
         "Date": "29/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 2051.053,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2050.673,
         "Date": "29/01/2024",
         "Description": "/01/2024",
         "Debit": 0.380,
-        "Credit": 2050.673,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2049.153,
         "Date": "29/01/2024",
         "Description": "/01/2024",
         "Debit": 1.520,
-        "Credit": 2049.153,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2046.683,
         "Date": "29/01/2024",
         "Description": "/01/2024",
         "Debit": 2.470,
-        "Credit": 2046.683,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2044.498,
         "Date": "29/01/2024",
         "Description": "/01/2024",
         "Debit": 2.185,
-        "Credit": 2044.498,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2041.553,
         "Date": "29/01/2024",
         "Description": "/01/2024",
         "Debit": 2.945,
-        "Credit": 2041.553,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1988.003,
         "Date": "31/01/2024",
         "Description": "/01/2024",
         "Debit": 53.550,
-        "Credit": 1988.003,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1998.003,
+        "Date": "20/05/0505",
+        "Description": "/02/2024 30/01/2024 [Trs TPE",
+        "Debit": null,
+        "Credit": 10.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2028.003,
+        "Date": "20/05/0505",
+        "Description": "/02/2024 30/01/2024 [Trs TPE",
+        "Debit": null,
+        "Credit": 30.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2050.203,
+        "Date": "20/05/0505",
+        "Description": "/02/2024 30/01/2024 [Trs TPE",
+        "Debit": null,
+        "Credit": 22.200,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2070.203,
+        "Date": "20/05/0505",
+        "Description": "/02/2024 30/01/2024 Trs TPE",
+        "Debit": null,
+        "Credit": 20.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 2100.203,
+        "Date": "20/05/0505",
+        "Description": "/02/2024 30/01/2024 [Trs TPE",
+        "Debit": null,
+        "Credit": 30.000,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 110.203,
         "Date": "20/05/0505",
         "Description": "/02/2024 30/01/2024 [Trs TPE",
         "Debit": 10.000,
-        "Credit": 1998.003,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2190.203,
         "Date": "20/05/0505",
         "Description": "/02/2024 30/01/2024 [Trs TPE",
-        "Debit": 30.000,
-        "Credit": 2028.003,
+        "Debit": null,
+        "Credit": 80.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "20/05/0505",
-        "Description": "/02/2024 30/01/2024 [Trs TPE",
-        "Debit": 22.200,
-        "Credit": 2050.203,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 2250.203,
         "Date": "20/05/0505",
         "Description": "/02/2024 30/01/2024 Trs TPE",
-        "Debit": 20.000,
-        "Credit": 2070.203,
+        "Debit": null,
+        "Credit": 60.000,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2292.203,
         "Date": "20/05/0505",
         "Description": "/02/2024 30/01/2024 [Trs TPE",
-        "Debit": 30.000,
-        "Credit": 2100.203,
+        "Debit": null,
+        "Credit": 42.000,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "20/05/0505",
-        "Description": "/02/2024 30/01/2024 [Trs TPE",
-        "Debit": 10.000,
-        "Credit": 110.203,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "20/05/0505",
-        "Description": "/02/2024 30/01/2024 [Trs TPE",
-        "Debit": 80.000,
-        "Credit": 2190.203,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "20/05/0505",
-        "Description": "/02/2024 30/01/2024 Trs TPE",
-        "Debit": 60.000,
-        "Credit": 2250.203,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "20/05/0505",
-        "Description": "/02/2024 30/01/2024 [Trs TPE",
-        "Debit": 42.000,
-        "Credit": 2292.203,
-        "BalanceAfterOperation": null
-      },
-      {
+        "Solde": 2291.781,
         "Date": "30/01/2024",
         "Description": "/02/2024",
         "Debit": 0.422,
-        "Credit": 2291.781,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2291.401,
         "Date": "30/01/2024",
         "Description": "/02/2024",
         "Debit": 0.380,
-        "Credit": 2291.401,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 291.211,
         "Date": "30/01/2024",
         "Description": "/02/2024",
         "Debit": 0.190,
-        "Credit": 291.211,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2289.691,
         "Date": "30/01/2024",
         "Description": "/02/2024",
-        "Debit": 1.520,
-        "Credit": 2289.691,
+        "Debit": null,
+        "Credit": 1.520,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2288.551,
         "Date": "30/01/2024",
         "Description": "/02/2024",
         "Debit": 1.140,
-        "Credit": 2288.551,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2287.753,
         "Date": "30/01/2024",
         "Description": "/02/2024",
         "Debit": 0.798,
-        "Credit": 2287.753,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2287.183,
         "Date": "30/01/2024",
         "Description": "/02/2024",
         "Debit": 0.570,
-        "Credit": 2287.183,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2286.613,
         "Date": "30/01/2024",
         "Description": "/02/2024",
         "Debit": 0.570,
-        "Credit": 2286.613,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2286.423,
         "Date": "30/01/2024",
         "Description": "/02/2024",
         "Debit": 0.190,
-        "Credit": 2286.423,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1900000386.423,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 1900000386.423,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2380384.043,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 2380384.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000404.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 20000404.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000424.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 20000424.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000444.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 20000444.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000464.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 20000464.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000494.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 30000494.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000524.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 30000524.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000564.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 40000564.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000604.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 40000604.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 50000654.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 Trs TPE",
-        "Debit": 50000654.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 60000714.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 60000714.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 214100000814.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 214100000814.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000834.043,
         "Date": "20/05/0505",
         "Description": "/02/2024 31/01/2024 [Trs TPE",
-        "Debit": 20000834.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 570833.473,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 570833.473,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380833.093,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 380833.093,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380832.713,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 380832.713,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380832.333,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 380832.333,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380831.953,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 380831.953,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 380831.573,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 380831.573,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1900829.673,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 1900829.673,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 570829.103,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 570829.103,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 760828.343,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 760828.343,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 760827.583,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 760827.583,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 950826.633,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 950826.633,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1140825.493,
         "Date": "31/01/2024",
         "Description": "/02/2024",
-        "Debit": 1140825.493,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 825.493,
+        "Date": "02/02/2024",
+        "Description": "Solde (TND) au",
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "<",

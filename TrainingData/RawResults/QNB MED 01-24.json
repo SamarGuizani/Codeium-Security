@@ -6,287 +6,330 @@
   "NeedsReview": false,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "23019111112548178875",
+    "AccountNumber": "2019-112548-001",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "TND",
     "Balance": 69.395,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": -2159.105,
         "Date": "02/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -2159.105,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2165.105,
         "Date": "02/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -2165.105,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2171.105,
         "Date": "02/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -2171.105,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2172.245,
         "Date": "02/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -2172.245,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2173.385,
         "Date": "02/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -2173.385,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2174.525,
         "Date": "02/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -2174.525,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -198.945,
         "Date": "02/01/2024",
         "Description": "",
-        "Debit": 1975.580,
-        "Credit": -198.945,
+        "Debit": null,
+        "Credit": 1975.580,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -200.945,
         "Date": "03/01/2024",
         "Description": "",
         "Debit": -2.000,
-        "Credit": -200.945,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -201.325,
         "Date": "03/01/2024",
         "Description": "",
         "Debit": -0.380,
-        "Credit": -201.325,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -203.325,
         "Date": "09/01/2024",
         "Description": "",
         "Debit": -2.000,
-        "Credit": -203.325,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -203.705,
         "Date": "09/01/2024",
         "Description": "",
         "Debit": -0.380,
-        "Credit": -203.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -303.705,
         "Date": "11/01/2024",
         "Description": "",
         "Debit": -100.000,
-        "Credit": -303.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -403.705,
         "Date": "11/01/2024",
         "Description": "",
         "Debit": -100.000,
-        "Credit": -403.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -422.705,
         "Date": "11/01/2024",
         "Description": "",
         "Debit": -19.000,
-        "Credit": -422.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -441.705,
         "Date": "11/01/2024",
         "Description": "",
         "Debit": -19.000,
-        "Credit": -441.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -447.705,
         "Date": "15/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -447.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -453.705,
         "Date": "15/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -453.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -459.705,
         "Date": "15/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -459.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -465.705,
         "Date": "15/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -465.705,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -466.845,
         "Date": "15/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -466.845,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -467.985,
         "Date": "15/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -467.985,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -469.125,
         "Date": "15/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -469.125,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -470.265,
         "Date": "15/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -470.265,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -472.265,
         "Date": "25/01/2024",
         "Description": "",
         "Debit": -2.000,
-        "Credit": -472.265,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -474.265,
         "Date": "25/01/2024",
         "Description": "",
         "Debit": -2.000,
-        "Credit": -474.265,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -474.645,
         "Date": "25/01/2024",
         "Description": "",
         "Debit": -0.380,
-        "Credit": -474.645,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -475.025,
         "Date": "25/01/2024",
         "Description": "",
         "Debit": -0.380,
-        "Credit": -475.025,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -481.025,
         "Date": "29/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -481.025,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -482.165,
         "Date": "29/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -482.165,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -488.165,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -488.165,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -494.165,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -494.165,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -500.165,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -500.165,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -506.165,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -506.165,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -512.165,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -6.000,
-        "Credit": -512.165,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -513.305,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -513.305,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -514.445,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -514.445,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -515.585,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -515.585,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -516.725,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -516.725,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -517.865,
         "Date": "31/01/2024",
         "Description": "",
         "Debit": -1.140,
-        "Credit": -517.865,
+        "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": -2153.105,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "بجا",
