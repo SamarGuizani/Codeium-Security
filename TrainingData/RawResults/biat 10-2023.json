@@ -6,966 +6,1106 @@
   "NeedsReview": false,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "59 10 02049 0 31102023",
+    "AccountNumber": "08 307 00059 10 02049 0 36",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
     "Currency": "TND",
     "Balance": 1667.523,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 1.140,
         "Date": "03/10/2023",
         "Description": "EFFET IMPAYE 49783776",
-        "Debit": 1.140,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6.000,
         "Date": "03/10/2023",
         "Description": "EFFET IMPAYE 49783776",
-        "Debit": 6.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2222.698,
         "Date": "04/10/2023",
         "Description": "ENCAISSEMENT EFFETTN 49783776",
-        "Debit": 2222.698,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2222.698,
         "Date": "04/10/2023",
         "Description": "EFF A901 49783776",
-        "Debit": 2222.698,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.140,
         "Date": "05/10/2023",
         "Description": "EFFET IMPAYE 26676730",
-        "Debit": 1.140,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6.000,
         "Date": "05/10/2023",
         "Description": "EFFET IMPAYE 26676730",
-        "Debit": 6.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "04/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00000159",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 358.000,
         "Date": "06/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00000159",
-        "Debit": 358.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "04/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00000975",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 863.750,
         "Date": "06/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00000975",
-        "Debit": 863.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "04/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00001589",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1025.937,
         "Date": "06/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00001589",
-        "Debit": 1025.937,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.380,
         "Date": "09/10/2023",
         "Description": "VIREMENT TN MEME BQ 98408307",
-        "Debit": 0.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.000,
         "Date": "09/10/2023",
         "Description": "VIREMENT TN MEME BQ 98408307",
-        "Debit": 2.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3744.180,
         "Date": "09/10/2023",
         "Description": "VIREMENT TN MEME BQ 98408307",
-        "Debit": 3744.180,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "06/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00000022",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 855.113,
         "Date": "10/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00000022",
-        "Debit": 855.113,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 224.720,
         "Date": "10/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 1052610",
-        "Debit": 224.720,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 95.772,
         "Date": "10/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 3426947",
-        "Debit": 95.772,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.893,
         "Date": "05/10/2023",
         "Description": "COM TVA/REM CHQ ENC 1052610",
-        "Debit": 0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.893,
         "Date": "04/10/2023",
         "Description": "COM TVA/REM CHQ ENC 3426947",
-        "Debit": 0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.380,
         "Date": "10/10/2023",
         "Description": "VIREMENT TN MEME BQ 50757200",
-        "Debit": 0.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.000,
         "Date": "10/10/2023",
         "Description": "VIREMENT TN MEME BQ 50757200",
-        "Debit": 2.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 342.639,
         "Date": "10/10/2023",
         "Description": "VIREMENT TN MEME BQ 50757200",
-        "Debit": 342.639,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1215.000,
         "Date": "09/10/2023",
         "Description": "REGLEMENT CHEQUE 0000198",
-        "Debit": 1215.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "05/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 27800820",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "09/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 27900535",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "09/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 28000075",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "09/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 28000827",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "09/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00000003",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 470.098,
         "Date": "11/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00000003",
-        "Debit": 470.098,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "09/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 28100266",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5904.693,
         "Date": "12/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 1052611",
-        "Debit": 5904.693,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.893,
         "Date": "09/10/2023",
         "Description": "COM TVA/REM CHQ ENC 1052611",
-        "Debit": 0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13000.000,
         "Date": "12/10/2023",
         "Description": "VIREMENT TN MEME BQ 5687334",
-        "Debit": 13000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.045,
         "Date": "11/10/2023",
         "Description": "COMMISSION REM EFFETS 0027014",
-        "Debit": 1.045,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.500,
         "Date": "11/10/2023",
         "Description": "COMMISSION REM EFFETS 0027014",
-        "Debit": 5.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.045,
         "Date": "11/10/2023",
         "Description": "COMMISSION REM EFFETS 0027016",
-        "Debit": 1.045,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.500,
         "Date": "11/10/2023",
         "Description": "COMMISSION REM EFFETS 0027016",
-        "Debit": 5.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "09/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 28200365",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "09/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 28200737",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "11/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00000736",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 863.750,
         "Date": "13/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00000736",
-        "Debit": 863.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000.000,
         "Date": "16/10/2023",
         "Description": "VERSEMENT ESPECES 82100224",
-        "Debit": 20000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1080.000,
         "Date": "12/10/2023",
         "Description": "REGLEMENT CHEQUE 0000193",
-        "Debit": 1080.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 48451.010,
         "Date": "13/10/2023",
         "Description": "BLOCAGE 28600204",
-        "Debit": 48451.010,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "10/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 28355640",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "12/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00000327",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 9208.407,
         "Date": "16/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00000327",
-        "Debit": 9208.407,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "12/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00000590",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1088.000,
         "Date": "16/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00000590",
-        "Debit": 1088.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3971.937,
         "Date": "16/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 3426949",
-        "Debit": 3971.937,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19383.431,
         "Date": "16/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 3426950",
-        "Debit": 19383.431,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.785,
         "Date": "10/10/2023",
         "Description": "COM TVA/REM CHQ ENC 3426949",
-        "Debit": 1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.463,
         "Date": "10/10/2023",
         "Description": "COM TVA/REM CHQ ENC 3426950",
-        "Debit": 4.463,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.380,
         "Date": "16/10/2023",
         "Description": "VIREMENT TN MEME BQ 37096080",
-        "Debit": 0.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 957.879,
         "Date": "16/10/2023",
         "Description": "VIREMENT TN MEME BQ 37096080",
-        "Debit": 957.879,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.000,
         "Date": "16/10/2023",
         "Description": "VIREMENT TN MEME BQ 37096080",
-        "Debit": 2.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 48451.010,
         "Date": "13/10/2023",
         "Description": "DEBLOCAGE 28600204",
-        "Debit": 48451.010,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 212.983,
         "Date": "18/10/2023",
         "Description": "ANN DENOU OPE REMISE 28600204",
-        "Debit": 212.983,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 48418.526,
         "Date": "17/10/2023",
         "Description": "REG REMISE IMPORT 28600204",
-        "Debit": 48418.526,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "11/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 28400078",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 25000.000,
         "Date": "17/10/2023",
         "Description": "VIREMENT TN MEME BQ 0482174",
-        "Debit": 25000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.140,
         "Date": "17/10/2023",
         "Description": "EFFET IMPAYE 49783776",
-        "Debit": 1.140,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6.000,
         "Date": "17/10/2023",
         "Description": "EFFET IMPAYE 49783776",
-        "Debit": 6.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2221.708,
         "Date": "18/10/2023",
         "Description": "ENCAISSEMENT EFFETTN 49771166",
-        "Debit": 2221.708,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 16142.250,
         "Date": "18/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 1619212",
-        "Debit": 16142.250,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2977.215,
         "Date": "18/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 1619213",
-        "Debit": 2977.215,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7.140,
         "Date": "13/10/2023",
         "Description": "COM TVA/REM CHQ ENC 1619212",
-        "Debit": 7.140,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.570,
         "Date": "13/10/2023",
         "Description": "COM TVA/REM CHQ ENC 1619213",
-        "Debit": 3.570,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.380,
         "Date": "18/10/2023",
         "Description": "VIREMENT TN MEME BQ 56151192",
-        "Debit": 0.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.000,
         "Date": "18/10/2023",
         "Description": "VIREMENT TN MEME BQ 56151192",
-        "Debit": 2.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "13/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 28600647",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "13/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 28700949",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 173.550,
         "Date": "18/10/2023",
         "Description": "VIR RECU/REG FACTURE 56151192",
-        "Debit": 173.550,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.380,
         "Date": "19/10/2023",
         "Description": "VIREMENT TN MEME BQ 17088050",
-        "Debit": 0.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.000,
         "Date": "19/10/2023",
         "Description": "VIREMENT TN MEME BQ 17088050",
-        "Debit": 2.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5156.105,
         "Date": "19/10/2023",
         "Description": "VIREMENT TN MEME BQ 17088050",
-        "Debit": 5156.105,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2000.000,
         "Date": "18/10/2023",
         "Description": "REGLEMENT CHEQUE 0000184",
-        "Debit": 2000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "18/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00003140",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2811.748,
         "Date": "20/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00003140",
-        "Debit": 2811.748,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3858.235,
         "Date": "20/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 3426948",
-        "Debit": 3858.235,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.570,
         "Date": "16/10/2023",
         "Description": "COM TVA/REM CHQ ENC 3426948",
-        "Debit": 3.570,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1331.817,
         "Date": "19/10/2023",
         "Description": "REGLEMENT CHEQUE 0000182",
-        "Debit": 1331.817,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "17/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 29000425",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 793.684,
         "Date": "23/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 1052613",
-        "Debit": 793.684,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4553.452,
         "Date": "23/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 1619214",
-        "Debit": 4553.452,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.893,
         "Date": "17/10/2023",
         "Description": "COM TVA/REM CHQ ENC 1052613",
-        "Debit": 0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.785,
         "Date": "17/10/2023",
         "Description": "COM TVA/REM CHQ ENC 1619214",
-        "Debit": 1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2500.000,
         "Date": "23/10/2023",
         "Description": "VIREMENT TN MEME BQ 5243793",
-        "Debit": 2500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1649.340,
         "Date": "20/10/2023",
         "Description": "REGLEMENT CHEQUE 0000195",
-        "Debit": 1649.340,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "20/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00000497",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 518.650,
         "Date": "24/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00000497",
-        "Debit": 518.650,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.045,
         "Date": "23/10/2023",
         "Description": "COMMISSION REM EFFETS 0027024",
-        "Debit": 1.045,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.500,
         "Date": "23/10/2023",
         "Description": "COMMISSION REM EFFETS 0027024",
-        "Debit": 5.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "19/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 29200455",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "20/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 29300065",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "20/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 29400071",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2000.000,
         "Date": "24/10/2023",
         "Description": "REGLEMENT CHEQUE 0000199",
-        "Debit": 2000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2550.000,
         "Date": "26/10/2023",
         "Description": "VIREMENT TN MEME BQ 0460248",
-        "Debit": 2550.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 227.225,
         "Date": "25/10/2023",
         "Description": "REGLEMENT CHEQUE 0000201",
-        "Debit": 227.225,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 924.440,
         "Date": "25/10/2023",
         "Description": "REGLEMENT CHEQUE 0000206",
-        "Debit": 924.440,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3664.315,
         "Date": "27/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 1619215",
-        "Debit": 3664.315,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7.140,
         "Date": "23/10/2023",
         "Description": "COM TVA/REM CHQ ENC 1619215",
-        "Debit": 7.140,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2000.000,
         "Date": "30/10/2023",
         "Description": "ENCAISSEMENT EFFETTN 00027095",
-        "Debit": 2000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3080.815,
         "Date": "30/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 1619216",
-        "Debit": 3080.815,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14353.218,
         "Date": "30/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 1619217",
-        "Debit": 14353.218,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14353.218,
         "Date": "30/10/2023",
         "Description": "CHEQUE IMPAYE 0019513",
-        "Debit": 14353.218,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.143,
         "Date": "27/10/2023",
         "Description": "COM TVA/REM CHQ ENC 0019513",
-        "Debit": 0.143,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.750,
         "Date": "27/10/2023",
         "Description": "COM TVA/REM CHQ ENC 0019513",
-        "Debit": 0.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.143,
         "Date": "27/10/2023",
         "Description": "COM 2800 3",
-        "Debit": 0.143,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.750,
         "Date": "27/10/2023",
         "Description": "COM 2800 3",
-        "Debit": 0.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6.248,
         "Date": "24/10/2023",
         "Description": "COM TVA/REM CHQ ENC 1619216",
-        "Debit": 6.248,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.893,
         "Date": "25/10/2023",
         "Description": "COM TVA/REM CHQ ENC 1619217",
-        "Debit": 0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.618,
         "Date": "27/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 1111435",
-        "Debit": 2.618,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13000.000,
         "Date": "27/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 1111435",
-        "Debit": 13000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.618,
         "Date": "27/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 1111436",
-        "Debit": 2.618,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 15000.000,
         "Date": "27/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 1111436",
-        "Debit": 15000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.045,
         "Date": "29/10/2023",
         "Description": "COMMISSION REM EFFETS 1816973",
-        "Debit": 1.045,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.500,
         "Date": "29/10/2023",
         "Description": "COMMISSION REM EFFETS 1816973",
-        "Debit": 5.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 274.000,
         "Date": "27/10/2023",
         "Description": "REGLEMENT CHEQUE 0000191",
-        "Debit": 274.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 358.246,
         "Date": "27/10/2023",
         "Description": "REGLEMENT CHEQUE 0000211",
-        "Debit": 358.246,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14353.218,
         "Date": "31/10/2023",
         "Description": "REGLEMENT CHEQUE 0019513",
-        "Debit": 14353.218,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.380,
         "Date": "27/10/2023",
         "Description": "COM ET TVA/VIR AUT BQ 00000707",
-        "Debit": 2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13136.800,
         "Date": "31/10/2023",
         "Description": "VIREMENT TN AUTRE BQ 00000707",
-        "Debit": 13136.800,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1034.497,
         "Date": "31/10/2023",
         "Description": "ENCAISSEMENT CHEQUE 0471190",
-        "Debit": 1034.497,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.143,
         "Date": "30/10/2023",
         "Description": "COM TVA/REM CHQ ENC 0019513",
-        "Debit": 0.143,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.750,
         "Date": "30/10/2023",
         "Description": "COM TVA/REM CHQ ENC 0019513",
-        "Debit": 0.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.570,
         "Date": "25/10/2023",
         "Description": "COM TVA/REM CHQ ENC 0471190",
-        "Debit": 3.570,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1876.450,
         "Date": "01/11/2023",
         "Description": "VERSEMENT ESPECES 66419330",
-        "Debit": 1876.450,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4000.000,
         "Date": "30/10/2023",
         "Description": "RETRAIT CHEQUE 0000209",
-        "Debit": 4000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7000.000,
         "Date": "31/10/2023",
         "Description": "VIREMENT TN MEME BQ 0833311",
-        "Debit": 7000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.975,
         "Date": "30/10/2023",
         "Description": "PRELEVEMENT BANCAIRE 00210810",
-        "Debit": 2.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4327.226,
         "Date": "30/10/2023",
         "Description": "PRELEVEMENT BANCAIRE 00210810",
-        "Debit": 4327.226,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 366.526,
         "Date": "30/10/2023",
         "Description": "REGLEMENT CHEQUE 0000196",
-        "Debit": 366.526,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "27/10/2023",
         "Description": "ACHAT TPE A L ETRANGE 30000060",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "شهري حتابت كشف",

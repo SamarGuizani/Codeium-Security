@@ -8,89 +8,112 @@
   "Document": {
     "AccountNumber": "11055000122600278838",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "TND",
     "Balance": 100007645.000,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 12602.543,
+        "Date": "01/02/2025",
+        "Description": "SOLDE DEBITEUR AU",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 700.500,
         "Date": "03/02/2025",
         "Description": "",
-        "Debit": 700.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.550,
         "Date": "05/02/2025",
         "Description": "",
-        "Debit": 5.550,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.380,
         "Date": "05/10/2120",
         "Description": "",
-        "Debit": 0.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3800.000,
         "Date": "10/02/2025",
         "Description": "",
-        "Debit": 3800.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3150.000,
         "Date": "10/02/2025",
         "Description": "",
-        "Debit": 3150.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.750,
         "Date": "40/02/2025",
         "Description": "",
-        "Debit": 0.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 9.785,
         "Date": "38/37/9251",
         "Description": "/02/2025 TVA 25041051",
-        "Debit": 9.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.380,
         "Date": "10/02/2025",
         "Description": "",
-        "Debit": 0.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4105.856,
         "Date": "10/02/2026",
         "Description": "",
-        "Debit": 4105.856,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.750,
         "Date": "10/02/2025",
         "Description": "",
-        "Debit": 0.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.000,
         "Date": "39/35/3074",
         "Description": "ARAB INTERNATIONAL LEASE 25048041",
-        "Debit": 2.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "EAHSAIE POUK عا COMMERCE ET UROUSTIE",

@@ -6,466 +6,392 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "",
+    "AccountNumber": "2",
     "CustomerName": "",
-    "TotalDebit": 0,
-    "TotalCredit": 0,
     "BankName": "Arab Tunisian Bank (ATB)",
     "Currency": "TND",
     "Balance": 45295.879,
     "StatementDate": null,
     "Transactions": [
       {
-        "Solde": 1466.812,
-        "Date": "31/01/2025",
-        "Description": "Solde Au",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 3486.430,
         "Date": "01/03/0728",
         "Description": "| Encaissement effet",
-        "Debit": null,
+        "Debit": 3486.430,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4.000,
         "Date": "01/01/1848",
         "Description": "| Commission sur Paiement effet",
-        "Debit": null,
+        "Debit": 4.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/01/1848",
         "Description": "| TvA",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 5.500,
         "Date": "01/04/4946",
         "Description": "| Commission d'encaissement effet ENC",
-        "Debit": null,
+        "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.045,
         "Date": "01/04/4946",
         "Description": "| TVA ENC",
-        "Debit": null,
+        "Debit": 1.045,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 7.000,
         "Date": "01/03/2809",
         "Description": "| Commission sur effet impaye",
-        "Debit": null,
+        "Debit": 7.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.330,
         "Date": "01/03/2809",
         "Description": "| TVA",
-        "Debit": null,
+        "Debit": 1.330,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 5.500,
         "Date": "01/05/0215",
         "Description": "| Commission d'encaissement effet ENC",
-        "Debit": null,
+        "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.045,
         "Date": "01/05/0215",
         "Description": "| TVA ENC",
-        "Debit": null,
+        "Debit": 1.045,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 16915.225,
         "Date": "01/01/1848",
         "Description": "| Paiement effet",
-        "Debit": null,
+        "Debit": 16915.225,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4.000,
         "Date": "01/01/1848",
         "Description": "| Commission sur Paiement effet",
-        "Debit": null,
+        "Debit": 4.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/01/1848",
         "Description": "",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 3966.153,
         "Date": "01/01/1848",
         "Description": "| Paiement effet",
-        "Debit": null,
+        "Debit": 3966.153,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4.000,
         "Date": "01/01/1848",
         "Description": "| Commission sur Paiement effet",
-        "Debit": null,
+        "Debit": 4.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/01/1848",
         "Description": "",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4760.184,
         "Date": "01/03/2809",
         "Description": "",
-        "Debit": null,
+        "Debit": 4760.184,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4.000,
         "Date": "01/03/2809",
         "Description": "",
-        "Debit": null,
+        "Debit": 4.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/05/4612",
         "Description": "",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/01/1848",
         "Description": "",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1050.000,
         "Date": "00/51/4137",
         "Description": "",
-        "Debit": null,
+        "Debit": 1050.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.475,
         "Date": "00/51/4137",
         "Description": "",
-        "Debit": null,
+        "Debit": 0.475,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 16915.225,
         "Date": "01/01/1848",
         "Description": "",
-        "Debit": null,
+        "Debit": 16915.225,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/01/1848",
         "Description": "",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.330,
         "Date": "01/03/2809",
         "Description": "",
-        "Debit": null,
+        "Debit": 1.330,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 3966.153,
         "Date": "01/01/1848",
         "Description": "",
-        "Debit": null,
+        "Debit": 3966.153,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4.000,
         "Date": "00/99/8126",
         "Description": "sur",
-        "Debit": null,
+        "Debit": 4.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "00/99/8126",
         "Description": "",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.475,
         "Date": "00/51/5874",
         "Description": "",
-        "Debit": null,
+        "Debit": 0.475,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 3000.000,
         "Date": "00/51/6161",
         "Description": "",
-        "Debit": null,
+        "Debit": 3000.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.330,
         "Date": "01/01/1848",
         "Description": "| TVA",
-        "Debit": null,
+        "Debit": 1.330,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 7.000,
         "Date": "01/01/1848",
         "Description": "| Commission sur effet impaye",
-        "Debit": null,
+        "Debit": 7.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.330,
         "Date": "01/01/1848",
         "Description": "| TVA",
-        "Debit": null,
+        "Debit": 1.330,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4.000,
         "Date": "01/01/1848",
         "Description": "| Commission sur Paiement effet",
-        "Debit": null,
+        "Debit": 4.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/01/1848",
         "Description": ", TVA",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4.000,
         "Date": "01/03/2809",
         "Description": "| Commission sur Paiement effet",
-        "Debit": null,
+        "Debit": 4.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/03/2809",
         "Description": "| TVA",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4.000,
         "Date": "01/03/2809",
         "Description": "| Commission sur Paiement effet",
-        "Debit": null,
+        "Debit": 4.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/03/2809",
         "Description": "| TVA",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4.000,
         "Date": "01/01/1848",
         "Description": "| Commission sur Paiement effet",
-        "Debit": null,
+        "Debit": 4.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 0.760,
         "Date": "01/01/1848",
         "Description": "| TVA",
-        "Debit": null,
+        "Debit": 0.760,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 7.000,
         "Date": "01/01/1848",
         "Description": "| Commission sur effet impaye",
-        "Debit": null,
+        "Debit": 7.000,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.330,
         "Date": "01/01/1848",
         "Description": "",
-        "Debit": null,
+        "Debit": 1.330,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 5.500,
         "Date": "01/03/2961",
         "Description": "| Commission d'encaissement effet ENC",
-        "Debit": null,
+        "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.045,
         "Date": "01/03/2961",
         "Description": "| TVA ENC",
-        "Debit": null,
+        "Debit": 1.045,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 5.500,
         "Date": "01/03/0728",
         "Description": "| Commission d'encaissement effet ENC",
-        "Debit": null,
+        "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.045,
         "Date": "01/03/0728",
         "Description": "مد ENC",
-        "Debit": null,
+        "Debit": 1.045,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 5.500,
         "Date": "01/02/6959",
         "Description": "| Commission d'encaissement effet ENC",
-        "Debit": null,
+        "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.045,
         "Date": "01/02/6959",
         "Description": "| TVA ENC",
-        "Debit": null,
+        "Debit": 1.045,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 5.500,
         "Date": "01/02/0863",
         "Description": "| Commission d'encaissement effet ENC",
-        "Debit": null,
+        "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.045,
         "Date": "01/02/0863",
         "Description": "j TVA ENC",
-        "Debit": null,
+        "Debit": 1.045,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 5.500,
         "Date": "01/04/4946",
         "Description": "| Commission d'encaissement effet ENC",
-        "Debit": null,
+        "Debit": 5.500,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 1.045,
         "Date": "01/04/4946",
         "Description": "| TVA ENC",
-        "Debit": null,
+        "Debit": 1.045,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 8470.835,
         "Date": "01/01/4514",
         "Description": "| Encaissement effet",
-        "Debit": null,
+        "Debit": 8470.835,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Solde": 4760.184,
         "Date": "01/03/2809",
         "Description": "| Paiement effet",
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Solde": 45295.879,
-        "Date": "28/02/2025",
-        "Description": "Solde Au",
-        "Debit": null,
+        "Debit": 4760.184,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ],
-    "SoldeInitial": 0,
-    "SoldeDisponible": 0
+    ]
   },
   "DebugLines": [
     "",

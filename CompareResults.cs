@@ -42,7 +42,7 @@ namespace Codeium_Security
                 string trueBalance = row.GetValueOrDefault("balance_true", "").Trim();
 
                 bool? accountOk = null;
-                if (!string.IsNullOrEmpty(trueAccount) && !trueAccount.Equals("NA", StringComparison.OrdinalIgnoreCase) && trueAccount != "-")
+                if (!string.IsNullOrEmpty(trueAccount) && !trueAccount.Equals("NA", StringComparison.OrdinalIgnoreCase) && !trueAccount.Equals("N/A", StringComparison.OrdinalIgnoreCase) && trueAccount != "-")
                 {
                     accountChecked++;
                     accountOk = NormalizeAccount(trueAccount) == NormalizeAccount(predAccount);

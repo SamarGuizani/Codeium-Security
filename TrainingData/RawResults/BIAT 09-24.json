@@ -6,2478 +6,2834 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "2016",
+    "AccountNumber": "03814412 01102024 29",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
     "Currency": "TND",
     "Balance": 2671.533,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 1100.000,
         "Date": "02/09/2024",
         "Description": "VIREMENT TN MEME BQ 1631835",
-        "Debit": 1100.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.470,
         "Date": "30/08/2024",
         "Description": "REDRESSEMENT 50300824",
-        "Debit": 2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.000,
         "Date": "30/08/2024",
         "Description": "REDRESSEMENT 50300824",
-        "Debit": 13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.879,
         "Date": "02/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010056",
-        "Debit": 1.879,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 375.750,
         "Date": "05/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010056",
-        "Debit": 375.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2330.300,
         "Date": "05/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020152",
-        "Debit": 2330.300,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 11.652,
         "Date": "02/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020152",
-        "Debit": 11.652,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.408,
         "Date": "02/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020153",
-        "Debit": 2.408,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 481.500,
         "Date": "05/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020153",
-        "Debit": 481.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2078.000,
         "Date": "05/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020155",
-        "Debit": 2078.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.390,
         "Date": "02/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020155",
-        "Debit": 10.390,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19200.000,
         "Date": "02/09/2024",
         "Description": "RETRAIT CHEQUE 00688444",
-        "Debit": 19200.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "02/09/2024",
         "Description": "REDRESSEMENT s0020924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "02/09/2024",
         "Description": "REDRESSEMENT 50020924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2406.200,
         "Date": "06/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010058",
-        "Debit": 2406.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.031,
         "Date": "03/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010058",
-        "Debit": 12.031,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8.490,
         "Date": "03/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010060",
-        "Debit": 8.490,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1698.000,
         "Date": "06/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010060",
-        "Debit": 1698.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 604.000,
         "Date": "06/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010061",
-        "Debit": 604.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.020,
         "Date": "10/01/0061",
         "Description": "COM/ TVA REMISE AFFIL",
-        "Debit": 3.020,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3969.000,
         "Date": "06/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010062",
-        "Debit": 3969.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19.845,
         "Date": "03/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010062",
-        "Debit": 19.845,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3247.088,
         "Date": "06/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020156",
-        "Debit": 3247.088,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 16.235,
         "Date": "03/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020156",
-        "Debit": 16.235,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.963,
         "Date": "03/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020157",
-        "Debit": 1.963,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 392.500,
         "Date": "06/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020157",
-        "Debit": 392.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2462.000,
         "Date": "06/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020158",
-        "Debit": 2462.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.310,
         "Date": "03/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020158",
-        "Debit": 12.310,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.900,
         "Date": "03/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020159",
-        "Debit": 0.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 180.000,
         "Date": "06/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020159",
-        "Debit": 180.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.069,
         "Date": "03/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020160",
-        "Debit": 10.069,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2013.700,
         "Date": "06/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020160",
-        "Debit": 2013.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1160.000,
         "Date": "04/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137009",
-        "Debit": 1160.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.094,
         "Date": "29/08/2024",
         "Description": "COM TVA/REM CHQ ENC 4137009",
-        "Debit": 2.094,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4500.000,
         "Date": "03/09/2024",
         "Description": "RETRAIT CHEQUE 47003644",
-        "Debit": 4500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3000.000,
         "Date": "04/09/2024",
         "Description": "VIREMENT TN MEME BQ 1453783",
-        "Debit": 3000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1361.505,
         "Date": "04/09/2024",
         "Description": "PRINCIPAL CREDIT 34030100",
-        "Debit": 1361.505,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3225.806,
         "Date": "04/09/2024",
         "Description": "PRINCIPAL CREDIT 34030100",
-        "Debit": 3225.806,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "03/09/2024",
         "Description": "REDRESSEMENT S0030924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "03/09/2024",
         "Description": "REDRESSEMENT S0030924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.470,
         "Date": "08/07/2024",
         "Description": "REDRESSEMENT S0080724",
-        "Debit": 2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.000,
         "Date": "08/07/2024",
         "Description": "REDRESSEMENT 50080724",
-        "Debit": 13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.713,
         "Date": "04/09/2024",
         "Description": "COMMISSION ECH.CRD 34030100",
-        "Debit": 0.713,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.750,
         "Date": "04/09/2024",
         "Description": "COMMISSION ECH.CRD 34030100",
-        "Debit": 3.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 110.000,
         "Date": "09/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010064",
-        "Debit": 110.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.550,
         "Date": "04/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010064",
-        "Debit": 0.550,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 15.125,
         "Date": "04/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010065",
-        "Debit": 15.125,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3025.000,
         "Date": "09/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010065",
-        "Debit": 3025.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2743.000,
         "Date": "09/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020164",
-        "Debit": 2743.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.715,
         "Date": "04/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020164",
-        "Debit": 13.715,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 871.000,
         "Date": "05/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137010",
-        "Debit": 871.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 776.000,
         "Date": "05/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137011",
-        "Debit": 776.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2000.000,
         "Date": "05/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137012",
-        "Debit": 2000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.833,
         "Date": "30/08/2024",
         "Description": "COM TVA/REM CHQ ENC 4137010",
-        "Debit": 1.833,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.833,
         "Date": "02/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137011",
-        "Debit": 1.833,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.262,
         "Date": "02/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137012",
-        "Debit": 0.262,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4300.000,
         "Date": "04/09/2024",
         "Description": "RETRAIT CHEQUE 02051228",
-        "Debit": 4300.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3000.000,
         "Date": "05/09/2024",
         "Description": "VIREMENT TN MEME BQ 1631903",
-        "Debit": 3000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.470,
         "Date": "04/09/2024",
         "Description": "REDRESSEMENT s0040924",
-        "Debit": 2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.000,
         "Date": "04/09/2024",
         "Description": "REDRESSEMENT 50040924",
-        "Debit": 13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 200.000,
         "Date": "10/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010067",
-        "Debit": 200.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.000,
         "Date": "05/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010067",
-        "Debit": 1.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.570,
         "Date": "05/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010070",
-        "Debit": 10.570,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2114.000,
         "Date": "10/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010070",
-        "Debit": 2114.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 463.000,
         "Date": "10/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020165",
-        "Debit": 463.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.315,
         "Date": "05/09/2024",
         "Description": "TVA REMISE AFFIL 10020165",
-        "Debit": 2.315,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2616.500,
         "Date": "10/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020166",
-        "Debit": 2616.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.083,
         "Date": "05/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020166",
-        "Debit": 13.083,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1500.000,
         "Date": "06/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137013",
-        "Debit": 1500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 235.000,
         "Date": "06/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4300387",
-        "Debit": 235.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.309,
         "Date": "03/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137013",
-        "Debit": 1.309,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.524,
         "Date": "03/09/2024",
         "Description": "TVA/REM 4300387",
-        "Debit": 0.524,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5600.000,
         "Date": "05/09/2024",
         "Description": "RETRAIT CHEQUE 02742060",
-        "Debit": 5600.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3000.000,
         "Date": "06/09/2024",
         "Description": "5635355",
-        "Debit": 3000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.000,
         "Date": "05/09/2024",
         "Description": "REDRESSEMENT s0050924",
-        "Debit": 13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.470,
         "Date": "05/09/2024",
         "Description": "REDRESSEMENT s0050924",
-        "Debit": 2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 204.000,
         "Date": "11/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010071",
-        "Debit": 204.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.020,
         "Date": "06/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010071",
-        "Debit": 1.020,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 9.570,
         "Date": "06/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010072",
-        "Debit": 9.570,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1914.001,
         "Date": "11/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010072",
-        "Debit": 1914.001,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 644.000,
         "Date": "11/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010073",
-        "Debit": 644.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.220,
         "Date": "06/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010073",
-        "Debit": 3.220,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1184.000,
         "Date": "11/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020168",
-        "Debit": 1184.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.920,
         "Date": "06/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020168",
-        "Debit": 5.920,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1807.000,
         "Date": "11/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020169",
-        "Debit": 1807.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 9.035,
         "Date": "06/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020169",
-        "Debit": 9.035,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2597.500,
         "Date": "09/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137014",
-        "Debit": 2597.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 300.000,
         "Date": "09/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137015",
-        "Debit": 300.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.785,
         "Date": "04/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137014",
-        "Debit": 0.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.262,
         "Date": "04/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137015",
-        "Debit": 0.262,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.000,
         "Date": "06/09/2024",
         "Description": "REDRESSEMENT S0060924",
-        "Debit": 13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.470,
         "Date": "06/09/2024",
         "Description": "REDRESSEMENT S0060924",
-        "Debit": 2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.250,
         "Date": "09/09/2024",
         "Description": "TVA REMISE AFFIL 10010074",
-        "Debit": 0.250,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 50.000,
         "Date": "12/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010074",
-        "Debit": 50.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2860.000,
         "Date": "12/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010075",
-        "Debit": 2860.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14.300,
         "Date": "09/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010075",
-        "Debit": 14.300,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.035,
         "Date": "09/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020170",
-        "Debit": 2.035,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 407.000,
         "Date": "12/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020170",
-        "Debit": 407.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.900,
         "Date": "09/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020171",
-        "Debit": 0.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 180.000,
         "Date": "12/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020171",
-        "Debit": 180.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 44800.000,
         "Date": "09/09/2024",
         "Description": "RETRAIT CHEQUE 76848294",
-        "Debit": 44800.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3014.845,
         "Date": "13/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010077",
-        "Debit": 3014.845,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 15.074,
         "Date": "10/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010077",
-        "Debit": 15.074,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.725,
         "Date": "10/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010078",
-        "Debit": 0.725,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 145.000,
         "Date": "13/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010078",
-        "Debit": 145.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14.121,
         "Date": "10/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010079",
-        "Debit": 14.121,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2824.200,
         "Date": "13/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010079",
-        "Debit": 2824.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14.369,
         "Date": "10/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020173",
-        "Debit": 14.369,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2873.800,
         "Date": "13/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020173",
-        "Debit": 2873.800,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.650,
         "Date": "10/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020174",
-        "Debit": 10.650,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2130.000,
         "Date": "13/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020174",
-        "Debit": 2130.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2466.000,
         "Date": "13/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020176",
-        "Debit": 2466.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.330,
         "Date": "10/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020176",
-        "Debit": 12.330,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 9.880,
         "Date": "10/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020177",
-        "Debit": 9.880,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1976.000,
         "Date": "13/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020177",
-        "Debit": 1976.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.995,
         "Date": "10/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020178",
-        "Debit": 4.995,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 999.000,
         "Date": "13/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020178",
-        "Debit": 999.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 25000.000,
         "Date": "11/09/2024",
         "Description": "VERSEMENT ESPECES 98986706",
-        "Debit": 25000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2584.000,
         "Date": "11/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137016",
-        "Debit": 2584.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 313.000,
         "Date": "11/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137017",
-        "Debit": 313.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.665,
         "Date": "06/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137016",
-        "Debit": 3.665,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.047,
         "Date": "06/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137017",
-        "Debit": 1.047,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5200.000,
         "Date": "10/09/2024",
         "Description": "RETRAIT CHEQUE 05903803",
-        "Debit": 5200.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "10/09/2024",
         "Description": "REDRESSEMENT 50100924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "10/09/2024",
         "Description": "REDRESSEMENT S0100924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 370.000,
         "Date": "16/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010082",
-        "Debit": 370.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.850,
         "Date": "11/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010082",
-        "Debit": 1.850,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2231.000,
         "Date": "16/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010083",
-        "Debit": 2231.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 11.155,
         "Date": "11/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010083",
-        "Debit": 11.155,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40.000,
         "Date": "16/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020176",
-        "Debit": 40.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.200,
         "Date": "11/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020176",
-        "Debit": 0.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 335.000,
         "Date": "16/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020179",
-        "Debit": 335.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.675,
         "Date": "11/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020179",
-        "Debit": 1.675,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 685.000,
         "Date": "16/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020180",
-        "Debit": 685.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.425,
         "Date": "11/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020180",
-        "Debit": 3.425,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 706.500,
         "Date": "16/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020181",
-        "Debit": 706.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.533,
         "Date": "11/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020181",
-        "Debit": 3.533,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 250.000,
         "Date": "12/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137018",
-        "Debit": 250.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 588.000,
         "Date": "12/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4184864",
-        "Debit": 588.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.262,
         "Date": "09/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137018",
-        "Debit": 0.262,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.833,
         "Date": "09/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4184864",
-        "Debit": 1.833,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4000.000,
         "Date": "11/09/2024",
         "Description": "RETRAIT CHEQUE 22350825",
-        "Debit": 4000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 190.000,
         "Date": "17/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010084",
-        "Debit": 190.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "12/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010084",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2550.000,
         "Date": "17/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010085",
-        "Debit": 2550.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.750,
         "Date": "12/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010085",
-        "Debit": 12.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.310,
         "Date": "12/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020183",
-        "Debit": 3.310,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 662.000,
         "Date": "17/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020183",
-        "Debit": 662.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 575.000,
         "Date": "13/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137019",
-        "Debit": 575.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.309,
         "Date": "10/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137019",
-        "Debit": 1.309,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6800.000,
         "Date": "12/09/2024",
         "Description": "RETRAIT CHEQUE 26840607",
-        "Debit": 6800.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "11/09/2024",
         "Description": "REDRESSEMENT S0110924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "11/09/2024",
         "Description": "REDRESSEMENT S0110924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "12/09/2024",
         "Description": "REDRESSEMENT S0120924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "12/09/2024",
         "Description": "REDRESSEMENT 50120924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20.000,
         "Date": "18/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010086",
-        "Debit": 20.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.100,
         "Date": "13/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010086",
-        "Debit": 0.100,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.660,
         "Date": "13/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010087",
-        "Debit": 1.660,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 332.000,
         "Date": "18/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010087",
-        "Debit": 332.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.655,
         "Date": "13/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020184",
-        "Debit": 13.655,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2731.000,
         "Date": "18/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020184",
-        "Debit": 2731.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.830,
         "Date": "13/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020185",
-        "Debit": 13.830,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2766.000,
         "Date": "18/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020185",
-        "Debit": 2766.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1017.000,
         "Date": "16/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137020",
-        "Debit": 1017.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.618,
         "Date": "11/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137020",
-        "Debit": 2.618,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6900.000,
         "Date": "13/09/2024",
         "Description": "RETRAIT CHEQUE 99283805",
-        "Debit": 6900.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2560.200,
         "Date": "19/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010088",
-        "Debit": 2560.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.801,
         "Date": "16/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010088",
-        "Debit": 12.801,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 16.590,
         "Date": "16/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010089",
-        "Debit": 16.590,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3317.833,
         "Date": "19/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010089",
-        "Debit": 3317.833,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 200.000,
         "Date": "19/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020187",
-        "Debit": 200.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.000,
         "Date": "16/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020187",
-        "Debit": 1.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 187.000,
         "Date": "19/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020188",
-        "Debit": 187.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.935,
         "Date": "16/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020188",
-        "Debit": 0.935,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 442.000,
         "Date": "17/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137021",
-        "Debit": 442.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 340.000,
         "Date": "17/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137022",
-        "Debit": 340.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 100.000,
         "Date": "17/09/2024",
         "Description": "CHEQUE PREAVISE 0000531",
-        "Debit": 100.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.309,
         "Date": "12/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137021",
-        "Debit": 1.309,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.785,
         "Date": "12/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137022",
-        "Debit": 0.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2900.000,
         "Date": "16/09/2024",
         "Description": "RETRAIT CHEQUE 80309527",
-        "Debit": 2900.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12000.000,
         "Date": "16/09/2024",
         "Description": "RETRAIT CHEQUE 93003751",
-        "Debit": 12000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1702.000,
         "Date": "20/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010091",
-        "Debit": 1702.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8.510,
         "Date": "17/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010091",
-        "Debit": 8.510,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8.870,
         "Date": "17/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010093",
-        "Debit": 8.870,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1774.000,
         "Date": "20/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010093",
-        "Debit": 1774.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 15.372,
         "Date": "17/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020189",
-        "Debit": 15.372,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3074.400,
         "Date": "20/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020189",
-        "Debit": 3074.400,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2944.019,
         "Date": "20/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020192",
-        "Debit": 2944.019,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14.720,
         "Date": "17/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020192",
-        "Debit": 14.720,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 895.000,
         "Date": "20/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020193",
-        "Debit": 895.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.475,
         "Date": "17/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020193",
-        "Debit": 4.475,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.790,
         "Date": "17/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020194",
-        "Debit": 12.790,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2558.000,
         "Date": "20/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020194",
-        "Debit": 2558.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.975,
         "Date": "17/09/2024",
         "Description": "REJET PRELEVEMENT AUT 80509838",
-        "Debit": 2.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2020.000,
         "Date": "18/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137023",
-        "Debit": 2020.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.094,
         "Date": "13/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137023",
-        "Debit": 2.094,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6300.000,
         "Date": "17/09/2024",
         "Description": "RETRAIT CHEQUE 99000205",
-        "Debit": 6300.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1567.000,
         "Date": "23/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010095",
-        "Debit": 1567.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7.835,
         "Date": "18/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010095",
-        "Debit": 7.835,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 11.315,
         "Date": "18/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010096",
-        "Debit": 11.315,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2263.000,
         "Date": "23/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010096",
-        "Debit": 2263.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1374.000,
         "Date": "23/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020195",
-        "Debit": 1374.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6.870,
         "Date": "18/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020195",
-        "Debit": 6.870,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.625,
         "Date": "18/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020196",
-        "Debit": 1.625,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 325.000,
         "Date": "23/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020196",
-        "Debit": 325.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 777.000,
         "Date": "19/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137024",
-        "Debit": 777.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.880,
         "Date": "16/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137024",
-        "Debit": 2.880,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7000.000,
         "Date": "18/09/2024",
         "Description": "RETRAIT CHEQUE 53400330",
-        "Debit": 7000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 493.500,
         "Date": "24/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010098",
-        "Debit": 493.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.468,
         "Date": "19/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010098",
-        "Debit": 2.468,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2400.000,
         "Date": "24/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010099",
-        "Debit": 2400.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.000,
         "Date": "19/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010099",
-        "Debit": 12.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2066.000,
         "Date": "24/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020197",
-        "Debit": 2066.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.330,
         "Date": "19/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020197",
-        "Debit": 10.330,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.885,
         "Date": "19/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020198",
-        "Debit": 10.885,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2177.000,
         "Date": "24/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020198",
-        "Debit": 2177.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7000.000,
         "Date": "19/09/2024",
         "Description": "RETRAIT CHEQUE 22034268",
-        "Debit": 7000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.940,
         "Date": "20/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010100",
-        "Debit": 0.940,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 188.000,
         "Date": "25/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010100",
-        "Debit": 188.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 700.000,
         "Date": "25/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010101",
-        "Debit": 700.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.500,
         "Date": "20/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010101",
-        "Debit": 3.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2816.720,
         "Date": "25/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010102",
-        "Debit": 2816.720,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14.084,
         "Date": "20/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010102",
-        "Debit": 14.084,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2495.495,
         "Date": "25/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020200",
-        "Debit": 2495.495,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.478,
         "Date": "20/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020200",
-        "Debit": 12.478,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 979.000,
         "Date": "23/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137025",
-        "Debit": 979.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 100.000,
         "Date": "17/09/2024",
         "Description": "ANNUL CHQ PREAVISE 0000531",
-        "Debit": 100.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.356,
         "Date": "18/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137025",
-        "Debit": 2.356,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "13/09/2024",
         "Description": "REDRESSEMENT S0130924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "13/09/2024",
         "Description": "REDRESSEMENT s0130924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "16/09/2024",
         "Description": "REDRESSEMENT S0160924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "16/09/2024",
         "Description": "REDRESSEMENT S0160924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "17/09/2024",
         "Description": "REDRESSEMENT s0170924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "17/09/2024",
         "Description": "REDRESSEMENT 50170924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "18/09/2024",
         "Description": "REDRESSEMENT 50180924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "18/09/2024",
         "Description": "REDRESSEMENT 50180924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.100,
         "Date": "23/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010103",
-        "Debit": 0.100,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20.000,
         "Date": "26/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010103",
-        "Debit": 20.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 9.167,
         "Date": "23/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010104",
-        "Debit": 9.167,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1833.564,
         "Date": "26/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010104",
-        "Debit": 1833.564,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 416.880,
         "Date": "24/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4184683",
-        "Debit": 416.880,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.524,
         "Date": "18/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4184683",
-        "Debit": 0.524,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 22000.000,
         "Date": "23/09/2024",
         "Description": "RETRAIT CHEQUE 38920067",
-        "Debit": 22000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1900.000,
         "Date": "24/09/2024",
         "Description": "VIREMENT TN MEME BQ 63163006",
-        "Debit": 1900.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "19/09/2024",
         "Description": "REDRESSEMENT 50190924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "19/09/2024",
         "Description": "REDRESSEMENT 50190924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "20/09/2024",
         "Description": "REDRESSEMENT 50200924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "20/09/2024",
         "Description": "REDRESSEMENT 50200924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 791.070,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010106",
-        "Debit": 791.070,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.955,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010106",
-        "Debit": 3.955,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.100,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010107",
-        "Debit": 0.100,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20.000,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010107",
-        "Debit": 20.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1790.500,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010109",
-        "Debit": 1790.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8.953,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010109",
-        "Debit": 8.953,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.100,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010110",
-        "Debit": 0.100,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20.000,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010110",
-        "Debit": 20.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.921,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010111",
-        "Debit": 13.921,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2784.184,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010111",
-        "Debit": 2784.184,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 11.126,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020202",
-        "Debit": 11.126,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2225.270,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020202",
-        "Debit": 2225.270,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1395.000,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020203",
-        "Debit": 1395.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6.975,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020203",
-        "Debit": 6.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2639.500,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020204",
-        "Debit": 2639.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.199,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020204",
-        "Debit": 13.199,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.595,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020205",
-        "Debit": 0.595,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 119.000,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020205",
-        "Debit": 119.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1783.000,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020206",
-        "Debit": 1783.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8.915,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020206",
-        "Debit": 8.915,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 902.000,
         "Date": "27/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020208",
-        "Debit": 902.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.510,
         "Date": "24/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020208",
-        "Debit": 4.510,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 545.500,
         "Date": "25/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137026",
-        "Debit": 545.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1882.000,
         "Date": "25/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137027",
-        "Debit": 1882.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 723.000,
         "Date": "25/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137028",
-        "Debit": 723.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.309,
         "Date": "20/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137026",
-        "Debit": 1.309,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.142,
         "Date": "20/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137027",
-        "Debit": 3.142,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.356,
         "Date": "20/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137028",
-        "Debit": 2.356,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 200.000,
         "Date": "24/09/2024",
         "Description": "RETRAIT CHEQUE 06055290",
-        "Debit": 200.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 600.000,
         "Date": "24/09/2024",
         "Description": "RETRAIT CHEQUE 38444091",
-        "Debit": 600.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "24/09/2024",
         "Description": "REDRESSEMENT 50240924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "24/09/2024",
         "Description": "REDRESSEMENT S0240924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.300,
         "Date": "25/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010112",
-        "Debit": 0.300,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 60.000,
         "Date": "30/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010112",
-        "Debit": 60.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.255,
         "Date": "25/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010113",
-        "Debit": 4.255,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 851.000,
         "Date": "30/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010113",
-        "Debit": 851.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.000,
         "Date": "25/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010114",
-        "Debit": 2.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 400.000,
         "Date": "30/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010114",
-        "Debit": 400.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.250,
         "Date": "25/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020204",
-        "Debit": 1.250,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 250.000,
         "Date": "30/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020204",
-        "Debit": 250.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.855,
         "Date": "25/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020209",
-        "Debit": 0.855,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 171.000,
         "Date": "30/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020209",
-        "Debit": 171.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1411.900,
         "Date": "30/09/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020210",
-        "Debit": 1411.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7.060,
         "Date": "25/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020210",
-        "Debit": 7.060,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 300.000,
         "Date": "26/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137029",
-        "Debit": 300.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 566.000,
         "Date": "26/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137030",
-        "Debit": 566.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 300.000,
         "Date": "26/09/2024",
         "Description": "CHEQUE PREAVISE 2475740",
-        "Debit": 300.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.262,
         "Date": "23/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137029",
-        "Debit": 0.262,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.833,
         "Date": "23/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137030",
-        "Debit": 1.833,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8200.000,
         "Date": "25/09/2024",
         "Description": "RETRAIT CHEQUE 58017850",
-        "Debit": 8200.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.975,
         "Date": "25/09/2024",
         "Description": "PRELEVEMENT BANCAIRE 47766092",
-        "Debit": 2.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2212.115,
         "Date": "25/09/2024",
         "Description": "PRELEVEMENT BANCAIRE 47766092",
-        "Debit": 2212.115,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.750,
         "Date": "26/09/2024",
         "Description": "TPE G277 10000075",
-        "Debit": 4.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 25.000,
         "Date": "26/09/2024",
         "Description": "TPE G277 10000075",
-        "Debit": 25.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.750,
         "Date": "26/09/2024",
         "Description": "TPE G277 20000075",
-        "Debit": 4.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 25.000,
         "Date": "26/09/2024",
         "Description": "TPE G277 20000075",
-        "Debit": 25.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.915,
         "Date": "26/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010115",
-        "Debit": 10.915,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2183.000,
         "Date": "01/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010115",
-        "Debit": 2183.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2860.500,
         "Date": "01/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010116",
-        "Debit": 2860.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 14.303,
         "Date": "26/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010116",
-        "Debit": 14.303,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.843,
         "Date": "26/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010117",
-        "Debit": 10.843,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2168.500,
         "Date": "01/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010117",
-        "Debit": 2168.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.625,
         "Date": "26/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020212",
-        "Debit": 0.625,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 125.000,
         "Date": "01/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020212",
-        "Debit": 125.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 385.000,
         "Date": "27/09/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137031",
-        "Debit": 385.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 65.000,
         "Date": "27/09/2024",
         "Description": "CHEQUE PREAVISE 0000467",
-        "Debit": 65.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.309,
         "Date": "24/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137031",
-        "Debit": 1.309,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4300.000,
         "Date": "26/09/2024",
         "Description": "RETRAIT CHEQUE 61207330",
-        "Debit": 4300.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "26/09/2024",
         "Description": "REDRESSEMENT S0260924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "26/09/2024",
         "Description": "REDRESSEMENT S0260924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13.690,
         "Date": "27/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010119",
-        "Debit": 13.690,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2738.000,
         "Date": "02/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010119",
-        "Debit": 2738.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1501.200,
         "Date": "02/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010120",
-        "Debit": 1501.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7.506,
         "Date": "27/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010120",
-        "Debit": 7.506,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.000,
         "Date": "02/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10020210",
-        "Debit": 10.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.050,
         "Date": "27/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10020210",
-        "Debit": 0.050,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 600.000,
         "Date": "27/09/2024",
         "Description": "RETRAIT CHEQUE 25620244",
-        "Debit": 600.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1100.000,
         "Date": "30/09/2024",
         "Description": "VIREMENT TN MEME BQ 40935504",
-        "Debit": 1100.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.570,
         "Date": "27/09/2024",
         "Description": "VIREMENT TN AUTRE BQ 0523862",
-        "Debit": 3.570,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1196.534,
         "Date": "27/09/2024",
         "Description": "VIREMENT TN AUTRE BQ 0523862",
-        "Debit": 1196.534,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.000,
         "Date": "27/09/2024",
         "Description": "REDRESSEMENT s0270924",
-        "Debit": 5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.950,
         "Date": "27/09/2024",
         "Description": "REDRESSEMENT s0270924",
-        "Debit": 0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 29.000,
         "Date": "01/10/2024",
         "Description": "FRAIS TENUE DE COMPTE 03814412",
-        "Debit": 29.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.510,
         "Date": "01/10/2024",
         "Description": "TVA SUR COM 03814412",
-        "Debit": 5.510,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.001,
         "Date": "01/07/2024",
         "Description": "TVA SUR COM 03814412",
-        "Debit": 0.001,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 21.136,
         "Date": "01/10/2024",
         "Description": "TVA SUR COM 03814412",
-        "Debit": 21.136,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.002,
         "Date": "01/07/2024",
         "Description": "COM DECOUVERT 03814412",
-        "Debit": 0.002,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 111.242,
         "Date": "01/10/2024",
         "Description": "COM DECOUVERT 03814412",
-        "Debit": 111.242,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 901.979,
         "Date": "01/10/2024",
         "Description": "INTERETS DEBITEURS 03814412",
-        "Debit": 901.979,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.002,
         "Date": "01/07/2024",
         "Description": "COM CPC ET CG 03814412",
-        "Debit": 0.002,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 91.152,
         "Date": "01/10/2024",
         "Description": "COM CPC ET CG 03814412",
-        "Debit": 91.152,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.022,
         "Date": "01/07/2024",
         "Description": "CORREC INT DEBITEURS 03814412",
-        "Debit": 0.022,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.050,
         "Date": "30/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010120",
-        "Debit": 0.050,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.000,
         "Date": "03/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010120",
-        "Debit": 10.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 140.000,
         "Date": "03/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010121",
-        "Debit": 140.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.700,
         "Date": "30/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010121",
-        "Debit": 0.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.610,
         "Date": "30/09/2024",
         "Description": "COM/ TVA REMISE AFFIL 10010122",
-        "Debit": 12.610,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2522.000,
         "Date": "03/10/2024",
         "Description": "ENCAISSE REMISE AFFIL 10010122",
-        "Debit": 2522.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 233.000,
         "Date": "01/10/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137032",
-        "Debit": 233.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 336.000,
         "Date": "01/10/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137033",
-        "Debit": 336.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 170.000,
         "Date": "01/10/2024",
         "Description": "ENCAISSEMENT CHEQUE 4137034",
-        "Debit": 170.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.047,
         "Date": "26/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137032",
-        "Debit": 1.047,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.571,
         "Date": "26/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137033",
-        "Debit": 1.571,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.524,
         "Date": "26/09/2024",
         "Description": "COM TVA/REM CHQ ENC 4137034",
-        "Debit": 0.524,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "RELEVÉ DE COMPTE MENSUEL",

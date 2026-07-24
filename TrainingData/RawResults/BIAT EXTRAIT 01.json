@@ -8,2931 +8,3352 @@
   "Document": {
     "AccountNumber": "00000000002015001491",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
     "Currency": "TND",
     "Balance": -269394.096,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 1000.000,
         "Date": "24/00/4281",
         "Description": "JAN 24 Virement Operations Diverses FT",
-        "Debit": 1000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.713,
         "Date": "24/00/5073",
         "Description": "JAN 24 TVA sur Com CHG",
-        "Debit": -0.713,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3.750,
         "Date": "24/00/5073",
         "Description": "JAN 24 Commission echeance credit CHG",
-        "Debit": -3.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2236.567,
         "Date": "21/10/6687",
         "Description": "JAN 24 Paiements Interets PDLD",
-        "Debit": -2236.567,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6.000,
         "Date": "24/00/9912",
         "Description": "JAN 24 COM REJ EFFET CIAL CHG",
-        "Debit": -6.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10000.000,
         "Date": "24/00/9240",
         "Description": "JAN 24 Virement tunisie meme banque FT",
-        "Debit": 10000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000.000,
         "Date": "24/01/1240",
         "Description": "JAN 24 Virement tunisie meme banque FT",
-        "Debit": 30000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9911.781,
         "Date": "23/32/6241",
         "Description": "JAN 24 Paiement Principal PDLD",
-        "Debit": -9911.781,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -161.500,
         "Date": "24/01/1402",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -161.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -141.497,
         "Date": "23/36/2905",
         "Description": "JAN 24 Paiement Principal PDLD",
-        "Debit": -141.497,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5000.000,
         "Date": "24/01/2486",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -5000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10000.000,
         "Date": "24/01/2897",
         "Description": "JAN 24 Virement tunisie meme banque FT",
-        "Debit": 10000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8151.333,
         "Date": "24/01/2066",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 8151.333,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -165.401,
         "Date": "24/01/2066",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -165.401,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4454.208,
         "Date": "24/01/2076",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 4454.208,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -72.034,
         "Date": "24/01/2076",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -72.034,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2704.965,
         "Date": "24/01/2773",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 2704.965,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -56.595,
         "Date": "24/01/2773",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -56.595,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/01/5329",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/01/5245",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/01/5875",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/01/5875",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5591.045,
         "Date": "24/01/5370",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 5591.045,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -99.299,
         "Date": "24/01/5370",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -99.299,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 24187.235,
         "Date": "23/35/6941",
         "Description": "JAN 24 Ajustement Interet LD",
-        "Debit": 24187.235,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.500,
         "Date": "23/35/6941",
         "Description": "JAN 24 TVA sur Com LD",
-        "Debit": -9.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -50.000,
         "Date": "23/35/6941",
         "Description": "JAN 24 Com Rembmnt par Anticipation LD",
-        "Debit": -50.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -74969.162,
         "Date": "23/35/6941",
         "Description": "JAN 24 Paiement Echeance principal LD",
-        "Debit": -74969.162,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6009.277,
         "Date": "24/01/6873",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -6009.277,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/01/7120",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/01/7412",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000.000,
         "Date": "24/01/7381",
         "Description": "JAN 24 Virement tunisie meme banque FT",
-        "Debit": 30000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 85512.728,
         "Date": "24/01/7505",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 85512.728,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2135.680,
         "Date": "24/01/7505",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -2135.680,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.520,
         "Date": "24/01/7596",
         "Description": "JAN 24 COM TVA FT",
-        "Debit": -9.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -85512.728,
         "Date": "24/01/7596",
         "Description": "JAN 24 Certification Cheque FT",
-        "Debit": -85512.728,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3000.000,
         "Date": "24/01/7220",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -3000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -16.000,
         "Date": "24/01/8582",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -16.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3.040,
         "Date": "24/01/8887",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -3.040,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -385.600,
         "Date": "24/02/2624",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -385.600,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6209.791,
         "Date": "24/02/2460",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 6209.791,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -24.402,
         "Date": "24/02/2460",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -24.402,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3761.139,
         "Date": "24/02/2121",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 3761.139,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -33.091,
         "Date": "24/02/2121",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -33.091,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1100.000,
         "Date": "23/32/6345",
         "Description": "JAN 24 Paiement Principal PDLD",
-        "Debit": -1100.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -21748.971,
         "Date": "24/02/3452",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -21748.971,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2574.148,
         "Date": "24/02/3944",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 2574.148,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -33.413,
         "Date": "24/02/3944",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -33.413,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6415.288,
         "Date": "24/02/3808",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 6415.288,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -182.374,
         "Date": "24/02/3808",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -182.374,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6000.000,
         "Date": "24/02/3503",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 6000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -138.744,
         "Date": "24/02/3503",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -138.744,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5000.000,
         "Date": "24/02/3023",
         "Description": "JAN 24 Deblocage Credit LD",
-        "Debit": 5000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -99.880,
         "Date": "24/02/3023",
         "Description": "JAN 24 Paiements Interets LD",
-        "Debit": -99.880,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000.000,
         "Date": "24/02/4304",
         "Description": "JAN 24 Virement tunisie meme banque FT",
-        "Debit": 20000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.975,
         "Date": "24/02/4905",
         "Description": "JAN 24 Com TVA FT",
-        "Debit": -2.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5174.398,
         "Date": "24/02/4905",
         "Description": "JAN 24 Paiement Prelevement FT",
-        "Debit": -5174.398,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -946.351,
         "Date": "24/02/5456",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -946.351,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/02/6029",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/02/6029",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/02/6111",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/02/6056",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/02/6169",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/02/6169",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10.000,
         "Date": "24/02/6256",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -10.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.900,
         "Date": "24/02/6948",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -1.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6011.280,
         "Date": "24/03/0185",
         "Description": "JAN 24 Encaissement effet tunisie FT",
-        "Debit": 6011.280,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -502.634,
         "Date": "24/03/0787",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -502.634,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3000.000,
         "Date": "24/03/1063",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -3000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/03/1168",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/03/1168",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 43000.000,
         "Date": "24/03/1383",
         "Description": "JAN 24 Virement tunisie meme banque FT",
-        "Debit": 43000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.190,
         "Date": "24/03/1385",
         "Description": "JAN 24 Com TVA Virement FT",
-        "Debit": -1.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "24/03/1046",
         "Description": "JAN 24 Com TVA Virement FT",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 37000.000,
         "Date": "24/03/1046",
         "Description": "FEB 24 Virement tunisie autre banque FT",
-        "Debit": 37000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -789.564,
         "Date": "24/03/1735",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -789.564,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -304.304,
         "Date": "24/03/1011",
         "Description": "JAN 24 Reglement cheque no FT",
-        "Debit": -304.304,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10.000,
         "Date": "24/03/2696",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -10.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.900,
         "Date": "24/03/2159",
         "Description": "JAN 24 Regularisation Debit FT",
-        "Debit": -1.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 85.748,
         "Date": "23/33/5371",
         "Description": "FEB 24 Ajustement Interet LD",
-        "Debit": 85.748,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.500,
         "Date": "23/33/5371",
         "Description": "FEB 24 TVA sur Com LD",
-        "Debit": -9.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -50.000,
         "Date": "23/33/5371",
         "Description": "FEB 24 Com Rembmnt par Anticipation LD",
-        "Debit": -50.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -103000.000,
         "Date": "23/33/5371",
         "Description": "FEB 24 Paiement Echeance principal LD",
-        "Debit": -103000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12328.841,
         "Date": "24/03/3388",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 12328.841,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -80.534,
         "Date": "24/03/3388",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -80.534,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -161.500,
         "Date": "24/03/6330",
         "Description": "FEB 24 Reglement cheque no FT",
-        "Debit": -161.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3543.970,
         "Date": "24/03/6594",
         "Description": "FEB 24 Reglement cheque no FT",
-        "Debit": -3543.970,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -13.000,
         "Date": "24/03/7418",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.470,
         "Date": "24/03/7418",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2198.533,
         "Date": "21/10/6687",
         "Description": "FEB 24 Paiements Interets PDLD",
-        "Debit": -2198.533,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4294.577,
         "Date": "21/10/6687",
         "Description": "FEB 24 Paiement Principal PDLD",
-        "Debit": -4294.577,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000.000,
         "Date": "24/03/8090",
         "Description": "FEB 24 Virement tunisie meme banque FT",
-        "Debit": 40000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5000.000,
         "Date": "24/03/8409",
         "Description": "FEB 24 Virement tunisie meme banque FT",
-        "Debit": -5000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/03/9382",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/03/9382",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.520,
         "Date": "24/03/9334",
         "Description": "FEB 24 COM TVA FT",
-        "Debit": -9.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -360.000,
         "Date": "24/03/9334",
         "Description": "FEB 24 Certification Cheque FT",
-        "Debit": -360.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5000.000,
         "Date": "24/04/0661",
         "Description": "FEB 24 Reglement cheque no FT",
-        "Debit": -5000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/04/0425",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/04/0425",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 20000.000,
         "Date": "24/04/3554",
         "Description": "FEB 24 Virement tunisie meme banque FT",
-        "Debit": 20000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.190,
         "Date": "24/04/3822",
         "Description": "FEB 24 Com TVA Virement FT",
-        "Debit": -1.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -100.000,
         "Date": "24/04/3822",
         "Description": "FEB 24 Virement tunisie meme banque FT",
-        "Debit": -100.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.950,
         "Date": "24/04/3147",
         "Description": "FEB 24 COM TVA FT",
-        "Debit": -5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -24850.000,
         "Date": "24/04/3147",
         "Description": "FEB 24 Virement Tunisie Multiple FT",
-        "Debit": -24850.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/04/5133",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/04/5133",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/04/5133",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/04/5380",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3000.000,
         "Date": "24/04/6228",
         "Description": "FEB 24 Reglement cheque no FT",
-        "Debit": -3000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 15000.000,
         "Date": "24/04/6589",
         "Description": "FEB 24 Virement tunisie meme banque FT",
-        "Debit": 15000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5000.000,
         "Date": "24/04/6189",
         "Description": "FEB 24 Virement tunisie meme banque FT",
-        "Debit": -5000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5496.827,
         "Date": "24/04/6795",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 5496.827,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -57.226,
         "Date": "24/04/6795",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -57.226,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 16262.871,
         "Date": "24/04/6710",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 16262.871,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -278.523,
         "Date": "24/04/6710",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -278.523,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8.540,
         "Date": "23/32/1746",
         "Description": "FEB 24 Ajustement Interet LD",
-        "Debit": 8.540,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.500,
         "Date": "23/32/1746",
         "Description": "FEB 24 TVA sur Com LD",
-        "Debit": -9.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -50.000,
         "Date": "23/32/1746",
         "Description": "FEB 24 Com Rembmnt par Anticipation LD",
-        "Debit": -50.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -30775.061,
         "Date": "23/32/1746",
         "Description": "FEB 24 Paiement Echeance principal LD",
-        "Debit": -30775.061,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10.000,
         "Date": "24/04/7602",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -10.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.900,
         "Date": "24/04/7601",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -1.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -12328.841,
         "Date": "24/03/3388",
         "Description": "FEB 24 Paiement Principal PDLD",
-        "Debit": -12328.841,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10215.117,
         "Date": "24/05/1809",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 10215.117,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -124.989,
         "Date": "24/05/1809",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -124.989,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10993.653,
         "Date": "24/05/1076",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 10993.653,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -109.323,
         "Date": "24/05/1076",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -109.323,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.975,
         "Date": "24/05/2206",
         "Description": "FEB 24 Com TVA FT",
-        "Debit": -2.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3552.056,
         "Date": "24/05/2206",
         "Description": "FEB 24 Paiement Prelevement FT",
-        "Debit": -3552.056,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6092.834,
         "Date": "24/05/2425",
         "Description": "FEB 24 Reglement cheque no FT",
-        "Debit": -6092.834,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4690.309,
         "Date": "24/05/2899",
         "Description": "FEB 24 Reglement cheque no FT",
-        "Debit": -4690.309,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -21.000,
         "Date": "24/05/3480",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -21.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3.990,
         "Date": "24/05/3480",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -3.990,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 50000.000,
         "Date": "24/05/3224",
         "Description": "FEB 24 Virement tunisie meme banque FT",
-        "Debit": 50000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -11000.000,
         "Date": "24/05/3137",
         "Description": "FEB 24 Virement tunisie meme banque FT",
-        "Debit": -11000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/05/4908",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/05/4583",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 281.584,
         "Date": "24/05/4903",
         "Description": "FEB 24 Reglement cheque no FT",
-        "Debit": 281.584,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "24/05/4300",
         "Description": "FEB 24 Com TVA Virement FT",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 41000.000,
         "Date": "24/05/4300",
         "Description": "FEB 24 Virement tunisie autre banque FT",
-        "Debit": 41000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12328.841,
         "Date": "24/05/7063",
         "Description": "FEB 24 Encaissement effet tunisie FT",
-        "Debit": 12328.841,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 48.563,
         "Date": "23/33/3410",
         "Description": "FEB 24 Ajustement Interet LD",
-        "Debit": 48.563,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.500,
         "Date": "23/33/3410",
         "Description": "FEB 24 TVA sur Com LD",
-        "Debit": -9.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -50.000,
         "Date": "23/33/3410",
         "Description": "FEB 24 Com Rembmnt par Anticipation LD",
-        "Debit": -50.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -87500.179,
         "Date": "23/33/3410",
         "Description": "FEB 24 Paiement Echeance principal LD",
-        "Debit": -87500.179,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 87446.933,
         "Date": "24/05/7500",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 87446.933,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2012.105,
         "Date": "24/05/7500",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -2012.105,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.520,
         "Date": "24/05/7806",
         "Description": "FEB 24 COM TVA FT",
-        "Debit": -9.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -87446.933,
         "Date": "24/05/7806",
         "Description": "FEB 24 Certification Cheque FT",
-        "Debit": -87446.933,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.035,
         "Date": "24/05/8110",
         "Description": "FEB 24 COM TVA FT",
-        "Debit": -8.035,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3000.000,
         "Date": "24/05/8619",
         "Description": "FEB 24 Reglement cheque no FT",
-        "Debit": -3000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/05/9918",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/05/9918",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -198.240,
         "Date": "24/05/9631",
         "Description": "FEB 24 Virement tunisie meme banque FT",
-        "Debit": -198.240,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "24/05/9073",
         "Description": "FEB 24 Com TVA Virement FT",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10000.000,
         "Date": "24/05/9073",
         "Description": "FEB 24 Virement tunisie autre banque FT",
-        "Debit": 10000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 7279.575,
         "Date": "24/05/9778",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 7279.575,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -155.043,
         "Date": "24/05/9778",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -155.043,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4762.752,
         "Date": "24/05/9409",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 4762.752,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -39.534,
         "Date": "24/05/9409",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -39.534,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4535.359,
         "Date": "24/05/9341",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 4535.359,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -128.358,
         "Date": "24/05/9341",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -128.358,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3711.954,
         "Date": "24/05/9901",
         "Description": "FEB 24 Deblocage Credit LD",
-        "Debit": 3711.954,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.065,
         "Date": "24/05/9901",
         "Description": "FEB 24 TVA sur Com LD",
-        "Debit": -0.065,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.341,
         "Date": "24/05/9901",
         "Description": "FEB 24 Commission Escompte Effet LD",
-        "Debit": -0.341,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -12.046,
         "Date": "24/05/9901",
         "Description": "FEB 24 Paiements Interets LD",
-        "Debit": -12.046,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/06/0809",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/06/0809",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -15860.716,
         "Date": "21/25/3082",
         "Description": "FEB 24 Paiements Interets PDLD",
-        "Debit": -15860.716,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -20330.095,
         "Date": "21/25/3082",
         "Description": "FEB 24 Paiement Principal PDLD",
-        "Debit": -20330.095,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.520,
         "Date": "24/06/0369",
         "Description": "FEB 24 COM TVA FT",
-        "Debit": -9.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -34814.825,
         "Date": "24/06/0369",
         "Description": "FEB 24 Certification Cheque FT",
-        "Debit": -34814.825,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.190,
         "Date": "24/06/0565",
         "Description": "FEB 24 Com TVA Virement FT",
-        "Debit": -1.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -16.000,
         "Date": "24/06/1030",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -16.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3.040,
         "Date": "24/06/1313",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -3.040,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.180,
         "Date": "24/06/1192",
         "Description": "MAR 24 Virement tunisie meme banque FT",
-        "Debit": -0.180,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/06/4700",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/06/4030",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/06/4536",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/06/4292",
         "Description": "FEB 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 35000.000,
         "Date": "24/06/4437",
         "Description": "MAR 24 Virement tunisie meme banque FT",
-        "Debit": 35000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -80000.000,
         "Date": "23/33/5867",
         "Description": "MAR 24 Paiement Principal PDLD",
-        "Debit": -80000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 35000.000,
         "Date": "24/06/5151",
         "Description": "MAR 24 Deblocage Credit LD",
-        "Debit": 35000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1046.850,
         "Date": "24/06/5151",
         "Description": "MAR 24 Paiements Interets LD",
-        "Debit": -1046.850,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000.000,
         "Date": "24/06/5959",
         "Description": "MAR 24 Deblocage Credit LD",
-        "Debit": 40000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 528.733,
         "Date": "24/06/5959",
         "Description": "MAR 24 Paiements Interets LD",
-        "Debit": 528.733,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -100000.000,
         "Date": "23/33/5710",
         "Description": "MAR 24 Paiement Principal PDLD",
-        "Debit": -100000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 973.072,
         "Date": "24/06/5175",
         "Description": "MAR 24 Reglement cheque no FT",
-        "Debit": 973.072,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 38100.744,
         "Date": "24/06/6520",
         "Description": "MAR 24 Credit Divers FT",
-        "Debit": 38100.744,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "24/06/6503",
         "Description": "MAR 24 Debit Divers FT",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/06/6093",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/06/6204",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 27594.967,
         "Date": "24/07/1006",
         "Description": "MAR 24 Deblocage Credit LD",
-        "Debit": 27594.967,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -481.093,
         "Date": "24/07/1006",
         "Description": "MAR 24 Paiements Interets LD",
-        "Debit": -481.093,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19877.956,
         "Date": "24/07/1860",
         "Description": "MAR 24 Deblocage Credit LD",
-        "Debit": 19877.956,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -346.553,
         "Date": "24/07/1860",
         "Description": "MAR 24 Paiements Interets LD",
-        "Debit": -346.553,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 13289.009,
         "Date": "24/07/1871",
         "Description": "MAR 24 Deblocage Credit LD",
-        "Debit": 13289.009,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -175.607,
         "Date": "24/07/1871",
         "Description": "MAR 24 Paiements Interets LD",
-        "Debit": -175.607,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "24/07/2950",
         "Description": "MAR 24 سم TVA Virement FT",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10000.000,
         "Date": "24/07/2950",
         "Description": "MAR 24 Virement tunisie autre banque FT",
-        "Debit": 10000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -830.000,
         "Date": "24/07/2159",
         "Description": "MAR 24 Reglement cheque no FT",
-        "Debit": -830.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6.280,
         "Date": "21/10/6687",
         "Description": "MAR 24 Interet de Retard. Marge PDLD",
-        "Debit": -6.280,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10.010,
         "Date": "21/10/6687",
         "Description": "MAR 24 Interet de Retard TMM PDLD",
-        "Debit": -10.010,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2020.952,
         "Date": "21/10/6687",
         "Description": "MAR 24 Paiements Interets PDLD",
-        "Debit": -2020.952,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4438.514,
         "Date": "21/10/6687",
         "Description": "MAR 24 Paiement Principal PDLD",
-        "Debit": -4438.514,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/07/3843",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/07/3843",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -70.152,
         "Date": "23/34/2387",
         "Description": "MAR 24 Interet de Retard. Marge PDLD",
-        "Debit": -70.152,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -111.822,
         "Date": "23/34/2387",
         "Description": "MAR 24 Interet de Retard TMM PDLD",
-        "Debit": -111.822,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -84182.324,
         "Date": "23/34/2387",
         "Description": "MAR 24 Paiement Principal PDLD",
-        "Debit": -84182.324,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5000.000,
         "Date": "24/07/5011",
         "Description": "MAR 24 Reglement cheque no FT",
-        "Debit": -5000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1500.000,
         "Date": "24/07/8340",
         "Description": "MAR 24 Reglement cheque no FT",
-        "Debit": -1500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 26000.000,
         "Date": "24/07/9184",
         "Description": "MAR 24 Virement tunisie meme banque FT",
-        "Debit": 26000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 24569.231,
         "Date": "24/07/9878",
         "Description": "MAR 24 Deblocage Credit LD",
-        "Debit": 24569.231,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -404.505,
         "Date": "24/07/9878",
         "Description": "MAR 24 Paiements Interets LD",
-        "Debit": -404.505,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/08/1031",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/08/1874",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -11508.099,
         "Date": "24/08/1060",
         "Description": "MAR 24 Reglement cheque no FT",
-        "Debit": -11508.099,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/08/2446",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/08/2828",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/08/2456",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/08/2456",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 24481.986,
         "Date": "24/08/2035",
         "Description": "MAR 24 Encaissement effet tunisie FT",
-        "Debit": 24481.986,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1106.486,
         "Date": "24/08/2507",
         "Description": "MAR 24 Reglement cheque no FT",
-        "Debit": -1106.486,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.975,
         "Date": "24/08/2680",
         "Description": "MAR 24 Com TVA FT",
-        "Debit": -2.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4525.484,
         "Date": "24/08/2680",
         "Description": "MAR 24 Paiement Prelevement FT",
-        "Debit": -4525.484,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -16.000,
         "Date": "24/08/5007",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -16.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3.040,
         "Date": "24/08/5036",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -3.040,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.975,
         "Date": "24/08/6269",
         "Description": "MAR 24 Com TVA FT",
-        "Debit": -2.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -400.000,
         "Date": "24/08/6269",
         "Description": "MAR 24 Paiement Prelevement FT",
-        "Debit": -400.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 57367.491,
         "Date": "24/08/6760",
         "Description": "MAR 24 Deblocage Credit LD",
-        "Debit": 57367.491,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10.688,
         "Date": "24/05/1076",
         "Description": "MAR 24 Interet de Retard. Marge PDLD",
-        "Debit": -10.688,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -17.037,
         "Date": "24/05/1076",
         "Description": "MAR 24 Interet de Retard TMM PDLD",
-        "Debit": -17.037,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10993.653,
         "Date": "24/05/1076",
         "Description": "MAR 24 Paiement Principal PDLD",
-        "Debit": -10993.653,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -40000.000,
         "Date": "23/36/2088",
         "Description": "MAR 24 Paiement Principal PDLD",
-        "Debit": -40000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000.000,
         "Date": "24/08/6760",
         "Description": "MAR 24 Virement tunisie meme banque FT",
-        "Debit": 30000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/08/7135",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/08/7079",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 19000.000,
         "Date": "24/08/9061",
         "Description": "MAR 24 Virement tunisie meme banque FT",
-        "Debit": 19000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.190,
         "Date": "24/08/9006",
         "Description": "MAR 24 Com TVA Virement FT",
-        "Debit": -1.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -950.000,
         "Date": "24/08/9106",
         "Description": "MAR 24 TVA sur Com CHG",
-        "Debit": -950.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5000.000,
         "Date": "24/08/9106",
         "Description": "MAR 24 Commission Mise en Place CHG",
-        "Debit": -5000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -11.496,
         "Date": "89/08/5153",
         "Description": "APR 24 TVA sur Com",
-        "Debit": -11.496,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -60.504,
         "Date": "89/08/5153",
         "Description": "APR 24 Frais Abonnement PACK",
-        "Debit": -60.504,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.412,
         "Date": "20/23/1231",
         "Description": "JAN 24 TVA sur Com 8908515375",
-        "Debit": -0.412,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.555,
         "Date": "20/23/1231",
         "Description": "JAN 24 Comm Pereq Change et Garantie 8908515375",
-        "Debit": -1.555,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.168,
         "Date": "20/23/1231",
         "Description": "JAN 24 Commission de Decouvert 8908515375",
-        "Debit": -2.168,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -14.206,
         "Date": "20/23/1231",
         "Description": "JAN 24 Correction Interets Debiteurs 8908515375",
-        "Debit": -14.206,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -416.666,
         "Date": "20/24/0331",
         "Description": "APR 24 TVA sur Com 8908515375",
-        "Debit": -416.666,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -831.364,
         "Date": "20/24/0331",
         "Description": "APR 24 Comm Pereq Change et Garantie 8908515375",
-        "Debit": -831.364,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2192.978,
         "Date": "20/24/0331",
         "Description": "APR 24 Commission de Decouvert 8908515375",
-        "Debit": -2192.978,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6578.819,
         "Date": "20/24/0331",
         "Description": "APR 24 Interets Debiteurs 8908515375",
-        "Debit": -6578.819,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -16.000,
         "Date": "24/09/2705",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -16.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3.040,
         "Date": "24/09/2705",
         "Description": "MAR 24 Regularisation Debit FT",
-        "Debit": -3.040,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -830.000,
         "Date": "24/09/2667",
         "Description": "MAR 24 Reglement cheque no FT",
-        "Debit": -830.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 24454.282,
         "Date": "24/09/3623",
         "Description": "APR 24 Encaissement effet tunisie FT",
-        "Debit": 24454.282,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/09/5104",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/09/5104",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 25000.000,
         "Date": "24/09/5857",
         "Description": "APR 24 Virement tunisie meme banque FT",
-        "Debit": 25000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6989.162,
         "Date": "24/09/5645",
         "Description": "APR 24 Reglement cheque no FT",
-        "Debit": -6989.162,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -908.055,
         "Date": "24/09/5227",
         "Description": "APR 24 Reglement cheque no FT",
-        "Debit": -908.055,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4.998,
         "Date": "24/09/5567",
         "Description": "APR 24 COM TVA FT",
-        "Debit": -4.998,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -22000.000,
         "Date": "24/09/5567",
         "Description": "APR 24 Virement Tunisie Multiple FT",
-        "Debit": -22000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4.560,
         "Date": "24/09/6402",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -4.560,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -24.000,
         "Date": "24/09/6043",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -24.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000.000,
         "Date": "24/09/6408",
         "Description": "APR 24 Deblocage Credit LD",
-        "Debit": 40000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 35000.000,
         "Date": "24/09/6492",
         "Description": "APR 24 Deblocage Credit LD",
-        "Debit": 35000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1336.300,
         "Date": "24/09/6492",
         "Description": "APR 24 Paiements Interets LD",
-        "Debit": -1336.300,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -100000.000,
         "Date": "23/33/5612",
         "Description": "APR 24 Paiement Principal PDLD",
-        "Debit": -100000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 24672.818,
         "Date": "24/10/3970",
         "Description": "APR 24 Encaissement effet tunisie FT",
-        "Debit": 24672.818,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 17624.434,
         "Date": "24/10/3198",
         "Description": "APR 24 Deblocage Credit LD",
-        "Debit": 17624.434,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -301.569,
         "Date": "24/10/3198",
         "Description": "APR 24 Paiements Interets LD",
-        "Debit": -301.569,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6280.263,
         "Date": "24/10/6000",
         "Description": "APR 24 Deblocage Credit LD",
-        "Debit": 6280.263,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -107.461,
         "Date": "24/10/6000",
         "Description": "APR 24 Paiements Interets LD",
-        "Debit": -107.461,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/10/7137",
         "Description": "APR 24 TVA sur Com CHG",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/10/7137",
         "Description": "APR 24 COMMISSION CHG",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.190,
         "Date": "24/10/9196",
         "Description": "APR 24 Commission Carte Prepayee FT",
-        "Debit": -1.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/11/0193",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -595.691,
         "Date": "24/11/0780",
         "Description": "APR 24 Reglement cheque no FT",
-        "Debit": -595.691,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/11/3860",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/11/3893",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 50000.000,
         "Date": "24/11/3839",
         "Description": "APR 24 Virement tunisie meme banque FT",
-        "Debit": 50000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -38.307,
         "Date": "24/05/1809",
         "Description": "APR 24 Interet de Retard. Marge PDLD",
-        "Debit": -38.307,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -60.984,
         "Date": "24/05/1809",
         "Description": "APR 24 Interet de Retard TMM PDLD",
-        "Debit": -60.984,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -10215.117,
         "Date": "24/05/1809",
         "Description": "APR 24 Paiement Principal PDLD",
-        "Debit": -10215.117,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -15.290,
         "Date": "21/10/6687",
         "Description": "APR 24 Interet de Retard. Marge PDLD",
-        "Debit": -15.290,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -24.341,
         "Date": "21/10/6687",
         "Description": "APR 24 Interet de Retard TMM PDLD",
-        "Debit": -24.341,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2120.993,
         "Date": "21/10/6687",
         "Description": "APR 24 Paiements Interets PDLD",
-        "Debit": -2120.993,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4354.588,
         "Date": "21/10/6687",
         "Description": "APR 24 Paiement Principal PDLD",
-        "Debit": -4354.588,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2500.000,
         "Date": "24/11/3864",
         "Description": "APR 24 Reglement cheque no FT",
-        "Debit": -2500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4745.997,
         "Date": "24/11/3008",
         "Description": "APR 24 Reglement cheque no FT",
-        "Debit": -4745.997,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -16.000,
         "Date": "24/11/4300",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -16.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3.040,
         "Date": "24/11/4200",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -3.040,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.975,
         "Date": "24/11/4113",
         "Description": "APR 24 Com TVA FT",
-        "Debit": -2.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3688.187,
         "Date": "24/11/4113",
         "Description": "APR 24 Paiement Prelevement FT",
-        "Debit": -3688.187,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/11/5562",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/11/5819",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -385.120,
         "Date": "24/11/6403",
         "Description": "APR 24 Reglement cheque no FT",
-        "Debit": -385.120,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/11/7588",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/11/7589",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12000.000,
         "Date": "24/11/7924",
         "Description": "APR 24 Virement tunisie meme banque FT",
-        "Debit": 12000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6979.000,
         "Date": "24/11/7838",
         "Description": "APR24 Reglement cheque مم FT",
-        "Debit": -6979.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/12/0040",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/12/0040",
         "Description": "APR24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1962.000,
         "Date": "24/12/0697",
         "Description": "APR24 Reglement cheque no FT",
-        "Debit": -1962.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/12/1239",
         "Description": "APR24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/12/1352",
         "Description": "APR24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "24/12/1167",
         "Description": "APR24 Com TVA Virement FT",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000.000,
         "Date": "24/12/1167",
         "Description": "MAY 24 Virement tunisie autre banque FT",
-        "Debit": 40000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1500.000,
         "Date": "24/12/1951",
         "Description": "APR24 Reglement cheque no FT",
-        "Debit": -1500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/12/3736",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/12/3874",
         "Description": "APR 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.190,
         "Date": "24/12/3290",
         "Description": "MAY 24 Com TVA Virement FT",
-        "Debit": -1.190,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1800.000,
         "Date": "24/12/3290",
         "Description": "MAY 24 Virement tunisie meme banque FT",
-        "Debit": -1800.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 300.000,
         "Date": "24/12/7297",
         "Description": "MAY 24 Virement tunisie meme banque FT",
-        "Debit": 300.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5126.109,
         "Date": "24/12/7960",
         "Description": "MAY 24 Reglement cheque no FT",
-        "Debit": -5126.109,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/12/8938",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/12/8084",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "24/12/8310",
         "Description": "MAY 24 Com TVA Virement FT",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 40000.000,
         "Date": "24/12/8310",
         "Description": "MAY 24 Virement tunisie autre banque FT",
-        "Debit": 40000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 212.750,
         "Date": "24/12/8089",
         "Description": "MAY 24 Virement tunisie meme banque FT",
-        "Debit": 212.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/12/9583",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/12/9583",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -5.000,
         "Date": "24/13/0147",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -5.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.950,
         "Date": "24/13/0103",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -0.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4.486,
         "Date": "21/10/6687",
         "Description": "MAY 24 Interet de Retard. Marge PDLD",
-        "Debit": -4.486,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -7.150,
         "Date": "21/10/6687",
         "Description": "MAY 24 Interet de Retard TMM PDLD",
-        "Debit": -7.150,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4439.775,
         "Date": "21/10/6687",
         "Description": "MAY 24 Paiement Principal PDLD",
-        "Debit": -4439.775,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 50000.000,
         "Date": "24/13/1518",
         "Description": "MAY 24 Virement tunisie meme banque FT",
-        "Debit": 50000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -83.333,
         "Date": "23/33/5061",
         "Description": "MAY 24 Interet de Retard. Marge PDLD",
-        "Debit": -83.333,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -132.833,
         "Date": "23/33/5061",
         "Description": "MAY 24 Interet de Retard TMM PDLD",
-        "Debit": -132.833,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -100000.000,
         "Date": "23/33/5061",
         "Description": "MAY 24 Paiement Principal PDLD",
-        "Debit": -100000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30000.000,
         "Date": "24/13/4757",
         "Description": "MAY 24 Virement tunisie meme banque FT",
-        "Debit": 30000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4.760,
         "Date": "24/13/4650",
         "Description": "MAY 24 COM TVA FT",
-        "Debit": -4.760,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -19262.500,
         "Date": "24/13/4650",
         "Description": "MAY 24 Virement Tunisie Multiple FT",
-        "Debit": -19262.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/13/6896",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/13/6896",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/13/6071",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/13/6803",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "24/13/8084",
         "Description": "MAY 24 Com TVA Virement FT",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 80000.000,
         "Date": "24/13/8084",
         "Description": "MAY 24 Virement tunisie autre banque FT",
-        "Debit": 80000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 24527.250,
         "Date": "23/33/5784",
         "Description": "MAY 24 Ajustement Interet LD",
-        "Debit": 24527.250,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -9.500,
         "Date": "23/33/5784",
         "Description": "MAY 24 TVA sur Com LD",
-        "Debit": -9.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -50.000,
         "Date": "23/33/5784",
         "Description": "MAY 24 Com Rembmnt par Anticipation LD",
-        "Debit": -50.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -100000.000,
         "Date": "23/33/5784",
         "Description": "MAY 24 Paiement Echeance principal LD",
-        "Debit": -100000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2500.000,
         "Date": "24/14/1867",
         "Description": "MAY 24 Reglement cheque no FT",
-        "Debit": -2500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/14/2194",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/14/2001",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.975,
         "Date": "24/14/2616",
         "Description": "MAY 24 Com TVA FT",
-        "Debit": -2.975,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -3733.893,
         "Date": "24/14/2616",
         "Description": "MAY 24 Paiement Prelevement FT",
-        "Debit": -3733.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/14/3442",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/14/3442",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.380,
         "Date": "24/14/3003",
         "Description": "MAY 24 Com TVA Virement FT",
-        "Debit": -2.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 50000.000,
         "Date": "24/14/3003",
         "Description": "MAY 24 Virement tunisie autre banque FT",
-        "Debit": 50000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -72.872,
         "Date": "24/05/7500",
         "Description": "MAY 24 Interet de Retard. Marge PDLD",
-        "Debit": -72.872,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -116.159,
         "Date": "24/05/7500",
         "Description": "MAY 24 Interet de Retard TMM PDLD",
-        "Debit": -116.159,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -87446.933,
         "Date": "24/05/7500",
         "Description": "MAY 24 Paiement Principal PDLD",
-        "Debit": -87446.933,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6979.000,
         "Date": "24/14/8440",
         "Description": "MAY 24 Virement tunisie meme banque FT",
-        "Debit": 6979.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6979.000,
         "Date": "24/14/8801",
         "Description": "MAY 24 Reglement cheque no FT",
-        "Debit": -6979.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/14/9358",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/14/9358",
         "Description": "MAY 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.323,
         "Date": "24/15/1555",
         "Description": "MAY 24 TVA sur Com TF",
-        "Debit": -0.323,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.700,
         "Date": "24/15/1555",
         "Description": "MAY 24 COM PDL TF",
-        "Debit": -1.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.470,
         "Date": "24/15/1555",
         "Description": "MAY 24 TVA sur Com TF",
-        "Debit": -2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -13.000,
         "Date": "24/15/1555",
         "Description": "MAY 24 COM SWIFT TF",
-        "Debit": -13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -146.734,
         "Date": "24/15/1555",
         "Description": "MAY 24 TVA sur Com TF",
-        "Debit": -146.734,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -772.284,
         "Date": "24/15/1555",
         "Description": "MAY 24 COM CREDIT IMPORT TF",
-        "Debit": -772.284,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.323,
         "Date": "24/15/1024",
         "Description": "MAY 24 TVA sur Com TF",
-        "Debit": -0.323,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.700,
         "Date": "24/15/1024",
         "Description": "MAY 24 COM PDL TF",
-        "Debit": -1.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.470,
         "Date": "24/15/1024",
         "Description": "MAY 24 TVA sur Com TF",
-        "Debit": -2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -13.000,
         "Date": "24/15/1024",
         "Description": "MAY 24 COM SWIFT TF",
-        "Debit": -13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -161.575,
         "Date": "24/15/1024",
         "Description": "MAY 24 TVA sur Com TF",
-        "Debit": -161.575,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -850.397,
         "Date": "24/15/1024",
         "Description": "MAY 24 COM CREDIT IMPORT TF",
-        "Debit": -850.397,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 60000.000,
         "Date": "24/15/7800",
         "Description": "JUN 24 Virement tunisie banque FT",
-        "Debit": 60000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.323,
         "Date": "24/15/1024",
         "Description": "JUN 24 TVA Com TF",
-        "Debit": -0.323,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.700,
         "Date": "24/15/1024",
         "Description": "JUN 24 COM PDL TF",
-        "Debit": -1.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.470,
         "Date": "24/15/1024",
         "Description": "JUN 24 TVA Com TF",
-        "Debit": -2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -13.000,
         "Date": "24/15/1024",
         "Description": "JUN 24 COM SWIFT TF",
-        "Debit": -13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -242.816,
         "Date": "24/15/1024",
         "Description": "JUN 24 TVA Com TF",
-        "Debit": -242.816,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 277.979,
         "Date": "24/15/1024",
         "Description": "JUN 24 COM CREDIT IMPORT TF",
-        "Debit": 277.979,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.323,
         "Date": "24/15/1555",
         "Description": "JUN 24 TVA Com TF",
-        "Debit": -0.323,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.700,
         "Date": "24/15/1555",
         "Description": "JUN 24 COM PDL TF",
-        "Debit": -1.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.470,
         "Date": "24/15/1555",
         "Description": "JUN 24 TVA Com TF",
-        "Debit": -2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -13.000,
         "Date": "24/15/1555",
         "Description": "JUN 24 COM SWIFT TF",
-        "Debit": -13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -110.256,
         "Date": "24/15/1555",
         "Description": "JUN 24 TVA Com TF",
-        "Debit": -110.256,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -580.293,
         "Date": "24/15/1555",
         "Description": "JUN 24 COM CREDIT IMPORT TF",
-        "Debit": -580.293,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2049.569,
         "Date": "21/10/6687",
         "Description": "JUN 24 Paiements Interets PDLD",
-        "Debit": -2049.569,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -4415.020,
         "Date": "21/10/6687",
         "Description": "JUN 24 Paiement Principal PDLD",
-        "Debit": -4415.020,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1500.000,
         "Date": "24/16/5097",
         "Description": "JUN 24 Reglement cheque FT",
-        "Debit": -1500.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/16/6697",
         "Description": "JUN 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/16/6697",
         "Description": "JUN 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 35000.000,
         "Date": "24/17/7402",
         "Description": "JUN 24 Credit Divers FT",
-        "Debit": 35000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.893,
         "Date": "24/17/7401",
         "Description": "JUN 24 Debit Divers FT",
-        "Debit": -0.893,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -29.167,
         "Date": "24/06/5151",
         "Description": "JUN 24 Interet de Retard. Marge PDLD",
-        "Debit": -29.167,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -46.492,
         "Date": "24/06/5151",
         "Description": "JUN 24 Interet عل Retard TMM PDLD",
-        "Debit": -46.492,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -35000.000,
         "Date": "24/06/5151",
         "Description": "JUN 24 Paiement Principal PDLD",
-        "Debit": -35000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.323,
         "Date": "24/17/8797",
         "Description": "JUN 24 TVA Com TF",
-        "Debit": -0.323,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.700,
         "Date": "24/17/8797",
         "Description": "JUN 24 COM PDL TF",
-        "Debit": -1.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2.470,
         "Date": "24/17/8797",
         "Description": "JUN 24 TVA Com TF",
-        "Debit": -2.470,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -13.000,
         "Date": "24/17/8797",
         "Description": "JUN 24 COM SWIFT TF",
-        "Debit": -13.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -42.808,
         "Date": "24/17/8797",
         "Description": "JUN 24 TVA Com TF",
-        "Debit": -42.808,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -225.304,
         "Date": "24/17/8797",
         "Description": "JUN 24 COM CREDIT IMPORT TF",
-        "Debit": -225.304,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -6979.000,
         "Date": "24/17/8483",
         "Description": "JUN 24 Reglement cheque FT",
-        "Debit": -6979.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/17/9900",
         "Description": "JUN 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/17/9900",
         "Description": "JUN 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -11.496,
         "Date": "89/08/5153",
         "Description": "JUL 24 TVA Com",
-        "Debit": -11.496,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -60.504,
         "Date": "89/08/5153",
         "Description": "JUL 24 Frais Abonnement PACK",
-        "Debit": -60.504,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.093,
         "Date": "20/24/0331",
         "Description": "APR 24 Comm Pereq Change et Garantie 8908515375",
-        "Debit": -0.093,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -0.846,
         "Date": "20/24/0331",
         "Description": "APR 24 Correction Interets Debiteurs 8908515375",
-        "Debit": -0.846,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -404.669,
         "Date": "20/24/0630",
         "Description": "JUL 24 TVA Com 8908515375",
-        "Debit": -404.669,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -900.550,
         "Date": "20/24/0630",
         "Description": "JUL 24 Comm Pereq Change et Garantie 8908515375",
-        "Debit": -900.550,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -2129.837,
         "Date": "20/24/0630",
         "Description": "JUL 24 Commission de Decouvert 8908515375",
-        "Debit": -2129.837,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -7202.898,
         "Date": "20/24/0630",
         "Description": "JUL 24 Interets Debiteurs 8908515375",
-        "Debit": -7202.898,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5000.000,
         "Date": "24/18/3513",
         "Description": "JUL 24 Virement tunisie banque FT",
-        "Debit": 5000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1888.509,
         "Date": "24/18/3284",
         "Description": "JUN 24 Reglement cheque FT",
-        "Debit": -1888.509,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -8.000,
         "Date": "24/18/4792",
         "Description": "JUL 24 Regularisation Debit FT",
-        "Debit": -8.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": -1.520,
         "Date": "24/18/4792",
         "Description": "JUL 24 Regularisation Debit FT",
-        "Debit": -1.520,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "Extrait de compte",

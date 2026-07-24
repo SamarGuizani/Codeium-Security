@@ -8,110 +8,128 @@
   "Document": {
     "AccountNumber": "",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "USD",
     "Balance": 12027.89,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 4251.06,
         "Date": "14/05/2025",
         "Description": "/05/2025",
         "Debit": 39.92,
-        "Credit": 4251.06,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4250.66,
         "Date": "14/05/2025",
         "Description": "/05/2025",
         "Debit": 0.40,
-        "Credit": 4250.66,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4250.58,
         "Date": "14/05/2025",
         "Description": "/05/2025",
         "Debit": 0.08,
-        "Credit": 4250.58,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2325.06,
         "Date": "19/05/2025",
         "Description": "/05/2025",
         "Debit": 925.52,
-        "Credit": 2325.06,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2300.39,
         "Date": "19/05/2025",
         "Description": "/05/2025",
         "Debit": 24.67,
-        "Credit": 2300.39,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2286.48,
         "Date": "19/05/2025",
         "Description": "/05/2025",
         "Debit": 13.91,
-        "Credit": 2286.48,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2267.22,
         "Date": "19/05/2025",
         "Description": "/05/2025",
         "Debit": 19.26,
-        "Credit": 2267.22,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2266.97,
         "Date": "19/05/2025",
         "Description": "/05/2025",
         "Debit": 0.25,
-        "Credit": 2266.97,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2266.83,
         "Date": "19/05/2025",
         "Description": "/05/2025",
         "Debit": 0.14,
-        "Credit": 2266.83,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2266.78,
         "Date": "19/05/2025",
         "Description": "/05/2025",
         "Debit": 0.05,
-        "Credit": 2266.78,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2266.75,
         "Date": "19/05/2025",
         "Description": "/05/2025",
         "Debit": 0.03,
-        "Credit": 2266.75,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2263.09,
         "Date": "19/05/2025",
         "Description": "/05/2025",
         "Debit": 3.66,
-        "Credit": 2263.09,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 11363.09,
         "Date": "24/06/2025",
         "Description": "/06/2025",
-        "Debit": 9100.00,
-        "Credit": 11363.09,
+        "Debit": null,
+        "Credit": 9100.00,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10000.00,
         "Date": "04/07/2025",
         "Description": "/07/2025",
-        "Debit": 10000.00,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "8/9/25, 10:15 AM BTK@DIRECT",

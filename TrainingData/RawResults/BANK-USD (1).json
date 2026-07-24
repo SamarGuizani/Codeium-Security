@@ -8,61 +8,72 @@
   "Document": {
     "AccountNumber": "02222-25100815949-69",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "USD",
     "Balance": 8000.00,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 3291.10,
         "Date": "25/11/2024",
         "Description": "/11/2024",
         "Debit": 9.71,
-        "Credit": 3291.10,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "25/11/2024",
-        "Description": "/11/2024",
-        "Debit": 0.10,
-        "Credit": 3291.00,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "25/11/2024",
-        "Description": "/11/2024",
-        "Debit": 0.02,
-        "Credit": 3290.98,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "10/12/2024",
-        "Description": "/12/2024",
-        "Debit": 4000.00,
-        "Credit": 7290.98,
-        "BalanceAfterOperation": null
-      },
-      {
-        "Date": "09/01/2025",
-        "Description": "/01/2025",
-        "Debit": 11290.98,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
-        "Date": "09/01/2025",
-        "Description": "/01/2025",
-        "Debit": 3000.00,
-        "Credit": 8290.98,
+        "Solde": 3291.00,
+        "Date": "25/11/2024",
+        "Description": "/11/2024",
+        "Debit": 0.10,
+        "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3290.98,
+        "Date": "25/11/2024",
+        "Description": "/11/2024",
+        "Debit": 0.02,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 7290.98,
+        "Date": "10/12/2024",
+        "Description": "/12/2024",
+        "Debit": null,
+        "Credit": 4000.00,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 11290.98,
+        "Date": "09/01/2025",
+        "Description": "/01/2025",
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 8290.98,
+        "Date": "09/01/2025",
+        "Description": "/01/2025",
+        "Debit": 3000.00,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 5290.98,
         "Date": "31/01/2025",
         "Description": "/02/2025",
         "Debit": 3000.00,
-        "Credit": 5290.98,
+        "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "3/5/25, 2:41 PM BTK@DIRECT",

@@ -8,208 +8,240 @@
   "Document": {
     "AccountNumber": "8901769223",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "Banque de l'Habitat (BH)",
     "Currency": "TND",
     "Balance": 346.360,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 1540.000,
         "Date": "23/15/7003",
         "Description": "JUN 23 Reglement Cheque CFU",
-        "Debit": 1540.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 88.400,
         "Date": "23/15/8001",
         "Description": "JUN 23 Reglement Cheque CFU",
-        "Debit": 88.400,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30.000,
         "Date": "23/15/8741",
         "Description": "JUN 23 Com de depassement CHG",
-        "Debit": 30.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 23251.567,
         "Date": "23/16/0005",
         "Description": "JUN 23 Reglement Cheque CFU",
-        "Debit": 23251.567,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.000,
         "Date": "23/16/4011",
         "Description": "JUN 23 Commission Remise CHG",
-        "Debit": 1.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 23906.802,
         "Date": "23/16/4008",
         "Description": "JUN 23 Reglement Cheque CFU",
-        "Debit": 23906.802,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 23142.000,
         "Date": "23/17/0000",
         "Description": "JUN 23 Reglement Cheque CFU",
-        "Debit": 23142.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.000,
         "Date": "23/17/1595",
         "Description": "JUN 23 Commission Remise CHG",
-        "Debit": 1.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1038.665,
         "Date": "23/17/1000",
         "Description": "JUN 23 Reglement Cheque CFU",
-        "Debit": 1038.665,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.380,
         "Date": "23/17/1486",
         "Description": "JUN 23 TVA sur Com CHG",
-        "Debit": 0.380,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.000,
         "Date": "23/17/1486",
         "Description": "JUN 23 Commission rejet CHG",
-        "Debit": 2.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.700,
         "Date": "23/17/1221",
         "Description": "JUN 23 TVA sur Com CHG",
-        "Debit": 5.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30.000,
         "Date": "23/17/1221",
         "Description": "JUN 23 Com de depassement CHG",
-        "Debit": 30.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.700,
         "Date": "23/17/1792",
         "Description": "JUN 23 TVA sur Com CHG",
-        "Debit": 5.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30.000,
         "Date": "23/17/1792",
         "Description": "JUN 23 Com de depassement CHG",
-        "Debit": 30.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.700,
         "Date": "23/17/1818",
         "Description": "JUN 23 TVA sur Com CHG",
-        "Debit": 5.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30.000,
         "Date": "23/17/1818",
         "Description": "JUN 23 Com de depassement CHG",
-        "Debit": 30.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.285,
         "Date": "23/17/8851",
         "Description": "JUN 23 TVA sur Com CHG",
-        "Debit": 0.285,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.500,
         "Date": "23/17/8851",
         "Description": "JUN 23 Commission Virement CHG",
-        "Debit": 1.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.285,
         "Date": "23/18/1104",
         "Description": "JUN 23 TVA sur Com CHG",
-        "Debit": 0.285,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.500,
         "Date": "23/18/1104",
         "Description": "JUN 23 Commission Virement CHG",
-        "Debit": 1.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 720.000,
         "Date": "23/18/1013",
         "Description": "JUN 23 Reglement Cheque CFU",
-        "Debit": 720.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.700,
         "Date": "89/01/7692",
         "Description": "JUN 23 TVA sur Com",
-        "Debit": 5.700,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 30.000,
         "Date": "89/01/7692",
         "Description": "JUN 23 Frais de Tenue de",
-        "Debit": 30.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.519,
         "Date": "89/01/7692",
         "Description": "JUN 23 TVA sur Com",
-        "Debit": 12.519,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 65.890,
         "Date": "89/01/7692",
         "Description": "JUN 23 Commission de",
-        "Debit": 65.890,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 10.767,
         "Date": "20/23/0630",
         "Description": "JUN 23 Commission CPC 8901769223",
-        "Debit": 10.767,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 84.733,
         "Date": "20/23/0630",
         "Description": "JUN 23 Debit Interest 8901769223",
-        "Debit": 84.733,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "Page 7 of 4",

@@ -8,677 +8,776 @@
   "Document": {
     "AccountNumber": "",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "",
     "Balance": 5954.160,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": 285.950,
         "Date": "05/08/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R483 DU 22373 R",
-        "Debit": 285.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.860,
         "Date": "05/08/2025",
         "Description": "/07/2025 CION AV.TPE R483 DU R483 DU",
-        "Debit": 2.860,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 36.400,
         "Date": "04/08/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R491 DU 22373 R",
-        "Debit": 36.400,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.722,
         "Date": "04/08/2025",
         "Description": "/07/2025 CION AV.TPE R491 DU R491 DU",
-        "Debit": 0.722,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5.950,
         "Date": "28/07/2025",
         "Description": "/07/2025 COTIS.TPE",
-        "Debit": 5.950,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 311.850,
         "Date": "02/08/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R467 DU 22373R",
-        "Debit": 311.850,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 113.200,
         "Date": "31/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R492 DU 22373R",
-        "Debit": 113.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 106.350,
         "Date": "03/08/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R352 DU 22373R",
-        "Debit": 106.350,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 59.850,
         "Date": "01/08/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R391 DU 22373R",
-        "Debit": 59.850,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.599,
         "Date": "01/08/2025",
         "Description": "/07/2025 CION AV.TPE R391 DU R391 DU",
-        "Debit": 0.599,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.064,
         "Date": "03/08/2025",
         "Description": "/07/2025 CION AV.TPE R352 DU R352 DU",
-        "Debit": 1.064,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.132,
         "Date": "31/07/2025",
         "Description": "/07/2025 CION AV.TPE R492 DU R492 DU",
-        "Debit": 1.132,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.119,
         "Date": "02/08/2025",
         "Description": "/07/2025 CION AV.TPE R467 DU R467 DU",
-        "Debit": 3.119,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "28/07/2025",
         "Description": "/07/2025 CION/EFFET DOMICILIE 2068100",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5764.499,
         "Date": "28/07/2025",
         "Description": "/07/2025 REG EFFET DOMICILIE AU 2068100",
-        "Debit": 5764.499,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 81.300,
         "Date": "30/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R468 DU 22373 R",
-        "Debit": 81.300,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.813,
         "Date": "30/07/2025",
         "Description": "/07/2025 CION AV.TPE R468 DU R468 DU",
-        "Debit": 0.813,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "24/07/2025",
         "Description": "/07/2025 CION/EFFET DOMICILIE 1965500",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3564.926,
         "Date": "24/07/2025",
         "Description": "/07/2025 REG EFFET DOMICILIE AU 1965500",
-        "Debit": 3564.926,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 8000.000,
         "Date": "28/07/2025",
         "Description": "/07/2025 VERSEMENT ahmed mrabet 0",
-        "Debit": 8000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 82.800,
         "Date": "29/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R494 DU (22373 R",
-        "Debit": 82.800,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.828,
         "Date": "29/07/2025",
         "Description": "/07/2025 CION AV.TPE R494 DU R494 DU",
-        "Debit": 0.828,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 75.350,
         "Date": "28/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R467 DU 22373 R",
-        "Debit": 75.350,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.754,
         "Date": "28/07/2025",
         "Description": "/07/2025 CION AV.TPE R467 DU R467 DU",
-        "Debit": 0.754,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "22/07/2025",
         "Description": "/07/2025 CION/EFFET DOMICILIE 1790300",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "22/07/2025",
         "Description": "/07/2025 CION/EFFET DOMICILIE 6157188",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "22/07/2025",
         "Description": "/07/2025 CION/EFFET DOMICILIE 6156994",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 910.982,
         "Date": "22/07/2025",
         "Description": "/07/2025 REG EFFET DOMICILIE AU 1790300",
-        "Debit": 910.982,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4512.239,
         "Date": "22/07/2025",
         "Description": "/07/2025 REG EFFET DOMICILIE AU 6156994",
-        "Debit": 4512.239,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5216.815,
         "Date": "22/07/2025",
         "Description": "/07/2025 REG EFFET DOMICILIE AU 6157188",
-        "Debit": 5216.815,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 308.500,
         "Date": "26/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R453 DU 22373R",
-        "Debit": 308.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 84.350,
         "Date": "27/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R341 DU 22373R",
-        "Debit": 84.350,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 79.350,
         "Date": "25/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R478 DU 22373R",
-        "Debit": 79.350,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.794,
         "Date": "25/07/2025",
         "Description": "/07/2025 CION AV.TPE R478 DU R478 DU",
-        "Debit": 0.794,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.844,
         "Date": "27/07/2025",
         "Description": "/07/2025 CION AV.TPE R341 DU R341 DU",
-        "Debit": 0.844,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.785,
         "Date": "21/07/2025",
         "Description": "/07/2025 CION/REGLT PRELEVEMENT 0",
-        "Debit": 1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3.085,
         "Date": "26/07/2025",
         "Description": "/07/2025 CION AV.TPE R453 DU R453 DU",
-        "Debit": 3.085,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "21/07/2025",
         "Description": "/07/2025 CION/EFFET DOMICILIE 1573300",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1060.324,
         "Date": "21/07/2025",
         "Description": "/07/2025 PLV REGLE DE LA 0",
-        "Debit": 1060.324,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 651.677,
         "Date": "21/07/2025",
         "Description": "/07/2025 REG EFFET DOMICILIE AU 1573300",
-        "Debit": 651.677,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 11000.000,
         "Date": "22/07/2025",
         "Description": "/07/2025 VERSEMENT ahmed mrabet 0",
-        "Debit": 11000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 102.850,
         "Date": "24/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R482 DU 22373 R",
-        "Debit": 102.850,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.029,
         "Date": "24/07/2025",
         "Description": "/07/2025 CION AV.TPE R482 DU R482 DU",
-        "Debit": 1.029,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 33.200,
         "Date": "23/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R468 DU 22373 R",
-        "Debit": 33.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.332,
         "Date": "23/07/2025",
         "Description": "/07/2025 CION AV.TPE R468 DU R468 DU",
-        "Debit": 0.332,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "17/07/2025",
         "Description": "/07/2025 CION/EFFET DOMICILIE 6326372",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 6478.422,
         "Date": "17/07/2025",
         "Description": "/07/2025 REG EFFET DOMICILIE AU 6326372",
-        "Debit": 6478.422,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.785,
         "Date": "16/07/2025",
         "Description": "/07/2025 CION/REGLT PRELEVEMENT 0",
-        "Debit": 1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1499.220,
         "Date": "16/07/2025",
         "Description": "/07/2025 PLV 0",
-        "Debit": 1499.220,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 69.500,
         "Date": "21/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R474 DU 22373 R",
-        "Debit": 69.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.695,
         "Date": "21/07/2025",
         "Description": "/07/2025 CION AV.TPE R474 DU R474 DU",
-        "Debit": 0.695,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.870,
         "Date": "01/07/2025",
         "Description": "/07/2025 INTERET AU 30/06/25 30/06/2",
-        "Debit": 1.870,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.375,
         "Date": "14/07/2025",
         "Description": "/07/2025 TVA SUR AMENNET P1 07/25 NET 1",
-        "Debit": 2.375,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12.500,
         "Date": "14/07/2025",
         "Description": "/07/2025 CION AMENNET P1 07/25 TP107",
-        "Debit": 12.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 197.400,
         "Date": "19/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R463 DU 22373R",
-        "Debit": 197.400,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 102.000,
         "Date": "20/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R342 DU 22373R",
-        "Debit": 102.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 89.450,
         "Date": "18/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R467 DU 22373R",
-        "Debit": 89.450,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.895,
         "Date": "18/07/2025",
         "Description": "/07/2025 CION AV.TPE R467 DU R467 DU",
-        "Debit": 0.895,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.020,
         "Date": "20/07/2025",
         "Description": "/07/2025 CION AV.TPE R342 DU R342 DU",
-        "Debit": 1.020,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.974,
         "Date": "19/07/2025",
         "Description": "/07/2025 CION AV.TPE R463 DU R463 DU",
-        "Debit": 1.974,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 115.850,
         "Date": "17/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R472 DU 22373 R",
-        "Debit": 115.850,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.159,
         "Date": "17/07/2025",
         "Description": "/07/2025 CION AV.TPE R472 DU R472 DU",
-        "Debit": 1.159,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 53.750,
         "Date": "16/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R489 DU 22373 R",
-        "Debit": 53.750,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.538,
         "Date": "16/07/2025",
         "Description": "/07/2025 CION AV.TPE R489 DU R489 DU",
-        "Debit": 0.538,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 68.500,
         "Date": "15/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R468 DU 22373 R",
-        "Debit": 68.500,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.685,
         "Date": "15/07/2025",
         "Description": "/07/2025 CION AV.TPE R468 DU R468 DU",
-        "Debit": 0.685,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "09/07/2025",
         "Description": "/07/2025 CION/EFFET DOMICILIE 9688902",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2209.273,
         "Date": "09/07/2025",
         "Description": "/07/2025 REG EFFET DOMICILIE AU 9688902",
-        "Debit": 2209.273,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 12000.000,
         "Date": "10/07/2025",
         "Description": "/07/2025 VERSEMENT nm 0",
-        "Debit": 12000.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 144.350,
         "Date": "14/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R475 DU 22373R",
-        "Debit": 144.350,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.444,
         "Date": "14/07/2025",
         "Description": "/07/2025 CION AV.TPE R475 DU R475 DU",
-        "Debit": 1.444,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 175.100,
         "Date": "12/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R475 DU 22373R",
-        "Debit": 175.100,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 62.200,
         "Date": "13/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R335 DU 22373R",
-        "Debit": 62.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 22.000,
         "Date": "11/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R475 DU 22373R",
-        "Debit": 22.000,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.220,
         "Date": "11/07/2025",
         "Description": "/07/2025 CION AV.TPE R475 DU R475 DU",
-        "Debit": 0.220,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.622,
         "Date": "13/07/2025",
         "Description": "/07/2025 CION AV.TPE R335 DU R335 DU",
-        "Debit": 0.622,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.751,
         "Date": "12/07/2025",
         "Description": "/07/2025 CION AV.TPE R475 DU R475 DU",
-        "Debit": 1.751,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 294.900,
         "Date": "10/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R465 DU 22373R",
-        "Debit": 294.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 2.949,
         "Date": "10/07/2025",
         "Description": "/07/2025 CION AV.TPE R465 DU R465 DU",
-        "Debit": 2.949,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 4.165,
         "Date": "04/07/2025",
         "Description": "/07/2025 CION/EFFET DOMICILIE 9689096",
-        "Debit": 4.165,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 3269.907,
         "Date": "04/07/2025",
         "Description": "/07/2025 REG EFFET DOMICILIE AU 9689096",
-        "Debit": 3269.907,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 84.400,
         "Date": "09/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R463 DU 22373R",
-        "Debit": 84.400,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.844,
         "Date": "09/07/2025",
         "Description": "/07/2025 CION AV.TPE R463 DU R463 DU",
-        "Debit": 0.844,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 81.900,
         "Date": "08/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R455 DU 22373 R",
-        "Debit": 81.900,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.819,
         "Date": "08/07/2025",
         "Description": "/07/2025 CION AV.TPE R455 DU R455 DU",
-        "Debit": 0.819,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 96.600,
         "Date": "07/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R425 DU 22373 R",
-        "Debit": 96.600,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.966,
         "Date": "07/07/2025",
         "Description": "/07/2025 CION AV.TPE R425 DU R425 DU",
-        "Debit": 0.966,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 87.550,
         "Date": "05/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R436 DU 22373 R",
-        "Debit": 87.550,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 62.200,
         "Date": "04/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R454 DU 22373 R",
-        "Debit": 62.200,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 60.300,
         "Date": "06/07/2025",
         "Description": "/07/2025 AV.TPE 0755022373 R305 DU 1223736",
-        "Debit": 60.300,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.603,
         "Date": "06/07/2025",
         "Description": "/07/2025 CION AV.TPE R305 DU R305 DU",
-        "Debit": 0.603,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.622,
         "Date": "04/07/2025",
         "Description": "/07/2025 CION AV.TPE R454 DU R454 DU",
-        "Debit": 0.622,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 0.876,
         "Date": "05/07/2025",
         "Description": "/07/2025 CION AV.TPE R436 DU R436 DU",
-        "Debit": 0.876,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 1.785,
         "Date": "30/06/2025",
         "Description": "/07/2025 CION/REGLT PRELEVEMENT 0",
-        "Debit": 1.785,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       },
       {
+        "Solde": 5954.160,
         "Date": "30/06/2025",
         "Description": "/07/2025 PLV REGLE DE LA",
-        "Debit": 5954.160,
+        "Debit": null,
         "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "الأمان بنك",

@@ -8,19 +8,32 @@
   "Document": {
     "AccountNumber": "00010-0082693425-5",
     "CustomerName": "",
+    "TotalDebit": 0,
+    "TotalCredit": 0,
     "BankName": "",
     "Currency": "TND",
     "Balance": -344.715,
     "StatementDate": null,
     "Transactions": [
       {
+        "Solde": -344.715,
         "Date": "28/11/2024",
         "Description": "/11/2024",
         "Debit": 35.700,
-        "Credit": -344.715,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -344.715,
+        "Date": "30/11/2024",
+        "Description": "Solde (TND) au",
+        "Debit": null,
+        "Credit": null,
         "BalanceAfterOperation": null
       }
-    ]
+    ],
+    "SoldeInitial": 0,
+    "SoldeDisponible": 0
   },
   "DebugLines": [
     "EXTRAIT DE COMPTE",
