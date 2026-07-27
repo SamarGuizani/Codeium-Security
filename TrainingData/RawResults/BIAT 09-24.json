@@ -6,21 +6,9 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "03814412 01102024 29",
     "CustomerName": "",
-    "TotalDebit": 0,
-    "TotalCredit": 0,
-    "SumOfDebits": 0,
-    "SumOfCredits": 0,
-    "DebitTotalMatches": true,
-    "CreditTotalMatches": true,
     "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
-    "Currency": "TND",
-    "Balance": 2671.533,
-    "StatementDate": null,
-    "Transactions": [],
-    "SoldeInitial": 0,
-    "SoldeDisponible": 0
+    "Accounts": []
   },
   "DebugLines": [
     "RELEVÉ DE COMPTE MENSUEL",

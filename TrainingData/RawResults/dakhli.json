@@ -6,31 +6,9 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "11055000120000278810",
     "CustomerName": "",
-    "TotalDebit": 0,
-    "TotalCredit": 0,
-    "SumOfDebits": 0,
-    "SumOfCredits": 0,
-    "DebitTotalMatches": true,
-    "CreditTotalMatches": true,
     "BankName": "Attijari Bank",
-    "Currency": "TND",
-    "Balance": 100007645.000,
-    "StatementDate": null,
-    "Transactions": [
-      {
-        "Solde": 5294.953,
-        "Date": "10/02/2025",
-        "Description": "07/02/2025 200ZEXA250410410",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
-      }
-    ],
-    "SoldeInitial": 0,
-    "SoldeDisponible": 0
+    "Accounts": []
   },
   "DebugLines": [
     "ا",

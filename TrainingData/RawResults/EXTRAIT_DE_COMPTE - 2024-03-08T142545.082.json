@@ -3,24 +3,12 @@
   "DetectedType": "Bank",
   "PageCount": 3,
   "OcrConfidence": 88.666664,
-  "NeedsReview": false,
+  "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "8901769223",
     "CustomerName": "",
-    "TotalDebit": 0,
-    "TotalCredit": 0,
-    "SumOfDebits": 0,
-    "SumOfCredits": 0,
-    "DebitTotalMatches": true,
-    "CreditTotalMatches": true,
     "BankName": "",
-    "Currency": "TND",
-    "Balance": 194.793,
-    "StatementDate": null,
-    "Transactions": [],
-    "SoldeInitial": 0,
-    "SoldeDisponible": 0
+    "Accounts": []
   },
   "DebugLines": [
     "Page 7 of 3",

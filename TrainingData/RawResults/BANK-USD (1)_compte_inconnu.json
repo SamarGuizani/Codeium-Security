@@ -1,0 +1,87 @@
+{
+  "FileName": "BANK-USD (1).pdf",
+  "DetectedType": "Bank",
+  "PageCount": 2,
+  "OcrConfidence": 86,
+  "NeedsReview": true,
+  "CustomerName": "",
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "",
+    "Currency": "USD",
+    "Balance": 0,
+    "SoldeInitial": 3300.81,
+    "SoldeDisponible": 0,
+    "TotalDebit": 0,
+    "TotalCredit": 0,
+    "SumOfDebits": 6009.83,
+    "SumOfCredits": 4000.00,
+    "DebitTotalMatches": false,
+    "CreditTotalMatches": false,
+    "Transactions": [
+      {
+        "Solde": 3291.10,
+        "Date": "25/11/2024",
+        "Description": "25/11/2024 PAIEMENT TPE",
+        "SoldeType": null,
+        "Debit": 9.71,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 3291.00,
+        "Date": "25/11/2024",
+        "Description": "25/11/2024 COM & TVA RET. CARTE",
+        "SoldeType": null,
+        "Debit": 0.10,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 3290.98,
+        "Date": "25/11/2024",
+        "Description": "25/11/2024 COM & TVA RET. CARTE",
+        "SoldeType": null,
+        "Debit": 0.02,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 7290.98,
+        "Date": "10/12/2024",
+        "Description": "10/12/2024 E&TRANSFERT RECU",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": 4000.00,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 11290.98,
+        "Date": "09/01/2025",
+        "Description": "09/01/2025 &@TRANSFERT RECU 4 0",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 8290.98,
+        "Date": "13/01/2025",
+        "Description": "09/01/2025 @ VIREMENT EMIS MEM AG",
+        "SoldeType": null,
+        "Debit": 3000.00,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 5290.98,
+        "Date": "04/02/2025",
+        "Description": "31/01/2025 &@VIREMENT EMIS MEM مح",
+        "SoldeType": null,
+        "Debit": 3000.00,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      }
+    ]
+  }
+}

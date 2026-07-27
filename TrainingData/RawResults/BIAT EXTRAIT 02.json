@@ -3,24 +3,12 @@
   "DetectedType": "Bank",
   "PageCount": 7,
   "OcrConfidence": 91.28571,
-  "NeedsReview": false,
+  "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "8908744188-202406",
     "CustomerName": "",
-    "TotalDebit": 0,
-    "TotalCredit": 0,
-    "SumOfDebits": 0,
-    "SumOfCredits": 0,
-    "DebitTotalMatches": true,
-    "CreditTotalMatches": true,
     "BankName": "",
-    "Currency": "TND",
-    "Balance": -5850.703,
-    "StatementDate": null,
-    "Transactions": [],
-    "SoldeInitial": 0,
-    "SoldeDisponible": 0
+    "Accounts": []
   },
   "DebugLines": [
     "Extrait de compte",

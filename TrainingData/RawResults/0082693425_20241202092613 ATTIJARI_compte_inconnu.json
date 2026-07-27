@@ -1,0 +1,33 @@
+{
+  "FileName": "0082693425_20241202092613 ATTIJARI.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 1,
+  "OcrConfidence": 90,
+  "NeedsReview": true,
+  "CustomerName": "",
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "",
+    "Currency": "TND",
+    "Balance": 0,
+    "SoldeInitial": -309.015,
+    "SoldeDisponible": 0,
+    "TotalDebit": 0,
+    "TotalCredit": 0,
+    "SumOfDebits": 35.700,
+    "SumOfCredits": 0,
+    "DebitTotalMatches": false,
+    "CreditTotalMatches": true,
+    "Transactions": [
+      {
+        "Solde": -344.715,
+        "Date": "29/11/2024",
+        "Description": "28/11/2024 PACK BUSINESS SOLUTIONS S C",
+        "SoldeType": null,
+        "Debit": 35.700,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      }
+    ]
+  }
+}

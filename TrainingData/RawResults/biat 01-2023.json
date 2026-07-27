@@ -3,24 +3,12 @@
   "DetectedType": "Bank",
   "PageCount": 3,
   "OcrConfidence": 86.666664,
-  "NeedsReview": false,
+  "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "08 307 00059 10 02049 0 36",
     "CustomerName": "",
-    "TotalDebit": 0,
-    "TotalCredit": 0,
-    "SumOfDebits": 0,
-    "SumOfCredits": 0,
-    "DebitTotalMatches": true,
-    "CreditTotalMatches": true,
     "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
-    "Currency": "TND",
-    "Balance": 29467.577,
-    "StatementDate": null,
-    "Transactions": [],
-    "SoldeInitial": 0,
-    "SoldeDisponible": 0
+    "Accounts": []
   },
   "DebugLines": [
     "شهري حتابت كشف",

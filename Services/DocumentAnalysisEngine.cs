@@ -48,13 +48,19 @@ namespace Codeium_Security.Services
         }
 
         // ↓↓↓ NOUVELLE MÉTHODE AJOUTÉE ICI (H3) ↓↓↓
-        public List<TableRow> BuildTable(List<TextLine> lines, int horizontalTolerance = 30)
+        public List<TableRow> BuildTable(List<TextLine> lines, int? horizontalTolerance = null)
         {
             var rows = new List<TableRow>();
 
             foreach (var line in lines)
             {
                 var sortedWords = line.Words.OrderBy(w => w.Left).ToList();
+                if (sortedWords.Count == 0) continue;
+
+                // Tolerance adaptee a la largeur moyenne des caracteres de CETTE ligne,
+                // au lieu d'une constante fixe qui ne convient pas a tous les documents
+                int tolerance = horizontalTolerance ?? EstimateTolerance(sortedWords);
+
                 var row = new TableRow();
                 TableCell? currentCell = null;
 
@@ -67,7 +73,7 @@ namespace Codeium_Security.Services
                     else
                     {
                         var estimatedRight = currentCell.Left + currentCell.Text.Length * 8;
-                        if (word.Left - estimatedRight < horizontalTolerance)
+                        if (word.Left - estimatedRight < tolerance)
                         {
                             currentCell.Text += " " + word.Text;
                         }
@@ -86,6 +92,16 @@ namespace Codeium_Security.Services
             }
 
             return rows;
+        }
+
+        // Estime un espacement de tolerance a partir de la largeur moyenne des mots de la ligne,
+        // pour s'adapter automatiquement a la resolution/mise en page de chaque document
+        private int EstimateTolerance(List<OcrWord> words)
+        {
+            var widths = words.Select(w => (w.Right - w.Left) / Math.Max(1, w.Text.Length)).Where(w => w > 0).ToList();
+            if (widths.Count == 0) return 30;
+            double avgCharWidth = widths.Average();
+            return (int)Math.Clamp(avgCharWidth * 2.5, 15, 60);
         }
         // ↑↑↑ FIN DE LA NOUVELLE MÉTHODE ↑↑↑
     }

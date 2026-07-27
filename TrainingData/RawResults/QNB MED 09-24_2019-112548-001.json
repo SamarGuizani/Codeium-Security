@@ -1,0 +1,42 @@
+{
+  "FileName": "QNB MED 09-24.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 89.5,
+  "NeedsReview": true,
+  "CustomerName": "",
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "2019-112548-001",
+    "Currency": "TND",
+    "Balance": 8.705,
+    "SoldeInitial": 28.935,
+    "SoldeDisponible": 0,
+    "TotalDebit": 0,
+    "TotalCredit": 0,
+    "SumOfDebits": -20.230,
+    "SumOfCredits": 0,
+    "DebitTotalMatches": false,
+    "CreditTotalMatches": true,
+    "Transactions": [
+      {
+        "Solde": 11.935,
+        "Date": "30/09/2024",
+        "Description": "Charges/Fees",
+        "SoldeType": null,
+        "Debit": -17.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 8.705,
+        "Date": "30/09/2024",
+        "Description": "Tax on Charges",
+        "SoldeType": null,
+        "Debit": -3.230,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      }
+    ]
+  }
+}

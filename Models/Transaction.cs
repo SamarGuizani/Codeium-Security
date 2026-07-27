@@ -4,13 +4,10 @@
     {
         public decimal? Solde { get; set; }
         public string Date { get; set; } = "";
-        public string Description { get; set; } = "";
-
-        public string? SoldeType { get; set; } // "CR" ou "DB"
+        public string Libelle { get; set; } = "";
         public decimal? Debit { get; set; }
 
         public decimal? Credit { get; set; }
-        
-        public decimal? BalanceAfterOperation { get; set; }
+       
     }
 }

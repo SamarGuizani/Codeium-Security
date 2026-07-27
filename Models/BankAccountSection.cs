@@ -14,5 +14,7 @@
         public bool DebitTotalMatches { get; set; }
         public bool CreditTotalMatches { get; set; }
         public List<Transaction> Transactions { get; set; } = new();
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string RawSectionText { get; set; } = "";
     }
 }

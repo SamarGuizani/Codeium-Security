@@ -40,24 +40,44 @@ namespace Codeium_Security.Services.DocumentParsers
             BankAccountSection? current = null;
             decimal? previousSolde = null;
             string lastSeenAccountNumber = "";
+            string sectionRawText = "";
+
+            // Calibration des colonnes par en-tete (position X de "Debit"/"Credit"/"Solde")
+            int? debitAnchor = null, creditAnchor = null, soldeAnchor = null;
 
             foreach (var row in rows)
             {
-                var cellTexts = row.Cells.Select(c => CleanWhitespace(c.Text)).ToList();
+                var cells = row.Cells;
+                var cellTextsRaw = cells.Select(c => CleanWhitespace(c.Text)).ToList();
+                var cellTexts = MergeLoneSignCells(cellTextsRaw);
                 if (cellTexts.Count == 0) continue;
 
                 string joined = string.Join(" ", cellTexts);
+                sectionRawText += joined + "\n";
 
-                // Garde en memoire le dernier numero de compte au format avec tirets vu dans le document,
-                // meme en dehors du tableau de transactions (ex: dans l'en-tete "Account (IBAN)")
                 var accMatch = Regex.Match(joined, @"\b(\d{2,5}-\d{4,8}-\d{1,4})\b");
                 if (accMatch.Success) lastSeenAccountNumber = accMatch.Groups[1].Value;
 
-                // "SOLDE INITIAL" signale le debut d'un nouveau sous-compte -> on ferme la section
-                // precedente (si elle existe) et on en ouvre une nouvelle avec sa propre reference de solde
+                // Detecte la ligne d'en-tete de colonnes et calibre les positions X une fois par section
+                var debitCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"D[ée]bit", RegexOptions.IgnoreCase));
+                var creditCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"Cr[ée]dit", RegexOptions.IgnoreCase));
+                var soldeCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"^Solde$", RegexOptions.IgnoreCase));
+                if (debitCell != null || creditCell != null)
+                {
+                    if (debitCell != null) debitAnchor = debitCell.Left;
+                    if (creditCell != null) creditAnchor = creditCell.Left;
+                    if (soldeCell != null) soldeAnchor = soldeCell.Left;
+                    continue; // ligne d'en-tete, jamais une transaction
+                }
+
                 if (Regex.IsMatch(joined, @"Solde\s*Initial", RegexOptions.IgnoreCase))
                 {
-                    if (current != null) sections.Add(current);
+                    if (current != null)
+                    {
+                        current.RawSectionText = sectionRawText;
+                        sections.Add(current);
+                    }
+                    sectionRawText = joined + "\n";
 
                     var initMatch = AmountRegex.Match(joined);
                     decimal soldeInit = initMatch.Success ? ParseAmount(initMatch.Value) : 0;
@@ -69,6 +89,7 @@ namespace Codeium_Security.Services.DocumentParsers
                         SoldeInitial = soldeInit
                     };
                     previousSolde = soldeInit;
+                    debitAnchor = creditAnchor = soldeAnchor = null; // reset pour la prochaine section
                     continue;
                 }
 
@@ -85,64 +106,92 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (Regex.IsMatch(joined, @"\b(Total|Page\s*\d)\b", RegexOptions.IgnoreCase))
                     continue;
 
-                if (current == null) continue; // lignes avant le premier "Solde Initial" (en-tetes generales)
-
-                // ===== A PARTIR D'ICI : logique de transaction inchangee =====
+                if (current == null) continue;
 
                 string normalizedDate = NormalizeDate(cellTexts[0].Trim());
                 if (string.IsNullOrEmpty(normalizedDate)) continue;
 
-                var amountCells = cellTexts.Skip(1)
-                    .Where(c => AmountRegex.IsMatch(c))
-                    .Select(c => ParseAmount(AmountRegex.Match(c).Value))
+                // Cellules candidates montant, AVEC leur position X d'origine
+                var amountCandidates = cells.Skip(0)
+                    .Where(c => AmountRegex.IsMatch(MergeLoneSignCells(new List<string> { CleanWhitespace(c.Text) })[0]))
+                    .Select(c => new { Left = c.Left, Value = ParseAmount(AmountRegex.Match(CleanWhitespace(c.Text)).Value) })
                     .ToList();
 
-                if (amountCells.Count == 0) continue;
+                if (amountCandidates.Count == 0) continue;
 
                 string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)))
                     .Trim(' ', '|', '[', ']', '-', '_');
+                // Filet de securite : retire toute date qui aurait fuite dans le libelle
+                description = Regex.Replace(description, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
 
-                var tx = new Transaction { Date = normalizedDate, Description = description };
+                var tx = new Transaction { Date = normalizedDate, Libelle = description };
 
-                if (amountCells.Count == 1)
+                if (debitAnchor.HasValue && creditAnchor.HasValue)
                 {
-                    tx.Solde = amountCells[0];
+                    // Assignation par vraie position de colonne, pas par devinette
+                    foreach (var cand in amountCandidates)
+                    {
+                        int distDebit = Math.Abs(cand.Left - debitAnchor.Value);
+                        int distCredit = Math.Abs(cand.Left - creditAnchor.Value);
+                        int distSolde = soldeAnchor.HasValue ? Math.Abs(cand.Left - soldeAnchor.Value) : int.MaxValue;
+
+                        if (distSolde <= distDebit && distSolde <= distCredit)
+                            tx.Solde = cand.Value;
+                        else if (distDebit < distCredit)
+                            tx.Debit = cand.Value;
+                        else
+                            tx.Credit = cand.Value;
+                    }
+                    if (!tx.Solde.HasValue && amountCandidates.Count > 0)
+                        tx.Solde = amountCandidates[amountCandidates.Count - 1].Value;
                 }
                 else
                 {
-                    decimal mouvement = amountCells[0];
-                    decimal solde = amountCells[amountCells.Count - 1];
-                    tx.Solde = solde;
-
-                    if (previousSolde.HasValue)
+                    // Repli : pas d'en-tete detecte pour cette section -> ancienne heuristique par comparaison de solde
+                    var amounts = amountCandidates.Select(a => a.Value).ToList();
+                    if (amounts.Count == 1)
                     {
-                        if (solde < previousSolde.Value) tx.Debit = mouvement;
-                        else if (solde > previousSolde.Value) tx.Credit = mouvement;
+                        tx.Solde = amounts[0];
                     }
                     else
                     {
-                        tx.Debit = mouvement;
+                        decimal mouvement = amounts[0];
+                        decimal solde = amounts[amounts.Count - 1];
+                        tx.Solde = solde;
+                        if (previousSolde.HasValue)
+                        {
+                            if (solde < previousSolde.Value) tx.Debit = mouvement;
+                            else if (solde > previousSolde.Value) tx.Credit = mouvement;
+                        }
+                        else tx.Debit = mouvement;
                     }
                 }
 
-                var crdb = Regex.Match(joined, @"\b(CR|DB)\b");
-                if (crdb.Success) tx.SoldeType = crdb.Groups[1].Value;
-
                 previousSolde = tx.Solde;
                 current.Transactions.Add(tx);
-
-                // ===== fin logique de transaction inchangee =====
             }
 
-            if (current != null) sections.Add(current);
+            if (current != null)
+            {
+                current.RawSectionText = sectionRawText;
+                sections.Add(current);
+            }
 
-            // Totaux + verification par section (BUG 16, adapte a la structure par sous-compte)
             foreach (var sec in sections)
             {
+                // BUG 4 : extrait Total Debit/Credit depuis le texte brut de CETTE section uniquement
+                var totalDebitMatch = Regex.Match(sec.RawSectionText,
+                    @"Total\s*(?:des\s*)?D[ée]bit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                if (totalDebitMatch.Success) sec.TotalDebit = ParseAmount(totalDebitMatch.Groups[1].Value);
+
+                var totalCreditMatch = Regex.Match(sec.RawSectionText,
+                    @"Total\s*(?:des\s*)?Cr[ée]dit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                if (totalCreditMatch.Success) sec.TotalCredit = ParseAmount(totalCreditMatch.Groups[1].Value);
+
                 sec.SumOfDebits = sec.Transactions.Where(t => t.Debit.HasValue).Sum(t => t.Debit!.Value);
                 sec.SumOfCredits = sec.Transactions.Where(t => t.Credit.HasValue).Sum(t => t.Credit!.Value);
-                sec.DebitTotalMatches = Math.Abs(sec.SumOfDebits - Math.Abs(sec.TotalDebit)) < 1m;
-                sec.CreditTotalMatches = Math.Abs(sec.SumOfCredits - Math.Abs(sec.TotalCredit)) < 1m;
+                sec.DebitTotalMatches = Math.Abs(Math.Abs(sec.SumOfDebits) - Math.Abs(sec.TotalDebit)) < 1m;
+                sec.CreditTotalMatches = Math.Abs(Math.Abs(sec.SumOfCredits) - Math.Abs(sec.TotalCredit)) < 1m;
             }
 
             return sections;
@@ -202,6 +251,23 @@ namespace Codeium_Security.Services.DocumentParsers
             if (text.Contains("EUR")) return "EUR";
             if (text.Contains("USD")) return "USD";
             return "";
+        }
+
+        // Fusionne une cellule "-" isolee avec la cellule numerique qui la suit,
+        // pour ne jamais perdre le signe negatif quand l'OCR separe le signe du chiffre.
+        private List<string> MergeLoneSignCells(List<string> cellTexts)
+        {
+            var merged = new List<string>(cellTexts);
+            for (int i = 0; i < merged.Count - 1; i++)
+            {
+                if (merged[i].Trim() == "-")
+                {
+                    merged[i + 1] = "-" + merged[i + 1].TrimStart();
+                    merged.RemoveAt(i);
+                    i--;
+                }
+            }
+            return merged;
         }
 
         private string ExtractCustomerName(string text)

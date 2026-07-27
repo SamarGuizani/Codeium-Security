@@ -1,0 +1,312 @@
+{
+  "FileName": "attijari banque.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 2,
+  "OcrConfidence": 90.5,
+  "NeedsReview": true,
+  "CustomerName": "",
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "",
+    "Currency": "TND",
+    "Balance": 0,
+    "SoldeInitial": -2677.639,
+    "SoldeDisponible": 0,
+    "TotalDebit": 0,
+    "TotalCredit": 0,
+    "SumOfDebits": 22981.796,
+    "SumOfCredits": 190.755,
+    "DebitTotalMatches": false,
+    "CreditTotalMatches": false,
+    "Transactions": [
+      {
+        "Solde": -2713.339,
+        "Date": "02/01/2024",
+        "Description": "29/12/2023 PACK BUSINESS SOLUTIONS S C",
+        "SoldeType": null,
+        "Debit": 35.700,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -2810.096,
+        "Date": "02/01/2024",
+        "Description": "31/12/2023 AGIOS DU 30/09/23 AU 31/12/23",
+        "SoldeType": null,
+        "Debit": 96.757,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4492.176,
+        "Date": "17/01/2024",
+        "Description": "16/01/2024 REGLEMENT CHEQUE N 22",
+        "SoldeType": null,
+        "Debit": 1682.080,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4504.076,
+        "Date": "17/01/2024",
+        "Description": "17/01/2024 COM DEPASSEMENT PONCTUEL",
+        "SoldeType": null,
+        "Debit": 11.900,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4539.776,
+        "Date": "30/01/2024",
+        "Description": "29/01/2024 PACK BUSINESS SOLUTIONS S C",
+        "SoldeType": null,
+        "Debit": 35.700,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4658.776,
+        "Date": "16/02/2024",
+        "Description": "15/02/2024 COM & TVA/ REJET CHQ 23",
+        "SoldeType": null,
+        "Debit": 119.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 4661.156,
+        "Date": "21/02/2024",
+        "Description": "22/02/2024",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": 2.380,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -1661.156,
+        "Date": "21/02/2024",
+        "Description": "22/02/2024 STE TOPDIS",
+        "SoldeType": null,
+        "Debit": 3000.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -3913.189,
+        "Date": "21/02/2024",
+        "Description": "15/02/2024 REGLEMENT CHEQUE N 23",
+        "SoldeType": null,
+        "Debit": 2252.033,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -3925.089,
+        "Date": "21/02/2024",
+        "Description": "21/02/2024 COM DEPASSEMENT PONCTUEL",
+        "SoldeType": null,
+        "Debit": 11.900,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -3960.789,
+        "Date": "29/02/2024",
+        "Description": "28/02/2024 PACK BUSINESS SOLUTIONS S C",
+        "SoldeType": null,
+        "Debit": 35.700,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4079.789,
+        "Date": "22/03/2024",
+        "Description": "21/03/2024 COM & TVA/ REJET CHQ 24",
+        "SoldeType": null,
+        "Debit": 119.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -5896.765,
+        "Date": "27/03/2024",
+        "Description": "21/03/2024 REGLEMENT CHEQUE N 24",
+        "SoldeType": null,
+        "Debit": 1816.976,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -5908.665,
+        "Date": "27/03/2024",
+        "Description": "27/03/2024 COM DEPASSEMENT PONCTUEL",
+        "SoldeType": null,
+        "Debit": 11.900,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -5944.365,
+        "Date": "29/03/2024",
+        "Description": "28/03/2024 PACK BUSINESS SOLUTIONS S C",
+        "SoldeType": null,
+        "Debit": 35.700,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -6114.497,
+        "Date": "01/04/2024",
+        "Description": "31/03/2024 AGIOS DU 31/12/23 AU 31/03/24",
+        "SoldeType": null,
+        "Debit": 170.132,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -6233.497,
+        "Date": "16/04/2024",
+        "Description": "15/04/2024 COM & TVA/ REJET CHQ 25",
+        "SoldeType": null,
+        "Debit": 119.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 6235.877,
+        "Date": "22/04/2024",
+        "Description": "23/04/2024",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": 2.380,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4539.397,
+        "Date": "22/04/2024",
+        "Description": "23/04/2024 STE TOPDIS",
+        "SoldeType": null,
+        "Debit": 1696.480,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4568.909,
+        "Date": "24/04/2024",
+        "Description": "24/04/2024 FRAIS PHOTO R/00916838/2024",
+        "SoldeType": null,
+        "Debit": 29.512,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4604.609,
+        "Date": "29/04/2024",
+        "Description": "26/04/2024 PACK BUSINESS SOLUTIONS S C",
+        "SoldeType": null,
+        "Debit": 35.700,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4739.949,
+        "Date": "29/04/2024",
+        "Description": "26/04/2024 REGL HUISS0000025",
+        "SoldeType": null,
+        "Debit": 135.340,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -4604.609,
+        "Date": "29/04/2024",
+        "Description": "26/04/2024 REGL HUISS0000025",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": 135.340,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -6348.689,
+        "Date": "29/04/2024",
+        "Description": "26/04/2024 REGLEMENT CHEQUE N 25",
+        "SoldeType": null,
+        "Debit": 1744.080,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -6484.029,
+        "Date": "29/04/2024",
+        "Description": "26/04/2024 FRAIS HUISSIER 25",
+        "SoldeType": null,
+        "Debit": 135.340,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -6495.929,
+        "Date": "29/04/2024",
+        "Description": "29/04/2024 COM DEPASSEMENT PONCTUEL",
+        "SoldeType": null,
+        "Debit": 11.900,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 6498.309,
+        "Date": "15/05/2024",
+        "Description": "16/05/2024",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": 2.380,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 1546.691,
+        "Date": "15/05/2024",
+        "Description": "16/05/2024 STE TOPDIS",
+        "SoldeType": null,
+        "Debit": 8045.000,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -0.675,
+        "Date": "16/05/2024",
+        "Description": "15/05/2024 REGLEMENT CHEQUE N 26",
+        "SoldeType": null,
+        "Debit": 1547.366,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -12.575,
+        "Date": "16/05/2024",
+        "Description": "16/05/2024 COM DEPASSEMENT PONCTUEL",
+        "SoldeType": null,
+        "Debit": 11.900,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": -48.275,
+        "Date": "29/05/2024",
+        "Description": "28/05/2024 PACK BUSINESS SOLUTIONS S C",
+        "SoldeType": null,
+        "Debit": 35.700,
+        "Credit": null,
+        "BalanceAfterOperation": null
+      },
+      {
+        "Solde": 0.000,
+        "Date": "31/05/2024",
+        "Description": "03/06/2024",
+        "SoldeType": null,
+        "Debit": null,
+        "Credit": 48.275,
+        "BalanceAfterOperation": null
+      }
+    ]
+  }
+}

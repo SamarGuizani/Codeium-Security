@@ -1,0 +1,23 @@
+{
+  "FileName": "QNB MED 01-24.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 89.25,
+  "NeedsReview": true,
+  "CustomerName": "",
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "2019-112548-001",
+    "Currency": "TND",
+    "Balance": 69.395,
+    "SoldeInitial": 69.395,
+    "SoldeDisponible": 0,
+    "TotalDebit": 0,
+    "TotalCredit": 0,
+    "SumOfDebits": 0,
+    "SumOfCredits": 0,
+    "DebitTotalMatches": true,
+    "CreditTotalMatches": true,
+    "Transactions": []
+  }
+}

@@ -6,21 +6,9 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "AccountNumber": "",
     "CustomerName": "",
-    "TotalDebit": 0,
-    "TotalCredit": 0,
-    "SumOfDebits": 0,
-    "SumOfCredits": 0,
-    "DebitTotalMatches": true,
-    "CreditTotalMatches": true,
     "BankName": "Arab Tunisian Bank (ATB)",
-    "Currency": "TND",
-    "Balance": 45295.879,
-    "StatementDate": null,
-    "Transactions": [],
-    "SoldeInitial": 0,
-    "SoldeDisponible": 0
+    "Accounts": []
   },
   "DebugLines": [
     "",
