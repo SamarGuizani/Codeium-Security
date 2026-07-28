@@ -22,11 +22,9 @@
       {
         "Solde": -344.715,
         "Date": "29/11/2024",
-        "Description": "28/11/2024 PACK BUSINESS SOLUTIONS S C",
-        "SoldeType": null,
+        "Libelle": "PACK BUSINESS SOLUTIONS S C",
         "Debit": 35.700,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       }
     ]
   }

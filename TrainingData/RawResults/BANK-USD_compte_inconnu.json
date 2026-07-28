@@ -14,136 +14,108 @@
     "SoldeDisponible": 0,
     "TotalDebit": 0,
     "TotalCredit": 0,
-    "SumOfDebits": 1027.89,
-    "SumOfCredits": 9100.00,
+    "SumOfDebits": 11023.28,
+    "SumOfCredits": 9104.61,
     "DebitTotalMatches": false,
     "CreditTotalMatches": false,
     "Transactions": [
       {
         "Solde": 4251.06,
         "Date": "14/05/2025",
-        "Description": "14/05/2025 PAIEMENT TPE",
-        "SoldeType": null,
+        "Libelle": "PAIEMENT TPE",
         "Debit": 39.92,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 4250.66,
         "Date": "14/05/2025",
-        "Description": "14/05/2025 COM & TVA RET. CARTE",
-        "SoldeType": null,
-        "Debit": 0.40,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.40
       },
       {
         "Solde": 4250.58,
         "Date": "14/05/2025",
-        "Description": "14/05/2025 COM & TVA RET. CARTE",
-        "SoldeType": null,
-        "Debit": 0.08,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.08
       },
       {
         "Solde": 2325.06,
         "Date": "19/05/2025",
-        "Description": "19/05/2025 PAIEMENT TPE",
-        "SoldeType": null,
+        "Libelle": "PAIEMENT TPE",
         "Debit": 925.52,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 2300.39,
         "Date": "19/05/2025",
-        "Description": "19/05/2025 PAIEMENT TPE",
-        "SoldeType": null,
+        "Libelle": "PAIEMENT TPE",
         "Debit": 24.67,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 2286.48,
         "Date": "19/05/2025",
-        "Description": "19/05/2025 PAIEMENT TPE",
-        "SoldeType": null,
+        "Libelle": "PAIEMENT TPE",
         "Debit": 13.91,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 2267.22,
         "Date": "19/05/2025",
-        "Description": "19/05/2025 COM & TVA RET. CARTE",
-        "SoldeType": null,
+        "Libelle": "COM & TVA RET. CARTE",
         "Debit": 19.26,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 2266.97,
         "Date": "19/05/2025",
-        "Description": "19/05/2025 COM & TVA RET. CARTE",
-        "SoldeType": null,
-        "Debit": 0.25,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.25
       },
       {
         "Solde": 2266.83,
         "Date": "19/05/2025",
-        "Description": "19/05/2025 COM & TVA RET. CARTE",
-        "SoldeType": null,
-        "Debit": 0.14,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.14
       },
       {
         "Solde": 2266.78,
         "Date": "19/05/2025",
-        "Description": "19/05/2025 COM & TVA RET. CARTE",
-        "SoldeType": null,
-        "Debit": 0.05,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.05
       },
       {
         "Solde": 2266.75,
         "Date": "19/05/2025",
-        "Description": "19/05/2025 COM & TVA RET. CARTE",
-        "SoldeType": null,
-        "Debit": 0.03,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.03
       },
       {
         "Solde": 2263.09,
         "Date": "19/05/2025",
-        "Description": "19/05/2025 COM & TVA RET. CARTE",
-        "SoldeType": null,
-        "Debit": 3.66,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 3.66
       },
       {
         "Solde": 11363.09,
         "Date": "24/06/2025",
-        "Description": "24/06/2025 & TRANSFERT نع",
-        "SoldeType": null,
+        "Libelle": "& TRANSFERT نع",
         "Debit": null,
-        "Credit": 9100.00,
-        "BalanceAfterOperation": null
+        "Credit": 9100.00
       },
       {
         "Solde": 10000.00,
         "Date": "08/07/2025",
-        "Description": "04/07/2025 EVIREMENT EMIS MEM كح 17 9",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "EVIREMENT EMIS MEM كح 17 9",
+        "Debit": 10000.00,
+        "Credit": null
       }
     ]
   }

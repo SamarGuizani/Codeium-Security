@@ -3,7 +3,7 @@
   "DetectedType": "Bank",
   "PageCount": 4,
   "OcrConfidence": 89.5,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "CustomerName": "",
   "BankName": "",
   "Account": {

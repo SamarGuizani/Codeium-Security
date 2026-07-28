@@ -50,7 +50,6 @@ namespace Codeium_Security.Controllers
                         result.PageCount,
                         result.OcrConfidence,
                         result.NeedsReview,
-                        CustomerName = bankDoc.CustomerName,
                         BankName = bankDoc.BankName,
                         Account = account
                     };

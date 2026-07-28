@@ -176,7 +176,7 @@ namespace Codeium_Security.Services
                 {
                     if (string.IsNullOrWhiteSpace(account.AccountNumber))
                         return true;
-                    if (account.Balance == 0 && account.Transactions.Count == 0)
+                    if (account.SoldeFinal == 0 && account.Transactions.Count == 0)
                         return true;
                 }
             }

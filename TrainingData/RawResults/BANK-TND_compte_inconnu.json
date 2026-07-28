@@ -14,514 +14,402 @@
     "SoldeDisponible": 0,
     "TotalDebit": 0,
     "TotalCredit": 0,
-    "SumOfDebits": 30526.842,
-    "SumOfCredits": 18689.520,
+    "SumOfDebits": 41075.237,
+    "SumOfCredits": 18960.000,
     "DebitTotalMatches": false,
     "CreditTotalMatches": false,
     "Transactions": [
       {
-        "Solde": 196.527,
+        "Solde": 26196.527,
         "Date": "02/12/2024",
-        "Description": "02/12/2024 @VIREMENT EMIS MEM 26",
-        "SoldeType": null,
+        "Libelle": "@VIREMENT EMIS MEM",
         "Debit": 1000.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
-        "Solde": 193.552,
+        "Solde": 26193.552,
         "Date": "04/12/2024",
-        "Description": "03/12/2024 8 COM & TVA VIR. EMIS 26",
-        "SoldeType": null,
+        "Libelle": "8 COM & TVA VIR. EMIS",
         "Debit": 2.975,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
-        "Solde": 793.552,
+        "Solde": 24793.552,
         "Date": "04/12/2024",
-        "Description": "03/12/2024 &VIREMENT EMIS AUT BQ 1 0 24",
-        "SoldeType": null,
+        "Libelle": "&VIREMENT EMIS AUT BQ 1 0",
         "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
-        "Solde": 790.577,
+        "Solde": 24790.577,
         "Date": "04/12/2024",
-        "Description": "03/12/2024 = COM & TVA VIR. EMIS 24",
-        "SoldeType": null,
+        "Libelle": "= COM & TVA VIR. EMIS",
         "Debit": 2.975,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 23390.577,
         "Date": "04/12/2024",
-        "Description": "03/12/2024 EVIREMENT EMIS AUT BQ",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": 1400.000,
-        "BalanceAfterOperation": null
+        "Libelle": "EVIREMENT EMIS AUT BQ",
+        "Debit": 1400.000,
+        "Credit": null
       },
       {
         "Solde": 23387.602,
         "Date": "04/12/2024",
-        "Description": "03/12/2024 @ COM & TVA VIR. EMIS",
-        "SoldeType": null,
+        "Libelle": "@ COM & TVA VIR. EMIS",
         "Debit": 2.975,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 21437.602,
         "Date": "04/12/2024",
-        "Description": "03/12/2024 & VIREMENT EMIS AUT BQ",
-        "SoldeType": null,
+        "Libelle": "& VIREMENT EMIS AUT BQ",
         "Debit": 1950.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 21251.602,
         "Date": "10/12/2024",
-        "Description": "05/12/2024 TUNISIANA DU",
-        "SoldeType": null,
+        "Libelle": "TUNISIANA DU",
         "Debit": 186.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
-        "Solde": 168.302,
+        "Solde": 21168.302,
         "Date": "10/12/2024",
-        "Description": "02/12/2024 & COM & TVA TRS RECU 21",
-        "SoldeType": null,
+        "Libelle": "& COM & TVA TRS RECU",
         "Debit": 83.300,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 16168.302,
         "Date": "19/12/2024",
-        "Description": "18/12/2024 & RETRAIT ESP. DEPLACE",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": 5000.000,
-        "BalanceAfterOperation": null
+        "Libelle": "& RETRAIT ESP. DEPLACE",
+        "Debit": 5000.000,
+        "Credit": null
       },
       {
         "Solde": 16165.922,
         "Date": "19/12/2024",
-        "Description": "18/12/2024 COM&TVA RETRAIT DEPL",
-        "SoldeType": null,
+        "Libelle": "COM&TVA RETRAIT DEPL",
         "Debit": 2.380,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 15334.039,
         "Date": "23/12/2024",
-        "Description": "20/12/2024 PRELEV. RECU AUT BQE",
-        "SoldeType": null,
+        "Libelle": "PRELEV. RECU AUT BQE",
         "Debit": 831.883,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 14334.039,
         "Date": "30/12/2024",
-        "Description": "30/12/2024 & VIREMENT EMIS MEM",
-        "SoldeType": null,
+        "Libelle": "& VIREMENT EMIS MEM",
         "Debit": 1000.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 8189.539,
         "Date": "31/12/2024",
-        "Description": "30/12/2024 PRELEV. RECU AUT BQE",
-        "SoldeType": null,
+        "Libelle": "PRELEV. RECU AUT BQE",
         "Debit": 6144.500,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 8149.079,
         "Date": "31/12/2024",
-        "Description": "31/12/2024 AGIOS DU 30/09/24 AU",
-        "SoldeType": null,
+        "Libelle": "AGIOS DU 30/09/24 AU",
         "Debit": 40.460,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 6149.079,
         "Date": "06/01/2025",
-        "Description": "06/01/2025 & VIREMENT EMIS MEM",
-        "SoldeType": null,
+        "Libelle": "& VIREMENT EMIS MEM",
         "Debit": 2000.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 6146.104,
         "Date": "06/01/2025",
-        "Description": "03/01/2025 & COM & TVA VIR. EMIS",
-        "SoldeType": null,
+        "Libelle": "& COM & TVA VIR. EMIS",
         "Debit": 2.975,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 4746.104,
         "Date": "06/01/2025",
-        "Description": "03/01/2025 & VIREMENT EMIS AUT BQ",
-        "SoldeType": null,
+        "Libelle": "& VIREMENT EMIS AUT BQ",
         "Debit": 1400.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 4743.129,
         "Date": "06/01/2025",
-        "Description": "03/01/2025 & COM & TVA VIR. EMIS",
-        "SoldeType": null,
+        "Libelle": "& COM & TVA VIR. EMIS",
         "Debit": 2.975,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 3343.129,
         "Date": "06/01/2025",
-        "Description": "03/01/2025 B VIREMENT EMIS AUT BQ 1 0",
-        "SoldeType": null,
+        "Libelle": "B VIREMENT EMIS AUT BQ 1 0",
         "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 2943.129,
         "Date": "07/01/2025",
-        "Description": "03/01/2025 ATM BTK CHARGUIA DU",
-        "SoldeType": null,
+        "Libelle": "ATM BTK CHARGUIA DU",
         "Debit": 400.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 2143.129,
         "Date": "07/01/2025",
-        "Description": "02/01/2025 ATM BTK CHARGUIA DU",
-        "SoldeType": null,
+        "Libelle": "ATM BTK CHARGUIA DU",
         "Debit": 800.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 957.129,
         "Date": "07/01/2025",
-        "Description": "06/01/2025 & PAIEMENT CHEQUE N°",
-        "SoldeType": null,
+        "Libelle": "& PAIEMENT CHEQUE N°",
         "Debit": 186.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 1873.829,
         "Date": "09/01/2025",
-        "Description": "02/01/2025 © COM & TVA TRS نع",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": 83.300,
-        "BalanceAfterOperation": null
+        "Libelle": "© COM & TVA TRS نع",
+        "Debit": 83.300,
+        "Credit": null
       },
       {
         "Solde": 1861.929,
         "Date": "13/01/2025",
-        "Description": "13/01/2025 COM & TVA VIR. EMIS",
-        "SoldeType": null,
+        "Libelle": "COM & TVA VIR. EMIS",
         "Debit": 11.900,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 11341.929,
         "Date": "13/01/2025",
-        "Description": "14/01/2025 VIREMENT RECU MEM AG",
-        "SoldeType": null,
+        "Libelle": "VIREMENT RECU MEM AG",
         "Debit": null,
-        "Credit": 9480.000,
-        "BalanceAfterOperation": null
+        "Credit": 9480.000
       },
       {
         "Solde": 10921.838,
         "Date": "17/01/2025",
-        "Description": "16/01/2025 PRELEV. RECU AUT BQE",
-        "SoldeType": null,
+        "Libelle": "PRELEV. RECU AUT BQE",
         "Debit": 420.091,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 7977.731,
         "Date": "17/01/2025",
-        "Description": "16/01/2025 PRELEV. RECU AUT BQE",
-        "SoldeType": null,
+        "Libelle": "PRELEV. RECU AUT BQE",
         "Debit": 2944.107,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 6910.245,
         "Date": "21/01/2025",
-        "Description": "20/01/2025 PRELEV. RECU AUT BQE",
-        "SoldeType": null,
+        "Libelle": "PRELEV. RECU AUT BQE",
         "Debit": 1067.486,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 6110.245,
         "Date": "23/01/2025",
-        "Description": "20/01/2025 ATM BTK JERBA II DU",
-        "SoldeType": null,
+        "Libelle": "ATM BTK JERBA II DU",
         "Debit": 800.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 310.245,
         "Date": "23/01/2025",
-        "Description": "20/01/2025 ATM BTK JERBA Il DU",
-        "SoldeType": null,
+        "Libelle": "ATM BTK JERBA Il DU",
         "Debit": 800.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 4510.245,
         "Date": "23/01/2025",
-        "Description": "20/01/2025 ATM BTK JERBA Il DU",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": 800.000,
-        "BalanceAfterOperation": null
+        "Libelle": "ATM BTK JERBA Il DU",
+        "Debit": 800.000,
+        "Credit": null
       },
       {
         "Solde": 4410.245,
         "Date": "28/01/2025",
-        "Description": "23/01/2025 ATM BTK JERBA Il DU",
-        "SoldeType": null,
+        "Libelle": "ATM BTK JERBA Il DU",
         "Debit": 100.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 400.000,
         "Date": "04/02/2025",
-        "Description": "30/01/2025 ATM BTK CHARGUIA DU 4 45",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "ATM BTK CHARGUIA DU 4 45",
+        "Debit": 400.000,
+        "Credit": null
       },
       {
         "Solde": 11.900,
         "Date": "04/02/2025",
-        "Description": "04/02/2025 COM & TVA VIR. EMIS 345",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "COM & TVA VIR. EMIS 345",
+        "Debit": 11.900,
+        "Credit": null
       },
       {
         "Solde": 9480.000,
         "Date": "04/02/2025",
-        "Description": "05/02/2025 VIREMENT RECU MEM AG 13 5",
-        "SoldeType": null,
+        "Libelle": "VIREMENT RECU MEM AG 13 5",
         "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": 9480.000
       },
       {
         "Solde": 13475.370,
         "Date": "04/02/2025",
-        "Description": "03/02/2025 & COM & TVA VIR. EMIS",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": 2.975,
-        "BalanceAfterOperation": null
+        "Libelle": "& COM & TVA VIR. EMIS",
+        "Debit": 2.975,
+        "Credit": null
       },
       {
         "Solde": 12029.528,
         "Date": "04/02/2025",
-        "Description": "03/02/2025 & VIREMENT EMIS AUT BQ",
-        "SoldeType": null,
+        "Libelle": "& VIREMENT EMIS AUT BQ",
         "Debit": 1445.842,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 2.975,
         "Date": "04/02/2025",
-        "Description": "03/02/2025 & COM & TVA VIR. EMIS 12 3",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "& COM & TVA VIR. EMIS 12 3",
+        "Debit": 2.975,
+        "Credit": null
       },
       {
         "Solde": 10580.711,
         "Date": "04/02/2025",
-        "Description": "03/02/2025 & VIREMENT EMIS AUT BQ",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": 1445.842,
-        "BalanceAfterOperation": null
+        "Libelle": "& VIREMENT EMIS AUT BQ",
+        "Debit": 1445.842,
+        "Credit": null
       },
       {
         "Solde": 10479.411,
         "Date": "06/02/2025",
-        "Description": "03/02/2025 ATM BNA CENTRE URBAIN",
-        "SoldeType": null,
+        "Libelle": "ATM BNA CENTRE URBAIN",
         "Debit": 101.300,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 10079.411,
         "Date": "07/02/2025",
-        "Description": "04/02/2025 ATM BTK CHARGUIA DU",
-        "SoldeType": null,
+        "Libelle": "ATM BTK CHARGUIA DU",
         "Debit": 400.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 124.000,
         "Date": "17/02/2025",
-        "Description": "12/02/2025 TUNISIANA DU 9955411",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "TUNISIANA DU 9955411",
+        "Debit": 124.000,
+        "Credit": null
       },
       {
         "Solde": 800.000,
         "Date": "17/02/2025",
-        "Description": "12/02/2025 ATM BTK CHARGUIA DU 9155411",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Libelle": "ATM BTK CHARGUIA DU 9155411",
+        "Debit": 800.000,
+        "Credit": null
       },
       {
         "Solde": 8678.008,
         "Date": "19/02/2025",
-        "Description": "14/02/2025 KONNECT NETWORKS DU",
-        "SoldeType": null,
-        "Debit": null,
-        "Credit": 477.403,
-        "BalanceAfterOperation": null
+        "Libelle": "KONNECT NETWORKS DU",
+        "Debit": 477.403,
+        "Credit": null
       },
       {
         "Solde": 7995.354,
         "Date": "21/02/2025",
-        "Description": "20/02/2025 PRELEV. RECU AUT BQE",
-        "SoldeType": null,
+        "Libelle": "PRELEV. RECU AUT BQE",
         "Debit": 682.654,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 7994.164,
         "Date": "25/02/2025",
-        "Description": "24/02/2025 &COM. & TVA VIR. EMIS",
-        "SoldeType": null,
+        "Libelle": "&COM. & TVA VIR. EMIS",
         "Debit": 1.190,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 6548.322,
         "Date": "25/02/2025",
-        "Description": "24/02/2025 &VIREMENT EMIS AUT BQ",
-        "SoldeType": null,
+        "Libelle": "&VIREMENT EMIS AUT BQ",
         "Debit": 1445.842,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 6547.132,
         "Date": "25/02/2025",
-        "Description": "24/02/2025 & COM. & TVA VIR. EMIS",
-        "SoldeType": null,
+        "Libelle": "& COM. & TVA VIR. EMIS",
         "Debit": 1.190,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 5101.290,
         "Date": "25/02/2025",
-        "Description": "24/02/2025 &VIREMENT EMIS AUT BQ",
-        "SoldeType": null,
+        "Libelle": "&VIREMENT EMIS AUT BQ",
         "Debit": 1445.842,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 5081.290,
         "Date": "26/02/2025",
-        "Description": "21/02/2025 SIT MARCH REGISTRE",
-        "SoldeType": null,
+        "Libelle": "SIT MARCH REGISTRE",
         "Debit": 20.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 4281.290,
         "Date": "28/02/2025",
-        "Description": "25/02/2025 ATM1 BTK MENZEH9 DU",
-        "SoldeType": null,
+        "Libelle": "ATM1 BTK MENZEH9 DU",
         "Debit": 800.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 3481.290,
         "Date": "03/03/2025",
-        "Description": "26/02/2025 ATM BTK SOUSSE DU",
-        "SoldeType": null,
+        "Libelle": "ATM BTK SOUSSE DU",
         "Debit": 800.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 3081.290,
         "Date": "03/03/2025",
-        "Description": "26/02/2025 ATM BTK CHARGUIA DU",
-        "SoldeType": null,
+        "Libelle": "ATM BTK CHARGUIA DU",
         "Debit": 400.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 2681.290,
         "Date": "03/03/2025",
-        "Description": "26/02/2025 ATM BTK CHARGUIA DU",
-        "SoldeType": null,
+        "Libelle": "ATM BTK CHARGUIA DU",
         "Debit": 400.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 2281.290,
         "Date": "05/03/2025",
-        "Description": "05/03/2025 RETRAIT DAB ®",
-        "SoldeType": null,
+        "Libelle": "RETRAIT DAB ®",
         "Debit": 400.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       }
     ]
   }

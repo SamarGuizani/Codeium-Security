@@ -3,7 +3,7 @@
   "DetectedType": "Bank",
   "PageCount": 4,
   "OcrConfidence": 89.25,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "CustomerName": "",
   "BankName": "",
   "Account": {
@@ -22,20 +22,16 @@
       {
         "Solde": 32.165,
         "Date": "28/06/2024",
-        "Description": "Charges/Fees",
-        "SoldeType": null,
+        "Libelle": "Charges/Fees",
         "Debit": -17.000,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       },
       {
         "Solde": 28.935,
         "Date": "28/06/2024",
-        "Description": "Tax on Charges",
-        "SoldeType": null,
+        "Libelle": "Tax on Charges",
         "Debit": -3.230,
-        "Credit": null,
-        "BalanceAfterOperation": null
+        "Credit": null
       }
     ]
   }

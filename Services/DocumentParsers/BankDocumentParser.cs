@@ -22,7 +22,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
             var document = new BankDocument
             {
-                CustomerName = ExtractCustomerName(fullText),
+               
                 BankName = ExtractBankName(fullText),
                 Accounts = ExtractAccountSections(rows, fullText)
             };
@@ -58,6 +58,11 @@ namespace Codeium_Security.Services.DocumentParsers
                 var accMatch = Regex.Match(joined, @"\b(\d{2,5}-\d{4,8}-\d{1,4})\b");
                 if (accMatch.Success) lastSeenAccountNumber = accMatch.Groups[1].Value;
 
+             
+
+                var ribMatch = Regex.Match(joined, @"TN\d{2}[\s\d]{15,25}");
+                if (ribMatch.Success && current != null) current.Rib = Regex.Replace(ribMatch.Value, @"\s+", " ").Trim();
+
                 // Detecte la ligne d'en-tete de colonnes et calibre les positions X une fois par section
                 var debitCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"D[ée]bit", RegexOptions.IgnoreCase));
                 var creditCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"Cr[ée]dit", RegexOptions.IgnoreCase));
@@ -89,7 +94,6 @@ namespace Codeium_Security.Services.DocumentParsers
                         SoldeInitial = soldeInit
                     };
                     previousSolde = soldeInit;
-                    debitAnchor = creditAnchor = soldeAnchor = null; // reset pour la prochaine section
                     continue;
                 }
 
@@ -98,7 +102,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     if (current != null)
                     {
                         var finalMatch = AmountRegex.Match(joined);
-                        current.Balance = finalMatch.Success ? ParseAmount(finalMatch.Value) : (previousSolde ?? 0);
+                        current.SoldeFinal = finalMatch.Success ? ParseAmount(finalMatch.Value) : previousSolde;
                     }
                     continue;
                 }
@@ -109,6 +113,19 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (current == null) continue;
 
                 string normalizedDate = NormalizeDate(cellTexts[0].Trim());
+
+                if (string.IsNullOrEmpty(normalizedDate))
+                {
+                    // Pas de date sur cette ligne : c'est la suite du libelle de la derniere transaction
+                    // (reference, POS, nom du beneficiaire, motif, etc. - tout ce qui suit avant la prochaine date)
+                    if (current.Transactions.Count > 0 && !AmountRegex.IsMatch(joined)
+                        && !Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final))\b", RegexOptions.IgnoreCase))
+                    {
+                        var lastTx = current.Transactions[current.Transactions.Count - 1];
+                        lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
+                    }
+                    continue;
+                }
                 if (string.IsNullOrEmpty(normalizedDate)) continue;
 
                 // Cellules candidates montant, AVEC leur position X d'origine
@@ -188,10 +205,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     @"Total\s*(?:des\s*)?Cr[ée]dit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (totalCreditMatch.Success) sec.TotalCredit = ParseAmount(totalCreditMatch.Groups[1].Value);
 
-                sec.SumOfDebits = sec.Transactions.Where(t => t.Debit.HasValue).Sum(t => t.Debit!.Value);
-                sec.SumOfCredits = sec.Transactions.Where(t => t.Credit.HasValue).Sum(t => t.Credit!.Value);
-                sec.DebitTotalMatches = Math.Abs(Math.Abs(sec.SumOfDebits) - Math.Abs(sec.TotalDebit)) < 1m;
-                sec.CreditTotalMatches = Math.Abs(Math.Abs(sec.SumOfCredits) - Math.Abs(sec.TotalCredit)) < 1m;
+               
             }
 
             return sections;
@@ -270,11 +284,7 @@ namespace Codeium_Security.Services.DocumentParsers
             return merged;
         }
 
-        private string ExtractCustomerName(string text)
-        {
-            var match = Regex.Match(text, @"Relation\s*:?\s*(.+?)(?=Devise)");
-            return match.Success ? match.Groups[1].Value.Trim() : "";
-        }
+       
 
         private string ExtractBankName(string text)
         {
