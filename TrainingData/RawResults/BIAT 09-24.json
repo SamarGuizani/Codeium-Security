@@ -6,7 +6,8 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "CustomerName": "",
+    "TotalDebit": null,
+    "TotalCredit": null,
     "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
     "Accounts": []
   },
@@ -58,8 +59,8 @@
     "03 09 COM/ TVA REMISE AFFIL 10020157 03092024 1,963",
     "03 09 ENCAISSE REMISE AFFIL 10020157 06092024 392,500",
     "03 09 ENCAISSE REMISE AFFIL 10020158 06092024 2.462,000",
-    "03 09 COM/ TVA REMISE AFFIL 10020158  03092024 12,310",
-    "03 09 COM/ TVA REMISE AFFIL 10020159  03092024 0,900",
+    "03 09 COM/ TVA REMISE AFFIL 10020158 03092024 12,310",
+    "03 09 COM/ TVA REMISE AFFIL 10020159 03092024 0,900",
     "03 09 ENCAISSE REMISE AFFIL 10020159 06092024 180,000",
     "03 09 COM/ TVA REMISE AFFIL 10020160 03092024 10,069",
     "الجملة",
@@ -1059,7 +1060,7 @@
     },
     {
       "Text": "KRAM",
-      "Confidence": 92.999466,
+      "Confidence": 90.203125,
       "Left": 1531,
       "Top": 453,
       "Right": 1613,
@@ -1131,7 +1132,7 @@
     },
     {
       "Text": "compte",
-      "Confidence": 92.09419,
+      "Confidence": 90.66639,
       "Left": 210,
       "Top": 529,
       "Right": 308,
@@ -1875,7 +1876,7 @@
     },
     {
       "Text": "REDRESSEMENT",
-      "Confidence": 90.06425,
+      "Confidence": 86.77785,
       "Left": 190,
       "Top": 980,
       "Right": 447,
@@ -2371,7 +2372,7 @@
     },
     {
       "Text": "2.078,000",
-      "Confidence": 91.021126,
+      "Confidence": 86.970116,
       "Left": 1575,
       "Top": 1224,
       "Right": 1764,
@@ -2379,7 +2380,7 @@
     },
     {
       "Text": "02",
-      "Confidence": 95.70727,
+      "Confidence": 95.42215,
       "Left": 39,
       "Top": 1259,
       "Right": 71,
@@ -2387,7 +2388,7 @@
     },
     {
       "Text": "09",
-      "Confidence": 95.70727,
+      "Confidence": 96.217964,
       "Left": 105,
       "Top": 1259,
       "Right": 139,
@@ -2395,7 +2396,7 @@
     },
     {
       "Text": "COM/",
-      "Confidence": 89.621796,
+      "Confidence": 90.643616,
       "Left": 191,
       "Top": 1258,
       "Right": 270,
@@ -2403,7 +2404,7 @@
     },
     {
       "Text": "TVA",
-      "Confidence": 89.621796,
+      "Confidence": 91.42997,
       "Left": 301,
       "Top": 1261,
       "Right": 361,
@@ -2411,7 +2412,7 @@
     },
     {
       "Text": "REMISE",
-      "Confidence": 91.52379,
+      "Confidence": 91.05638,
       "Left": 388,
       "Top": 1261,
       "Right": 513,
@@ -2419,7 +2420,7 @@
     },
     {
       "Text": "AFFIL",
-      "Confidence": 91.20575,
+      "Confidence": 90.380585,
       "Left": 541,
       "Top": 1261,
       "Right": 645,
@@ -2427,7 +2428,7 @@
     },
     {
       "Text": "10020155",
-      "Confidence": 96.09405,
+      "Confidence": 96.61516,
       "Left": 676,
       "Top": 1259,
       "Right": 841,
@@ -2435,7 +2436,7 @@
     },
     {
       "Text": "02092024",
-      "Confidence": 96.35483,
+      "Confidence": 95.64645,
       "Left": 896,
       "Top": 1259,
       "Right": 1060,
@@ -2443,7 +2444,7 @@
     },
     {
       "Text": "10,390",
-      "Confidence": 91.19791,
+      "Confidence": 95.82057,
       "Left": 1291,
       "Top": 1259,
       "Right": 1412,
@@ -2451,7 +2452,7 @@
     },
     {
       "Text": "03",
-      "Confidence": 95.87381,
+      "Confidence": 96.63238,
       "Left": 39,
       "Top": 1294,
       "Right": 72,
@@ -2459,7 +2460,7 @@
     },
     {
       "Text": "09",
-      "Confidence": 92.94618,
+      "Confidence": 93.227615,
       "Left": 105,
       "Top": 1294,
       "Right": 139,
@@ -2475,7 +2476,7 @@
     },
     {
       "Text": "CHEQUE",
-      "Confidence": 89.95975,
+      "Confidence": 91.939644,
       "Left": 367,
       "Top": 1296,
       "Right": 490,
@@ -3491,7 +3492,7 @@
     },
     {
       "Text": "2.462,000",
-      "Confidence": 92.13577,
+      "Confidence": 86.049126,
       "Left": 1575,
       "Top": 1821,
       "Right": 1764,
@@ -3499,7 +3500,7 @@
     },
     {
       "Text": "03",
-      "Confidence": 96.272705,
+      "Confidence": 94.27308,
       "Left": 39,
       "Top": 1856,
       "Right": 72,
@@ -3515,7 +3516,7 @@
     },
     {
       "Text": "COM/",
-      "Confidence": 91.91849,
+      "Confidence": 83.87062,
       "Left": 191,
       "Top": 1855,
       "Right": 270,
@@ -3531,7 +3532,7 @@
     },
     {
       "Text": "REMISE",
-      "Confidence": 91.26617,
+      "Confidence": 91.55481,
       "Left": 388,
       "Top": 1858,
       "Right": 513,
@@ -3539,7 +3540,7 @@
     },
     {
       "Text": "AFFIL",
-      "Confidence": 92.08131,
+      "Confidence": 91.40397,
       "Left": 541,
       "Top": 1858,
       "Right": 645,
@@ -3547,23 +3548,15 @@
     },
     {
       "Text": "10020158",
-      "Confidence": 95.89108,
+      "Confidence": 92.44903,
       "Left": 676,
       "Top": 1856,
       "Right": 841,
       "Bottom": 1877
     },
     {
-      "Text": "",
-      "Confidence": 17.222893,
-      "Left": 867,
-      "Top": 1851,
-      "Right": 886,
-      "Bottom": 1888
-    },
-    {
       "Text": "03092024",
-      "Confidence": 17.222893,
+      "Confidence": 85.9646,
       "Left": 896,
       "Top": 1856,
       "Right": 1061,
@@ -3571,7 +3564,7 @@
     },
     {
       "Text": "12,310",
-      "Confidence": 91.9313,
+      "Confidence": 95.543594,
       "Left": 1291,
       "Top": 1856,
       "Right": 1412,
@@ -3579,7 +3572,7 @@
     },
     {
       "Text": "03",
-      "Confidence": 96.25389,
+      "Confidence": 94.59109,
       "Left": 39,
       "Top": 1891,
       "Right": 72,
@@ -3595,7 +3588,7 @@
     },
     {
       "Text": "COM/",
-      "Confidence": 91.61075,
+      "Confidence": 90.255165,
       "Left": 191,
       "Top": 1890,
       "Right": 270,
@@ -3611,7 +3604,7 @@
     },
     {
       "Text": "REMISE",
-      "Confidence": 91.19674,
+      "Confidence": 91.2262,
       "Left": 388,
       "Top": 1893,
       "Right": 513,
@@ -3619,7 +3612,7 @@
     },
     {
       "Text": "AFFIL",
-      "Confidence": 91.5493,
+      "Confidence": 91.29198,
       "Left": 541,
       "Top": 1893,
       "Right": 645,
@@ -3627,23 +3620,15 @@
     },
     {
       "Text": "10020159",
-      "Confidence": 95.70889,
+      "Confidence": 92.5598,
       "Left": 676,
       "Top": 1891,
       "Right": 842,
       "Bottom": 1912
     },
     {
-      "Text": "",
-      "Confidence": 2.4098816,
-      "Left": 867,
-      "Top": 1886,
-      "Right": 886,
-      "Bottom": 1923
-    },
-    {
       "Text": "03092024",
-      "Confidence": 2.4098816,
+      "Confidence": 82.855736,
       "Left": 896,
       "Top": 1891,
       "Right": 1061,
@@ -3651,7 +3636,7 @@
     },
     {
       "Text": "0,900",
-      "Confidence": 91.73085,
+      "Confidence": 96.39567,
       "Left": 1313,
       "Top": 1891,
       "Right": 1412,
@@ -3659,7 +3644,7 @@
     },
     {
       "Text": "03",
-      "Confidence": 96.545296,
+      "Confidence": 95.788605,
       "Left": 39,
       "Top": 1926,
       "Right": 72,
@@ -3667,7 +3652,7 @@
     },
     {
       "Text": "09",
-      "Confidence": 96.545296,
+      "Confidence": 95.788605,
       "Left": 105,
       "Top": 1926,
       "Right": 139,
@@ -3675,7 +3660,7 @@
     },
     {
       "Text": "ENCAISSE",
-      "Confidence": 91.18829,
+      "Confidence": 90.035255,
       "Left": 190,
       "Top": 1928,
       "Right": 359,
@@ -3683,7 +3668,7 @@
     },
     {
       "Text": "REMISE",
-      "Confidence": 91.041405,
+      "Confidence": 92.37744,
       "Left": 388,
       "Top": 1928,
       "Right": 513,
@@ -3691,7 +3676,7 @@
     },
     {
       "Text": "AFFIL",
-      "Confidence": 92.00743,
+      "Confidence": 91.124054,
       "Left": 541,
       "Top": 1928,
       "Right": 645,
@@ -3699,7 +3684,7 @@
     },
     {
       "Text": "10020159",
-      "Confidence": 96.32003,
+      "Confidence": 96.64366,
       "Left": 676,
       "Top": 1926,
       "Right": 842,
@@ -3707,7 +3692,7 @@
     },
     {
       "Text": "06092024",
-      "Confidence": 96.60499,
+      "Confidence": 95.47002,
       "Left": 896,
       "Top": 1926,
       "Right": 1061,
@@ -3715,7 +3700,7 @@
     },
     {
       "Text": "180,000",
-      "Confidence": 91.102806,
+      "Confidence": 96.80671,
       "Left": 1621,
       "Top": 1926,
       "Right": 1764,
@@ -3723,7 +3708,7 @@
     },
     {
       "Text": "03",
-      "Confidence": 93.38079,
+      "Confidence": 96.50177,
       "Left": 38,
       "Top": 1962,
       "Right": 72,
@@ -3731,7 +3716,7 @@
     },
     {
       "Text": "09",
-      "Confidence": 92.484,
+      "Confidence": 92.175865,
       "Left": 105,
       "Top": 1962,
       "Right": 139,
@@ -3747,7 +3732,7 @@
     },
     {
       "Text": "TVA",
-      "Confidence": 90.99031,
+      "Confidence": 90.44419,
       "Left": 301,
       "Top": 1963,
       "Right": 361,
@@ -3763,7 +3748,7 @@
     },
     {
       "Text": "AFFIL",
-      "Confidence": 90.31646,
+      "Confidence": 91.45429,
       "Left": 541,
       "Top": 1963,
       "Right": 645,
@@ -3771,7 +3756,7 @@
     },
     {
       "Text": "10020160",
-      "Confidence": 95.97722,
+      "Confidence": 96.34996,
       "Left": 676,
       "Top": 1962,
       "Right": 841,
@@ -3779,7 +3764,7 @@
     },
     {
       "Text": "03092024",
-      "Confidence": 96.64101,
+      "Confidence": 95.147354,
       "Left": 896,
       "Top": 1962,
       "Right": 1061,
@@ -3787,7 +3772,7 @@
     },
     {
       "Text": "10,069",
-      "Confidence": 91.72432,
+      "Confidence": 88.16217,
       "Left": 1291,
       "Top": 1962,
       "Right": 1413,
@@ -55475,7 +55460,7 @@
         },
         {
           "Text": "KRAM",
-          "Confidence": 92.999466,
+          "Confidence": 90.203125,
           "Left": 1531,
           "Top": 453,
           "Right": 1613,
@@ -55570,7 +55555,7 @@
         },
         {
           "Text": "compte",
-          "Confidence": 92.09419,
+          "Confidence": 90.66639,
           "Left": 210,
           "Top": 529,
           "Right": 308,
@@ -56398,7 +56383,7 @@
         },
         {
           "Text": "REDRESSEMENT",
-          "Confidence": 90.06425,
+          "Confidence": 86.77785,
           "Left": 190,
           "Top": 980,
           "Right": 447,
@@ -56881,7 +56866,7 @@
         },
         {
           "Text": "2.078,000",
-          "Confidence": 91.021126,
+          "Confidence": 86.970116,
           "Left": 1575,
           "Top": 1224,
           "Right": 1764,
@@ -56918,7 +56903,7 @@
       "Words": [
         {
           "Text": "COM/",
-          "Confidence": 89.621796,
+          "Confidence": 90.643616,
           "Left": 191,
           "Top": 1258,
           "Right": 270,
@@ -56926,7 +56911,7 @@
         },
         {
           "Text": "02",
-          "Confidence": 95.70727,
+          "Confidence": 95.42215,
           "Left": 39,
           "Top": 1259,
           "Right": 71,
@@ -56934,7 +56919,7 @@
         },
         {
           "Text": "09",
-          "Confidence": 95.70727,
+          "Confidence": 96.217964,
           "Left": 105,
           "Top": 1259,
           "Right": 139,
@@ -56942,7 +56927,7 @@
         },
         {
           "Text": "10020155",
-          "Confidence": 96.09405,
+          "Confidence": 96.61516,
           "Left": 676,
           "Top": 1259,
           "Right": 841,
@@ -56950,7 +56935,7 @@
         },
         {
           "Text": "02092024",
-          "Confidence": 96.35483,
+          "Confidence": 95.64645,
           "Left": 896,
           "Top": 1259,
           "Right": 1060,
@@ -56958,7 +56943,7 @@
         },
         {
           "Text": "10,390",
-          "Confidence": 91.19791,
+          "Confidence": 95.82057,
           "Left": 1291,
           "Top": 1259,
           "Right": 1412,
@@ -56966,7 +56951,7 @@
         },
         {
           "Text": "TVA",
-          "Confidence": 89.621796,
+          "Confidence": 91.42997,
           "Left": 301,
           "Top": 1261,
           "Right": 361,
@@ -56974,7 +56959,7 @@
         },
         {
           "Text": "REMISE",
-          "Confidence": 91.52379,
+          "Confidence": 91.05638,
           "Left": 388,
           "Top": 1261,
           "Right": 513,
@@ -56982,7 +56967,7 @@
         },
         {
           "Text": "AFFIL",
-          "Confidence": 91.20575,
+          "Confidence": 90.380585,
           "Left": 541,
           "Top": 1261,
           "Right": 645,
@@ -57003,7 +56988,7 @@
         },
         {
           "Text": "03",
-          "Confidence": 95.87381,
+          "Confidence": 96.63238,
           "Left": 39,
           "Top": 1294,
           "Right": 72,
@@ -57011,7 +56996,7 @@
         },
         {
           "Text": "09",
-          "Confidence": 92.94618,
+          "Confidence": 93.227615,
           "Left": 105,
           "Top": 1294,
           "Right": 139,
@@ -57051,7 +57036,7 @@
         },
         {
           "Text": "CHEQUE",
-          "Confidence": 89.95975,
+          "Confidence": 91.939644,
           "Left": 367,
           "Top": 1296,
           "Right": 490,
@@ -58086,7 +58071,7 @@
         },
         {
           "Text": "2.462,000",
-          "Confidence": 92.13577,
+          "Confidence": 86.049126,
           "Left": 1575,
           "Top": 1821,
           "Right": 1764,
@@ -58119,19 +58104,11 @@
       ]
     },
     {
-      "LineText": "03 09 COM/ TVA REMISE AFFIL 10020158  03092024 12,310",
+      "LineText": "03 09 COM/ TVA REMISE AFFIL 10020158 03092024 12,310",
       "Words": [
         {
-          "Text": "",
-          "Confidence": 17.222893,
-          "Left": 867,
-          "Top": 1851,
-          "Right": 886,
-          "Bottom": 1888
-        },
-        {
           "Text": "COM/",
-          "Confidence": 91.91849,
+          "Confidence": 83.87062,
           "Left": 191,
           "Top": 1855,
           "Right": 270,
@@ -58139,7 +58116,7 @@
         },
         {
           "Text": "03",
-          "Confidence": 96.272705,
+          "Confidence": 94.27308,
           "Left": 39,
           "Top": 1856,
           "Right": 72,
@@ -58155,7 +58132,7 @@
         },
         {
           "Text": "10020158",
-          "Confidence": 95.89108,
+          "Confidence": 92.44903,
           "Left": 676,
           "Top": 1856,
           "Right": 841,
@@ -58163,7 +58140,7 @@
         },
         {
           "Text": "03092024",
-          "Confidence": 17.222893,
+          "Confidence": 85.9646,
           "Left": 896,
           "Top": 1856,
           "Right": 1061,
@@ -58171,7 +58148,7 @@
         },
         {
           "Text": "12,310",
-          "Confidence": 91.9313,
+          "Confidence": 95.543594,
           "Left": 1291,
           "Top": 1856,
           "Right": 1412,
@@ -58187,7 +58164,7 @@
         },
         {
           "Text": "REMISE",
-          "Confidence": 91.26617,
+          "Confidence": 91.55481,
           "Left": 388,
           "Top": 1858,
           "Right": 513,
@@ -58195,7 +58172,7 @@
         },
         {
           "Text": "AFFIL",
-          "Confidence": 92.08131,
+          "Confidence": 91.40397,
           "Left": 541,
           "Top": 1858,
           "Right": 645,
@@ -58204,19 +58181,11 @@
       ]
     },
     {
-      "LineText": "03 09 COM/ TVA REMISE AFFIL 10020159  03092024 0,900",
+      "LineText": "03 09 COM/ TVA REMISE AFFIL 10020159 03092024 0,900",
       "Words": [
         {
-          "Text": "",
-          "Confidence": 2.4098816,
-          "Left": 867,
-          "Top": 1886,
-          "Right": 886,
-          "Bottom": 1923
-        },
-        {
           "Text": "COM/",
-          "Confidence": 91.61075,
+          "Confidence": 90.255165,
           "Left": 191,
           "Top": 1890,
           "Right": 270,
@@ -58224,7 +58193,7 @@
         },
         {
           "Text": "03",
-          "Confidence": 96.25389,
+          "Confidence": 94.59109,
           "Left": 39,
           "Top": 1891,
           "Right": 72,
@@ -58240,7 +58209,7 @@
         },
         {
           "Text": "10020159",
-          "Confidence": 95.70889,
+          "Confidence": 92.5598,
           "Left": 676,
           "Top": 1891,
           "Right": 842,
@@ -58248,7 +58217,7 @@
         },
         {
           "Text": "03092024",
-          "Confidence": 2.4098816,
+          "Confidence": 82.855736,
           "Left": 896,
           "Top": 1891,
           "Right": 1061,
@@ -58256,7 +58225,7 @@
         },
         {
           "Text": "0,900",
-          "Confidence": 91.73085,
+          "Confidence": 96.39567,
           "Left": 1313,
           "Top": 1891,
           "Right": 1412,
@@ -58272,7 +58241,7 @@
         },
         {
           "Text": "REMISE",
-          "Confidence": 91.19674,
+          "Confidence": 91.2262,
           "Left": 388,
           "Top": 1893,
           "Right": 513,
@@ -58280,7 +58249,7 @@
         },
         {
           "Text": "AFFIL",
-          "Confidence": 91.5493,
+          "Confidence": 91.29198,
           "Left": 541,
           "Top": 1893,
           "Right": 645,
@@ -58293,7 +58262,7 @@
       "Words": [
         {
           "Text": "03",
-          "Confidence": 96.545296,
+          "Confidence": 95.788605,
           "Left": 39,
           "Top": 1926,
           "Right": 72,
@@ -58301,7 +58270,7 @@
         },
         {
           "Text": "09",
-          "Confidence": 96.545296,
+          "Confidence": 95.788605,
           "Left": 105,
           "Top": 1926,
           "Right": 139,
@@ -58309,7 +58278,7 @@
         },
         {
           "Text": "10020159",
-          "Confidence": 96.32003,
+          "Confidence": 96.64366,
           "Left": 676,
           "Top": 1926,
           "Right": 842,
@@ -58317,7 +58286,7 @@
         },
         {
           "Text": "06092024",
-          "Confidence": 96.60499,
+          "Confidence": 95.47002,
           "Left": 896,
           "Top": 1926,
           "Right": 1061,
@@ -58325,7 +58294,7 @@
         },
         {
           "Text": "180,000",
-          "Confidence": 91.102806,
+          "Confidence": 96.80671,
           "Left": 1621,
           "Top": 1926,
           "Right": 1764,
@@ -58333,7 +58302,7 @@
         },
         {
           "Text": "ENCAISSE",
-          "Confidence": 91.18829,
+          "Confidence": 90.035255,
           "Left": 190,
           "Top": 1928,
           "Right": 359,
@@ -58341,7 +58310,7 @@
         },
         {
           "Text": "REMISE",
-          "Confidence": 91.041405,
+          "Confidence": 92.37744,
           "Left": 388,
           "Top": 1928,
           "Right": 513,
@@ -58349,7 +58318,7 @@
         },
         {
           "Text": "AFFIL",
-          "Confidence": 92.00743,
+          "Confidence": 91.124054,
           "Left": 541,
           "Top": 1928,
           "Right": 645,
@@ -58370,7 +58339,7 @@
         },
         {
           "Text": "03",
-          "Confidence": 93.38079,
+          "Confidence": 96.50177,
           "Left": 38,
           "Top": 1962,
           "Right": 72,
@@ -58378,7 +58347,7 @@
         },
         {
           "Text": "09",
-          "Confidence": 92.484,
+          "Confidence": 92.175865,
           "Left": 105,
           "Top": 1962,
           "Right": 139,
@@ -58386,7 +58355,7 @@
         },
         {
           "Text": "10020160",
-          "Confidence": 95.97722,
+          "Confidence": 96.34996,
           "Left": 676,
           "Top": 1962,
           "Right": 841,
@@ -58394,7 +58363,7 @@
         },
         {
           "Text": "03092024",
-          "Confidence": 96.64101,
+          "Confidence": 95.147354,
           "Left": 896,
           "Top": 1962,
           "Right": 1061,
@@ -58402,7 +58371,7 @@
         },
         {
           "Text": "10,069",
-          "Confidence": 91.72432,
+          "Confidence": 88.16217,
           "Left": 1291,
           "Top": 1962,
           "Right": 1413,
@@ -58410,7 +58379,7 @@
         },
         {
           "Text": "TVA",
-          "Confidence": 90.99031,
+          "Confidence": 90.44419,
           "Left": 301,
           "Top": 1963,
           "Right": 361,
@@ -58426,7 +58395,7 @@
         },
         {
           "Text": "AFFIL",
-          "Confidence": 90.31646,
+          "Confidence": 91.45429,
           "Left": 541,
           "Top": 1963,
           "Right": 645,

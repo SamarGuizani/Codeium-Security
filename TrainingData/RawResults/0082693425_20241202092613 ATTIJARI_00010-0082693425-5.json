@@ -3,10 +3,10 @@
   "DetectedType": "Bank",
   "PageCount": 1,
   "OcrConfidence": 90,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "BankName": "",
   "Account": {
-    "AccountNumber": "",
+    "AccountNumber": "00010-0082693425-5",
     "Currency": "TND",
     "Rib": "",
     "SoldeInitial": -309.015,
@@ -18,7 +18,7 @@
       {
         "Solde": -344.715,
         "Date": "29/11/2024",
-        "Libelle": "PACK BUSINESS SOLUTIONS S C (*) : Les évènements du jour sont sujets à modification Page 1sur 1",
+        "Libelle": "PACK BUSINESS SOLUTIONS S C",
         "Debit": 35.700,
         "Credit": null
       }

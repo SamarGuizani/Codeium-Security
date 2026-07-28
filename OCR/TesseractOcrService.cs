@@ -5,67 +5,66 @@ namespace Codeium_Security.OCR
 {
     public class TesseractOcrService : IOcrService
     {
-        private readonly IConfiguration _configuration;
+        private readonly TesseractEngine _engine;
+        private readonly object _lock = new(); // TesseractEngine n'est pas thread-safe pour des appels concurrents
 
         public TesseractOcrService(IConfiguration configuration)
         {
-            _configuration = configuration;
+            var languages = configuration.GetValue("Ocr:Languages", "eng+fra+ara")!;
+            var pageSegMode = configuration.GetValue("Ocr:PageSegMode", 6);
+
+            // Cree le moteur UNE SEULE FOIS, au demarrage du service (pas a chaque page)
+            _engine = new TesseractEngine("./tessdata", languages, EngineMode.Default);
+            _engine.SetVariable("tessedit_pageseg_mode", pageSegMode.ToString());
+            _engine.SetVariable("user_defined_dpi", "300");
         }
 
         public async Task<OcrResult> ExtractTextAsync(string imagePath)
         {
             return await Task.Run(() =>
             {
-                var languages = _configuration.GetValue("Ocr:Languages", "eng+fra+ara")!;
-                var pageSegMode = _configuration.GetValue("Ocr:PageSegMode", 6);
-
-                using var engine = new TesseractEngine(
-                    "./tessdata",
-                    languages,
-                    EngineMode.Default);
-
-                engine.SetVariable("tessedit_pageseg_mode", pageSegMode.ToString());
-                engine.SetVariable("user_defined_dpi", "300");
-
-                using var img = Pix.LoadFromFile(imagePath);
-                using var page = engine.Process(img);
-
-                var text = page.GetText();
-                var confidence = page.GetMeanConfidence();
-                var words = new List<OcrWord>();
-
-                using (var iter = page.GetIterator())
+                lock (_lock)
                 {
-                    iter.Begin();
-                    do
+                    using var img = Pix.LoadFromFile(imagePath);
+                    using var page = _engine.Process(img);
+
+                    var text = page.GetText();
+                    var confidence = page.GetMeanConfidence();
+                    var words = new List<OcrWord>();
+
+                    using (var iter = page.GetIterator())
                     {
-                        if (iter.TryGetBoundingBox(PageIteratorLevel.Word, out Rect bounds))
+                        iter.Begin();
+                        do
                         {
-                            string wordText = iter.GetText(PageIteratorLevel.Word);
-                            float wordConfidence = iter.GetConfidence(PageIteratorLevel.Word);
-
-                            if (!string.IsNullOrWhiteSpace(wordText))
+                            if (iter.TryGetBoundingBox(PageIteratorLevel.Word, out Rect bounds))
                             {
-                                words.Add(new OcrWord
-                                {
-                                    Text = wordText.Trim(),
-                                    Confidence = wordConfidence,
-                                    Left = bounds.X1,
-                                    Top = bounds.Y1,
-                                    Right = bounds.X2,
-                                    Bottom = bounds.Y2
-                                });
-                            }
-                        }
-                    } while (iter.Next(PageIteratorLevel.Word));
-                }
+                                string wordText = iter.GetText(PageIteratorLevel.Word);
+                                float wordConfidence = iter.GetConfidence(PageIteratorLevel.Word);
 
-                return new OcrResult
-                {
-                    FullText = text,
-                    Confidence = confidence * 100,
-                    Words = words
-                };
+                                if (!string.IsNullOrWhiteSpace(wordText))
+                                {
+                                    words.Add(new OcrWord
+                                    {
+                                        Text = wordText.Trim(),
+                                        Confidence = wordConfidence,
+                                        Left = bounds.X1,
+                                        Top = bounds.Y1,
+                                        Right = bounds.X2,
+                                        Bottom = bounds.Y2
+                                    });
+                                }
+                            }
+                        } while (iter.Next(PageIteratorLevel.Word));
+                    }
+
+                    return new OcrResult
+                    {
+                        FullText = text,
+                        Confidence = confidence * 100,
+                        Words = words
+                    };
+                }
             });
         }
     }

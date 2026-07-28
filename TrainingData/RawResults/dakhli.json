@@ -6,7 +6,8 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "CustomerName": "",
+    "TotalDebit": null,
+    "TotalCredit": null,
     "BankName": "Attijari Bank",
     "Accounts": []
   },

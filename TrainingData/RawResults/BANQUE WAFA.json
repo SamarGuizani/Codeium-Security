@@ -6,12 +6,13 @@
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
-    "CustomerName": "",
+    "TotalDebit": null,
+    "TotalCredit": null,
     "BankName": "Banque Nationale Agricole (BNA)",
     "Accounts": []
   },
   "DebugLines": [
-    "2~ Extrait de compte",
+    "2~ EXtrait de compte",
     "150116 1€ د اناا مدعنا 1400",
     "Page 1 sur 2",
     "Compte N° : 0405822512301 Agence",
@@ -396,7 +397,7 @@
     "Y",
     "-",
     "Cher(e) Client(e), nous avons \"ا de vous i ci-d le Relevé détaillé des opérations inscrites à votre livres. Nous",
-    "… compte sur كمه",
+    "… compte sur nos",
     "vous en souhaitons bonne réception.",
     "Page: 1/2",
     "D,'u",
@@ -776,8 +777,8 @@
     "2013",
     "Du 01/05/2025 ياه 5",
     "Solde au: 30/04/2025 1488.428 CR",
-    "Libellé Référence -  D.Valeur  “Débit Crédit  “ Solde —",
-    "D. Opé. L",
+    "Référence -  D.Valeur  “Débit Crédit  “ Solde —",
+    "D. Opé. Libellé L",
     "TVAICOMM REMISECHO [1277405 — 7 26/05/2025  — 0166 — 220455 DB",
     "30/05/2025",
     "i 2196.545",
@@ -887,8 +888,8 @@
     "07/07/2025 COMM  PREL 378368  01/07/2025 — 2.000 7771694179 DB|",
     "07/07/2025 ' TVAICOMM PREL — 1378368 01072025 — 0380 — S 1694.559 DB",
     "/07/07/2025 AGIOS AU 30/06/25 — “ AGIOS 7 10107/2025 / 71.912 - 1766471 DB",
-    "Encours chèques : 0.000 Total قعل mouvements ٠ 24 890.064 21 5",
-    "50106 ن2 : 5 1766.471 DB",
+    "Encours chèques : 0.000 Total قعل mouvements ٠ 24 890.064 21635.165",
+    "Solde au: 08/07/2025 1 766.471 DB",
     "Nos écritures s'entendent sauf erreur ou omission.",
     "Extrait",
     "- عل compte",
@@ -1109,8 +1110,8 @@
       "Bottom": 108
     },
     {
-      "Text": "Extrait",
-      "Confidence": 89.96255,
+      "Text": "EXtrait",
+      "Confidence": 84.139755,
       "Left": 489,
       "Top": 25,
       "Right": 748,
@@ -1118,7 +1119,7 @@
     },
     {
       "Text": "de",
-      "Confidence": 92.19108,
+      "Confidence": 91.535034,
       "Left": 776,
       "Top": 28,
       "Right": 868,
@@ -1126,7 +1127,7 @@
     },
     {
       "Text": "compte",
-      "Confidence": 92.119514,
+      "Confidence": 91.40041,
       "Left": 899,
       "Top": 30,
       "Right": 1194,
@@ -1238,7 +1239,7 @@
     },
     {
       "Text": "0405822512301",
-      "Confidence": 96.71582,
+      "Confidence": 89.47179,
       "Left": 235,
       "Top": 334,
       "Right": 446,
@@ -14998,7 +14999,7 @@
     },
     {
       "Text": "RIB",
-      "Confidence": 92.56809,
+      "Confidence": 86.59074,
       "Left": 1085,
       "Top": 10670,
       "Right": 1132,
@@ -15006,7 +15007,7 @@
     },
     {
       "Text": "24011040582251230122",
-      "Confidence": 91.36447,
+      "Confidence": 91.541,
       "Left": 1223,
       "Top": 10672,
       "Right": 1557,
@@ -15014,7 +15015,7 @@
     },
     {
       "Text": "Adresse",
-      "Confidence": 61.27438,
+      "Confidence": 89.66462,
       "Left": 72,
       "Top": 10731,
       "Right": 188,
@@ -15054,7 +15055,7 @@
     },
     {
       "Text": "FRANCE",
-      "Confidence": 92.80441,
+      "Confidence": 91.62108,
       "Left": 394,
       "Top": 10730,
       "Right": 515,
@@ -15646,15 +15647,15 @@
     },
     {
       "Text": "Banque",
-      "Confidence": 92.120316,
+      "Confidence": 84.03989,
       "Left": 1299,
       "Top": 12131,
-      "Right": 1394,
+      "Right": 1397,
       "Bottom": 12170
     },
     {
       "Text": "de",
-      "Confidence": 92.238014,
+      "Confidence": 91.88534,
       "Left": 1409,
       "Top": 12131,
       "Right": 1436,
@@ -15686,8 +15687,8 @@
     },
     {
       "Text": "Emirats",
-      "Confidence": 93.27947,
-      "Left": 1650,
+      "Confidence": 90.45952,
+      "Left": 1646,
       "Top": 12131,
       "Right": 1745,
       "Bottom": 12170
@@ -15726,7 +15727,7 @@
     },
     {
       "Text": "Du",
-      "Confidence": 93.07352,
+      "Confidence": 90.15407,
       "Left": 1027,
       "Top": 12293,
       "Right": 1071,
@@ -15766,7 +15767,7 @@
     },
     {
       "Text": "31/03/2025",
-      "Confidence": 93.16719,
+      "Confidence": 90.769104,
       "Left": 1337,
       "Top": 12300,
       "Right": 1474,
@@ -16181,8 +16182,8 @@
       "Bottom": 13090
     },
     {
-      "Text": "كمه",
-      "Confidence": 86.63158,
+      "Text": "nos",
+      "Confidence": 93.17933,
       "Left": 1533,
       "Top": 13078,
       "Right": 1565,
@@ -18102,7 +18103,7 @@
     },
     {
       "Text": "Banque",
-      "Confidence": 91.959885,
+      "Confidence": 84.22711,
       "Left": 1303,
       "Top": 15151,
       "Right": 1403,
@@ -18142,7 +18143,7 @@
     },
     {
       "Text": "Emirats",
-      "Confidence": 93.23188,
+      "Confidence": 92.28437,
       "Left": 1642,
       "Top": 15149,
       "Right": 1741,
@@ -26982,7 +26983,7 @@
     },
     {
       "Text": "Ville",
-      "Confidence": 90.17486,
+      "Confidence": 84.35192,
       "Left": 146,
       "Top": 21077,
       "Right": 198,
@@ -33254,7 +33255,7 @@
     },
     {
       "Text": "",
-      "Confidence": 91.26817,
+      "Confidence": 82.68533,
       "Left": 436,
       "Top": 25270,
       "Right": 437,
@@ -33262,7 +33263,7 @@
     },
     {
       "Text": "Page",
-      "Confidence": 92.1124,
+      "Confidence": 92.375015,
       "Left": 1490,
       "Top": 25258,
       "Right": 1546,
@@ -33270,15 +33271,15 @@
     },
     {
       "Text": "2",
-      "Confidence": 92.32926,
+      "Confidence": 86.07518,
       "Left": 1538,
       "Top": 25248,
-      "Right": 1547,
+      "Right": 1544,
       "Bottom": 25281
     },
     {
       "Text": "sur",
-      "Confidence": 90.122284,
+      "Confidence": 86.07518,
       "Left": 1555,
       "Top": 25264,
       "Right": 1576,
@@ -33286,7 +33287,7 @@
     },
     {
       "Text": "3",
-      "Confidence": 96.61276,
+      "Confidence": 96.965034,
       "Left": 1590,
       "Top": 25259,
       "Right": 1594,
@@ -33318,7 +33319,7 @@
     },
     {
       "Text": "0405822512301",
-      "Confidence": 96.23614,
+      "Confidence": 92.217766,
       "Left": 312,
       "Top": 25502,
       "Right": 499,
@@ -33382,7 +33383,7 @@
     },
     {
       "Text": "RIB",
-      "Confidence": 91.172295,
+      "Confidence": 86.693184,
       "Left": 1040,
       "Top": 25552,
       "Right": 1082,
@@ -33390,7 +33391,7 @@
     },
     {
       "Text": "24011040582251230122",
-      "Confidence": 89.85781,
+      "Confidence": 92.345634,
       "Left": 1159,
       "Top": 25550,
       "Right": 1453,
@@ -33398,7 +33399,7 @@
     },
     {
       "Text": "Adresse",
-      "Confidence": 85.71748,
+      "Confidence": 89.39525,
       "Left": 152,
       "Top": 25615,
       "Right": 255,
@@ -33454,7 +33455,7 @@
     },
     {
       "Text": "TND",
-      "Confidence": 61.96779,
+      "Confidence": 86.634056,
       "Left": 1159,
       "Top": 25601,
       "Right": 1212,
@@ -33582,7 +33583,7 @@
     },
     {
       "Text": "Opé.",
-      "Confidence": 91.74927,
+      "Confidence": 87.34327,
       "Left": 208,
       "Top": 25832,
       "Right": 252,
@@ -33590,11 +33591,11 @@
     },
     {
       "Text": "Libellé",
-      "Confidence": 93.100685,
+      "Confidence": 82.9517,
       "Left": 427,
-      "Top": 25822,
+      "Top": 25831,
       "Right": 493,
-      "Bottom": 25857
+      "Bottom": 25848
     },
     {
       "Text": "L",
@@ -39246,7 +39247,7 @@
     },
     {
       "Text": "PASSAGERES",
-      "Confidence": 91.05519,
+      "Confidence": 90.85961,
       "Left": 438,
       "Top": 28869,
       "Right": 582,
@@ -39462,7 +39463,7 @@
     },
     {
       "Text": "196.349",
-      "Confidence": 93.511444,
+      "Confidence": 86.478264,
       "Left": 1469,
       "Top": 28939,
       "Right": 1541,
@@ -39470,7 +39471,7 @@
     },
     {
       "Text": "DB",
-      "Confidence": 95.78138,
+      "Confidence": 95.07111,
       "Left": 1553,
       "Top": 28940,
       "Right": 1579,
@@ -40037,64 +40038,56 @@
       "Bottom": 29172
     },
     {
-      "Text": "21",
-      "Confidence": 92.00955,
+      "Text": "21635.165",
+      "Confidence": 83.77788,
       "Left": 1271,
-      "Top": 29154,
-      "Right": 1290,
-      "Bottom": 29169
-    },
-    {
-      "Text": "5",
-      "Confidence": 95.37341,
-      "Left": 1344,
       "Top": 29154,
       "Right": 1376,
       "Bottom": 29169
     },
     {
-      "Text": "50106",
-      "Confidence": 80.66611,
+      "Text": "Solde",
+      "Confidence": 91.227,
       "Left": 1074,
       "Top": 29211,
       "Right": 1126,
       "Bottom": 29226
     },
     {
-      "Text": "ن2",
-      "Confidence": 17.767807,
+      "Text": "au:",
+      "Confidence": 90.03291,
       "Left": 1134,
       "Top": 29215,
       "Right": 1155,
       "Bottom": 29226
     },
     {
-      "Text": ":",
-      "Confidence": 54.549713,
-      "Left": 1171,
-      "Top": 29206,
-      "Right": 1198,
-      "Bottom": 29234
-    },
-    {
-      "Text": "5",
-      "Confidence": 89.67405,
+      "Text": "08/07/2025",
+      "Confidence": 83.92145,
       "Left": 1194,
       "Top": 29210,
       "Right": 1299,
       "Bottom": 29226
     },
     {
-      "Text": "1766.471",
-      "Confidence": 89.309906,
+      "Text": "1",
+      "Confidence": 91.86505,
       "Left": 1442,
+      "Top": 29209,
+      "Right": 1447,
+      "Bottom": 29222
+    },
+    {
+      "Text": "766.471",
+      "Confidence": 91.86505,
+      "Left": 1459,
       "Top": 29208,
       "Right": 1529,
       "Bottom": 29223
     },
     {
       "Text": "DB",
-      "Confidence": 96.59576,
+      "Confidence": 94.622894,
       "Left": 1543,
       "Top": 29207,
       "Right": 1569,
@@ -40110,7 +40103,7 @@
     },
     {
       "Text": "écritures",
-      "Confidence": 91.40091,
+      "Confidence": 91.16422,
       "Left": 274,
       "Top": 29466,
       "Right": 373,
@@ -40118,7 +40111,7 @@
     },
     {
       "Text": "s'entendent",
-      "Confidence": 83.85294,
+      "Confidence": 83.22214,
       "Left": 382,
       "Top": 29465,
       "Right": 517,
@@ -40134,7 +40127,7 @@
     },
     {
       "Text": "erreur",
-      "Confidence": 93.055725,
+      "Confidence": 92.86846,
       "Left": 585,
       "Top": 29470,
       "Right": 655,
@@ -40150,7 +40143,7 @@
     },
     {
       "Text": "omission.",
-      "Confidence": 90.78947,
+      "Confidence": 88.22968,
       "Left": 701,
       "Top": 29464,
       "Right": 809,
@@ -40782,7 +40775,7 @@
     },
     {
       "Text": "2195.670",
-      "Confidence": 95.50865,
+      "Confidence": 85.96641,
       "Left": 1429,
       "Top": 30719,
       "Right": 1521,
@@ -40790,7 +40783,7 @@
     },
     {
       "Text": "CR",
-      "Confidence": 96.93362,
+      "Confidence": 89.37457,
       "Left": 1533,
       "Top": 30720,
       "Right": 1558,
@@ -40862,7 +40855,7 @@
     },
     {
       "Text": "0.166",
-      "Confidence": 88.40245,
+      "Confidence": 86.187416,
       "Left": 1095,
       "Top": 30757,
       "Right": 1146,
@@ -41454,7 +41447,7 @@
     },
     {
       "Text": "696.401",
-      "Confidence": 95.44454,
+      "Confidence": 84.07818,
       "Left": 1447,
       "Top": 30950,
       "Right": 1519,
@@ -41462,7 +41455,7 @@
     },
     {
       "Text": "CR",
-      "Confidence": 96.72569,
+      "Confidence": 91.61656,
       "Left": 1533,
       "Top": 30952,
       "Right": 1559,
@@ -45750,7 +45743,7 @@
     },
     {
       "Text": "31/07/2025",
-      "Confidence": 85.86579,
+      "Confidence": 84.87263,
       "Left": 1430,
       "Top": 34423,
       "Right": 1525,
@@ -50959,7 +50952,7 @@
   ],
   "Lines": [
     {
-      "LineText": "2~ Extrait de compte",
+      "LineText": "2~ EXtrait de compte",
       "Words": [
         {
           "Text": "2~",
@@ -50970,8 +50963,8 @@
           "Bottom": 108
         },
         {
-          "Text": "Extrait",
-          "Confidence": 89.96255,
+          "Text": "EXtrait",
+          "Confidence": 84.139755,
           "Left": 489,
           "Top": 25,
           "Right": 748,
@@ -50979,7 +50972,7 @@
         },
         {
           "Text": "de",
-          "Confidence": 92.19108,
+          "Confidence": 91.535034,
           "Left": 776,
           "Top": 28,
           "Right": 868,
@@ -50987,7 +50980,7 @@
         },
         {
           "Text": "compte",
-          "Confidence": 92.119514,
+          "Confidence": 91.40041,
           "Left": 899,
           "Top": 30,
           "Right": 1194,
@@ -51106,7 +51099,7 @@
         },
         {
           "Text": "0405822512301",
-          "Confidence": 96.71582,
+          "Confidence": 89.47179,
           "Left": 235,
           "Top": 334,
           "Right": 446,
@@ -66636,7 +66629,7 @@
         },
         {
           "Text": "RIB",
-          "Confidence": 92.56809,
+          "Confidence": 86.59074,
           "Left": 1085,
           "Top": 10670,
           "Right": 1132,
@@ -66644,7 +66637,7 @@
         },
         {
           "Text": "24011040582251230122",
-          "Confidence": 91.36447,
+          "Confidence": 91.541,
           "Left": 1223,
           "Top": 10672,
           "Right": 1557,
@@ -66689,7 +66682,7 @@
         },
         {
           "Text": "FRANCE",
-          "Confidence": 92.80441,
+          "Confidence": 91.62108,
           "Left": 394,
           "Top": 10730,
           "Right": 515,
@@ -66697,7 +66690,7 @@
         },
         {
           "Text": "Adresse",
-          "Confidence": 61.27438,
+          "Confidence": 89.66462,
           "Left": 72,
           "Top": 10731,
           "Right": 188,
@@ -67362,15 +67355,15 @@
       "Words": [
         {
           "Text": "Banque",
-          "Confidence": 92.120316,
+          "Confidence": 84.03989,
           "Left": 1299,
           "Top": 12131,
-          "Right": 1394,
+          "Right": 1397,
           "Bottom": 12170
         },
         {
           "Text": "de",
-          "Confidence": 92.238014,
+          "Confidence": 91.88534,
           "Left": 1409,
           "Top": 12131,
           "Right": 1436,
@@ -67402,8 +67395,8 @@
         },
         {
           "Text": "Emirats",
-          "Confidence": 93.27947,
-          "Left": 1650,
+          "Confidence": 90.45952,
+          "Left": 1646,
           "Top": 12131,
           "Right": 1745,
           "Bottom": 12170
@@ -67452,7 +67445,7 @@
       "Words": [
         {
           "Text": "Du",
-          "Confidence": 93.07352,
+          "Confidence": 90.15407,
           "Left": 1027,
           "Top": 12293,
           "Right": 1071,
@@ -67476,7 +67469,7 @@
         },
         {
           "Text": "31/03/2025",
-          "Confidence": 93.16719,
+          "Confidence": 90.769104,
           "Left": 1337,
           "Top": 12300,
           "Right": 1474,
@@ -67956,7 +67949,7 @@
       ]
     },
     {
-      "LineText": "… compte sur كمه",
+      "LineText": "… compte sur nos",
       "Words": [
         {
           "Text": "compte",
@@ -67975,8 +67968,8 @@
           "Bottom": 13090
         },
         {
-          "Text": "كمه",
-          "Confidence": 86.63158,
+          "Text": "nos",
+          "Confidence": 93.17933,
           "Left": 1533,
           "Top": 13078,
           "Right": 1565,
@@ -70131,7 +70124,7 @@
         },
         {
           "Text": "Emirats",
-          "Confidence": 93.23188,
+          "Confidence": 92.28437,
           "Left": 1642,
           "Top": 15149,
           "Right": 1741,
@@ -70147,7 +70140,7 @@
         },
         {
           "Text": "Banque",
-          "Confidence": 91.959885,
+          "Confidence": 84.22711,
           "Left": 1303,
           "Top": 15151,
           "Right": 1403,
@@ -80026,7 +80019,7 @@
         },
         {
           "Text": "Ville",
-          "Confidence": 90.17486,
+          "Confidence": 84.35192,
           "Left": 146,
           "Top": 21077,
           "Right": 198,
@@ -86859,15 +86852,15 @@
       "Words": [
         {
           "Text": "2",
-          "Confidence": 92.32926,
+          "Confidence": 86.07518,
           "Left": 1538,
           "Top": 25248,
-          "Right": 1547,
+          "Right": 1544,
           "Bottom": 25281
         },
         {
           "Text": "Page",
-          "Confidence": 92.1124,
+          "Confidence": 92.375015,
           "Left": 1490,
           "Top": 25258,
           "Right": 1546,
@@ -86880,7 +86873,7 @@
       "Words": [
         {
           "Text": "3",
-          "Confidence": 96.61276,
+          "Confidence": 96.965034,
           "Left": 1590,
           "Top": 25259,
           "Right": 1594,
@@ -86896,7 +86889,7 @@
         },
         {
           "Text": "sur",
-          "Confidence": 90.122284,
+          "Confidence": 86.07518,
           "Left": 1555,
           "Top": 25264,
           "Right": 1576,
@@ -86909,7 +86902,7 @@
       "Words": [
         {
           "Text": "",
-          "Confidence": 91.26817,
+          "Confidence": 82.68533,
           "Left": 436,
           "Top": 25270,
           "Right": 437,
@@ -86983,7 +86976,7 @@
         },
         {
           "Text": "0405822512301",
-          "Confidence": 96.23614,
+          "Confidence": 92.217766,
           "Left": 312,
           "Top": 25502,
           "Right": 499,
@@ -87009,7 +87002,7 @@
       "Words": [
         {
           "Text": "24011040582251230122",
-          "Confidence": 89.85781,
+          "Confidence": 92.345634,
           "Left": 1159,
           "Top": 25550,
           "Right": 1453,
@@ -87017,7 +87010,7 @@
         },
         {
           "Text": "RIB",
-          "Confidence": 91.172295,
+          "Confidence": 86.693184,
           "Left": 1040,
           "Top": 25552,
           "Right": 1082,
@@ -87062,7 +87055,7 @@
         },
         {
           "Text": "TND",
-          "Confidence": 61.96779,
+          "Confidence": 86.634056,
           "Left": 1159,
           "Top": 25601,
           "Right": 1212,
@@ -87107,7 +87100,7 @@
         },
         {
           "Text": "Adresse",
-          "Confidence": 85.71748,
+          "Confidence": 89.39525,
           "Left": 152,
           "Top": 25615,
           "Right": 255,
@@ -87256,7 +87249,7 @@
       ]
     },
     {
-      "LineText": "Libellé Référence -  D.Valeur  “Débit Crédit  “ Solde —",
+      "LineText": "Référence -  D.Valeur  “Débit Crédit  “ Solde —",
       "Words": [
         {
           "Text": "—",
@@ -87331,14 +87324,6 @@
           "Bottom": 25841
         },
         {
-          "Text": "Libellé",
-          "Confidence": 93.100685,
-          "Left": 427,
-          "Top": 25822,
-          "Right": 493,
-          "Bottom": 25857
-        },
-        {
           "Text": "D.Valeur",
           "Confidence": 91.312706,
           "Left": 862,
@@ -87357,7 +87342,7 @@
       ]
     },
     {
-      "LineText": "D. Opé. L",
+      "LineText": "D. Opé. Libellé L",
       "Words": [
         {
           "Text": "L",
@@ -87368,8 +87353,16 @@
           "Bottom": 25873
         },
         {
+          "Text": "Libellé",
+          "Confidence": 82.9517,
+          "Left": 427,
+          "Top": 25831,
+          "Right": 493,
+          "Bottom": 25848
+        },
+        {
           "Text": "Opé.",
-          "Confidence": 91.74927,
+          "Confidence": 87.34327,
           "Left": 208,
           "Top": 25832,
           "Right": 252,
@@ -93490,7 +93483,7 @@
         },
         {
           "Text": "PASSAGERES",
-          "Confidence": 91.05519,
+          "Confidence": 90.85961,
           "Left": 438,
           "Top": 28869,
           "Right": 582,
@@ -93625,7 +93618,7 @@
       "Words": [
         {
           "Text": "196.349",
-          "Confidence": 93.511444,
+          "Confidence": 86.478264,
           "Left": 1469,
           "Top": 28939,
           "Right": 1541,
@@ -93641,7 +93634,7 @@
         },
         {
           "Text": "DB",
-          "Confidence": 95.78138,
+          "Confidence": 95.07111,
           "Left": 1553,
           "Top": 28940,
           "Right": 1579,
@@ -94195,7 +94188,7 @@
       ]
     },
     {
-      "LineText": "Encours chèques : 0.000 Total قعل mouvements ٠ 24 890.064 21 5",
+      "LineText": "Encours chèques : 0.000 Total قعل mouvements ٠ 24 890.064 21635.165",
       "Words": [
         {
           "Text": "0.000",
@@ -94222,17 +94215,9 @@
           "Bottom": 29178
         },
         {
-          "Text": "21",
-          "Confidence": 92.00955,
+          "Text": "21635.165",
+          "Confidence": 83.77788,
           "Left": 1271,
-          "Top": 29154,
-          "Right": 1290,
-          "Bottom": 29169
-        },
-        {
-          "Text": "5",
-          "Confidence": 95.37341,
-          "Left": 1344,
           "Top": 29154,
           "Right": 1376,
           "Bottom": 29169
@@ -94296,51 +94281,51 @@
       ]
     },
     {
-      "LineText": "50106 ن2 : 5 1766.471 DB",
+      "LineText": "Solde au: 08/07/2025 1 766.471 DB",
       "Words": [
         {
-          "Text": ":",
-          "Confidence": 54.549713,
-          "Left": 1171,
-          "Top": 29206,
-          "Right": 1198,
-          "Bottom": 29234
-        },
-        {
           "Text": "DB",
-          "Confidence": 96.59576,
+          "Confidence": 94.622894,
           "Left": 1543,
           "Top": 29207,
           "Right": 1569,
           "Bottom": 29222
         },
         {
-          "Text": "1766.471",
-          "Confidence": 89.309906,
-          "Left": 1442,
+          "Text": "766.471",
+          "Confidence": 91.86505,
+          "Left": 1459,
           "Top": 29208,
           "Right": 1529,
           "Bottom": 29223
         },
         {
-          "Text": "5",
-          "Confidence": 89.67405,
+          "Text": "1",
+          "Confidence": 91.86505,
+          "Left": 1442,
+          "Top": 29209,
+          "Right": 1447,
+          "Bottom": 29222
+        },
+        {
+          "Text": "08/07/2025",
+          "Confidence": 83.92145,
           "Left": 1194,
           "Top": 29210,
           "Right": 1299,
           "Bottom": 29226
         },
         {
-          "Text": "50106",
-          "Confidence": 80.66611,
+          "Text": "Solde",
+          "Confidence": 91.227,
           "Left": 1074,
           "Top": 29211,
           "Right": 1126,
           "Bottom": 29226
         },
         {
-          "Text": "ن2",
-          "Confidence": 17.767807,
+          "Text": "au:",
+          "Confidence": 90.03291,
           "Left": 1134,
           "Top": 29215,
           "Right": 1155,
@@ -94353,7 +94338,7 @@
       "Words": [
         {
           "Text": "omission.",
-          "Confidence": 90.78947,
+          "Confidence": 88.22968,
           "Left": 701,
           "Top": 29464,
           "Right": 809,
@@ -94361,7 +94346,7 @@
         },
         {
           "Text": "s'entendent",
-          "Confidence": 83.85294,
+          "Confidence": 83.22214,
           "Left": 382,
           "Top": 29465,
           "Right": 517,
@@ -94385,7 +94370,7 @@
         },
         {
           "Text": "écritures",
-          "Confidence": 91.40091,
+          "Confidence": 91.16422,
           "Left": 274,
           "Top": 29466,
           "Right": 373,
@@ -94393,7 +94378,7 @@
         },
         {
           "Text": "erreur",
-          "Confidence": 93.055725,
+          "Confidence": 92.86846,
           "Left": 585,
           "Top": 29470,
           "Right": 655,
@@ -95052,7 +95037,7 @@
       "Words": [
         {
           "Text": "2195.670",
-          "Confidence": 95.50865,
+          "Confidence": 85.96641,
           "Left": 1429,
           "Top": 30719,
           "Right": 1521,
@@ -95076,7 +95061,7 @@
         },
         {
           "Text": "CR",
-          "Confidence": 96.93362,
+          "Confidence": 89.37457,
           "Left": 1533,
           "Top": 30720,
           "Right": 1558,
@@ -95238,7 +95223,7 @@
         },
         {
           "Text": "0.166",
-          "Confidence": 88.40245,
+          "Confidence": 86.187416,
           "Left": 1095,
           "Top": 30757,
           "Right": 1146,
@@ -95763,7 +95748,7 @@
         },
         {
           "Text": "696.401",
-          "Confidence": 95.44454,
+          "Confidence": 84.07818,
           "Left": 1447,
           "Top": 30950,
           "Right": 1519,
@@ -95787,7 +95772,7 @@
         },
         {
           "Text": "CR",
-          "Confidence": 96.72569,
+          "Confidence": 91.61656,
           "Left": 1533,
           "Top": 30952,
           "Right": 1559,
@@ -100538,7 +100523,7 @@
         },
         {
           "Text": "31/07/2025",
-          "Confidence": 85.86579,
+          "Confidence": 84.87263,
           "Left": 1430,
           "Top": 34423,
           "Right": 1525,

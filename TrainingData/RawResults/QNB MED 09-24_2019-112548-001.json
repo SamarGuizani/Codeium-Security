@@ -4,32 +4,28 @@
   "PageCount": 4,
   "OcrConfidence": 89.5,
   "NeedsReview": false,
-  "CustomerName": "",
   "BankName": "",
   "Account": {
     "AccountNumber": "2019-112548-001",
     "Currency": "TND",
-    "Balance": 8.705,
+    "Rib": "",
     "SoldeInitial": 28.935,
+    "SoldeFinal": 8.705,
     "SoldeDisponible": 0,
-    "TotalDebit": 0,
-    "TotalCredit": 0,
-    "SumOfDebits": -20.230,
-    "SumOfCredits": 0,
-    "DebitTotalMatches": false,
-    "CreditTotalMatches": true,
+    "TotalDebit": null,
+    "TotalCredit": null,
     "Transactions": [
       {
         "Solde": 11.935,
         "Date": "30/09/2024",
-        "Libelle": "Charges/Fees",
+        "Libelle": "Charges/Fees 2019-112548-002 Account Keeping Commission (Indiv) Charge Date 1240930",
         "Debit": -17.000,
         "Credit": null
       },
       {
         "Solde": 8.705,
         "Date": "30/09/2024",
-        "Libelle": "Tax on Charges",
+        "Libelle": "Tax on Charges 2019-112548-002 Pour toute remarque, suggestion, ou problème concernant cet email, veuillez nous appeler au +216 36 004 000 ou envoyer un e-mail support@gnb.com.tn. Veuillez visiter http://www.gnb.com.tn pour plus d'informations. Pour toute réclamation relative à une opération qui n'a pas été initiée par vos soins, veuillez appeler notre numéro hotline +216 36 004 000 dans votre situation de compte incluant les transactions à date valeur antérieure ou postérieure et exclut les éventuels montants de rectification par la banque. Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
         "Debit": -3.230,
         "Credit": null
       }

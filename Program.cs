@@ -15,7 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IOcrService, TesseractOcrService>();
+builder.Services.AddSingleton<IOcrService, TesseractOcrService>();
 builder.Services.AddScoped<IDocumentParser, BankDocumentParser>();
 builder.Services.AddScoped<DocumentAnalysisEngine>();
 builder.Services.AddScoped<PdfToImageConverter>();

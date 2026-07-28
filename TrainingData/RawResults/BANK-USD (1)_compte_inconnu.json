@@ -4,25 +4,21 @@
   "PageCount": 2,
   "OcrConfidence": 86,
   "NeedsReview": true,
-  "CustomerName": "",
   "BankName": "",
   "Account": {
     "AccountNumber": "",
     "Currency": "USD",
-    "Balance": 0,
+    "Rib": "",
     "SoldeInitial": 3300.81,
+    "SoldeFinal": null,
     "SoldeDisponible": 0,
-    "TotalDebit": 0,
-    "TotalCredit": 0,
-    "SumOfDebits": 6000.00,
-    "SumOfCredits": 4009.83,
-    "DebitTotalMatches": false,
-    "CreditTotalMatches": false,
+    "TotalDebit": null,
+    "TotalCredit": null,
     "Transactions": [
       {
         "Solde": 3291.10,
         "Date": "25/11/2024",
-        "Libelle": "PAIEMENT TPE",
+        "Libelle": "PAIEMENT TPE INTERNATIONAL",
         "Debit": null,
         "Credit": 9.71
       },
@@ -43,28 +39,28 @@
       {
         "Solde": 7290.98,
         "Date": "10/12/2024",
-        "Libelle": "E&TRANSFERT RECU",
+        "Libelle": "E&TRANSFERT RECU 24007858 ا ORD: THE RAINMAKER INSTITUTE LLC",
         "Debit": null,
         "Credit": 4000.00
       },
       {
         "Solde": 11290.98,
         "Date": "09/01/2025",
-        "Libelle": "&@TRANSFERT RECU 4 0",
+        "Libelle": "&@TRANSFERT RECU 4 0 25000082 ا ORD: THE RAINMAKER INSTITUTE LLC",
         "Debit": null,
         "Credit": null
       },
       {
         "Solde": 8290.98,
         "Date": "13/01/2025",
-        "Libelle": "@ VIREMENT EMIS MEM AG",
+        "Libelle": "@ VIREMENT EMIS MEM AG ا En faveur SOCIETE IT CAPACITIES",
         "Debit": 3000.00,
         "Credit": null
       },
       {
         "Solde": 5290.98,
         "Date": "04/02/2025",
-        "Libelle": "&@VIREMENT EMIS MEM مح",
+        "Libelle": "&@VIREMENT EMIS MEM مح ا En faveur SOCIETE IT CAPACITIES Impriméle 05/03/2025 Fermer cette fenêtre Imprimer https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 3/5/25, 2:41 PM BTK@DIRECT https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 2/2",
         "Debit": 3000.00,
         "Credit": null
       }

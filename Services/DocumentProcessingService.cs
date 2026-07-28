@@ -36,6 +36,9 @@ namespace Codeium_Security.Services
 
         public async Task<OcrResult> RunOcrOnlyAsync(string filePath, string originalFileName)
         {
+            var swTotal = System.Diagnostics.Stopwatch.StartNew();
+            Console.WriteLine($"[TIMER] ===== DEBUT {originalFileName} =====");
+
             if (!_pdfConverter.IsPdf(originalFileName) && _formatConverter.NeedsConversion(originalFileName))
             {
                 filePath = _formatConverter.ConvertToPng(filePath);
@@ -45,12 +48,15 @@ namespace Codeium_Security.Services
 
             if (_pdfConverter.IsPdf(originalFileName))
             {
+                var swConvert = System.Diagnostics.Stopwatch.StartNew();
                 string pdfImagesFolder = Path.Combine("Images", "pdf_pages_" + Path.GetFileNameWithoutExtension(originalFileName));
                 var pageImagePaths = _pdfConverter.ConvertPdfToImages(filePath, pdfImagesFolder);
+                Console.WriteLine($"[TIMER] Conversion PDF->images: {swConvert.ElapsedMilliseconds} ms pour {pageImagePaths.Count} pages");
 
                 var pageResults = new List<OcrResult>();
                 foreach (var pageImagePath in pageImagePaths)
                 {
+                    var swOcr = System.Diagnostics.Stopwatch.StartNew();
                     try
                     {
                         var fileInfo = new FileInfo(pageImagePath);
@@ -60,12 +66,13 @@ namespace Codeium_Security.Services
                             continue;
                         }
 
+                        Console.WriteLine($"[TIMER] --> Debut OCR page: {pageImagePath}");
                         pageResults.Add(await _ocrService.ExtractTextAsync(pageImagePath));
+                        Console.WriteLine($"[TIMER] <-- Fin OCR page: {pageImagePath} : {swOcr.ElapsedMilliseconds} ms");
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-                        // Page illisible/corrompue : on l'ignore et on continue avec une page vide
-                        // plutôt que de faire planter tout le traitement du document
+                        Console.WriteLine($"[TIMER] !!! ERREUR OCR page {pageImagePath} apres {swOcr.ElapsedMilliseconds} ms: {ex.Message}");
                         pageResults.Add(new OcrResult { FullText = "", Confidence = 0, Words = new List<OcrWord>() });
                     }
                 }
@@ -74,7 +81,10 @@ namespace Codeium_Security.Services
             }
             else
             {
+                var swOcr = System.Diagnostics.Stopwatch.StartNew();
+                Console.WriteLine($"[TIMER] --> Debut OCR fichier unique: {filePath}");
                 ocrResult = await _ocrService.ExtractTextAsync(filePath);
+                Console.WriteLine($"[TIMER] <-- Fin OCR fichier unique: {swOcr.ElapsedMilliseconds} ms");
                 ocrResult.PageTexts = new List<string> { ocrResult.FullText };
                 ocrResult.PageCount = 1;
             }
@@ -87,6 +97,7 @@ namespace Codeium_Security.Services
             foreach (var word in ocrResult.Words)
                 word.Text = TextCleaner.RemoveStrayTableBorders(word.Text);
 
+            Console.WriteLine($"[TIMER] ===== FIN {originalFileName}: {swTotal.ElapsedMilliseconds} ms TOTAL =====");
             return ocrResult;
         }
 

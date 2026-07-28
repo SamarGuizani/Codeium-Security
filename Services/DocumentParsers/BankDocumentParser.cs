@@ -55,10 +55,10 @@ namespace Codeium_Security.Services.DocumentParsers
                 string joined = string.Join(" ", cellTexts);
                 sectionRawText += joined + "\n";
 
-                var accMatch = Regex.Match(joined, @"\b(\d{2,5}-\d{4,8}-\d{1,4})\b");
+                var accMatch = Regex.Match(joined, @"\b(\d{2,5}-\d{4,10}-\d{1,4})\b");
                 if (accMatch.Success) lastSeenAccountNumber = accMatch.Groups[1].Value;
 
-             
+
 
                 var ribMatch = Regex.Match(joined, @"TN\d{2}[\s\d]{15,25}");
                 if (ribMatch.Success && current != null) current.Rib = Regex.Replace(ribMatch.Value, @"\s+", " ").Trim();
@@ -119,7 +119,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     // Pas de date sur cette ligne : c'est la suite du libelle de la derniere transaction
                     // (reference, POS, nom du beneficiaire, motif, etc. - tout ce qui suit avant la prochaine date)
                     if (current.Transactions.Count > 0 && !AmountRegex.IsMatch(joined)
-                        && !Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final))\b", RegexOptions.IgnoreCase))
+                         && !Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\))", RegexOptions.IgnoreCase))
                     {
                         var lastTx = current.Transactions[current.Transactions.Count - 1];
                         lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();

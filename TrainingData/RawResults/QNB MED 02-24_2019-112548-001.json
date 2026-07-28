@@ -4,20 +4,16 @@
   "PageCount": 4,
   "OcrConfidence": 89.5,
   "NeedsReview": false,
-  "CustomerName": "",
   "BankName": "",
   "Account": {
     "AccountNumber": "2019-112548-001",
     "Currency": "TND",
-    "Balance": 69.395,
+    "Rib": "",
     "SoldeInitial": 69.395,
+    "SoldeFinal": 69.395,
     "SoldeDisponible": 0,
-    "TotalDebit": 0,
-    "TotalCredit": 0,
-    "SumOfDebits": 0,
-    "SumOfCredits": 0,
-    "DebitTotalMatches": true,
-    "CreditTotalMatches": true,
+    "TotalDebit": null,
+    "TotalCredit": null,
     "Transactions": []
   }
 }
