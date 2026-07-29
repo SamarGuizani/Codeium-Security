@@ -32,7 +32,7 @@
     "31/01/2025 30/01/2025 COM VIREMENT MM BQ AC-0000726353 FT25031S966R -1,785",
     "31/01/2025 30/01/2025 VIREMENT TN MM BQ BLUE TUNISIE SAR FT25031S966R -2.250,000",
     "31/01/2025 31/01/2025 COM VIR TN AUTRE BQ AC-TND105050001 FT25051BXGJQ -2,380",
-    "31/01/2025 31/01/2025 VIR TN AUTRE BQ FT25051BXGJQ - 4",
+    "31/01/2025 31/01/2025 VIR TN AUTRE BQ FT25051BXGJQ -3.542,994",
     "31/01/2025 31/01/2025 VIR TN AUTRE BQ SOHOTO MARHABA S FT25051LI]MQH 3.108,922",
     "31/01/2025 31/01/2025 COM VIR TN AUTRE BQ AC-0000774919 FT25051LI]MQH -1,785",
     "31/01/2025 31/01/2025 VIR TN AUTRE BQ SOHOTO MARHABA S FT250315CKQ3 3.952,347",
@@ -287,7 +287,7 @@
     },
     {
       "Text": "Agence",
-      "Confidence": 92.15964,
+      "Confidence": 89.221855,
       "Left": 660,
       "Top": 182,
       "Right": 773,
@@ -295,7 +295,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 92.15964,
+      "Confidence": 91.124176,
       "Left": 784,
       "Top": 189,
       "Right": 790,
@@ -311,7 +311,7 @@
     },
     {
       "Text": "CHARGUIA",
-      "Confidence": 90.0482,
+      "Confidence": 88.28637,
       "Left": 952,
       "Top": 182,
       "Right": 1131,
@@ -327,7 +327,7 @@
     },
     {
       "Text": "Date",
-      "Confidence": 92.829185,
+      "Confidence": 89.45844,
       "Left": 1079,
       "Top": 247,
       "Right": 1139,
@@ -655,7 +655,7 @@
     },
     {
       "Text": "CHG2503149420",
-      "Confidence": 91.23883,
+      "Confidence": 86.849045,
       "Left": 1077,
       "Top": 951,
       "Right": 1274,
@@ -663,7 +663,7 @@
     },
     {
       "Text": "-0,500",
-      "Confidence": 92.00752,
+      "Confidence": 92.004265,
       "Left": 1417,
       "Top": 951,
       "Right": 1493,
@@ -783,7 +783,7 @@
     },
     {
       "Text": "CHG2503182301",
-      "Confidence": 91.94389,
+      "Confidence": 83.3181,
       "Left": 1077,
       "Top": 1042,
       "Right": 1267,
@@ -791,7 +791,7 @@
     },
     {
       "Text": "-0,500",
-      "Confidence": 92.00752,
+      "Confidence": 92.004265,
       "Left": 1417,
       "Top": 1042,
       "Right": 1493,
@@ -951,7 +951,7 @@
     },
     {
       "Text": "30/01/2025",
-      "Confidence": 85.65154,
+      "Confidence": 83.51231,
       "Left": 340,
       "Top": 1179,
       "Right": 476,
@@ -1238,17 +1238,9 @@
       "Bottom": 1341
     },
     {
-      "Text": "-",
-      "Confidence": 86.969955,
+      "Text": "-3.542,994",
+      "Confidence": 86.13269,
       "Left": 1371,
-      "Top": 1316,
-      "Right": 1427,
-      "Bottom": 1336
-    },
-    {
-      "Text": "4",
-      "Confidence": 87.908005,
-      "Left": 1459,
       "Top": 1316,
       "Right": 1494,
       "Bottom": 1339
@@ -1583,7 +1575,7 @@
     },
     {
       "Text": "-1,785",
-      "Confidence": 91.69513,
+      "Confidence": 86.8895,
       "Left": 1428,
       "Top": 1498,
       "Right": 1494,
@@ -1767,7 +1759,7 @@
     },
     {
       "Text": "-1,785",
-      "Confidence": 91.69513,
+      "Confidence": 86.8895,
       "Left": 1428,
       "Top": 1589,
       "Right": 1494,
@@ -2143,7 +2135,7 @@
     },
     {
       "Text": "VIR",
-      "Confidence": 95.71209,
+      "Confidence": 85.55264,
       "Left": 580,
       "Top": 1863,
       "Right": 622,
@@ -2191,7 +2183,7 @@
     },
     {
       "Text": "-1,785",
-      "Confidence": 91.69513,
+      "Confidence": 86.8895,
       "Left": 1428,
       "Top": 1863,
       "Right": 1494,
@@ -2207,7 +2199,7 @@
     },
     {
       "Text": "28/01/2025",
-      "Confidence": 92.77296,
+      "Confidence": 91.58588,
       "Left": 340,
       "Top": 1909,
       "Right": 475,
@@ -2247,7 +2239,7 @@
     },
     {
       "Text": "AC-0025544158",
-      "Confidence": 91.29288,
+      "Confidence": 90.37709,
       "Left": 817,
       "Top": 1909,
       "Right": 1004,
@@ -2263,7 +2255,7 @@
     },
     {
       "Text": "-1,785",
-      "Confidence": 91.69513,
+      "Confidence": 86.8895,
       "Left": 1428,
       "Top": 1909,
       "Right": 1494,
@@ -2279,7 +2271,7 @@
     },
     {
       "Text": "28/01/2025",
-      "Confidence": 95.38854,
+      "Confidence": 91.32648,
       "Left": 340,
       "Top": 1954,
       "Right": 475,
@@ -2319,7 +2311,7 @@
     },
     {
       "Text": "AY",
-      "Confidence": 92.17302,
+      "Confidence": 92.02069,
       "Left": 791,
       "Top": 1954,
       "Right": 824,
@@ -2351,7 +2343,7 @@
     },
     {
       "Text": "-950,501",
-      "Confidence": 91.97473,
+      "Confidence": 86.54546,
       "Left": 1395,
       "Top": 1954,
       "Right": 1492,
@@ -2511,7 +2503,7 @@
     },
     {
       "Text": "29/01/2025",
-      "Confidence": 95.63684,
+      "Confidence": 91.86721,
       "Left": 340,
       "Top": 2091,
       "Right": 475,
@@ -2527,7 +2519,7 @@
     },
     {
       "Text": "VIR",
-      "Confidence": 95.00393,
+      "Confidence": 83.70924,
       "Left": 580,
       "Top": 2091,
       "Right": 622,
@@ -2559,7 +2551,7 @@
     },
     {
       "Text": "AC-TND105050001",
-      "Confidence": 90.402985,
+      "Confidence": 87.06484,
       "Left": 806,
       "Top": 2091,
       "Right": 1028,
@@ -2775,7 +2767,7 @@
     },
     {
       "Text": "29/01/2025",
-      "Confidence": 91.64913,
+      "Confidence": 84.85221,
       "Left": 141,
       "Top": 2273,
       "Right": 276,
@@ -2799,7 +2791,7 @@
     },
     {
       "Text": "PDL",
-      "Confidence": 92.59434,
+      "Confidence": 92.703804,
       "Left": 591,
       "Top": 2273,
       "Right": 640,
@@ -2807,7 +2799,7 @@
     },
     {
       "Text": "20250129",
-      "Confidence": 93.29848,
+      "Confidence": 93.29746,
       "Left": 648,
       "Top": 2273,
       "Right": 758,
@@ -2823,7 +2815,7 @@
     },
     {
       "Text": "CHG2502980023",
-      "Confidence": 91.28897,
+      "Confidence": 85.86001,
       "Left": 1077,
       "Top": 2273,
       "Right": 1282,
@@ -2831,7 +2823,7 @@
     },
     {
       "Text": "-0,500",
-      "Confidence": 92.00752,
+      "Confidence": 92.004265,
       "Left": 1417,
       "Top": 2273,
       "Right": 1493,
@@ -2847,7 +2839,7 @@
     },
     {
       "Text": "29/01/2025",
-      "Confidence": 91.62549,
+      "Confidence": 86.21889,
       "Left": 141,
       "Top": 2319,
       "Right": 276,
@@ -2855,7 +2847,7 @@
     },
     {
       "Text": "29/01/2025",
-      "Confidence": 92.284225,
+      "Confidence": 91.10385,
       "Left": 340,
       "Top": 2319,
       "Right": 475,
@@ -2871,7 +2863,7 @@
     },
     {
       "Text": "CHEQ",
-      "Confidence": 92.74686,
+      "Confidence": 92.70795,
       "Left": 574,
       "Top": 2319,
       "Right": 644,
@@ -2879,7 +2871,7 @@
     },
     {
       "Text": "TN",
-      "Confidence": 93.283516,
+      "Confidence": 92.999954,
       "Left": 653,
       "Top": 2319,
       "Right": 685,
@@ -11646,7 +11638,7 @@
       "Words": [
         {
           "Text": "Agence",
-          "Confidence": 92.15964,
+          "Confidence": 89.221855,
           "Left": 660,
           "Top": 182,
           "Right": 773,
@@ -11662,7 +11654,7 @@
         },
         {
           "Text": "CHARGUIA",
-          "Confidence": 90.0482,
+          "Confidence": 88.28637,
           "Left": 952,
           "Top": 182,
           "Right": 1131,
@@ -11678,7 +11670,7 @@
         },
         {
           "Text": ":",
-          "Confidence": 92.15964,
+          "Confidence": 91.124176,
           "Left": 784,
           "Top": 189,
           "Right": 790,
@@ -11699,7 +11691,7 @@
         },
         {
           "Text": "Date",
-          "Confidence": 92.829185,
+          "Confidence": 89.45844,
           "Left": 1079,
           "Top": 247,
           "Right": 1139,
@@ -12064,7 +12056,7 @@
         },
         {
           "Text": "CHG2503149420",
-          "Confidence": 91.23883,
+          "Confidence": 86.849045,
           "Left": 1077,
           "Top": 951,
           "Right": 1274,
@@ -12072,7 +12064,7 @@
         },
         {
           "Text": "-0,500",
-          "Confidence": 92.00752,
+          "Confidence": 92.004265,
           "Left": 1417,
           "Top": 951,
           "Right": 1493,
@@ -12202,7 +12194,7 @@
         },
         {
           "Text": "CHG2503182301",
-          "Confidence": 91.94389,
+          "Confidence": 83.3181,
           "Left": 1077,
           "Top": 1042,
           "Right": 1267,
@@ -12210,7 +12202,7 @@
         },
         {
           "Text": "-0,500",
-          "Confidence": 92.00752,
+          "Confidence": 92.004265,
           "Left": 1417,
           "Top": 1042,
           "Right": 1493,
@@ -12385,7 +12377,7 @@
         },
         {
           "Text": "30/01/2025",
-          "Confidence": 85.65154,
+          "Confidence": 83.51231,
           "Left": 340,
           "Top": 1179,
           "Right": 476,
@@ -12628,7 +12620,7 @@
       ]
     },
     {
-      "LineText": "31/01/2025 31/01/2025 VIR TN AUTRE BQ FT25051BXGJQ - 4",
+      "LineText": "31/01/2025 31/01/2025 VIR TN AUTRE BQ FT25051BXGJQ -3.542,994",
       "Words": [
         {
           "Text": "31/01/2025",
@@ -12687,17 +12679,9 @@
           "Bottom": 1341
         },
         {
-          "Text": "-",
-          "Confidence": 86.969955,
+          "Text": "-3.542,994",
+          "Confidence": 86.13269,
           "Left": 1371,
-          "Top": 1316,
-          "Right": 1427,
-          "Bottom": 1336
-        },
-        {
-          "Text": "4",
-          "Confidence": 87.908005,
-          "Left": 1459,
           "Top": 1316,
           "Right": 1494,
           "Bottom": 1339
@@ -13052,7 +13036,7 @@
         },
         {
           "Text": "-1,785",
-          "Confidence": 91.69513,
+          "Confidence": 86.8895,
           "Left": 1428,
           "Top": 1498,
           "Right": 1494,
@@ -13246,7 +13230,7 @@
         },
         {
           "Text": "-1,785",
-          "Confidence": 91.69513,
+          "Confidence": 86.8895,
           "Left": 1428,
           "Top": 1589,
           "Right": 1494,
@@ -13652,7 +13636,7 @@
         },
         {
           "Text": "VIR",
-          "Confidence": 95.71209,
+          "Confidence": 85.55264,
           "Left": 580,
           "Top": 1863,
           "Right": 622,
@@ -13700,7 +13684,7 @@
         },
         {
           "Text": "-1,785",
-          "Confidence": 91.69513,
+          "Confidence": 86.8895,
           "Left": 1428,
           "Top": 1863,
           "Right": 1494,
@@ -13721,7 +13705,7 @@
         },
         {
           "Text": "28/01/2025",
-          "Confidence": 92.77296,
+          "Confidence": 91.58588,
           "Left": 340,
           "Top": 1909,
           "Right": 475,
@@ -13761,7 +13745,7 @@
         },
         {
           "Text": "AC-0025544158",
-          "Confidence": 91.29288,
+          "Confidence": 90.37709,
           "Left": 817,
           "Top": 1909,
           "Right": 1004,
@@ -13777,7 +13761,7 @@
         },
         {
           "Text": "-1,785",
-          "Confidence": 91.69513,
+          "Confidence": 86.8895,
           "Left": 1428,
           "Top": 1909,
           "Right": 1494,
@@ -13798,7 +13782,7 @@
         },
         {
           "Text": "28/01/2025",
-          "Confidence": 95.38854,
+          "Confidence": 91.32648,
           "Left": 340,
           "Top": 1954,
           "Right": 475,
@@ -13838,7 +13822,7 @@
         },
         {
           "Text": "AY",
-          "Confidence": 92.17302,
+          "Confidence": 92.02069,
           "Left": 791,
           "Top": 1954,
           "Right": 824,
@@ -13870,7 +13854,7 @@
         },
         {
           "Text": "-950,501",
-          "Confidence": 91.97473,
+          "Confidence": 86.54546,
           "Left": 1395,
           "Top": 1954,
           "Right": 1492,
@@ -14045,7 +14029,7 @@
         },
         {
           "Text": "29/01/2025",
-          "Confidence": 95.63684,
+          "Confidence": 91.86721,
           "Left": 340,
           "Top": 2091,
           "Right": 475,
@@ -14061,7 +14045,7 @@
         },
         {
           "Text": "VIR",
-          "Confidence": 95.00393,
+          "Confidence": 83.70924,
           "Left": 580,
           "Top": 2091,
           "Right": 622,
@@ -14093,7 +14077,7 @@
         },
         {
           "Text": "AC-TND105050001",
-          "Confidence": 90.402985,
+          "Confidence": 87.06484,
           "Left": 806,
           "Top": 2091,
           "Right": 1028,
@@ -14329,7 +14313,7 @@
       "Words": [
         {
           "Text": "29/01/2025",
-          "Confidence": 91.64913,
+          "Confidence": 84.85221,
           "Left": 141,
           "Top": 2273,
           "Right": 276,
@@ -14353,7 +14337,7 @@
         },
         {
           "Text": "PDL",
-          "Confidence": 92.59434,
+          "Confidence": 92.703804,
           "Left": 591,
           "Top": 2273,
           "Right": 640,
@@ -14361,7 +14345,7 @@
         },
         {
           "Text": "20250129",
-          "Confidence": 93.29848,
+          "Confidence": 93.29746,
           "Left": 648,
           "Top": 2273,
           "Right": 758,
@@ -14377,7 +14361,7 @@
         },
         {
           "Text": "CHG2502980023",
-          "Confidence": 91.28897,
+          "Confidence": 85.86001,
           "Left": 1077,
           "Top": 2273,
           "Right": 1282,
@@ -14385,7 +14369,7 @@
         },
         {
           "Text": "-0,500",
-          "Confidence": 92.00752,
+          "Confidence": 92.004265,
           "Left": 1417,
           "Top": 2273,
           "Right": 1493,
@@ -14398,7 +14382,7 @@
       "Words": [
         {
           "Text": "29/01/2025",
-          "Confidence": 91.62549,
+          "Confidence": 86.21889,
           "Left": 141,
           "Top": 2319,
           "Right": 276,
@@ -14406,7 +14390,7 @@
         },
         {
           "Text": "29/01/2025",
-          "Confidence": 92.284225,
+          "Confidence": 91.10385,
           "Left": 340,
           "Top": 2319,
           "Right": 475,
@@ -14422,7 +14406,7 @@
         },
         {
           "Text": "CHEQ",
-          "Confidence": 92.74686,
+          "Confidence": 92.70795,
           "Left": 574,
           "Top": 2319,
           "Right": 644,
@@ -14430,7 +14414,7 @@
         },
         {
           "Text": "TN",
-          "Confidence": 93.283516,
+          "Confidence": 92.999954,
           "Left": 653,
           "Top": 2319,
           "Right": 685,

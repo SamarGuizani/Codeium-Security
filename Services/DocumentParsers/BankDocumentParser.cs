@@ -40,9 +40,10 @@ namespace Codeium_Security.Services.DocumentParsers
             BankAccountSection? current = null;
             decimal? previousSolde = null;
             string lastSeenAccountNumber = "";
+            string lastSeenRib = "";
+            string pendingLibelleBuffer = "";
             string sectionRawText = "";
 
-            // Calibration des colonnes par en-tete (position X de "Debit"/"Credit"/"Solde")
             int? debitAnchor = null, creditAnchor = null, soldeAnchor = null;
 
             foreach (var row in rows)
@@ -58,12 +59,9 @@ namespace Codeium_Security.Services.DocumentParsers
                 var accMatch = Regex.Match(joined, @"\b(\d{2,5}-\d{4,10}-\d{1,4})\b");
                 if (accMatch.Success) lastSeenAccountNumber = accMatch.Groups[1].Value;
 
-
-
                 var ribMatch = Regex.Match(joined, @"TN\d{2}[\s\d]{15,25}");
-                if (ribMatch.Success && current != null) current.Rib = Regex.Replace(ribMatch.Value, @"\s+", " ").Trim();
+                if (ribMatch.Success) lastSeenRib = Regex.Replace(ribMatch.Value, @"\s+", "").Trim();
 
-                // Detecte la ligne d'en-tete de colonnes et calibre les positions X une fois par section
                 var debitCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"D[ée]bit", RegexOptions.IgnoreCase));
                 var creditCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"Cr[ée]dit", RegexOptions.IgnoreCase));
                 var soldeCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"^Solde$", RegexOptions.IgnoreCase));
@@ -72,7 +70,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     if (debitCell != null) debitAnchor = debitCell.Left;
                     if (creditCell != null) creditAnchor = creditCell.Left;
                     if (soldeCell != null) soldeAnchor = soldeCell.Left;
-                    continue; // ligne d'en-tete, jamais une transaction
+                    continue;
                 }
 
                 if (Regex.IsMatch(joined, @"Solde\s*Initial", RegexOptions.IgnoreCase))
@@ -90,10 +88,12 @@ namespace Codeium_Security.Services.DocumentParsers
                     current = new BankAccountSection
                     {
                         AccountNumber = lastSeenAccountNumber,
+                        Rib = lastSeenRib,
                         Currency = ExtractCurrency(fullText),
                         SoldeInitial = soldeInit
                     };
                     previousSolde = soldeInit;
+                    pendingLibelleBuffer = "";
                     continue;
                 }
 
@@ -116,19 +116,24 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 if (string.IsNullOrEmpty(normalizedDate))
                 {
-                    // Pas de date sur cette ligne : c'est la suite du libelle de la derniere transaction
-                    // (reference, POS, nom du beneficiaire, motif, etc. - tout ce qui suit avant la prochaine date)
-                    if (current.Transactions.Count > 0 && !AmountRegex.IsMatch(joined)
-                         && !Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\))", RegexOptions.IgnoreCase))
+                    bool looksLikeAmountOnlyLine = AmountRegex.IsMatch(joined) && joined.Trim().Length <= 15;
+                    bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\))", RegexOptions.IgnoreCase);
+
+                    if (!looksLikeAmountOnlyLine && !isNoise)
                     {
-                        var lastTx = current.Transactions[current.Transactions.Count - 1];
-                        lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
+                        if (current.Transactions.Count > 0)
+                        {
+                            var lastTx = current.Transactions[current.Transactions.Count - 1];
+                            lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
+                        }
+                        else
+                        {
+                            pendingLibelleBuffer = (pendingLibelleBuffer + " " + joined.Trim()).Trim();
+                        }
                     }
                     continue;
                 }
-                if (string.IsNullOrEmpty(normalizedDate)) continue;
 
-                // Cellules candidates montant, AVEC leur position X d'origine
                 var amountCandidates = cells.Skip(0)
                     .Where(c => AmountRegex.IsMatch(MergeLoneSignCells(new List<string> { CleanWhitespace(c.Text) })[0]))
                     .Select(c => new { Left = c.Left, Value = ParseAmount(AmountRegex.Match(CleanWhitespace(c.Text)).Value) })
@@ -138,14 +143,14 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)))
                     .Trim(' ', '|', '[', ']', '-', '_');
-                // Filet de securite : retire toute date qui aurait fuite dans le libelle
                 description = Regex.Replace(description, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
 
-                var tx = new Transaction { Date = normalizedDate, Libelle = description };
+                string fullDescription = (pendingLibelleBuffer + " " + description).Trim();
+                pendingLibelleBuffer = "";
+                var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
 
                 if (debitAnchor.HasValue && creditAnchor.HasValue)
                 {
-                    // Assignation par vraie position de colonne, pas par devinette
                     foreach (var cand in amountCandidates)
                     {
                         int distDebit = Math.Abs(cand.Left - debitAnchor.Value);
@@ -164,7 +169,6 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
                 else
                 {
-                    // Repli : pas d'en-tete detecte pour cette section -> ancienne heuristique par comparaison de solde
                     var amounts = amountCandidates.Select(a => a.Value).ToList();
                     if (amounts.Count == 1)
                     {
@@ -196,7 +200,6 @@ namespace Codeium_Security.Services.DocumentParsers
 
             foreach (var sec in sections)
             {
-                // BUG 4 : extrait Total Debit/Credit depuis le texte brut de CETTE section uniquement
                 var totalDebitMatch = Regex.Match(sec.RawSectionText,
                     @"Total\s*(?:des\s*)?D[ée]bit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (totalDebitMatch.Success) sec.TotalDebit = ParseAmount(totalDebitMatch.Groups[1].Value);
@@ -205,7 +208,17 @@ namespace Codeium_Security.Services.DocumentParsers
                     @"Total\s*(?:des\s*)?Cr[ée]dit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (totalCreditMatch.Success) sec.TotalCredit = ParseAmount(totalCreditMatch.Groups[1].Value);
 
-               
+                // Repli ATTIJARI/BIAT : "Total" suivi de 2 montants sans mot-cle repete
+                if (!sec.TotalDebit.HasValue && !sec.TotalCredit.HasValue)
+                {
+                    var totalTwoNumbers = Regex.Match(sec.RawSectionText,
+                        @"Total\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    if (totalTwoNumbers.Success)
+                    {
+                        sec.TotalDebit = ParseAmount(totalTwoNumbers.Groups[1].Value);
+                        sec.TotalCredit = ParseAmount(totalTwoNumbers.Groups[2].Value);
+                    }
+                }
             }
 
             return sections;

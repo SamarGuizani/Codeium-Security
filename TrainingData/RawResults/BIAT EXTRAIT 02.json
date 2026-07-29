@@ -2,7 +2,7 @@
   "FileName": "BIAT EXTRAIT 02.pdf",
   "DetectedType": "Bank",
   "PageCount": 7,
-  "OcrConfidence": 91.28571,
+  "OcrConfidence": 91,
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
@@ -253,7 +253,7 @@
     },
     {
       "Text": "Compte",
-      "Confidence": 91.7783,
+      "Confidence": 89.333664,
       "Left": 94,
       "Top": 224,
       "Right": 193,
@@ -261,7 +261,7 @@
     },
     {
       "Text": "numéro",
-      "Confidence": 91.76778,
+      "Confidence": 87.27331,
       "Left": 202,
       "Top": 224,
       "Right": 298,
@@ -277,7 +277,7 @@
     },
     {
       "Text": "Devise",
-      "Confidence": 91.677475,
+      "Confidence": 88.34138,
       "Left": 94,
       "Top": 281,
       "Right": 175,
@@ -285,7 +285,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 92.126236,
+      "Confidence": 88.34138,
       "Left": 185,
       "Top": 287,
       "Right": 190,
@@ -293,7 +293,7 @@
     },
     {
       "Text": "Date",
-      "Confidence": 92.77881,
+      "Confidence": 92.31781,
       "Left": 103,
       "Top": 329,
       "Right": 159,
@@ -301,7 +301,7 @@
     },
     {
       "Text": "valeur",
-      "Confidence": 91.90614,
+      "Confidence": 92.31781,
       "Left": 167,
       "Top": 329,
       "Right": 244,
@@ -309,7 +309,7 @@
     },
     {
       "Text": "08",
-      "Confidence": 93.13639,
+      "Confidence": 92.14689,
       "Left": 103,
       "Top": 442,
       "Right": 130,
@@ -317,7 +317,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 89.93844,
+      "Confidence": 92.63606,
       "Left": 139,
       "Top": 442,
       "Right": 192,
@@ -325,7 +325,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.48737,
+      "Confidence": 96.66429,
       "Left": 200,
       "Top": 442,
       "Right": 228,
@@ -333,7 +333,7 @@
     },
     {
       "Text": "09",
-      "Confidence": 93.02409,
+      "Confidence": 89.89967,
       "Left": 103,
       "Top": 556,
       "Right": 130,
@@ -341,7 +341,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 91.0055,
+      "Confidence": 89.89967,
       "Left": 139,
       "Top": 556,
       "Right": 192,
@@ -349,7 +349,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.73154,
+      "Confidence": 96.65439,
       "Left": 200,
       "Top": 556,
       "Right": 228,
@@ -357,7 +357,7 @@
     },
     {
       "Text": "19",
-      "Confidence": 93.15729,
+      "Confidence": 88.93946,
       "Left": 106,
       "Top": 670,
       "Right": 130,
@@ -365,7 +365,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 90.694984,
+      "Confidence": 88.93946,
       "Left": 139,
       "Top": 670,
       "Right": 192,
@@ -373,7 +373,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 95.945366,
+      "Confidence": 95.45512,
       "Left": 200,
       "Top": 670,
       "Right": 228,
@@ -381,7 +381,7 @@
     },
     {
       "Text": "19",
-      "Confidence": 93.15729,
+      "Confidence": 88.93946,
       "Left": 106,
       "Top": 784,
       "Right": 130,
@@ -389,7 +389,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 90.694984,
+      "Confidence": 88.93946,
       "Left": 139,
       "Top": 784,
       "Right": 192,
@@ -397,7 +397,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 95.945366,
+      "Confidence": 95.45512,
       "Left": 200,
       "Top": 784,
       "Right": 228,
@@ -405,7 +405,7 @@
     },
     {
       "Text": "22",
-      "Confidence": 93.276596,
+      "Confidence": 91.6363,
       "Left": 103,
       "Top": 1011,
       "Right": 130,
@@ -413,7 +413,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 92.51636,
+      "Confidence": 91.6363,
       "Left": 139,
       "Top": 1011,
       "Right": 192,
@@ -421,7 +421,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.74453,
+      "Confidence": 96.20637,
       "Left": 200,
       "Top": 1011,
       "Right": 228,
@@ -429,7 +429,7 @@
     },
     {
       "Text": "22",
-      "Confidence": 93.276596,
+      "Confidence": 91.6363,
       "Left": 103,
       "Top": 1125,
       "Right": 130,
@@ -437,7 +437,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 92.51636,
+      "Confidence": 91.6363,
       "Left": 139,
       "Top": 1125,
       "Right": 192,
@@ -445,7 +445,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.74453,
+      "Confidence": 96.20637,
       "Left": 200,
       "Top": 1125,
       "Right": 228,
@@ -453,7 +453,7 @@
     },
     {
       "Text": "15",
-      "Confidence": 92.607925,
+      "Confidence": 89.81221,
       "Left": 106,
       "Top": 1239,
       "Right": 129,
@@ -461,7 +461,7 @@
     },
     {
       "Text": "FEB",
-      "Confidence": 91.23999,
+      "Confidence": 89.81221,
       "Left": 139,
       "Top": 1239,
       "Right": 191,
@@ -469,7 +469,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.688774,
+      "Confidence": 96.77237,
       "Left": 200,
       "Top": 1239,
       "Right": 228,
@@ -477,7 +477,7 @@
     },
     {
       "Text": "16",
-      "Confidence": 92.70332,
+      "Confidence": 93.013695,
       "Left": 106,
       "Top": 1410,
       "Right": 131,
@@ -485,7 +485,7 @@
     },
     {
       "Text": "FEB",
-      "Confidence": 92.70332,
+      "Confidence": 91.17468,
       "Left": 139,
       "Top": 1410,
       "Right": 191,
@@ -493,7 +493,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.73717,
+      "Confidence": 96.78031,
       "Left": 200,
       "Top": 1410,
       "Right": 228,
@@ -501,7 +501,7 @@
     },
     {
       "Text": "16",
-      "Confidence": 92.70332,
+      "Confidence": 93.013695,
       "Left": 106,
       "Top": 1524,
       "Right": 131,
@@ -509,7 +509,7 @@
     },
     {
       "Text": "FEB",
-      "Confidence": 92.70332,
+      "Confidence": 91.17468,
       "Left": 139,
       "Top": 1524,
       "Right": 191,
@@ -517,7 +517,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.73717,
+      "Confidence": 96.78031,
       "Left": 200,
       "Top": 1524,
       "Right": 228,
@@ -525,7 +525,7 @@
     },
     {
       "Text": "19",
-      "Confidence": 93.11926,
+      "Confidence": 92.72176,
       "Left": 106,
       "Top": 1638,
       "Right": 130,
@@ -533,7 +533,7 @@
     },
     {
       "Text": "FEB",
-      "Confidence": 91.44702,
+      "Confidence": 91.449356,
       "Left": 139,
       "Top": 1638,
       "Right": 191,
@@ -541,7 +541,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.71581,
+      "Confidence": 96.58151,
       "Left": 200,
       "Top": 1638,
       "Right": 228,
@@ -549,7 +549,7 @@
     },
     {
       "Text": "TND",
-      "Confidence": 91.083984,
+      "Confidence": 92.59918,
       "Left": 322,
       "Top": 281,
       "Right": 382,
@@ -557,7 +557,7 @@
     },
     {
       "Text": "Libellé",
-      "Confidence": 92.27793,
+      "Confidence": 89.58245,
       "Left": 268,
       "Top": 328,
       "Right": 351,
@@ -565,7 +565,7 @@
     },
     {
       "Text": "opération",
-      "Confidence": 92.471275,
+      "Confidence": 92.989456,
       "Left": 359,
       "Top": 328,
       "Right": 475,
@@ -573,7 +573,7 @@
     },
     {
       "Text": "Solde",
-      "Confidence": 92.04334,
+      "Confidence": 92.119896,
       "Left": 275,
       "Top": 385,
       "Right": 339,
@@ -581,7 +581,7 @@
     },
     {
       "Text": "départ",
-      "Confidence": 91.34468,
+      "Confidence": 92.06584,
       "Left": 348,
       "Top": 385,
       "Right": 420,
@@ -589,7 +589,7 @@
     },
     {
       "Text": "au",
-      "Confidence": 93.22238,
+      "Confidence": 93.030945,
       "Left": 428,
       "Top": 392,
       "Right": 454,
@@ -597,7 +597,7 @@
     },
     {
       "Text": "04",
-      "Confidence": 93.211754,
+      "Confidence": 92.793365,
       "Left": 463,
       "Top": 385,
       "Right": 490,
@@ -605,7 +605,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 92.684715,
+      "Confidence": 92.36109,
       "Left": 499,
       "Top": 385,
       "Right": 551,
@@ -613,7 +613,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.958916,
+      "Confidence": 96.96445,
       "Left": 560,
       "Top": 385,
       "Right": 587,
@@ -621,7 +621,7 @@
     },
     {
       "Text": "Virement",
-      "Confidence": 91.36359,
+      "Confidence": 91.71671,
       "Left": 274,
       "Top": 442,
       "Right": 381,
@@ -637,7 +637,7 @@
     },
     {
       "Text": "meme",
-      "Confidence": 92.18927,
+      "Confidence": 92.70027,
       "Left": 474,
       "Top": 449,
       "Right": 544,
@@ -645,7 +645,7 @@
     },
     {
       "Text": "banque",
-      "Confidence": 91.79345,
+      "Confidence": 92.63604,
       "Left": 553,
       "Top": 442,
       "Right": 636,
@@ -653,7 +653,7 @@
     },
     {
       "Text": "REF",
-      "Confidence": 93.29334,
+      "Confidence": 89.15456,
       "Left": 274,
       "Top": 499,
       "Right": 325,
@@ -661,7 +661,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 91.66223,
+      "Confidence": 89.15456,
       "Left": 336,
       "Top": 506,
       "Right": 340,
@@ -669,7 +669,7 @@
     },
     {
       "Text": "DE",
-      "Confidence": 93.15951,
+      "Confidence": 92.71219,
       "Left": 350,
       "Top": 499,
       "Right": 387,
@@ -677,7 +677,7 @@
     },
     {
       "Text": "STE",
-      "Confidence": 91.24932,
+      "Confidence": 91.5663,
       "Left": 397,
       "Top": 499,
       "Right": 447,
@@ -685,7 +685,7 @@
     },
     {
       "Text": "TOPDIS",
-      "Confidence": 91.52835,
+      "Confidence": 90.833405,
       "Left": 455,
       "Top": 499,
       "Right": 554,
@@ -693,7 +693,7 @@
     },
     {
       "Text": "*",
-      "Confidence": 96.72053,
+      "Confidence": 93.22553,
       "Left": 565,
       "Top": 499,
       "Right": 576,
@@ -701,7 +701,7 @@
     },
     {
       "Text": "Virement",
-      "Confidence": 91.36359,
+      "Confidence": 91.71671,
       "Left": 274,
       "Top": 556,
       "Right": 381,
@@ -717,7 +717,7 @@
     },
     {
       "Text": "meme",
-      "Confidence": 92.18927,
+      "Confidence": 92.70027,
       "Left": 474,
       "Top": 563,
       "Right": 544,
@@ -725,7 +725,7 @@
     },
     {
       "Text": "banque",
-      "Confidence": 91.79345,
+      "Confidence": 92.63604,
       "Left": 553,
       "Top": 556,
       "Right": 636,
@@ -733,7 +733,7 @@
     },
     {
       "Text": "5314833",
-      "Confidence": 96.900795,
+      "Confidence": 96.297386,
       "Left": 275,
       "Top": 613,
       "Right": 373,
@@ -741,7 +741,7 @@
     },
     {
       "Text": "Com",
-      "Confidence": 89.08772,
+      "Confidence": 90.72745,
       "Left": 274,
       "Top": 670,
       "Right": 330,
@@ -749,7 +749,7 @@
     },
     {
       "Text": "TVA",
-      "Confidence": 89.08772,
+      "Confidence": 89.705635,
       "Left": 337,
       "Top": 670,
       "Right": 392,
@@ -757,7 +757,7 @@
     },
     {
       "Text": "Prelevement",
-      "Confidence": 92.28459,
+      "Confidence": 92.463394,
       "Left": 274,
       "Top": 727,
       "Right": 419,
@@ -765,7 +765,7 @@
     },
     {
       "Text": "Paiement",
-      "Confidence": 91.833176,
+      "Confidence": 92.78447,
       "Left": 274,
       "Top": 783,
       "Right": 382,
@@ -773,7 +773,7 @@
     },
     {
       "Text": "Prelevement",
-      "Confidence": 91.474655,
+      "Confidence": 92.47019,
       "Left": 390,
       "Top": 784,
       "Right": 535,
@@ -781,7 +781,7 @@
     },
     {
       "Text": "HANNIBAL",
-      "Confidence": 92.174614,
+      "Confidence": 91.87019,
       "Left": 274,
       "Top": 841,
       "Right": 425,
@@ -789,7 +789,7 @@
     },
     {
       "Text": "49000000000067545006",
-      "Confidence": 92.1634,
+      "Confidence": 92.09238,
       "Left": 274,
       "Top": 898,
       "Right": 564,
@@ -797,7 +797,7 @@
     },
     {
       "Text": "STE",
-      "Confidence": 92.63404,
+      "Confidence": 90.72557,
       "Left": 275,
       "Top": 954,
       "Right": 324,
@@ -805,7 +805,7 @@
     },
     {
       "Text": "BLUE",
-      "Confidence": 89.63873,
+      "Confidence": 92.37956,
       "Left": 333,
       "Top": 954,
       "Right": 408,
@@ -813,7 +813,7 @@
     },
     {
       "Text": "TUNISIE",
-      "Confidence": 92.67051,
+      "Confidence": 92.22687,
       "Left": 416,
       "Top": 954,
       "Right": 528,
@@ -821,7 +821,7 @@
     },
     {
       "Text": "Regularisation",
-      "Confidence": 92.59646,
+      "Confidence": 92.20969,
       "Left": 274,
       "Top": 1010,
       "Right": 443,
@@ -829,7 +829,7 @@
     },
     {
       "Text": "Debit",
-      "Confidence": 92.98663,
+      "Confidence": 90.12268,
       "Left": 451,
       "Top": 1010,
       "Right": 515,
@@ -845,7 +845,7 @@
     },
     {
       "Text": "INTERV-DEPASSEMENT",
-      "Confidence": 89.91206,
+      "Confidence": 83.22371,
       "Left": 381,
       "Top": 1068,
       "Right": 713,
@@ -853,15 +853,15 @@
     },
     {
       "Text": "/",
-      "Confidence": 94.864914,
-      "Left": 698,
+      "Confidence": 83.22371,
+      "Left": 701,
       "Top": 1064,
       "Right": 711,
       "Bottom": 1099
     },
     {
       "Text": "1S",
-      "Confidence": 93.2413,
+      "Confidence": 91.571915,
       "Left": 724,
       "Top": 1068,
       "Right": 749,
@@ -869,7 +869,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 92.36943,
+      "Confidence": 88.55553,
       "Left": 761,
       "Top": 1075,
       "Right": 764,
@@ -885,7 +885,7 @@
     },
     {
       "Text": "Regularisation",
-      "Confidence": 92.59646,
+      "Confidence": 92.20969,
       "Left": 274,
       "Top": 1124,
       "Right": 443,
@@ -893,7 +893,7 @@
     },
     {
       "Text": "Debit",
-      "Confidence": 92.98663,
+      "Confidence": 90.12268,
       "Left": 451,
       "Top": 1124,
       "Right": 515,
@@ -901,7 +901,7 @@
     },
     {
       "Text": "TVA/COMM.",
-      "Confidence": 92.17492,
+      "Confidence": 89.30552,
       "Left": 274,
       "Top": 1182,
       "Right": 435,
@@ -909,7 +909,7 @@
     },
     {
       "Text": "INTERV-DEPASSEMENT",
-      "Confidence": 90.56509,
+      "Confidence": 91.90544,
       "Left": 445,
       "Top": 1182,
       "Right": 762,
@@ -917,7 +917,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 91.47581,
+      "Confidence": 91.15435,
       "Left": 771,
       "Top": 1189,
       "Right": 775,
@@ -925,7 +925,7 @@
     },
     {
       "Text": "SUSPENS.220124",
-      "Confidence": 91.235756,
+      "Confidence": 90.20756,
       "Left": 786,
       "Top": 1182,
       "Right": 1003,
@@ -933,7 +933,7 @@
     },
     {
       "Text": "Reglement",
-      "Confidence": 91.84944,
+      "Confidence": 91.96659,
       "Left": 274,
       "Top": 1239,
       "Right": 399,
@@ -941,7 +941,7 @@
     },
     {
       "Text": "cheque",
-      "Confidence": 90.737236,
+      "Confidence": 92.55428,
       "Left": 408,
       "Top": 1239,
       "Right": 488,
@@ -949,7 +949,7 @@
     },
     {
       "Text": "no",
-      "Confidence": 92.33473,
+      "Confidence": 92.31476,
       "Left": 497,
       "Top": 1246,
       "Right": 525,
@@ -957,7 +957,7 @@
     },
     {
       "Text": "0000762",
-      "Confidence": 91.95366,
+      "Confidence": 92.6074,
       "Left": 274,
       "Top": 1296,
       "Right": 374,
@@ -965,7 +965,7 @@
     },
     {
       "Text": "F/",
-      "Confidence": 91.95366,
+      "Confidence": 92.57769,
       "Left": 383,
       "Top": 1296,
       "Right": 407,
@@ -973,7 +973,7 @@
     },
     {
       "Text": "SOCIETE",
-      "Confidence": 91.420906,
+      "Confidence": 91.92019,
       "Left": 416,
       "Top": 1296,
       "Right": 533,
@@ -981,7 +981,7 @@
     },
     {
       "Text": "MYTEK",
-      "Confidence": 91.30554,
+      "Confidence": 90.81478,
       "Left": 542,
       "Top": 1296,
       "Right": 645,
@@ -989,7 +989,7 @@
     },
     {
       "Text": "INFORMATIQUE",
-      "Confidence": 90.42976,
+      "Confidence": 91.40497,
       "Left": 274,
       "Top": 1353,
       "Right": 491,
@@ -997,7 +997,7 @@
     },
     {
       "Text": "Regularisation",
-      "Confidence": 92.59646,
+      "Confidence": 92.20969,
       "Left": 274,
       "Top": 1409,
       "Right": 443,
@@ -1005,7 +1005,7 @@
     },
     {
       "Text": "Debit",
-      "Confidence": 92.98663,
+      "Confidence": 90.12268,
       "Left": 451,
       "Top": 1409,
       "Right": 515,
@@ -1045,7 +1045,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 90.09596,
+      "Confidence": 90.569046,
       "Left": 761,
       "Top": 1474,
       "Right": 764,
@@ -1333,7 +1333,7 @@
     },
     {
       "Text": "-2,975",
-      "Confidence": 92.2052,
+      "Confidence": 84.359406,
       "Left": 1625,
       "Top": 670,
       "Right": 1697,
@@ -1349,7 +1349,7 @@
     },
     {
       "Text": "22",
-      "Confidence": 93.283875,
+      "Confidence": 92.37551,
       "Left": 1411,
       "Top": 784,
       "Right": 1437,
@@ -1357,7 +1357,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 93.052864,
+      "Confidence": 91.89763,
       "Left": 1447,
       "Top": 784,
       "Right": 1499,
@@ -1373,7 +1373,7 @@
     },
     {
       "Text": "-4",
-      "Confidence": 91.152855,
+      "Confidence": 54.069283,
       "Left": 1625,
       "Top": 784,
       "Right": 1647,
@@ -1381,7 +1381,7 @@
     },
     {
       "Text": "936,093",
-      "Confidence": 91.152855,
+      "Confidence": 54.069283,
       "Left": 1657,
       "Top": 784,
       "Right": 1748,
@@ -1389,7 +1389,7 @@
     },
     {
       "Text": "FT24026930088682",
-      "Confidence": 91.265854,
+      "Confidence": 91.47965,
       "Left": 1096,
       "Top": 1011,
       "Right": 1332,
@@ -1397,7 +1397,7 @@
     },
     {
       "Text": "26",
-      "Confidence": 93.29093,
+      "Confidence": 92.84513,
       "Left": 1411,
       "Top": 1011,
       "Right": 1438,
@@ -1405,7 +1405,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 92.23859,
+      "Confidence": 92.24946,
       "Left": 1447,
       "Top": 1011,
       "Right": 1499,
@@ -1413,7 +1413,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.97838,
+      "Confidence": 97.00854,
       "Left": 1508,
       "Top": 1011,
       "Right": 1535,
@@ -1421,7 +1421,7 @@
     },
     {
       "Text": "-8,000",
-      "Confidence": 92.29883,
+      "Confidence": 90.3995,
       "Left": 1625,
       "Top": 1011,
       "Right": 1698,
@@ -1429,7 +1429,7 @@
     },
     {
       "Text": "FT24026931601043",
-      "Confidence": 91.67209,
+      "Confidence": 90.098045,
       "Left": 1096,
       "Top": 1125,
       "Right": 1331,
@@ -1437,7 +1437,7 @@
     },
     {
       "Text": "26",
-      "Confidence": 93.25249,
+      "Confidence": 92.83013,
       "Left": 1411,
       "Top": 1125,
       "Right": 1438,
@@ -1445,7 +1445,7 @@
     },
     {
       "Text": "JAN",
-      "Confidence": 91.85741,
+      "Confidence": 92.83013,
       "Left": 1447,
       "Top": 1125,
       "Right": 1499,
@@ -1453,7 +1453,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.88498,
+      "Confidence": 96.91569,
       "Left": 1508,
       "Top": 1125,
       "Right": 1535,
@@ -1461,7 +1461,7 @@
     },
     {
       "Text": "-1,520",
-      "Confidence": 92.59179,
+      "Confidence": 87.9318,
       "Left": 1625,
       "Top": 1125,
       "Right": 1698,
@@ -1469,7 +1469,7 @@
     },
     {
       "Text": "FT24047983158172",
-      "Confidence": 92.424904,
+      "Confidence": 91.86927,
       "Left": 1096,
       "Top": 1239,
       "Right": 1332,
@@ -1477,7 +1477,7 @@
     },
     {
       "Text": "16",
-      "Confidence": 93.29803,
+      "Confidence": 92.75955,
       "Left": 1414,
       "Top": 1239,
       "Right": 1438,
@@ -1485,7 +1485,7 @@
     },
     {
       "Text": "FEB",
-      "Confidence": 93.13004,
+      "Confidence": 92.75955,
       "Left": 1447,
       "Top": 1239,
       "Right": 1498,
@@ -1493,7 +1493,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.87465,
+      "Confidence": 96.15559,
       "Left": 1508,
       "Top": 1239,
       "Right": 1535,
@@ -1501,7 +1501,7 @@
     },
     {
       "Text": "-120,000",
-      "Confidence": 92.814896,
+      "Confidence": 85.54611,
       "Left": 1625,
       "Top": 1239,
       "Right": 1728,
@@ -1541,7 +1541,7 @@
     },
     {
       "Text": "-5,000",
-      "Confidence": 91.67434,
+      "Confidence": 87.47345,
       "Left": 1625,
       "Top": 1410,
       "Right": 1698,
@@ -1621,7 +1621,7 @@
     },
     {
       "Text": "-2,975",
-      "Confidence": 92.2052,
+      "Confidence": 84.359406,
       "Left": 1625,
       "Top": 1638,
       "Right": 1697,
@@ -1829,7 +1829,7 @@
     },
     {
       "Text": "MAR",
-      "Confidence": 92.41758,
+      "Confidence": 82.828445,
       "Left": 139,
       "Top": 3518,
       "Right": 205,
@@ -1853,7 +1853,7 @@
     },
     {
       "Text": "MAR",
-      "Confidence": 92.41758,
+      "Confidence": 82.828445,
       "Left": 139,
       "Top": 3632,
       "Right": 205,
@@ -4013,7 +4013,7 @@
     },
     {
       "Text": "F/",
-      "Confidence": 91.712555,
+      "Confidence": 86.340225,
       "Left": 383,
       "Top": 5684,
       "Right": 407,
@@ -4021,7 +4021,7 @@
     },
     {
       "Text": "HANNIBAL",
-      "Confidence": 91.38386,
+      "Confidence": 86.340225,
       "Left": 415,
       "Top": 5684,
       "Right": 566,
@@ -5165,7 +5165,7 @@
     },
     {
       "Text": "COMM.",
-      "Confidence": 91.830536,
+      "Confidence": 84.61334,
       "Left": 274,
       "Top": 6827,
       "Right": 371,
@@ -5205,7 +5205,7 @@
     },
     {
       "Text": "SUSPENS.200524",
-      "Confidence": 90.889786,
+      "Confidence": 90.45827,
       "Left": 775,
       "Top": 6827,
       "Right": 992,
@@ -5341,7 +5341,7 @@
     },
     {
       "Text": "COMM.",
-      "Confidence": 91.58803,
+      "Confidence": 85.87334,
       "Left": 274,
       "Top": 7169,
       "Right": 371,
@@ -5573,7 +5573,7 @@
     },
     {
       "Text": "COMM.",
-      "Confidence": 91.80599,
+      "Confidence": 86.40401,
       "Left": 274,
       "Top": 7624,
       "Right": 371,
@@ -5613,7 +5613,7 @@
     },
     {
       "Text": "SUSPENS.240524",
-      "Confidence": 91.2298,
+      "Confidence": 89.9751,
       "Left": 775,
       "Top": 7624,
       "Right": 992,
@@ -5805,7 +5805,7 @@
     },
     {
       "Text": "COMM.",
-      "Confidence": 91.949844,
+      "Confidence": 85.38842,
       "Left": 274,
       "Top": 8080,
       "Right": 371,
@@ -8077,7 +8077,7 @@
     },
     {
       "Text": "FT24172406836994\\S98",
-      "Confidence": 90.93904,
+      "Confidence": 83.83637,
       "Left": 1096,
       "Top": 10421,
       "Right": 1385,
@@ -8101,7 +8101,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.89644,
+      "Confidence": 95.473274,
       "Left": 1508,
       "Top": 10422,
       "Right": 1535,
@@ -8269,15 +8269,15 @@
     },
     {
       "Text": "20",
-      "Confidence": 96.793205,
+      "Confidence": 83.09036,
       "Left": 103,
       "Top": 11336,
-      "Right": 129,
+      "Right": 131,
       "Bottom": 11357
     },
     {
       "Text": "JUN",
-      "Confidence": 96.702446,
+      "Confidence": 83.09036,
       "Left": 139,
       "Top": 11336,
       "Right": 228,
@@ -8293,15 +8293,15 @@
     },
     {
       "Text": "20",
-      "Confidence": 96.793205,
+      "Confidence": 83.09036,
       "Left": 103,
       "Top": 11450,
-      "Right": 129,
+      "Right": 131,
       "Bottom": 11471
     },
     {
       "Text": "JUN",
-      "Confidence": 96.702446,
+      "Confidence": 83.09036,
       "Left": 139,
       "Top": 11450,
       "Right": 228,
@@ -8309,23 +8309,23 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.59753,
-      "Left": 201,
+      "Confidence": 96.705925,
+      "Left": 198,
       "Top": 11446,
       "Right": 231,
       "Bottom": 11482
     },
     {
       "Text": "20",
-      "Confidence": 96.793205,
+      "Confidence": 83.09036,
       "Left": 103,
       "Top": 11564,
-      "Right": 129,
+      "Right": 131,
       "Bottom": 11585
     },
     {
       "Text": "JUN",
-      "Confidence": 96.702446,
+      "Confidence": 83.09036,
       "Left": 139,
       "Top": 11564,
       "Right": 228,
@@ -8333,23 +8333,23 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.59753,
-      "Left": 201,
+      "Confidence": 96.705925,
+      "Left": 198,
       "Top": 11560,
       "Right": 231,
       "Bottom": 11596
     },
     {
       "Text": "20",
-      "Confidence": 96.793205,
+      "Confidence": 83.09036,
       "Left": 103,
       "Top": 11678,
-      "Right": 129,
+      "Right": 131,
       "Bottom": 11699
     },
     {
       "Text": "JUN",
-      "Confidence": 96.702446,
+      "Confidence": 83.09036,
       "Left": 139,
       "Top": 11678,
       "Right": 228,
@@ -8357,8 +8357,8 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.59753,
-      "Left": 201,
+      "Confidence": 96.705925,
+      "Left": 198,
       "Top": 11674,
       "Right": 231,
       "Bottom": 11710
@@ -9237,7 +9237,7 @@
     },
     {
       "Text": "FT24177523705400\\S98",
-      "Confidence": 90.89412,
+      "Confidence": 83.06407,
       "Left": 1096,
       "Top": 12132,
       "Right": 1385,
@@ -9245,7 +9245,7 @@
     },
     {
       "Text": "FT24177523705400\\S98",
-      "Confidence": 90.89412,
+      "Confidence": 83.06407,
       "Left": 1096,
       "Top": 12246,
       "Right": 1385,
@@ -9253,7 +9253,7 @@
     },
     {
       "Text": "FT24180358629643",
-      "Confidence": 90.56376,
+      "Confidence": 92.48288,
       "Left": 1096,
       "Top": 12361,
       "Right": 1331,
@@ -9261,7 +9261,7 @@
     },
     {
       "Text": "FT24180633526032",
-      "Confidence": 90.52641,
+      "Confidence": 92.26675,
       "Left": 1096,
       "Top": 12475,
       "Right": 1332,
@@ -9269,7 +9269,7 @@
     },
     {
       "Text": "FT24180633526032",
-      "Confidence": 90.52641,
+      "Confidence": 92.26675,
       "Left": 1096,
       "Top": 12589,
       "Right": 1332,
@@ -9277,15 +9277,15 @@
     },
     {
       "Text": "20",
-      "Confidence": 93.03177,
+      "Confidence": 96.33716,
       "Left": 1411,
       "Top": 11109,
-      "Right": 1438,
+      "Right": 1437,
       "Bottom": 11130
     },
     {
       "Text": "JUN",
-      "Confidence": 90.879074,
+      "Confidence": 96.17109,
       "Left": 1447,
       "Top": 11109,
       "Right": 1535,
@@ -9293,7 +9293,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.8221,
+      "Confidence": 96.65562,
       "Left": 1506,
       "Top": 11105,
       "Right": 1539,
@@ -9301,7 +9301,7 @@
     },
     {
       "Text": "21",
-      "Confidence": 92.92191,
+      "Confidence": 96.61588,
       "Left": 1411,
       "Top": 11336,
       "Right": 1435,
@@ -9309,7 +9309,7 @@
     },
     {
       "Text": "JUN",
-      "Confidence": 90.6597,
+      "Confidence": 96.93683,
       "Left": 1447,
       "Top": 11336,
       "Right": 1535,
@@ -9317,7 +9317,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.879,
+      "Confidence": 96.93683,
       "Left": 1506,
       "Top": 11332,
       "Right": 1539,
@@ -9325,7 +9325,7 @@
     },
     {
       "Text": "21",
-      "Confidence": 92.92191,
+      "Confidence": 96.61588,
       "Left": 1411,
       "Top": 11450,
       "Right": 1435,
@@ -9333,7 +9333,7 @@
     },
     {
       "Text": "JUN",
-      "Confidence": 90.6597,
+      "Confidence": 96.93683,
       "Left": 1447,
       "Top": 11450,
       "Right": 1535,
@@ -9341,7 +9341,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.879,
+      "Confidence": 96.93683,
       "Left": 1506,
       "Top": 11446,
       "Right": 1539,
@@ -9349,7 +9349,7 @@
     },
     {
       "Text": "21",
-      "Confidence": 92.92191,
+      "Confidence": 96.61588,
       "Left": 1411,
       "Top": 11564,
       "Right": 1435,
@@ -9357,7 +9357,7 @@
     },
     {
       "Text": "JUN",
-      "Confidence": 90.6597,
+      "Confidence": 96.93683,
       "Left": 1447,
       "Top": 11564,
       "Right": 1535,
@@ -9365,7 +9365,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.879,
+      "Confidence": 96.93683,
       "Left": 1506,
       "Top": 11560,
       "Right": 1539,
@@ -9373,7 +9373,7 @@
     },
     {
       "Text": "21",
-      "Confidence": 92.92191,
+      "Confidence": 96.61588,
       "Left": 1411,
       "Top": 11678,
       "Right": 1435,
@@ -9381,7 +9381,7 @@
     },
     {
       "Text": "JUN",
-      "Confidence": 90.6597,
+      "Confidence": 96.93683,
       "Left": 1447,
       "Top": 11678,
       "Right": 1535,
@@ -9389,7 +9389,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.879,
+      "Confidence": 96.93683,
       "Left": 1506,
       "Top": 11674,
       "Right": 1539,
@@ -9397,7 +9397,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 89.95215,
+      "Confidence": 96.33764,
       "Left": 1411,
       "Top": 11905,
       "Right": 1437,
@@ -9405,7 +9405,7 @@
     },
     {
       "Text": "JUN",
-      "Confidence": 89.95215,
+      "Confidence": 95.75759,
       "Left": 1447,
       "Top": 11905,
       "Right": 1535,
@@ -9413,7 +9413,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.94883,
+      "Confidence": 96.668205,
       "Left": 1506,
       "Top": 11901,
       "Right": 1539,
@@ -9421,7 +9421,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 89.95215,
+      "Confidence": 96.33764,
       "Left": 1411,
       "Top": 12019,
       "Right": 1437,
@@ -9429,7 +9429,7 @@
     },
     {
       "Text": "JUN",
-      "Confidence": 89.95215,
+      "Confidence": 95.75759,
       "Left": 1447,
       "Top": 12019,
       "Right": 1535,
@@ -9437,7 +9437,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.94883,
+      "Confidence": 96.668205,
       "Left": 1506,
       "Top": 12015,
       "Right": 1539,
@@ -9461,7 +9461,7 @@
     },
     {
       "Text": "24",
-      "Confidence": 96.79646,
+      "Confidence": 96.57466,
       "Left": 1506,
       "Top": 12129,
       "Right": 1539,
@@ -10237,7 +10237,7 @@
     },
     {
       "Text": "Mr",
-      "Confidence": 91.99711,
+      "Confidence": 85.5573,
       "Left": 415,
       "Top": 13781,
       "Right": 450,
@@ -10285,7 +10285,7 @@
     },
     {
       "Text": "COMM.",
-      "Confidence": 91.748955,
+      "Confidence": 85.60868,
       "Left": 274,
       "Top": 13895,
       "Right": 371,
@@ -10935,7 +10935,7 @@
       "Words": [
         {
           "Text": "Compte",
-          "Confidence": 91.7783,
+          "Confidence": 89.333664,
           "Left": 94,
           "Top": 224,
           "Right": 193,
@@ -10943,7 +10943,7 @@
         },
         {
           "Text": "numéro",
-          "Confidence": 91.76778,
+          "Confidence": 87.27331,
           "Left": 202,
           "Top": 224,
           "Right": 298,
@@ -10988,7 +10988,7 @@
       "Words": [
         {
           "Text": "Devise",
-          "Confidence": 91.677475,
+          "Confidence": 88.34138,
           "Left": 94,
           "Top": 281,
           "Right": 175,
@@ -10996,7 +10996,7 @@
         },
         {
           "Text": "TND",
-          "Confidence": 91.083984,
+          "Confidence": 92.59918,
           "Left": 322,
           "Top": 281,
           "Right": 382,
@@ -11004,7 +11004,7 @@
         },
         {
           "Text": ":",
-          "Confidence": 92.126236,
+          "Confidence": 88.34138,
           "Left": 185,
           "Top": 287,
           "Right": 190,
@@ -11017,7 +11017,7 @@
       "Words": [
         {
           "Text": "Libellé",
-          "Confidence": 92.27793,
+          "Confidence": 89.58245,
           "Left": 268,
           "Top": 328,
           "Right": 351,
@@ -11025,7 +11025,7 @@
         },
         {
           "Text": "opération",
-          "Confidence": 92.471275,
+          "Confidence": 92.989456,
           "Left": 359,
           "Top": 328,
           "Right": 475,
@@ -11049,7 +11049,7 @@
         },
         {
           "Text": "Date",
-          "Confidence": 92.77881,
+          "Confidence": 92.31781,
           "Left": 103,
           "Top": 329,
           "Right": 159,
@@ -11057,7 +11057,7 @@
         },
         {
           "Text": "valeur",
-          "Confidence": 91.90614,
+          "Confidence": 92.31781,
           "Left": 167,
           "Top": 329,
           "Right": 244,
@@ -11086,7 +11086,7 @@
       "Words": [
         {
           "Text": "Solde",
-          "Confidence": 92.04334,
+          "Confidence": 92.119896,
           "Left": 275,
           "Top": 385,
           "Right": 339,
@@ -11094,7 +11094,7 @@
         },
         {
           "Text": "départ",
-          "Confidence": 91.34468,
+          "Confidence": 92.06584,
           "Left": 348,
           "Top": 385,
           "Right": 420,
@@ -11102,7 +11102,7 @@
         },
         {
           "Text": "04",
-          "Confidence": 93.211754,
+          "Confidence": 92.793365,
           "Left": 463,
           "Top": 385,
           "Right": 490,
@@ -11110,7 +11110,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 92.684715,
+          "Confidence": 92.36109,
           "Left": 499,
           "Top": 385,
           "Right": 551,
@@ -11118,7 +11118,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.958916,
+          "Confidence": 96.96445,
           "Left": 560,
           "Top": 385,
           "Right": 587,
@@ -11142,7 +11142,7 @@
         },
         {
           "Text": "au",
-          "Confidence": 93.22238,
+          "Confidence": 93.030945,
           "Left": 428,
           "Top": 392,
           "Right": 454,
@@ -11163,7 +11163,7 @@
         },
         {
           "Text": "08",
-          "Confidence": 93.13639,
+          "Confidence": 92.14689,
           "Left": 103,
           "Top": 442,
           "Right": 130,
@@ -11171,7 +11171,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 89.93844,
+          "Confidence": 92.63606,
           "Left": 139,
           "Top": 442,
           "Right": 192,
@@ -11179,7 +11179,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.48737,
+          "Confidence": 96.66429,
           "Left": 200,
           "Top": 442,
           "Right": 228,
@@ -11187,7 +11187,7 @@
         },
         {
           "Text": "Virement",
-          "Confidence": 91.36359,
+          "Confidence": 91.71671,
           "Left": 274,
           "Top": 442,
           "Right": 381,
@@ -11195,7 +11195,7 @@
         },
         {
           "Text": "banque",
-          "Confidence": 91.79345,
+          "Confidence": 92.63604,
           "Left": 553,
           "Top": 442,
           "Right": 636,
@@ -11251,7 +11251,7 @@
         },
         {
           "Text": "meme",
-          "Confidence": 92.18927,
+          "Confidence": 92.70027,
           "Left": 474,
           "Top": 449,
           "Right": 544,
@@ -11264,7 +11264,7 @@
       "Words": [
         {
           "Text": "REF",
-          "Confidence": 93.29334,
+          "Confidence": 89.15456,
           "Left": 274,
           "Top": 499,
           "Right": 325,
@@ -11272,7 +11272,7 @@
         },
         {
           "Text": "DE",
-          "Confidence": 93.15951,
+          "Confidence": 92.71219,
           "Left": 350,
           "Top": 499,
           "Right": 387,
@@ -11280,7 +11280,7 @@
         },
         {
           "Text": "STE",
-          "Confidence": 91.24932,
+          "Confidence": 91.5663,
           "Left": 397,
           "Top": 499,
           "Right": 447,
@@ -11288,7 +11288,7 @@
         },
         {
           "Text": "TOPDIS",
-          "Confidence": 91.52835,
+          "Confidence": 90.833405,
           "Left": 455,
           "Top": 499,
           "Right": 554,
@@ -11296,7 +11296,7 @@
         },
         {
           "Text": "*",
-          "Confidence": 96.72053,
+          "Confidence": 93.22553,
           "Left": 565,
           "Top": 499,
           "Right": 576,
@@ -11304,7 +11304,7 @@
         },
         {
           "Text": ":",
-          "Confidence": 91.66223,
+          "Confidence": 89.15456,
           "Left": 336,
           "Top": 506,
           "Right": 340,
@@ -11325,7 +11325,7 @@
         },
         {
           "Text": "09",
-          "Confidence": 93.02409,
+          "Confidence": 89.89967,
           "Left": 103,
           "Top": 556,
           "Right": 130,
@@ -11333,7 +11333,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 91.0055,
+          "Confidence": 89.89967,
           "Left": 139,
           "Top": 556,
           "Right": 192,
@@ -11341,7 +11341,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.73154,
+          "Confidence": 96.65439,
           "Left": 200,
           "Top": 556,
           "Right": 228,
@@ -11349,7 +11349,7 @@
         },
         {
           "Text": "Virement",
-          "Confidence": 91.36359,
+          "Confidence": 91.71671,
           "Left": 274,
           "Top": 556,
           "Right": 381,
@@ -11357,7 +11357,7 @@
         },
         {
           "Text": "banque",
-          "Confidence": 91.79345,
+          "Confidence": 92.63604,
           "Left": 553,
           "Top": 556,
           "Right": 636,
@@ -11413,7 +11413,7 @@
         },
         {
           "Text": "meme",
-          "Confidence": 92.18927,
+          "Confidence": 92.70027,
           "Left": 474,
           "Top": 563,
           "Right": 544,
@@ -11426,7 +11426,7 @@
       "Words": [
         {
           "Text": "5314833",
-          "Confidence": 96.900795,
+          "Confidence": 96.297386,
           "Left": 275,
           "Top": 613,
           "Right": 373,
@@ -11447,7 +11447,7 @@
         },
         {
           "Text": "19",
-          "Confidence": 93.15729,
+          "Confidence": 88.93946,
           "Left": 106,
           "Top": 670,
           "Right": 130,
@@ -11455,7 +11455,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 90.694984,
+          "Confidence": 88.93946,
           "Left": 139,
           "Top": 670,
           "Right": 192,
@@ -11463,7 +11463,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 95.945366,
+          "Confidence": 95.45512,
           "Left": 200,
           "Top": 670,
           "Right": 228,
@@ -11471,7 +11471,7 @@
         },
         {
           "Text": "Com",
-          "Confidence": 89.08772,
+          "Confidence": 90.72745,
           "Left": 274,
           "Top": 670,
           "Right": 330,
@@ -11479,7 +11479,7 @@
         },
         {
           "Text": "TVA",
-          "Confidence": 89.08772,
+          "Confidence": 89.705635,
           "Left": 337,
           "Top": 670,
           "Right": 392,
@@ -11511,7 +11511,7 @@
         },
         {
           "Text": "-2,975",
-          "Confidence": 92.2052,
+          "Confidence": 84.359406,
           "Left": 1625,
           "Top": 670,
           "Right": 1697,
@@ -11524,7 +11524,7 @@
       "Words": [
         {
           "Text": "Prelevement",
-          "Confidence": 92.28459,
+          "Confidence": 92.463394,
           "Left": 274,
           "Top": 727,
           "Right": 419,
@@ -11537,7 +11537,7 @@
       "Words": [
         {
           "Text": "Paiement",
-          "Confidence": 91.833176,
+          "Confidence": 92.78447,
           "Left": 274,
           "Top": 783,
           "Right": 382,
@@ -11553,7 +11553,7 @@
         },
         {
           "Text": "19",
-          "Confidence": 93.15729,
+          "Confidence": 88.93946,
           "Left": 106,
           "Top": 784,
           "Right": 130,
@@ -11561,7 +11561,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 90.694984,
+          "Confidence": 88.93946,
           "Left": 139,
           "Top": 784,
           "Right": 192,
@@ -11569,7 +11569,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 95.945366,
+          "Confidence": 95.45512,
           "Left": 200,
           "Top": 784,
           "Right": 228,
@@ -11577,7 +11577,7 @@
         },
         {
           "Text": "Prelevement",
-          "Confidence": 91.474655,
+          "Confidence": 92.47019,
           "Left": 390,
           "Top": 784,
           "Right": 535,
@@ -11585,7 +11585,7 @@
         },
         {
           "Text": "22",
-          "Confidence": 93.283875,
+          "Confidence": 92.37551,
           "Left": 1411,
           "Top": 784,
           "Right": 1437,
@@ -11593,7 +11593,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 93.052864,
+          "Confidence": 91.89763,
           "Left": 1447,
           "Top": 784,
           "Right": 1499,
@@ -11609,7 +11609,7 @@
         },
         {
           "Text": "-4",
-          "Confidence": 91.152855,
+          "Confidence": 54.069283,
           "Left": 1625,
           "Top": 784,
           "Right": 1647,
@@ -11617,7 +11617,7 @@
         },
         {
           "Text": "936,093",
-          "Confidence": 91.152855,
+          "Confidence": 54.069283,
           "Left": 1657,
           "Top": 784,
           "Right": 1748,
@@ -11630,7 +11630,7 @@
       "Words": [
         {
           "Text": "HANNIBAL",
-          "Confidence": 92.174614,
+          "Confidence": 91.87019,
           "Left": 274,
           "Top": 841,
           "Right": 425,
@@ -11643,7 +11643,7 @@
       "Words": [
         {
           "Text": "49000000000067545006",
-          "Confidence": 92.1634,
+          "Confidence": 92.09238,
           "Left": 274,
           "Top": 898,
           "Right": 564,
@@ -11656,7 +11656,7 @@
       "Words": [
         {
           "Text": "STE",
-          "Confidence": 92.63404,
+          "Confidence": 90.72557,
           "Left": 275,
           "Top": 954,
           "Right": 324,
@@ -11664,7 +11664,7 @@
         },
         {
           "Text": "BLUE",
-          "Confidence": 89.63873,
+          "Confidence": 92.37956,
           "Left": 333,
           "Top": 954,
           "Right": 408,
@@ -11672,7 +11672,7 @@
         },
         {
           "Text": "TUNISIE",
-          "Confidence": 92.67051,
+          "Confidence": 92.22687,
           "Left": 416,
           "Top": 954,
           "Right": 528,
@@ -11685,7 +11685,7 @@
       "Words": [
         {
           "Text": "Regularisation",
-          "Confidence": 92.59646,
+          "Confidence": 92.20969,
           "Left": 274,
           "Top": 1010,
           "Right": 443,
@@ -11693,7 +11693,7 @@
         },
         {
           "Text": "Debit",
-          "Confidence": 92.98663,
+          "Confidence": 90.12268,
           "Left": 451,
           "Top": 1010,
           "Right": 515,
@@ -11701,7 +11701,7 @@
         },
         {
           "Text": "22",
-          "Confidence": 93.276596,
+          "Confidence": 91.6363,
           "Left": 103,
           "Top": 1011,
           "Right": 130,
@@ -11709,7 +11709,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 92.51636,
+          "Confidence": 91.6363,
           "Left": 139,
           "Top": 1011,
           "Right": 192,
@@ -11717,7 +11717,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.74453,
+          "Confidence": 96.20637,
           "Left": 200,
           "Top": 1011,
           "Right": 228,
@@ -11725,7 +11725,7 @@
         },
         {
           "Text": "FT24026930088682",
-          "Confidence": 91.265854,
+          "Confidence": 91.47965,
           "Left": 1096,
           "Top": 1011,
           "Right": 1332,
@@ -11733,7 +11733,7 @@
         },
         {
           "Text": "26",
-          "Confidence": 93.29093,
+          "Confidence": 92.84513,
           "Left": 1411,
           "Top": 1011,
           "Right": 1438,
@@ -11741,7 +11741,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 92.23859,
+          "Confidence": 92.24946,
           "Left": 1447,
           "Top": 1011,
           "Right": 1499,
@@ -11749,7 +11749,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.97838,
+          "Confidence": 97.00854,
           "Left": 1508,
           "Top": 1011,
           "Right": 1535,
@@ -11757,7 +11757,7 @@
         },
         {
           "Text": "-8,000",
-          "Confidence": 92.29883,
+          "Confidence": 90.3995,
           "Left": 1625,
           "Top": 1011,
           "Right": 1698,
@@ -11770,8 +11770,8 @@
       "Words": [
         {
           "Text": "/",
-          "Confidence": 94.864914,
-          "Left": 698,
+          "Confidence": 83.22371,
+          "Left": 701,
           "Top": 1064,
           "Right": 711,
           "Bottom": 1099
@@ -11786,7 +11786,7 @@
         },
         {
           "Text": "INTERV-DEPASSEMENT",
-          "Confidence": 89.91206,
+          "Confidence": 83.22371,
           "Left": 381,
           "Top": 1068,
           "Right": 713,
@@ -11794,7 +11794,7 @@
         },
         {
           "Text": "1S",
-          "Confidence": 93.2413,
+          "Confidence": 91.571915,
           "Left": 724,
           "Top": 1068,
           "Right": 749,
@@ -11815,7 +11815,7 @@
       "Words": [
         {
           "Text": ":",
-          "Confidence": 92.36943,
+          "Confidence": 88.55553,
           "Left": 761,
           "Top": 1075,
           "Right": 764,
@@ -11828,7 +11828,7 @@
       "Words": [
         {
           "Text": "Regularisation",
-          "Confidence": 92.59646,
+          "Confidence": 92.20969,
           "Left": 274,
           "Top": 1124,
           "Right": 443,
@@ -11836,7 +11836,7 @@
         },
         {
           "Text": "Debit",
-          "Confidence": 92.98663,
+          "Confidence": 90.12268,
           "Left": 451,
           "Top": 1124,
           "Right": 515,
@@ -11844,7 +11844,7 @@
         },
         {
           "Text": "22",
-          "Confidence": 93.276596,
+          "Confidence": 91.6363,
           "Left": 103,
           "Top": 1125,
           "Right": 130,
@@ -11852,7 +11852,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 92.51636,
+          "Confidence": 91.6363,
           "Left": 139,
           "Top": 1125,
           "Right": 192,
@@ -11860,7 +11860,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.74453,
+          "Confidence": 96.20637,
           "Left": 200,
           "Top": 1125,
           "Right": 228,
@@ -11868,7 +11868,7 @@
         },
         {
           "Text": "FT24026931601043",
-          "Confidence": 91.67209,
+          "Confidence": 90.098045,
           "Left": 1096,
           "Top": 1125,
           "Right": 1331,
@@ -11876,7 +11876,7 @@
         },
         {
           "Text": "26",
-          "Confidence": 93.25249,
+          "Confidence": 92.83013,
           "Left": 1411,
           "Top": 1125,
           "Right": 1438,
@@ -11884,7 +11884,7 @@
         },
         {
           "Text": "JAN",
-          "Confidence": 91.85741,
+          "Confidence": 92.83013,
           "Left": 1447,
           "Top": 1125,
           "Right": 1499,
@@ -11892,7 +11892,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.88498,
+          "Confidence": 96.91569,
           "Left": 1508,
           "Top": 1125,
           "Right": 1535,
@@ -11900,7 +11900,7 @@
         },
         {
           "Text": "-1,520",
-          "Confidence": 92.59179,
+          "Confidence": 87.9318,
           "Left": 1625,
           "Top": 1125,
           "Right": 1698,
@@ -11913,7 +11913,7 @@
       "Words": [
         {
           "Text": "TVA/COMM.",
-          "Confidence": 92.17492,
+          "Confidence": 89.30552,
           "Left": 274,
           "Top": 1182,
           "Right": 435,
@@ -11921,7 +11921,7 @@
         },
         {
           "Text": "INTERV-DEPASSEMENT",
-          "Confidence": 90.56509,
+          "Confidence": 91.90544,
           "Left": 445,
           "Top": 1182,
           "Right": 762,
@@ -11929,7 +11929,7 @@
         },
         {
           "Text": "SUSPENS.220124",
-          "Confidence": 91.235756,
+          "Confidence": 90.20756,
           "Left": 786,
           "Top": 1182,
           "Right": 1003,
@@ -11937,7 +11937,7 @@
         },
         {
           "Text": ":",
-          "Confidence": 91.47581,
+          "Confidence": 91.15435,
           "Left": 771,
           "Top": 1189,
           "Right": 775,
@@ -11950,7 +11950,7 @@
       "Words": [
         {
           "Text": "15",
-          "Confidence": 92.607925,
+          "Confidence": 89.81221,
           "Left": 106,
           "Top": 1239,
           "Right": 129,
@@ -11958,7 +11958,7 @@
         },
         {
           "Text": "FEB",
-          "Confidence": 91.23999,
+          "Confidence": 89.81221,
           "Left": 139,
           "Top": 1239,
           "Right": 191,
@@ -11966,7 +11966,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.688774,
+          "Confidence": 96.77237,
           "Left": 200,
           "Top": 1239,
           "Right": 228,
@@ -11974,7 +11974,7 @@
         },
         {
           "Text": "Reglement",
-          "Confidence": 91.84944,
+          "Confidence": 91.96659,
           "Left": 274,
           "Top": 1239,
           "Right": 399,
@@ -11982,7 +11982,7 @@
         },
         {
           "Text": "cheque",
-          "Confidence": 90.737236,
+          "Confidence": 92.55428,
           "Left": 408,
           "Top": 1239,
           "Right": 488,
@@ -11990,7 +11990,7 @@
         },
         {
           "Text": "FT24047983158172",
-          "Confidence": 92.424904,
+          "Confidence": 91.86927,
           "Left": 1096,
           "Top": 1239,
           "Right": 1332,
@@ -11998,7 +11998,7 @@
         },
         {
           "Text": "16",
-          "Confidence": 93.29803,
+          "Confidence": 92.75955,
           "Left": 1414,
           "Top": 1239,
           "Right": 1438,
@@ -12006,7 +12006,7 @@
         },
         {
           "Text": "FEB",
-          "Confidence": 93.13004,
+          "Confidence": 92.75955,
           "Left": 1447,
           "Top": 1239,
           "Right": 1498,
@@ -12014,7 +12014,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.87465,
+          "Confidence": 96.15559,
           "Left": 1508,
           "Top": 1239,
           "Right": 1535,
@@ -12022,7 +12022,7 @@
         },
         {
           "Text": "-120,000",
-          "Confidence": 92.814896,
+          "Confidence": 85.54611,
           "Left": 1625,
           "Top": 1239,
           "Right": 1728,
@@ -12030,7 +12030,7 @@
         },
         {
           "Text": "no",
-          "Confidence": 92.33473,
+          "Confidence": 92.31476,
           "Left": 497,
           "Top": 1246,
           "Right": 525,
@@ -12043,7 +12043,7 @@
       "Words": [
         {
           "Text": "0000762",
-          "Confidence": 91.95366,
+          "Confidence": 92.6074,
           "Left": 274,
           "Top": 1296,
           "Right": 374,
@@ -12051,7 +12051,7 @@
         },
         {
           "Text": "F/",
-          "Confidence": 91.95366,
+          "Confidence": 92.57769,
           "Left": 383,
           "Top": 1296,
           "Right": 407,
@@ -12059,7 +12059,7 @@
         },
         {
           "Text": "SOCIETE",
-          "Confidence": 91.420906,
+          "Confidence": 91.92019,
           "Left": 416,
           "Top": 1296,
           "Right": 533,
@@ -12067,7 +12067,7 @@
         },
         {
           "Text": "MYTEK",
-          "Confidence": 91.30554,
+          "Confidence": 90.81478,
           "Left": 542,
           "Top": 1296,
           "Right": 645,
@@ -12080,7 +12080,7 @@
       "Words": [
         {
           "Text": "INFORMATIQUE",
-          "Confidence": 90.42976,
+          "Confidence": 91.40497,
           "Left": 274,
           "Top": 1353,
           "Right": 491,
@@ -12093,7 +12093,7 @@
       "Words": [
         {
           "Text": "Regularisation",
-          "Confidence": 92.59646,
+          "Confidence": 92.20969,
           "Left": 274,
           "Top": 1409,
           "Right": 443,
@@ -12101,7 +12101,7 @@
         },
         {
           "Text": "Debit",
-          "Confidence": 92.98663,
+          "Confidence": 90.12268,
           "Left": 451,
           "Top": 1409,
           "Right": 515,
@@ -12109,7 +12109,7 @@
         },
         {
           "Text": "16",
-          "Confidence": 92.70332,
+          "Confidence": 93.013695,
           "Left": 106,
           "Top": 1410,
           "Right": 131,
@@ -12117,7 +12117,7 @@
         },
         {
           "Text": "FEB",
-          "Confidence": 92.70332,
+          "Confidence": 91.17468,
           "Left": 139,
           "Top": 1410,
           "Right": 191,
@@ -12125,7 +12125,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.73717,
+          "Confidence": 96.78031,
           "Left": 200,
           "Top": 1410,
           "Right": 228,
@@ -12165,7 +12165,7 @@
         },
         {
           "Text": "-5,000",
-          "Confidence": 91.67434,
+          "Confidence": 87.47345,
           "Left": 1625,
           "Top": 1410,
           "Right": 1698,
@@ -12223,7 +12223,7 @@
       "Words": [
         {
           "Text": ":",
-          "Confidence": 90.09596,
+          "Confidence": 90.569046,
           "Left": 761,
           "Top": 1474,
           "Right": 764,
@@ -12252,7 +12252,7 @@
         },
         {
           "Text": "16",
-          "Confidence": 92.70332,
+          "Confidence": 93.013695,
           "Left": 106,
           "Top": 1524,
           "Right": 131,
@@ -12260,7 +12260,7 @@
         },
         {
           "Text": "FEB",
-          "Confidence": 92.70332,
+          "Confidence": 91.17468,
           "Left": 139,
           "Top": 1524,
           "Right": 191,
@@ -12268,7 +12268,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.73717,
+          "Confidence": 96.78031,
           "Left": 200,
           "Top": 1524,
           "Right": 228,
@@ -12366,7 +12366,7 @@
         },
         {
           "Text": "19",
-          "Confidence": 93.11926,
+          "Confidence": 92.72176,
           "Left": 106,
           "Top": 1638,
           "Right": 130,
@@ -12374,7 +12374,7 @@
         },
         {
           "Text": "FEB",
-          "Confidence": 91.44702,
+          "Confidence": 91.449356,
           "Left": 139,
           "Top": 1638,
           "Right": 191,
@@ -12382,7 +12382,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.71581,
+          "Confidence": 96.58151,
           "Left": 200,
           "Top": 1638,
           "Right": 228,
@@ -12430,7 +12430,7 @@
         },
         {
           "Text": "-2,975",
-          "Confidence": 92.2052,
+          "Confidence": 84.359406,
           "Left": 1625,
           "Top": 1638,
           "Right": 1697,
@@ -13547,7 +13547,7 @@
         },
         {
           "Text": "MAR",
-          "Confidence": 92.41758,
+          "Confidence": 82.828445,
           "Left": 139,
           "Top": 3518,
           "Right": 205,
@@ -13690,7 +13690,7 @@
         },
         {
           "Text": "MAR",
-          "Confidence": 92.41758,
+          "Confidence": 82.828445,
           "Left": 139,
           "Top": 3632,
           "Right": 205,
@@ -15508,7 +15508,7 @@
         },
         {
           "Text": "F/",
-          "Confidence": 91.712555,
+          "Confidence": 86.340225,
           "Left": 383,
           "Top": 5684,
           "Right": 407,
@@ -15516,7 +15516,7 @@
         },
         {
           "Text": "HANNIBAL",
-          "Confidence": 91.38386,
+          "Confidence": 86.340225,
           "Left": 415,
           "Top": 5684,
           "Right": 566,
@@ -16038,7 +16038,7 @@
         },
         {
           "Text": "COMM.",
-          "Confidence": 91.830536,
+          "Confidence": 84.61334,
           "Left": 274,
           "Top": 6827,
           "Right": 371,
@@ -16062,7 +16062,7 @@
         },
         {
           "Text": "SUSPENS.200524",
-          "Confidence": 90.889786,
+          "Confidence": 90.45827,
           "Left": 775,
           "Top": 6827,
           "Right": 992,
@@ -16449,7 +16449,7 @@
         },
         {
           "Text": "COMM.",
-          "Confidence": 91.58803,
+          "Confidence": 85.87334,
           "Left": 274,
           "Top": 7169,
           "Right": 371,
@@ -16998,7 +16998,7 @@
         },
         {
           "Text": "COMM.",
-          "Confidence": 91.80599,
+          "Confidence": 86.40401,
           "Left": 274,
           "Top": 7624,
           "Right": 371,
@@ -17022,7 +17022,7 @@
         },
         {
           "Text": "SUSPENS.240524",
-          "Confidence": 91.2298,
+          "Confidence": 89.9751,
           "Left": 775,
           "Top": 7624,
           "Right": 992,
@@ -17531,7 +17531,7 @@
         },
         {
           "Text": "COMM.",
-          "Confidence": 91.949844,
+          "Confidence": 85.38842,
           "Left": 274,
           "Top": 8080,
           "Right": 371,
@@ -19637,7 +19637,7 @@
         },
         {
           "Text": "FT24172406836994\\S98",
-          "Confidence": 90.93904,
+          "Confidence": 83.83637,
           "Left": 1096,
           "Top": 10421,
           "Right": 1385,
@@ -19693,7 +19693,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.89644,
+          "Confidence": 95.473274,
           "Left": 1508,
           "Top": 10422,
           "Right": 1535,
@@ -19735,7 +19735,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.8221,
+          "Confidence": 96.65562,
           "Left": 1506,
           "Top": 11105,
           "Right": 1539,
@@ -19783,15 +19783,15 @@
         },
         {
           "Text": "20",
-          "Confidence": 93.03177,
+          "Confidence": 96.33716,
           "Left": 1411,
           "Top": 11109,
-          "Right": 1438,
+          "Right": 1437,
           "Bottom": 11130
         },
         {
           "Text": "JUN",
-          "Confidence": 90.879074,
+          "Confidence": 96.17109,
           "Left": 1447,
           "Top": 11109,
           "Right": 1535,
@@ -19883,7 +19883,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.879,
+          "Confidence": 96.93683,
           "Left": 1506,
           "Top": 11332,
           "Right": 1539,
@@ -19907,15 +19907,15 @@
         },
         {
           "Text": "20",
-          "Confidence": 96.793205,
+          "Confidence": 83.09036,
           "Left": 103,
           "Top": 11336,
-          "Right": 129,
+          "Right": 131,
           "Bottom": 11357
         },
         {
           "Text": "JUN",
-          "Confidence": 96.702446,
+          "Confidence": 83.09036,
           "Left": 139,
           "Top": 11336,
           "Right": 228,
@@ -19931,7 +19931,7 @@
         },
         {
           "Text": "21",
-          "Confidence": 92.92191,
+          "Confidence": 96.61588,
           "Left": 1411,
           "Top": 11336,
           "Right": 1435,
@@ -19939,7 +19939,7 @@
         },
         {
           "Text": "JUN",
-          "Confidence": 90.6597,
+          "Confidence": 96.93683,
           "Left": 1447,
           "Top": 11336,
           "Right": 1535,
@@ -20018,15 +20018,15 @@
       "Words": [
         {
           "Text": "24",
-          "Confidence": 96.59753,
-          "Left": 201,
+          "Confidence": 96.705925,
+          "Left": 198,
           "Top": 11446,
           "Right": 231,
           "Bottom": 11482
         },
         {
           "Text": "24",
-          "Confidence": 96.879,
+          "Confidence": 96.93683,
           "Left": 1506,
           "Top": 11446,
           "Right": 1539,
@@ -20050,15 +20050,15 @@
         },
         {
           "Text": "20",
-          "Confidence": 96.793205,
+          "Confidence": 83.09036,
           "Left": 103,
           "Top": 11450,
-          "Right": 129,
+          "Right": 131,
           "Bottom": 11471
         },
         {
           "Text": "JUN",
-          "Confidence": 96.702446,
+          "Confidence": 83.09036,
           "Left": 139,
           "Top": 11450,
           "Right": 228,
@@ -20074,7 +20074,7 @@
         },
         {
           "Text": "21",
-          "Confidence": 92.92191,
+          "Confidence": 96.61588,
           "Left": 1411,
           "Top": 11450,
           "Right": 1435,
@@ -20082,7 +20082,7 @@
         },
         {
           "Text": "JUN",
-          "Confidence": 90.6597,
+          "Confidence": 96.93683,
           "Left": 1447,
           "Top": 11450,
           "Right": 1535,
@@ -20140,15 +20140,15 @@
       "Words": [
         {
           "Text": "24",
-          "Confidence": 96.59753,
-          "Left": 201,
+          "Confidence": 96.705925,
+          "Left": 198,
           "Top": 11560,
           "Right": 231,
           "Bottom": 11596
         },
         {
           "Text": "24",
-          "Confidence": 96.879,
+          "Confidence": 96.93683,
           "Left": 1506,
           "Top": 11560,
           "Right": 1539,
@@ -20164,15 +20164,15 @@
         },
         {
           "Text": "20",
-          "Confidence": 96.793205,
+          "Confidence": 83.09036,
           "Left": 103,
           "Top": 11564,
-          "Right": 129,
+          "Right": 131,
           "Bottom": 11585
         },
         {
           "Text": "JUN",
-          "Confidence": 96.702446,
+          "Confidence": 83.09036,
           "Left": 139,
           "Top": 11564,
           "Right": 228,
@@ -20196,7 +20196,7 @@
         },
         {
           "Text": "21",
-          "Confidence": 92.92191,
+          "Confidence": 96.61588,
           "Left": 1411,
           "Top": 11564,
           "Right": 1435,
@@ -20204,7 +20204,7 @@
         },
         {
           "Text": "JUN",
-          "Confidence": 90.6597,
+          "Confidence": 96.93683,
           "Left": 1447,
           "Top": 11564,
           "Right": 1535,
@@ -20238,15 +20238,15 @@
       "Words": [
         {
           "Text": "24",
-          "Confidence": 96.59753,
-          "Left": 201,
+          "Confidence": 96.705925,
+          "Left": 198,
           "Top": 11674,
           "Right": 231,
           "Bottom": 11710
         },
         {
           "Text": "24",
-          "Confidence": 96.879,
+          "Confidence": 96.93683,
           "Left": 1506,
           "Top": 11674,
           "Right": 1539,
@@ -20270,15 +20270,15 @@
         },
         {
           "Text": "20",
-          "Confidence": 96.793205,
+          "Confidence": 83.09036,
           "Left": 103,
           "Top": 11678,
-          "Right": 129,
+          "Right": 131,
           "Bottom": 11699
         },
         {
           "Text": "JUN",
-          "Confidence": 96.702446,
+          "Confidence": 83.09036,
           "Left": 139,
           "Top": 11678,
           "Right": 228,
@@ -20294,7 +20294,7 @@
         },
         {
           "Text": "21",
-          "Confidence": 92.92191,
+          "Confidence": 96.61588,
           "Left": 1411,
           "Top": 11678,
           "Right": 1435,
@@ -20302,7 +20302,7 @@
         },
         {
           "Text": "JUN",
-          "Confidence": 90.6597,
+          "Confidence": 96.93683,
           "Left": 1447,
           "Top": 11678,
           "Right": 1535,
@@ -20418,7 +20418,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.94883,
+          "Confidence": 96.668205,
           "Left": 1506,
           "Top": 11901,
           "Right": 1539,
@@ -20466,7 +20466,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 89.95215,
+          "Confidence": 96.33764,
           "Left": 1411,
           "Top": 11905,
           "Right": 1437,
@@ -20474,7 +20474,7 @@
         },
         {
           "Text": "JUN",
-          "Confidence": 89.95215,
+          "Confidence": 95.75759,
           "Left": 1447,
           "Top": 11905,
           "Right": 1535,
@@ -20561,7 +20561,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.94883,
+          "Confidence": 96.668205,
           "Left": 1506,
           "Top": 12015,
           "Right": 1539,
@@ -20609,7 +20609,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 89.95215,
+          "Confidence": 96.33764,
           "Left": 1411,
           "Top": 12019,
           "Right": 1437,
@@ -20617,7 +20617,7 @@
         },
         {
           "Text": "JUN",
-          "Confidence": 89.95215,
+          "Confidence": 95.75759,
           "Left": 1447,
           "Top": 12019,
           "Right": 1535,
@@ -20683,7 +20683,7 @@
         },
         {
           "Text": "24",
-          "Confidence": 96.79646,
+          "Confidence": 96.57466,
           "Left": 1506,
           "Top": 12129,
           "Right": 1539,
@@ -20699,7 +20699,7 @@
         },
         {
           "Text": "FT24177523705400\\S98",
-          "Confidence": 90.89412,
+          "Confidence": 83.06407,
           "Left": 1096,
           "Top": 12132,
           "Right": 1385,
@@ -20821,7 +20821,7 @@
         },
         {
           "Text": "FT24177523705400\\S98",
-          "Confidence": 90.89412,
+          "Confidence": 83.06407,
           "Left": 1096,
           "Top": 12246,
           "Right": 1385,
@@ -20999,7 +20999,7 @@
         },
         {
           "Text": "FT24180358629643",
-          "Confidence": 90.56376,
+          "Confidence": 92.48288,
           "Left": 1096,
           "Top": 12361,
           "Right": 1331,
@@ -21142,7 +21142,7 @@
         },
         {
           "Text": "FT24180633526032",
-          "Confidence": 90.52641,
+          "Confidence": 92.26675,
           "Left": 1096,
           "Top": 12475,
           "Right": 1332,
@@ -21264,7 +21264,7 @@
         },
         {
           "Text": "FT24180633526032",
-          "Confidence": 90.52641,
+          "Confidence": 92.26675,
           "Left": 1096,
           "Top": 12589,
           "Right": 1332,
@@ -22118,7 +22118,7 @@
         },
         {
           "Text": "Mr",
-          "Confidence": 91.99711,
+          "Confidence": 85.5573,
           "Left": 415,
           "Top": 13781,
           "Right": 450,
@@ -22240,7 +22240,7 @@
         },
         {
           "Text": "COMM.",
-          "Confidence": 91.748955,
+          "Confidence": 85.60868,
           "Left": 274,
           "Top": 13895,
           "Right": 371,

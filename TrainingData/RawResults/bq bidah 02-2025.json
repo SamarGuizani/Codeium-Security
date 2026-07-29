@@ -15,8 +15,8 @@
     "EAHSAIE POUK عا COMMERCE ET UROUSTIE",
     "00 $ لنتجارة  g الإتصاد",
     "Le 05/03/2025",
-    "11055000122600278838 TND BIDAH RENT A CAR",
-    "RIB: .",
+    "11055000122600278838 TND BIDAH RENT ACAR.",
+    "RIB:",
     "000009199 RUE ENNASR GP1 KM13",
     "CIF CLIENT :",
     "2034 EZZAHRA 2034",
@@ -27,7 +27,7 @@
     "حسابكم",
     "هي حسا كشف شف التالي الرصيد السهو الخطأ عدى ما يحتوي",
     ": أو",
-    "Nous avons le plaisir عل vous adresser le releve de votre compte qui",
+    "Nous avons le plaisir de vous adresser le releve de votre compte qui",
     "PERIODE DU 01/02/2025 AU 28/02/2025 presente, sauf omission, le solde ci-dessous :",
     "erreur ou",
     "SOLDE DEBITEUR AU 01/02/2025 12,602,543",
@@ -474,33 +474,17 @@
     },
     {
       "Text": "RENT",
-      "Confidence": 92.43807,
+      "Confidence": 90.78582,
       "Left": 1255,
       "Top": 319,
       "Right": 1309,
       "Bottom": 335
     },
     {
-      "Text": "A",
-      "Confidence": 89.16136,
+      "Text": "ACAR.",
+      "Confidence": 83.25334,
       "Left": 1316,
       "Top": 319,
-      "Right": 1330,
-      "Bottom": 334
-    },
-    {
-      "Text": "CAR",
-      "Confidence": 89.16136,
-      "Left": 1337,
-      "Top": 319,
-      "Right": 1380,
-      "Bottom": 334
-    },
-    {
-      "Text": ".",
-      "Confidence": 91.86773,
-      "Left": 1389,
-      "Top": 331,
       "Right": 1392,
       "Bottom": 334
     },
@@ -522,7 +506,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 78.93768,
+      "Confidence": 92.88922,
       "Left": 308,
       "Top": 362,
       "Right": 312,
@@ -849,6 +833,46 @@
       "Bottom": 611
     },
     {
+      "Text": "Nous",
+      "Confidence": 93.06697,
+      "Left": 976,
+      "Top": 620,
+      "Right": 1022,
+      "Bottom": 635
+    },
+    {
+      "Text": "avons",
+      "Confidence": 92.47498,
+      "Left": 1030,
+      "Top": 623,
+      "Right": 1082,
+      "Bottom": 634
+    },
+    {
+      "Text": "le",
+      "Confidence": 86.71611,
+      "Left": 1090,
+      "Top": 619,
+      "Right": 1104,
+      "Bottom": 634
+    },
+    {
+      "Text": "plaisir",
+      "Confidence": 92.24512,
+      "Left": 1112,
+      "Top": 618,
+      "Right": 1164,
+      "Bottom": 638
+    },
+    {
+      "Text": "de",
+      "Confidence": 93.14796,
+      "Left": 1171,
+      "Top": 618,
+      "Right": 1193,
+      "Bottom": 633
+    },
+    {
       "Text": "vous",
       "Confidence": 92.9456,
       "Left": 1199,
@@ -874,7 +898,7 @@
     },
     {
       "Text": "releve",
-      "Confidence": 92.93775,
+      "Confidence": 92.69087,
       "Left": 1358,
       "Top": 618,
       "Right": 1412,
@@ -911,46 +935,6 @@
       "Top": 615,
       "Right": 1599,
       "Bottom": 634
-    },
-    {
-      "Text": "عل",
-      "Confidence": 82.46395,
-      "Left": 1171,
-      "Top": 618,
-      "Right": 1193,
-      "Bottom": 633
-    },
-    {
-      "Text": "Nous",
-      "Confidence": 93.06697,
-      "Left": 976,
-      "Top": 620,
-      "Right": 1022,
-      "Bottom": 635
-    },
-    {
-      "Text": "avons",
-      "Confidence": 92.81517,
-      "Left": 1030,
-      "Top": 623,
-      "Right": 1082,
-      "Bottom": 634
-    },
-    {
-      "Text": "le",
-      "Confidence": 86.71611,
-      "Left": 1090,
-      "Top": 619,
-      "Right": 1104,
-      "Bottom": 634
-    },
-    {
-      "Text": "plaisir",
-      "Confidence": 92.24512,
-      "Left": 1112,
-      "Top": 618,
-      "Right": 1164,
-      "Bottom": 638
     },
     {
       "Text": "28/02/2025",
@@ -12402,7 +12386,7 @@
       ]
     },
     {
-      "LineText": "11055000122600278838 TND BIDAH RENT A CAR",
+      "LineText": "11055000122600278838 TND BIDAH RENT ACAR.",
       "Words": [
         {
           "Text": "BIDAH",
@@ -12414,26 +12398,18 @@
         },
         {
           "Text": "RENT",
-          "Confidence": 92.43807,
+          "Confidence": 90.78582,
           "Left": 1255,
           "Top": 319,
           "Right": 1309,
           "Bottom": 335
         },
         {
-          "Text": "A",
-          "Confidence": 89.16136,
+          "Text": "ACAR.",
+          "Confidence": 83.25334,
           "Left": 1316,
           "Top": 319,
-          "Right": 1330,
-          "Bottom": 334
-        },
-        {
-          "Text": "CAR",
-          "Confidence": 89.16136,
-          "Left": 1337,
-          "Top": 319,
-          "Right": 1380,
+          "Right": 1392,
           "Bottom": 334
         },
         {
@@ -12455,7 +12431,7 @@
       ]
     },
     {
-      "LineText": "RIB: .",
+      "LineText": "RIB:",
       "Words": [
         {
           "Text": "RIB:",
@@ -12464,14 +12440,6 @@
           "Top": 330,
           "Right": 234,
           "Bottom": 346
-        },
-        {
-          "Text": ".",
-          "Confidence": 91.86773,
-          "Left": 1389,
-          "Top": 331,
-          "Right": 1392,
-          "Bottom": 334
         }
       ]
     },
@@ -12541,7 +12509,7 @@
         },
         {
           "Text": ":",
-          "Confidence": 78.93768,
+          "Confidence": 92.88922,
           "Left": 308,
           "Top": 362,
           "Right": 312,
@@ -12870,7 +12838,7 @@
       ]
     },
     {
-      "LineText": "Nous avons le plaisir عل vous adresser le releve de votre compte qui",
+      "LineText": "Nous avons le plaisir de vous adresser le releve de votre compte qui",
       "Words": [
         {
           "Text": "qui",
@@ -12905,6 +12873,22 @@
           "Bottom": 635
         },
         {
+          "Text": "plaisir",
+          "Confidence": 92.24512,
+          "Left": 1112,
+          "Top": 618,
+          "Right": 1164,
+          "Bottom": 638
+        },
+        {
+          "Text": "de",
+          "Confidence": 93.14796,
+          "Left": 1171,
+          "Top": 618,
+          "Right": 1193,
+          "Bottom": 633
+        },
+        {
           "Text": "adresser",
           "Confidence": 91.44579,
           "Left": 1249,
@@ -12922,27 +12906,11 @@
         },
         {
           "Text": "releve",
-          "Confidence": 92.93775,
+          "Confidence": 92.69087,
           "Left": 1358,
           "Top": 618,
           "Right": 1412,
           "Bottom": 632
-        },
-        {
-          "Text": "عل",
-          "Confidence": 82.46395,
-          "Left": 1171,
-          "Top": 618,
-          "Right": 1193,
-          "Bottom": 633
-        },
-        {
-          "Text": "plaisir",
-          "Confidence": 92.24512,
-          "Left": 1112,
-          "Top": 618,
-          "Right": 1164,
-          "Bottom": 638
         },
         {
           "Text": "le",
@@ -12970,7 +12938,7 @@
         },
         {
           "Text": "avons",
-          "Confidence": 92.81517,
+          "Confidence": 92.47498,
           "Left": 1030,
           "Top": 623,
           "Right": 1082,

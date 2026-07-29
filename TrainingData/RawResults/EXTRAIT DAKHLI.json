@@ -62,7 +62,7 @@
     "لاسي : - 900ZRSP25034005W",
     "TR نابت ب",
     "T ESPECE T ESPECES : 0552503500342462 r 2",
-    "ESPECE 7 ESPECES : 41",
+    "ESPÈCE 7 ESPECES : 41",
     "T : 3,660,000",
     " PRELEVEMENT RECU : DAKHLI RENT A CAR COMPAGNIE 2.211,066 امات",
     "04/02/2025 INTERNATIONALE DE LEASING (CIL) 2503505139484010",
@@ -272,7 +272,7 @@
     " COMMISSION SUR PRELEVEMENT REPRESENTATION PP2269103",
     "06022025 - 2,000 -",
     "ARAB INTERNATIONAL LEASE 2503704138105022",
-    " PRELEVEMENT RECU REPRESENTATION PP2269103 قمعم",
+    " PRELEVEMENT RECU REPRESENTATION PP2269103 ARAB",
     "060212025 : 2.778,061 -",
     "INTERNATIONAL LEASE 2503704138105022",
     " TVA: REPRESENTATION PP2269103 ARAB INTERNATIONAL",
@@ -300,15 +300,15 @@
     "10/02/2025 REMISE TPE 1162410011 NUM 488,000",
     "ESPECE 11/02/2025 2504107321410000",
     "T T ESPECES : 0482504 5,204,000",
-    " ESPÈCE VERSEMENT ESPECES 0022504100388982 1 2504",
+    " ESPECE VERSEMENT ESPECES 0022504100388982 1 2504",
     "10/02/2025 VERSEMENT : 2,000,000",
     "2.000,000",
     "ESPECE T ESPECES : 0552504 1 5 2504",
     "T )",
     "ESPECE 14/02/2025 2504107551140000",
-    "7 ESPECES : 0552504 5,000,000",
+    "T ESPECES : 0552504 5,000,000",
     "10/02/2025 11/02/2025 2504107553410000",
-    "T ESPECE T ESPECES : 0552504100392760 4:060,000",
+    "T ESPÈCE T ESPECES : 0552504100392760 4:060,000",
     " 11/02/2025 2504110550410000",
     "10/02/2025 VERSEMENT ESPECE VERSEMENT ESPECES : 0552504100392660 ل",
     "ESPECE 0652504 100382713 1 25041",
@@ -335,7 +335,7 @@
     " RECU DAKHLI RENT A CAR",
     "PRELEVEMENT : — ù",
     "100272025 INTERNATIONALE DE LEASING (CIL) 2504104138318050 6.120,186",
-    " TVA : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE انا S",
+    " TVA : DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE انا S",
     "10/02/2025 DE LEASING (CIL) 2504104138318050 0,380",
     " PRELEVEMENT : LEASING DAKHLI RENT A CAR",
     "COMMISSION SUR gNCVAES FOSEXAIOS TN",
@@ -1243,7 +1243,7 @@
     "Débit Crédit Date valeur",
     "Natures des opérations 800ZRSP250580014",
     "26/02/2025",
-    "PRELEVEMENT DAKHLI RENT À CAR",
+    "PRELEVEMENT DAKHLI RENT A CAR",
     " COMMISSION SUR - 2.000",
     "27022025 ATTIJARI LEASING 2505803138087000 mc",
     "CAR ATTIJARI LEASING",
@@ -1409,7 +1409,7 @@
     },
     {
       "Text": "CIF",
-      "Confidence": 93.098595,
+      "Confidence": 92.47123,
       "Left": 170,
       "Top": 346,
       "Right": 202,
@@ -1417,7 +1417,7 @@
     },
     {
       "Text": "CLIENT",
-      "Confidence": 91.21109,
+      "Confidence": 90.44673,
       "Left": 208,
       "Top": 346,
       "Right": 282,
@@ -1433,7 +1433,7 @@
     },
     {
       "Text": "000001814",
-      "Confidence": 91.41275,
+      "Confidence": 96.113846,
       "Left": 340,
       "Top": 345,
       "Right": 442,
@@ -1449,7 +1449,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 84.649216,
+      "Confidence": 83.49289,
       "Left": 264,
       "Top": 409,
       "Right": 269,
@@ -2273,7 +2273,7 @@
     },
     {
       "Text": "REMISE",
-      "Confidence": 92.554695,
+      "Confidence": 92.44677,
       "Left": 358,
       "Top": 866,
       "Right": 428,
@@ -3145,15 +3145,15 @@
     },
     {
       "Text": "T",
-      "Confidence": 89.8553,
+      "Confidence": 86.34674,
       "Left": 331,
       "Top": 1272,
       "Right": 335,
       "Bottom": 1278
     },
     {
-      "Text": "ESPECE",
-      "Confidence": 89.8553,
+      "Text": "ESPÈCE",
+      "Confidence": 86.34674,
       "Left": 344,
       "Top": 1260,
       "Right": 418,
@@ -3169,7 +3169,7 @@
     },
     {
       "Text": "ESPECES",
-      "Confidence": 91.18884,
+      "Confidence": 93.02746,
       "Left": 550,
       "Top": 1262,
       "Right": 636,
@@ -3177,7 +3177,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 83.33039,
+      "Confidence": 91.97685,
       "Left": 642,
       "Top": 1266,
       "Right": 645,
@@ -3273,7 +3273,7 @@
     },
     {
       "Text": "04/02/2025",
-      "Confidence": 91.179,
+      "Confidence": 88.57825,
       "Left": 96,
       "Top": 1307,
       "Right": 187,
@@ -5857,7 +5857,7 @@
     },
     {
       "Text": "Crédit",
-      "Confidence": 92.807,
+      "Confidence": 87.04171,
       "Left": 1180,
       "Top": 3177,
       "Right": 1240,
@@ -5865,7 +5865,7 @@
     },
     {
       "Text": "Date",
-      "Confidence": 92.99284,
+      "Confidence": 91.579216,
       "Left": 1318,
       "Top": 3182,
       "Right": 1361,
@@ -5873,7 +5873,7 @@
     },
     {
       "Text": "valeur",
-      "Confidence": 90.97656,
+      "Confidence": 93.133125,
       "Left": 1367,
       "Top": 3182,
       "Right": 1429,
@@ -5881,7 +5881,7 @@
     },
     {
       "Text": "Ref",
-      "Confidence": 90.87722,
+      "Confidence": 92.951645,
       "Left": 1512,
       "Top": 3183,
       "Right": 1546,
@@ -5889,7 +5889,7 @@
     },
     {
       "Text": "Banque",
-      "Confidence": 90.87722,
+      "Confidence": 91.84184,
       "Left": 1551,
       "Top": 3183,
       "Right": 1626,
@@ -6729,7 +6729,7 @@
     },
     {
       "Text": "LEASE",
-      "Confidence": 92.687386,
+      "Confidence": 84.03022,
       "Left": 627,
       "Top": 3492,
       "Right": 685,
@@ -6737,7 +6737,7 @@
     },
     {
       "Text": "2503606137687015",
-      "Confidence": 92.16733,
+      "Confidence": 91.659904,
       "Left": 691,
       "Top": 3493,
       "Right": 855,
@@ -6985,7 +6985,7 @@
     },
     {
       "Text": "d",
-      "Confidence": 93.0097,
+      "Confidence": 83.943726,
       "Left": 1643,
       "Top": 3631,
       "Right": 1645,
@@ -7017,7 +7017,7 @@
     },
     {
       "Text": "STE",
-      "Confidence": 87.63119,
+      "Confidence": 86.62078,
       "Left": 267,
       "Top": 3654,
       "Right": 303,
@@ -7937,7 +7937,7 @@
     },
     {
       "Text": "2503602137678080",
-      "Confidence": 91.75163,
+      "Confidence": 83.97267,
       "Left": 210,
       "Top": 4101,
       "Right": 381,
@@ -8545,7 +8545,7 @@
     },
     {
       "Text": "z",
-      "Confidence": 88.55544,
+      "Confidence": 84.58871,
       "Left": 1634,
       "Top": 4380,
       "Right": 1641,
@@ -11400,8 +11400,8 @@
       "Bottom": 6298
     },
     {
-      "Text": "قمعم",
-      "Confidence": 82.50585,
+      "Text": "ARAB",
+      "Confidence": 87.058876,
       "Left": 837,
       "Top": 6282,
       "Right": 887,
@@ -11809,7 +11809,7 @@
     },
     {
       "Text": "10/02/2025",
-      "Confidence": 89.726425,
+      "Confidence": 87.09034,
       "Left": 94,
       "Top": 6516,
       "Right": 184,
@@ -11817,7 +11817,7 @@
     },
     {
       "Text": "",
-      "Confidence": 93.26515,
+      "Confidence": 92.00284,
       "Left": 201,
       "Top": 6510,
       "Right": 216,
@@ -11841,7 +11841,7 @@
     },
     {
       "Text": "REMISE",
-      "Confidence": 92.53915,
+      "Confidence": 92.36064,
       "Left": 391,
       "Top": 6514,
       "Right": 460,
@@ -12313,7 +12313,7 @@
     },
     {
       "Text": "0482504",
-      "Confidence": 96.94274,
+      "Confidence": 96.63088,
       "Left": 649,
       "Top": 6739,
       "Right": 720,
@@ -12329,7 +12329,7 @@
     },
     {
       "Text": "11/02/2025",
-      "Confidence": 91.80458,
+      "Confidence": 85.27812,
       "Left": 1333,
       "Top": 6723,
       "Right": 1423,
@@ -12337,7 +12337,7 @@
     },
     {
       "Text": "2504107321410000",
-      "Confidence": 89.23756,
+      "Confidence": 85.5412,
       "Left": 1500,
       "Top": 6729,
       "Right": 1647,
@@ -12353,23 +12353,23 @@
     },
     {
       "Text": "",
-      "Confidence": 93.30624,
-      "Left": 201,
+      "Confidence": 92.107254,
+      "Left": 204,
       "Top": 6769,
       "Right": 217,
       "Bottom": 6804
     },
     {
       "Text": "VERSEMENT",
-      "Confidence": 91.45951,
+      "Confidence": 91.82919,
       "Left": 221,
       "Top": 6780,
       "Right": 336,
       "Bottom": 6796
     },
     {
-      "Text": "ESPÈCE",
-      "Confidence": 89.07866,
+      "Text": "ESPECE",
+      "Confidence": 92.17101,
       "Left": 342,
       "Top": 6777,
       "Right": 416,
@@ -12385,7 +12385,7 @@
     },
     {
       "Text": "ESPECES",
-      "Confidence": 90.716156,
+      "Confidence": 92.93942,
       "Left": 547,
       "Top": 6778,
       "Right": 633,
@@ -12393,7 +12393,7 @@
     },
     {
       "Text": ":",
-      "Confidence": 91.537315,
+      "Confidence": 92.33819,
       "Left": 640,
       "Top": 6782,
       "Right": 643,
@@ -12528,8 +12528,8 @@
       "Bottom": 6892
     },
     {
-      "Text": "7",
-      "Confidence": 95.70588,
+      "Text": "T",
+      "Confidence": 84.276855,
       "Left": 531,
       "Top": 6867,
       "Right": 542,
@@ -12553,7 +12553,7 @@
     },
     {
       "Text": "0552504",
-      "Confidence": 96.79507,
+      "Confidence": 93.22029,
       "Left": 649,
       "Top": 6872,
       "Right": 720,
@@ -12600,8 +12600,8 @@
       "Bottom": 6925
     },
     {
-      "Text": "ESPECE",
-      "Confidence": 87.08974,
+      "Text": "ESPÈCE",
+      "Confidence": 83.47374,
       "Left": 342,
       "Top": 6909,
       "Right": 416,
@@ -12953,7 +12953,7 @@
     },
     {
       "Text": "10/02/2025",
-      "Confidence": 92.73624,
+      "Confidence": 83.297516,
       "Left": 97,
       "Top": 7085,
       "Right": 190,
@@ -12961,7 +12961,7 @@
     },
     {
       "Text": "BEN",
-      "Confidence": 87.814575,
+      "Confidence": 88.66042,
       "Left": 223,
       "Top": 7099,
       "Right": 260,
@@ -12969,7 +12969,7 @@
     },
     {
       "Text": "NASR",
-      "Confidence": 87.814575,
+      "Confidence": 92.28144,
       "Left": 266,
       "Top": 7099,
       "Right": 317,
@@ -13681,7 +13681,7 @@
     },
     {
       "Text": "6.120,186",
-      "Confidence": 90.956436,
+      "Confidence": 83.03897,
       "Left": 1009,
       "Top": 7360,
       "Right": 1091,
@@ -13728,8 +13728,8 @@
       "Bottom": 7401
     },
     {
-      "Text": "A",
-      "Confidence": 92.73778,
+      "Text": "À",
+      "Confidence": 86.71476,
       "Left": 403,
       "Top": 7386,
       "Right": 416,
@@ -14321,7 +14321,7 @@
     },
     {
       "Text": "COMPAGNIE",
-      "Confidence": 90.78293,
+      "Confidence": 86.1375,
       "Left": 794,
       "Top": 7550,
       "Right": 906,
@@ -14905,7 +14905,7 @@
     },
     {
       "Text": "2,000",
-      "Confidence": 93.79862,
+      "Confidence": 84.42355,
       "Left": 1029,
       "Top": 7756,
       "Right": 1075,
@@ -14913,7 +14913,7 @@
     },
     {
       "Text": "PDL",
-      "Confidence": 88.51196,
+      "Confidence": 87.281456,
       "Left": 228,
       "Top": 7783,
       "Right": 272,
@@ -15241,7 +15241,7 @@
     },
     {
       "Text": "COMPAGNIE",
-      "Confidence": 84.75493,
+      "Confidence": 83.71146,
       "Left": 637,
       "Top": 7868,
       "Right": 749,
@@ -15249,7 +15249,7 @@
     },
     {
       "Text": "INTERNATIONALE",
-      "Confidence": 91.450775,
+      "Confidence": 90.26047,
       "Left": 756,
       "Top": 7867,
       "Right": 914,
@@ -15441,7 +15441,7 @@
     },
     {
       "Text": "2,000",
-      "Confidence": 96.16393,
+      "Confidence": 83.83332,
       "Left": 1031,
       "Top": 7932,
       "Right": 1076,
@@ -50641,7 +50641,7 @@
     },
     {
       "Text": "Crédit",
-      "Confidence": 92.8411,
+      "Confidence": 85.882355,
       "Left": 1196,
       "Top": 26639,
       "Right": 1257,
@@ -50649,7 +50649,7 @@
     },
     {
       "Text": "Date",
-      "Confidence": 93.140656,
+      "Confidence": 93.07553,
       "Left": 1333,
       "Top": 26640,
       "Right": 1377,
@@ -50657,7 +50657,7 @@
     },
     {
       "Text": "valeur",
-      "Confidence": 92.5347,
+      "Confidence": 93.07553,
       "Left": 1383,
       "Top": 26637,
       "Right": 1444,
@@ -50665,7 +50665,7 @@
     },
     {
       "Text": "Ref",
-      "Confidence": 91.17261,
+      "Confidence": 92.60707,
       "Left": 1528,
       "Top": 26632,
       "Right": 1561,
@@ -50673,7 +50673,7 @@
     },
     {
       "Text": "Banque",
-      "Confidence": 91.17261,
+      "Confidence": 90.11449,
       "Left": 1567,
       "Top": 26632,
       "Right": 1642,
@@ -50728,8 +50728,8 @@
       "Bottom": 26716
     },
     {
-      "Text": "À",
-      "Confidence": 93.22014,
+      "Text": "A",
+      "Confidence": 91.53021,
       "Left": 685,
       "Top": 26699,
       "Right": 697,
@@ -52948,7 +52948,7 @@
         },
         {
           "Text": "000001814",
-          "Confidence": 91.41275,
+          "Confidence": 96.113846,
           "Left": 340,
           "Top": 345,
           "Right": 442,
@@ -52956,7 +52956,7 @@
         },
         {
           "Text": "CIF",
-          "Confidence": 93.098595,
+          "Confidence": 92.47123,
           "Left": 170,
           "Top": 346,
           "Right": 202,
@@ -52964,7 +52964,7 @@
         },
         {
           "Text": "CLIENT",
-          "Confidence": 91.21109,
+          "Confidence": 90.44673,
           "Left": 208,
           "Top": 346,
           "Right": 282,
@@ -53030,7 +53030,7 @@
         },
         {
           "Text": ":",
-          "Confidence": 84.649216,
+          "Confidence": 83.49289,
           "Left": 264,
           "Top": 409,
           "Right": 269,
@@ -53829,7 +53829,7 @@
         },
         {
           "Text": "REMISE",
-          "Confidence": 92.554695,
+          "Confidence": 92.44677,
           "Left": 358,
           "Top": 866,
           "Right": 428,
@@ -54796,7 +54796,7 @@
       ]
     },
     {
-      "LineText": "ESPECE 7 ESPECES : 41",
+      "LineText": "ESPÈCE 7 ESPECES : 41",
       "Words": [
         {
           "Text": ":",
@@ -54807,8 +54807,8 @@
           "Bottom": 1286
         },
         {
-          "Text": "ESPECE",
-          "Confidence": 89.8553,
+          "Text": "ESPÈCE",
+          "Confidence": 86.34674,
           "Left": 344,
           "Top": 1260,
           "Right": 418,
@@ -54816,7 +54816,7 @@
         },
         {
           "Text": "ESPECES",
-          "Confidence": 91.18884,
+          "Confidence": 93.02746,
           "Left": 550,
           "Top": 1262,
           "Right": 636,
@@ -54845,7 +54845,7 @@
       "Words": [
         {
           "Text": ":",
-          "Confidence": 83.33039,
+          "Confidence": 91.97685,
           "Left": 642,
           "Top": 1266,
           "Right": 645,
@@ -54861,7 +54861,7 @@
         },
         {
           "Text": "T",
-          "Confidence": 89.8553,
+          "Confidence": 86.34674,
           "Left": 331,
           "Top": 1272,
           "Right": 335,
@@ -54967,7 +54967,7 @@
       "Words": [
         {
           "Text": "04/02/2025",
-          "Confidence": 91.179,
+          "Confidence": 88.57825,
           "Left": 96,
           "Top": 1307,
           "Right": 187,
@@ -57838,7 +57838,7 @@
         },
         {
           "Text": "Crédit",
-          "Confidence": 92.807,
+          "Confidence": 87.04171,
           "Left": 1180,
           "Top": 3177,
           "Right": 1240,
@@ -57870,7 +57870,7 @@
         },
         {
           "Text": "Date",
-          "Confidence": 92.99284,
+          "Confidence": 91.579216,
           "Left": 1318,
           "Top": 3182,
           "Right": 1361,
@@ -57878,7 +57878,7 @@
         },
         {
           "Text": "valeur",
-          "Confidence": 90.97656,
+          "Confidence": 93.133125,
           "Left": 1367,
           "Top": 3182,
           "Right": 1429,
@@ -57886,7 +57886,7 @@
         },
         {
           "Text": "Ref",
-          "Confidence": 90.87722,
+          "Confidence": 92.951645,
           "Left": 1512,
           "Top": 3183,
           "Right": 1546,
@@ -57894,7 +57894,7 @@
         },
         {
           "Text": "Banque",
-          "Confidence": 90.87722,
+          "Confidence": 91.84184,
           "Left": 1551,
           "Top": 3183,
           "Right": 1626,
@@ -58831,7 +58831,7 @@
         },
         {
           "Text": "LEASE",
-          "Confidence": 92.687386,
+          "Confidence": 84.03022,
           "Left": 627,
           "Top": 3492,
           "Right": 685,
@@ -58839,7 +58839,7 @@
         },
         {
           "Text": "2503606137687015",
-          "Confidence": 92.16733,
+          "Confidence": 91.659904,
           "Left": 691,
           "Top": 3493,
           "Right": 855,
@@ -59129,7 +59129,7 @@
       "Words": [
         {
           "Text": "d",
-          "Confidence": 93.0097,
+          "Confidence": 83.943726,
           "Left": 1643,
           "Top": 3631,
           "Right": 1645,
@@ -59174,7 +59174,7 @@
         },
         {
           "Text": "STE",
-          "Confidence": 87.63119,
+          "Confidence": 86.62078,
           "Left": 267,
           "Top": 3654,
           "Right": 303,
@@ -60234,7 +60234,7 @@
         },
         {
           "Text": "2503602137678080",
-          "Confidence": 91.75163,
+          "Confidence": 83.97267,
           "Left": 210,
           "Top": 4101,
           "Right": 381,
@@ -60917,7 +60917,7 @@
         },
         {
           "Text": "z",
-          "Confidence": 88.55544,
+          "Confidence": 84.58871,
           "Left": 1634,
           "Top": 4380,
           "Right": 1641,
@@ -64046,7 +64046,7 @@
       ]
     },
     {
-      "LineText": " PRELEVEMENT RECU REPRESENTATION PP2269103 قمعم",
+      "LineText": " PRELEVEMENT RECU REPRESENTATION PP2269103 ARAB",
       "Words": [
         {
           "Text": "",
@@ -64073,8 +64073,8 @@
           "Bottom": 6298
         },
         {
-          "Text": "قمعم",
-          "Confidence": 82.50585,
+          "Text": "ARAB",
+          "Confidence": 87.058876,
           "Left": 837,
           "Top": 6282,
           "Right": 887,
@@ -64587,7 +64587,7 @@
         },
         {
           "Text": "",
-          "Confidence": 93.26515,
+          "Confidence": 92.00284,
           "Left": 201,
           "Top": 6510,
           "Right": 216,
@@ -64611,7 +64611,7 @@
         },
         {
           "Text": "REMISE",
-          "Confidence": 92.53915,
+          "Confidence": 92.36064,
           "Left": 391,
           "Top": 6514,
           "Right": 460,
@@ -64640,7 +64640,7 @@
         },
         {
           "Text": "10/02/2025",
-          "Confidence": 89.726425,
+          "Confidence": 87.09034,
           "Left": 94,
           "Top": 6516,
           "Right": 184,
@@ -65108,7 +65108,7 @@
       "Words": [
         {
           "Text": "11/02/2025",
-          "Confidence": 91.80458,
+          "Confidence": 85.27812,
           "Left": 1333,
           "Top": 6723,
           "Right": 1423,
@@ -65116,7 +65116,7 @@
         },
         {
           "Text": "2504107321410000",
-          "Confidence": 89.23756,
+          "Confidence": 85.5412,
           "Left": 1500,
           "Top": 6729,
           "Right": 1647,
@@ -65161,7 +65161,7 @@
         },
         {
           "Text": "0482504",
-          "Confidence": 96.94274,
+          "Confidence": 96.63088,
           "Left": 649,
           "Top": 6739,
           "Right": 720,
@@ -65186,12 +65186,12 @@
       ]
     },
     {
-      "LineText": " ESPÈCE VERSEMENT ESPECES 0022504100388982 1 2504",
+      "LineText": " ESPECE VERSEMENT ESPECES 0022504100388982 1 2504",
       "Words": [
         {
           "Text": "",
-          "Confidence": 93.30624,
-          "Left": 201,
+          "Confidence": 92.107254,
+          "Left": 204,
           "Top": 6769,
           "Right": 217,
           "Bottom": 6804
@@ -65205,8 +65205,8 @@
           "Bottom": 6789
         },
         {
-          "Text": "ESPÈCE",
-          "Confidence": 89.07866,
+          "Text": "ESPECE",
+          "Confidence": 92.17101,
           "Left": 342,
           "Top": 6777,
           "Right": 416,
@@ -65222,7 +65222,7 @@
         },
         {
           "Text": "ESPECES",
-          "Confidence": 90.716156,
+          "Confidence": 92.93942,
           "Left": 547,
           "Top": 6778,
           "Right": 633,
@@ -65251,7 +65251,7 @@
       "Words": [
         {
           "Text": "VERSEMENT",
-          "Confidence": 91.45951,
+          "Confidence": 91.82919,
           "Left": 221,
           "Top": 6780,
           "Right": 336,
@@ -65267,7 +65267,7 @@
         },
         {
           "Text": ":",
-          "Confidence": 91.537315,
+          "Confidence": 92.33819,
           "Left": 640,
           "Top": 6782,
           "Right": 643,
@@ -65416,7 +65416,7 @@
       ]
     },
     {
-      "LineText": "7 ESPECES : 0552504 5,000,000",
+      "LineText": "T ESPECES : 0552504 5,000,000",
       "Words": [
         {
           "Text": "ESPECES",
@@ -65427,8 +65427,8 @@
           "Bottom": 6882
         },
         {
-          "Text": "7",
-          "Confidence": 95.70588,
+          "Text": "T",
+          "Confidence": 84.276855,
           "Left": 531,
           "Top": 6867,
           "Right": 542,
@@ -65444,7 +65444,7 @@
         },
         {
           "Text": "0552504",
-          "Confidence": 96.79507,
+          "Confidence": 93.22029,
           "Left": 649,
           "Top": 6872,
           "Right": 720,
@@ -65490,11 +65490,11 @@
       ]
     },
     {
-      "LineText": "T ESPECE T ESPECES : 0552504100392760 4:060,000",
+      "LineText": "T ESPÈCE T ESPECES : 0552504100392760 4:060,000",
       "Words": [
         {
-          "Text": "ESPECE",
-          "Confidence": 87.08974,
+          "Text": "ESPÈCE",
+          "Confidence": 83.47374,
           "Left": 342,
           "Top": 6909,
           "Right": 416,
@@ -65881,7 +65881,7 @@
         },
         {
           "Text": "10/02/2025",
-          "Confidence": 92.73624,
+          "Confidence": 83.297516,
           "Left": 97,
           "Top": 7085,
           "Right": 190,
@@ -65915,7 +65915,7 @@
       "Words": [
         {
           "Text": "BEN",
-          "Confidence": 87.814575,
+          "Confidence": 88.66042,
           "Left": 223,
           "Top": 7099,
           "Right": 260,
@@ -65923,7 +65923,7 @@
         },
         {
           "Text": "NASR",
-          "Confidence": 87.814575,
+          "Confidence": 92.28144,
           "Left": 266,
           "Top": 7099,
           "Right": 317,
@@ -66664,7 +66664,7 @@
         },
         {
           "Text": "6.120,186",
-          "Confidence": 90.956436,
+          "Confidence": 83.03897,
           "Left": 1009,
           "Top": 7360,
           "Right": 1091,
@@ -66713,7 +66713,7 @@
       ]
     },
     {
-      "LineText": " TVA : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE انا S",
+      "LineText": " TVA : DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE انا S",
       "Words": [
         {
           "Text": "INTERNATIONALE",
@@ -66764,8 +66764,8 @@
           "Bottom": 7401
         },
         {
-          "Text": "A",
-          "Confidence": 92.73778,
+          "Text": "À",
+          "Confidence": 86.71476,
           "Left": 403,
           "Top": 7386,
           "Right": 416,
@@ -67324,7 +67324,7 @@
         },
         {
           "Text": "COMPAGNIE",
-          "Confidence": 90.78293,
+          "Confidence": 86.1375,
           "Left": 794,
           "Top": 7550,
           "Right": 906,
@@ -68012,7 +68012,7 @@
         },
         {
           "Text": "2,000",
-          "Confidence": 93.79862,
+          "Confidence": 84.42355,
           "Left": 1029,
           "Top": 7756,
           "Right": 1075,
@@ -68126,7 +68126,7 @@
       "Words": [
         {
           "Text": "PDL",
-          "Confidence": 88.51196,
+          "Confidence": 87.281456,
           "Left": 228,
           "Top": 7783,
           "Right": 272,
@@ -68396,7 +68396,7 @@
         },
         {
           "Text": "INTERNATIONALE",
-          "Confidence": 91.450775,
+          "Confidence": 90.26047,
           "Left": 756,
           "Top": 7867,
           "Right": 914,
@@ -68404,7 +68404,7 @@
         },
         {
           "Text": "COMPAGNIE",
-          "Confidence": 84.75493,
+          "Confidence": 83.71146,
           "Left": 637,
           "Top": 7868,
           "Right": 749,
@@ -68608,7 +68608,7 @@
         },
         {
           "Text": "2,000",
-          "Confidence": 96.16393,
+          "Confidence": 83.83332,
           "Left": 1031,
           "Top": 7932,
           "Right": 1076,
@@ -108149,7 +108149,7 @@
         },
         {
           "Text": "Ref",
-          "Confidence": 91.17261,
+          "Confidence": 92.60707,
           "Left": 1528,
           "Top": 26632,
           "Right": 1561,
@@ -108157,7 +108157,7 @@
         },
         {
           "Text": "Banque",
-          "Confidence": 91.17261,
+          "Confidence": 90.11449,
           "Left": 1567,
           "Top": 26632,
           "Right": 1642,
@@ -108170,7 +108170,7 @@
       "Words": [
         {
           "Text": "valeur",
-          "Confidence": 92.5347,
+          "Confidence": 93.07553,
           "Left": 1383,
           "Top": 26637,
           "Right": 1444,
@@ -108178,7 +108178,7 @@
         },
         {
           "Text": "Crédit",
-          "Confidence": 92.8411,
+          "Confidence": 85.882355,
           "Left": 1196,
           "Top": 26639,
           "Right": 1257,
@@ -108186,7 +108186,7 @@
         },
         {
           "Text": "Date",
-          "Confidence": 93.140656,
+          "Confidence": 93.07553,
           "Left": 1333,
           "Top": 26640,
           "Right": 1377,
@@ -108253,7 +108253,7 @@
       ]
     },
     {
-      "LineText": "PRELEVEMENT DAKHLI RENT À CAR",
+      "LineText": "PRELEVEMENT DAKHLI RENT A CAR",
       "Words": [
         {
           "Text": "CAR",
@@ -108272,8 +108272,8 @@
           "Bottom": 26716
         },
         {
-          "Text": "À",
-          "Confidence": 93.22014,
+          "Text": "A",
+          "Confidence": 91.53021,
           "Left": 685,
           "Top": 26699,
           "Right": 697,

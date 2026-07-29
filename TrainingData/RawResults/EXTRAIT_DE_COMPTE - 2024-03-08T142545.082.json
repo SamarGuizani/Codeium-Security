@@ -110,7 +110,7 @@
     "20 FEB 24 Commission et TVA FT24051X6MWM\\S98 20 FEB 24 2,975",
     "prelevement",
     "00000000LD2132300015",
-    "20 FEB 24 Paiement FT24051X6MWM\\S98 20 FEB 24 4 8",
+    "20 FEB 24 Paiement FT24051X6MWM\\S98 20 FEB 24 4 870,268",
     "Prelevement 000115",
     "08/03/2024",
     "Page 3 of 3",
@@ -3012,7 +3012,7 @@
     },
     {
       "Text": "FT24047Z1TKM\\S98",
-      "Confidence": 90.6747,
+      "Confidence": 87.26773,
       "Left": 664,
       "Top": 3869,
       "Right": 946,
@@ -3020,7 +3020,7 @@
     },
     {
       "Text": "prelevement",
-      "Confidence": 90.49582,
+      "Confidence": 91.818085,
       "Left": 336,
       "Top": 3904,
       "Right": 501,
@@ -3028,7 +3028,7 @@
     },
     {
       "Text": "00000000002021009173",
-      "Confidence": 89.80937,
+      "Confidence": 91.69046,
       "Left": 335,
       "Top": 3940,
       "Right": 673,
@@ -3036,7 +3036,7 @@
     },
     {
       "Text": "Paiement",
-      "Confidence": 90.89575,
+      "Confidence": 90.82179,
       "Left": 336,
       "Top": 3987,
       "Right": 462,
@@ -3044,7 +3044,7 @@
     },
     {
       "Text": "FT24047Z1TKM\\S98",
-      "Confidence": 91.34655,
+      "Confidence": 90.46088,
       "Left": 664,
       "Top": 3988,
       "Right": 946,
@@ -3052,7 +3052,7 @@
     },
     {
       "Text": "Prelevement",
-      "Confidence": 90.94367,
+      "Confidence": 91.55989,
       "Left": 336,
       "Top": 4023,
       "Right": 503,
@@ -3060,7 +3060,7 @@
     },
     {
       "Text": "000014",
-      "Confidence": 96.05625,
+      "Confidence": 96.52929,
       "Left": 521,
       "Top": 4024,
       "Right": 621,
@@ -3068,7 +3068,7 @@
     },
     {
       "Text": "00000000002021009173",
-      "Confidence": 90.603485,
+      "Confidence": 91.54796,
       "Left": 335,
       "Top": 4059,
       "Right": 673,
@@ -3292,7 +3292,7 @@
     },
     {
       "Text": "41000000000076860049",
-      "Confidence": 91.54786,
+      "Confidence": 85.44806,
       "Left": 334,
       "Top": 4654,
       "Right": 673,
@@ -3300,7 +3300,7 @@
     },
     {
       "Text": "Paiement",
-      "Confidence": 90.89575,
+      "Confidence": 90.82179,
       "Left": 336,
       "Top": 4701,
       "Right": 462,
@@ -3308,7 +3308,7 @@
     },
     {
       "Text": "FT24051Y5S3Y\\S98",
-      "Confidence": 90.504944,
+      "Confidence": 87.703865,
       "Left": 664,
       "Top": 4702,
       "Right": 936,
@@ -3316,7 +3316,7 @@
     },
     {
       "Text": "Prelevement",
-      "Confidence": 91.61877,
+      "Confidence": 91.63965,
       "Left": 336,
       "Top": 4736,
       "Right": 503,
@@ -3324,7 +3324,7 @@
     },
     {
       "Text": "000069",
-      "Confidence": 96.12272,
+      "Confidence": 96.62329,
       "Left": 521,
       "Top": 4737,
       "Right": 620,
@@ -3332,7 +3332,7 @@
     },
     {
       "Text": "41000000000076860049",
-      "Confidence": 91.51612,
+      "Confidence": 84.675095,
       "Left": 334,
       "Top": 4773,
       "Right": 673,
@@ -3340,7 +3340,7 @@
     },
     {
       "Text": "Versement",
-      "Confidence": 91.42817,
+      "Confidence": 91.008575,
       "Left": 334,
       "Top": 4821,
       "Right": 480,
@@ -3348,7 +3348,7 @@
     },
     {
       "Text": "TND",
-      "Confidence": 92.52162,
+      "Confidence": 91.25609,
       "Left": 489,
       "Top": 4821,
       "Right": 547,
@@ -3508,7 +3508,7 @@
     },
     {
       "Text": "FT24051X6MWM\\S98",
-      "Confidence": 86.01573,
+      "Confidence": 85.780754,
       "Left": 664,
       "Top": 5190,
       "Right": 962,
@@ -3516,7 +3516,7 @@
     },
     {
       "Text": "prelevement",
-      "Confidence": 90.49582,
+      "Confidence": 91.818085,
       "Left": 336,
       "Top": 5224,
       "Right": 501,
@@ -3524,7 +3524,7 @@
     },
     {
       "Text": "00000000LD2132300015",
-      "Confidence": 89.97088,
+      "Confidence": 86.0437,
       "Left": 335,
       "Top": 5261,
       "Right": 677,
@@ -3532,7 +3532,7 @@
     },
     {
       "Text": "Paiement",
-      "Confidence": 90.89575,
+      "Confidence": 90.82179,
       "Left": 336,
       "Top": 5308,
       "Right": 462,
@@ -4324,15 +4324,15 @@
     },
     {
       "Text": "4",
-      "Confidence": 93.30556,
+      "Confidence": 87.00137,
       "Left": 1202,
       "Top": 5309,
       "Right": 1218,
       "Bottom": 5331
     },
     {
-      "Text": "8",
-      "Confidence": 95.08612,
+      "Text": "870,268",
+      "Confidence": 87.00137,
       "Left": 1227,
       "Top": 5309,
       "Right": 1333,
@@ -4340,7 +4340,7 @@
     },
     {
       "Text": "08/03/2024",
-      "Confidence": 92.82764,
+      "Confidence": 91.94735,
       "Left": 1588,
       "Top": 5408,
       "Right": 1748,
@@ -8775,7 +8775,7 @@
         },
         {
           "Text": "FT24047Z1TKM\\S98",
-          "Confidence": 90.6747,
+          "Confidence": 87.26773,
           "Left": 664,
           "Top": 3869,
           "Right": 946,
@@ -8828,7 +8828,7 @@
       "Words": [
         {
           "Text": "prelevement",
-          "Confidence": 90.49582,
+          "Confidence": 91.818085,
           "Left": 336,
           "Top": 3904,
           "Right": 501,
@@ -8841,7 +8841,7 @@
       "Words": [
         {
           "Text": "00000000002021009173",
-          "Confidence": 89.80937,
+          "Confidence": 91.69046,
           "Left": 335,
           "Top": 3940,
           "Right": 673,
@@ -8854,7 +8854,7 @@
       "Words": [
         {
           "Text": "Paiement",
-          "Confidence": 90.89575,
+          "Confidence": 90.82179,
           "Left": 336,
           "Top": 3987,
           "Right": 462,
@@ -8886,7 +8886,7 @@
         },
         {
           "Text": "FT24047Z1TKM\\S98",
-          "Confidence": 91.34655,
+          "Confidence": 90.46088,
           "Left": 664,
           "Top": 3988,
           "Right": 946,
@@ -8931,7 +8931,7 @@
       "Words": [
         {
           "Text": "Prelevement",
-          "Confidence": 90.94367,
+          "Confidence": 91.55989,
           "Left": 336,
           "Top": 4023,
           "Right": 503,
@@ -8939,7 +8939,7 @@
         },
         {
           "Text": "000014",
-          "Confidence": 96.05625,
+          "Confidence": 96.52929,
           "Left": 521,
           "Top": 4024,
           "Right": 621,
@@ -8952,7 +8952,7 @@
       "Words": [
         {
           "Text": "00000000002021009173",
-          "Confidence": 90.603485,
+          "Confidence": 91.54796,
           "Left": 335,
           "Top": 4059,
           "Right": 673,
@@ -9547,7 +9547,7 @@
       "Words": [
         {
           "Text": "41000000000076860049",
-          "Confidence": 91.54786,
+          "Confidence": 85.44806,
           "Left": 334,
           "Top": 4654,
           "Right": 673,
@@ -9560,7 +9560,7 @@
       "Words": [
         {
           "Text": "Paiement",
-          "Confidence": 90.89575,
+          "Confidence": 90.82179,
           "Left": 336,
           "Top": 4701,
           "Right": 462,
@@ -9592,7 +9592,7 @@
         },
         {
           "Text": "FT24051Y5S3Y\\S98",
-          "Confidence": 90.504944,
+          "Confidence": 87.703865,
           "Left": 664,
           "Top": 4702,
           "Right": 936,
@@ -9645,7 +9645,7 @@
       "Words": [
         {
           "Text": "Prelevement",
-          "Confidence": 91.61877,
+          "Confidence": 91.63965,
           "Left": 336,
           "Top": 4736,
           "Right": 503,
@@ -9653,7 +9653,7 @@
         },
         {
           "Text": "000069",
-          "Confidence": 96.12272,
+          "Confidence": 96.62329,
           "Left": 521,
           "Top": 4737,
           "Right": 620,
@@ -9666,7 +9666,7 @@
       "Words": [
         {
           "Text": "41000000000076860049",
-          "Confidence": 91.51612,
+          "Confidence": 84.675095,
           "Left": 334,
           "Top": 4773,
           "Right": 673,
@@ -9703,7 +9703,7 @@
         },
         {
           "Text": "Versement",
-          "Confidence": 91.42817,
+          "Confidence": 91.008575,
           "Left": 334,
           "Top": 4821,
           "Right": 480,
@@ -9711,7 +9711,7 @@
         },
         {
           "Text": "TND",
-          "Confidence": 92.52162,
+          "Confidence": 91.25609,
           "Left": 489,
           "Top": 4821,
           "Right": 547,
@@ -10140,7 +10140,7 @@
         },
         {
           "Text": "FT24051X6MWM\\S98",
-          "Confidence": 86.01573,
+          "Confidence": 85.780754,
           "Left": 664,
           "Top": 5190,
           "Right": 962,
@@ -10193,7 +10193,7 @@
       "Words": [
         {
           "Text": "prelevement",
-          "Confidence": 90.49582,
+          "Confidence": 91.818085,
           "Left": 336,
           "Top": 5224,
           "Right": 501,
@@ -10206,7 +10206,7 @@
       "Words": [
         {
           "Text": "00000000LD2132300015",
-          "Confidence": 89.97088,
+          "Confidence": 86.0437,
           "Left": 335,
           "Top": 5261,
           "Right": 677,
@@ -10215,11 +10215,11 @@
       ]
     },
     {
-      "LineText": "20 FEB 24 Paiement FT24051X6MWM\\S98 20 FEB 24 4 8",
+      "LineText": "20 FEB 24 Paiement FT24051X6MWM\\S98 20 FEB 24 4 870,268",
       "Words": [
         {
           "Text": "Paiement",
-          "Confidence": 90.89575,
+          "Confidence": 90.82179,
           "Left": 336,
           "Top": 5308,
           "Right": 462,
@@ -10283,15 +10283,15 @@
         },
         {
           "Text": "4",
-          "Confidence": 93.30556,
+          "Confidence": 87.00137,
           "Left": 1202,
           "Top": 5309,
           "Right": 1218,
           "Bottom": 5331
         },
         {
-          "Text": "8",
-          "Confidence": 95.08612,
+          "Text": "870,268",
+          "Confidence": 87.00137,
           "Left": 1227,
           "Top": 5309,
           "Right": 1333,
@@ -10325,7 +10325,7 @@
       "Words": [
         {
           "Text": "08/03/2024",
-          "Confidence": 92.82764,
+          "Confidence": 91.94735,
           "Left": 1588,
           "Top": 5408,
           "Right": 1748,

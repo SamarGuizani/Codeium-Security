@@ -2,7 +2,7 @@
   "FileName": "EXTRAIT_DE_COMPTE - 2024-03-08T142602.382.pdf",
   "DetectedType": "Bank",
   "PageCount": 4,
-  "OcrConfidence": 89.75,
+  "OcrConfidence": 90,
   "NeedsReview": true,
   "RawOcrText": null,
   "Document": {
@@ -140,8 +140,8 @@
     "22 JAN 24 Paiement FT24022XG6QQ\\S98 19 JAN 24 3 526,060",
     "Prelevement 000069",
     "41000000000076860049",
-    "22 JAN 24 Versement TND TT2402242DBK 23 JAN 24 19 0",
-    "22 JAN 24 Commission et TVA FT24022FG980\\S98 22 JAN 24 2/75",
+    "22 JAN 24 Versement TND TT2402242DBK 23 JAN 24 19 000,000",
+    "22 JAN 24 Commission et TVA FT24022FG980\\S98 22 JAN 24 2,975",
     "prelevement",
     "00000000LD2136400039",
     "22 JAN 24 Paiement FT24022FG980\\S98 22 JAN 24 2 736,189",
@@ -150,19 +150,19 @@
     "22 JAN 24 Commission et TVA FT24022V3QBJ\\S98 22 JAN 24 2,975",
     "prelevement",
     "00000000LD2132300015",
-    "22 JAN 24 Paiement FT24022V3QBJ\\S98 22 JAN 24 4 8",
+    "22 JAN 24 Paiement FT24022V3QBJ\\S98 22 JAN 24 4 870,268",
     "Prelevement 000115",
     "00000000LD2132300015",
-    "22 JAN 24 Commission et TVA FT240224WN3H\\S98 22 JAN 24 2/75",
+    "22 JAN 24 Commission et TVA FT240224WN3H\\S98 22 JAN 24 2,975",
     "prelevement",
     "00000000LD2202400024",
     "22 JAN 24 Paiement FT240224WN3H\\S98 22 JAN 24 2 496,966",
     "Prelevement 000115",
     "00000000LD2202400024",
-    "22 JAN 24 Commission et TVA FT240226BDPN\\S98 22 JAN 24 2975",
+    "22 JAN 24 Commission et TVA FT240226BDPN\\S98 22 JAN 24 2,975",
     "prelevement",
     "00000000LD2334600031",
-    "22 JAN 24 Paiement FT240226BDPN\\S98 22 JAN 24 9179,499",
+    "22 JAN 24 Paiement FT240226BDPN\\S98 22 JAN 24 9179499",
     "Prelevement 000115",
     "00000000LD2334600031",
     "23 JAN 24 Encaissement remise FT24022HC8GT 24 JAN 24 10 980,000",
@@ -2995,7 +2995,7 @@
     },
     {
       "Text": "CHG2400471832\\S98",
-      "Confidence": 89.21858,
+      "Confidence": 86.64745,
       "Left": 663,
       "Top": 3452,
       "Right": 958,
@@ -3827,7 +3827,7 @@
     },
     {
       "Text": "CFU2401100511\\S98",
-      "Confidence": 87.64298,
+      "Confidence": 87.494194,
       "Left": 663,
       "Top": 5155,
       "Right": 953,
@@ -3835,7 +3835,7 @@
     },
     {
       "Text": "4000070",
-      "Confidence": 96.68473,
+      "Confidence": 95.34512,
       "Left": 334,
       "Top": 5191,
       "Right": 452,
@@ -3851,7 +3851,7 @@
     },
     {
       "Text": "sur",
-      "Confidence": 90.32643,
+      "Confidence": 90.443344,
       "Left": 400,
       "Top": 5244,
       "Right": 442,
@@ -3859,7 +3859,7 @@
     },
     {
       "Text": "Com",
-      "Confidence": 91.78013,
+      "Confidence": 91.37398,
       "Left": 452,
       "Top": 5238,
       "Right": 511,
@@ -3867,7 +3867,7 @@
     },
     {
       "Text": "561613",
-      "Confidence": 86.1423,
+      "Confidence": 92.45251,
       "Left": 531,
       "Top": 5238,
       "Right": 629,
@@ -3899,7 +3899,7 @@
     },
     {
       "Text": "CHG2401530603\\TN1",
-      "Confidence": 54.965076,
+      "Confidence": 42.471752,
       "Left": 663,
       "Top": 5286,
       "Right": 957,
@@ -5643,7 +5643,7 @@
     },
     {
       "Text": "FT24016XS4KX\\S98",
-      "Confidence": 90.34911,
+      "Confidence": 86.5182,
       "Left": 664,
       "Top": 6502,
       "Right": 940,
@@ -5651,7 +5651,7 @@
     },
     {
       "Text": "Prelevement",
-      "Confidence": 90.94367,
+      "Confidence": 91.55989,
       "Left": 336,
       "Top": 6536,
       "Right": 503,
@@ -5659,7 +5659,7 @@
     },
     {
       "Text": "000014",
-      "Confidence": 96.05625,
+      "Confidence": 96.52929,
       "Left": 521,
       "Top": 6537,
       "Right": 621,
@@ -5667,7 +5667,7 @@
     },
     {
       "Text": "00000000002021009173",
-      "Confidence": 90.11491,
+      "Confidence": 90.606735,
       "Left": 335,
       "Top": 6573,
       "Right": 673,
@@ -5675,7 +5675,7 @@
     },
     {
       "Text": "Reglement",
-      "Confidence": 90.6203,
+      "Confidence": 90.74483,
       "Left": 336,
       "Top": 6620,
       "Right": 479,
@@ -5683,7 +5683,7 @@
     },
     {
       "Text": "Cheque",
-      "Confidence": 91.63493,
+      "Confidence": 91.92406,
       "Left": 489,
       "Top": 6620,
       "Right": 590,
@@ -6123,7 +6123,7 @@
     },
     {
       "Text": "FT24022V3QBJ\\S98",
-      "Confidence": 92.256966,
+      "Confidence": 85.96265,
       "Left": 664,
       "Top": 7561,
       "Right": 940,
@@ -6131,7 +6131,7 @@
     },
     {
       "Text": "prelevement",
-      "Confidence": 90.49582,
+      "Confidence": 91.818085,
       "Left": 336,
       "Top": 7596,
       "Right": 501,
@@ -6139,7 +6139,7 @@
     },
     {
       "Text": "00000000LD2132300015",
-      "Confidence": 92.17084,
+      "Confidence": 83.606415,
       "Left": 335,
       "Top": 7632,
       "Right": 677,
@@ -6147,7 +6147,7 @@
     },
     {
       "Text": "Paiement",
-      "Confidence": 90.89575,
+      "Confidence": 90.82179,
       "Left": 336,
       "Top": 7679,
       "Right": 462,
@@ -6155,7 +6155,7 @@
     },
     {
       "Text": "FT24022V3QBJ\\S98",
-      "Confidence": 91.761894,
+      "Confidence": 85.71458,
       "Left": 664,
       "Top": 7680,
       "Right": 940,
@@ -6163,7 +6163,7 @@
     },
     {
       "Text": "Prelevement",
-      "Confidence": 91.183624,
+      "Confidence": 91.33684,
       "Left": 336,
       "Top": 7715,
       "Right": 503,
@@ -6171,7 +6171,7 @@
     },
     {
       "Text": "000115",
-      "Confidence": 96.17766,
+      "Confidence": 96.43067,
       "Left": 521,
       "Top": 7716,
       "Right": 620,
@@ -7083,23 +7083,23 @@
     },
     {
       "Text": "19",
-      "Confidence": 90.57428,
+      "Confidence": 86.57887,
       "Left": 1474,
       "Top": 7275,
       "Right": 1503,
       "Bottom": 7297
     },
     {
-      "Text": "0",
-      "Confidence": 90.67785,
+      "Text": "000,000",
+      "Confidence": 86.57887,
       "Left": 1514,
       "Top": 7275,
       "Right": 1619,
       "Bottom": 7301
     },
     {
-      "Text": "2/75",
-      "Confidence": 79.60672,
+      "Text": "2,975",
+      "Confidence": 91.20059,
       "Left": 1202,
       "Top": 7323,
       "Right": 1274,
@@ -7131,23 +7131,23 @@
     },
     {
       "Text": "4",
-      "Confidence": 93.30556,
+      "Confidence": 87.00137,
       "Left": 1202,
       "Top": 7680,
       "Right": 1218,
       "Bottom": 7702
     },
     {
-      "Text": "8",
-      "Confidence": 95.08612,
+      "Text": "870,268",
+      "Confidence": 87.00137,
       "Left": 1227,
       "Top": 7680,
       "Right": 1333,
       "Bottom": 7706
     },
     {
-      "Text": "2/75",
-      "Confidence": 79.60672,
+      "Text": "2,975",
+      "Confidence": 91.20059,
       "Left": 1202,
       "Top": 7799,
       "Right": 1274,
@@ -7155,7 +7155,7 @@
     },
     {
       "Text": "2",
-      "Confidence": 79.455574,
+      "Confidence": 90.28587,
       "Left": 1202,
       "Top": 7918,
       "Right": 1217,
@@ -7163,23 +7163,23 @@
     },
     {
       "Text": "496,966",
-      "Confidence": 79.455574,
+      "Confidence": 90.28587,
       "Left": 1226,
       "Top": 7918,
       "Right": 1333,
       "Bottom": 7944
     },
     {
-      "Text": "2975",
-      "Confidence": 77.07669,
+      "Text": "2,975",
+      "Confidence": 91.20059,
       "Left": 1202,
       "Top": 8037,
       "Right": 1274,
       "Bottom": 8063
     },
     {
-      "Text": "9179,499",
-      "Confidence": 82.33267,
+      "Text": "9179499",
+      "Confidence": 72.04302,
       "Left": 1202,
       "Top": 8156,
       "Right": 1332,
@@ -7187,7 +7187,7 @@
     },
     {
       "Text": "10",
-      "Confidence": 0,
+      "Confidence": 91.86368,
       "Left": 1474,
       "Top": 8275,
       "Right": 1504,
@@ -7195,7 +7195,7 @@
     },
     {
       "Text": "980,000",
-      "Confidence": 0,
+      "Confidence": 91.62537,
       "Left": 1513,
       "Top": 8275,
       "Right": 1619,
@@ -7203,7 +7203,7 @@
     },
     {
       "Text": "08/03/2024",
-      "Confidence": 92.82764,
+      "Confidence": 91.94735,
       "Left": 1588,
       "Top": 8374,
       "Right": 1748,
@@ -11935,7 +11935,7 @@
         },
         {
           "Text": "CHG2400471832\\S98",
-          "Confidence": 89.21858,
+          "Confidence": 86.64745,
           "Left": 663,
           "Top": 3452,
           "Right": 958,
@@ -14164,7 +14164,7 @@
         },
         {
           "Text": "CFU2401100511\\S98",
-          "Confidence": 87.64298,
+          "Confidence": 87.494194,
           "Left": 663,
           "Top": 5155,
           "Right": 953,
@@ -14217,7 +14217,7 @@
       "Words": [
         {
           "Text": "4000070",
-          "Confidence": 96.68473,
+          "Confidence": 95.34512,
           "Left": 334,
           "Top": 5191,
           "Right": 452,
@@ -14262,7 +14262,7 @@
         },
         {
           "Text": "Com",
-          "Confidence": 91.78013,
+          "Confidence": 91.37398,
           "Left": 452,
           "Top": 5238,
           "Right": 511,
@@ -14270,7 +14270,7 @@
         },
         {
           "Text": "561613",
-          "Confidence": 86.1423,
+          "Confidence": 92.45251,
           "Left": 531,
           "Top": 5238,
           "Right": 629,
@@ -14318,7 +14318,7 @@
         },
         {
           "Text": "sur",
-          "Confidence": 90.32643,
+          "Confidence": 90.443344,
           "Left": 400,
           "Top": 5244,
           "Right": 442,
@@ -14371,7 +14371,7 @@
         },
         {
           "Text": "CHG2401530603\\TN1",
-          "Confidence": 54.965076,
+          "Confidence": 42.471752,
           "Left": 663,
           "Top": 5286,
           "Right": 957,
@@ -15073,7 +15073,7 @@
         },
         {
           "Text": "FT24016XS4KX\\S98",
-          "Confidence": 90.34911,
+          "Confidence": 86.5182,
           "Left": 664,
           "Top": 6502,
           "Right": 940,
@@ -15118,7 +15118,7 @@
       "Words": [
         {
           "Text": "Prelevement",
-          "Confidence": 90.94367,
+          "Confidence": 91.55989,
           "Left": 336,
           "Top": 6536,
           "Right": 503,
@@ -15126,7 +15126,7 @@
         },
         {
           "Text": "000014",
-          "Confidence": 96.05625,
+          "Confidence": 96.52929,
           "Left": 521,
           "Top": 6537,
           "Right": 621,
@@ -15139,7 +15139,7 @@
       "Words": [
         {
           "Text": "00000000002021009173",
-          "Confidence": 90.11491,
+          "Confidence": 90.606735,
           "Left": 335,
           "Top": 6573,
           "Right": 673,
@@ -15152,7 +15152,7 @@
       "Words": [
         {
           "Text": "Reglement",
-          "Confidence": 90.6203,
+          "Confidence": 90.74483,
           "Left": 336,
           "Top": 6620,
           "Right": 479,
@@ -15160,7 +15160,7 @@
         },
         {
           "Text": "Cheque",
-          "Confidence": 91.63493,
+          "Confidence": 91.92406,
           "Left": 489,
           "Top": 6620,
           "Right": 590,
@@ -15948,7 +15948,7 @@
       ]
     },
     {
-      "LineText": "22 JAN 24 Versement TND TT2402242DBK 23 JAN 24 19 0",
+      "LineText": "22 JAN 24 Versement TND TT2402242DBK 23 JAN 24 19 000,000",
       "Words": [
         {
           "Text": "22",
@@ -16024,15 +16024,15 @@
         },
         {
           "Text": "19",
-          "Confidence": 90.57428,
+          "Confidence": 86.57887,
           "Left": 1474,
           "Top": 7275,
           "Right": 1503,
           "Bottom": 7297
         },
         {
-          "Text": "0",
-          "Confidence": 90.67785,
+          "Text": "000,000",
+          "Confidence": 86.57887,
           "Left": 1514,
           "Top": 7275,
           "Right": 1619,
@@ -16041,7 +16041,7 @@
       ]
     },
     {
-      "LineText": "22 JAN 24 Commission et TVA FT24022FG980\\S98 22 JAN 24 2/75",
+      "LineText": "22 JAN 24 Commission et TVA FT24022FG980\\S98 22 JAN 24 2,975",
       "Words": [
         {
           "Text": "Commission",
@@ -16116,8 +16116,8 @@
           "Bottom": 7345
         },
         {
-          "Text": "2/75",
-          "Confidence": 79.60672,
+          "Text": "2,975",
+          "Confidence": 91.20059,
           "Left": 1202,
           "Top": 7323,
           "Right": 1274,
@@ -16323,7 +16323,7 @@
         },
         {
           "Text": "FT24022V3QBJ\\S98",
-          "Confidence": 92.256966,
+          "Confidence": 85.96265,
           "Left": 664,
           "Top": 7561,
           "Right": 940,
@@ -16376,7 +16376,7 @@
       "Words": [
         {
           "Text": "prelevement",
-          "Confidence": 90.49582,
+          "Confidence": 91.818085,
           "Left": 336,
           "Top": 7596,
           "Right": 501,
@@ -16389,7 +16389,7 @@
       "Words": [
         {
           "Text": "00000000LD2132300015",
-          "Confidence": 92.17084,
+          "Confidence": 83.606415,
           "Left": 335,
           "Top": 7632,
           "Right": 677,
@@ -16398,11 +16398,11 @@
       ]
     },
     {
-      "LineText": "22 JAN 24 Paiement FT24022V3QBJ\\S98 22 JAN 24 4 8",
+      "LineText": "22 JAN 24 Paiement FT24022V3QBJ\\S98 22 JAN 24 4 870,268",
       "Words": [
         {
           "Text": "Paiement",
-          "Confidence": 90.89575,
+          "Confidence": 90.82179,
           "Left": 336,
           "Top": 7679,
           "Right": 462,
@@ -16434,7 +16434,7 @@
         },
         {
           "Text": "FT24022V3QBJ\\S98",
-          "Confidence": 91.761894,
+          "Confidence": 85.71458,
           "Left": 664,
           "Top": 7680,
           "Right": 940,
@@ -16466,15 +16466,15 @@
         },
         {
           "Text": "4",
-          "Confidence": 93.30556,
+          "Confidence": 87.00137,
           "Left": 1202,
           "Top": 7680,
           "Right": 1218,
           "Bottom": 7702
         },
         {
-          "Text": "8",
-          "Confidence": 95.08612,
+          "Text": "870,268",
+          "Confidence": 87.00137,
           "Left": 1227,
           "Top": 7680,
           "Right": 1333,
@@ -16487,7 +16487,7 @@
       "Words": [
         {
           "Text": "Prelevement",
-          "Confidence": 91.183624,
+          "Confidence": 91.33684,
           "Left": 336,
           "Top": 7715,
           "Right": 503,
@@ -16495,7 +16495,7 @@
         },
         {
           "Text": "000115",
-          "Confidence": 96.17766,
+          "Confidence": 96.43067,
           "Left": 521,
           "Top": 7716,
           "Right": 620,
@@ -16517,7 +16517,7 @@
       ]
     },
     {
-      "LineText": "22 JAN 24 Commission et TVA FT240224WN3H\\S98 22 JAN 24 2/75",
+      "LineText": "22 JAN 24 Commission et TVA FT240224WN3H\\S98 22 JAN 24 2,975",
       "Words": [
         {
           "Text": "Commission",
@@ -16592,8 +16592,8 @@
           "Bottom": 7821
         },
         {
-          "Text": "2/75",
-          "Confidence": 79.60672,
+          "Text": "2,975",
+          "Confidence": 91.20059,
           "Left": 1202,
           "Top": 7799,
           "Right": 1274,
@@ -16704,7 +16704,7 @@
         },
         {
           "Text": "2",
-          "Confidence": 79.455574,
+          "Confidence": 90.28587,
           "Left": 1202,
           "Top": 7918,
           "Right": 1217,
@@ -16712,7 +16712,7 @@
         },
         {
           "Text": "496,966",
-          "Confidence": 79.455574,
+          "Confidence": 90.28587,
           "Left": 1226,
           "Top": 7918,
           "Right": 1333,
@@ -16755,7 +16755,7 @@
       ]
     },
     {
-      "LineText": "22 JAN 24 Commission et TVA FT240226BDPN\\S98 22 JAN 24 2975",
+      "LineText": "22 JAN 24 Commission et TVA FT240226BDPN\\S98 22 JAN 24 2,975",
       "Words": [
         {
           "Text": "Commission",
@@ -16830,8 +16830,8 @@
           "Bottom": 8059
         },
         {
-          "Text": "2975",
-          "Confidence": 77.07669,
+          "Text": "2,975",
+          "Confidence": 91.20059,
           "Left": 1202,
           "Top": 8037,
           "Right": 1274,
@@ -16874,7 +16874,7 @@
       ]
     },
     {
-      "LineText": "22 JAN 24 Paiement FT240226BDPN\\S98 22 JAN 24 9179,499",
+      "LineText": "22 JAN 24 Paiement FT240226BDPN\\S98 22 JAN 24 9179499",
       "Words": [
         {
           "Text": "Paiement",
@@ -16941,8 +16941,8 @@
           "Bottom": 8178
         },
         {
-          "Text": "9179,499",
-          "Confidence": 82.33267,
+          "Text": "9179499",
+          "Confidence": 72.04302,
           "Left": 1202,
           "Top": 8156,
           "Right": 1332,
@@ -17061,7 +17061,7 @@
         },
         {
           "Text": "10",
-          "Confidence": 0,
+          "Confidence": 91.86368,
           "Left": 1474,
           "Top": 8275,
           "Right": 1504,
@@ -17069,7 +17069,7 @@
         },
         {
           "Text": "980,000",
-          "Confidence": 0,
+          "Confidence": 91.62537,
           "Left": 1513,
           "Top": 8275,
           "Right": 1619,
@@ -17103,7 +17103,7 @@
       "Words": [
         {
           "Text": "08/03/2024",
-          "Confidence": 92.82764,
+          "Confidence": 91.94735,
           "Left": 1588,
           "Top": 8374,
           "Right": 1748,
