@@ -8,17 +8,17 @@
   "Account": {
     "AccountNumber": "00010-0082693425-5",
     "Currency": "TND",
-    "Rib": "",
+    "Rib": "TN5904000010008269342555",
     "SoldeInitial": -2677.639,
-    "SoldeFinal": null,
+    "SoldeFinal": 0.000,
     "SoldeDisponible": 0,
-    "TotalDebit": null,
-    "TotalCredit": null,
+    "TotalDebit": 10247.456,
+    "TotalCredit": 12925.095,
     "Transactions": [
       {
         "Solde": -2713.339,
         "Date": "02/01/2024",
-        "Libelle": "PACK BUSINESS SOLUTIONS S C",
+        "Libelle": "IABONNEMENT 001235 PACK BUSINESS SOLUTIONS S C",
         "Debit": 35.700,
         "Credit": null
       },
@@ -61,8 +61,8 @@
         "Solde": 4661.156,
         "Date": "21/02/2024",
         "Libelle": "VIR RECU TN MEME AG 005353",
-        "Debit": 2.380,
-        "Credit": null
+        "Debit": null,
+        "Credit": 2.380
       },
       {
         "Solde": -1661.156,
@@ -138,8 +138,8 @@
         "Solde": 6235.877,
         "Date": "22/04/2024",
         "Libelle": "VIR RECU TN MEME AG 005444",
-        "Debit": 2.380,
-        "Credit": null
+        "Debit": null,
+        "Credit": 2.380
       },
       {
         "Solde": -4539.397,
@@ -201,8 +201,8 @@
         "Solde": 6498.309,
         "Date": "15/05/2024",
         "Libelle": "VIR RECU TN MEME AG 005470",
-        "Debit": 2.380,
-        "Credit": null
+        "Debit": null,
+        "Credit": 2.380
       },
       {
         "Solde": 1546.691,

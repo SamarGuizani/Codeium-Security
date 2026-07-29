@@ -1,8 +1,0 @@
-System.OutOfMemoryException: Out of memory.
-   at System.Drawing.SafeNativeMethods.Gdip.CheckStatus(Int32 status)
-   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
-   at System.Drawing.Image.FromFile(String filename)
-   at Codeium_Security.Services.ImageFormatConverter.ConvertToPng(String sourcePath) in C:\Users\USER\OneDrive\Desktop\Codeium Security\Codeium Security\Services\ImageFormatConverter.cs:line 22
-   at Codeium_Security.Services.DocumentProcessingService.RunOcrOnlyAsync(String filePath, String originalFileName) in C:\Users\USER\OneDrive\Desktop\Codeium Security\Codeium Security\Services\DocumentProcessingService.cs:line 41
-   at Codeium_Security.Services.DocumentProcessingService.ProcessFileAsync(String filePath, String originalFileName) in C:\Users\USER\OneDrive\Desktop\Codeium Security\Codeium Security\Services\DocumentProcessingService.cs:line 71
-   at Codeium_Security.Controllers.OcrController.ProcessBatch(List`1 files) in C:\Users\USER\OneDrive\Desktop\Codeium Security\Codeium Security\Controllers\OcrController.cs:line 138

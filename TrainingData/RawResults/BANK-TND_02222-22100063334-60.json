@@ -3,10 +3,10 @@
   "DetectedType": "Bank",
   "PageCount": 5,
   "OcrConfidence": 87.2,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "BankName": "Banque Nationale Agricole (BNA)",
   "Account": {
-    "AccountNumber": "",
+    "AccountNumber": "02222-22100063334-60",
     "Currency": "TND",
     "Rib": "TN5920022222210006333460",
     "SoldeInitial": 27196.527,
@@ -33,7 +33,7 @@
         "Solde": 24793.552,
         "Date": "04/12/2024",
         "Libelle": "&VIREMENT EMIS AUT BQ 1 0 ا En faveur JIHED WERDIEN",
-        "Debit": null,
+        "Debit": 1400.000,
         "Credit": null
       },
       {
@@ -53,7 +53,7 @@
       {
         "Solde": 23387.602,
         "Date": "04/12/2024",
-        "Libelle": "@ COM & TVA VIR. EMIS ا Commission Virement ا TVA/Com Virement https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 3/5/25, 2:40 PM BTK@DIRECT Date de",
+        "Libelle": "@ COM & TVA VIR. EMIS ا Commission Virement ا TVA/Com Virement Date de",
         "Debit": 2.975,
         "Credit": null
       },
@@ -137,7 +137,7 @@
       {
         "Solde": 4746.104,
         "Date": "06/01/2025",
-        "Libelle": "& VIREMENT EMIS AUT BQ ا En faveur JIHED WERDIEN https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 2/5 3/5/25, 2:40 PM BTK@DIRECT Date de",
+        "Libelle": "& VIREMENT EMIS AUT BQ ا En faveur JIHED WERDIEN Date de",
         "Debit": 1400.000,
         "Credit": null
       },
@@ -152,7 +152,7 @@
         "Solde": 3343.129,
         "Date": "06/01/2025",
         "Libelle": "B VIREMENT EMIS AUT BQ 1 0 ا En faveur SAFA GHANDRI",
-        "Debit": null,
+        "Debit": 1400.000,
         "Credit": null
       },
       {
@@ -242,7 +242,7 @@
       {
         "Solde": 4410.245,
         "Date": "28/01/2025",
-        "Libelle": "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 3/5 3/5/25, 2:40 PM BTK@DIRECT Date de ATM BTK JERBA Il DU",
+        "Libelle": "Date de ATM BTK JERBA Il DU",
         "Debit": 100.000,
         "Credit": null
       },
@@ -333,7 +333,7 @@
       {
         "Solde": 7995.354,
         "Date": "21/02/2025",
-        "Libelle": "PRELEV. RECU AUT BQE 165065 https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 4/5 3/5/25, 2:40 PM BTK@DIRECT Date de",
+        "Libelle": "PRELEV. RECU AUT BQE 165065 Date de",
         "Debit": 682.654,
         "Credit": null
       },
@@ -403,7 +403,7 @@
       {
         "Solde": 2281.290,
         "Date": "05/03/2025",
-        "Libelle": "RETRAIT DAB ® Imprimé le 05/03/2025 Fermer cette fenétre Imprimer https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk",
+        "Libelle": "RETRAIT DAB ® Imprimé le 05/03/2025 Fermer cette fenétre Imprimer",
         "Debit": 400.000,
         "Credit": null
       }

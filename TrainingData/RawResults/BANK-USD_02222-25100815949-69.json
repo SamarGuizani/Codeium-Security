@@ -6,7 +6,7 @@
   "NeedsReview": true,
   "BankName": "",
   "Account": {
-    "AccountNumber": "",
+    "AccountNumber": "02222-25100815949-69",
     "Currency": "USD",
     "Rib": "TN5920022222510081594969",
     "SoldeInitial": 4290.98,
@@ -102,14 +102,14 @@
       {
         "Solde": 11363.09,
         "Date": "24/06/2025",
-        "Libelle": "& TRANSFERT نع 25004107 ا ORD: Upwork Escrow Inc. https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 12 8/9/25, 10:15 AM BTK@DIRECT Date de",
+        "Libelle": "& TRANSFERT نع 25004107 ا ORD: Upwork Escrow Inc. Date de",
         "Debit": null,
         "Credit": 9100.00
       },
       {
         "Solde": 10000.00,
         "Date": "08/07/2025",
-        "Libelle": "EVIREMENT EMIS MEM كح 17 9 ا En faveur SOCIETE IT CAPACITIES Imprimé le 09/08/2025 Fermer cette fenétre Imprimer https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 2/2",
+        "Libelle": "EVIREMENT EMIS MEM كح 17 9 ا En faveur SOCIETE IT CAPACITIES Imprimé le 09/08/2025 Fermer cette fenétre Imprimer",
         "Debit": 10000.00,
         "Credit": null
       }

@@ -3,22 +3,22 @@
   "DetectedType": "Bank",
   "PageCount": 2,
   "OcrConfidence": 86,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "BankName": "",
   "Account": {
-    "AccountNumber": "",
+    "AccountNumber": "02222-25100815949-69",
     "Currency": "USD",
-    "Rib": "",
+    "Rib": "TN5920022222510081594969",
     "SoldeInitial": 3300.81,
     "SoldeFinal": null,
     "SoldeDisponible": 0,
-    "TotalDebit": null,
-    "TotalCredit": null,
+    "TotalDebit": 6009.83,
+    "TotalCredit": 8000.00,
     "Transactions": [
       {
         "Solde": 3291.10,
         "Date": "25/11/2024",
-        "Libelle": "PAIEMENT TPE INTERNATIONAL",
+        "Libelle": "Date de PAIEMENT TPE INTERNATIONAL",
         "Debit": null,
         "Credit": 9.71
       },
@@ -48,7 +48,7 @@
         "Date": "09/01/2025",
         "Libelle": "&@TRANSFERT RECU 4 0 25000082 ا ORD: THE RAINMAKER INSTITUTE LLC",
         "Debit": null,
-        "Credit": null
+        "Credit": 4000.00
       },
       {
         "Solde": 8290.98,
@@ -60,7 +60,7 @@
       {
         "Solde": 5290.98,
         "Date": "04/02/2025",
-        "Libelle": "&@VIREMENT EMIS MEM مح ا En faveur SOCIETE IT CAPACITIES Impriméle 05/03/2025 Fermer cette fenêtre Imprimer https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 3/5/25, 2:41 PM BTK@DIRECT https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 2/2",
+        "Libelle": "&@VIREMENT EMIS MEM مح ا En faveur SOCIETE IT CAPACITIES Impriméle 05/03/2025 Fermer cette fenêtre Imprimer",
         "Debit": 3000.00,
         "Credit": null
       }

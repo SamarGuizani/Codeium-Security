@@ -3,10 +3,10 @@
   "DetectedType": "Bank",
   "PageCount": 4,
   "OcrConfidence": 87.5,
-  "NeedsReview": true,
+  "NeedsReview": false,
   "BankName": "",
   "Account": {
-    "AccountNumber": "",
+    "AccountNumber": "02222-22100063334-60",
     "Currency": "TND",
     "Rib": "TN5920022222210006333460",
     "SoldeInitial": 24388.915,
@@ -88,7 +88,7 @@
       {
         "Solde": 916.337,
         "Date": "02/06/2025",
-        "Libelle": "= VIREMENT EMIS AUT BQ ا En faveur Jihed Werdien https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 1/4 8/9/25, 10:14 AM BTK@DIRECT Date de",
+        "Libelle": "= VIREMENT EMIS AUT BQ ا En faveur Jihed Werdien Date de",
         "Debit": 1445.842,
         "Credit": null
       },
@@ -96,14 +96,14 @@
         "Solde": 13915.147,
         "Date": "02/06/2025",
         "Libelle": "& COM. & TVA VIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
-        "Debit": 1.190,
-        "Credit": null
+        "Debit": null,
+        "Credit": 1.190
       },
       {
         "Solde": 12469.305,
         "Date": "02/06/2025",
         "Libelle": "B VIREMENT EMIS AUT BQ 1 2 ا En faveur Safa Ghandri",
-        "Debit": null,
+        "Debit": 1445.842,
         "Credit": null
       },
       {
@@ -158,7 +158,7 @@
       {
         "Solde": 7259.628,
         "Date": "01/07/2025",
-        "Libelle": "& VIREMENT EMIS AUT BQ ا En faveur Jihed Werdien https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 2/4 8/9/25, 10:14 AM BTK@DIRECT Date de",
+        "Libelle": "& VIREMENT EMIS AUT BQ ا En faveur Jihed Werdien Date de",
         "Debit": 445.842,
         "Credit": null
       },
@@ -270,7 +270,7 @@
       {
         "Solde": 16116.813,
         "Date": "04/08/2025",
-        "Libelle": "https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk 3/4 8/9/25, 10:14 AM BTK@DIRECT Date de &COM. & TVA VIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
+        "Libelle": "Date de &COM. & TVA VIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
         "Debit": 1.190,
         "Credit": null
       },
@@ -305,7 +305,7 @@
       {
         "Solde": 12299.939,
         "Date": "11/08/2025",
-        "Libelle": "PAIEMENT TPE © Imprimé le 09/08/2025 Fermer cette fenêtre Imprimer https://btkdirect.btknet.com/web/ebanking/impressionListeMouvements.ebk",
+        "Libelle": "PAIEMENT TPE © Imprimé le 09/08/2025 Fermer cette fenêtre Imprimer",
         "Debit": 124.000,
         "Credit": null
       }
