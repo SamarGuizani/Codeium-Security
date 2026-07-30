@@ -1,0 +1,972 @@
+{
+  "FileName": "EXTRAIT DAKHLI.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 10,
+  "OcrConfidence": 80.5,
+  "NeedsReview": true,
+  "BankName": "Attijari Bank",
+  "Account": {
+    "AccountNumber": "11055000120000278810",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": 0.380,
+        "Date": "05/02/2025",
+        "Libelle": "COMMISSION SUR PRELEVEMENT ; PRELEVEMENT ATTLARI LEASING ATTIJARI PoL : SOTEB 0670007 1 109 e COMMISSION SUR VIREMENT DOMESTIQUE -004428 ;",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 1782.900,
+        "Date": "05/02/2025",
+        "Libelle": "VIREMENT DOMESTIQUE RECU : 2503606145432109 SOTEB 0670007 TVA: 109 SOTEB 0670007 ) cs COMMISSION SUR PRELEVEMENT FANNIBAL es",
+        "Debit": null,
+        "Credit": 1782.900
+      },
+      {
+        "Solde": 2.000,
+        "Date": "05/02/2025",
+        "Libelle": "(EASE 2503606137687097 70",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 4612.806,
+        "Date": "05/02/2025",
+        "Libelle": "TVA: HANNIBAL LEASE 2503606137687097 p _ 0380 04/02/2025 PDL : HANNIBAL LEASE 2503606137687097 900ZEXA2503604TD s5 PRELEVEMENT RECU -FANNIBAL LEASE 2503606137687097 -",
+        "Debit": 4612.806,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "05/02/2025",
+        "Libelle": "HANNIBAL LEASE 2503602137677015 A 0500212025 2503602137677015 81100 000 الهاتف: البلفيدير تونس 1002 الحرية. 139 : الإجتماعي المقر دينار, -Anonyme au capital de - R. N. E Identifiant Unique N° 0002707P -5/167: UB.C.I TNTT - UBCI B.P N° 771 - 1080 Tunis Cedex TUNISIE - www.ubcitn اناق والصفامة o mn #تخلالينكيللتجاة Date 4 FANNIBAL",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 7559.009,
+        "Date": "05/02/2025",
+        "Libelle": "PRELEVEMENT RECU : STE DAKHLI RENT A CAR PDL STE DAKHLI RENT CAR HANNIBAL LEASE",
+        "Debit": 7559.009,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "05/02/2025",
+        "Libelle": ": À 0750 04/02/2025 E 2503602137677015 900ZEXA2503604 RENT CAR 0s/02/2025 PRELEVEMENT RECU - SOCIETE DAKHL] À LVIOT661100/01022025 -= MODERN TVA LEASING 2503602137678003 RENT CAR 9224335 0510272025 : SOCIETE DAKHLI A - LM01661100/01022025 MODERN 0s/02/2025 COMMISSION SUR PRELEVEMENT SOCIETE DAKFLI RENT A CAR LM01661100/01022025 MODERN -- = 0510272025 POL : SOCIETE DAKHLTRENT A CAR - LM01661100/01022025 MODERN LEASING 0750 3 2503602137678003",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 2382.536,
+        "Date": "05/02/2025",
+        "Libelle": "POL : HANNIBAL LEASE 2503606137687015 f ; PRELEVEMENT RECU: FANNIBAL LEASE ‘ 0510212025 5 05/022025 TVA: HANNIBAL LEASE 2503606 5 ; COMMISSION SUR PRELEVEMENT FANNIBAL",
+        "Debit": 2382.536,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "05/02/2025",
+        "Libelle": "(EASE 2503606137687015 d 050272025 2503602137677013 PDL: STE DAKHLI RENT ACAR FANNIBAL LEASE os02/2025 PRÉLEVEMENT RECU STE DAKHLI RENT A CAR FANNIBAL TVA 2503602137677013 : STE DAKHLI RENT A CAR HANNIBAL LEASE 050272025 COMMISSION SUR PRELEVEMENT STE DAKHLI RENT A CAR 050272025 COMMISSION SUR PRELEVEMENT HANNIBAL 050272025 LEASE 98",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "05/02/2025",
+        "Libelle": "TVA: ps LEASE POL: pn PRELEVEMENT RECU -HANNIBAL LEASE 2503606137687098 -5529999 COMMISSION SUR PRELEVEMENT DAKFILT RENT A CAR 05/0272025 PRELEVEMENT 05/0272025 : A ATTIJARI 0510272025 2503602137678080 TVA DAKHLI RENT A CAR ATTUARILEASING",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "05/02/2025",
+        "Libelle": "PDL : DAKHLI RENT À CAR ATTHARILEASING",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "05/02/2025",
+        "Libelle": ": À COMMISSION SUR PRELEVEMENT STE DARALI RENT CAR 050272025 0510272025 2503602137677023 : A FANNIBAL LEASE PRELEVEMENT RECU - STE DAKHLI RENT A CAR FANNIBAL 0510272025 89",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 7408.376,
+        "Date": "05/02/2025",
+        "Libelle": "PDL HANNIBAL LEASE 2503606 z - PRELEVEMENT RECU RANNIBAL LEASE 05/022025",
+        "Debit": 7408.376,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "05/02/2025",
+        "Libelle": "TVA: HANNIBAL LEASE 2503606137687099 2 FANNIBAL s 0510222025  COMMISSION SUR PRELEVEMENT 050272025 PRELEVEMENT RECU : STE DAKHLI RENT A CAR FANNIBAL -A == 050272025 050272025 2503602137677017 : A POL STE DAKHLI RENT CAR",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "05/02/2025",
+        "Libelle": "",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "05/02/2025",
+        "Libelle": ": À 050272025 PRELEVEMENT RECU : STE DAKHLI RENT A CAR 050272025 2503602137677007 A FANNIBAL LEASE COMMISSION SUR PRELEVEMENT STE DAKHLI RENT CAR 050272025 0570272025 COMMISSION SUR PRELEVEMENT STE DAKHLI RENT A CAR HANNIBAL : كفعا 0 2000",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "05/02/2025",
+        "Libelle": "PDL 576 DAKHLI RENT A CAR HANNIBAL LEASE 50272025 PRELEVEMENT RECU STE DAKHLI RENT A CAR FANNIBAL",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "05/02/2025",
+        "Libelle": "2503605137682090 A",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 60.001,
+        "Date": "06/02/2025",
+        "Libelle": "14/02/2025 REMISE TPE 1162410011 REMISE NUM 101117 DU 060225 085FC11250370003 rrn 05/02/2025 COMMISSION SUR REMISE CARTE _ 0ssFC11250370003 p T ESPECES : 0552503700365418 p 81100 000 الهاتف: . البلفيدير تونس 1002 الحرية. شارع 139 الاجتماعي المقر دينار, رأس الإسم. خفية والصناعة الينكي R. N. E identiflant Unique N° 0002707P - SWIFT UBCITNTT -UBCIBPN° 771 1080 Tunis Cedex TUNISIE - www ubcitn XUBCI ا i s4U o 5008 suaiqep VERSEMENT ESPÈCE VERSEMENT ESPECES 0552503700365459",
+        "Debit": 60.001,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "06/02/2025",
+        "Libelle": ": تمده 25037 POL REPRESENTATION PP2269103 ARAB INTERNATIONAL : = LEASE 2503704138105022 COMMISSION SUR PRELEVEMENT REPRESENTATION PP2269103",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": -2.000,
+        "Date": "06/02/2025",
+        "Libelle": "ARAB INTERNATIONAL LEASE 2503704138105022 PRELEVEMENT RECU REPRESENTATION PP2269103 ARAB INTERNATIONAL LEASE 2503704138105022 TVA: REPRESENTATION PP2269103 ARAB INTERNATIONAL LEASE 2503704138105022",
+        "Debit": -2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 600.000,
+        "Date": "10/02/2025",
+        "Libelle": "VERSEMENT ESPÈCE 7 ESPECES 12 : 4270;000 9 ESPECE VERSEMENT ESPECES 0552503800379599 260001 VERSEMENT : 4:500/000 . 18/02/2025 REMISE NUM N01041 DU 100225 05SFC11250410001 REMISE TPE 1167550019 SUR REMISE CARTE 07/02/2025 055FC11250410001",
+        "Debit": null,
+        "Credit": 600.000
+      },
+      {
+        "Solde": 735.000,
+        "Date": "10/02/2025",
+        "Libelle": "COMMISSION __ 7800 7800 18/02/2025 0SSFC11250410002 REMISE TPE 1167550019 REMISE NUM 101041 DU 100225",
+        "Debit": null,
+        "Credit": 735.000
+      },
+      {
+        "Solde": 46.656,
+        "Date": "10/02/2025",
+        "Libelle": "COMMISSION SUR REMISE CARTE 0SSFC11250410002 38617 07/02/2025 11250410003 COMMISSION SUR REMISE CARTE 05SFC 1s REMISE 101118 DU 080225 0SSFC11250410003",
+        "Debit": 46.656,
+        "Credit": null
+      },
+      {
+        "Solde": 488.000,
+        "Date": "10/02/2025",
+        "Libelle": "REMISE TPE 1162410011 NUM ESPECE 11/02/2025 2504107321410000 ESPECE VERSEMENT ESPECES 0022504100388982 1 2504",
+        "Debit": null,
+        "Credit": 488.000
+      },
+      {
+        "Solde": 2000.000,
+        "Date": "10/02/2025",
+        "Libelle": "VERSEMENT : ESPECE T ESPECES : 0552504 1 5 2504 T ) ESPECE 14/02/2025 2504107551140000",
+        "Debit": null,
+        "Credit": 2000.000
+      },
+      {
+        "Solde": 60.000,
+        "Date": "10/02/2025",
+        "Libelle": "11/02/2025 2504107553410000",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Solde": 0.265,
+        "Date": "10/02/2025",
+        "Libelle": "11/02/2025 2504110550410000 VERSEMENT ESPECE VERSEMENT ESPECES : 0552504100392660 ل ESPECE 0652504 100382713 1 25041 T ESPECES : 3360000 ESPECE T ESPECES 1 5 25041 : 0552504 5185060 COMMISSION SUR VIREMENT DOMESTIQUE 2504106138372017 KHAOULA 07/02/2025 900ZEXA2504101E5 : 100 BEN NASR",
+        "Debit": 0.265,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "10/02/2025",
+        "Libelle": ": 2504106138372017 KHAOULA BEN 01es 07/02/2025 900ZEXA2504101E5 PDL : 2504106138372017 KHAOULA BEN NASR 0750 11/02/2025 VIREMENT DOMESTIQUE RECU : 2504106138372017 KHAOULA BEN NASR 900ZEXA2504101E5 s166 00 o COMMISSION SUR PRELEVEMENT : DAKALI RENT A CAR COMPAGNIE INTERNATIONALE DE PDL: DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) COMPAGNIE RECU DAKHLI RENT A CAR PRELEVEMENT : — ù TVA : DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE انا S",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "10/02/2025",
+        "Libelle": "DE LEASING (CIL) 2504104138318050 PRELEVEMENT : LEASING DAKHLI RENT A CAR COMMISSION SUR gNCVAES FOSEXAIOS TN",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "10/02/2025",
+        "Libelle": "COMPAGNIE INTERNATIONALE DE (CIL) 2504104138318060 RENT À CAR COMPAGNIE INTERNATIONALE PDL: DAKHLI o",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "10/02/2025",
+        "Libelle": "LEASING (CIL) 2504104138318060 DE",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 4663.439,
+        "Date": "10/02/2025",
+        "Libelle": "2504104138318060 DE LEASING (CIL COMPAGNIE PRELEVEMENT RECU DAKHLI RENT A CAR 100272025 DE : en : COMPAGNIE PRELEVEMENT RECU DAKHLI RENT À CAR",
+        "Debit": 4663.439,
+        "Credit": null
+      },
+      {
+        "Solde": 4663.439,
+        "Date": "10/02/2025",
+        "Libelle": "DE 2504104138318061 e INTERNATIONALE LEASING (CIL) TVA: DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2504104138318061 PDL - DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2504104138318061 SUR PRELEVEMENT : DAKHLI RENT A CAR COMMISSION —E : RENT CAR COMPAGNIE INTERNATIONALE e",
+        "Debit": 4663.439,
+        "Credit": null
+      },
+      {
+        "Solde": 4242.069,
+        "Date": "10/02/2025",
+        "Libelle": "LEASING (CIL) 2504104138318062 DE COMPAGNIE PRELEVEMENT RECU DAKHLI RENT À CAR : = DAKHLIRENT À CAR COMPAGNIE INTERNATIONALE DE TVA =",
+        "Debit": 4242.069,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "10/02/2025",
+        "Libelle": "LEASING (CIL) 2504104138318062 COMMISSION SUR PRELEVEMENT : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) PDL : DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE Toioz2025 e COMMISSION SUR PRELEVEMENT DAKHLI RENT A CAR 100272025 : 0 TVA DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE 100212025 DE : e",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 5204.953,
+        "Date": "10/02/2025",
+        "Libelle": "PRELEVEMENT RECU : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2504104138318068 الهاتف: البلفيدير  الحرية. شارع المقر مالها رأس الإسم. خفية شركة والصناعة] للتجارة البنكي لاتحاد -Social: 139, Avenue de la Liberté 1002 Tunis-Belvadere -741: 81100 000 R. N. E identifiant Unique N° 0002707P SWIFT: UB.CITNTT - UBCIBPN° 771- 1080 Tunis Cedex TUNISIE - www.ubcitn - XuBcl cn m فج o قبفكي t t e Natures des opérations Date valeur Ref Banque o PRELEVEMENT RECU : DAKHLI RENT A CAR COMPAGNIE",
+        "Debit": 5204.953,
+        "Credit": null
+      },
+      {
+        "Solde": 4048.740,
+        "Date": "10/02/2025",
+        "Libelle": "ا ممح e ] PDL DAKHLI RENT الإ A C COMPAGNIE INTERNATIONALE DE LEASING (CIL)",
+        "Debit": 4048.740,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "10/02/2025",
+        "Libelle": "P DE LEASING (CIL) 250410413831807 - A 2",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "10/02/2025",
+        "Libelle": "GRS b COMPAGNIE INTERNATIONALE DE : LEASING DAKHLI (CIL) A 104126316071 COMMISSION SUR PRELEVEMENT LEASING RENT CAR 0022025 2202 = PRELEVEMENT RECU : DAKHLI RENT A CAR COMPAGNIE b",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 1945.279,
+        "Date": "10/02/2025",
+        "Libelle": "ps rr A DE LEASING (CIL) 2504104138318074 22 n - 0022025 TVA DAKHLI RENT ACAR COMPAGNIE INTERNATIONALE ‘00272025 DE LEASING (CIL) 2 2 2504104138318075 COMPAGNIE PRELEVEMENT RECU : DAKHLI RENT A CAR 0022025 s =y INTERNATIONALE DE A LEASING (CIL) 2504104138318075 2236116 TVA DAKHLI RENT CAR COMPAGNIE INTERNATIONALE 100272025 DE LEASING = COMMISSION SUR PRELEVEMENT DAKHLI RENT 2504104128918075 0022025 T",
+        "Debit": 1945.279,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "10/02/2025",
+        "Libelle": "COMPAGNIE INTERNATIONALE A DE LEASING (CIL) 2504104138318077 Tooz2025 TVA: DAKHLI RENT CAR COMPAGNIE INTERNATIONALE COMPAGNIE PRELEVEMENT RECU : DAKHLI RENT A CAR 100272025 vn",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "10/02/2025",
+        "Libelle": "ORI i DE LEASING (CIL) 2504104138318077 COMMISSION SUR PRELEVEMENT DAKHLI RENT A CAR T0022025 -r ‘0022025 DE LEASING (CIL) 2504104138318087 ur - COMPAGNIE PRELEVEMENT RECU : DAKHLI RENT À CAR Toioz2025 INTERNATIONALE DE LEASING — e (CIL) 2504104138318087 2565263 POL : DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE OTM2RCIE",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "10/02/2025",
+        "Libelle": "DE LEASING (CIL) 2504104138318087 \"٠. COMMISSION SUR PRELEVEMENT DAKHLI RENT A CAR :",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "10/02/2025",
+        "Libelle": "es DE LEASING : (CIL) À 138310085 TVA DE DAKHLI RENT 2504104138318065 COMPAGNIE INTERNATIONALE onezr2ces ميمه مد",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "10/02/2025",
+        "Libelle": "OE et COMPAGNIE : INTERNATIONALE DE LEASING (CIL) 2504104138318090 POL DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE LEASING : (CIL) 2504104138318090 À i",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "10/02/2025",
+        "Libelle": "TVA DAKHLI RENT CAR COMPAGNIE INTERNATIONALE 07/02/2025 DE LEASING (CIL) 2504104138318090 - COMMISSION SUR PRELEVEMENT DAKHLI RENT A CAR : A DE LEASING (CIL) 2504104138318081 LEASING 2504104138318081 sy A TVA -DAKHLI RENT CAR COMPAGNIE INTERNATIONALE 0022025 = COMMISSION SUR PRELEVEMENT - DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2504104138318086 PDL DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE 00272025 : TVA : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE DE (CIL) 2504104138318086 HRS",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 1.500,
+        "Date": "11/02/2025",
+        "Libelle": "19/02/2025 11/022025 REMISE TPE 1162410011 REMISE NUM 101118 DU 110225 0SSFC 1125042002 p 10/02/2025 COMMISSION SUR REMISE CARTE 0SSFC11250420002 -151 Fn COMMISSION SUR VIREMENT DOMESTIQUE 2504202137556 BEN ZID 10272025",
+        "Debit": 1.500,
+        "Credit": null
+      },
+      {
+        "Solde": 750.000,
+        "Date": "11/02/2025",
+        "Libelle": "PDL : 2504202137556151 BEN ZID OUSSAMA SOFIANE - SOFIANE VIREMENT DOMESTIQUE RECU : 2504202137556151 BEN ZID OUSSAMA Tvoz2025",
+        "Debit": null,
+        "Credit": 750.000
+      },
+      {
+        "Solde": 58.372,
+        "Date": "12/02/2025",
+        "Libelle": "TVA : 2504202137556151 BEN ZID OUSSAMA SOFIANE 20/02/2025 REMISE TPE 1162410011 REMISE NUM 101120 DU 120225 0S5FC11250430001 st COMMISSION SUR REMISE CARTE _ 11/02/2025 0SSFC11250430001 p",
+        "Debit": 58.372,
+        "Credit": null
+      },
+      {
+        "Solde": 1.500,
+        "Date": "12/02/2025",
+        "Libelle": ": NG e ct DES ACTIVITES DE LO REG FACT",
+        "Debit": 1.500,
+        "Credit": null
+      },
+      {
+        "Solde": 2800.000,
+        "Date": "13/02/2025",
+        "Libelle": "PDL : 2504302150031157 STE DU LAC DES ACTIVITES DE LO REG FACT 1 5 7D VIREMENT DOMESTIQUE RECU : 2504302150031157 STE DU LAC DES 120272025 ACTIVITES DE LO REG FACT 2499750 TVA : 2504302150031157 STE DU LAC DES ACTIVITES DE ما REG FACT 1 303 - 0285 VERSEMENT ESPECE VERSEMENT ESPECES : 0552504400424452 1 10000 تونس 1002 139 : R. N. ع identiflant Unique N* 0002707P - SWIFT: UB.CI TNTT - UBCI عق N° 771 - 1080 Tunis Cedex TUNISIE - wwwubeitn iuBci rn e p م L ] Dot",
+        "Debit": null,
+        "Credit": 2800.000
+      },
+      {
+        "Solde": 1112.133,
+        "Date": "14/02/2025",
+        "Libelle": "COMMISSION REMISE CHEQUE NUMERO [1684357] فا 1400 SonrHauoen TVA NUMERO (1684357] 11/02/2025 -9008١ 14/02/2025 REGLEMENT CHEQUE INTER NUMERO [1684357) O, 900BFI1250440668 13/02/2025 CHEQUE RECU TELECOMPENSATION : RECEPTION CHEQUE [9871501) ل 055CQ11250450504 ; 13/02/2025 CHEQUE RECU TELECOMPENSATION RECEPTION CHEQUE [9871502) : b6 055CQ11250450506 ESPECE 449 T ESPECES : 1 p 14/022025  PRELEVEMENT RECU : REGLE DE LA DECLARATION: 4368224 MINISTERE DES FINANCES 2504501138601006 1208108 r d",
+        "Debit": 1112.133,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "12/07/2078",
+        "Libelle": "PDL : REGLE DE LA DECLARATION: 4368224 MINISTÈRE DES FINANCES 2504501138601006 0750 مستا SOR ERIIMONS COMMISSION SUR PRELEVEMENT - REGLE DE LA DECLARATION: 4368224 MINISTERE : DES FINANCES 2504501138601006 i TVA REGLE DE LA DECLARATION: 46 4366224 MINISTÈRE DES",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "13/07/2075",
+        "Libelle": "FINANCES ETE",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 700.000,
+        "Date": "17/02/2025",
+        "Libelle": "VIREMENT DOMESTIQUE RECU : 2504506457205000 REGL FACTURE 1 éc REMISE TPE 1162410011 REMISE NUM 101121 DU 160225 24/02/2025",
+        "Debit": null,
+        "Credit": 700.000
+      },
+      {
+        "Solde": 4000.000,
+        "Date": "17/02/2025",
+        "Libelle": "14/02/2025 COMMISSION SUR REMISE CARTE 26778 085FC11250480001 ESPECE 1 ! T ESPECES : 377",
+        "Debit": null,
+        "Credit": 4000.000
+      },
+      {
+        "Solde": 850.000,
+        "Date": "17/02/2025",
+        "Libelle": "VERSEMENT ESPECE T ESPECES : درم 750000 1 T ESPECE T ESPECES : —",
+        "Debit": null,
+        "Credit": 850.000
+      },
+      {
+        "Solde": 0.000,
+        "Date": "17/02/2025",
+        "Libelle": "VERSEMENT ESPECE VERSEMENT ESPECES : 0552504800449138 . [ 1 \\T ESPECE T ESPECES : A 2504807531480000 208",
+        "Debit": null,
+        "Credit": 0.000
+      },
+      {
+        "Solde": 4000.000,
+        "Date": "17/02/2025",
+        "Libelle": "VERSEMENT ESPECE T ESPECES : pn ESPECE 329 1 T ESPECES : ودر 1 T ESPECE T ESPECES : 1 T ESPECES : يسوج 1 T ESPECE T ESPECES : مسجم 1710272025 COMMISSION SUR PRELEVEMENT  ECHEANGE 15022025 DOSSIER C0010714 LS TVA: ECHEANCE ARAB 710272025 15022025 DOSSIER C0010714 1770272025 PDL : ECHEANCE 15022025 DOSSIER CO010714 ARAB : 1710272025 PRELEVEMENT RECU ECHEANCE 15022025 9 DOSSIER C0010714 1770272025 INTERNATIONAL PDL: ECHEANCE LEASE 15022025 2504804 DOSSIER Co011233 ARAB 1770272025 COMMISSION SUR ECHEANCE 15022025 DOSSIER C0011233",
+        "Debit": null,
+        "Credit": 4000.000
+      },
+      {
+        "Solde": 2.000,
+        "Date": "25/04/8041",
+        "Libelle": "INTERNATIONAL - LEASE 170272025 PRÉLEVEMENT RECU ECHEANCE 15022025 DOSSIER COOT1233 TVR : INTERNATIONAL ÉCHERNCE LEASE 2504804139353053 = 2861547 سدور VAL 15022025 DOSSIER C0011233 ARAB",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "15/02/2025",
+        "Libelle": "ARAB 1710272025 INTERNATIONAL : LEASE 2504804133353056 68 1",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "15/02/2025",
+        "Libelle": "0055-6 65 ARAB 1770272025 ECHEANCE 39353056 1770272025 COMMISSION SUR PRELEVEMENT ECHEANCE 15022025 DOSSIER G0011116 ARAB INTERNATIONAL LEASE 2504804139353056 -",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "15/02/2025",
+        "Libelle": "RECU : DOSSIER C0011116 170272025 PRELEVEMENT ECHEANCE 2504804 VA ECHEANCE 15022025 DOSSIER C0010715 ARAB 1770272025 7022025 PRELEVEMENT RECU ECHEANCE 15022025 DOSSIER C0010715 1770272025 PDL ECHEANCE 15022025 DOSSIER C0010715 ARAB INTERNATIONAL LEASE 2504804139353058 - 0750 1770272025 COMMISSION SUR PRELEVEMENT ECHEANCE 15022025 DOSSIER C0010715 1770272025 PDL ECHEANCE LEASE 15022025 DOSSIER C0010273 ARAB INTERNATIONAL : 2504804 0 0750 1710272025 PRÉLEVEMENT RECU ECHEANCE 15022025 DOSSIER G00T0273 TVA: ECHEANCE 15022025 DOSSIER C0010273 ARAB 1770272025 COMMISSION SUR PRELEVEMENT ECHEANCE 15022025 DOSSIER C0010273 70272025 TVA ECHEANCE ARAB 710272025 INTERNA LEASE 15022025 2504804139353061 DOSSIER C0010268 1770272025 ARAB PRELEVEMENT RECU : ECHEANCE 15022025 DOSSIER G0010268 — 81100 000 الهاتف: . البلفيدير توئتس 1002 الحرية. شارع 139 : الاجتماعي الها رأس الإسم. خفية شركة au de 000 Dinars Siège Social: 139, Avenue de ها Liberté 1002 Tunis-Beivédère 741: 81100 000 R.N. E Identiflant Unique N° 0002707P SWIFT: UB.CI TNTT - UBCI 8P N° 771 - 1080 Tunis Cedex - -TUNISIE www.ubcitn XiuBcl صو AR POUR CONMRCH CMN A BT ] اللتجارةوفلصناعة W Natures des opérations Date valeur Ref Banque COMMISSION SUR PRELEVEMENT 2504804 EOHEANCE 13935306 15022025 DOSSIER CO010268 171022025 1770272025 PDL ECHEANCE 15022025 DOSSIER ARAB",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "17/02/2025",
+        "Libelle": "COMMISSION SUR PRELEVEMENT 2504804 ECHEANCE 139353075 15022025 DOSSIER C0010403 ARAB INTERNATIONAL TVA: ECHEANCE LEASE 15022025 DOSSIER C0010403 70272025 ; 1770272025 PRELEVEMENT RECU : ECHEANCE 15022025 DOSSIER C0010403 ARAB INTERNATIONAL LEASE 2504804139353075 2874619 7",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "17/02/2025",
+        "Libelle": "POL: ECHEANCE 15022025 DOSSIER C0010403 ARAB 1770272025 ARAB PRELEVEMENT RECU ECHEANCE LEASE 15022025 DOSSIER C0011426 170272025 TVA: ECHEANCE 15022025 DOSSIER C0011426 : COMMISSION SUR PRELEVEMENT ECHEANCE 15022025 DOSSIER C0011426 1770272025 =",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "15/02/2025",
+        "Libelle": "1770272025 DOSSIER C0011426 INTERNATIONAL : LEASE 2504804139353085 ;",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "17/02/2025",
+        "Libelle": "PDL : ECHEANCE 15022025 DOSSIER C0010757 ARAB COMMISSION SUR PRELEVEMENT : ECHEANGE 15022025 DOSSIER C0010757",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "17/02/2025",
+        "Libelle": "16212025 tn TVA: ECHEANCE 15022025 DOSSIER C0010757 ARAB 770272025 702025 PRÉLEVEMENT RECU ÉCHEANCE 15022005 DOSSIER COD1D757 70212025 COMMISSION SUR PRELEVEMENT LEASE 15023005 DOSSIER CONTTEE 1770212025 PDL ECHEANCE 15022025 DOSSIER C0010758 ARAB",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "25/04/8041",
+        "Libelle": "LEASE : 1770272025 PRÉLEVEMENT RECU LEASE ECHEANCE 15022025 DOSSIER C0010758 1770272025 TVA ECHEANCE 15022025 DOSSIER C0010758 ARAB 770272025 COMMISSION SUR PRELEVEMENT - ECHEANCE 15022025 DOSSIER C0008890",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "15/02/2025",
+        "Libelle": "9 1770272025 ARAB",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "15/02/2025",
+        "Libelle": "1770272025 0 ARAB 1410212025",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 290.000,
+        "Date": "18/02/2025",
+        "Libelle": "COMMISSION SUR REMISE CARTE gy 0SSFC 1125048002 2410212025 REMISE TPE 1167550019 REMISE NUM 101042 DU 150225 pN 055FC11250490002",
+        "Debit": null,
+        "Credit": 290.000
+      },
+      {
+        "Solde": 4600.000,
+        "Date": "18/02/2025",
+        "Libelle": "REMISE TPE 1167550019 REMISE NUM N01042 DU 150225 __ __ pn 055FC11250490004 420000 COMMISSION SUR REMISE CARTE e ossFc1 ESPÈCE T ESPECES 1334 :",
+        "Debit": null,
+        "Credit": 4600.000
+      },
+      {
+        "Solde": 0.750,
+        "Date": "18/02/2025",
+        "Libelle": "POL DAKHLIRENT CAR COMPAGNIE INTERNATIONALE PRELEVEMENT COMPAGNIE 180272025 RECU DE : DAKHLI RENT À CAR (CIL) - 2504802138331015 A 5 21202 ‘ 180272025 COMMISSION SUR PRELEVEMENT DAKHLI RENT CAR COMPAGNIE — 190272025 DE TVA DAKHLI RENT A CAR COMMISSION SUR PRELEVEMENT DAKHLT RENT A CAR",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "18/02/2025",
+        "Libelle": "COUTRE COMPAGNIE - INTERNATIONALE A DE LEASING (CIL) 2504902138331018 OEN 180272025 POL DAKHLI RENT CAR COMPAGNIE INTERNATIONALE 1810272025 TVA : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE DE LEASING COMMISSION SUR PRELEVEMENT DAKHLI RENT CAR 160212025",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "18/02/2025",
+        "Libelle": "PDL : DAKHLI RENT CAR COMPAGNIE INTERNATIONALE 1610272025 TVA : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE PRELEVEMENT 1810272025",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "19/02/2025",
+        "Libelle": "PDL : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE ; oz",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "18/02/2025",
+        "Libelle": "TVA : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE ESPECE ESPECES 0552505000471556 T T : i 9120001 1VA: RÈGLE DE LA DECLARATION. 4368416 MINISTERE DES ; 1900272025 1900272025 PDL REGLE DE LA DECLARATION 4368418 MINISTERE DES 1900272025 COMMISSION SUR PRELEVEMENT REGLE DE LA DECLARATION 4368416 PRELEVEMENT RECU REGLE LA DECLARATION. 4368418 100272025 ESPECE T ESPECES : 0552505100476382 P 2 81100 000 الهاتف: . البلفيدير تونس 1002 الحرية. شارع 139 الإجتماعي المقر ,liys قالها رأس الإسم. خفية شركة والصناعة au capital de Dinars Siège Social: 139, Avenue de ما Liberté 1002 Tunis-Betvédère 761: 81100 000 R.N.E Identifiant Unique N° 0002707P - SWIFT: UB.CI TNTT - UBCI 8.6 N° 771 - 1080 Tunis Cedex TUNISIE www.ubcitn - XiuBcl e PE rrr PPN Date valeur Ref Banque 76423 2010212025 VERSEMENT ESPÈCE 7 ESPECES 21/02/2025 : 2505108380630000",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 900.000,
+        "Date": "20/02/2025",
+        "Libelle": "ce T ESPÈCE T ESPECES : 0552505100476579 4500000 2 VERSEMENT ESPECE VERSEMENT ESPECES 0552505100476612 : _ S 2 T ESPECES : 0552505100476687 — . 2505108396590000 IT ESPECES 0552505100479204 2110212025 : 2505108491170001 - T ESPECE 7 ESPECES : 0552505 2",
+        "Debit": null,
+        "Credit": 900.000
+      },
+      {
+        "Solde": 4900.000,
+        "Date": "20/02/2025",
+        "Libelle": "VERSEMENT ESPÈCE T ESPECES 21/02/2025 : 37 2505108543250000 ESPECE MRE 76411 T ESPECES : 2 se 25081 VERSEMENT ESPECE VERSEMENT ESPECES 0552505100476471 21/02/2025 : 2505110391030000 p VERSEMENT ESPECE VERSEMENT ESPECES 0552505100476448 : p 2 25081 VERSEMENT ESPECE VERSEMENT ESPECES 0552505100476642 2110212025 : _ 2505110385100000 ESPECE P 4900000 21/02/2025 T ESPECES : 0552505100476647 ps 2505110395770000 T ESPECES : 0552505100480794 2 p 25051 2000272025 PRELEVEMENT RECU : SOCIETE DAKHLI RENT A CAR LM01656950/20022035 2020000 MODERN LEASING 2505102137685266 - TVA SOCIETE DAKHLI RENT CAR 3600771 م 2000272025 : A LM01656950/20022025 MODERN LEASING - 2000272025 COMMISSION SUR PRELEVEMENT MODERN LEASING - SOCIETE DAKHLI RENT CAR- LM01656950/20022025 POL SOCIETE DAKHLIRENT CAR 2505102137686266 2010272025 : A LMO1656950/20022025 MODERN LEASING 2505102137686266 -",
+        "Debit": null,
+        "Credit": 4900.000
+      },
+      {
+        "Solde": 2.000,
+        "Date": "20/02/2025",
+        "Libelle": "PRELEVEMENT RECU HANNIBAL LEASE 2505102137686028 2231039 تنا 200272025 COMMISSION SUR PRELEVEMENT FANNIBAL LEASE 2505102137686028",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 8800.291,
+        "Date": "20/02/2025",
+        "Libelle": "TVA: HANNIBAL LEASE 2505102137686028 p v 2002/2025 POL : HANNIBAL LEASE 2505102137686028 és 1050Y  PRELEVEMENT RECU - DAKALI RENT A CAR ATTIJARI LEASING 2505102137687074 سا تمت متسس امسا",
+        "Debit": 8800.291,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "20/02/2008",
+        "Libelle": "TVA : DAKHLI RENT A CAR ATTIJARI LEASING TVA:DARILIREN 19/02/2025 ù 900ZEXA2505105JD 2010272025 COMMISSION LEASING SUR PRELEVEMENT 2505102137687074 - DAKHLT RENT ACAR ATTIJARI =",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 6150.876,
+        "Date": "20/02/2025",
+        "Libelle": ". DAKHLI RENT À CAR لقان 2505102137687074 19/02/2025 RECU : SOCIETE DAKHLI RENT CAR 078 900ZEXA2505105JD PRELEVEMENT À LM01656060/20022025 MODERN LEASING 2505102137686265 - تت : A LM01656880/20022025 MODERN n -19/02/2025 900ZEXA2505 108JE en À - _— 2000272025 COMMISSION SUR PRELEVEMENT - SOCIETE DAKFLI RENT CAR LM01656980/20022025 MODERN LEASING 2505102137686265 ددم PDL SOCIETE DAKHLIRENT À CAR LM01656980/20022026 MODERN -19/02/2025 900ZEXA2505 FOLLEOCETE À 105 TVA: dn 2010272025 2505102137687034 STE DAKHLI RENT CAR RANNIBAL LEASE 2000212025  COMMISSION SUR PRELEVEMENT STE DAKHLT RENT CAR",
+        "Debit": 6150.876,
+        "Credit": null
+      },
+      {
+        "Solde": 9805.793,
+        "Date": "20/02/2025",
+        "Libelle": "PRELEVEMENT RECU : STE DAKHLI RENT A CAR HANNIBAL POL LEASE STE 2505102137687034 DAKHLI RENT CAR 19/02/2025 900ZEXA250510SJF 2002025 -A = 19/02/2025 ST DGR 9002EXA2505 1053F FANNIBAL N",
+        "Debit": 9805.793,
+        "Credit": null
+      },
+      {
+        "Solde": 8194.524,
+        "Date": "20/02/2025",
+        "Libelle": "PRELEVEMENT RECU - STE DAKFLI RENT A CAR LEASE 2505102137687041 -",
+        "Debit": 8194.524,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "20/02/2025",
+        "Libelle": "TVA : STE DAKHLI RENT A CAR RANNIBAL LEASE 2505102137687041 9",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "20/02/2025",
+        "Libelle": "COMMISSION SUR PRELEVEMENT - STE DAKHLI RENT A CAR HANNIBAL LEASE",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "20/02/2025",
+        "Libelle": ": A TVA VA : DAKHLI RENT À CAR ATTUARI",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "20/02/2025",
+        "Libelle": "LEASING 19/02/2025 DAKHLERENT SUR A 900ZEXA2505105JH ps 200022025 COMMISSION PRELEVEMENT - DAKHLI RENT CAR ATTIJARI LEASING 2505102137687056 =",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "20/02/2025",
+        "Libelle": "POL - DAKHLI RENT À CAR ATTHARILEASING 0 ol PRELEVEMENT RECU DAKHLT S RENT A CAR el : ATTIART 19/02/2025 g CR 900ZEXA2505105JH B4s 912",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 4956.605,
+        "Date": "20/02/2025",
+        "Libelle": ": HANNIBAL LEASE 2505102137686029 ©",
+        "Debit": 4956.605,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "20/02/2025",
+        "Libelle": "COMMISSION SUR PRELEVEMENT FANNIBAL (EASE 2505102137686029 1089",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 100007645.000,
+        "Date": "20/02/2025",
+        "Libelle": "TVA: LEASE 2505102 -1051 201022025 POL - HANNIBAL LEASE 2505102137686029 0750 10841 81100 000 الهاتف: . البلفيدير تونس 1002 الحرية. شارع المقر دينار, مالها رأس خفية Siège Social: 139, Avenue de ذا Liberté 1002 Tunis-Belvédere - Tél: 81100 000 R.N.E identiflant Unique N° 0002707P - SWIFT: UB.C.I TNTT UBCI B.P N° 771 1080 Tunis فك -- TUNISIE - www. ubcitn ناي اود صر معدن E الم ا ست L تجلا الي ب",
+        "Debit": 100007645.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "20/02/2025",
+        "Libelle": "SOCIETE DAKHLI RENT A CAR - LM01656030/ MODERN",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "20/02/2025",
+        "Libelle": "LEASING 2505102137686284 ‘ - -- COMMISSION SUR PRÉLEVEMENT SOCIÈTE DAKFLIRENT A CAR اتسينا سن MODERN سنسدا LEASING 2505102137686284 A PRELEVEMENT 5001616 DAKHLI RENT CAR LM01656530/20022025 200272025 -",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "20/02/2025",
+        "Libelle": ": SOCIETE DAKHLI RENT CAR - LM01656930/ MODERN",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "20/02/2025",
+        "Libelle": "خا LEASING 2505102137686284 COMMISSION SUR PRELEVEMENT -STE DAKHLI RENT A CAR 700272025 كفعا 2505101137683002 سيت TVA: STE DAKALI RENT A CAR HANNIBAL LEASE 0380",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "20/02/2025",
+        "Libelle": "o 2505101137683002 SUR -A COMMISSION PRELEVEMENT DAKHLI RENT CAR 700272025 LEASING POL: DAKHLI RENT CAR ATTIJARI LEASING 700272025 : A ATTIJARI LEASING",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "20/02/2025",
+        "Libelle": "2505101137683072",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "20/02/2025",
+        "Libelle": "سس ARAB INTERNATIONAL LEASE 2505101137683136 PDL: REPRESENTATION PP2398067 ARAB INTERNATIONAL 200272025 LEASE 2505101137683136 0750 200272025 LEASE TVA: REPRESENTATION 2505101137683136 PP2388067 ARAB INTERNATIONAL ESPECE 2 T ESPECES : 552505200495383 i 21/022025 VERSEMENT ESPECE VERSEMENT ESPECES : 05525052004954 19 S _",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 1.500,
+        "Date": "21/02/2025",
+        "Libelle": "TVA : 2505206137472036 COULEURS TUNISIENNES AUTRES به PDL : 2505206137472036 COULEURS TUNISIENNES AUTRES_ 0750 COMMISSION SUR VIREMENT DOMESTIQUE : 2505206137472036 COULEURS TUNISIENNES AUTRES AUTRES VIREMENT DOMESTIQUE RECU -2505206137472036 COULEURS TUNISIENNES 210272025 COMMISSION SUR VIREMENT DOMESTIQUE : 2505201137470336 GRAND",
+        "Debit": 1.500,
+        "Credit": null
+      },
+      {
+        "Solde": 1.500,
+        "Date": "21/02/2025",
+        "Libelle": "MEDIAS SA =",
+        "Debit": 1.500,
+        "Credit": null
+      },
+      {
+        "Solde": 0.285,
+        "Date": "21/02/2025",
+        "Libelle": "TVA : 2505201137470336 GRAND MAGHREB MEDIAS S.A VIR 79",
+        "Debit": 0.285,
+        "Credit": null
+      },
+      {
+        "Solde": 1500.000,
+        "Date": "21/02/2025",
+        "Libelle": "PDL : 2505201137470336 GRAND MAGHREB MEDIAS SA VIR 7 i VIREMENT DOMESTIQUE RECU : 2505201137470336 GRAND MAGHRES 24/02/2025",
+        "Debit": null,
+        "Credit": 1500.000
+      },
+      {
+        "Solde": 89.93,
+        "Date": "24/02/2025",
+        "Libelle": "COMMISSION SUR REMISE CARTE 2 o5sFC1 — 04/03/2025 REMISE TPE 1162410011 REMISE NUM 1101122 DU 240225 055FC11250550002 p COMMISSION SUR REMISE CARTE 2 05501 ب",
+        "Debit": 89.93,
+        "Credit": null
+      },
+      {
+        "Solde": 549.000,
+        "Date": "24/02/2025",
+        "Libelle": "REMISE TPE 1162410011 REMISE NUM 101122 DU 240225 05521 i REMISE TPE 1167550019 REMISE NUM 101043 DU 230225 05sFC1",
+        "Debit": null,
+        "Credit": 549.000
+      },
+      {
+        "Solde": 4500.000,
+        "Date": "24/02/2025",
+        "Libelle": "COMMISSION SUR REMISE CARTE 2 ossFC1 su dn VERSEMENT ESPECE VERSEMENT ESPECES : 0552505500509760",
+        "Debit": null,
+        "Credit": 4500.000
+      },
+      {
+        "Solde": 2160.000,
+        "Date": "24/02/2025",
+        "Libelle": "VERSEMENT ESPECE VERSEMENT ESPECES : 0552505500508838 T ESPÈCE T ESPECES : 0552505500509870 160000 جب ESPECE T ESPECES : 0552505500501937 A C ESPÈCE T ESPECES 0552505500501995 : RIR ESPÈCE T ESPECES : ;05525055005058 76 جد 781",
+        "Debit": null,
+        "Credit": 2160.000
+      },
+      {
+        "Solde": 252.000,
+        "Date": "25/02/2025",
+        "Libelle": "VERSEMENT ESPECE VERSEMENT ESPECES 0552505500509 pn COMMISSION SUR REMISE CARTE ossrc1 2 REMISE TPE 1162410011 REMISE NUM 101123 DU 250225 ossFc1 p 2500212025 COMMISSION SUR REMISE CARTE 0501 سدم",
+        "Debit": null,
+        "Credit": 252.000
+      },
+      {
+        "Solde": 180.000,
+        "Date": "25/02/2025",
+        "Libelle": "REMISE TPE 1162410011 REMISE NUM N01123 DU 250225 0ssFC1",
+        "Debit": null,
+        "Credit": 180.000
+      },
+      {
+        "Solde": 3900.000,
+        "Date": "25/02/2025",
+        "Libelle": "VERSEMENT ESPECE VERSEMENT ESPECES 0552505600521683 ESPÈCE T ESPECES : 0552508600521711 p ESPÈCE T ESPECES 0552505600521769",
+        "Debit": null,
+        "Credit": 3900.000
+      },
+      {
+        "Solde": 1.500,
+        "Date": "25/02/2025",
+        "Libelle": "PDL : 2505606137502204 AYED TAOUFIK 8050002 2505606 137502204 p COMMISSION TAOUFIK 8050002 SUR VIREMENT DOMESTIQUE : AVED 7 500212025 5 % الهاتف: البلفيدير  الإجتماعي المقر Lailo رأس والصناعة للتجارة البنكي الاتحاد -- R.N. E identifiant Unique N° 0002707P - SWIFT: UB.C.I TNTT - UBCI B.P N° 771 - 1080 Tunis Cedex TUNISIE - www.ubcitn XiuBcl Cmc اذ £T sd للتجاة CONMARC CO واللصفامة الإتعلاالينخي Natures des opérations Date valeur __opération :",
+        "Debit": 1.500,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "25/02/2025",
+        "Libelle": "VIREMENT DOMESTIQUE RECU 2505606137502204 AYED TAOUFIK 8050002 B va ? TVA: AYED TAOUFIK 8050002 -v À COMMISSION SUR PRELEVEMENT DAKALI RENT 2506808137051057 COMPAGMIE : PRELEVEMENT RECU DAKHLI RENT À CAR COMPAGNIE 250272025 INTERNATIONALE DE LEASING (CI) 2505605137851057 12272615 : DAKHLI RENT POL 2505006 COMPAGNIE INTERNATIONALE DE TVA: DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "25/02/2025",
+        "Libelle": "DE LEASING (CIL) 2505605137851057 COMMISSION SUR PRELEVEMENT DARALI RENT À COMPAGNIE PDL : DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE 0750 30272025 DE LEASING (CIL) 2505605137851056 2 TVA -DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE - COMMISSION SUR PRELEVEMENT DAKHLI RENT À CAR",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "25/02/2025",
+        "Libelle": "COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851063 s -A 75022025 DE LEASING (CIL) 2505605137851063 g TVA DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "25/02/2025",
+        "Libelle": "LEASING (CIL) 2505605137851063 DE : A COMMISSION SUR PRELEVEMENT DAKHLI RENT CAR",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "25/02/2025",
+        "Libelle": "COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851058 -A POL DAKHLI RENT CAR COMPAGNIE INTERNATIONALE -À TVA DAKHLI RENT CAR COMPAGNIE INTERNATIONALE COMMISSION SUR PRELEVEMENT : DAKHLI RENT A CAR ; PDL DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE : À TVA DAKHLI RENT 2805605137851055 COMPAGNIE INTERNATIONALE ;",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "25/02/2025",
+        "Libelle": "DE LEASING (CI.) e -",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "25/02/2025",
+        "Libelle": "COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851050 عب POL : DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE DE TVA DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "25/02/2025",
+        "Libelle": "DE LEASING (CIL) 2505605137851050 -À 250272025 COMPAGNIE INTERNATIONALE DE LEASING (C1) 250560613785 1037 us A PDL: DAKHLI RENT 2505606137851037 COMPAGNIE INTERNATIONALE",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "25/02/2025",
+        "Libelle": "LEASING (CIL) po= DE -A TVA DAKHLI RENT CAR COMPAGNIE INTERNATIONALE : COMMISSION SUR PRELEVEMENT DAKHLI RENT À CAR , : PDL DAKHLI RENT A CAR COMPAGNIE INTERNATIONALE TVA DAKHLI RENT À CAR COMPAGNIE INTERNATIONALE : 75022025 COMPAGNE INTERNATIONALE DE LEASING (CI) 2506606137851035 DAKHLI RENT 241022025 اج - ل COMPAGNIE INTERNATIONALE 900ZRSP2505600JH 2600h وود :",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 2.000,
+        "Date": "25/02/2025",
+        "Libelle": "DE LEASING (CIL) 2505605137851035 n COMMISSION SUR PRELEVEMENT REPRESENTATION PP2444065 ARAB INTERNATIONAL PDL: REPRESENTATION PP2444065 ARAB INTERNATIONAL TVA REPRESENTATION PP2444065 ARAB INTERNATIONAL : COMMISSION SUR PRELEVEMENT DARALI RENT A CAR = :",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.380,
+        "Date": "25/02/2025",
+        "Libelle": "DE (CIL) 2505605137851061 : A TVA DAKHLI RENT CAR COMPAGNIE INTERNATIONALE = DE LEASING (CIL) 2505605137851061 SUR : COMPAGNIE COMMISSION PRELEVEMENT DAKHLI RENT À CAR POL REl DE LEASING - DAKHLI (CiL) COMPAGNIE INTERNATIONALE",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "25/02/2025",
+        "Libelle": "…unswœ F -2506605137851036 A INTERNATIONALE TVA DAKHLI RENT COMPAGNIE ; DE OSsFC1",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 17.430,
+        "Date": "27/02/2025",
+        "Libelle": "REMISE TPE 1167550019 REMISE NUM NO1044 DU 270225 p 1 OssFC1 COMMISSION SUR REMISE CARTE P TVA: NGUE MATHIAS LOCATION VOITURE MOIS DE MARS I 2 2028 206 2505804 153972028 COMMISSION SUR VIREMENT DOMESTIQUE -NGUE ; POL 2505804 NGUE MATHIAS LOCATION VOITURE MOIS DE MARS 1 : e 2505804 163072028 VIREMENT DOMESTIQUE RECU : NGUE MATHIAS LOCATION =",
+        "Debit": 17.430,
+        "Credit": null
+      },
+      {
+        "Solde": 3100.000,
+        "Date": "27/02/2025",
+        "Libelle": "MOIS DE MARS VOITURE . شارع 139 : الإجتماعي المقر مالها رأس الإسم. خفية شركة والصناعة للتجارة الينكي لاتحاد -Liberté 1002 Tunis-Belvédère - Tél: 81100 000 SWIFT: UB.C.I TNTT UBCI B.P N° 771 1080 Tunis Cedex TUNISIE - www.ubcitn R. N. E Identifiant Unique N° 0002707P -- - uBC é E CON 17 LHU i tn #إتخلادفيتكيللفجرة 0 p E Ref Banque Natures des opérations 800ZRSP250580014",
+        "Debit": null,
+        "Credit": 3100.000
+      },
+      {
+        "Solde": -2.000,
+        "Date": "26/02/2025",
+        "Libelle": "PRELEVEMENT DAKHLI RENT A CAR",
+        "Debit": -2.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.750,
+        "Date": "27/02/2025",
+        "Libelle": "ATTIJARI LEASING 2505803138087000 mc CAR ATTIJARI LEASING PDL : DAKHLI RENT À 2505803138087000 o; us ATTWARI LEASING TVA DAKHLI RENT A CAR 05SFC1",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Solde": 546.000,
+        "Date": "27/02/2025",
+        "Libelle": ": 2505803138087000 REMISE TPE 1167550019 REMISE NUM 0ssFC1 280022025 2 REMISE CARTE 2650 ossFc",
+        "Debit": null,
+        "Credit": 546.000
+      },
+      {
+        "Solde": 0.638,
+        "Date": "28/02/2025",
+        "Libelle": "COMMISSION SUR MOIS DE FEVRIER 2025 29750 055FC LOYER TPE DU DE FEVRIER 2025 17850 LOYER TPE DU MOIS 3 2",
+        "Debit": 0.638,
+        "Credit": null
+      },
+      {
+        "Solde": 28.602,
+        "Date": "28/02/2025",
+        "Libelle": "TVA 13 MOBIBANK 3380 055PK ABONNEMENT TARIFICATION PACK 03/03/2025 2505908430980000",
+        "Debit": 28.602,
+        "Credit": null
+      },
+      {
+        "Solde": 4000.000,
+        "Date": "28/02/2025",
+        "Libelle": "T : 03/03/2025 2505908438350000 VERSEMENT ESPECE VERSEMENT ESPECES : 4000000 2810212025 ESPÈCE ESPECES 0525059005565 11 4380000",
+        "Debit": null,
+        "Credit": 4000.000
+      },
+      {
+        "Solde": 800.000,
+        "Date": "28/02/2025",
+        "Libelle": "T : ESPECE T : 03/03/2025 2505910541410000 T VERSEMENT ESPECE VERSEMENT ESPECES :",
+        "Debit": null,
+        "Credit": 800.000
+      },
+      {
+        "Solde": 317.269,
+        "Date": "28/02/2025",
+        "Libelle": "SOLDE DE CLOTURE في و موقتة العملية هذه (*) التاكيد انتظار provisoire et en attente de validation. (*) Cette opération est والضناعةا للتجارة البتكي الإتحاد الهاتف: البلفيدير الحرية. شَارع 139 : الإجتماعى المقر دينار, -81100 000 000 توئنس 1002 -1002 Tunis Boivédère 741: 81100 Siège Social: 139, Avenue de ها Liberté UBCI - Société Anonyme au U.8.C.1 TNTT UBCI B.P N° 771-1080 Tunis R. N. E Identifiant",
+        "Debit": null,
+        "Credit": 317.269
+      }
+    ]
+  }
+}

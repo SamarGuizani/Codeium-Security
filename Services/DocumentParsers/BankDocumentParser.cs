@@ -22,9 +22,9 @@ namespace Codeium_Security.Services.DocumentParsers
             // Détection du nom de la banque
             string bankName = ExtractBankName(fullText);
             bool isBiat = bankName.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
-
+            bool isZitouna = fullText.Contains("ZITOUNA", StringComparison.OrdinalIgnoreCase);
             // Ajustement spécifique à BIAT (réduction du regroupement vertical)
-            if (isBiat)
+            if (isBiat || isZitouna)
                 engine.VerticalTolerance = 1;
 
             // Construction du tableau avec la tolérance éventuellement modifiée
@@ -87,12 +87,12 @@ namespace Codeium_Security.Services.DocumentParsers
 
 
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
-
+            bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
 
             foreach (var row in rows)
             {
-               
-                
+
+
                 var cells = row.Cells.OrderBy(c => c.Left).ToList();
                 var cellTextsRaw = cells
                     .Select(c => NormalizeSignSpacing(CleanWhitespace(c.Text)))
@@ -113,6 +113,11 @@ namespace Codeium_Security.Services.DocumentParsers
                     account = ExtractAccountNumber(fullText);
                 if (!string.IsNullOrWhiteSpace(account))
                     lastSeenAccountNumber = account;
+
+                // [ZITOUNA] Extraction explicite du N° Compte
+                var compteMatch = Regex.Match(joined, @"N°\s*Compte\s+(\d{10,20})", RegexOptions.IgnoreCase);
+                if (compteMatch.Success)
+                    lastSeenAccountNumber = compteMatch.Groups[1].Value;
 
                 // [COMMUN] RIB / Code IBAN (format TN + chiffres) (fix #3)
                 var ribMatch = Regex.Match(joined, @"TN\d{2}[\s\d]{15,25}");
@@ -148,8 +153,9 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
-                // [QNB] "Solde Initial" = debut d'une nouvelle section/sous-compte
-                if (Regex.IsMatch(joined, @"Solde\s*Initial", RegexOptions.IgnoreCase))
+                // [QNB] "Solde Initial" = debut d'une nouvelle section/sous-compte (avec capture du montant)
+                var soldeInitMatch = Regex.Match(joined, @"\bSolde\s+Initial\s*([-+]?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                if (soldeInitMatch.Success || Regex.IsMatch(joined, @"\bSolde\s+Initial\b", RegexOptions.IgnoreCase))
                 {
                     if (current != null)
                     {
@@ -158,13 +164,13 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     sectionRawText = joined + "\n";
 
-                    var initMatch = AmountRegex.Match(joined);
-                    decimal soldeInit = initMatch.Success ? ParseAmount(initMatch.Value) : 0;
+                    decimal soldeInit = 0;
+                    if (soldeInitMatch.Success)
+                        soldeInit = ParseAmount(soldeInitMatch.Groups[1].Value);
 
                     current = new BankAccountSection
                     {
                         AccountNumber = lastSeenAccountNumber,
-                        // [fix #3] Repli sur le RIB document-entier si aucun RIB local n'a ete vu
                         Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
                         Currency = ExtractCurrency(fullText),
                         SoldeInitial = soldeInit
@@ -174,7 +180,6 @@ namespace Codeium_Security.Services.DocumentParsers
                     pendingDate = "";
                     continue;
                 }
-
                 // [BIAT] "SOLDE AU 30 09 2023 597,014" = debut de section (equivalent du "Solde Initial" QNB)
                 // C'est la cause racine du bug "Accounts: []" pour BIAT : sans ce declencheur,
                 // 'current' restait toujours null et TOUTES les transactions etaient ignorees
@@ -221,6 +226,30 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (biatSoldeFinalMatch.Success)
                 {
                     if (current != null) current.SoldeFinal = ParseAmount(biatSoldeFinalMatch.Groups[1].Value);
+                    continue;
+                }
+                // [ZITOUNA] "Solde actuel" = début de section
+                var zitounaSoldeMatch = Regex.Match(joined, @"Solde\s+actuel\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                if (zitounaSoldeMatch.Success)
+                {
+                    if (current != null)
+                    {
+                        current.RawSectionText = sectionRawText;
+                        sections.Add(current);
+                    }
+                    sectionRawText = joined + "\n";
+
+                    decimal soldeInit = ParseAmount(zitounaSoldeMatch.Groups[1].Value);
+                    current = new BankAccountSection
+                    {
+                        AccountNumber = lastSeenAccountNumber,
+                        Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                        Currency = ExtractCurrency(fullText),
+                        SoldeInitial = soldeInit
+                    };
+                    previousSolde = soldeInit;
+                    pendingLibelleBuffer = "";
+                    pendingDate = "";
                     continue;
                 }
 
@@ -356,21 +385,25 @@ namespace Codeium_Security.Services.DocumentParsers
                     // sur la ligne (deja verifie ci-dessus) sans dependance a une bounding box non
                     // exposee par TableCell. Si votre modele expose une propriete de position verticale
                     // (ex: Y, Bottom, Line.Top...), on peut reintroduire un filtre de hauteur ici.
+                    // [fix #4] Texte de continuation
                     if (amountCandidates.Count == 0)
                     {
                         if (current.Transactions.Count > 0 && string.IsNullOrEmpty(pendingDate))
                         {
                             var lastTx = current.Transactions[current.Transactions.Count - 1];
-                            lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
+                            // [QNB] Ne pas coller les footers
+                            if (!isQnb || !Regex.IsMatch(joined, @"(support|hotline|N\.B|Pour toute|Cette déclaration|Page\s*\d+\s*of\s*\d+)", RegexOptions.IgnoreCase))
+                                lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
                         }
                         else
                         {
-                            pendingLibelleBuffer = (pendingLibelleBuffer + " " + joined.Trim()).Trim();
+                            // [QNB] Ne pas stocker les footers dans le buffer
+                            if (!isQnb || !Regex.IsMatch(joined, @"(support|hotline|N\.B|Pour toute|Cette déclaration|Page\s*\d+\s*of\s*\d+)", RegexOptions.IgnoreCase))
+                                pendingLibelleBuffer = (pendingLibelleBuffer + " " + joined.Trim()).Trim();
                         }
+                        continue;
                     }
-                    continue;
                 }
-
                 // Ligne AVEC une date valide
                 if (amountCandidates.Count == 0)
                 {
@@ -391,6 +424,9 @@ namespace Codeium_Security.Services.DocumentParsers
                 description = Regex.Replace(description, @"\s{2,}", " ").Trim();
 
                 string fullDescription = (pendingLibelleBuffer + " " + description).Trim();
+                // [QNB] Ignorer les footers qui contiennent des mentions légales
+                if (isQnb && Regex.IsMatch(fullDescription, @"(support|hotline|N\.B|Pour toute|Cette déclaration)", RegexOptions.IgnoreCase))
+                    continue;
                 pendingLibelleBuffer = "";
                 pendingDate = "";
 
@@ -412,40 +448,41 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 if (!IsDuplicateOfLast(current, tx))
                     current.Transactions.Add(tx);
-            }
+            } 
 
-            if (current != null)
-            {
-                current.RawSectionText = sectionRawText;
-                sections.Add(current);
-            }
-
-            foreach (var sec in sections)
-            {
-                // [QNB] Format "Total Debit: X" / "Total Credit: Y" avec mot-cle repete
-                var totalDebitMatch = Regex.Match(sec.RawSectionText,
-                    @"Total\s*(?:des\s*)?D[ée]bit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
-                if (totalDebitMatch.Success) sec.TotalDebit = ParseAmount(totalDebitMatch.Groups[1].Value);
-
-                var totalCreditMatch = Regex.Match(sec.RawSectionText,
-                    @"Total\s*(?:des\s*)?Cr[ée]dit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
-                if (totalCreditMatch.Success) sec.TotalCredit = ParseAmount(totalCreditMatch.Groups[1].Value);
-
-                // [ATTIJARI/BIAT] Repli : "Total" suivi de 2 montants sans mot-cle repete
-                if (!sec.TotalDebit.HasValue && !sec.TotalCredit.HasValue)
+                if (current != null)
                 {
-                    var totalTwoNumbers = Regex.Match(sec.RawSectionText,
-                        @"Total\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
-                    if (totalTwoNumbers.Success)
+                    current.RawSectionText = sectionRawText;
+                    sections.Add(current);
+                }
+
+                foreach (var sec in sections)
+                {
+                    // [QNB] Format "Total Debit: X" / "Total Credit: Y" avec mot-cle repete
+                    var totalDebitMatch = Regex.Match(sec.RawSectionText,
+                        @"Total\s*(?:des\s*)?D[ée]bit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    if (totalDebitMatch.Success) sec.TotalDebit = ParseAmount(totalDebitMatch.Groups[1].Value);
+
+                    var totalCreditMatch = Regex.Match(sec.RawSectionText,
+                        @"Total\s*(?:des\s*)?Cr[ée]dit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    if (totalCreditMatch.Success) sec.TotalCredit = ParseAmount(totalCreditMatch.Groups[1].Value);
+
+                    // [ATTIJARI/BIAT] Repli : "Total" suivi de 2 montants sans mot-cle repete
+                    if (!sec.TotalDebit.HasValue && !sec.TotalCredit.HasValue)
                     {
-                        sec.TotalDebit = ParseAmount(totalTwoNumbers.Groups[1].Value);
-                        sec.TotalCredit = ParseAmount(totalTwoNumbers.Groups[2].Value);
+                        var totalTwoNumbers = Regex.Match(sec.RawSectionText,
+                            @"Total\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                        if (totalTwoNumbers.Success)
+                        {
+                            sec.TotalDebit = ParseAmount(totalTwoNumbers.Groups[1].Value);
+                            sec.TotalCredit = ParseAmount(totalTwoNumbers.Groups[2].Value);
+                        }
                     }
                 }
-            }
 
-            return sections;
-        }
+                return sections;
+            }
+        
 
         // [COMMUN] (fix #1) Detection du numero de compte, plusieurs formats/banques
         private string ExtractAccountNumber(string text)
