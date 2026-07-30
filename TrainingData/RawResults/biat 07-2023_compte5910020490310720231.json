@@ -8,235 +8,361 @@
   "Account": {
     "AccountNumber": "compte5910020490310720231",
     "Currency": "TND",
-    "Rib": "08307000591002049036",
+    "Rib": "",
     "SoldeInitial": 1979.759,
-    "SoldeFinal": null,
+    "SoldeFinal": 1634.215,
     "SoldeDisponible": 0,
     "TotalDebit": null,
     "TotalCredit": null,
     "Transactions": [
       {
         "Solde": null,
-        "Date": "03/07/2023",
-        "Libelle": "PRELEVEMENT BANCAIRE 02776088 30062023",
+        "Date": "03/07/2026",
+        "Libelle": "PRELEVEMENT BANCAIRE",
         "Debit": 2.975,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "03/07/2023",
-        "Libelle": "PRELEVEMENT BANCAIRE 02776088 30062023",
+        "Date": "03/07/2026",
+        "Libelle": "PRELEVEMENT BANCAIRE",
         "Debit": 1925.765,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "04/07/2023",
-        "Libelle": "ENCAISSEMENT EFFETTN 44236349 05072023",
+        "Date": "04/07/2026",
+        "Libelle": "ENCAISSEMENT EFFETTN",
         "Debit": null,
         "Credit": 189.827
       },
       {
         "Solde": null,
-        "Date": "04/07/2023",
-        "Libelle": "ENCAISSEMENT EFFETTN 44358860 05072023",
-        "Debit": null,
-        "Credit": 189.827
-      },
-      {
-        "Solde": null,
-        "Date": "04/07/2023",
-        "Libelle": "ENCAISSEMENT EFFETTN 44468276 04072023",
-        "Debit": null,
-        "Credit": 189.827
-      },
-      {
-        "Solde": null,
-        "Date": "04/07/2023",
-        "Libelle": "ENCAISSEMENT EFFETTN 44786145 05072023",
-        "Debit": null,
-        "Credit": 189.827
-      },
-      {
-        "Solde": null,
-        "Date": "05/07/2023",
-        "Libelle": "REGLEMENT CHEQUE 0000154 04072023",
+        "Date": "05/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000154",
         "Debit": 2000.000,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "07/07/2023",
-        "Libelle": "REDRESSEMENT S0050723 05072023",
+        "Date": "07/07/2026",
+        "Libelle": "REDRESSEMENT S0050723",
         "Debit": 5.000,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "07/07/2023",
-        "Libelle": "REDRESSEMENT S0050723 05072023",
+        "Date": "07/07/2026",
+        "Libelle": "REDRESSEMENT S0050723",
         "Debit": 0.950,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "14/07/2023",
-        "Libelle": "REGLEMENT CHEQUE 0000167 13072023",
-        "Debit": 856.418,
+        "Date": "10/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000159",
+        "Debit": 359.116,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "17/07/2023",
-        "Libelle": "REGLEMENT CHEQUE 0000148 14072023",
-        "Debit": 3000.000,
+        "Date": "10/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000164",
+        "Debit": 620.157,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "17/07/2023",
-        "Libelle": "REGLEMENT CHEQUE 0000165 14072023",
-        "Debit": 681.680,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "17/07/2023",
-        "Libelle": "ENCAISSEMENT CHEQUE 0770120 18072023",
-        "Debit": 1354.167,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "17/07/2023",
-        "Libelle": "COM TVA/REM CHQ ENC 0770120 13072023",
-        "Debit": 1.785,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "18/07/2023",
-        "Libelle": "VIREMENT TN MEME BQ 0242885 18072023",
-        "Debit": 25000.000,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "18/07/2023",
-        "Libelle": "VIREMENT TN MEME BQ 5687341 18072023 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون www.biat.com.in - 71342 0 - الس م137 لوح 711700 بيغ خب حبب ركتريح 820 s بورقيبة الحبيب شاع 7200 الرئيسي المشر - 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف - 20000000 مالها بس الإبسم خفية شركة -: -- -- : : -: -- شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 307 00059 10 02049 0 36 STE TOPDIS Rue 8600 n92 , الحساب رقم N°de compte 59 10 02049 0 31 07 2023 2035 TUNIS CARTHAGE موت 0 الكريم حريفنا de ci-dessous le relevé détaillé des opérations ë vous communiquer = inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ el تاريخ عليه العملية بيان له",
-        "Debit": 43000.000,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "18/07/2023",
-        "Libelle": "REGLEMENT CHEQUE 0000170 17072023",
-        "Debit": 382.424,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "18/07/2023",
-        "Libelle": "REDRESSEMENT S0170723 17072023",
-        "Debit": 5.000,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "18/07/2023",
-        "Libelle": "REDRESSEMENT S0170723 17072023",
-        "Debit": 0.950,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "24/07/2023",
-        "Libelle": "VIREMENT TN MEME BQ 5687304 24072023",
-        "Debit": 5000.000,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "24/07/2023",
-        "Libelle": "VIREMENT TN MEME BQ 5687340 24072023",
-        "Debit": 7500.000,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "24/07/2023",
-        "Libelle": "COMMISSION REM EFFETS 1755099 23072023",
-        "Debit": 2.090,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "24/07/2023",
-        "Libelle": "COMMISSION REM EFFETS 1755099 23072023",
-        "Debit": 11.000,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "26/07/2023",
-        "Libelle": "REGLEMENT CHEQUE 0000171 24072023",
-        "Debit": 106.937,
-        "Credit": null
-      },
-      {
-        "Solde": null,
-        "Date": "26/07/2023",
-        "Libelle": "REDRESSEMENT s0240723 24072023",
+        "Date": "11/07/2026",
+        "Libelle": "REDRESSEMENT s0100723",
         "Debit": 13.000,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "26/07/2023",
-        "Libelle": "REDRESSEMENT s0240723 24072023",
+        "Date": "11/07/2026",
+        "Libelle": "REDRESSEMENT s0100723",
         "Debit": 2.470,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "28/07/2023",
-        "Libelle": "VIREMENT TN MEME BQ 10041045 28072023",
+        "Date": "13/07/2026",
+        "Libelle": "COM ET TVA/VIR AUT BQ",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/07/2026",
+        "Libelle": "VIREMENT TN AUTRE BQ",
+        "Debit": null,
+        "Credit": 700.211
+      },
+      {
+        "Solde": null,
+        "Date": "13/07/2026",
+        "Libelle": "ENCAISSEMENT CHEQUE 0770117",
+        "Debit": null,
+        "Credit": 4226.300
+      },
+      {
+        "Solde": null,
+        "Date": "13/07/2026",
+        "Libelle": "COM TVA/REM CHQ ENC 0770117",
+        "Debit": 2.678,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000167",
+        "Debit": 856.418,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000148",
+        "Debit": 3000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000165",
+        "Debit": 681.680,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/07/2026",
+        "Libelle": "ENCAISSEMENT CHEQUE 0770120",
+        "Debit": 1354.167,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/07/2026",
+        "Libelle": "COM TVA/REM CHQ ENC 0770120",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "18/07/2026",
+        "Libelle": "VIREMENT TN MEME BQ 0242885",
+        "Debit": 25000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "18/07/2026",
+        "Libelle": "VIREMENT TN MEME BQ 5687341 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون www.biat.com.in - 71342 0 - الس م137 لوح 711700 بيغ خب حبب ركتريح 820 s بورقيبة الحبيب شاع 7200 الرئيسي المشر - 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف - 20000000 مالها بس الإبسم خفية شركة -: -- -- : : -: -- شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 307 00059 10 02049 0 36 STE TOPDIS Rue 8600 n92 , الحساب رقم N°de compte 59 10 02049 0 31 07 2023 2035 TUNIS CARTHAGE موت 0 الكريم حريفنا de ci-dessous le relevé détaillé des opérations ë vous communiquer = inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ el تاريخ عليه العملية بيان له",
+        "Debit": 43000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "18/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000170",
+        "Debit": 382.424,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "18/07/2026",
+        "Libelle": "REDRESSEMENT S0170723",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "18/07/2026",
+        "Libelle": "REDRESSEMENT S0170723",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000162",
+        "Debit": 882.990,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/07/2026",
+        "Libelle": "REDRESSEMENT 903",
+        "Debit": 16.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/07/2026",
+        "Libelle": "REDRESSEMENT 903",
+        "Debit": 3.040,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/07/2026",
+        "Libelle": "ENCAISSEMENT CHEQUE 0770124",
+        "Debit": 7597.289,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/07/2026",
+        "Libelle": "COM TVA/REM CHQ ENC 0770124",
+        "Debit": 4.463,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "21/07/2026",
+        "Libelle": "VERSEMENT ESPECES",
+        "Debit": 45.625,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "21/07/2026",
+        "Libelle": "VERSEMENT ESPECES",
+        "Debit": 177.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/07/2026",
+        "Libelle": "VIREMENT TN MEME BQ 5687304",
+        "Debit": 5000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/07/2026",
+        "Libelle": "VIREMENT TN MEME BQ 5687340",
+        "Debit": 7500.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/07/2026",
+        "Libelle": "COMMISSION REM EFFETS 1755099",
+        "Debit": 2.090,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/07/2026",
+        "Libelle": "COMMISSION REM EFFETS 1755099",
+        "Debit": 11.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000171",
+        "Debit": 106.937,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/07/2026",
+        "Libelle": "REDRESSEMENT s0240723",
+        "Debit": 13.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/07/2026",
+        "Libelle": "REDRESSEMENT s0240723",
+        "Debit": 2.470,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/07/2026",
+        "Libelle": "REDRESSEMENT s0260723",
+        "Debit": 8.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/07/2026",
+        "Libelle": "REDRESSEMENT s0260723",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/07/2026",
+        "Libelle": "ENCAISSEMENT CHEQUE 1092735",
+        "Debit": 7732.750,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/07/2026",
+        "Libelle": "COM TVA/REM CHQ ENC 1092735",
+        "Debit": 4.463,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/07/2026",
+        "Libelle": "VIREMENT TN MEME BQ",
         "Debit": 0.380,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "28/07/2023",
-        "Libelle": "VIREMENT TN MEME BQ 10041045 28072023",
+        "Date": "28/07/2026",
+        "Libelle": "VIREMENT TN MEME BQ",
         "Debit": 2.000,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "28/07/2023",
-        "Libelle": "VIREMENT TN MEME BQ 10041045 28072023",
+        "Date": "28/07/2026",
+        "Libelle": "VIREMENT TN MEME BQ",
         "Debit": 3781.000,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "28/07/2023",
-        "Libelle": "REGLEMENT CHEQUE 0000163 27072023",
+        "Date": "28/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000163",
         "Debit": 900.000,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "28/07/2023",
-        "Libelle": "REGLEMENT CHEQUE 0000172 27072023",
+        "Date": "28/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000172",
         "Debit": 205.443,
         "Credit": null
       },
       {
         "Solde": null,
-        "Date": "28/07/2023",
-        "Libelle": "REGLEMENT CHEQUE 0000174 27072023 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون www.biat.com.in - 71342 0 - الس م137 لوح 711700 بيغ خب حبب ركتريح 820 s بورقيبة الحبيب شاع 7200 الرئيسي المشر - 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف - 20000000 مالها بس الإبسم خفية شركة -: -- -- : : -: -- شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي BANQUE INTERNATIONALE ARASE DE TUNISIE الحساب صاحب Titulaire du 'compte RIB : 08 307 00059 10 02049 0 36 STE TOPDIS Rue 8600 n92 , الحساب رقم N°de compte 59 10 02049 0 3107 2023 2035 TUNIS CARTHAGE ggî; î‘\\'fî::s-r“honneur العم ur de vous communiquer ci-dessous le relevé détaillé des opérations inscrites votre compte livres. Nous souhaitons bonne réception. حسنا. قبولا لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله 1 لكم نقدم بأن نتشرف à sur 005 vous التاريخ الفاعلية تاريخ عليه العملية بيان له الجملة TE ب >حلاابا TUNISIEN الرصيد +Encas d le de relevé, prions de contacter votre بفرعكم بالإتصال التفضل منكم الرجاء الكشف. هذا محتوى على موافقتكم حو  أجل في i contenu ce nous vous agence عدم un délai à dudit relevé. له. استلامكم تاريخ يوما عشرون أقصاه dans maximum de 20 jours, dater de la réception من للشروط الأموال يضمن * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires dans les conditions المبيئة طبقا البنك لدى المودعة البنكبة الودائع ضمان صندوق du 2016 et 2017. 1 المؤرخ 268 الأمر 2016 11جويلية المؤرخ 48 بالقانون précisées par la loi 2016-48 11-07- le décret n°2017-268 du -01-02 2017 فيغري في عدد و في عدد ecteur Agence : Mr MEHDI MANAI www.biat.com.n - 71342 820 فاكس - 14090 بياتون تلكس - :71131000 الهائف سيداكس تونس 1090 - 620 ص.به بورقيبة الحبيب شارع 7270 : الرئيسي المقر 00001106 wibgll بالسجل الوحيد المعرف 10000000 قالها رس الإسم خفية شركة : : -٠ - - ت - au -- :",
+        "Date": "28/07/2026",
+        "Libelle": "REGLEMENT CHEQUE 0000174",
         "Debit": 556.552,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "31/07/2026",
+        "Libelle": "PRELEVEMENT BANCAIRE الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون www.biat.com.in - 71342 0 - الس م137 لوح 711700 بيغ خب حبب ركتريح 820 s بورقيبة الحبيب شاع 7200 الرئيسي المشر - 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف - 20000000 مالها بس الإبسم خفية شركة -: -- -- : : -: -- شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي BANQUE INTERNATIONALE ARASE DE TUNISIE الحساب صاحب Titulaire du 'compte RIB : 08 307 00059 10 02049 0 36 STE TOPDIS Rue 8600 n92 , الحساب رقم N°de compte 59 10 02049 0 3107 2023 2035 TUNIS CARTHAGE ggî; î‘\\'fî::s-r“honneur العم ur de vous communiquer ci-dessous le relevé détaillé des opérations inscrites votre compte livres. Nous souhaitons bonne réception. حسنا. قبولا لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله 1 لكم نقدم بأن نتشرف à sur 005 vous التاريخ الفاعلية تاريخ عليه العملية بيان له",
+        "Debit": null,
+        "Credit": 2.975
+      },
+      {
+        "Solde": null,
+        "Date": "31/07/2026",
+        "Libelle": "PRELEVEMENT BANCAIRE الجملة TE ب >حلاابا TUNISIEN الرصيد +Encas d le de relevé, prions de contacter votre بفرعكم بالإتصال التفضل منكم الرجاء الكشف. هذا محتوى على موافقتكم حو  أجل في i contenu ce nous vous agence عدم un délai à dudit relevé. له. استلامكم تاريخ يوما عشرون أقصاه dans maximum de 20 jours, dater de la réception من للشروط الأموال يضمن * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires dans les conditions المبيئة طبقا البنك لدى المودعة البنكبة الودائع ضمان صندوق du 2016 et 2017. 1 المؤرخ 268 الأمر 2016 11جويلية المؤرخ 48 بالقانون précisées par la loi 2016-48 11-07- le décret n°2017-268 du -01-02 2017 فيغري في عدد و في عدد ecteur Agence : Mr MEHDI MANAI www.biat.com.n - 71342 820 فاكس - 14090 بياتون تلكس - :71131000 الهائف سيداكس تونس 1090 - 620 ص.به بورقيبة الحبيب شارع 7270 : الرئيسي المقر 00001106 wibgll بالسجل الوحيد المعرف 10000000 قالها رس الإسم خفية شركة : : -٠ - - ت - au -- :",
+        "Debit": 2311.419,
         "Credit": null
       }
     ]

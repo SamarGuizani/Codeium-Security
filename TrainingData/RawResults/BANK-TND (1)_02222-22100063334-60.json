@@ -179,21 +179,21 @@
       {
         "Solde": 5012.596,
         "Date": "07/07/2025",
-        "Libelle": "ATM BTK JERBA  DU",
+        "Libelle": "ATM BTK JERBA DU",
         "Debit": 800.000,
         "Credit": null
       },
       {
         "Solde": 4212.596,
         "Date": "07/07/2025",
-        "Libelle": "ATM BTK JERBA  DU",
+        "Libelle": "ATM BTK JERBA DU",
         "Debit": 800.000,
         "Credit": null
       },
       {
         "Solde": 412.596,
         "Date": "07/07/2025",
-        "Libelle": "ATM BTK JERBA  DU",
+        "Libelle": "ATM BTK JERBA DU",
         "Debit": 800.000,
         "Credit": null
       },
@@ -228,7 +228,7 @@
       {
         "Solde": 6000.000,
         "Date": "11/07/2025",
-        "Libelle": "& RETRAIT ESP. DEPLACE 20798316 ا ref. 060736",
+        "Libelle": "& RETRAIT ESP. DEPLACE ا ref. 060736",
         "Debit": 6000.000,
         "Credit": null
       },

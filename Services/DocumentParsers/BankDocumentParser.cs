@@ -28,6 +28,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
             return document;
         }
+
         private List<BankAccountSection> ExtractAccountSections(List<TableRow> rows, string fullText)
         {
             var sections = new List<BankAccountSection>();
@@ -46,19 +47,9 @@ namespace Codeium_Security.Services.DocumentParsers
             // sur plusieurs lignes/cellules et ne matchent jamais correctement ligne par ligne.
             string documentRib = ExtractRib(fullText);
 
-            // [BIAT] Detection isolee, ne touche aucune autre banque : annee de reference
-            // pour les dates "jj mm" sans annee (ex: "02 01"), car DateTime.Now.Year (annee
-            // systeme) est faux -> il faut l'annee reelle du releve.
-            bool isAmen = Regex.IsMatch(fullText, @"AMEN\s*BANK", RegexOptions.IgnoreCase);
-            bool isBiatExtrait = Regex.IsMatch(fullText, @"Solde\s*d[ée]part\s*au", RegexOptions.IgnoreCase);
-            bool isBiat = fullText.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
-            int? biatReferenceYear = null;
-            if (isBiat)
-            {
-                var refDateMatch = Regex.Match(fullText, @"\b\d{2}\s\d{2}\s(\d{4})\b");
-                if (refDateMatch.Success)
-                    biatReferenceYear = int.Parse(refDateMatch.Groups[1].Value);
-            }
+
+            bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
+
 
             foreach (var row in rows)
             {
@@ -70,7 +61,6 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (cellTexts.Count == 0) continue;
 
                 string joined = string.Join(" ", cellTexts);
-              
                 // [fix #9] Nettoie les artefacts d'impression web (ex: export BTK@DIRECT) qui
                 // injectent une entete/pied de page en plein milieu du contenu.
                 joined = StripPrintArtifacts(joined);
@@ -97,18 +87,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     if (debitCell != null) debitAnchor = debitCell.Left;
                     if (creditCell != null) creditAnchor = creditCell.Left;
                     if (soldeCell != null) soldeAnchor = soldeCell.Left;
-                    // [AMEN] Pas de "Solde Initial" dans ce format : on cree la section directement ici
-                    if (isAmen && current == null)
-                    {
-                        current = new BankAccountSection
-                        {
-                            AccountNumber = lastSeenAccountNumber,
-                            Rib = lastSeenRib,
-                            Currency = ExtractCurrency(fullText),
-                            SoldeInitial = 0
-                        };
-                    }
-                        continue;
+                    continue;
                 }
 
                 // [ATTIJARI] "Solde (TND) au [date] : [montant]" -> capture comme SoldeFinal, PAS comme nouvelle section
@@ -119,12 +98,8 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
-                // [QNB + BIAT] "Solde Initial" (QNB) OU "SOLDE AU jj mm aaaa [montant]" (BIAT)
-                // = debut d'une nouvelle section/sous-compte
-               
-                bool isBiatSoldeAu = Regex.IsMatch(joined, @"SOLDE\s+AU\s+\d{2}\s+\d{2}\s+\d{4}", RegexOptions.IgnoreCase);
-                var soldeDepartMatch = Regex.Match(joined, @"Solde\s*d[ée]part\s*au\s*\d{1,2}\s*[A-Za-zÉÛéû]{3,4}\s*\d{2,4}\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
-                if (Regex.IsMatch(joined, @"Solde\s*Initial", RegexOptions.IgnoreCase) || isBiatSoldeAu || soldeDepartMatch.Success)
+                // [QNB] "Solde Initial" = debut d'une nouvelle section/sous-compte
+                if (Regex.IsMatch(joined, @"Solde\s*Initial", RegexOptions.IgnoreCase))
                 {
                     if (current != null)
                     {
@@ -133,22 +108,46 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     sectionRawText = joined + "\n";
 
-                    decimal soldeInit;
-                    if (soldeDepartMatch.Success)
-                        soldeInit = ParseAmount(soldeDepartMatch.Groups[1].Value);
-                    else
-                    {
-                        var initMatch = AmountRegex.Match(joined);
-                        soldeInit = initMatch.Success ? ParseAmount(initMatch.Value) : 0;
-                    }
+                    var initMatch = AmountRegex.Match(joined);
+                    decimal soldeInit = initMatch.Success ? ParseAmount(initMatch.Value) : 0;
+
                     current = new BankAccountSection
                     {
                         AccountNumber = lastSeenAccountNumber,
+                        // [fix #3] Repli sur le RIB document-entier si aucun RIB local n'a ete vu
                         Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
                         Currency = ExtractCurrency(fullText),
                         SoldeInitial = soldeInit
                     };
                     previousSolde = soldeInit;
+                    pendingLibelleBuffer = "";
+                    pendingDate = "";
+                    continue;
+                }
+
+                // [BIAT] "SOLDE AU 30 09 2023 597,014" = debut de section (equivalent du "Solde Initial" QNB)
+                // C'est la cause racine du bug "Accounts: []" pour BIAT : sans ce declencheur,
+                // 'current' restait toujours null et TOUTES les transactions etaient ignorees
+                // via le "if (current == null) continue;" plus bas.
+                var biatSoldeAuMatch = Regex.Match(joined, @"SOLDE\s*AU\s*\d{1,2}\s+\d{1,2}\s+\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                if (biatSoldeAuMatch.Success)
+                {
+                    if (current != null)
+                    {
+                        current.RawSectionText = sectionRawText;
+                        sections.Add(current);
+                    }
+                    sectionRawText = joined + "\n";
+
+                    decimal biatSoldeInit = ParseAmount(biatSoldeAuMatch.Groups[1].Value);
+                    current = new BankAccountSection
+                    {
+                        AccountNumber = lastSeenAccountNumber,
+                        Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                        Currency = ExtractCurrency(fullText),
+                        SoldeInitial = biatSoldeInit
+                    };
+                    previousSolde = biatSoldeInit;
                     pendingLibelleBuffer = "";
                     pendingDate = "";
                     continue;
@@ -165,23 +164,41 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
+                // [BIAT] "Devise SOLDE 1.667,523" = solde final (uniquement sur la derniere page ;
+                // les autres pages n'ont que "Devise SOLDE" sans montant, d'ou le lookahead negatif
+                // pour ne jamais confondre avec le declencheur "SOLDE AU ..." ci-dessus)
+                var biatSoldeFinalMatch = Regex.Match(joined, @"\bSOLDE\b(?!\s*AU)\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                if (biatSoldeFinalMatch.Success)
+                {
+                    if (current != null) current.SoldeFinal = ParseAmount(biatSoldeFinalMatch.Groups[1].Value);
+                    continue;
+                }
+
                 // [COMMUN] Ignore les lignes de Total et de numero de page
                 if (Regex.IsMatch(joined, @"\b(Total|Page\s*\d)\b", RegexOptions.IgnoreCase))
                     continue;
 
-                if (current == null) continue;
-
-                string normalizedDate = NormalizeDate(cellTexts[0].Trim(), biatReferenceYear);
-                int dateTokensConsumed = 1;
-                if (string.IsNullOrEmpty(normalizedDate) && cellTexts.Count > 1)
+                // [AMEN] Ligne d'echo de la "date valeur" au format POINT (ex: "30.07.2025 VMA") = suite du
+                // libelle de la transaction PRECEDENTE (retour a la ligne dans la cellule Libelle du PDF),
+                // PAS une nouvelle operation. Sans ce garde-fou : NormalizeDate() la reconnait quand meme comme
+                // date valide (dd.MM.yyyy), ET AmountRegex matche "30.07" a l'interieur de cette meme date
+                // (le point est aussi un separateur de montant valide) -> fausse transaction fantome avec un
+                // faux Debit/Credit. Restreint a AMEN + format POINT uniquement : les vraies dates d'operation
+                // AMEN sont toujours en dd/MM/yyyy (avec des "/"), donc ceci n'intercepte jamais une vraie
+                // ligne de transaction, ni chez AMEN ni chez les autres banques (BIAT/QNB/ATTIJARI n'ont pas
+                // cette echo de date en point).
+                if (isAmenDocument
+                    && current != null
+                    && current.Transactions.Count > 0
+                    && !cellTexts[0].Contains('/')
+                    && Regex.IsMatch(cellTexts[0].Trim(), @"^\d{2}\.\d{2}\.\d{4}\s*\S*$"))
                 {
-                    string twoTokenDate = NormalizeDate(cellTexts[0].Trim() + " " + cellTexts[1].Trim(), biatReferenceYear);
-                    if (!string.IsNullOrEmpty(twoTokenDate))
-                    {
-                        normalizedDate = twoTokenDate;
-                        dateTokensConsumed = 2;
-                    }
+                    var lastTx = current.Transactions[current.Transactions.Count - 1];
+                    lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
+                    continue;
                 }
+
+                string normalizedDate = NormalizeDate(cellTexts[0].Trim());
 
                 // [COMMUN] Fusionne le signe "-" isole AVEC sa position X, pour les montants de cette ligne
                 var mergedWithPos = new List<(int Left, string Text)>();
@@ -202,6 +219,31 @@ namespace Codeium_Security.Services.DocumentParsers
                     .Select(c => new { Left = c.Left, Value = ParseAmount(AmountRegex.Match(c.Text).Value) })
                     .ToList();
 
+                // [fix generique] Filet de securite : si aucune formule connue ("Solde Initial",
+                // "SOLDE AU", "Solde (TND) au", ...) n'a permis d'ouvrir une section de compte, mais
+                // qu'on est manifestement sur une vraie ligne de transaction (date + au moins un
+                // montant), on ouvre une section par defaut plutot que de perdre silencieusement
+                // tout le releve (c'etait le cas d'AMEN BANK, dont la formule de solde n'est pas
+                // encore connue du parser).
+                if (current == null)
+                {
+                    if (!string.IsNullOrEmpty(normalizedDate) && amountCandidates.Count > 0)
+                    {
+                        current = new BankAccountSection
+                        {
+                            AccountNumber = lastSeenAccountNumber,
+                            Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                            Currency = ExtractCurrency(fullText),
+                            SoldeInitial = null
+                        };
+                        sectionRawText = joined + "\n";
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
                 // [COMMUN] Detecte le bruit (footers, mentions legales) qui ne doit jamais rejoindre un libelle
                 bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase);
 
@@ -219,9 +261,21 @@ namespace Codeium_Security.Services.DocumentParsers
                         string fullDesc = pendingLibelleBuffer.Trim();
                         pendingLibelleBuffer = "";
 
+                        // [fix anti-fusion] Ligne fusionnee : plusieurs montants Debit ou plusieurs
+                        // montants Credit d'un coup -> on reconstruit une transaction par montant
+                        // au lieu d'en perdre silencieusement.
+                        if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
+                        {
+                            foreach (var splitTx in SplitMergedRow(pendingDate, fullDesc, amountCandidates, debitAnchor, creditAnchor))
+                                if (!IsDuplicateOfLast(current, splitTx))
+                                    current.Transactions.Add(splitTx);
+                            pendingDate = "";
+                            continue;
+                        }
+
                         decimal? soldeAvant2 = previousSolde;
                         var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
-                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde, isBiat);
+                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
                         ApplyMovementFallback(tx2, soldeAvant2);
 
                         // [fix #11] Ignore les doublons stricts (ex: repetition en haut de page
@@ -230,7 +284,13 @@ namespace Codeium_Security.Services.DocumentParsers
                             current.Transactions.Add(tx2);
                         pendingDate = "";
                         continue;
-                    } // (ex: Y, Bottom, Line.Top...), on peut reintroduire un filtre de hauteur ici.
+                    }
+
+                    // [fix #4] Texte de continuation : comme "engine.BuildTable(lines)" regroupe deja
+                    // les cellules en lignes visuelles coherentes, on se base sur l'absence de montant
+                    // sur la ligne (deja verifie ci-dessus) sans dependance a une bounding box non
+                    // exposee par TableCell. Si votre modele expose une propriete de position verticale
+                    // (ex: Y, Bottom, Line.Top...), on peut reintroduire un filtre de hauteur ici.
                     if (amountCandidates.Count == 0)
                     {
                         if (current.Transactions.Count > 0 && string.IsNullOrEmpty(pendingDate))
@@ -251,35 +311,39 @@ namespace Codeium_Security.Services.DocumentParsers
                 {
                     // [ATTIJARI] Date + description, montant sur la ligne suivante -> on retient la date et le texte
                     pendingDate = normalizedDate;
-                    string textOnly = string.Join(" ", cellTexts.Skip(dateTokensConsumed).Where(c => !AmountRegex.IsMatch(c)));
+                    string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)));
                     pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
                     continue;
                 }
 
                 // [QNB] Cas normal : date + montant(s) sur la meme ligne
-                string description = string.Join(" ", cellTexts.Skip(dateTokensConsumed).Where(c => !AmountRegex.IsMatch(c)))
+                string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)))
                     .Trim(' ', '|', '[', ']', '-', '_');
                 description = Regex.Replace(description, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
+                // [fix BIAT] "Date de valeur" collee sans separateur (ex: "03102023") qui se retrouve
+                // au milieu du libelle plutot que dans une colonne dediee
+                description = Regex.Replace(description, @"\b\d{8}\b", "").Trim();
+                description = Regex.Replace(description, @"\s{2,}", " ").Trim();
 
                 string fullDescription = (pendingLibelleBuffer + " " + description).Trim();
                 pendingLibelleBuffer = "";
                 pendingDate = "";
 
-                var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
+                // [fix anti-fusion] Meme controle que pour les lignes de montants pures : une
+                // ligne "date + description + montants" peut aussi etre la fusion de plusieurs
+                // transactions physiques.
+                if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
+                {
+                    foreach (var splitTx in SplitMergedRow(normalizedDate, fullDescription, amountCandidates, debitAnchor, creditAnchor))
+                        if (!IsDuplicateOfLast(current, splitTx))
+                            current.Transactions.Add(splitTx);
+                    continue;
+                }
 
-                if (isBiatExtrait && amountCandidates.Count > 0)
-                {
-                    // [BIAT-EXTRAIT] Une seule colonne "Montant" signee : negatif = debit, positif = credit
-                    decimal montant = amountCandidates[amountCandidates.Count - 1].Value;
-                    if (montant < 0) tx.Debit = Math.Abs(montant);
-                    else if (montant > 0) tx.Credit = montant;
-                }
-                else
-                {
-                    decimal? soldeAvantTx = previousSolde;
-                    AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde, isBiat);
-                    ApplyMovementFallback(tx, soldeAvantTx);
-                }
+                decimal? soldeAvantTx = previousSolde;
+                var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
+                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
+                ApplyMovementFallback(tx, soldeAvantTx);
 
                 if (!IsDuplicateOfLast(current, tx))
                     current.Transactions.Add(tx);
@@ -323,13 +387,11 @@ namespace Codeium_Security.Services.DocumentParsers
         {
             var patterns = new[]
             {
-                @"\b\d{2}-\d{2}-\d{5}/\d\b",          // [BIAT-EXTRAIT] format "59-10-01457/0"
-                @"\b\d{2}\s\d{2}\s\d{5}\s\d{1}\b",   // [BIAT] format "75 10 00855 8" seul sur sa ligne
                 @"\b\d{2,5}-\d{4,12}-\d{1,4}\b",
-                @"\b\d{10,20}\b", // repli generique en DERNIER recours (le plus risque de faux positifs)
-                @"Compte\s*:?\s*(\d[\d\s-]{6,25})",
-                @"Account\s*Number\s*:?\s*(\d[\d\s-]{6,25})",
-                @"N[°o]?\s*(?:de\s*)?Compte\s*:?\s*(\d[\d\s-]{6,25})"   // <-- accepte "N° de compte"
+                @"\b\d{10,20}\b",
+                @"Compte\s*:?\s*(\d[\d\s-]{8,25})",
+                @"Account\s*Number\s*:?\s*(\d[\d\s-]{8,25})",
+                @"N[°o]?\s*Compte\s*:?\s*(\d[\d\s-]{8,25})"
             };
 
             foreach (var pattern in patterns)
@@ -338,26 +400,83 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (match.Success)
                     return Regex.Replace(match.Value, @"\s+", "");
             }
+
             return "";
         }
 
+        // [COMMUN] (fix #3) RIB document-entier, avec une plage plus large en repli
+        // car le RIB peut etre coupe sur plusieurs lignes/cellules.
         private string ExtractRib(string text)
         {
             var wide = Regex.Match(text, @"TN\d{2}[\d\s]{20,30}");
-            if (wide.Success) return Regex.Replace(wide.Value, @"\s+", "").Trim();
+            if (wide.Success)
+                return Regex.Replace(wide.Value, @"\s+", "").Trim();
 
             var narrow = Regex.Match(text, @"TN\d{2}[\s\d]{15,25}");
-            if (narrow.Success) return Regex.Replace(narrow.Value, @"\s+", "").Trim();
-
-            // [BIAT] RIB sans prefixe pays (format "RIB : 08 105 00075 10 00855 8 03")
-            var ribLabel = Regex.Match(text, @"RIB\s*:?\s*([\d\s]{15,30})", RegexOptions.IgnoreCase);
-            if (ribLabel.Success) return Regex.Replace(ribLabel.Groups[1].Value, @"\s+", "").Trim();
+            if (narrow.Success)
+                return Regex.Replace(narrow.Value, @"\s+", "").Trim();
 
             return "";
         }
 
+        // [fix anti-fusion] Detecte si une "ligne" contient plus d'un montant Debit OU plus d'un
+        // montant Credit. Ca indique que DocumentAnalysisEngine.BuildTable a fusionne plusieurs
+        // lignes physiques du PDF (verticalement trop proches, ex: releves BIAT tres denses) en
+        // une seule TableRow. Sans ce controle, AssignAmounts ne gardait qu'un montant par colonne
+        // et les autres disparaissaient silencieusement, sans trace ni erreur.
+        // NOTE : la vraie cause reste dans DocumentAnalysisEngine.BuildTable (regroupement par Y),
+        // que je n'ai pas ici. Ceci est un filet de recuperation en aval, pas une correction a la
+        // source — si vous pouvez partager le code de BuildTable, on peut resserrer la tolerance
+        // de regroupement verticale directement a la source, ce qui serait plus propre.
+        private bool IsMergedRow(dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor)
+        {
+            if (!debitAnchor.HasValue || !creditAnchor.HasValue) return false;
+
+            int debitCount = 0, creditCount = 0;
+            foreach (var cand in amountCandidates)
+            {
+                int distDebit = Math.Abs((int)cand.Left - debitAnchor.Value);
+                int distCredit = Math.Abs((int)cand.Left - creditAnchor.Value);
+                int distSolde = soldeAnchor.HasValue ? Math.Abs((int)cand.Left - soldeAnchor.Value) : int.MaxValue;
+                if (soldeAnchor.HasValue && distSolde <= distDebit && distSolde <= distCredit) continue;
+                if (distDebit < distCredit) debitCount++; else creditCount++;
+            }
+            return debitCount > 1 || creditCount > 1;
+        }
+
+        // [fix anti-fusion] Reconstruit une transaction par montant Debit/Credit trouve dans une
+        // ligne fusionnee, plutot que de perdre silencieusement toutes les transactions sauf une.
+        // Le libelle ne peut pas etre redecoupe de facon fiable (le texte est aussi fusionne) donc
+        // il est partage entre les sous-transactions, chacune marquee pour verification manuelle.
+        private List<Transaction> SplitMergedRow(string date, string libelle, dynamic amountCandidates, int? debitAnchor, int? creditAnchor)
+        {
+            var debits = new List<decimal>();
+            var credits = new List<decimal>();
+            foreach (var cand in amountCandidates)
+            {
+                int distDebit = Math.Abs((int)cand.Left - debitAnchor.Value);
+                int distCredit = Math.Abs((int)cand.Left - creditAnchor.Value);
+                if (distDebit < distCredit) debits.Add(cand.Value); else credits.Add(cand.Value);
+            }
+
+            int count = Math.Max(debits.Count, credits.Count);
+            var result = new List<Transaction>();
+            for (int i = 0; i < count; i++)
+            {
+                var tx = new Transaction
+                {
+                    Date = date,
+                    Libelle = $"{libelle} [LIGNE FUSIONNEE {i + 1}/{count} - a verifier manuellement]".Trim()
+                };
+                if (i < debits.Count) tx.Debit = debits[i];
+                if (i < credits.Count) tx.Credit = credits[i];
+                result.Add(tx);
+            }
+            return result;
+        }
+
         // [COMMUN] Assigne Debit/Credit/Solde soit par position de colonne (fiable), soit par comparaison de solde (repli)
-        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, ref decimal? previousSolde, bool isBiat = false)
+        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, ref decimal? previousSolde)
         {
             // [fix #5] Tolerance en pixels : certaines banques decalent legerement les colonnes
             // Debit/Credit, ce qui peut inverser une classification purement basee sur la distance.
@@ -393,11 +512,10 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                 }
 
-                // [BIAT] Pas de colonne Solde reelle (seulement Debit/Credit) -> ne pas
-                // recopier le montant du mouvement dans Solde, ca fausserait la donnee.
-                
-                bool skipSoldeFallback = isBiat && amountCandidates.Count == 1;
-                if (!tx.Solde.HasValue && amountCandidates.Count > 0 && !skipSoldeFallback)
+                // [fix BIAT] Ne recopier le dernier montant comme "Solde" que si une colonne Solde
+                // existe reellement (soldeAnchor connu). Sinon (ex: BIAT qui n'a que Debit/Credit,
+                // sans colonne de solde courant), ce serait fabriquer une donnee qui n'existe pas.
+                if (!tx.Solde.HasValue && soldeAnchor.HasValue && amountCandidates.Count > 0)
                     tx.Solde = amountCandidates[amountCandidates.Count - 1].Value;
 
                 foreach (var cand in ambiguous)
@@ -442,20 +560,18 @@ namespace Codeium_Security.Services.DocumentParsers
             }
             previousSolde = tx.Solde;
         }
-        private static readonly Dictionary<string, int> FrenchMonthAbbrev = new(StringComparer.OrdinalIgnoreCase)
-{
-    {"JAN",1},{"FEV",2},{"FÉV",2},{"MAR",3},{"AVR",4},{"MAI",5},
-    {"JUN",6},{"JUIN",6},{"JUL",7},{"JUIL",7},{"AOU",8},{"AOÛT",8},
-    {"SEP",9},{"OCT",10},{"NOV",11},{"DEC",12},{"DÉC",12}
-};
+
         // [fix #2] Formats de date etendus (avec et sans annee)
-        private string NormalizeDate(string raw, int? referenceYear = null)
+        private string NormalizeDate(string raw)
         {
             raw = raw.Trim();
             string candidate = raw;
 
-            if (raw.Length == 8 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.') && !raw.Contains(' '))
+            if (raw.Length == 8 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.'))
                 candidate = $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}/{raw.Substring(4, 4)}";
+            // [fix BIAT] jour+mois colles sans separateur ni annee (ex: "1110" -> 11/10, annee courante)
+            else if (raw.Length == 4 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.') && !raw.Contains(' '))
+                candidate = $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}";
 
             var formatsWithYear = new[]
             {
@@ -465,29 +581,19 @@ namespace Codeium_Security.Services.DocumentParsers
 
             if (DateTime.TryParseExact(candidate, formatsWithYear, CultureInfo.InvariantCulture,
                     DateTimeStyles.None, out var parsed))
+            {
                 return parsed.ToString("dd/MM/yyyy");
+            }
 
-            // [BIAT] "02 01" = jour + mois separes par un espace, sans annee
+            // [COMMUN] Certains releves n'indiquent que jour/mois (l'annee est donnee ailleurs
+            // dans l'en-tete du document) -> on retombe sur l'annee courante par defaut.
             var formatsNoYear = new[] { "dd/MM", "dd-MM", "dd.MM", "dd MM" };
-            string candidateNoYear = Regex.Replace(raw, @"\s+", " ").Trim(); // normalise espaces multiples
-            if (DateTime.TryParseExact(candidateNoYear, formatsNoYear, CultureInfo.InvariantCulture,
+            if (DateTime.TryParseExact(candidate, formatsNoYear, CultureInfo.InvariantCulture,
                     DateTimeStyles.NoCurrentDateDefault, out var parsedNoYear))
             {
-                var withYear = new DateTime(referenceYear ?? DateTime.Now.Year, parsedNoYear.Month, parsedNoYear.Day);
+                var withYear = new DateTime(DateTime.Now.Year, parsedNoYear.Month, parsedNoYear.Day);
                 return withYear.ToString("dd/MM/yyyy");
             }
-            // [BIAT-EXTRAIT] Format "04 JAN 24" : jour + mois abrege francais + annee sur 2 chiffres
-            var frMatch = Regex.Match(raw.Trim(), @"^(\d{1,2})\s+([A-Za-zÉÛéû]{3,4})\s+(\d{2,4})$");
-            if (frMatch.Success && FrenchMonthAbbrev.TryGetValue(frMatch.Groups[2].Value, out int frMonth))
-            {
-                int frDay = int.Parse(frMatch.Groups[1].Value);
-                int frYear = int.Parse(frMatch.Groups[3].Value);
-                if (frYear < 100) frYear += 2000;
-                try { return new DateTime(frYear, frMonth, frDay).ToString("dd/MM/yyyy"); }
-                catch { return ""; }
-            }
-
-            return "";
 
             return "";
         }
@@ -565,6 +671,8 @@ namespace Codeium_Security.Services.DocumentParsers
             else if (diff > 0) tx.Credit = diff;
         }
 
+        // [fix #11] Certains exports "impression web" dupliquent une ligne de mouvement identique
+        // a la precedente (repetition en haut de la page suivante). On ignore le doublon strict.
         private bool IsDuplicateOfLast(BankAccountSection section, Transaction tx)
         {
             if (section.Transactions.Count == 0) return false;
@@ -610,6 +718,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 ("ATB", "Arab Tunisian Bank (ATB)"),
                 ("UIB", "Union Internationale de Banques (UIB)"),
                 ("ATTIJARI", "Attijari Bank"),
+                ("AMEN BANK", "Amen Bank"),
                 ("BH", "Banque de l'Habitat (BH)")
             };
 

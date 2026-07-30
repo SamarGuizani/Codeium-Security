@@ -47,6 +47,7 @@ namespace Codeium_Security.Services
                     lines.Add(newLine);
                 }
             }
+            
 
             return lines.OrderBy(l => l.Top).ToList();
         }
@@ -93,6 +94,7 @@ namespace Codeium_Security.Services
 
                 rows.Add(row);
             }
+         
 
             return rows;
         }
