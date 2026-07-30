@@ -188,10 +188,10 @@ namespace Codeium_Security.Services.DocumentParsers
                 // ligne de transaction, ni chez AMEN ni chez les autres banques (BIAT/QNB/ATTIJARI n'ont pas
                 // cette echo de date en point).
                 if (isAmenDocument
-                    && current != null
-                    && current.Transactions.Count > 0
-                    && !cellTexts[0].Contains('/')
-                    && Regex.IsMatch(cellTexts[0].Trim(), @"^\d{2}\.\d{2}\.\d{4}\s*\S*$"))
+      && current != null
+      && current.Transactions.Count > 0
+    && !joined.Contains('/')
+&& Regex.IsMatch(joined.Trim(), @"^\d{2}\.\d{2}\.\d{4}\s*\S*$"))
                 {
                     var lastTx = current.Transactions[current.Transactions.Count - 1];
                     lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
