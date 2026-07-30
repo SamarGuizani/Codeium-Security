@@ -1,0 +1,349 @@
+{
+  "FileName": "BTL 02.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 7,
+  "OcrConfidence": 85.42857,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "8901769223",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "Solde au: Encaissement remise cheque Encaissement",
+        "Debit": 0.000,
+        "Credit": 8029.559
+      },
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "remise che Encaissement remise cheque Encaissement",
+        "Debit": 0.000,
+        "Credit": 5983.400
+      },
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "remise che",
+        "Debit": 0.000,
+        "Credit": 2567.000
+      },
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "Reglement Cheque",
+        "Debit": 2500.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "Retrait TND Com de depassement",
+        "Debit": 7000.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "passager",
+        "Debit": 30.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "TVA sur Com En cas de contestation sur le contenu de ce relevé, nous vous prions de contacter votre agence التفضل منكم الرجاء الكشف هذا على موافقتكم عدم صورة .في له محتوى dans délai maximum 06 20 jours, à dater 06 la réception du-dit relevé. إستلامكم تاريخ يوما عشرون أقصاه أجل في بفرعكم بالإتصال un من Votre Conseillé(e) نهج بحسابكم المكلفلة) أريانة أريا 8 8 المنزه المنزه الإخضرار الإخضرار 4 4 - العبيدي لطفي محمد المصرقي اي Médiateur de la 8717 Lotfi LABIDI 4 rue de la verdure Menzah 8 Ariana Tél.: 98 611 342/ 71 -نهج - العبيدي : السيد 8197871996 70 131 900 الفاكس 70 131 700 الهاتف -E 12 الشمالي العمراني المركز الأرض مقرها:شارع دينار مليون 100 مالها رأس الإسم شركة -د.ت -: - تونس عدد مقسم تقسيم -خفية S.A.au Capital عل 100 Millions عل dinars - Siège Social : Immeuble BTL Boulevard de la terre-Lot AFH E12-Centre Urbain Nord-Tunis-Tél.: 70 131 700 - Fax : 70 131 900 - R.C.: B 197871996 - TVA: 033272 D/P/M/000 Swift: ATLDTNTT-web: www.btl.com.tn.clsll موقع الليبي نسي التو البتك BANQUE TUNISO-LIBYENNE RELEVE DE COMPTE MENSUEL ( N الحساب ل لش الي صفحة الحساب صاحب Titulaire ا de compte اخ 2 مجع 8901769223 2/2024 2/7 EZB 4 RUE AMOR BEN Cher NoîgcalvîJnÆ client تقدم الكرء بأن نتشرف L ABDELAZIZ I'honneur de communiquer أسفله لكم vous ci-dessous le relevé détaillé des opérations للعمليات المفضل الكشف inscrites & votre compte sur nos livres Nous ناء دفتر في في بحسابكمٍ المسجلة vous en souhaitons bonne réception. قبولا لكم ونتمنى .ا À الفاعلية التاريخ التاريخ العملية بيان Date de عليه له",
+        "Debit": 5.700,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "Retrait TND Commission Remise",
+        "Debit": 2000.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "Cheque",
+        "Debit": 1.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "TVA sur Com",
+        "Debit": 0.190,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "Retrait TND Commission et TVA",
+        "Debit": 5000.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "prelevement aiement Prelevement -",
+        "Debit": 2.975,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "Virement recu meme Panque Tun Virementrecu _",
+        "Debit": 10650.936,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "4 0 meme b",
+        "Debit": 0.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "Reglement Cheque 0209 u déal mmm de 20 Jours, 3 dater 0216 réception E Ve 29eTE TI مكم الرجاء r t موافقتكم عدم صورة فى Votre Conseillé(e) نهج بحسا المكلفلة) / أريانة أريا 8 8 المنزه المنزه الإخضرار الإخضرار -4 4 الععيدى لطر محمد 7ÏËJËÎ:‘\\7] اي Médiateur de la 8717 Lotfi LABIDI 4 rue de la verdure Menzah 8 Ariana Tél.: 98 611 342 71 -نهج - ي VODF 8197871996 70 131 900 الفاكس 70 131 700 الهاتف -E 12 الشمالي العمراني المركز الأرض مقرها:شارع دينار مليون 100 مالها رأس الإسم شركة -د.ت -: - تونس عدد مقسم تقسيم -خفية S.A.au Capital عل 100 Millions عل dinars - Siège Social : Immeuble BTL Boulevard de la terre-Lot AFH E12-Centre Urbain Nord-Tunis-Tél.: 70 131 700 - Fax : 70 131 900 - R.C.: B 197871996 - TVA: 033272 D/P/M/000 Swift: ATLDTNTT-web: www.btl.com.tn.clsll موقع الليبي نسي التو البتك BANQUE TUNISO-LIBYENNE RELEVE DE COMPTE MENSUEL ( N الحساب ل لش الي صفجع فحة الحساب صاحب Titulaire = A de compte 5 2 8901769223 2/2024 3/7 EZB 4 RUE AMOR BEN Cher client, تقدم oSl بأن نتشرف يفنا ABDELAZIZ avons أسفله لكم ل Nous l'honneur de vous communiquer ci-dessous le relevé détaillé des opérations للعمليات المفضل الكشف inscrites & votre compte sur nos livres Nous ناء دفتر في في بحسابكمٍ المسجلة vous en souhaitons bonne réception. قبولا لكم ونتمنى \\ À الفاعلية التاريخ التاريخ العملية بيان Date de عليه له Encaissement remise cheque Encaissement",
+        "Debit": 8337.977,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "remise che",
+        "Debit": 0.000,
+        "Credit": 15000.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "TVA sur Com Commission Virement",
+        "Debit": 0.285,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "",
+        "Debit": 1.500,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "Reglement Cheque Versement TND",
+        "Debit": 3856.089,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "Versement TND",
+        "Debit": 0.000,
+        "Credit": 4000.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "TVA sur Com Commission Remise",
+        "Debit": 0.190,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "Cheque En cas de contestation sur le contenu de ce relevé, nous vous prions de contacter votre agence التفضل منكم الرجاء الكشف هذا على موافقتكم عدم صورة .في له محتوى dans délai maximum 06 20 jours, à dater 06 la réception du-dit relevé. إستلامكم تاريخ يوما عشرون أقصاه أجل في بفرعكم بالإتصال un من \"708 Conseillé(e) بحسا المكلفلة) أريانة 8 المنزه الإخضرار نهج 4 العبيدي لطفي de la BTL: Mr ١ Lotfi ; LABIDI 4 rue 06 la verdure Menzah 8 Ariana ; Tél.: ‘ 98 611 342 71 -, الإخضرار نهج - & 7 :‘ïgle.ll Méaiate 9861134271 847 8197871996 70 131 900 الفاكس 70 131 700 الهاتف -E 12 الشمالي العمراني المركز الأرض مقرها:شارع دينار مليون 100 مالها رأس الإسم شركة -د.ت -: - تونس عدد مقسم تقسيم -خفية S.A.au Capital عل 100 Millions عل dinars - Siège Social : Immeuble BTL Boulevard de la terre-Lot AFH E12-Centre Urbain Nord-Tunis-Tél.: 70 131 700 - Fax : 70 131 900 - R.C.: B 197871996 - TVA: 033272 D/P/M/000 Swift: ATLDTNTT-web: www.btl.com.tn.clsll موقع الليبي نسي التو البتك BANQUE TUNISO-LIBYENNE RELEVE DE COMPTE MENSUEL ( N الحساب ل لش ال صفحة الحساب صاحب Titulaire 7 7 de compte اخ 2 مجع 8901769223 2/2024 417 EZB 4 RUE AMOR BEN cher NoîgcalvîJnÆ client تقدم sl بأن نتشرف يفنا ABDELAZIZ أسفله ل I'honneur de vous communiquer لكم ci-dessous le relevé détaillé des opérations للعمليات المفضل الكشف inscrites & votre compte sur nos livres Nous ناء دفتر في في بحسابكمٍ المسجلة vous en souhaitons bonne réception. قبولا لكم ونتمنى . J الفاعلية التاريخ التاريخ العملية بيان Date de عليه له Encaissement remise cheque Encaissement",
+        "Debit": 1.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "15/02/2024",
+        "Libelle": "remise che Commission et TVA",
+        "Debit": 0.000,
+        "Credit": 10000.000
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "prelevement \"aiement Prelevement",
+        "Debit": 2.975,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "45 05 2024 Commission et TVA",
+        "Debit": 411.379,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "prelevement Commission et TVA",
+        "Debit": 2.975,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "prelevement",
+        "Debit": 2.975,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "Reglement Cheque \"aiementPrelevement",
+        "Debit": 848.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "54 5 5004 En cas de contestation sur le contenu de ce relevé, nous vous prions de contacter votre agence التفضل منكم الرجاء الكشف هذا على موافقتكم عدم صورة .في له محتوى dans délai maximum 06 20 jours, à dater 06 la réception du-dit relevé. إستلامكم تاريخ يوما عشرون أقصاه أجل في بفرعكم بالإتصال un من Votre Conseillé(e) نهج بحسابكم المكلفلة) @h أريانة 8 8 المنزه المنزه الإخضرار الإخضرار 4 4 - العبيدي لطفي محمد المصرقي اي Médiateur de la 8717 Lotfi LABIDI 4 rue de la verdure Menzah 8 Ariana Tél.: 98 611 342/ 71 -نهج - العبيدي : السيد 8197871996 70 131 900 الفاكس 70 131 700 الهاتف -E 12 الشمالي العمراني المركز الأرض مقرها:شارع دينار مليون 100 مالها رأس الإسم شركة -د.ت -: - تونس عدد مقسم تقسيم -خفية S.A.au Capital عل 100 Millions عل dinars - Siège Social : Immeuble BTL Boulevard de la terre-Lot AFH E12-Centre Urbain Nord-Tunis-Tél.: 70 131 700 - Fax : 70 131 900 - R.C.: B 197871996 - TVA: 033272 D/P/M/000 Swift: ATLDTNTT-web: www.btl.com.tn.clsll موقع الليبي نسي التو البتك BANQUE TUNISO-LIBYENNE RELEVE DE COMPTE MENSUEL ( N الحساب ل لش الث صفجع فقحة الحساب صاحب Titulaire R A de compte 5 2 8901769223 2/2024 5/7 EZB 4 RUE AMOR BEN Cher client, تقدم الكريم, بأن حريفنا ABDELAZIZ avons أسفله لكم ل Nous l'honneur de vous communiquer نتشرف ci-dessous le relevé détaillé des opérations للعمليات المفضل الكشف inscrites & votre compte sur nos livres Nous ناء دفتر في في بحسابكمٍ المسجلة vous en souhaitons bonne réception. قبولا لكم ونتمنى . J الفاعلية التاريخ التاريخ العملية بيان Date de عليه له Versement TND",
+        "Debit": 4870.268,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "Versement TND Commission et TVA",
+        "Debit": 0.000,
+        "Credit": 20000.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "prelevement \"aiementPrelevement 0",
+        "Debit": 2.975,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "\"aiementPrelevement 0",
+        "Debit": 2496.966,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "Commission et TVA",
+        "Debit": 2736.189,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "prelevement 'aiement Prelevement 0",
+        "Debit": 2.975,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "Commission et TVA",
+        "Debit": 3526.060,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "prelevement En cas de contestation sur le contenu de ce relevé, nous vous prions de contacter votre agence التفضل منكم الرجاء الكشف هذا على موافقتكم عدم صورة .في له محتوى dans délai maximum 06 20 jours, à dater 06 la réception du-dit relevé. إستلامكم تاريخ يوما عشرون أقصاه أجل في بفرعكم بالإتصال un من Votre Conseillé(e) نهج بحسابكم المكلفلة) @h أريانة 8 8 المنزه المنزه الإخضرار الإخضرار 4 4 - العبيدي لطفي محمد المصرقي اي Médiateur de la 8717 Lotfi LABIDI 4 rue de la verdure Menzah 8 Ariana Tél.: 98 611 342/ 71 -نهج - العبيدي : السيد 8197871996 70 131 900 الفاكس 70 131 700 الهاتف -E 12 الشمالي العمراني المركز الأرض مقرها:شارع دينار مليون 100 مالها رأس الإسم شركة -د.ت -: - تونس عدد مقسم تقسيم -خفية S.A.au Capital عل 100 Millions عل dinars - Siège Social : Immeuble BTL Boulevard de la terre-Lot AFH E12-Centre Urbain Nord-Tunis-Tél.: 70 131 700 - Fax : 70 131 900 - R.C.: B 197871996 - TVA: 033272 D/P/M/000 Swift: ATLDTNTT-web: www.btl.com.tn.clsll موقع الليبي نسي التو البتك BANQUE TUNISO-LIBYENNE RELEVE DE COMPTE MENSUEL ( N الحساب ل لش الي صفحة الحساب صاحب Titulaire ا de compte اخ 2 مجع 8901769223 2/2024 6/7 EZB 4 RUE AMOR BEN Cher NoîgcalvîJnÆ client تقدم الكرء بأن نتشرف L ABDELAZIZ I'honneur de communiquer أسفله لكم vous ci-dessous le relevé détaillé des opérations للعمليات المفضل الكشف inscrites & votre compte sur nos livres Nous ناء دفتر في في بحسابكمٍ المسجلة vous en souhaitons bonne réception. قبولا لكم ونتمنى .ا À الفاعلية التاريخ التاريخ العملية بيان Date de عليه له aiement Prelevement -",
+        "Debit": 2.975,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "",
+        "Debit": 9179.499,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "Reglement Cheque",
+        "Debit": 1500.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "Reglement Cheque",
+        "Debit": 900.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "Reglement Cheque",
+        "Debit": 443.578,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "TVA sur Com Commission Remise",
+        "Debit": 1.330,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "Cheque",
+        "Debit": 7.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "TVA sur Com Commission Remise",
+        "Debit": 1.140,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "Cheque 0209 u déal masimum de 20 Jours, 3 dater 0216 réception E e ا TI مكم الرجاء r t موافقتكم عدم صورة فى Votre Conseillé(e) نهج - بحسا (&) f.JS.AJII / أريانة 8 8 المنزه المنزه الإخضرار الإخضرار 4 4 العبيدي لطر محمد 7ÏÊ)5Ï7] اي Médiateur de la BTL: M Lotfi LABIDI 4 rue de la verdure Menzah 8 Ariana Tél.: 98 611 342 71 - أريانة نهج - يدي VODF 8197871996 70 131 900 الفاكس 70 131 700 الهاتف -E 12 الشمالي العمراني المركز الأرض مقرها:شارع دينار مليون 100 مالها رأس الإسم شركة -د.ت -: - تونس عدد مقسم تقسيم -خفية S.A.au Capital عل 100 Millions عل dinars - Siège Social : Immeuble BTL Boulevard de la terre-Lot AFH E12-Centre Urbain Nord-Tunis-Tél.: 70 131 700 - Fax : 70 131 900 - R.C.: B 197871996 - TVA: 033272 D/P/M/000 Swift: ATLDTNTT-web: www.btl.com.tn.clsll موقع الليبي نسي التو البتك BANQUE TUNISO-LIBYENNE RELEVE DE COMPTE MENSUEL ( N الحساب رقم الشهر صفحة الحساب صاحب Titulaire itulai de compte N°'de Compte s Folio 8901769223 2/2024 77 EZB 4 RUE AMOR BEN cher er client الكل نتشرف يفنا client, أسفله تقدم بأن ABDELAZIZ Nous avons l'honneur de vous communiquer لكم ci-dessous le relevé détaillé des opérations للعمليات المفضل الكشف inscrites & votre compte sur nos livres Nous ناء دفتر في في بحسابكمٍ المسجلة vous en souhaitons bonne réception. قبولا لكم ونتمنى . J الفاعلية التاريخ التاريخ العملية بيان Date de عليه له Encaissement remise cheque Encaissement",
+        "Debit": 6.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "remise che",
+        "Debit": 0.000,
+        "Credit": 3750.000
+      },
+      {
+        "Solde": null,
+        "Date": "29/02/2024",
+        "Libelle": "Retrait TND CHQ Encaissement remise cheque Encaissement",
+        "Debit": 3000.000,
+        "Credit": 0.000
+      },
+      {
+        "Solde": null,
+        "Date": "29/02/2024",
+        "Libelle": "remise che TND E dans un d délai testati maximum de I 20 jours, t à 0 dater de levé, la réception du-dit i releve. d tacte t Laëill لك إستلامكم sl> تاريخ Jl الكشف يوما ١ عشرون أقضاه أجل موا بمرعكم بالإتصال ë, 9. من دي Votre Conseillé(e) نهج بحسايكى المكلفلة) أريانة 8 8 المنزه الإخضرار 4 العبيدي لطفي 7 الولف 2 de 18 BTL: Mr ١ Lotfi LABIDI 4 rue 06 la verdure Menzah 8 Ariana Tél.: 98 0 71 - اريانة © الإخضرار نهج - يدي ل ا 47 8197871996 70 131 900 الفاكس 70 131 700 الهاتف -E 12 الشمالي العمراني المركز الأرض مقرها:شارع دينار مليون 100 مالها رأس الإسم شركة -د.ت -: - تونس عدد مقسم تقسيم -خفية S.A.au Capital عل 100 Millions عل dinars - Siège Social : Immeuble BTL Boulevard de la terre-Lot AFH E12-Centre Urbain Nord-Tunis-Tél.: 70 131 700 - Fax : 70 131 900 - R.C.: B 197871996 - TVA: 033272 D/P/M/000 Swift: ATLDTNTT-web: www.btl.com.tn.clsll موقع",
+        "Debit": 0.000,
+        "Credit": 4510.000
+      }
+    ]
+  }
+}

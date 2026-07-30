@@ -39,13 +39,12 @@ namespace Codeium_Security.Services.DocumentParsers
             return document;
         }
 
-        private string GetNormalizedDateFromCells(List<string> cellTexts)
+        private string GetNormalizedDateFromCells(List<string> cellTexts, int? defaultYear = null)
         {
-            // Essaie de concaténer les cellules jusqu'à obtenir une date valide
             for (int i = 0; i < Math.Min(cellTexts.Count, 3); i++)
             {
                 string candidate = string.Join(" ", cellTexts.Take(i + 1));
-                string normalized = NormalizeDate(candidate);
+                string normalized = NormalizeDate(candidate, defaultYear);
                 if (!string.IsNullOrEmpty(normalized))
                     return normalized;
             }
@@ -68,6 +67,23 @@ namespace Codeium_Security.Services.DocumentParsers
             // [COMMUN] Repli document-entier pour le RIB (fix #3) : certains RIB sont coupes
             // sur plusieurs lignes/cellules et ne matchent jamais correctement ligne par ligne.
             string documentRib = ExtractRib(fullText);
+            // [BIAT] Récupérer l'année du document pour les dates sans année
+            int? documentYear = null;
+            bool isBiat = fullText.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
+            if (isBiat)
+            {
+                // Cherche une date dans l'en-tête (ex: "28 02 2023" ou "SOLDE AU 31 01 2024")
+                var dateMatch = Regex.Match(fullText, @"\b(\d{1,2})\s+(\d{1,2})\s+(\d{4})\b");
+                if (dateMatch.Success && int.TryParse(dateMatch.Groups[3].Value, out int year))
+                    documentYear = year;
+                else
+                {
+                    // Repli: chercher "SOLDE AU ..." qui contient aussi une année
+                    var soldeMatch = Regex.Match(fullText, @"SOLDE\s+AU\s+\d{1,2}\s+\d{1,2}\s+(\d{4})", RegexOptions.IgnoreCase);
+                    if (soldeMatch.Success && int.TryParse(soldeMatch.Groups[1].Value, out year))
+                        documentYear = year;
+                }
+            }
 
 
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
@@ -75,6 +91,8 @@ namespace Codeium_Security.Services.DocumentParsers
 
             foreach (var row in rows)
             {
+               
+                
                 var cells = row.Cells.OrderBy(c => c.Left).ToList();
                 var cellTextsRaw = cells
                     .Select(c => NormalizeSignSpacing(CleanWhitespace(c.Text)))
@@ -104,6 +122,15 @@ namespace Codeium_Security.Services.DocumentParsers
                 var debitCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"D[ée]bit", RegexOptions.IgnoreCase));
                 var creditCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"Cr[ée]dit", RegexOptions.IgnoreCase));
                 var soldeCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bSolde\b", RegexOptions.IgnoreCase));
+
+                // Ajout spécifique BIAT : détection des termes arabes
+                if (isBiat)
+                {
+                    var arabicDebit = cells.FirstOrDefault(c => c.Text.Contains("عليه"));
+                    var arabicCredit = cells.FirstOrDefault(c => c.Text.Contains("له"));
+                    if (arabicDebit != null) debitCell = arabicDebit;
+                    if (arabicCredit != null) creditCell = arabicCredit;
+                }
 
                 if (debitCell != null || creditCell != null)
                 {
@@ -221,8 +248,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
-                string normalizedDate = GetNormalizedDateFromCells(cellTexts);
-                // [COMMUN] Fusionne le signe "-" isole AVEC sa position X, pour les montants de cette ligne
+                string normalizedDate = GetNormalizedDateFromCells(cellTexts, isBiat ? documentYear : null);                // [COMMUN] Fusionne le signe "-" isole AVEC sa position X, pour les montants de cette ligne
                 var mergedWithPos = new List<(int Left, string Text)>();
                 for (int i = 0; i < cells.Count; i++)
                     mergedWithPos.Add((cells[i].Left, NormalizeSignSpacing(CleanWhitespace(cells[i].Text))));
@@ -272,7 +298,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 {
                     var dateInLibelle = Regex.Match(joined, @"\b(\d{8})\b");
                     if (dateInLibelle.Success)
-                        normalizedDate = NormalizeDate(dateInLibelle.Groups[1].Value);
+                        normalizedDate = NormalizeDate(dateInLibelle.Groups[1].Value, isBiat ? documentYear : null);
                 }
                 if (string.IsNullOrEmpty(normalizedDate))
                 {
@@ -602,7 +628,7 @@ namespace Codeium_Security.Services.DocumentParsers
         }
 
         // [fix #2] Formats de date etendus (avec et sans annee)
-        private string NormalizeDate(string raw)
+        private string NormalizeDate(string raw , int? defaultYear = null)
         {
             raw = raw.Trim();
             string candidate = raw;
@@ -638,12 +664,14 @@ namespace Codeium_Security.Services.DocumentParsers
             if (DateTime.TryParseExact(candidate, formatsNoYear, CultureInfo.InvariantCulture,
                     DateTimeStyles.NoCurrentDateDefault, out var parsedNoYear))
             {
-                var withYear = new DateTime(DateTime.Now.Year, parsedNoYear.Month, parsedNoYear.Day);
+                int year = defaultYear ?? DateTime.Now.Year;
+                var withYear = new DateTime(year, parsedNoYear.Month, parsedNoYear.Day);
                 return withYear.ToString("dd/MM/yyyy");
             }
 
             return "";
         }
+       
 
         private decimal ParseAmount(string raw)
         {
