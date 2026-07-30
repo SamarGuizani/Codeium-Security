@@ -69,6 +69,8 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (cellTexts.Count == 0) continue;
 
                 string joined = string.Join(" ", cellTexts);
+                Console.WriteLine("=================================");
+                Console.WriteLine(joined);
                 // [fix #9] Nettoie les artefacts d'impression web (ex: export BTK@DIRECT) qui
                 // injectent une entete/pied de page en plein milieu du contenu.
                 joined = StripPrintArtifacts(joined);
