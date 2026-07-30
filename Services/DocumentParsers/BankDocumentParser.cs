@@ -17,18 +17,40 @@ namespace Codeium_Security.Services.DocumentParsers
 
         public object Parse(string fullText, List<TextLine> lines)
         {
-            var engine = new DocumentAnalysisEngine();
+            var engine = new DocumentAnalysisEngine(); // VerticalTolerance vaut 10 par défaut
+
+            // Détection du nom de la banque
+            string bankName = ExtractBankName(fullText);
+            bool isBiat = bankName.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
+
+            // Ajustement spécifique à BIAT (réduction du regroupement vertical)
+            if (isBiat)
+                engine.VerticalTolerance = 1;
+
+            // Construction du tableau avec la tolérance éventuellement modifiée
             var rows = engine.BuildTable(lines);
 
             var document = new BankDocument
             {
-                BankName = ExtractBankName(fullText),
+                BankName = bankName,  // on réutilise le nom déjà extrait
                 Accounts = ExtractAccountSections(rows, fullText)
             };
 
             return document;
         }
 
+        private string GetNormalizedDateFromCells(List<string> cellTexts)
+        {
+            // Essaie de concaténer les cellules jusqu'à obtenir une date valide
+            for (int i = 0; i < Math.Min(cellTexts.Count, 3); i++)
+            {
+                string candidate = string.Join(" ", cellTexts.Take(i + 1));
+                string normalized = NormalizeDate(candidate);
+                if (!string.IsNullOrEmpty(normalized))
+                    return normalized;
+            }
+            return "";
+        }
         private List<BankAccountSection> ExtractAccountSections(List<TableRow> rows, string fullText)
         {
             var sections = new List<BankAccountSection>();
@@ -81,7 +103,8 @@ namespace Codeium_Security.Services.DocumentParsers
                 // [COMMUN] Detection des en-tetes de colonnes Debit/Credit/Solde
                 var debitCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"D[ée]bit", RegexOptions.IgnoreCase));
                 var creditCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"Cr[ée]dit", RegexOptions.IgnoreCase));
-                var soldeCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"^Solde$", RegexOptions.IgnoreCase));
+                var soldeCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bSolde\b", RegexOptions.IgnoreCase));
+
                 if (debitCell != null || creditCell != null)
                 {
                     if (debitCell != null) debitAnchor = debitCell.Left;
@@ -198,8 +221,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
-                string normalizedDate = NormalizeDate(cellTexts[0].Trim());
-
+                string normalizedDate = GetNormalizedDateFromCells(cellTexts);
                 // [COMMUN] Fusionne le signe "-" isole AVEC sa position X, pour les montants de cette ligne
                 var mergedWithPos = new List<(int Left, string Text)>();
                 for (int i = 0; i < cells.Count; i++)
@@ -246,7 +268,12 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 // [COMMUN] Detecte le bruit (footers, mentions legales) qui ne doit jamais rejoindre un libelle
                 bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase);
-
+                if (string.IsNullOrEmpty(normalizedDate) && amountCandidates.Count > 0)
+                {
+                    var dateInLibelle = Regex.Match(joined, @"\b(\d{8})\b");
+                    if (dateInLibelle.Success)
+                        normalizedDate = NormalizeDate(dateInLibelle.Groups[1].Value);
+                }
                 if (string.IsNullOrEmpty(normalizedDate))
                 {
                     if (isNoise) continue;
@@ -419,6 +446,7 @@ namespace Codeium_Security.Services.DocumentParsers
             return "";
         }
 
+
         // [fix anti-fusion] Detecte si une "ligne" contient plus d'un montant Debit OU plus d'un
         // montant Credit. Ca indique que DocumentAnalysisEngine.BuildTable a fusionne plusieurs
         // lignes physiques du PDF (verticalement trop proches, ex: releves BIAT tres denses) en
@@ -567,6 +595,13 @@ namespace Codeium_Security.Services.DocumentParsers
             raw = raw.Trim();
             string candidate = raw;
 
+            // [fix BIAT - UNIQUEMENT] Dates avec ESPACES (ex: "01 02" -> "01/02")
+            // Ce format est SPECIFIQUE à BIAT, les autres banques utilisent "/" ou "-"
+            if (Regex.IsMatch(raw, @"^\d{1,2}\s+\d{1,2}\s*$") && !raw.Contains('/') && !raw.Contains('-'))
+            {
+                candidate = Regex.Replace(raw.Trim(), @"\s+", "/");
+            }
+
             if (raw.Length == 8 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.'))
                 candidate = $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}/{raw.Substring(4, 4)}";
             // [fix BIAT] jour+mois colles sans separateur ni annee (ex: "1110" -> 11/10, annee courante)
@@ -575,9 +610,9 @@ namespace Codeium_Security.Services.DocumentParsers
 
             var formatsWithYear = new[]
             {
-                "dd/MM/yyyy", "dd-MM-yyyy", "dd.MM.yyyy",
-                "yyyy-MM-dd", "yyyy/MM/dd"
-            };
+        "dd/MM/yyyy", "dd-MM-yyyy", "dd.MM.yyyy",
+        "yyyy-MM-dd", "yyyy/MM/dd"
+    };
 
             if (DateTime.TryParseExact(candidate, formatsWithYear, CultureInfo.InvariantCulture,
                     DateTimeStyles.None, out var parsed))

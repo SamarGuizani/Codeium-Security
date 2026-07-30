@@ -22,21 +22,23 @@ namespace Codeium_Security.Services
         public List<TableCell> Cells { get; set; } = new();
     }
 
+    // Dans DocumentAnalysisEngine.cs
     public class DocumentAnalysisEngine
     {
-        public List<TextLine> GroupWordsIntoLines(List<OcrWord> words, int verticalTolerance = 10)
+        // Nouvelle propriété, valeur par défaut = 10 (inchangée pour les autres banques)
+        public int VerticalTolerance { get; set; } = 10;
+
+        public List<TextLine> GroupWordsIntoLines(List<OcrWord> words)
         {
             var sortedWords = words.OrderBy(w => w.Top).ToList();
             var lines = new List<TextLine>();
 
             foreach (var word in sortedWords)
             {
-                // [fix #13] Compare toujours contre le Top de la DERNIERE ligne creee (la plus recente),
-                // jamais contre une ligne plus ancienne : evite l'effet de "chaine" qui fusionnait
-                // plusieurs lignes d'impression distinctes sur les releves a interligne serre (ex: BIAT dense).
                 var lastLine = lines.Count > 0 ? lines[lines.Count - 1] : null;
 
-                if (lastLine != null && Math.Abs(lastLine.Top - word.Top) <= verticalTolerance)
+                // Utiliser VerticalTolerance au lieu de 10
+                if (lastLine != null && Math.Abs(lastLine.Top - word.Top) <= VerticalTolerance)
                 {
                     lastLine.Words.Add(word);
                 }
@@ -47,10 +49,12 @@ namespace Codeium_Security.Services
                     lines.Add(newLine);
                 }
             }
-            
 
             return lines.OrderBy(l => l.Top).ToList();
         }
+
+    // BuildTable reste inchangé
+
         // ↓↓↓ NOUVELLE MÉTHODE AJOUTÉE ICI (H3) ↓↓↓
         public List<TableRow> BuildTable(List<TextLine> lines, int? horizontalTolerance = null)
         {
