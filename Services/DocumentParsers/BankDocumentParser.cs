@@ -286,6 +286,18 @@ namespace Codeium_Security.Services.DocumentParsers
                         if (string.IsNullOrEmpty(pendingDate)) continue;
 
                         string fullDesc = pendingLibelleBuffer.Trim();
+
+                        if (isAmenDocument)
+                        {
+                            // Récupère tout le texte de la ligne SAUF les montants reconnus
+                            string currentNonAmount = string.Join(" ", cellTexts.Where(c => !AmountRegex.IsMatch(c))).Trim();
+                            // Supprime les dates (ex: "22/07/2025") pour ne pas les dupliquer
+                            currentNonAmount = Regex.Replace(currentNonAmount, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
+                            // Supprime les dates en 8 chiffres (ex: "23072025") si présentes
+                            currentNonAmount = Regex.Replace(currentNonAmount, @"\b\d{8}\b", "").Trim();
+                            if (!string.IsNullOrEmpty(currentNonAmount))
+                                fullDesc = (fullDesc + " " + currentNonAmount).Trim();
+                        }
                         pendingLibelleBuffer = "";
 
                         // [fix anti-fusion] Ligne fusionnee : plusieurs montants Debit ou plusieurs
