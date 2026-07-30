@@ -26,16 +26,20 @@ namespace Codeium_Security.Services
     {
         public List<TextLine> GroupWordsIntoLines(List<OcrWord> words, int verticalTolerance = 10)
         {
-            var lines = new List<TextLine>();
             var sortedWords = words.OrderBy(w => w.Top).ToList();
+            var lines = new List<TextLine>();
 
             foreach (var word in sortedWords)
             {
-                var matchingLine = lines.FirstOrDefault(line =>
-                    Math.Abs(line.Top - word.Top) <= verticalTolerance);
+                // [fix #13] Compare toujours contre le Top de la DERNIERE ligne creee (la plus recente),
+                // jamais contre une ligne plus ancienne : evite l'effet de "chaine" qui fusionnait
+                // plusieurs lignes d'impression distinctes sur les releves a interligne serre (ex: BIAT dense).
+                var lastLine = lines.Count > 0 ? lines[lines.Count - 1] : null;
 
-                if (matchingLine != null)
-                    matchingLine.Words.Add(word);
+                if (lastLine != null && Math.Abs(lastLine.Top - word.Top) <= verticalTolerance)
+                {
+                    lastLine.Words.Add(word);
+                }
                 else
                 {
                     var newLine = new TextLine();
@@ -46,7 +50,6 @@ namespace Codeium_Security.Services
 
             return lines.OrderBy(l => l.Top).ToList();
         }
-
         // ↓↓↓ NOUVELLE MÉTHODE AJOUTÉE ICI (H3) ↓↓↓
         public List<TableRow> BuildTable(List<TextLine> lines, int? horizontalTolerance = null)
         {

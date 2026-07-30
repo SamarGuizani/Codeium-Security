@@ -1,0 +1,1735 @@
+{
+  "FileName": "BIAT -02.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 11,
+  "OcrConfidence": 86.63636,
+  "NeedsReview": false,
+  "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
+  "Account": {
+    "AccountNumber": "7510008558",
+    "Currency": "TND",
+    "Rib": "08105000751000855803",
+    "SoldeInitial": 3240.918,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "RETRAIT CHEQUE 08953006 31012024",
+        "Debit": 12900.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010044 01022024",
+        "Debit": 4.880,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010044 06022024",
+        "Debit": null,
+        "Credit": 976.000
+      },
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010045 01022024",
+        "Debit": 9.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010045 06022024",
+        "Debit": null,
+        "Credit": 1978.500
+      },
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020370 01022024",
+        "Debit": 6.965,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "01/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 3169484 29012024",
+        "Debit": 1.309,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "RETRAIT CHEQUE 80007307 01022024",
+        "Debit": 3000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "RETRAIT CHEQUE 80549031 01022024",
+        "Debit": 5000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "REDRESSEMENT s0010224 01022024",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "REDRESSEMENT s0010224 01022024",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010047 02022024",
+        "Debit": 2.160,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010047 07022024",
+        "Debit": null,
+        "Credit": 432.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010048 07022024",
+        "Debit": null,
+        "Credit": 1811.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010048 02022024",
+        "Debit": 9.055,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020373 02022024",
+        "Debit": 0.850,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020373 07022024",
+        "Debit": null,
+        "Credit": 170.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020374 07022024",
+        "Debit": null,
+        "Credit": 388.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020374 02022024",
+        "Debit": 1.940,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020375 02022024",
+        "Debit": 4.200,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020375 07022024",
+        "Debit": null,
+        "Credit": 840.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2743023 05022024",
+        "Debit": null,
+        "Credit": 564.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2743025 05022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater de ذا réception dudit relevé. له. استلامكم تاريخ من logs عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون wenw biztcomin 0 : ل 711/17001181127 مجع EN 1030 - 520 بورقيبة الحبيب شاع 7200 الرئيسي المر - للمؤسسات الوطني بالسجل الوحيد المعيف 70000000 حالها vs الإسم خفية شركة -71342 o -: 0000106 - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 75 10 00855 8 29 02 2024 2016 CARTHAGE Cher client, الكريم حريقنا Nous l'honneur de ci-dessous le relevé détaillé des opérations : avons vous communiquer < E inscrites à votre compte sur nos livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ el تاريخ عليه العملية بيان له",
+        "Debit": null,
+        "Credit": 2250.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2743026 05022024",
+        "Debit": null,
+        "Credit": 515.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "CHEQUE PREAVISE 5201629 05022024",
+        "Debit": 1900.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2743023 30012024",
+        "Debit": 1.047,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2743025 30012024",
+        "Debit": 0.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2743026 31012024",
+        "Debit": 1.833,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "REDRESSEMENT s0020224 02022024",
+        "Debit": 13.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "REDRESSEMENT s0020224 02022024",
+        "Debit": 2.470,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "COMMISSION ECH.CRD 34030100 05022024",
+        "Debit": 0.713,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "COMMISSION ECH.CRD 34030100 05022024",
+        "Debit": 3.750,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010051 05022024",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010051 08022024",
+        "Debit": null,
+        "Credit": 190.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010052 08022024",
+        "Debit": null,
+        "Credit": 130.000
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010052 05022024",
+        "Debit": 0.650,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020377 08022024",
+        "Debit": null,
+        "Credit": 2645.450
+      },
+      {
+        "Solde": null,
+        "Date": "05/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020377 05022024",
+        "Debit": 13.227,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "RETRAIT CHEQUE 10546110 05022024",
+        "Debit": 2000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "RETRAIT CHEQUE 35304008 05022024",
+        "Debit": 4000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "PAIEMENT EFFET FINANC 34030100 06022024",
+        "Debit": 1646.079,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "PAIEMENT EFFET FINANC 34030100 06022024",
+        "Debit": 3225.806,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COMMISSION IMPAYE 34030100 06022024 1805",
+        "Debit": 9.500,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010054 09022024",
+        "Debit": null,
+        "Credit": 2290.166
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010054 06022024",
+        "Debit": 11.451,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010055 06022024",
+        "Debit": 2.390,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010055 09022024",
+        "Debit": null,
+        "Credit": 478.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010056 09022024",
+        "Debit": null,
+        "Credit": 34.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010056 06022024",
+        "Debit": 0.170,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010057 09022024",
+        "Debit": null,
+        "Credit": 1699.925
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010057 06022024",
+        "Debit": 8.500,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010058 06022024",
+        "Debit": 1.015,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010058 09022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو )& الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون بمو معأ 10 71 242 620 كس تتفل زان ورج 7110 بمضزير تزيم 1090 520 up بورقيية الحبيب شارع 7200 : الرئيسي الحقر 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف 70000000 مالها رأس الإسم خفية شركة -: -: -= -- -: -: - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 75 10 00855 8 29 02 2024 2016 CARTHAGE موت لف الكريم حريفنا de ci-dessous le relevé détaillé des opérations ; vous communiquer ; inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ el عليه العملية بيان تاريخ له",
+        "Debit": null,
+        "Credit": 203.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010059 06022024",
+        "Debit": 1.125,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010059 09022024",
+        "Debit": null,
+        "Credit": 225.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010060 06022024",
+        "Debit": 5.778,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010060 09022024",
+        "Debit": null,
+        "Credit": 1155.500
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020379 06022024",
+        "Debit": 11.938,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020379 09022024",
+        "Debit": null,
+        "Credit": 2387.672
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020382 09022024",
+        "Debit": null,
+        "Credit": 535.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020382 06022024",
+        "Debit": 2.675,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020383 09022024",
+        "Debit": null,
+        "Credit": 1857.022
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020383 06022024",
+        "Debit": 9.285,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020384 09022024",
+        "Debit": null,
+        "Credit": 337.000
+      },
+      {
+        "Solde": null,
+        "Date": "06/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020384 06022024",
+        "Debit": 1.685,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "RETRAIT CHEQUE 88550720 06022024",
+        "Debit": 1500.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "REDRESSEMENT S0060224 06022024",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "REDRESSEMENT S0060224 06022024",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010062 07022024",
+        "Debit": 2.100,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010062 12022024",
+        "Debit": null,
+        "Credit": 420.000
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010063 12022024",
+        "Debit": null,
+        "Credit": 92.000
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010063 07022024",
+        "Debit": 0.460,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010064 07022024",
+        "Debit": 6.860,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010064 12022024",
+        "Debit": null,
+        "Credit": 1372.000
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020386 12022024",
+        "Debit": null,
+        "Credit": 1667.500
+      },
+      {
+        "Solde": null,
+        "Date": "07/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020386 07022024",
+        "Debit": 8.338,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010065 13022024",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010065 08022024",
+        "Debit": 0.250,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010066 08022024",
+        "Debit": 4.467,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010066 13022024",
+        "Debit": null,
+        "Credit": 893.350
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010067 08022024",
+        "Debit": 7.874,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010067 13022024",
+        "Debit": null,
+        "Credit": 1574.750
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020388 13022024",
+        "Debit": null,
+        "Credit": 1327.000
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020388 08022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون wenw biztcomin 0 : ل 711/17001181127 مجع EN 1030 - 520 بورقيبة الحبيب شاع 7200 الرئيسي المر - للمؤسسات الوطني بالسجل الوحيد المعيف 70000000 حالها vs الإسم خفية شركة -71342 o -: 0000106 - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 75 10 00855 8 29 02 2024 2016 CARTHAGE موت 0 الكريم حريفنا de ci-dessous le relevé détaillé des opérations ; vous communiquer ; inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ el عليه العملية بيان تاريخ له",
+        "Debit": 6.635,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101933 09022024",
+        "Debit": null,
+        "Credit": 742.000
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "ANNUL CHQ PREAVISE 5201629 05022024",
+        "Debit": null,
+        "Credit": 1900.000
+      },
+      {
+        "Solde": null,
+        "Date": "08/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101933 05022024",
+        "Debit": 1.833,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "RETRAIT CHEQUE 72076270 08022024",
+        "Debit": 18500.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010069 09022024",
+        "Debit": 1.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010069 14022024",
+        "Debit": null,
+        "Credit": 200.000
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010070 09022024",
+        "Debit": 10.125,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010070 14022024",
+        "Debit": null,
+        "Credit": 2025.000
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020390 09022024",
+        "Debit": 7.610,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020390 14022024",
+        "Debit": null,
+        "Credit": 1522.030
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101934 12022024",
+        "Debit": null,
+        "Credit": 530.000
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 4264328 12022024",
+        "Debit": null,
+        "Credit": 5782.600
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "CHEQUE PREAVISE 9357057 12022024",
+        "Debit": 30.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101934 06022024",
+        "Debit": 1.047,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 4264328 06022024",
+        "Debit": 0.262,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "12/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010072 15022024",
+        "Debit": null,
+        "Credit": 422.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "RETRAIT CHEQUE 08326400 12022024",
+        "Debit": 9900.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010073 13022024",
+        "Debit": 8.703,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010073 16022024",
+        "Debit": null,
+        "Credit": 1740.500
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010074 16022024",
+        "Debit": null,
+        "Credit": 214.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010074 13022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو )& الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater de ذا réception dudit relevé. له. استلامكم تاريخ من logs عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون بمو معأ 10 71 242 620 كس تتفل زان ورج 7110 بمضزير تزيم 1090 520 up بورقيية الحبيب شارع 7200 : الرئيسي الحقر 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف 70000000 مالها رأس الإسم خفية شركة -: -: -= -- -: -: - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 75 10 00855 8 29 02 2024 5 2016 CARTHAGE موت 0 الكريم حريفنا de ci-dessous le relevé détaillé des opérations ; vous communiquer ; inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ الفاعلية عليه العملية بيان تاريخ له",
+        "Debit": 1.070,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010075 16022024",
+        "Debit": null,
+        "Credit": 1349.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010075 13022024",
+        "Debit": 6.745,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010076 13022024",
+        "Debit": 0.450,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010076 16022024",
+        "Debit": null,
+        "Credit": 90.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010077 13022024",
+        "Debit": 4.055,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010077 16022024",
+        "Debit": null,
+        "Credit": 811.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010078 16022024",
+        "Debit": null,
+        "Credit": 175.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010078 13022024",
+        "Debit": 0.875,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010079 16022024",
+        "Debit": null,
+        "Credit": 2218.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010079 13022024",
+        "Debit": 11.090,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020395 16022024",
+        "Debit": null,
+        "Credit": 1559.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020395 13022024",
+        "Debit": 7.795,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020397 13022024",
+        "Debit": 9.090,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020397 16022024",
+        "Debit": null,
+        "Credit": 1818.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101918 14022024",
+        "Debit": null,
+        "Credit": 70.000
+      },
+      {
+        "Solde": null,
+        "Date": "13/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101918 08022024",
+        "Debit": 0.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "REDRESSEMENT s0090224 09022024",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "REDRESSEMENT s0090224 09022024",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "REDRESSEMENT s0120224 12022024",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "REDRESSEMENT s0120224 12022024",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "REDRESSEMENT s0130224 13022024",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "REDRESSEMENT s0130224 13022024",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010080 19022024",
+        "Debit": null,
+        "Credit": 338.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010080 14022024",
+        "Debit": 1.690,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010081 19022024",
+        "Debit": null,
+        "Credit": 840.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010081 14022024",
+        "Debit": 4.200,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010082 14022024",
+        "Debit": 6.100,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010082 19022024",
+        "Debit": null,
+        "Credit": 1220.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020399 14022024",
+        "Debit": 8.510,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020399 19022024",
+        "Debit": null,
+        "Credit": 1702.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101919 15022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو )& الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater de ذا réception dudit relevé. له. استلامكم تاريخ من logs عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون بمو معأ 10 71 242 620 كس تتفل زان ورج 7110 بمضزير تزيم 1090 520 up بورقيية الحبيب شارع 7200 : الرئيسي الحقر 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف 70000000 مالها رأس الإسم خفية شركة -: -: -= -- -: -: - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 75 10 00855 8 29 02 2024 2016 CARTHAGE لمهت لصو “’SJI حريفنا vous communiquer ci-dessous le relevé détaillé des opérations inscrites votre compte livres. Nous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله ; لكم نقدم بأن نتشرف à sur 005 vous التاريخ el تاريخ عليه العملية بيان له",
+        "Debit": null,
+        "Credit": 411.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101920 15022024",
+        "Debit": null,
+        "Credit": 392.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101922 15022024",
+        "Debit": null,
+        "Credit": 1516.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 4264255 15022024",
+        "Debit": null,
+        "Credit": 2200.000
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101919 09022024",
+        "Debit": 1.571,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101920 09022024",
+        "Debit": 1.309,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101922 12022024",
+        "Debit": 1.833,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "14/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 4264255 09022024",
+        "Debit": 0.262,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "15/02/2024",
+        "Libelle": "RETRAIT CHEQUE 05415908 14022024",
+        "Debit": 11900.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "15/02/2024",
+        "Libelle": "VIREMENT TN MEME BQ 77622525 15022024",
+        "Debit": 1500.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "15/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010083 15022024",
+        "Debit": 1.110,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "RETRAIT CHEQUE 63670815 15022024",
+        "Debit": 2500.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "PRELEVEMENT BANCAIRE 85122997 15022024",
+        "Debit": 2126.195,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "PRELEVEMENT BANCAIRE 85122997 15022024",
+        "Debit": 2.975,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "REDRESSEMENT S0150224 15022024",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "REDRESSEMENT s0150224 15022024",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010087 16022024",
+        "Debit": 0.062,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010087 21022024",
+        "Debit": null,
+        "Credit": 12.300
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010088 16022024",
+        "Debit": 20.345,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010088 21022024",
+        "Debit": null,
+        "Credit": 4069.000
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101924 19022024",
+        "Debit": null,
+        "Credit": 311.000
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101925 19022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون بمو معأ 10 71 242 620 كس تتفل زان ورج 7110 بمضزير تزيم 1090 520 up بورقيية الحبيب شارع 7200 : الرئيسي الحقر 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف 70000000 مالها رأس الإسم خفية شركة -: -: -= -- -: -: - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 75 10 00855 8 29 02 2024 7 2016 CARTHAGE موت 0 الكريم حريفنا de ci-dessous le relevé détaillé des opérations ; vous communiquer ; inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ el عليه العملية بيان تاريخ له",
+        "Debit": null,
+        "Credit": 223.000
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101924 14022024",
+        "Debit": 0.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101925 14022024",
+        "Debit": 0.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "RETRAIT CHEQUE 18083771 16022024",
+        "Debit": 2900.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "VIREMENT TN MEME BQ 62922877 19022024",
+        "Debit": null,
+        "Credit": 1500.000
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "REDRESSEMENT s0160224 16022024",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "REDRESSEMENT s0160224 16022024",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010089 22022024",
+        "Debit": null,
+        "Credit": 250.000
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010089 19022024",
+        "Debit": 1.250,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020401 19022024",
+        "Debit": 4.660,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020401 22022024",
+        "Debit": null,
+        "Credit": 932.000
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101928 20022024",
+        "Debit": null,
+        "Credit": 222.000
+      },
+      {
+        "Solde": null,
+        "Date": "19/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101928 15022024",
+        "Debit": 1.047,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "RETRAIT CHEQUE 04383953 19022024",
+        "Debit": 14500.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "REDRESSEMENT s0190224 19022024",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "REDRESSEMENT s0190224 19022024",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010090 23022024",
+        "Debit": null,
+        "Credit": 3871.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010090 20022024",
+        "Debit": 19.355,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010091 23022024",
+        "Debit": null,
+        "Credit": 2611.600
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010091 20022024",
+        "Debit": 13.058,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010093 20022024",
+        "Debit": 4.745,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010093 23022024",
+        "Debit": null,
+        "Credit": 949.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020002 20022024",
+        "Debit": 8.980,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020002 23022024",
+        "Debit": null,
+        "Credit": 1796.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020003 20022024",
+        "Debit": 0.350,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020003 23022024",
+        "Debit": null,
+        "Credit": 70.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020004 20022024",
+        "Debit": 10.005,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020004 23022024",
+        "Debit": null,
+        "Credit": 2001.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020005 20022024",
+        "Debit": 2.490,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020005 23022024",
+        "Debit": null,
+        "Credit": 498.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020006 23022024",
+        "Debit": null,
+        "Credit": 3027.000
+      },
+      {
+        "Solde": null,
+        "Date": "20/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020006 20022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو )& الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون بمو معأ 10 71 242 620 كس تتفل زان ورج 7110 بمضزير تزيم 1090 520 up بورقيية الحبيب شارع 7200 : الرئيسي الحقر 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف 70000000 مالها رأس الإسم خفية شركة -: -: -= -- -: -: - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 75 10 00855 8 29 02 2024 2016 CARTHAGE موت 0 الكريم حريفنا de ci-dessous le relevé détaillé des opérations ; vous communiquer ; inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ el عليه العملية بيان تاريخ له",
+        "Debit": 15.135,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010101 23022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو )& الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون بمو معأ 10 71 242 620 كس تتفل زان ورج 7110 بمضزير تزيم 1090 520 up بورقيية الحبيب شارع 7200 : الرئيسي الحقر 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف 70000000 مالها رأس الإسم خفية شركة -: -: -= -- -: -: - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 75 10 00855 8 29 02 2024 2016 CARTHAGE موت 0 الكريم حريفنا de ci-dessous le relevé détaillé des opérations ; vous communiquer ; inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ el عليه العملية بيان تاريخ له",
+        "Debit": 0.550,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010102 23022024",
+        "Debit": 5.600,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010102 28022024",
+        "Debit": null,
+        "Credit": 1120.000
+      },
+      {
+        "Solde": null,
+        "Date": "23/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010103 28022024",
+        "Debit": null,
+        "Credit": 2357.500
+      },
+      {
+        "Solde": null,
+        "Date": "23/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010103 23022024",
+        "Debit": 11.788,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101942 21022024",
+        "Debit": 0.524,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010104 26022024",
+        "Debit": 0.600,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010104 29022024",
+        "Debit": null,
+        "Credit": 120.000
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010105 29022024",
+        "Debit": null,
+        "Credit": 760.000
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010105 26022024",
+        "Debit": 3.800,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020014 29022024",
+        "Debit": null,
+        "Credit": 640.000
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020014 26022024",
+        "Debit": 3.200,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020015 26022024",
+        "Debit": 3.470,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020015 29022024",
+        "Debit": null,
+        "Credit": 694.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "RETRAIT CHEQUE 62130752 26022024",
+        "Debit": 2000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "RETRAIT CHEQUE 99073977 26022024",
+        "Debit": 9000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "VIREMENT TN MEME BQ 20027901 27022024",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "VIREMENT TN MEME BQ 20027901 27022024",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "VIREMENT TN MEME BQ 20027901 27022024",
+        "Debit": null,
+        "Credit": 2000.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "TPE G277 10000075 27022024",
+        "Debit": 4.750,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "TPE G277 10000075 27022024",
+        "Debit": 25.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "TPE G277 20000075 27022024",
+        "Debit": 4.750,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "TPE G277 20000075 27022024",
+        "Debit": 25.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010106 27022024",
+        "Debit": 9.210,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010106 01032024",
+        "Debit": null,
+        "Credit": 1842.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010107 01032024",
+        "Debit": null,
+        "Credit": 603.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010107 27022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو )& الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater عل ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون بمو معأ 10 71 242 620 كس تتفل زان ورج 7110 بمضزير تزيم 1090 520 up بورقيية الحبيب شارع 7200 : الرئيسي الحقر 0000102 للمؤسسات الوطني بالسجل الوحيد المعرف 70000000 مالها رأس الإسم خفية شركة -: -: -= -- -: -: - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ASASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 7510 00855 8 29 02 2024 10 2016 CARTHAGE موت لف الكريم حريفنا de ci-dessous le relevé détaillé des opérations ; vous communiquer ; inscrites à votre compte sur 005 livres. Nous vous souhaitons bonne réception حسنا. Y53 لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله لكم نقدم بأن نتشرف التاريخ el عليه العملية بيان تاريخ له",
+        "Debit": 3.015,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010108 01032024",
+        "Debit": null,
+        "Credit": 2927.300
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010108 27022024",
+        "Debit": 14.637,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010109 27022024",
+        "Debit": 1.900,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010109 01032024",
+        "Debit": null,
+        "Credit": 380.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020017 01032024",
+        "Debit": null,
+        "Credit": 1814.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020017 27022024",
+        "Debit": 9.070,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020018 01032024",
+        "Debit": null,
+        "Credit": 1309.000
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020018 27022024",
+        "Debit": 6.545,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020020 27022024",
+        "Debit": 4.845,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020020 01032024",
+        "Debit": null,
+        "Credit": 969.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "RETRAIT CHEQUE 93609927 27022024",
+        "Debit": 2000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "VIREMENT TN MEME BQ 90350542 28022024",
+        "Debit": 940.134,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "REDRESSEMENT s0270224 27022024",
+        "Debit": 10.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "REDRESSEMENT s0270224 27022024",
+        "Debit": 1.900,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010110 28022024",
+        "Debit": 8.065,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010110 04032024",
+        "Debit": null,
+        "Credit": 1613.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010111 28022024",
+        "Debit": 5.325,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010111 04032024",
+        "Debit": null,
+        "Credit": 1065.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10010112 04032024",
+        "Debit": null,
+        "Credit": 1481.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10010112 28022024",
+        "Debit": 7.405,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020021 28022024",
+        "Debit": 0.355,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020021 04032024",
+        "Debit": null,
+        "Credit": 71.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020022 04032024",
+        "Debit": null,
+        "Credit": 170.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020022 28022024",
+        "Debit": 0.850,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020023 28022024",
+        "Debit": 3.505,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020023 04032024",
+        "Debit": null,
+        "Credit": 700.900
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "COM/ TVA REMISE AFFIL 10020024 28022024",
+        "Debit": 4.008,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "ENCAISSE REMISE AFFIL 10020024 04032024",
+        "Debit": null,
+        "Credit": 801.500
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "ENCAISSEMENT CHEQUE 2101944 29022024",
+        "Debit": null,
+        "Credit": 2370.000
+      },
+      {
+        "Solde": null,
+        "Date": "28/02/2024",
+        "Libelle": "COM TVA/REM CHQ ENC 2101944 23022024 الجملة TOTAUX LTN D DINAR TUNISIEN الرصيد Devise SOLDE En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا » cas sur ce nous vous agence عدم . dans un délai maximum de 20 jours, à dater de ذا réception dudit relevé. له. استلامكم تاريخ من logs عشرون ا dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيفري 1 في المؤرخ 268 عدد poill g 2016 11جويلية في المؤرخ 48 عدد بالقانون wenw biztcomin 0 : ل 711/17001181127 مجع EN 1030 - 520 بورقيبة الحبيب شاع 7200 الرئيسي المر - للمؤسسات الوطني بالسجل الوحيد المعيف 70000000 حالها vs الإسم خفية شركة -71342 o -: 0000106 - شهري حتابت كشف RELEVE COMPTE DE MENSUEL الدولي العربي تونس بنك INTERNATIONALE ARASE DE TUNISIE BANQUE الا اا د ا Titulaire du 'compte RIB : 08 105 00075 10 00855 8 03 ZOUHEIR TRIMECHE MOBIL KRAM 10 RUE ECHMOUN CARTHAGE , الحساب رقم N°de compte 75 10 00855 8 29 02 2024 1 2016 CARTHAGE Cher client, : الكريم حريفنا Nous avons l'honneur de vous communiquer ci-dessous le relevé détaillé des opérations inscrites votre compte livres. Nous souhaitons bonne réception حسنا. قبولا لكم ونتمنى دفترنا. في بحسابكم المسجلة للعمليات المفصل الكشف أسفله 1 لكم نقدم بأن R نتشرف à sur nos vous التاريخ el عليه العملية بيان تاريخ له الجملة ققد T INAR v TUNISIEN الرصيد En عل contestation le contenu de relevé, prions عل contacter votre بفرعكم بالإتصال التفضل aéio الرجاء الكشف. هذا محتوى على مسخكم مو &) الا » cas sur ce nous vous agence عدم dans un délai maximum de 20 jours, à dater de ذا réception dudit relevé. له. اسثلامكم تاربخ من يوما عشرون ا dépôts de dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان * » Les sont garantis par le Fonds Garantie des Dépôts Bancaires صندوق يضمن précisées par la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 2017 فيغري 1 في المؤرخ 268 عدد الأمر g 2016 11جويلية في المؤرخ 48 عدد بالقانون ecteur Agence : Mr IMED JOUINI : 1080 : تلكس :71181000 الهائف تونس 1190 520 iy شارع 7200 الرئيسي المقر - 0000106 للمؤسسات 70000000 مالها رأس شركة wwwrbiat.comiin - 71342820 فاكس - بياتون -- سيداكس -- بورقيبة الحبيب : الوطني بالسجل الوحيد المعرف - الإسم خفية",
+        "Debit": 1.571,
+        "Credit": null
+      }
+    ]
+  }
+}

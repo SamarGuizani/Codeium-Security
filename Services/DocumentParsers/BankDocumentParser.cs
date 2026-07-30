@@ -28,7 +28,6 @@ namespace Codeium_Security.Services.DocumentParsers
 
             return document;
         }
-
         private List<BankAccountSection> ExtractAccountSections(List<TableRow> rows, string fullText)
         {
             var sections = new List<BankAccountSection>();
@@ -50,6 +49,8 @@ namespace Codeium_Security.Services.DocumentParsers
             // [BIAT] Detection isolee, ne touche aucune autre banque : annee de reference
             // pour les dates "jj mm" sans annee (ex: "02 01"), car DateTime.Now.Year (annee
             // systeme) est faux -> il faut l'annee reelle du releve.
+            bool isAmen = Regex.IsMatch(fullText, @"AMEN\s*BANK", RegexOptions.IgnoreCase);
+            bool isBiatExtrait = Regex.IsMatch(fullText, @"Solde\s*d[ée]part\s*au", RegexOptions.IgnoreCase);
             bool isBiat = fullText.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
             int? biatReferenceYear = null;
             if (isBiat)
@@ -96,7 +97,18 @@ namespace Codeium_Security.Services.DocumentParsers
                     if (debitCell != null) debitAnchor = debitCell.Left;
                     if (creditCell != null) creditAnchor = creditCell.Left;
                     if (soldeCell != null) soldeAnchor = soldeCell.Left;
-                    continue;
+                    // [AMEN] Pas de "Solde Initial" dans ce format : on cree la section directement ici
+                    if (isAmen && current == null)
+                    {
+                        current = new BankAccountSection
+                        {
+                            AccountNumber = lastSeenAccountNumber,
+                            Rib = lastSeenRib,
+                            Currency = ExtractCurrency(fullText),
+                            SoldeInitial = 0
+                        };
+                    }
+                        continue;
                 }
 
                 // [ATTIJARI] "Solde (TND) au [date] : [montant]" -> capture comme SoldeFinal, PAS comme nouvelle section
@@ -109,8 +121,10 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 // [QNB + BIAT] "Solde Initial" (QNB) OU "SOLDE AU jj mm aaaa [montant]" (BIAT)
                 // = debut d'une nouvelle section/sous-compte
+               
                 bool isBiatSoldeAu = Regex.IsMatch(joined, @"SOLDE\s+AU\s+\d{2}\s+\d{2}\s+\d{4}", RegexOptions.IgnoreCase);
-                if (Regex.IsMatch(joined, @"Solde\s*Initial", RegexOptions.IgnoreCase) || isBiatSoldeAu)
+                var soldeDepartMatch = Regex.Match(joined, @"Solde\s*d[ée]part\s*au\s*\d{1,2}\s*[A-Za-zÉÛéû]{3,4}\s*\d{2,4}\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                if (Regex.IsMatch(joined, @"Solde\s*Initial", RegexOptions.IgnoreCase) || isBiatSoldeAu || soldeDepartMatch.Success)
                 {
                     if (current != null)
                     {
@@ -119,9 +133,14 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     sectionRawText = joined + "\n";
 
-                    var initMatch = AmountRegex.Match(joined);
-                    decimal soldeInit = initMatch.Success ? ParseAmount(initMatch.Value) : 0;
-
+                    decimal soldeInit;
+                    if (soldeDepartMatch.Success)
+                        soldeInit = ParseAmount(soldeDepartMatch.Groups[1].Value);
+                    else
+                    {
+                        var initMatch = AmountRegex.Match(joined);
+                        soldeInit = initMatch.Success ? ParseAmount(initMatch.Value) : 0;
+                    }
                     current = new BankAccountSection
                     {
                         AccountNumber = lastSeenAccountNumber,
@@ -246,10 +265,21 @@ namespace Codeium_Security.Services.DocumentParsers
                 pendingLibelleBuffer = "";
                 pendingDate = "";
 
-                decimal? soldeAvantTx = previousSolde;
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
-                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde, isBiat);
-                ApplyMovementFallback(tx, soldeAvantTx);
+
+                if (isBiatExtrait && amountCandidates.Count > 0)
+                {
+                    // [BIAT-EXTRAIT] Une seule colonne "Montant" signee : negatif = debit, positif = credit
+                    decimal montant = amountCandidates[amountCandidates.Count - 1].Value;
+                    if (montant < 0) tx.Debit = Math.Abs(montant);
+                    else if (montant > 0) tx.Credit = montant;
+                }
+                else
+                {
+                    decimal? soldeAvantTx = previousSolde;
+                    AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde, isBiat);
+                    ApplyMovementFallback(tx, soldeAvantTx);
+                }
 
                 if (!IsDuplicateOfLast(current, tx))
                     current.Transactions.Add(tx);
@@ -293,6 +323,7 @@ namespace Codeium_Security.Services.DocumentParsers
         {
             var patterns = new[]
             {
+                @"\b\d{2}-\d{2}-\d{5}/\d\b",          // [BIAT-EXTRAIT] format "59-10-01457/0"
                 @"\b\d{2}\s\d{2}\s\d{5}\s\d{1}\b",   // [BIAT] format "75 10 00855 8" seul sur sa ligne
                 @"\b\d{2,5}-\d{4,12}-\d{1,4}\b",
                 @"\b\d{10,20}\b", // repli generique en DERNIER recours (le plus risque de faux positifs)
@@ -364,6 +395,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 // [BIAT] Pas de colonne Solde reelle (seulement Debit/Credit) -> ne pas
                 // recopier le montant du mouvement dans Solde, ca fausserait la donnee.
+                
                 bool skipSoldeFallback = isBiat && amountCandidates.Count == 1;
                 if (!tx.Solde.HasValue && amountCandidates.Count > 0 && !skipSoldeFallback)
                     tx.Solde = amountCandidates[amountCandidates.Count - 1].Value;
@@ -410,7 +442,12 @@ namespace Codeium_Security.Services.DocumentParsers
             }
             previousSolde = tx.Solde;
         }
-
+        private static readonly Dictionary<string, int> FrenchMonthAbbrev = new(StringComparer.OrdinalIgnoreCase)
+{
+    {"JAN",1},{"FEV",2},{"FÉV",2},{"MAR",3},{"AVR",4},{"MAI",5},
+    {"JUN",6},{"JUIN",6},{"JUL",7},{"JUIL",7},{"AOU",8},{"AOÛT",8},
+    {"SEP",9},{"OCT",10},{"NOV",11},{"DEC",12},{"DÉC",12}
+};
         // [fix #2] Formats de date etendus (avec et sans annee)
         private string NormalizeDate(string raw, int? referenceYear = null)
         {
@@ -439,6 +476,18 @@ namespace Codeium_Security.Services.DocumentParsers
                 var withYear = new DateTime(referenceYear ?? DateTime.Now.Year, parsedNoYear.Month, parsedNoYear.Day);
                 return withYear.ToString("dd/MM/yyyy");
             }
+            // [BIAT-EXTRAIT] Format "04 JAN 24" : jour + mois abrege francais + annee sur 2 chiffres
+            var frMatch = Regex.Match(raw.Trim(), @"^(\d{1,2})\s+([A-Za-zÉÛéû]{3,4})\s+(\d{2,4})$");
+            if (frMatch.Success && FrenchMonthAbbrev.TryGetValue(frMatch.Groups[2].Value, out int frMonth))
+            {
+                int frDay = int.Parse(frMatch.Groups[1].Value);
+                int frYear = int.Parse(frMatch.Groups[3].Value);
+                if (frYear < 100) frYear += 2000;
+                try { return new DateTime(frYear, frMonth, frDay).ToString("dd/MM/yyyy"); }
+                catch { return ""; }
+            }
+
+            return "";
 
             return "";
         }
