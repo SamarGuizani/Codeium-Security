@@ -69,8 +69,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (cellTexts.Count == 0) continue;
 
                 string joined = string.Join(" ", cellTexts);
-                Console.WriteLine("=================================");
-                Console.WriteLine(joined);
+              
                 // [fix #9] Nettoie les artefacts d'impression web (ex: export BTK@DIRECT) qui
                 // injectent une entete/pied de page en plein milieu du contenu.
                 joined = StripPrintArtifacts(joined);
@@ -154,6 +153,16 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (current == null) continue;
 
                 string normalizedDate = NormalizeDate(cellTexts[0].Trim(), biatReferenceYear);
+                int dateTokensConsumed = 1;
+                if (string.IsNullOrEmpty(normalizedDate) && cellTexts.Count > 1)
+                {
+                    string twoTokenDate = NormalizeDate(cellTexts[0].Trim() + " " + cellTexts[1].Trim(), biatReferenceYear);
+                    if (!string.IsNullOrEmpty(twoTokenDate))
+                    {
+                        normalizedDate = twoTokenDate;
+                        dateTokensConsumed = 2;
+                    }
+                }
 
                 // [COMMUN] Fusionne le signe "-" isole AVEC sa position X, pour les montants de cette ligne
                 var mergedWithPos = new List<(int Left, string Text)>();
@@ -223,13 +232,13 @@ namespace Codeium_Security.Services.DocumentParsers
                 {
                     // [ATTIJARI] Date + description, montant sur la ligne suivante -> on retient la date et le texte
                     pendingDate = normalizedDate;
-                    string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)));
+                    string textOnly = string.Join(" ", cellTexts.Skip(dateTokensConsumed).Where(c => !AmountRegex.IsMatch(c)));
                     pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
                     continue;
                 }
 
                 // [QNB] Cas normal : date + montant(s) sur la meme ligne
-                string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)))
+                string description = string.Join(" ", cellTexts.Skip(dateTokensConsumed).Where(c => !AmountRegex.IsMatch(c)))
                     .Trim(' ', '|', '[', ']', '-', '_');
                 description = Regex.Replace(description, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
 
@@ -284,8 +293,9 @@ namespace Codeium_Security.Services.DocumentParsers
         {
             var patterns = new[]
             {
+                @"\b\d{2}\s\d{2}\s\d{5}\s\d{1}\b",   // [BIAT] format "75 10 00855 8" seul sur sa ligne
                 @"\b\d{2,5}-\d{4,12}-\d{1,4}\b",
-                @"\b\d{10,20}\b",
+                @"\b\d{10,20}\b", // repli generique en DERNIER recours (le plus risque de faux positifs)
                 @"Compte\s*:?\s*(\d[\d\s-]{6,25})",
                 @"Account\s*Number\s*:?\s*(\d[\d\s-]{6,25})",
                 @"N[°o]?\s*(?:de\s*)?Compte\s*:?\s*(\d[\d\s-]{6,25})"   // <-- accepte "N° de compte"
