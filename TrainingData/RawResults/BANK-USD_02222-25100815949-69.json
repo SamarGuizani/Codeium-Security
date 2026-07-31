@@ -19,22 +19,22 @@
         "Solde": 4251.06,
         "Date": "14/05/2025",
         "Libelle": "Date de PAIEMENT TPE INTERNATIONAL",
-        "Debit": null,
-        "Credit": 39.92
+        "Debit": 39.92,
+        "Credit": null
       },
       {
         "Solde": 4250.66,
         "Date": "14/05/2025",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": 0.40,
-        "Credit": null
+        "Debit": null,
+        "Credit": 0.40
       },
       {
         "Solde": 4250.58,
         "Date": "14/05/2025",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": 0.08,
-        "Credit": null
+        "Debit": null,
+        "Credit": 0.08
       },
       {
         "Solde": 2325.06,
@@ -68,36 +68,36 @@
         "Solde": 2266.97,
         "Date": "19/05/2025",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": 0.25,
-        "Credit": null
+        "Debit": null,
+        "Credit": 0.25
       },
       {
         "Solde": 2266.83,
         "Date": "19/05/2025",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": 0.14,
-        "Credit": null
+        "Debit": null,
+        "Credit": 0.14
       },
       {
         "Solde": 2266.78,
         "Date": "19/05/2025",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": 0.05,
-        "Credit": null
+        "Debit": null,
+        "Credit": 0.05
       },
       {
         "Solde": 2266.75,
         "Date": "19/05/2025",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": 0.03,
-        "Credit": null
+        "Debit": null,
+        "Credit": 0.03
       },
       {
         "Solde": 2263.09,
         "Date": "19/05/2025",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": 3.66,
-        "Credit": null
+        "Debit": null,
+        "Credit": 3.66
       },
       {
         "Solde": 11363.09,

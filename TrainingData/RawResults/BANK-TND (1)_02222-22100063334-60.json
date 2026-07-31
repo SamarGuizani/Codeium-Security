@@ -19,8 +19,8 @@
         "Solde": 24341.097,
         "Date": "05/05/2025",
         "Libelle": "Date de KONNECT NETWORKS DU",
-        "Debit": null,
-        "Credit": 47.818
+        "Debit": 47.818,
+        "Credit": null
       },
       {
         "Solde": 24338.717,
@@ -131,8 +131,8 @@
         "Solde": 8835.461,
         "Date": "23/06/2025",
         "Libelle": "PRELEV. RECU AUT BQE 166677",
-        "Debit": null,
-        "Credit": 682.654
+        "Debit": 682.654,
+        "Credit": null
       },
       {
         "Solde": 8747.120,
@@ -236,8 +236,8 @@
         "Solde": 20795.936,
         "Date": "11/07/2025",
         "Libelle": "COM&TVA RETRAIT DEPL 60736",
-        "Debit": null,
-        "Credit": 2.380
+        "Debit": 2.380,
+        "Credit": null
       },
       {
         "Solde": 17835.319,

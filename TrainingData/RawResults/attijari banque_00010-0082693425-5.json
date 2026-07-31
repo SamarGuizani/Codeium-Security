@@ -68,8 +68,8 @@
         "Solde": -1661.156,
         "Date": "21/02/2024",
         "Libelle": "STE TOPDIS AVANCE / FACT",
-        "Debit": 3000.000,
-        "Credit": null
+        "Debit": null,
+        "Credit": 3000.000
       },
       {
         "Solde": -3913.189,
@@ -145,8 +145,8 @@
         "Solde": -4539.397,
         "Date": "22/04/2024",
         "Libelle": "STE TOPDIS VIREMENT",
-        "Debit": 1696.480,
-        "Credit": null
+        "Debit": null,
+        "Credit": 1696.480
       },
       {
         "Solde": -4568.909,
@@ -208,8 +208,8 @@
         "Solde": 1546.691,
         "Date": "15/05/2024",
         "Libelle": "STE TOPDIS AV / FACTURE",
-        "Debit": 8045.000,
-        "Credit": null
+        "Debit": null,
+        "Credit": 8045.000
       },
       {
         "Solde": -0.675,

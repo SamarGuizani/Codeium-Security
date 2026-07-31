@@ -26,15 +26,15 @@
         "Solde": 3291.00,
         "Date": "25/11/2024",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": 0.10,
-        "Credit": null
+        "Debit": null,
+        "Credit": 0.10
       },
       {
         "Solde": 3290.98,
         "Date": "25/11/2024",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": 0.02,
-        "Credit": null
+        "Debit": null,
+        "Credit": 0.02
       },
       {
         "Solde": 7290.98,
