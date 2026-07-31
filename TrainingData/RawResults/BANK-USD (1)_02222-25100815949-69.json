@@ -9,7 +9,7 @@
     "AccountNumber": "02222-25100815949-69",
     "Currency": "USD",
     "Rib": "TN5920022222510081594969",
-    "SoldeInitial": 3300.81,
+    "SoldeInitial": 0,
     "SoldeFinal": null,
     "SoldeDisponible": 0,
     "TotalDebit": 6009.83,
@@ -26,15 +26,15 @@
         "Solde": 3291.00,
         "Date": "25/11/2024",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": null,
-        "Credit": 0.10
+        "Debit": 0.10,
+        "Credit": null
       },
       {
         "Solde": 3290.98,
         "Date": "25/11/2024",
         "Libelle": "COM & TVA RET. CARTE",
-        "Debit": null,
-        "Credit": 0.02
+        "Debit": 0.02,
+        "Credit": null
       },
       {
         "Solde": 7290.98,

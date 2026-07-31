@@ -24,7 +24,12 @@ namespace Codeium_Security.Services.DocumentParsers
             bool isBiat = bankName.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
             bool isZitouna = fullText.Contains("ZITOUNA", StringComparison.OrdinalIgnoreCase);
             // Ajustement spécifique à BIAT (réduction du regroupement vertical)
-            if (isBiat || isZitouna)
+            bool isBtk = fullText.Contains("BANK-TND", StringComparison.OrdinalIgnoreCase)
+                || fullText.Contains("BANK-USD", StringComparison.OrdinalIgnoreCase)
+                || fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
+            // ===== AJOUT POUR QNB =====
+            bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
+            if (isBiat || isZitouna || isBtk || isQnb)
                 engine.VerticalTolerance = 1;
 
             // Construction du tableau avec la tolérance éventuellement modifiée
@@ -85,10 +90,12 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
             }
 
-
+            bool isAttijari = fullText.Contains("ATTIJARI", StringComparison.OrdinalIgnoreCase);
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
             bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
-
+            bool isBtk = fullText.Contains("BANK-TND", StringComparison.OrdinalIgnoreCase)
+             || fullText.Contains("BANK-USD", StringComparison.OrdinalIgnoreCase)
+             || fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
             foreach (var row in rows)
             {
 
@@ -277,7 +284,21 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
-                string normalizedDate = GetNormalizedDateFromCells(cellTexts, isBiat ? documentYear : null);                // [COMMUN] Fusionne le signe "-" isole AVEC sa position X, pour les montants de cette ligne
+                string normalizedDate = GetNormalizedDateFromCells(cellTexts, isBiat ? documentYear : null);
+
+                // [QNB] Si la date n'a pas été trouvée, on tente de l'extraire depuis le texte complet
+                if (isQnb && string.IsNullOrEmpty(normalizedDate))
+                {
+                    // Cherche une date au format "01/01/2024" ou "01 01 2024"
+                    var dateMatch = Regex.Match(joined, @"\b(\d{1,2})\s*[/\s](\d{1,2})\s*[/\s](\d{4})\b");
+                    if (dateMatch.Success)
+                    {
+                        string d = $"{dateMatch.Groups[1].Value}/{dateMatch.Groups[2].Value}/{dateMatch.Groups[3].Value}";
+                        normalizedDate = NormalizeDate(d, null);
+                    }
+                }
+
+                // [COMMUN] Fusionne le signe "-" isole AVEC sa position X, pour les montants de cette ligne
                 var mergedWithPos = new List<(int Left, string Text)>();
                 for (int i = 0; i < cells.Count; i++)
                     mergedWithPos.Add((cells[i].Left, NormalizeSignSpacing(CleanWhitespace(cells[i].Text))));
@@ -296,6 +317,14 @@ namespace Codeium_Security.Services.DocumentParsers
                     .Select(c => new { Left = c.Left, Value = ParseAmount(AmountRegex.Match(c.Text).Value) })
                     .ToList();
 
+                // [BTK] Ne garder que le premier nombre comme montant, les autres sont des soldes ou des bruits
+                if (isBtk && amountCandidates.Count > 1)
+                {
+                    // On prend le plus à gauche (premier) comme montant, on ignore les autres
+                    amountCandidates = amountCandidates.Take(1).ToList();
+                }
+
+                // [fix generique] Filet de securite : si aucune formule connue ...
                 // [fix generique] Filet de securite : si aucune formule connue ("Solde Initial",
                 // "SOLDE AU", "Solde (TND) au", ...) n'a permis d'ouvrir une section de compte, mais
                 // qu'on est manifestement sur une vraie ligne de transaction (date + au moins un
@@ -333,6 +362,48 @@ namespace Codeium_Security.Services.DocumentParsers
                 {
                     if (isNoise) continue;
 
+                    // ---- AJOUT SPÉCIFIQUE ATTIJARI : continuation avec montant ----
+                    if (isAttijari && amountCandidates.Count > 0 && !string.IsNullOrEmpty(pendingDate))
+                    {
+                        // Récupère le texte de la ligne sans les montants
+                        string textOnly = string.Join(" ", cellTexts.Where(c => !AmountRegex.IsMatch(c))).Trim();
+                        if (!string.IsNullOrEmpty(textOnly))
+                        {
+                            // Ajoute à la transaction précédente si elle existe
+                            if (current.Transactions.Count > 0)
+                            {
+                                var lastTx = current.Transactions[current.Transactions.Count - 1];
+                                lastTx.Libelle = (lastTx.Libelle + " " + textOnly).Trim();
+                            }
+                            else
+                            {
+                                pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
+                            }
+                        }
+                        continue; // On ne crée pas de nouvelle transaction avec cette ligne
+                    }
+                    // ---- FIN AJOUT ----
+
+                    // === AJOUT SPÉCIFIQUE BTK ===
+                    // Les lignes comme "_ Commission Virement" sont des continuations
+                    if (isBtk && amountCandidates.Count > 0 && !string.IsNullOrEmpty(pendingDate))
+                    {
+                        string textOnly = string.Join(" ", cellTexts.Where(c => !AmountRegex.IsMatch(c))).Trim();
+                        if (!string.IsNullOrEmpty(textOnly))
+                        {
+                            if (current.Transactions.Count > 0)
+                            {
+                                var lastTx = current.Transactions[current.Transactions.Count - 1];
+                                lastTx.Libelle = (lastTx.Libelle + " " + textOnly).Trim();
+                            }
+                            else
+                            {
+                                pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
+                            }
+                        }
+                        continue;
+                    }
+                    // === FIN AJOUT ===
                     bool isPureAmountLine = amountCandidates.Count > 0;
 
                     if (isPureAmountLine)
@@ -445,6 +516,48 @@ namespace Codeium_Security.Services.DocumentParsers
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
                 AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
                 ApplyMovementFallback(tx, soldeAvantTx);
+                // === DEBUT CORRECTION ATTIJARI ===
+                // Pour Attijari, la position des colonnes Débit/Crédit est parfois inversée.
+                // On rétablit le mouvement en fonction de la variation réelle du solde
+                // // [Attijari] Forcer le solde à être négatif si le solde initial est négatif
+                if (isAttijari && tx.Solde.HasValue && tx.Solde.Value > 0 && previousSolde.HasValue && previousSolde.Value < 0)
+                {
+                    tx.Solde = -tx.Solde.Value;
+                }
+                if (isAttijari && tx.Solde.HasValue && soldeAvantTx.HasValue)
+                {
+                    decimal variation = tx.Solde.Value - soldeAvantTx.Value;
+                    // Si le solde a baissé, c'est un débit ; s'il a augmenté, c'est un crédit
+                    if (variation < 0 && tx.Credit.HasValue && !tx.Debit.HasValue)
+                    {
+                        tx.Debit = tx.Credit;
+                        tx.Credit = null;
+                    }
+                    else if (variation > 0 && tx.Debit.HasValue && !tx.Credit.HasValue)
+                    {
+                        tx.Credit = tx.Debit;
+                        tx.Debit = null;
+                    }
+                }
+                // === FIN CORRECTION ATTIJARI ===
+                // === DEBUT CORRECTION BTK ===
+                // BTK a souvent des soldes ou montants sans signe, ou des espaces dans les nombres.
+                // On rétablit le mouvement en fonction de la variation du solde (comme pour Attijari).
+                if (isBtk && tx.Solde.HasValue && soldeAvantTx.HasValue)
+                {
+                    decimal variation = tx.Solde.Value - soldeAvantTx.Value;
+                    if (variation < 0 && tx.Credit.HasValue && !tx.Debit.HasValue)
+                    {
+                        tx.Debit = tx.Credit;
+                        tx.Credit = null;
+                    }
+                    else if (variation > 0 && tx.Debit.HasValue && !tx.Credit.HasValue)
+                    {
+                        tx.Credit = tx.Debit;
+                        tx.Debit = null;
+                    }
+                }
+                // === FIN CORRECTION BTK ===
 
                 if (!IsDuplicateOfLast(current, tx))
                     current.Transactions.Add(tx);
@@ -668,6 +781,13 @@ namespace Codeium_Security.Services.DocumentParsers
         private string NormalizeDate(string raw , int? defaultYear = null)
         {
             raw = raw.Trim();
+            // ===== AJOUT : dates avec espaces (ex: "01 01 2024") =====
+            // Pour QNB et autres, remplacer les espaces par "/" si on a 3 parties
+            if (Regex.IsMatch(raw, @"^\d{1,2}\s+\d{1,2}\s+\d{4}$"))
+            {
+                raw = Regex.Replace(raw, @"\s+", "/");
+            }
+            // ===== FIN AJOUT =====
             string candidate = raw;
 
             // [fix BIAT - UNIQUEMENT] Dates avec ESPACES (ex: "01 02" -> "01/02")
@@ -713,6 +833,13 @@ namespace Codeium_Security.Services.DocumentParsers
         private decimal ParseAmount(string raw)
         {
             int lastSepIndex = -1;
+            // === AJOUT POUR BTK ===
+            // Supprime les espaces intempestifs (ex: "1 957,129" -> "1957,129")
+            raw = raw.Replace(" ", "");
+            // Si un signe moins est séparé ou manquant, on le rétablit
+            // (BTK a parfois des nombres sans signe alors que le solde baisse)
+            // On ne corrige pas ici, on le fait après dans l'assignation
+            // === FIN AJOUT ===
             for (int i = raw.Length - 1; i >= 0; i--)
             {
                 if (raw[i] == '.' || raw[i] == ',' || raw[i] == ' ')

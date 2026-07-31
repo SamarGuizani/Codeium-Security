@@ -9,7 +9,7 @@
     "AccountNumber": "02222-22100063334-60",
     "Currency": "TND",
     "Rib": "TN5920022222210006333460",
-    "SoldeInitial": 27196.527,
+    "SoldeInitial": 0,
     "SoldeFinal": null,
     "SoldeDisponible": 0,
     "TotalDebit": null,
@@ -19,8 +19,8 @@
         "Solde": 26196.527,
         "Date": "02/12/2024",
         "Libelle": "Date de @VIREMENT EMIS MEM AG ا En faveur OUEDERNI MOHAMED",
-        "Debit": 1000.000,
-        "Credit": null
+        "Debit": null,
+        "Credit": 1000.000
       },
       {
         "Solde": 26193.552,
@@ -180,8 +180,8 @@
         "Solde": 1873.829,
         "Date": "09/01/2025",
         "Libelle": "© COM & TVA TRS نع 25000082 ا com. transfert recu ا TVA/commission",
-        "Debit": 83.300,
-        "Credit": null
+        "Debit": null,
+        "Credit": 83.300
       },
       {
         "Solde": 1861.929,
@@ -236,8 +236,8 @@
         "Solde": 4510.245,
         "Date": "23/01/2025",
         "Libelle": "ATM BTK JERBA Il DU",
-        "Debit": 800.000,
-        "Credit": null
+        "Debit": null,
+        "Credit": 800.000
       },
       {
         "Solde": 4410.245,
@@ -271,8 +271,8 @@
         "Solde": 13475.370,
         "Date": "04/02/2025",
         "Libelle": "& COM & TVA VIR. EMIS ا Commission Virement ا TVA/Com Virement",
-        "Debit": 2.975,
-        "Credit": null
+        "Debit": null,
+        "Credit": 2.975
       },
       {
         "Solde": 12029.528,
@@ -292,8 +292,8 @@
         "Solde": 10580.711,
         "Date": "04/02/2025",
         "Libelle": "& VIREMENT EMIS AUT BQ سا En faveur DAFA GHANDRI",
-        "Debit": 1445.842,
-        "Credit": null
+        "Debit": null,
+        "Credit": 1445.842
       },
       {
         "Solde": 10479.411,
@@ -320,15 +320,15 @@
         "Solde": 800.000,
         "Date": "17/02/2025",
         "Libelle": "ATM BTK CHARGUIA DU 9155411",
-        "Debit": 800.000,
-        "Credit": null
+        "Debit": null,
+        "Credit": 800.000
       },
       {
         "Solde": 8678.008,
         "Date": "19/02/2025",
         "Libelle": "KONNECT NETWORKS DU",
-        "Debit": 477.403,
-        "Credit": null
+        "Debit": null,
+        "Credit": 477.403
       },
       {
         "Solde": 7995.354,

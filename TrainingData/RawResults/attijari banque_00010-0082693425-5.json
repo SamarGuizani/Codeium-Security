@@ -9,7 +9,7 @@
     "AccountNumber": "00010-0082693425-5",
     "Currency": "TND",
     "Rib": "TN5904000010008269342555",
-    "SoldeInitial": -2677.639,
+    "SoldeInitial": 0,
     "SoldeFinal": 0.000,
     "SoldeDisponible": 0,
     "TotalDebit": 10247.456,
@@ -68,8 +68,8 @@
         "Solde": -1661.156,
         "Date": "21/02/2024",
         "Libelle": "STE TOPDIS AVANCE / FACT",
-        "Debit": null,
-        "Credit": 3000.000
+        "Debit": 3000.000,
+        "Credit": null
       },
       {
         "Solde": -3913.189,
@@ -145,8 +145,8 @@
         "Solde": -4539.397,
         "Date": "22/04/2024",
         "Libelle": "STE TOPDIS VIREMENT",
-        "Debit": null,
-        "Credit": 1696.480
+        "Debit": 1696.480,
+        "Credit": null
       },
       {
         "Solde": -4568.909,
@@ -208,8 +208,8 @@
         "Solde": 1546.691,
         "Date": "15/05/2024",
         "Libelle": "STE TOPDIS AV / FACTURE",
-        "Debit": null,
-        "Credit": 8045.000
+        "Debit": 8045.000,
+        "Credit": null
       },
       {
         "Solde": -0.675,
