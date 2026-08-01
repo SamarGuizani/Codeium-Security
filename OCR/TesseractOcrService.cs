@@ -29,6 +29,10 @@ namespace Codeium_Security.OCR
                     using var page = _engine.Process(img);
 
                     var text = page.GetText();
+                    Console.WriteLine("====================================");
+                    Console.WriteLine("TEXTE BRUT TESSERACT");
+                    Console.WriteLine(text);
+                    Console.WriteLine("====================================");
                     var confidence = page.GetMeanConfidence();
                     var words = new List<OcrWord>();
 

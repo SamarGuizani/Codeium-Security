@@ -86,7 +86,7 @@
         "Credit": null
       },
       {
-        "Solde": 916.337,
+        "Solde": 13916.337,
         "Date": "02/06/2025",
         "Libelle": "= VIREMENT EMIS AUT BQ ا En faveur Jihed Werdien Date de",
         "Debit": 1445.842,
@@ -96,8 +96,8 @@
         "Solde": 13915.147,
         "Date": "02/06/2025",
         "Libelle": "& COM. & TVA VIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
-        "Debit": null,
-        "Credit": 1.190
+        "Debit": 1.190,
+        "Credit": null
       },
       {
         "Solde": 12469.305,
@@ -121,7 +121,7 @@
         "Credit": null
       },
       {
-        "Solde": 518.115,
+        "Solde": 9518.115,
         "Date": "09/06/2025",
         "Libelle": "& VIREMENT EMIS MEM AG ا En faveur OUEDERNI MOHAMED",
         "Debit": 1000.000,
@@ -159,7 +159,7 @@
         "Solde": 7259.628,
         "Date": "01/07/2025",
         "Libelle": "& VIREMENT EMIS AUT BQ ا En faveur Jihed Werdien Date de",
-        "Debit": 445.842,
+        "Debit": 1445.842,
         "Credit": null
       },
       {
@@ -173,7 +173,7 @@
         "Solde": 5812.596,
         "Date": "01/07/2025",
         "Libelle": "B VIREMENT EMIS AUT BQ ا En faveur Safa Ghandri",
-        "Debit": 445.842,
+        "Debit": 1445.842,
         "Credit": null
       },
       {
@@ -191,14 +191,14 @@
         "Credit": null
       },
       {
-        "Solde": 412.596,
+        "Solde": 3412.596,
         "Date": "07/07/2025",
         "Libelle": "ATM BTK JERBA DU",
         "Debit": 800.000,
         "Credit": null
       },
       {
-        "Solde": 400.696,
+        "Solde": 3400.696,
         "Date": "08/07/2025",
         "Libelle": "COM & TVA VIR. EMIS",
         "Debit": 11.900,

@@ -1643,6 +1643,13 @@
         "Solde": null,
         "Date": "23/09/2024",
         "Libelle": "09 REDRESSEMENT",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/09/2024",
+        "Libelle": "09 REDRESSEMENT",
         "Debit": 5.000,
         "Credit": null
       },

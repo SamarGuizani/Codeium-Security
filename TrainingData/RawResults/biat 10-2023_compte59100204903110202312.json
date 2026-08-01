@@ -200,6 +200,27 @@
       {
         "Solde": null,
         "Date": "10/10/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.165,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "10/10/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.165,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "10/10/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.165,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "10/10/2023",
         "Libelle": "COM ET TVA/VIR AUT BQ",
         "Debit": 2.380,
         "Credit": null
@@ -265,6 +286,13 @@
         "Date": "12/10/2023",
         "Libelle": "COMMISSION REM EFFETS 0027016",
         "Debit": 5.500,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "12/10/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.165,
         "Credit": null
       },
       {
@@ -501,6 +529,13 @@
       {
         "Solde": null,
         "Date": "18/10/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.165,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "18/10/2023",
         "Libelle": "VIR RECU/REG FACTURE",
         "Debit": null,
         "Credit": 173.550
@@ -643,6 +678,20 @@
         "Date": "24/10/2023",
         "Libelle": "COMMISSION REM EFFETS 0027024",
         "Debit": 5.500,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/10/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.165,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/10/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.165,
         "Credit": null
       },
       {

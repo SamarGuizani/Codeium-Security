@@ -1,0 +1,433 @@
+{
+  "FileName": "Relevé Zitouna 06.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 88.25,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "0000308957",
+    "Currency": "TND",
+    "Rib": "TN5925056000000030895769",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": null,
+        "Date": "01/06/2026",
+        "Libelle": "COM VIR TN AUTRE BQ AC-0000308957",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "01/06/2026",
+        "Libelle": "VIR TN AUTRE BQ STE DES TRAVAUX",
+        "Debit": null,
+        "Credit": 804.250
+      },
+      {
+        "Solde": null,
+        "Date": "04/06/2026",
+        "Libelle": "COM VIR TN AUTRE BQ AC-0000308957",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "04/06/2026",
+        "Libelle": "COMMISSION TAWASSOL CHG2615598011",
+        "Debit": -8.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "04/06/2026",
+        "Libelle": "TVA CHG2615598011",
+        "Debit": -1.520,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "04/06/2026",
+        "Libelle": "VIR TN AUTRE BQ TUNIS DATA SERVI",
+        "Debit": null,
+        "Credit": 159.870
+      },
+      {
+        "Solde": null,
+        "Date": "09/06/2026",
+        "Libelle": "RESERVATION CHEQUE 4001463",
+        "Debit": 198.800,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "11/06/2026",
+        "Libelle": "COM ENC CHEQUE TN AC-0000308957",
+        "Debit": -1.190,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "11/06/2026",
+        "Libelle": "ENC CHEQ TN NUM",
+        "Debit": null,
+        "Credit": 872.714
+      },
+      {
+        "Solde": null,
+        "Date": "12/06/2026",
+        "Libelle": "COM VIR TN AUTRE BQ AC-0000308957",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "12/06/2026",
+        "Libelle": "VIR TN AUTRE BQ AMERICAN COOPERA",
+        "Debit": null,
+        "Credit": 81.920
+      },
+      {
+        "Solde": null,
+        "Date": "15/06/2026",
+        "Libelle": "COM VIR TN AUTRE BQ AC-0000308957",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "15/06/2026",
+        "Libelle": "RESERVATION CHEQUE 4001465",
+        "Debit": 70.200,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "15/06/2026",
+        "Libelle": "VIR TN AUTRE BQ INTERCOLOR SAS",
+        "Debit": null,
+        "Credit": 377.200
+      },
+      {
+        "Solde": null,
+        "Date": "15/06/2026",
+        "Libelle": "VIR TN AUTRE BQ INTERCOLOR SAS",
+        "Debit": null,
+        "Credit": 472.240
+      },
+      {
+        "Solde": null,
+        "Date": "15/06/2026",
+        "Libelle": "VIR TN AUTRE BQ 0١ THAMM",
+        "Debit": null,
+        "Credit": 393.700
+      },
+      {
+        "Solde": null,
+        "Date": "17/06/2026",
+        "Libelle": "COM VIR TN AUTRE BQ AC-0000308957",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/06/2026",
+        "Libelle": "COMM REGLEMENT EFFET AC-TND106400001 Nos écritures s'entendent sauf erreur ou OMISSION. فيها سيو أو خطأ وقوع يثبت أن إلا المعتبرة هي المصرف قيود المجموع Totaux Merci d'avoir choisi Banque Zitouna — الزيتونة مصرف اختياركم على شكرا Solde au في الرصيد BZ-RC-01 Ce relevé est établi de bonne foi, par ailleurs, il appartient au client 06 signaler, sans délai, toute inexactitude omission. Réclamations Clients et Médiateur Bancaire المصرفي والموفق الحرفاء تشكيات ou سهو. أو خطأ بكل فورا المصرف إعلام الحريف وعلى نية. بحسن الكشف هذا أنشئ Nous sommes toujours à votre écoute خدمتكم في دانما نحن 811055 55 1811055 55 Ce compte est éligible à la couverture du 20005 de Garantie des Dépôts Bancaires conformément dispositions de l’article 152 de la loi 2016- 8. B contact@banquezitouna.com & contact@banquezitouna.com aux 2016- لسنة 48 عدد قانون من 152 الفصل لمقتضيات طبقا البنكية الودائع ضمان صندوق بتغطية مشمول الحساب هذا Afin d'accéder aux coordonnées du Médiateur, التالي الموقع زيارة يرجى المصرفي الموفق لمراجعة Veuillez consulter le site suivant : www.cbf.org.tn Wwww.cbf.org.tn Banque Zitouna reste à la 01500511100 du client pour toute demande d’informations complémentaires sur le mode de calcul des profits. الأرباح. احتساب طريقة بخصوص التوضيح لمزيد الحريف ذمة على الزيتونة مصرف يبقى Lexique des commissions : العمولات معجم = L 14 OR E . الإجتماع: المقر الإسم شركة الزيتونة مصرف خفية 1000 الهاتف: - - الكرم SA - : تونس Le - -: 555 BANQUE ZITOUNA Barique Zitouna Siège social 2 Bo lité de : la Vie 2015 Kram Tunis Tél. 81105 7164000 Identifiant 1 WIFT BZ TNTT - www.banquezitouna.com unique : RELEVÉ DE COMPTE حساب كشف Agence ALAIN SAVARY الفرع — لحار 01062026 لل 30/06/2026 RIB 25056000000030895769 Datedu c ,5 [BAN TN59 25056000000030895769 Devise العملة TND Cher client, nous avons l'honneur de vous adresser, ci-après, le relevé des opérations portées a votre compte souhaitant t{onne réception STE POINT en vous حسابكم في المسجلة للعمليات المفصل الكشف لكم نقدم بأن نتشرف الكريم حريفنا 18 RUE IBN CHAREF BELVEDERE TUNIS",
+        "Debit": -5.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/06/2026",
+        "Libelle": "TUNIS BELVEDERE Ce document généré par informatique, ne nécessite pas de signature التوقيع تتطلب لا الإعلامية بواسطة معدة الوثيقة هذه التاريخ العمليّة القيمة تاريخ عليه له نص PAIEMENT EFFET 010843616711",
+        "Debit": 441.833,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/06/2026",
+        "Libelle": "VIR TN AUTRE BQ TUNISAIR HANDLIN",
+        "Debit": null,
+        "Credit": 99.494
+      },
+      {
+        "Solde": null,
+        "Date": "19/06/2026",
+        "Libelle": "REGLEMENT CHEQUE 4001464",
+        "Debit": 270.603,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "22/06/2026",
+        "Libelle": "CHEQUE REPRIS 0000245",
+        "Debit": 530.178,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "22/06/2026",
+        "Libelle": "COM ENC CHEQUE TN AC-0000308957",
+        "Debit": -1.190,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "22/06/2026",
+        "Libelle": "COM VIR TN AUTRE BQ AC-0000308957",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "22/06/2026",
+        "Libelle": "ENC CHEQ TN NUM",
+        "Debit": null,
+        "Credit": 530.178
+      },
+      {
+        "Solde": null,
+        "Date": "22/06/2026",
+        "Libelle": "VIR TN AUTRE BQ EL MENZAH",
+        "Debit": null,
+        "Credit": 400.000
+      },
+      {
+        "Solde": null,
+        "Date": "22/06/2026",
+        "Libelle": "VIR TN AUTRE BQ M L AGENT COMPTA",
+        "Debit": null,
+        "Credit": 374.850
+      },
+      {
+        "Solde": null,
+        "Date": "23/06/2026",
+        "Libelle": "COM VIR TN AUTRE BQ AC-0000308957",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/06/2026",
+        "Libelle": "COMMISSIONS PAYEES AC-TND105750001",
+        "Debit": -1.190,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/06/2026",
+        "Libelle": "PAIEMENT PRELEVEMENT MIN DES FINANCES",
+        "Debit": 642.088,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/06/2026",
+        "Libelle": "VIR TN AUTRE BQ AMERICAN COOPERA",
+        "Debit": null,
+        "Credit": 518.650
+      },
+      {
+        "Solde": null,
+        "Date": "23/06/2026",
+        "Libelle": "VIR TN AUTRE BQ AMERICAN COOPERA",
+        "Debit": null,
+        "Credit": 598.004
+      },
+      {
+        "Solde": null,
+        "Date": "23/06/2026",
+        "Libelle": "VIR TN AUTRE BQ INTERCOLOR SAS",
+        "Debit": null,
+        "Credit": 404.324
+      },
+      {
+        "Solde": null,
+        "Date": "23/06/2026",
+        "Libelle": "VIR TN AUTRE BQ INTERCOLOR SAS Nos écritures s'entendent sauf erreur ou OMISSION. فيها سيو أو خطأ وقوع يثبت أن إلا المعتبرة هي المصرف قيود المجموع Totaux Merci d'avoir choisi Banque Zitouna — الزيتونة مصرف اختياركم على شكرا Solde au في الرصيد BZ-RC-01 Ce relevé est établi de bonne foi, par ailleurs, il appartient au client 06 signaler, sans délai, toute inexactitude omission. Réclamations Clients et Médiateur Bancaire المصرفي والموفق الحرفاء تشكيات ou سهو. أو خطأ بكل فورا المصرف إعلام الحريف وعلى نية. بحسن الكشف هذا أنشئ Nous sommes toujours à votre écoute خدمتكم في دانما نحن 811055 55 1811055 55 Ce compte est éligible à la couverture du 20005 de Garantie des Dépôts Bancaires conformément dispositions de l’article 152 de la loi 2016-48. B contact@banquezitouna.com & contact@banquezitouna.com aux -2016 لسنة 48 عدد قانون من 152 الفصل لمقتضيات طبقا البنكية الودائع ضمان صندوق بتغطية مشمول الحساب هذا Afin d'accéder aux coordonnées du Médiateur, التالي الموقع زيارة يرجى المصرفي الموفق لمراجعة Veuillez consulter le site suivant : www.cbf.org.tn Wwww.cbf.org.tn Banque Zitouna reste à la 01500511100 du client pour toute demande d’informations complémentaires sur le mode de calcul des profits. الأرباح. احتساب طريقة بخصوص التوضيح لمزيد الحريف ذمة على الزيتونة مصرف يبقى Lexique des commissions : العمولات معجم = Ly 24 Ok ps ° الإجتماء: الإسم خفية شركة الزيتونة مصرف المقر 1000 الهاتف: - - الكرم SA - : تونس Le - : -BANQUE ZITOUNA Barique Zitouna Siège social 2 Bo lité de la Vie 2015 - Kram Tunis Tél. 81105 555 71164 000 Identifiant unique : 1 1 BZITTNTT www.banquezitouna.com RELEVÉ DE COMPTE حساب كشف Agence ALAIN SAVARY الفرع — لحار 01062026 لل 30/06/2026 RIB 25056000000030895769 Datedu c ,5 [BAN TN59 25056000000030895769 Devise العملة TND Cher client, nous avons l'honneur de vous adresser, ci-après, le relevé des opérations portées a votre compte souhaitant t{onne réception STE POINT en vous حسابكم في المسجلة للعمليات المفصل الكشف لكم نقدم بأن نتشرف الكريم حريفنا 18 RUE IBN CHAREF BELVEDERE TUNIS",
+        "Debit": null,
+        "Credit": 511.738
+      },
+      {
+        "Solde": null,
+        "Date": "25/06/2026",
+        "Libelle": "TUNIS BELVEDERE Ce document généré par informatique, ne nécessite pas de signature التوقيع تتطلب لا الإعلامية بواسطة معدة الوثيقة هذه التاريخ العمليّة القيمة تاريخ عليه له نص COM VIR TN AUTRE BQ AC-0000308957",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "25/06/2026",
+        "Libelle": "COM VIREMENT MM BQ AC-0000122952",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "25/06/2026",
+        "Libelle": "REGLEMENT CHEQUE 4001468",
+        "Debit": 76.949,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "25/06/2026",
+        "Libelle": "VIR TN AUTRE BQ INSTANCE NAT DE",
+        "Debit": null,
+        "Credit": 381.800
+      },
+      {
+        "Solde": null,
+        "Date": "25/06/2026",
+        "Libelle": "VIREMENT TN MM BQ",
+        "Debit": 500.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/06/2026",
+        "Libelle": "COM VIR TN AUTRE BQ AC-0000308957",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/06/2026",
+        "Libelle": "VIR TN AUTRE BQ UNIDO TUNIS BR -",
+        "Debit": null,
+        "Credit": 327.300
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "COM VIR TN AUTRE BQ AC-TND105050001",
+        "Debit": -2.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "COM VIREMENT MM BQ AC-0000108907",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "COM VIREMENT MM BQ AC-0000584183",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "COM VIREMENT MM BQ AC-0001060084",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "COM VIREMENT MM BQ AC-0001262094",
+        "Debit": -1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "COMM REGLEMENT EFFET AC-TND106250001",
+        "Debit": -5.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "PAIEMENT EFFET 010843616226",
+        "Debit": 488.375,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "REGLEMENT CHEQUE 4001466",
+        "Debit": -856.908,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "REGLEMENT CHEQUE 4001467",
+        "Debit": 220.334,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "VIR TN AUTRE BQ",
+        "Debit": 281.975,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "VIR TN AUTRE BQ",
+        "Debit": -836.872,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "VIREMENT TN MM BQ AMENI BACCOUCHE Nos écritures s'entendent sauf erreur ou OMISSION. فيها سيو أو خطأ وقوع يثبت أن إلا المعتبرة هي المصرف قيود المجموع Totaux Merci d'avoir choisi Banque Zitouna — الزيتونة مصرف اختياركم على شكرا Solde au في الرصيد BZ-RC-01 Ce relevé est établi de bonne foi, par ailleurs, il appartient au client 06 signaler, sans délai, toute inexactitude omission. Réclamations Clients et Médiateur Bancaire المصرفي والموفق الحرفاء تشكيات ou سهو. أو خطأ بكل فورا المصرف إعلام الحريف وعلى نية. بحسن الكشف هذا أنشئ Nous sommes toujours à votre écoute خدمتكم في دانما نحن 811055 55 1811055 55 Ce compte est éligible à la couverture du 20005 de Garantie des Dépôts Bancaires conformément dispositions de l’article 152 de la loi 2016- 8. B contact@banquezitouna.com & contact@banquezitouna.com aux 2016- لسنة 48 عدد قانون من 152 الفصل لمقتضيات طبقا البنكية الودائع ضمان صندوق بتغطية مشمول الحساب هذا Afin d’accéder aux coordonnées نال Médiateur, التالي الموقع زيارة يرجى المصرفي الموفق لمراجعة Veuillez consulter le site suivant : www.cbf.org.tn www.cbforg.tn Banque Zitouna reste à la 01500511100 du client pour toute demande d’informations complémentaires sur le mode de calcul des profits. الأرباح. احتساب طريقة بخصوص التوضيح لمزيد الحريف ذمة على الزيتونة مصرف يبقى Lexique des commissions : العمولات معجم = Ly 34 OR E . الإجتماع: المقر الإسم خفية شركة الزيتونة مصرف 1000 الهاتف: - - الكرم SA - : تونس Le - : BANQUE ZITOUNA Barique Zitouna Siège social 2 Bo lité de la Vie 2015 Kram Tunis Tél. 81105 555 71164 000 Identifiant 1 WIFT : BZ TNTT - www.banquezitouna.com unique : RELEVÉ DE COMPTE Agence ALAIN SAVARY الفرع RIB 25056000000030895769 Date du من التاريخ 01/06/2026 إلى 30/06/2026 au IBAN TN59 25056000000030895769 Devise العملة TND Cher client, nous avons l'honneur de vous adresser, ci-après, le relevé des opérations portées à votre compte souhaitant bonne réception STE POINT en vous حسابكم في المسجلة للعمليات المفصل الكشف لكم نقدم بأن نتشرف الكريم حريفنا 18 RUE IBN CHAREF BELVEDERE TUNIS",
+        "Debit": 310.504,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "TUNIS BELVEDERE Ce document généré par informatique, ne nécessite pas de signature التوقيع تتطلب لا الإعلامية بواسطة معدة الوثيقة هذه التاريخ العمليّة القيمة تاريخ عليه له نص VIREMENT TN MM BQ FATEN BENZARTI",
+        "Debit": 508.713,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "VIREMENT TN MM BQ MAKREM ARFA",
+        "Debit": 226.879,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "29/06/2026",
+        "Libelle": "VIREMENT TN MM BQ WIEM KARBOUL",
+        "Debit": 0.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "30/06/2026",
+        "Libelle": "FRAIS DE TENUE DE COMPTE",
+        "Debit": -33.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "30/06/2026",
+        "Libelle": "TVA Nos écritures s'entendent sauf erreur ou omission. فيها سيو أو خطأ وقوع يثبت أن إلا المعتبرة هي المصرف قيود المجموع Merci d'avoir choisi Banque Zitouna ةنوتيزلا مصرف اختياركم على شكرا Solde au في الرصيد",
+        "Debit": -6.270,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "30/06/2026",
+        "Libelle": ": BZ-RC-01 Ce relevé est établi عل bonne foi, par ailleurs, il appartient au client عل signaler, sans délai, toute inexactitude omission. Réclamations Clients et Médiateur Bancaire المصرفي والموفق الحرفاء تشكيات ou سهو. خطأ JS فورا المصرف إعلام الحريف وعلى نية. بحسن الكشف هذا أنشئ أو Nous sommes toujours à votre écoute خدمتكم في دانما نحن 811055 55 8110 5555 Ce compte est éligible à la couverture du Fonds de Garantie des Dépôts Bancaires conformément dispositions de l’article 152 de la loi 2016-48. B contact@banquezitouna.com X contact@banquezitouna.com aux -2016 لسنة 48 قانون من 152 الفصل لمقتضيات طبقا البنكية الودائع ضمان صندوق بتغطية مشمول الحساب هذا Afin d’accéder aux coordonnées du Médiateur, التالي الموقع زيارة يرجى المصرفي الموفق لمراجعة عدد Veuillez consulter le site suivant : www.cbf.org.tn Www.cbf.org.tn Banque Zitouna reste à la disposition du client pour toute demande d’informations complémentaires sur le mode de calcul des profits. الأرباح. احتساب طريقة بخصوص التوضيح لمزيد الحريف ذمة على الزيتونة مصرف يبقى Lexique des commissions : العمولات معجم 4/4 e 2015 - الحياة جودة شارع 2 الإجتماعي المقر الإسم خفية شركة الزيتونة عدد : مصرف 81105 555 - 71164 0 î:?‘h\\ ;‘:‘:\\Âîl[;‘l:):ïlïñl\\\"… -: BANQUE ZlTOUNA Banque Zitouna SA Siège social 2 Boulevard Qualité 161. : 81105 555 - 71164 000 Identifiant : 112082211 SWIF T : BZITTNTT - www.banquezitouna.com unique",
+        "Debit": null,
+        "Credit": 812.363
+      }
+    ]
+  }
+}

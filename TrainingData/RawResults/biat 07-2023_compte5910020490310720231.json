@@ -38,6 +38,27 @@
       },
       {
         "Solde": null,
+        "Date": "04/07/2023",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 189.827
+      },
+      {
+        "Solde": null,
+        "Date": "04/07/2023",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 189.827
+      },
+      {
+        "Solde": null,
+        "Date": "04/07/2023",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 189.827
+      },
+      {
+        "Solde": null,
         "Date": "05/07/2023",
         "Libelle": "REGLEMENT CHEQUE 0000154",
         "Debit": 2000.000,
@@ -328,6 +349,13 @@
         "Date": "28/07/2023",
         "Libelle": "VIREMENT TN MEME BQ",
         "Debit": 3781.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "28/07/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000163",
+        "Debit": 900.000,
         "Credit": null
       },
       {

@@ -12,8 +12,11 @@ namespace Codeium_Security.Services.DocumentParsers
         private static readonly Regex DateRegex =
             new(@"\d{2}[/\-.]\d{2}[/\-.]\d{4}|\d{8}");
 
+        //private static readonly Regex AmountRegex =
+        //new(@"-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3}");
+        //correction des nombres qui sont avec espaces done 
         private static readonly Regex AmountRegex =
-            new(@"-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3}");
+new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
         public object Parse(string fullText, List<TextLine> lines)
         {
@@ -364,9 +367,17 @@ namespace Codeium_Security.Services.DocumentParsers
                         if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
                         {
                             foreach (var splitTx in SplitMergedRow(pendingDate, fullDesc, amountCandidates, debitAnchor, creditAnchor))
-                                if (!IsDuplicateOfLast(current, splitTx))
+                                if (isBiat)
+                                {
                                     current.Transactions.Add(splitTx);
-                            pendingDate = "";
+                                }
+                                else
+                                {
+
+                                    if (!IsDuplicateOfLast(current, splitTx))
+                                        current.Transactions.Add(splitTx);
+                                }
+                                    pendingDate = "";
                             continue;
                         }
 
@@ -375,11 +386,20 @@ namespace Codeium_Security.Services.DocumentParsers
                         AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
                         ApplyMovementFallback(tx2, soldeAvant2);
                         //update tasli7 biat le 01/08/2026
-
-                        if (!IsDuplicateOfLast(current, tx2))
+                        if (isBiat)
+                        {
                             current.Transactions.Add(tx2);
-                        pendingDate = "";
-                        continue;
+                        }
+                        else
+                        {
+                            if (!IsDuplicateOfLast(current, tx2))
+                                current.Transactions.Add(tx2);
+                        }
+                            pendingDate = "";
+                        
+
+                            continue;
+                        
                     }
 
                     // Texte de continuation
@@ -427,8 +447,18 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
                 {
                     foreach (var splitTx in SplitMergedRow(normalizedDate, fullDescription, amountCandidates, debitAnchor, creditAnchor))
-                        if (!IsDuplicateOfLast(current, splitTx))
+                        if (isBiat)
+                        {
+                            // Pour BIAT, on ajoute TOUTES les transactions, même si elles sont identiques à la précédente
                             current.Transactions.Add(splitTx);
+                        }
+                        else
+                        {
+
+                            if (!IsDuplicateOfLast(current, splitTx))
+
+                                current.Transactions.Add(splitTx);
+                        }
                     continue;
                 }
 
@@ -436,9 +466,19 @@ namespace Codeium_Security.Services.DocumentParsers
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
                 AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
                 ApplyMovementFallback(tx, soldeAvantTx);
-//update je doit supprimer cette ligne le 01/08 et remplacer par une autre 
-                if (!IsDuplicateOfLast(current, tx))
+                //update je doit ajouter  cette ligne le 01/08 et remplacer par une autre 
+                // Pour BIAT : on ajoute TOUTES les transactions, même si elles sont identiques à la précédente
+                // (car deux lignes peuvent avoir le même montant et la même date)
+                if (isBiat)
+                {
+                    // On ajoute directement sans vérification de doublon
                     current.Transactions.Add(tx);
+                }
+                else
+                {
+                    if (!IsDuplicateOfLast(current, tx))
+                        current.Transactions.Add(tx);
+                }
             }
 
             if (current != null)
