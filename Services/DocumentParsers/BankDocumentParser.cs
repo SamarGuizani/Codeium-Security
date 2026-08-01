@@ -85,6 +85,51 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (string.IsNullOrWhiteSpace(joined)) continue;
                 sectionRawText += joined + "\n";
 
+                //update le 01/08/2026
+                // ===== TRAITEMENT SPÉCIFIQUE QNB =====
+                if (isQnb)
+                {
+                    var qnbMatch = Regex.Match(joined,
+                        @"^(\d{2}/\d{2}/\d{4})\s+(.*?)\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})$",
+                        RegexOptions.IgnoreCase);
+                    if (qnbMatch.Success)
+                    {
+                        string date = qnbMatch.Groups[1].Value;
+                        string libelle = qnbMatch.Groups[2].Value.Trim();
+                        decimal debit = ParseAmount(qnbMatch.Groups[3].Value);
+                        decimal solde = ParseAmount(qnbMatch.Groups[4].Value);
+
+                        if (current == null)
+                        {
+                            current = new BankAccountSection
+                            {
+                                AccountNumber = lastSeenAccountNumber,
+                                Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                                Currency = ExtractCurrency(fullText),
+                                SoldeInitial = null
+                            };
+                            sectionRawText = joined + "\n";
+                        }
+
+                        // Remplacer "tx" par "qnbTx"
+                        var qnbTx = new Transaction
+                        {
+                            Date = NormalizeDate(date, null),
+                            Libelle = libelle,
+                            Debit = debit,
+                            Credit = null,
+                            Solde = solde
+                        };
+
+                        previousSolde = solde;
+
+                        if (!IsDuplicateOfLast(current, qnbTx))
+                            current.Transactions.Add(qnbTx);
+
+                        continue;
+                    }
+                }
+                // ===== FIN TRAITEMENT QNB =====
                 // Extraction du numéro de compte
                 var account = ExtractAccountNumber(joined);
                 if (string.IsNullOrWhiteSpace(account))
@@ -329,6 +374,7 @@ namespace Codeium_Security.Services.DocumentParsers
                         var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
                         AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
                         ApplyMovementFallback(tx2, soldeAvant2);
+                        //update tasli7 biat le 01/08/2026
 
                         if (!IsDuplicateOfLast(current, tx2))
                             current.Transactions.Add(tx2);
@@ -390,7 +436,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
                 AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
                 ApplyMovementFallback(tx, soldeAvantTx);
-
+//update je doit supprimer cette ligne le 01/08 et remplacer par une autre 
                 if (!IsDuplicateOfLast(current, tx))
                     current.Transactions.Add(tx);
             }

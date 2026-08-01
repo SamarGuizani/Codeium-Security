@@ -1,9 +1,12 @@
 ﻿using Codeium_Security.Models;
+using Codeium_Security.OCR;
 using Codeium_Security.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.IO.Compression;
 using System.Text.Json;
 using System.Text.RegularExpressions;
-using System.IO.Compression;
+
 
 namespace Codeium_Security.Controllers
 {
@@ -132,7 +135,147 @@ namespace Codeium_Security.Controllers
             Console.SetOut(originalOut);
             return Content(writer.ToString(), "text/plain; charset=utf-8");
         }
+        [HttpPost("debug-html")]
+        public async Task<IActionResult> DebugHtml(IFormFile file)
+        {
+            string tempPath = Path.Combine(Path.GetTempPath(), file.FileName);
+            using (var stream = new FileStream(tempPath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
 
+            var configBuilder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true);
+            var config = configBuilder.Build();
+
+            var ocrService = new TesseractOcrService(config);
+            var pdfConverter = new PdfToImageConverter(config);
+
+            string pagesFolder = Path.Combine("Images", "debug_" + Path.GetFileNameWithoutExtension(file.FileName));
+            var pageImagePaths = pdfConverter.ConvertPdfToImages(tempPath, pagesFolder);
+
+            var engine = new DocumentAnalysisEngine();
+            var html = new System.Text.StringBuilder();
+            html.Append("<html><head><meta charset='utf-8'><style>");
+            html.Append("body{font-family:monospace;background:#111;color:#eee;} ");
+            html.Append("table{border-collapse:collapse;margin-bottom:30px;width:100%;} ");
+            html.Append("td{border:1px solid #444;padding:4px 8px;font-size:12px;white-space:nowrap;} ");
+            html.Append("h2{color:#4ea;}");
+            html.Append("</style></head><body>");
+
+            int pageNum = 1;
+            foreach (var pageImagePath in pageImagePaths)
+            {
+                var ocrResult = await ocrService.ExtractTextAsync(pageImagePath);
+                var lines = engine.GroupWordsIntoLines(ocrResult.Words);
+                var rows = engine.BuildTable(lines);
+
+                html.Append($"<h2>Page {pageNum}</h2><table>");
+                foreach (var row in rows)
+                {
+                    html.Append("<tr>");
+                    foreach (var cell in row.Cells)
+                    {
+                        html.Append($"<td title='Left={cell.Left}'>{System.Net.WebUtility.HtmlEncode(cell.Text)}</td>");
+                    }
+                    html.Append("</tr>");
+                }
+                html.Append("</table>");
+                pageNum++;
+            }
+
+            html.Append("</body></html>");
+
+            string outputHtmlPath = Path.Combine("TrainingData", "RawResults", Path.GetFileNameWithoutExtension(file.FileName) + "_debug.html");
+            await System.IO.File.WriteAllTextAsync(outputHtmlPath, html.ToString());
+
+            return PhysicalFile(Path.GetFullPath(outputHtmlPath), "text/html");
+        }
+
+        [HttpPost("json-to-html")]
+        public async Task<IActionResult> JsonToHtml(IFormFile file)
+        {
+            using var reader = new StreamReader(file.OpenReadStream());
+            string jsonContent = await reader.ReadToEndAsync();
+
+            using var doc = System.Text.Json.JsonDocument.Parse(jsonContent);
+            var root = doc.RootElement;
+
+            var html = new System.Text.StringBuilder();
+            html.Append("<html><head><meta charset='utf-8'><style>");
+            html.Append("body{font-family:Arial,sans-serif;background:#111;color:#eee;padding:20px;} ");
+            html.Append("table{border-collapse:collapse;width:100%;margin-bottom:20px;} ");
+            html.Append("td,th{border:1px solid #444;padding:6px 10px;font-size:13px;text-align:left;} ");
+            html.Append("th{background:#2a2a2a;} ");
+            html.Append("tr:nth-child(even){background:#1a1a1a;} ");
+            html.Append(".neg{color:#ff6b6b;} .pos{color:#6bff8f;} ");
+            html.Append("h2{color:#4ea;} h3{color:#8cf;}");
+            html.Append("</style></head><body>");
+
+            html.Append($"<h2>{System.Net.WebUtility.HtmlEncode(file.FileName)}</h2>");
+
+            if (root.TryGetProperty("BankName", out var bankName))
+                html.Append($"<p><b>Banque:</b> {System.Net.WebUtility.HtmlEncode(bankName.GetString())}</p>");
+
+            var accountList = new List<System.Text.Json.JsonElement>();
+
+            if (root.TryGetProperty("Accounts", out var accountsArr) && accountsArr.ValueKind == System.Text.Json.JsonValueKind.Array)
+            {
+                foreach (var a in accountsArr.EnumerateArray())
+                    accountList.Add(a);
+            }
+            else if (root.TryGetProperty("Account", out var singleAccount) && singleAccount.ValueKind == System.Text.Json.JsonValueKind.Object)
+            {
+                accountList.Add(singleAccount);
+            }
+            else
+            {
+                html.Append("<p style='color:red'>Aucune propriete 'Account' ou 'Accounts' trouvee dans ce JSON.</p>");
+            }
+
+            foreach (var account in accountList)
+            {
+                html.Append("<h3>Compte : ");
+                if (account.TryGetProperty("AccountNumber", out var acc))
+                    html.Append(System.Net.WebUtility.HtmlEncode(acc.GetString()));
+                html.Append("</h3>");
+
+                html.Append("<p>");
+                if (account.TryGetProperty("SoldeInitial", out var si)) html.Append($"Solde Initial: {si} &nbsp;&nbsp; ");
+                if (account.TryGetProperty("SoldeFinal", out var sf)) html.Append($"Solde Final: {sf} &nbsp;&nbsp; ");
+                if (account.TryGetProperty("TotalDebit", out var td)) html.Append($"Total Debit: {td} &nbsp;&nbsp; ");
+                if (account.TryGetProperty("TotalCredit", out var tc)) html.Append($"Total Credit: {tc}");
+                html.Append("</p>");
+
+                html.Append("<table><tr><th>#</th><th>Date</th><th>Libelle</th><th>Debit</th><th>Credit</th><th>Solde</th></tr>");
+
+                if (account.TryGetProperty("Transactions", out var txs) && txs.ValueKind == System.Text.Json.JsonValueKind.Array)
+                {
+                    int i = 1;
+                    foreach (var tx in txs.EnumerateArray())
+                    {
+                        string date = tx.TryGetProperty("Date", out var d) ? d.GetString() ?? "" : "";
+                        string libelle = tx.TryGetProperty("Libelle", out var l) ? l.GetString() ?? "" : "";
+                        string debit = tx.TryGetProperty("Debit", out var deb) && deb.ValueKind != System.Text.Json.JsonValueKind.Null ? deb.ToString() : "";
+                        string credit = tx.TryGetProperty("Credit", out var cred) && cred.ValueKind != System.Text.Json.JsonValueKind.Null ? cred.ToString() : "";
+                        string solde = tx.TryGetProperty("Solde", out var sol) && sol.ValueKind != System.Text.Json.JsonValueKind.Null ? sol.ToString() : "";
+
+                        html.Append($"<tr><td>{i}</td><td>{System.Net.WebUtility.HtmlEncode(date)}</td><td>{System.Net.WebUtility.HtmlEncode(libelle)}</td>");
+                        html.Append($"<td class='neg'>{debit}</td><td class='pos'>{credit}</td><td>{solde}</td></tr>");
+                        i++;
+                    }
+                }
+                html.Append("</table>");
+            }
+
+            html.Append("</body></html>");
+
+            string outputPath = Path.Combine("TrainingData", "RawResults", Path.GetFileNameWithoutExtension(file.FileName) + "_view.html");
+            await System.IO.File.WriteAllTextAsync(outputPath, html.ToString());
+
+            return PhysicalFile(Path.GetFullPath(outputPath), "text/html");
+        }
         [HttpPost("process-batch")]
         public async Task<IActionResult> ProcessBatch(List<IFormFile>? files)
         {
