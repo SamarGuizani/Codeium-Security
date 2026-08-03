@@ -70,6 +70,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 }
             }
 
+
             // [QNB] Détection de la banque
             bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
@@ -119,10 +120,13 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         {
                             Date = NormalizeDate(date, null),
                             Libelle = libelle,
-                            Debit = debit,
-                            Credit = null,
                             Solde = solde
                         };
+
+                        decimal absVal = Math.Abs(debit);
+                        if (debit < 0) qnbTx.Debit = absVal;
+                        else if (debit > 0) qnbTx.Credit = absVal;
+
 
                         previousSolde = solde;
                         current.Transactions.Add(qnbTx);
@@ -447,6 +451,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
                         AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
                         ApplyMovementFallback(tx2, soldeAvant2);
+                        if (isQnb) ApplyQnbSignRule(tx2);   // <-- AJOUTE CETTE LIGNE
                         current.Transactions.Add(tx2);
                         pendingDate = "";
                         continue;
@@ -542,6 +547,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
                 AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
                 ApplyMovementFallback(tx, soldeAvantTx);
+                if (isQnb) ApplyQnbSignRule(tx);   // <-- AJOUTE CETTE LIGNE
                 current.Transactions.Add(tx);
             }
 
@@ -818,6 +824,25 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             else if (diff > 0) tx.Credit = diff;
         }
 
+        // [QNB uniquement] Le signe du montant determine Debit/Credit de façon fiable :
+        // negatif = Debit, positif = Credit. Ne s'applique qu'aux documents QNB.
+        private void ApplyQnbSignRule(Transaction tx)
+        {
+            decimal? val = tx.Debit ?? tx.Credit;
+            if (!val.HasValue) return;
+
+            decimal abs = Math.Abs(val.Value);
+            if (val.Value < 0)
+            {
+                tx.Debit = abs;
+                tx.Credit = null;
+            }
+            else if (val.Value > 0)
+            {
+                tx.Credit = abs;
+                tx.Debit = null;
+            }
+        }
         private bool IsDuplicateOfLast(BankAccountSection section, Transaction tx)
         {
             if (section.Transactions.Count == 0) return false;

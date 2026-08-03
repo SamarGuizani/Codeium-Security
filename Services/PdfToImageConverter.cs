@@ -27,8 +27,9 @@ namespace Codeium_Security.Services
 
             using var docReader = DocLib.Instance.GetDocReader(
                 pdfPath,
-                new PageDimensions(1920, 2560));
-
+                //star hetha besh nafs5ou le 3 aout car btk 
+                //new PageDimensions(1920, 2560));
+                new PageDimensions(3.0));
             int pageCount = docReader.GetPageCount();
 
             for (int i = 0; i < pageCount; i++)
