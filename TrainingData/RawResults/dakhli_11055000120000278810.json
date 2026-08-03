@@ -291,7 +291,7 @@
       {
         "Solde": 2.000,
         "Date": "10/02/2025",
-        "Libelle": "07/02/2025 900ZEXA250410412 COMPAGNIE INTERNATIONALE DE LËÊË:—NLèÎCEIËÎZÊ[)CÂ’Ë41 1000212025 07/02/2025 900ZEXA250410414 ﬁﬁifﬁ’fr“fgﬂlLFéEgg LS:SKI:g ËEILN)—I-ZÊOÎÎ(ÎI138318074 COMPAGNE 1010212025 07/02/2025 900zEXA250410414 NTERNATIONALE DE LEASING ËEILN)—I-ZÊOÎÎ(ÎI138318075 COMPAGNE 1002/2025 07/02/2025 200ZEXA250410415 يي ب COMPAGNIE INTERNATIONALE",
+        "Libelle": "07/02/2025 900ZEXA250410412 COMPAGNIE INTERNATIONALE DE LËÊËŒ;FÊË:ËÎÊËÊËA1 1000212025 07/02/2025 900ZEXA250410414 ﬁﬁifﬁ’fr“fgﬂlLFéEgg LS:SKI:g ËEILN)—I-ZÊOÎÎ(ÎI138318074 COMPAGNE 1010212025 07/02/2025 900zEXA250410414 NTERNATIONALE DE LEASING ËEILN)—I-ZÊOÎÎ(ÎI138318075 COMPAGNE 1002/2025 07/02/2025 200ZEXA250410415 يي ب COMPAGNIE INTERNATIONALE",
         "Debit": 2.000,
         "Credit": null
       },
@@ -450,11 +450,11 @@
         "Credit": 4000.000
       },
       {
-        "Solde": 850.00,
+        "Solde": 4850.00,
         "Date": "17/02/2025",
         "Libelle": "\\ T ESPÈCE VERSEMENT ESPECES : 0552504800449055 18/02/2025 2504807527750000",
         "Debit": null,
-        "Credit": 850.00
+        "Credit": 4850.00
       },
       {
         "Solde": 0.000,
@@ -604,11 +604,11 @@
         "Credit": null
       },
       {
-        "Solde": 410.000,
+        "Solde": 3410.000,
         "Date": "19/02/2025",
         "Libelle": "\\| T ESPECE VERSEMENT ESPECES : 0552505000471556 20/02/2025 2505010579120001 T8 REGLE DE LA DECLARATION: 4368418 MINISTERE DES 1900212005 18/02/2025 900ZEXA2505004RY 0380 ١ RECLE DE LA DECLARATION: 4368418 MINISTERE DES 190022025 18/02/2025 900ZEXA2505004RY 0750 جد e rn r e ممعت سس 0/02/2025 \\ T ESPÈCE VERSEMENT ESPECES : 0552505100476382 21/02/2025 2505108389290000 81100 000 الهاتف: البلفيدير تونس الحرية. شارع الإجتماعى المقر دينار, مالها رأس البسم. خفية شركة والصناعةا للتجارة البنكي الإتحاد",
         "Debit": null,
-        "Credit": 410.000
+        "Credit": 3410.000
       },
       {
         "Solde": 100007645.000,
@@ -765,11 +765,11 @@
         "Credit": 4500.000
       },
       {
-        "Solde": 160.00,
+        "Solde": 2160.00,
         "Date": "24/02/2025",
         "Libelle": "\\ T ESPÈCE VERSEMENT ESPECES 0552505500509839 25/02/2025 2505508584900000",
         "Debit": null,
-        "Credit": 160.00
+        "Credit": 2160.00
       },
       {
         "Solde": 3170.000,
@@ -914,7 +914,7 @@
       {
         "Solde": 2.000,
         "Date": "25/02/2025",
-        "Libelle": "24/02/2025 900ZRSP250560000 1061 0380 GOMPAGNIE INTERNATIONALE DE LE§§R%?§|T;£§£§51 2502/2025 2410212025 900ZRSP2505600SM ËîEäêÊHÈI(ÊËTËÂSÊËS COMPAGNIE INTERNATIONALE",
+        "Libelle": "24/02/2025 900ZRSP250560000 1061 0380 GOMPAGNIE INTERNATIONALE DE LE§§R%?§|T;£§£§51 2502/2025 2410212025 900ZRSP2505600SM g\\éîEEÀê:Î\\IHGI_I(ÊËTÊSIË)SCBËS COMPAGNIE INTERNATIONALE",
         "Debit": 2.000,
         "Credit": null
       },

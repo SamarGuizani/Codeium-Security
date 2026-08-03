@@ -34,20 +34,20 @@
         "Date": "03/01/2025",
         "Libelle": "CR [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
         "Debit": null,
-        "Credit": 200.000
+        "Credit": -4200.000
       },
       {
         "Solde": null,
         "Date": "03/01/2025",
         "Libelle": "CR [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 'CHQ 7",
         "Debit": null,
-        "Credit": 520.062
+        "Credit": 5520.062
       },
       {
         "Solde": null,
         "Date": "02/01/2025",
         "Libelle": "MEME AG N°: 7105618 - 4",
-        "Debit": 501.000,
+        "Debit": 6501.000,
         "Credit": null
       },
       {
@@ -69,35 +69,35 @@
         "Date": "07/01/2025",
         "Libelle": "AGIOS AU 31/12/24 “AGIOS [ 01012025 140514 — 7 CR متم [COMM REMISE CHQ 1271124 10201205  7 لفقو",
         "Debit": null,
-        "Credit": 540.764
+        "Credit": 1540.764
       },
       {
         "Solde": null,
         "Date": "08/01/2025",
         "Libelle": "TVA/COMM REMISE CHQ 27114 1020120257 0166 T",
         "Debit": null,
-        "Credit": 539.723
+        "Credit": 1539.723
       },
       {
         "Solde": null,
         "Date": "09/01/2025",
         "Libelle": "[RECUPERATION FRAISPDL 72 011224 -- 0750 -- CR ( ENVOIRELEVE  fo (10/01/2025 __ __  TVA/IRECUPERATION FRAIS PDL — _",
         "Debit": null,
-        "Credit": 538.973
+        "Credit": 1538.973
       },
       {
         "Solde": null,
         "Date": "10/01/2025",
         "Libelle": "7105619 — 7105619 CHQ COMP N° l 8 [  W CR 10/01/2025î ENC CHQ N° 9334868 — -8334868   522000",
         "Debit": 472.754,
-        "Credit": 66.076
+        "Credit": 1066.076
       },
       {
         "Solde": null,
         "Date": "10/01/2025",
         "Libelle": "1588076 cR ENC MPLC CHQ N° 2776792 2070172025 2776792  — 3967782 CR ( 18/01/2025 RETRAIT ESPECES 03129344 103129344",
         "Debit": null,
-        "Credit": 555.858
+        "Credit": 5555.858
       },
       {
         "Solde": null,
@@ -146,14 +146,14 @@
         "Date": "22/01/2025",
         "Libelle": "COMM REMISE CHQ — 22 es — 7 -0879  — CR",
         "Debit": null,
-        "Credit": 590.321
+        "Credit": 1590.321
       },
       {
         "Solde": null,
         "Date": "22/01/2025",
         "Libelle": "TVA/ICOMM REMISE 1271128 — - CHQ ] 1610172025 0168 0 الا CR ( 23/01/2025 ENC CHQ N° 7406756 — sv 7406586 = *“h‘—“—s.ﬁ{ﬁcﬁ T 2141155 CR “ 23/01/2025  ÊËÎZËÊËESPËCEÏ PENT 0312800 7 22/Œ/”2ŒÎ 7 [24/01/2025 COMM  12000112025 REMISECHQ 1271129 ا 24/01/2025 TVA/COMM REMISE CHQ 12741297 20002025 9 0332 DB",
         "Debit": null,
-        "Credit": 590.155
+        "Credit": 1590.155
       },
       {
         "Solde": null,
@@ -184,18 +184,18 @@
         "Credit": 195.635
       },
       {
-        "Solde": 588.076,
+        "Solde": 1588.076,
         "Date": "10/01/2025",
         "Libelle": "CHQ COMP N° 7105619 9334868  CR",
         "Debit": null,
         "Credit": 522.000
       },
       {
-        "Solde": 555.858,
+        "Solde": 5555.858,
         "Date": "20/01/2025",
         "Libelle": "ENC CHQ N° 9334868 CR [10/01/2025 [ENC M PLC CHQ N° 2776792 2776792",
         "Debit": null,
-        "Credit": 967.782
+        "Credit": 3967.782
       },
       {
         "Solde": 555.858,
@@ -219,7 +219,7 @@
         "Credit": null
       },
       {
-        "Solde": 109.406,
+        "Solde": 1109.406,
         "Date": "03/12/9401",
         "Libelle": "ENC CHQ N° 265 ESPECES PC N° CR",
         "Debit": 2000.000,
@@ -254,28 +254,28 @@
         "Credit": null
       },
       {
-        "Solde": 591.196,
+        "Solde": 1591.196,
         "Date": "21/01/2025",
         "Libelle": "E",
-        "Debit": 348.000,
-        "Credit": null
+        "Debit": null,
+        "Credit": 652.000
       },
       {
-        "Solde": 590.321,
+        "Solde": 1590.321,
         "Date": "22/01/2025",
         "Libelle": "s e CHQ (™~ 1271128 ë” 169172025",
         "Debit": 0.875,
         "Credit": null
       },
       {
-        "Solde": 590.155,
+        "Solde": 1590.155,
         "Date": "22/01/2025",
         "Libelle": "[COMM REMISE REMISE  A  CR",
         "Debit": 0.166,
         "Credit": null
       },
       {
-        "Solde": 141.155,
+        "Solde": 2141.155,
         "Date": "22/01/2025",
         "Libelle": "TVAICOMM CHQ__ 740315/  CR",
         "Debit": null,
@@ -285,22 +285,22 @@
         "Solde": 858.845,
         "Date": "23/01/2025",
         "Libelle": "ENC CHQ N° 7406 سئس A",
-        "Debit": null,
-        "Credit": 717.690
+        "Debit": 1282.310,
+        "Credit": null
       },
       {
-        "Solde": 0.000,
+        "Solde": 3000.000,
         "Date": "23/01/2025",
         "Libelle": "RETRAÎT ESPECES 1031268070 / =.",
-        "Debit": 0.000,
+        "Debit": 3000.000,
         "Credit": null
       },
       {
         "Solde": 860.595,
         "Date": "24/01/2025",
         "Libelle": "ها 1271129 1750 DB COMM REMISE CHQ TVAICOMM REMISE",
-        "Debit": null,
-        "Credit": 860.595
+        "Debit": 2139.405,
+        "Credit": null
       },
       {
         "Solde": 710.927,
@@ -331,21 +331,21 @@
         "Credit": null
       },
       {
-        "Solde": 540.764,
+        "Solde": 1540.764,
         "Date": "07/01/2025",
         "Libelle": "ENC CHQ N° 97 97 [   AGIOS AU 31/12/24 /AGIOS  [ CR",
         "Debit": 140.514,
         "Credit": null
       },
       {
-        "Solde": 539.889,
+        "Solde": 1539.889,
         "Date": "08/01/2025",
         "Libelle": "COMM REMISE CHQ [1271122 CR [",
         "Debit": 0.875,
         "Credit": null
       },
       {
-        "Solde": 538.973,
+        "Solde": 1538.973,
         "Date": "10/01/2025",
         "Libelle": "RECUPERATION FRAIS PDL 01/12/24 CR ENVOI RELEVE [ ENVOI RELEVE",
         "Debit": 0.750,
@@ -464,14 +464,14 @@
         "Credit": 2.020
       },
       {
-        "Solde": 39.153,
+        "Solde": 1039.153,
         "Date": "20/02/2025",
         "Libelle": "REGL EFF N° 009694079217 ... اد 009694079217 PE امه - !  DB",
         "Debit": null,
         "Credit": 380.220
       },
       {
-        "Solde": 44.653,
+        "Solde": 1044.653,
         "Date": "20/02/2025",
         "Libelle": "COMM REG EFF “ 009694079217 144/02/2025 - 5500/ DR",
         "Debit": null,
@@ -541,7 +541,7 @@
         "Credit": 0.875
       },
       {
-        "Solde": 160.125,
+        "Solde": 1160.125,
         "Date": "04/03/2925",
         "Libelle": "\"TVAICOMM REMISE CHQ 1312683 26/02/2025 DB",
         "Debit": null,
@@ -674,11 +674,11 @@
         "Credit": null
       },
       {
-        "Solde": 291.850,
+        "Solde": 2291.850,
         "Date": "31/03/2025",
         "Libelle": "31/03/2025 VIR ORD STE INTER 26 44 28/03/2025 TVA/COMM 24/03/2025 Fin présent compte est assujetti ما réglementation en vigueur en matière عل fonds عل garantie des dépôts bancaires et au fond d'indemnisation stipulé pour les comptes individuets et conjoints. Le ous pouvez consulter mode à عل calcul عل intérêts après avoir déposé une demande cet effet. V ا à Commerce. En cas de contestation sur le contenu de ce Relevé, merci de bien vouloir nous en aviser par écrit dans un délai maximum عل trente jours à compter de sa réception. Pour Réclamation : reclamationgitte com in Tél : 71 112 000. Médiateur Bancaire Mr. Sadok Adresse Villa 2050 - Tél / +216 71 292 297 Mobile +216 97 40 10 68 Email hattay@chf sadok orgin HATTAY N°10 LOTISSEMENT HACHICHA BOUMHAL Fax : -: -: : -: سه de 108 744 320 -. -015094 B/A/M/000 Boulevard Béji Caïd Essebsi lot AFH - 368 Centre Urbain Nord 1082 Tunis هدك Capital DT RC 814083 1996 M.F: -- : - Fax : 287 409 : -: BTEXTNTT 1082 الشماني العمراتي المركز 1308 AFH تقسيم السبسي قايد الباجي E 42 - Site web : www bte.com.tn “ Extraitdecompte Edité le: 29/04/2025 14:48 Compte N° 0405822512301 Agence : BEN AROUS : Intitulé WTM SARL RIB 24011040582251230122 : FRANCE Devise: TND Adresse : 09 AV DE Ville cDc 2013 BEN AROUS Du 01/04/2025 au 29/04/2025 { D. Opé. Libellé . 2000000 CR CPM/020425 03/04/2025  -[ 3543139 [02/0472025 [VIR ORD AROUA AMEN ALLAH VR مه o \"FOURNI PROD\" _ 6R] S 02/04/2025 COMM VIRT RECU VR CPM/020425 N 25/03/2025 30004",
         "Debit": null,
-        "Credit": 291.850
+        "Credit": 2291.850
       },
       {
         "Solde": 0.570,
@@ -691,7 +691,7 @@
         "Solde": 136.472,
         "Date": "03/04/2025",
         "Libelle": "08 0410472025 وج ESPECES PC N° 03165433 7137347 DB| REMISE CHQ > أل التق U 04/04/2025 TVAICOMM REMISE CHQ 1312690 27/03/2025 0166 — AU 31/03/25 AGIOS  01/04/2025",
-        "Debit": 0.060,
+        "Debit": 4000.060,
         "Credit": null
       },
       {
@@ -709,7 +709,7 @@
         "Credit": 2.000
       },
       {
-        "Solde": 273.971,
+        "Solde": 2273.971,
         "Date": "08/04/2025",
         "Libelle": "RETRAIT SUR: ATM BNA BEN 520801 DB d AROUS DU 04/04/2025 الت",
         "Debit": null,
@@ -758,7 +758,7 @@
         "Credit": null
       },
       {
-        "Solde": 607.715,
+        "Solde": 3607.715,
         "Date": "16/04/2025",
         "Libelle": "CR [22/0472025 COMM VIRT RECU VR CPM/220425  !",
         "Debit": 3.000,
@@ -793,17 +793,17 @@
         "Credit": 1.611
       },
       {
-        "Solde": 487.387,
+        "Solde": 1487.387,
         "Date": "02/05/2025",
         "Libelle": "COMM REMISE CHQ 1312694 CR ENC N° 06/05/2025 —  441000 1928387 CR",
         "Debit": null,
-        "Credit": 339.315
+        "Credit": 1339.315
       },
       {
         "Solde": 432.957,
         "Date": "05/05/2025",
         "Libelle": "CHQ 4003052 -40030582  ‘ PRL N° — 1379984 — “7102/05/2025  م  CR",
-        "Debit": 495.830,
+        "Debit": 1495.830,
         "Credit": null
       },
       {
@@ -842,18 +842,18 @@
         "Credit": 407.600
       },
       {
-        "Solde": 30.266,
+        "Solde": 1030.266,
         "Date": "09/05/2025",
         "Libelle": "VIR ORD AROUA AMEN ALLAH VR CPM/090525  12092025  w 506000 — 1033836 CR Mr ggäâ%lâîîscu VR CPM/090525  05/05/2025 3000 — 1030836 (R TVA/ICOMM VIRTRECU VR CPM/090525  0570 = T",
-        "Debit": 377.334,
-        "Credit": null
+        "Debit": null,
+        "Credit": 622.666
       },
       {
         "Solde": 969.734,
         "Date": "13/05/2025",
         "Libelle": "RETRAIT ESPECES PC N° 3230501 [ ” 2000000 I Êz'osræïgäemlse",
-        "Debit": null,
-        "Credit": 939.468
+        "Debit": 60.532,
+        "Credit": null
       },
       {
         "Solde": 970.609,
@@ -877,11 +877,11 @@
         "Credit": null
       },
       {
-        "Solde": 617.009,
+        "Solde": 4617.009,
         "Date": "15/05/2025",
         "Libelle": "ENC CHQ N° 620197 “ 1620197 T1  7 I 5386825 CR",
-        "Debit": 154.807,
-        "Credit": null
+        "Debit": null,
+        "Credit": 3845.193
       },
       {
         "Solde": -382.991,
@@ -933,18 +933,18 @@
         "Credit": null
       },
       {
-        "Solde": 196.545,
+        "Solde": 2196.545,
         "Date": "30/05/2025",
         "Libelle": "i",
-        "Debit": 21.824,
-        "Credit": null
+        "Debit": null,
+        "Credit": 1978.176
       },
       {
-        "Solde": 417.000,
+        "Solde": 2417.000,
         "Date": "03/06/2025",
         "Libelle": "ENC CHQ N° 9951309 9951309 CR 128/05/2025 [ — T 2195670",
         "Debit": null,
-        "Credit": 417.000
+        "Credit": 2417.000
       },
       {
         "Solde": 0.166,
@@ -1024,25 +1024,25 @@
         "Credit": -450.000
       },
       {
-        "Solde": 104.427,
+        "Solde": 1104.427,
         "Date": "16/06/2025",
         "Libelle": "ENC 4003062 — 4003062 7 n CR CHON°",
-        "Debit": 623.000,
-        "Credit": null
+        "Debit": null,
+        "Credit": 377.000
       },
       {
-        "Solde": 302.000,
+        "Solde": 1302.000,
         "Date": "23/06/2025",
         "Libelle": "“م 0 ا SAVONNERIE LE [VRCPM/230625 906427 CR PRINTEMPS جام",
         "Debit": null,
-        "Credit": 302.000
+        "Credit": 1302.000
       },
       {
         "Solde": 802.857,
         "Date": "23/06/2025",
         "Libelle": "COMM TVA/COMM VIRT RECU - VRCPM/230625 T 0570 — CR",
-        "Debit": null,
-        "Credit": 500.857
+        "Debit": 499.143,
+        "Credit": null
       },
       {
         "Solde": 124.427,
@@ -1069,7 +1069,7 @@
         "Solde": 726.032,
         "Date": "20/06/2025",
         "Libelle": "TVAICOMM REMISE CHQ ~ CR RETRAIT ESPECES PC -8256885 - . DB N° ‘ENSCS'%}:d 19998626",
-        "Debit": 500.000,
+        "Debit": 1500.000,
         "Credit": null
       },
       {
@@ -1080,11 +1080,11 @@
         "Credit": 751.000
       },
       {
-        "Solde": 8.968,
+        "Solde": 2008.968,
         "Date": "24/06/2025",
         "Libelle": "ENC CHQ N° 7861805 CR عل compte - Compte N° : 0405822512301 Agence : BEN AROUS Intitulé WTM SARL RIB : 2 : 09 AV DE FRANCE Devise: TND Adresse : Ville 2013 BEN AROUS cDc : Du 01/05/2025 au 08/07/2025 3256607 oy = = B I\"FOURNIPROD\" e",
         "Debit": null,
-        "Credit": 984.000
+        "Credit": 1984.000
       },
       {
         "Solde": 3.000,
@@ -1129,25 +1129,25 @@
         "Credit": 0.032
       },
       {
-        "Solde": 694.559,
+        "Solde": 1694.559,
         "Date": "01/07/2025",
         "Libelle": "PREL — 1378368 — 0380 — S Nos écritures s'entendent sauf erreur ou omission. Extrait -عل compte Compte N° : 0405822512301 Agence : BEN AROUS Intitulé : WTM SARL RIB : 24011040582251230122 09 AV DE FRANCE Devise: TND Adresse : Ville cDc : 2013 BEN AROUS Du 01/06/2025 au 03/07/2025 كرقة T 7 (03/06/2025 COMM ير",
         "Debit": null,
-        "Credit": 498.210
+        "Credit": 1498.210
       },
       {
-        "Solde": 195.504,
+        "Solde": 2195.504,
         "Date": "03/06/2025",
         "Libelle": "TVAICOMM REMISE CHQ 127740 — m CR",
-        "Debit": 0.166,
-        "Credit": null
+        "Debit": null,
+        "Credit": 0.166
       },
       {
         "Solde": 697.674,
         "Date": "05/06/2025",
         "Libelle": "PRL COMP N° 379521 ( 3070572025 CR COMMPREL 379521 — ] E 1",
-        "Debit": null,
-        "Credit": 502.170
+        "Debit": 1497.830,
+        "Credit": null
       },
       {
         "Solde": -96.544,
@@ -1202,7 +1202,7 @@
         "Solde": 491.032,
         "Date": "27/06/2025",
         "Libelle": "' RETRAIT ESPECES PC N° 3256607 1E E B de 03/07/2025 10:12 Extralt compte Edité le Puge 2 sur 2 Agence : BEN AROUS Compte N° : 0405822512301 RIB 24011040582251230122 Intitulé WTM SARL Devise: TND Adresse : 09 AV DE FRANCE Ville cDc 2013 BEN AROUS Du 01/06/2025 au 03/07/2025 Solde 31/05/2025 2204 au 0. Opé. ا -eFs B dx وعد -3256607 — ‘ L",
-        "Debit": 500.000,
+        "Debit": 2500.000,
         "Credit": null
       },
       {
@@ -1255,28 +1255,28 @@
         "Credit": 2.000
       },
       {
-        "Solde": 694.559,
+        "Solde": 1694.559,
         "Date": "07/07/2025",
         "Libelle": "TVAICOMM PREL 378368 [ o DB 07/07/2025 AGIOS AU 30/06/25 905 10107025 71912 1766471 DB",
         "Debit": null,
         "Credit": 0.380
       },
       {
-        "Solde": 767.221,
+        "Solde": 1767.221,
         "Date": "10/07/2025",
         "Libelle": "RECUPERATION FRAIS PDL 01/06/25 0750 DB ENVOI RELEVE حص ENVOIRELEVE p °N ب 1287802",
         "Debit": null,
         "Credit": 72.662
       },
       {
-        "Solde": 769.446,
+        "Solde": -1769.446,
         "Date": "14/07/2025",
         "Libelle": "COMM REMISE CHQ 01353734 TVA/ICOMM REMISE CHQ - 0870772025 \"> DB",
         "Debit": null,
         "Credit": 0.166
       },
       {
-        "Solde": 583.760,
+        "Solde": 1583.760,
         "Date": "16/07/2025",
         "Libelle": "8225 --89600 1079846 ENC CHQ N° 4003100 ا 4003100 7 7 DB 7“ [ ENC CHQ N° 522230 1522230 — “ 2 CR",
         "Debit": null,
@@ -1286,7 +1286,7 @@
         "Solde": 83.760,
         "Date": "15/07/2025",
         "Libelle": "‘ÊËQTOFÊÊÈT ESPECES PC N° }3290782 U 144/07/2025 1500000 — “ ESPECES PC N° 14/07/2025 000 DB %ZOQI\\%:/??REMISE 31277425",
-        "Debit": 500.000,
+        "Debit": 1500.000,
         "Credit": null
       },
       {
@@ -1297,28 +1297,28 @@
         "Credit": 0.166
       },
       {
-        "Solde": 929.153,
+        "Solde": 4929.153,
         "Date": "17/07/2025",
         "Libelle": "ENC CHQ N° 30165 30165 د\" CR [",
         "Debit": null,
         "Credit": 5846.434
       },
       {
-        "Solde": 698.553,
+        "Solde": 5698.553,
         "Date": "21/07/2025",
         "Libelle": "“  COMM VIRT RECU —VR CPM/180725   B ©",
         "Debit": null,
         "Credit": 3.000
       },
       {
-        "Solde": 520.935,
+        "Solde": 5520.935,
         "Date": "22/07/2025",
         "Libelle": "VIRT RECU VR CPM/180725 PRL COMP N° 31019 — 81019  21/07/2025 174668 ” 5523315 CR COMM 1670772025 PREL 181019\" --2000 T 5521315 CR (2200772025  }31019",
         "Debit": 177.618,
         "Credit": null
       },
       {
-        "Solde": 519.185,
+        "Solde": 5519.185,
         "Date": "16/07/2025",
         "Libelle": "— 0380 CR CR",
         "Debit": null,
@@ -1332,7 +1332,7 @@
         "Credit": 0.332
       },
       {
-        "Solde": 827.853,
+        "Solde": 5827.853,
         "Date": "30/07/2025",
         "Libelle": "ENC CHQ N° 304 T304 0 d 1 — CR Edité le: 31/07/2025 09-05 Compte N° : 0405822512301 Agence : BEN AROUS Intitulé WTM SARL RIB 24011040582251230122 Adresse 09 AV DE FRANCE Devise: TND : Ville 2013 BEN AROUS cnc : Du 01/07/2025 au 31/07/2025",
         "Debit": null,
@@ -1346,7 +1346,7 @@
         "Credit": null
       },
       {
-        "Solde": 944.855,
+        "Solde": -8944.855,
         "Date": "30/07/2025",
         "Libelle": "COMM REG EFF — 010836840194 = æ CR",
         "Debit": -5.500,
@@ -1357,7 +1357,7 @@
         "Date": "31/07/2025",
         "Libelle": "TVAICOMM REG EFF “1010836840194 T 0 c 23/07/2025 1045 894 RETRAIT 30/07/2025 5000000 ‘ 39438 10 ESPECES PC N° 3319033 Solde au:  CR Nos écritures s'entendent sauf erreur ou omission.",
         "Debit": null,
-        "Credit": 2998.955
+        "Credit": 12888.665
       }
     ]
   }

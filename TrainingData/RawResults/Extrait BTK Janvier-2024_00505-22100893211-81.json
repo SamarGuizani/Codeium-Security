@@ -331,42 +331,42 @@
         "Credit": 30.000
       },
       {
-        "Solde": 114.019,
+        "Solde": 1114.019,
         "Date": "10/01/2024",
         "Libelle": "Trs TPE 2005050535 N 433065 لاي sur TPE 2005050535 N 264",
         "Debit": null,
         "Credit": 80.000
       },
       {
-        "Solde": 112.119,
+        "Solde": 1112.119,
         "Date": "10/01/2024",
         "Libelle": "ggg“\" sur TPE 2005050535 N 302",
         "Debit": 1.900,
         "Credit": null
       },
       {
-        "Solde": 111.739,
+        "Solde": 1111.739,
         "Date": "10/01/2024",
         "Libelle": "بش sur TPE 2005050535 N 6",
         "Debit": 0.380,
         "Credit": null
       },
       {
-        "Solde": 111.169,
+        "Solde": 1111.169,
         "Date": "10/01/2024",
         "Libelle": "gg'z“m sur TPE 2005050535 N 594",
         "Debit": 0.570,
         "Credit": null
       },
       {
-        "Solde": 110.599,
+        "Solde": 1110.599,
         "Date": "10/01/2024",
         "Libelle": "ليت sur TPE 2005050535 N 953",
         "Debit": 0.570,
         "Credit": null
       },
       {
-        "Solde": 110.029,
+        "Solde": 1110.029,
         "Date": "10/01/2024",
         "Libelle": "7 sur TPE 2005050535 N 433",
         "Debit": 0.570,
@@ -376,8 +376,8 @@
         "Solde": 1108.509,
         "Date": "10/01/2024",
         "Libelle": "",
-        "Debit": null,
-        "Credit": 1.520
+        "Debit": 1.520,
+        "Credit": null
       },
       {
         "Solde": 1208.509,
@@ -905,7 +905,7 @@
         "Credit": null
       },
       {
-        "Solde": 621.091,
+        "Solde": 1621.091,
         "Date": "23/01/2024",
         "Libelle": "سلا sur TPE 2005050535 N 4",
         "Debit": 0.570,
@@ -915,8 +915,8 @@
         "Solde": 1620.521,
         "Date": "23/01/2024",
         "Libelle": "اي sur TPE 2005050535 N 642",
-        "Debit": null,
-        "Credit": 0.570
+        "Debit": 0.570,
+        "Credit": null
       },
       {
         "Solde": 1619.875,
@@ -1640,14 +1640,14 @@
         "Credit": null
       },
       {
-        "Solde": 421.605,
+        "Solde": 1421.605,
         "Date": "30/01/2024",
         "Libelle": "بيت sur TPE 2005050535 N 0",
         "Debit": 0.570,
         "Credit": null
       },
       {
-        "Solde": 421.035,
+        "Solde": 1421.035,
         "Date": "30/01/2024",
         "Libelle": "سي sur TPE 2005050535 N 200",
         "Debit": 0.570,
@@ -1657,8 +1657,8 @@
         "Solde": 1420.465,
         "Date": "30/01/2024",
         "Libelle": "ايت sur TPE 2005050535 N 509",
-        "Debit": null,
-        "Credit": 0.570
+        "Debit": 0.570,
+        "Credit": null
       },
       {
         "Solde": 1420.085,
@@ -1731,7 +1731,7 @@
         "Credit": null
       },
       {
-        "Solde": 511.813,
+        "Solde": 1511.813,
         "Date": "30/01/2024",
         "Libelle": "4",
         "Debit": null,
@@ -1878,7 +1878,7 @@
         "Credit": 30.000
       },
       {
-        "Solde": 110.203,
+        "Solde": 2110.203,
         "Date": "01/02/2024",
         "Libelle": "[Trs TPE 2005050535 N 118234",
         "Debit": null,
@@ -1920,7 +1920,7 @@
         "Credit": null
       },
       {
-        "Solde": 291.211,
+        "Solde": 2291.211,
         "Date": "01/02/2024",
         "Libelle": "سي sur TPE 2005050535 N 336",
         "Debit": 0.190,
@@ -1930,8 +1930,8 @@
         "Solde": 2289.691,
         "Date": "01/02/2024",
         "Libelle": "‘7:2’1\"\"‘ sur TPE 2005050535 N 496",
-        "Debit": null,
-        "Credit": 1.520
+        "Debit": 1.520,
+        "Credit": null
       },
       {
         "Solde": 2288.551,

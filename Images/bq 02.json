@@ -999,7 +999,7 @@
     },
     {
       "Text": "Jour",
-      "Confidence": 90.70608,
+      "Confidence": 84.063126,
       "Left": 223,
       "Top": 509,
       "Right": 259,
@@ -1311,7 +1311,7 @@
     },
     {
       "Text": "Rejet",
-      "Confidence": 93.11473,
+      "Confidence": 92.6635,
       "Left": 401,
       "Top": 693,
       "Right": 455,
@@ -1607,7 +1607,7 @@
     },
     {
       "Text": "04|",
-      "Confidence": 91.1715,
+      "Confidence": 84.97127,
       "Left": 238,
       "Top": 875,
       "Right": 257,
@@ -2023,7 +2023,7 @@
     },
     {
       "Text": "0,760",
-      "Confidence": 96.3893,
+      "Confidence": 86.7601,
       "Left": 1092,
       "Top": 1086,
       "Right": 1144,
@@ -2031,7 +2031,7 @@
     },
     {
       "Text": "06|",
-      "Confidence": 90.630424,
+      "Confidence": 84.25198,
       "Left": 238,
       "Top": 1118,
       "Right": 258,
@@ -2039,7 +2039,7 @@
     },
     {
       "Text": "Commission",
-      "Confidence": 90.351006,
+      "Confidence": 91.27275,
       "Left": 281,
       "Top": 1118,
       "Right": 390,
@@ -2047,7 +2047,7 @@
     },
     {
       "Text": "d'encaissement",
-      "Confidence": 88.177376,
+      "Confidence": 91.36062,
       "Left": 401,
       "Top": 1118,
       "Right": 554,
@@ -2055,7 +2055,7 @@
     },
     {
       "Text": "effet",
-      "Confidence": 93.03863,
+      "Confidence": 93.25953,
       "Left": 566,
       "Top": 1118,
       "Right": 620,
@@ -2423,7 +2423,7 @@
     },
     {
       "Text": "94|",
-      "Confidence": 87.40557,
+      "Confidence": 86.030975,
       "Left": 830,
       "Top": 1300,
       "Right": 849,
@@ -2807,7 +2807,7 @@
     },
     {
       "Text": "07/02/25",
-      "Confidence": 92.31848,
+      "Confidence": 91.32468,
       "Left": 873,
       "Top": 1511,
       "Right": 959,
@@ -16580,7 +16580,7 @@
         },
         {
           "Text": "Jour",
-          "Confidence": 90.70608,
+          "Confidence": 84.063126,
           "Left": 223,
           "Top": 509,
           "Right": 259,
@@ -16914,7 +16914,7 @@
         },
         {
           "Text": "Rejet",
-          "Confidence": 93.11473,
+          "Confidence": 92.6635,
           "Left": 401,
           "Top": 693,
           "Right": 455,
@@ -17253,7 +17253,7 @@
       "Words": [
         {
           "Text": "04|",
-          "Confidence": 91.1715,
+          "Confidence": 84.97127,
           "Left": 238,
           "Top": 875,
           "Right": 257,
@@ -17681,7 +17681,7 @@
         },
         {
           "Text": "0,760",
-          "Confidence": 96.3893,
+          "Confidence": 86.7601,
           "Left": 1092,
           "Top": 1086,
           "Right": 1144,
@@ -17734,7 +17734,7 @@
         },
         {
           "Text": "06|",
-          "Confidence": 90.630424,
+          "Confidence": 84.25198,
           "Left": 238,
           "Top": 1118,
           "Right": 258,
@@ -17742,7 +17742,7 @@
         },
         {
           "Text": "Commission",
-          "Confidence": 90.351006,
+          "Confidence": 91.27275,
           "Left": 281,
           "Top": 1118,
           "Right": 390,
@@ -17750,7 +17750,7 @@
         },
         {
           "Text": "d'encaissement",
-          "Confidence": 88.177376,
+          "Confidence": 91.36062,
           "Left": 401,
           "Top": 1118,
           "Right": 554,
@@ -17758,7 +17758,7 @@
         },
         {
           "Text": "effet",
-          "Confidence": 93.03863,
+          "Confidence": 93.25953,
           "Left": 566,
           "Top": 1118,
           "Right": 620,
@@ -18145,7 +18145,7 @@
         },
         {
           "Text": "94|",
-          "Confidence": 87.40557,
+          "Confidence": 86.030975,
           "Left": 830,
           "Top": 1300,
           "Right": 849,
@@ -18518,7 +18518,7 @@
       "Words": [
         {
           "Text": "07/02/25",
-          "Confidence": 92.31848,
+          "Confidence": 91.32468,
           "Left": 873,
           "Top": 1511,
           "Right": 959,

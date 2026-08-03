@@ -271,7 +271,7 @@
         "Solde": null,
         "Date": "29/01/2025",
         "Libelle": "VIR TN AUTRE BQ FT250299Z08V",
-        "Debit": 137.067,
+        "Debit": -1137.067,
         "Credit": null
       },
       {
@@ -622,7 +622,7 @@
         "Date": "15/01/2025",
         "Libelle": "VIR TN AUTRE BQ S P T -HOTELS هذا FT25015POCSS",
         "Debit": null,
-        "Credit": 186.395
+        "Credit": 1186.395
       },
       {
         "Solde": null,

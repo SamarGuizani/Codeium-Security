@@ -92,6 +92,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 // ===== TRAITEMENT SPÉCIFIQUE QNB =====
                 if (isQnb)
                 {
+                    Console.WriteLine($"[QNB-DEBUG] joined='{joined}' | current==null: {current == null}");
                     var qnbMatch = Regex.Match(joined,
                         @"^(\d{2}/\d{2}/\d{4})\s+(.*?)\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})$",
                         RegexOptions.IgnoreCase);
@@ -114,7 +115,6 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                             sectionRawText = joined + "\n";
                         }
 
-                        // Remplacer "tx" par "qnbTx"
                         var qnbTx = new Transaction
                         {
                             Date = NormalizeDate(date, null),
@@ -125,18 +125,16 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         };
 
                         previousSolde = solde;
-
-                        if (!IsDuplicateOfLast(current, qnbTx))
-                            current.Transactions.Add(qnbTx);
-
+                        current.Transactions.Add(qnbTx);
                         continue;
                     }
                 }
+
                 // ===== FIN TRAITEMENT QNB =====
                 // Extraction du numéro de compte
                 var account = ExtractAccountNumber(joined);
-                if (string.IsNullOrWhiteSpace(account))
-                    account = ExtractAccountNumber(fullText);
+                //if (string.IsNullOrWhiteSpace(account))
+                   // account = ExtractAccountNumber(fullText);//je doit supprimer cette lignes le 3 aout 
                 if (!string.IsNullOrWhiteSpace(account))
                     lastSeenAccountNumber = account;
 
@@ -311,6 +309,42 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     .Select(c => new { Left = c.Left, Value = ParseAmount(AmountRegex.Match(c.Text).Value) })
                     .ToList();
 
+                //update le 3 aout 
+                // [FIX - montants sans aucun separateur] Un montant peut perdre TOUS ses separateurs
+                // lors de l'OCR (ex: "20 798,316" devient "20798316"). AmountRegex ne le reconnait jamais
+                // car il exige un vrai separateur decimal. On le detecte UNIQUEMENT si la cellule tombe
+                // dans une colonne Debit/Credit/Solde deja reperee par position (evite tout faux positif
+                // sur des numeros de reference ou des dates, qui n'apparaissent jamais a ces positions X).
+                if (debitAnchor.HasValue || creditAnchor.HasValue || soldeAnchor.HasValue)
+                {
+                    var bareDigitCandidates = mergedWithPos
+                        .Where(c => !AmountRegex.IsMatch(c.Text))
+                        .Where(c => Regex.IsMatch(c.Text.Trim(), @"^-?\d{5,10}$"))
+                        .Where(c =>
+                        {
+                            int distDebit = debitAnchor.HasValue ? Math.Abs(c.Left - debitAnchor.Value) : int.MaxValue;
+                            int distCredit = creditAnchor.HasValue ? Math.Abs(c.Left - creditAnchor.Value) : int.MaxValue;
+                            int distSolde = soldeAnchor.HasValue ? Math.Abs(c.Left - soldeAnchor.Value) : int.MaxValue;
+                            int minDist = Math.Min(distDebit, Math.Min(distCredit, distSolde));
+                            return minDist < 60;
+                        })
+                        .Select(c =>
+                        {
+                            string digits = c.Text.Trim();
+                            bool neg = digits.StartsWith("-");
+                            if (neg) digits = digits.Substring(1);
+                            string intPart = digits.Substring(0, digits.Length - 3);
+                            string decPart = digits.Substring(digits.Length - 3);
+                            decimal val = decimal.Parse(intPart + "." + decPart, CultureInfo.InvariantCulture);
+                            if (neg) val = -val;
+                            return new { Left = c.Left, Value = val };
+                        })
+                        .ToList();
+
+                    amountCandidates.AddRange(bareDigitCandidates);
+                    amountCandidates = amountCandidates.OrderBy(a => a.Left).ToList();
+                }
+
                 // Création d'une section par défaut si aucune détection précédente
                 if (current == null)
                 {
@@ -364,7 +398,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         }
                         pendingLibelleBuffer = "";
 
-                        if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
+                        /*if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
                         {
                             foreach (var splitTx in SplitMergedRow(pendingDate, fullDesc, amountCandidates, debitAnchor, creditAnchor))
                                 if (isBiat)
@@ -400,6 +434,22 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
                             continue;
                         
+                    }*/
+                        //update le 2 aout 2026 pour corriger le saut des lignes 
+                        if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
+                        {
+                            foreach (var splitTx in SplitMergedRow(pendingDate, fullDesc, amountCandidates, debitAnchor, creditAnchor))
+                                current.Transactions.Add(splitTx);
+                            pendingDate = "";
+                            continue;
+                        }
+                        decimal? soldeAvant2 = previousSolde;
+                        var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
+                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
+                        ApplyMovementFallback(tx2, soldeAvant2);
+                        current.Transactions.Add(tx2);
+                        pendingDate = "";
+                        continue;
                     }
 
                     // Texte de continuation
@@ -444,7 +494,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 pendingLibelleBuffer = "";
                 pendingDate = "";
 
-                if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
+                /*if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
                 {
                     foreach (var splitTx in SplitMergedRow(normalizedDate, fullDescription, amountCandidates, debitAnchor, creditAnchor))
                         if (isBiat)
@@ -479,6 +529,20 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     if (!IsDuplicateOfLast(current, tx))
                         current.Transactions.Add(tx);
                 }
+            }*/
+                //update le 2 aout aussi meme raison 
+                if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
+                {
+                    foreach (var splitTx in SplitMergedRow(normalizedDate, fullDescription, amountCandidates, debitAnchor, creditAnchor))
+                        current.Transactions.Add(splitTx);
+                    continue;
+                }
+
+                decimal? soldeAvantTx = previousSolde;
+                var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
+                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
+                ApplyMovementFallback(tx, soldeAvantTx);
+                current.Transactions.Add(tx);
             }
 
             if (current != null)

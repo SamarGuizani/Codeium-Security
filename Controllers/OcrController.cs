@@ -43,9 +43,8 @@ namespace Codeium_Security.Controllers
                 foreach (var account in bankDoc.Accounts)
                 {
                     string safeAccount = string.IsNullOrWhiteSpace(account.AccountNumber)
-                        ? "compte_inconnu"
-                        : Regex.Replace(account.AccountNumber, @"[^\w\-]", "_");
-
+      ? "compte_inconnu"
+      : Regex.Replace(account.AccountNumber, @"[^\w\-]", "_");
                     var perAccountResult = new
                     {
                         FileName = fileName,
@@ -59,6 +58,17 @@ namespace Codeium_Security.Controllers
 
                     var outputPath = Path.Combine(outputFolder,
                         $"{Path.GetFileNameWithoutExtension(fileName)}_{safeAccount}.json");
+
+                    //update le 03/08/2026 
+                    // Si le fichier existe deja (meme numero de compte detecte 2 fois), ajoute un index
+                    int counter = 2;
+                    while (System.IO.File.Exists(outputPath) && written.Contains(outputPath) == false && System.IO.File.Exists(outputPath))
+                    {
+                        outputPath = Path.Combine(outputFolder,
+                            $"{Path.GetFileNameWithoutExtension(fileName)}_{safeAccount}_v{counter}.json");
+                        counter++;
+                    }
+
                     var json = JsonSerializer.Serialize(perAccountResult, JsonOptions);
                     await System.IO.File.WriteAllTextAsync(outputPath, json);
                     written.Add(outputPath);
