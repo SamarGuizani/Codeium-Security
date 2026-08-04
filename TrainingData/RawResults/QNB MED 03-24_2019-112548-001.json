@@ -2,7 +2,7 @@
   "FileName": "QNB MED 03-24.pdf",
   "DetectedType": "Bank",
   "PageCount": 4,
-  "OcrConfidence": 89.5,
+  "OcrConfidence": 89.25,
   "NeedsReview": false,
   "BankName": "",
   "Account": {
@@ -19,14 +19,14 @@
         "Solde": 52.395,
         "Date": "29/03/2024",
         "Libelle": "Charges/Fees 2019-112548-002 Account Keeping Commission (Retail) Charge Date 1240329",
-        "Debit": -17.000,
+        "Debit": 17.000,
         "Credit": null
       },
       {
         "Solde": 49.165,
         "Date": "29/03/2024",
-        "Libelle": "Tax on Charges 2019-112548-002 Pour toute remarque, suggestion, ou problème concernant cet email, veuillez nous appeler au +216 36 004 000 ou envoyer un e-mail support@gnb.com.tn. Veuillez visiter Pour toute réclamation relative à une opération qui n'a pas été initiée par vos soins, veuillez appeler notre numéro hotline +216 36 004 000 dans votre situation de compte incluant les transactions à date valeur antérieure ou postérieure et exclut les éventuels montants de rectification par la banque. Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire de la banque par écrit dans les 15 jours suivant la date d'émission.",
-        "Debit": -3.230,
+        "Libelle": "Tax on Charges 2019-112548-002 Veuillez visiter : pour plus d'informations. . dans votre situation de compte incluant les transactions a date valeur antérieure ou postérieure et exclut les éventuels montants de rectification par la banque. Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire عل la banque par écrit dans les 15 jours suivant la date d'émission.",
+        "Debit": 3.230,
         "Credit": null
       }
     ]

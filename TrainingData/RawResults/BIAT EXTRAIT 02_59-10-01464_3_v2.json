@@ -1,0 +1,202 @@
+{
+  "FileName": "BIAT EXTRAIT 02.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 7,
+  "OcrConfidence": 90.42857,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "59-10-01464/3",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": -19158.346,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": 30000.000,
+        "Date": "08/01/2024",
+        "Libelle": "24 Virement tunisie meme banque FT24008096460306 08 JAN 24 REF : DE STE TOPDIS *",
+        "Debit": null,
+        "Credit": 49158.346
+      },
+      {
+        "Solde": -10000.000,
+        "Date": "09/01/2024",
+        "Libelle": "24 Virement tunisie meme banque FT24009240561296 09 JAN 24 5314833",
+        "Debit": null,
+        "Credit": 40000.000
+      },
+      {
+        "Solde": -2.975,
+        "Date": "19/01/2024",
+        "Libelle": "24 Com TVA FT24022135596127\\S98 22 JAN 24 Prelevement",
+        "Debit": null,
+        "Credit": 9997.025
+      },
+      {
+        "Solde": -4936.093,
+        "Date": "19/01/2024",
+        "Libelle": "24 Paiement Prelevement FT24022135596127\\S98 22 JAN 24 HANNIBAL 49000000000067545006 STE BLUE TUNISIE COMM. INTERV-DEPASSEMENT / 1S SUSPENS.220124 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.220124 0000762 F/ SOCIETE MYTEK INFORMATIQUE COMM. INTERV-DEPASSEMENT / 1S SUSPENS.160224 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.160224 Prelevement HANNIBAL 49000000000067545006 STE BLUE TUNISIE COMM. INTERV-DEPASSEMENT / 1S SUSPENS.200224 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.200224",
+        "Debit": null,
+        "Credit": 4933.118
+      },
+      {
+        "Solde": -2.975,
+        "Date": "19/03/2024",
+        "Libelle": "24 Com TVA FT24081100334694\\S98 21 MAR 24 Prelevement",
+        "Debit": null,
+        "Credit": 4933.118
+      },
+      {
+        "Solde": -4936.093,
+        "Date": "19/03/2024",
+        "Libelle": "24 Paiement Prelevement FT24081100334694\\S98 21 MAR 24 HANNIBAL 49000000000067545006 STE BLUE TUNISIE TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.210324 COMM. INTERV-DEPASSEMENT / 1S SUSPENS.210324 :",
+        "Debit": null,
+        "Credit": 4933.118
+      },
+      {
+        "Solde": -630.000,
+        "Date": "26/03/2024",
+        "Libelle": "24 Reglement cheque no FT24087070090624 27 MAR 24 0000808 F/ SOCIETE MYTEK INFORMATIQUE COMM. INTERV-DEPASSEMENT / 1S SUSPENS.270324 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.270324 FRAIS DE RELANCE RECOUVREMENT : WTR014640424 TVA/FRAIS DE RELANCE RECOUVREMENT : WTR014640424 Rejet prelevement : HANNIBAL REF : 00010000000153 00010000000153 : CLUB MEDITERRANEE .SUCCURSALE REF : 00120000000139 00120000000139 : HENKEL TUNISIE 0704670 0000809 F/ CNSS 0000810 F/ HANNIBAL LEASE REF : DE STE TOPDIS * Prelevement HANNIBAL 49000000000067545006 STE BLUE TUNISIE COMM. INTERV-DEPASSEMENT / 1S SUSPENS.200524 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.200524 0000811 F/ OOREDOO TUNISIE SA COMM. INTERV-DEPASSEMENT / 1S SUSPENS.210524 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.210524 REF : DE STE TOPDIS * 0704674 COMM. INTERV-DEPASSEMENT / 1S SUSPENS.240524 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.240524 REF : DE STE TOPDIS * 0704675 COMM. INTERV-DEPASSEMENT / 1S SUSPENS.300524 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.300524",
+        "Debit": null,
+        "Credit": 4306.093
+      },
+      {
+        "Solde": 4719.120,
+        "Date": "05/06/2024",
+        "Libelle": "24 Virement tunisie meme banque FT24157050277028 05 JUN 24 REF : DE STE TOPDIS *",
+        "Debit": null,
+        "Credit": 5349.120
+      },
+      {
+        "Solde": -4719.120,
+        "Date": "05/06/2024",
+        "Libelle": "24 Virement tunisie meme banque FT24157672425470 05 JUN 24 1408364 TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.050624 COMM. INTERV-DEPASSEMENT / 1S SUSPENS.050624 :",
+        "Debit": null,
+        "Credit": 9438.240
+      },
+      {
+        "Solde": 1212.750,
+        "Date": "12/06/2024",
+        "Libelle": "24 Virement tunisie meme banque FT24164838326515 12 JUN 24 REF : DE STE TOPDIS *",
+        "Debit": null,
+        "Credit": 5931.870
+      },
+      {
+        "Solde": -1212.750,
+        "Date": "12/06/2024",
+        "Libelle": "24 Virement tunisie meme banque FT24164531762698 12 JUN 24 1408366",
+        "Debit": null,
+        "Credit": 2425.500
+      },
+      {
+        "Solde": -1524.849,
+        "Date": "12/06/2024",
+        "Libelle": "24 Reglement cheque no FT24165325367678 13 JUN 24 0000815 F/ BEN GHORBEL CHO COMM. INTERV-DEPASSEMENT / 1S SUSPENS.120624 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.120624 COMM. INTERV-DEPASSEMENT / 1S SUSPENS.130624 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.130624",
+        "Debit": null,
+        "Credit": 312.099
+      },
+      {
+        "Solde": -3040.000,
+        "Date": "13/06/2024",
+        "Libelle": "24 Reglement cheque no FT24166927064677 14 JUN 24 0000812 F/ OOREDOO TUNISIE SA COMM. INTERV-DEPASSEMENT / 1S SUSPENS.140624 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS. 140624",
+        "Debit": null,
+        "Credit": 1515.151
+      },
+      {
+        "Solde": -2.975,
+        "Date": "19/06/2024",
+        "Libelle": "24 Com TVA FT24172406836994\\S98 20 JUN 24 Prelevement",
+        "Debit": null,
+        "Credit": 3037.025
+      },
+      {
+        "Solde": -4936.093,
+        "Date": "19/06/2024",
+        "Libelle": "24 Paiement Prelevement FT24172406836994\\S98 20 JUN 24 HANNIBAL 49000000000067545006 STE BLUE TUNISIE COMM. INTERV-DEPASSEMENT / 1S SUSPENS.200624 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.200624",
+        "Debit": null,
+        "Credit": 4933.118
+      },
+      {
+        "Solde": -2.975,
+        "Date": "20/06/2024",
+        "Libelle": "24 Com TVA FT24173528163808\\S98 21 JUN 24 Prelevement",
+        "Debit": null,
+        "Credit": 4933.118
+      },
+      {
+        "Solde": -2970.599,
+        "Date": "20/06/2024",
+        "Libelle": "24 Paiement Prelevement FT24173528163808\\S98 21 JUN 24 MIN FIN 00000000002019002741 REGLE DE LA DECLARATION: 2662006 COMM. INTERV-DEPASSEMENT / 1S SUSPENS.210624 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.210624",
+        "Debit": null,
+        "Credit": 2967.624
+      },
+      {
+        "Solde": -2.380,
+        "Date": "24/06/2024",
+        "Libelle": "24 Com TVA Virement FT24177523705400\\S98 25 JUN 24 REF : 00010000000727",
+        "Debit": null,
+        "Credit": 2968.219
+      },
+      {
+        "Solde": 17554.680,
+        "Date": "26/06/2024",
+        "Libelle": "24 Virement tunisie autre banque FT24177523705400\\S98 25 JUN 24 00010000000727 : CLUB MEDITERRANEE SUCCURSALE",
+        "Debit": null,
+        "Credit": 17557.060
+      },
+      {
+        "Solde": -827.400,
+        "Date": "27/06/2024",
+        "Libelle": "24 Reglement cheque no FT24180358629643 28 JUN 24 0000816 F/ DHAOUADI RANIA",
+        "Debit": null,
+        "Credit": 18382.080
+      },
+      {
+        "Solde": -1.190,
+        "Date": "28/06/2024",
+        "Libelle": "24 Com TVA Virement FT24180633526032 28 JUN 24 REF : 1408375",
+        "Debit": null,
+        "Credit": 826.210
+      },
+      {
+        "Solde": -2200.000,
+        "Date": "28/06/2024",
+        "Libelle": "24 Virement tunisie meme banque FT24180633526032 28 JUN 24 1408375",
+        "Debit": null,
+        "Credit": 2198.810
+      },
+      {
+        "Solde": -5.510,
+        "Date": "01/07/2024",
+        "Libelle": "24 TVA sur Com 8908744188-202406 28 JUN 24",
+        "Debit": null,
+        "Credit": 2194.490
+      },
+      {
+        "Solde": -29.000,
+        "Date": "01/07/2024",
+        "Libelle": "24 Frais de Tenue de Compte 8908744188-202406 28 JUN 24",
+        "Debit": null,
+        "Credit": 23.490
+      },
+      {
+        "Solde": -25.821,
+        "Date": "01/07/2024",
+        "Libelle": "24 Comm Pereq Change et Garantie 8908744188- 28 JUN 24 COMM. INTERV-DEPASSEMENT / 2S : SUSPENS.280624 TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.280624",
+        "Debit": null,
+        "Credit": 3.179
+      },
+      {
+        "Solde": -2308.600,
+        "Date": "28/06/2024",
+        "Libelle": "24 Reglement cheque no FT24183412097157 01 JUL 24 0000821 F/ Mr JEMAIEL TAOUFIK COMM. INTERV-DEPASSEMENT / 1S SUSPENS.010724 : TVA/COMM. INTERV-DEPASSEMENT : SUSPENS.010724 au Sauf erreur ou omission de notre part",
+        "Debit": null,
+        "Credit": 2282.779
+      }
+    ]
+  }
+}

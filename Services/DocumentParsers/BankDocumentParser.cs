@@ -51,7 +51,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             string pendingDate = "";
             string sectionRawText = "";
 
-            int? debitAnchor = null, creditAnchor = null, soldeAnchor = null;
+            int? debitAnchor = null, creditAnchor = null, soldeAnchor = null, montantAnchor = null;
             string documentRib = ExtractRib(fullText);
 
             // [BIAT] Récupérer l'année du document
@@ -138,7 +138,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 // Extraction du numéro de compte
                 var account = ExtractAccountNumber(joined);
                 //if (string.IsNullOrWhiteSpace(account))
-                   // account = ExtractAccountNumber(fullText);//je doit supprimer cette lignes le 3 aout 
+                // account = ExtractAccountNumber(fullText);//je doit supprimer cette lignes le 3 aout 
                 if (!string.IsNullOrWhiteSpace(account))
                     lastSeenAccountNumber = account;
 
@@ -150,7 +150,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 var debitCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"D[ée]bit", RegexOptions.IgnoreCase));
                 var creditCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"Cr[ée]dit", RegexOptions.IgnoreCase));
                 var soldeCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bSolde\b", RegexOptions.IgnoreCase));
-
+                var montantCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bMontant\b", RegexOptions.IgnoreCase));
                 if (isBiat)
                 {
                     var arabicDebit = cells.FirstOrDefault(c => c.Text.Contains("عليه"));
@@ -164,6 +164,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     if (debitCell != null) debitAnchor = debitCell.Left;
                     if (creditCell != null) creditAnchor = creditCell.Left;
                     if (soldeCell != null) soldeAnchor = soldeCell.Left;
+                    if (montantCell != null) montantAnchor = montantCell.Left;
                     continue;
                 }
 
@@ -449,7 +450,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         }
                         decimal? soldeAvant2 = previousSolde;
                         var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
-                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
+                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, ref previousSolde);
                         ApplyMovementFallback(tx2, soldeAvant2);
                         if (isQnb) ApplyQnbSignRule(tx2);   // <-- AJOUTE CETTE LIGNE
                         current.Transactions.Add(tx2);
@@ -484,6 +485,9 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     continue;
                 }
 
+              
+            if (current != null)
+            {
                 // Cas normal : date + montant(s)
                 string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)))
                     .Trim(' ', '|', '[', ']', '-', '_');
@@ -545,15 +549,12 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
                 decimal? soldeAvantTx = previousSolde;
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
-                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, ref previousSolde);
+                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, ref previousSolde);
                 ApplyMovementFallback(tx, soldeAvantTx);
                 if (isQnb) ApplyQnbSignRule(tx);   // <-- AJOUTE CETTE LIGNE
                 current.Transactions.Add(tx);
             }
-
-            if (current != null)
-            {
-                current.RawSectionText = sectionRawText;
+  current.RawSectionText = sectionRawText;
                 sections.Add(current);
             }
 
@@ -736,7 +737,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             return result;
         }
 
-        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, ref decimal? previousSolde)
+        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, int? montantAnchor, ref decimal? previousSolde)
         {
             const int Tolerance = 15;
 
@@ -760,11 +761,15 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     }
                     else if (distDebit < distCredit)
                     {
-                        tx.Debit = cand.Value;
+                        //le 4 aout le changement des signes 
+                        tx.Debit = Math.Abs(cand.Value);
+
+                        //tx.Debit = cand.Value;
                     }
                     else
                     {
-                        tx.Credit = cand.Value;
+                        tx.Credit = Math.Abs(cand.Value);
+                        //tx.Credit = cand.Value;
                     }
                 }
 
@@ -793,7 +798,14 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             {
                 var amounts = new List<decimal>();
                 foreach (var a in amountCandidates) amounts.Add((decimal)a.Value);
-
+                if (montantAnchor.HasValue)
+                {
+                    decimal val = amounts[0];
+                    if (val < 0) tx.Debit = Math.Abs(val);
+                    else if (val > 0) tx.Credit = val;
+                    previousSolde = tx.Solde; // reste null si pas de solde courant
+                    return;
+                }
                 if (amounts.Count == 1)
                 {
                     tx.Solde = amounts[0];

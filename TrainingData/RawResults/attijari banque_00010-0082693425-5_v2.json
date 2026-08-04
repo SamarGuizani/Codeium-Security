@@ -1,0 +1,244 @@
+{
+  "FileName": "attijari banque.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 2,
+  "OcrConfidence": 89.5,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "00010-0082693425-5",
+    "Currency": "TND",
+    "Rib": "TN5904000010008269342555",
+    "SoldeInitial": 0,
+    "SoldeFinal": 0.000,
+    "SoldeDisponible": 0,
+    "TotalDebit": 10247.456,
+    "TotalCredit": 12925.095,
+    "Transactions": [
+      {
+        "Solde": -2713.339,
+        "Date": "02/01/2024",
+        "Libelle": "IABONNEMENT 001235 PACK BUSINESS SOLUTIONS S C",
+        "Debit": null,
+        "Credit": 35.700
+      },
+      {
+        "Solde": -2810.096,
+        "Date": "02/01/2024",
+        "Libelle": "AGIOS DU 30/09/23 AU 31/12/23",
+        "Debit": null,
+        "Credit": 96.757
+      },
+      {
+        "Solde": -4492.176,
+        "Date": "17/01/2024",
+        "Libelle": "REGLEMENT CHEQUE N 22",
+        "Debit": null,
+        "Credit": 1682.080
+      },
+      {
+        "Solde": -4504.076,
+        "Date": "17/01/2024",
+        "Libelle": "COM DEPASSEMENT PONCTUEL IABONNEMENT 001306",
+        "Debit": null,
+        "Credit": 11.900
+      },
+      {
+        "Solde": -4539.776,
+        "Date": "30/01/2024",
+        "Libelle": "PACK BUSINESS SOLUTIONS S C",
+        "Debit": null,
+        "Credit": 35.700
+      },
+      {
+        "Solde": -4658.776,
+        "Date": "16/02/2024",
+        "Libelle": "COM & TVA/ REJET CHQ 23 COMMISSION VIR MEME BQ 005353",
+        "Debit": null,
+        "Credit": 119.000
+      },
+      {
+        "Solde": 4661.156,
+        "Date": "21/02/2024",
+        "Libelle": "VIR RECU TN MEME AG 005353",
+        "Debit": null,
+        "Credit": 2.380
+      },
+      {
+        "Solde": -1661.156,
+        "Date": "21/02/2024",
+        "Libelle": "STE TOPDIS AVANCE / FACT",
+        "Debit": null,
+        "Credit": 3000.000
+      },
+      {
+        "Solde": -3913.189,
+        "Date": "21/02/2024",
+        "Libelle": "REGLEMENT CHEQUE N 23",
+        "Debit": null,
+        "Credit": 2252.033
+      },
+      {
+        "Solde": -3925.089,
+        "Date": "21/02/2024",
+        "Libelle": "COM DEPASSEMENT PONCTUEL IABONNEMENT 001375",
+        "Debit": null,
+        "Credit": 11.900
+      },
+      {
+        "Solde": -3960.789,
+        "Date": "29/02/2024",
+        "Libelle": "PACK BUSINESS SOLUTIONS S C",
+        "Debit": null,
+        "Credit": 35.700
+      },
+      {
+        "Solde": -4079.789,
+        "Date": "22/03/2024",
+        "Libelle": "COM & TVA/ REJET CHQ 24",
+        "Debit": null,
+        "Credit": 119.000
+      },
+      {
+        "Solde": -5896.765,
+        "Date": "27/03/2024",
+        "Libelle": "REGLEMENT CHEQUE N 24",
+        "Debit": null,
+        "Credit": 1816.976
+      },
+      {
+        "Solde": -5908.665,
+        "Date": "27/03/2024",
+        "Libelle": "COM DEPASSEMENT PONCTUEL IABONNEMENT 001454",
+        "Debit": null,
+        "Credit": 11.900
+      },
+      {
+        "Solde": -5944.365,
+        "Date": "29/03/2024",
+        "Libelle": "PACK BUSINESS SOLUTIONS S C",
+        "Debit": null,
+        "Credit": 35.700
+      },
+      {
+        "Solde": -6114.497,
+        "Date": "01/04/2024",
+        "Libelle": "AGIOS DU 31/12/23 AU 31/03/24",
+        "Debit": null,
+        "Credit": 170.132
+      },
+      {
+        "Solde": -6233.497,
+        "Date": "16/04/2024",
+        "Libelle": "COM & TVA/ REJET CHQ 25 COMMISSION VIR MEME BQ 005444",
+        "Debit": null,
+        "Credit": 119.000
+      },
+      {
+        "Solde": 6235.877,
+        "Date": "22/04/2024",
+        "Libelle": "VIR RECU TN MEME AG 005444",
+        "Debit": null,
+        "Credit": 2.380
+      },
+      {
+        "Solde": -4539.397,
+        "Date": "22/04/2024",
+        "Libelle": "STE TOPDIS VIREMENT",
+        "Debit": null,
+        "Credit": 1696.480
+      },
+      {
+        "Solde": -4568.909,
+        "Date": "24/04/2024",
+        "Libelle": "FRAIS PHOTO R//2024 \\ABONNEMENT 001521",
+        "Debit": null,
+        "Credit": 29.512
+      },
+      {
+        "Solde": -4604.609,
+        "Date": "29/04/2024",
+        "Libelle": "PACK BUSINESS SOLUTIONS S C",
+        "Debit": null,
+        "Credit": 35.700
+      },
+      {
+        "Solde": -4739.949,
+        "Date": "29/04/2024",
+        "Libelle": "REGL HUISS0000025",
+        "Debit": null,
+        "Credit": 135.340
+      },
+      {
+        "Solde": -4604.609,
+        "Date": "29/04/2024",
+        "Libelle": "REGL HUISS0000025",
+        "Debit": null,
+        "Credit": 135.340
+      },
+      {
+        "Solde": -6348.689,
+        "Date": "29/04/2024",
+        "Libelle": "REGLEMENT CHEQUE N 25",
+        "Debit": null,
+        "Credit": 1744.080
+      },
+      {
+        "Solde": -6484.029,
+        "Date": "29/04/2024",
+        "Libelle": "FRAIS HUISSIER 25",
+        "Debit": null,
+        "Credit": 135.340
+      },
+      {
+        "Solde": -6495.929,
+        "Date": "29/04/2024",
+        "Libelle": "COM DEPASSEMENT PONCTUEL COMMISSION VIR MEME BQ 005470",
+        "Debit": null,
+        "Credit": 11.900
+      },
+      {
+        "Solde": 6498.309,
+        "Date": "15/05/2024",
+        "Libelle": "VIR RECU TN MEME AG 005470",
+        "Debit": null,
+        "Credit": 2.380
+      },
+      {
+        "Solde": 1546.691,
+        "Date": "15/05/2024",
+        "Libelle": "STE TOPDIS AV / FACTURE",
+        "Debit": null,
+        "Credit": 8045.000
+      },
+      {
+        "Solde": -0.675,
+        "Date": "16/05/2024",
+        "Libelle": "REGLEMENT CHEQUE N 26",
+        "Debit": null,
+        "Credit": 1547.366
+      },
+      {
+        "Solde": -12.575,
+        "Date": "16/05/2024",
+        "Libelle": "COM DEPASSEMENT PONCTUEL ABONNEMENT 001605",
+        "Debit": null,
+        "Credit": 11.900
+      },
+      {
+        "Solde": -48.275,
+        "Date": "29/05/2024",
+        "Libelle": "PACK BUSINESS SOLUTIONS S C VERSEMENT ESPECE 196169",
+        "Debit": null,
+        "Credit": 35.700
+      },
+      {
+        "Solde": 0.000,
+        "Date": "31/05/2024",
+        "Libelle": "xe WAFNI",
+        "Debit": null,
+        "Credit": 48.275
+      }
+    ]
+  }
+}

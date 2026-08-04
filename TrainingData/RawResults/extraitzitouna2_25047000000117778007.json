@@ -1,0 +1,1602 @@
+{
+  "FileName": "extraitzitouna2.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 5,
+  "OcrConfidence": 90.8,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "25047000000117778007",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403133652 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.131
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403133652 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240131 FT240300RWYN",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403136830 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.131
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403136830 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240131 FT24030KPZTC",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403198617 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.131
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403198617 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240131 FT24030RFSVY",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403155124 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.131
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403155124 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240131 FT24030W2XPJ",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403121246 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.131
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FRAIS PDL CHG2403121246 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240131 FT24030KBJYG",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FT240310BWP0 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FT240310BWP0 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "PAIEMENT FT240310BWP0 DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "PAIEMENT FT240310BWP0 DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009156266209",
+        "Debit": null,
+        "Credit": -5544.884
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "VERSEMENT TT24031K7QHC DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.131
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "VERSEMENT TT24031K7QHC DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES AGENCE BEN",
+        "Debit": null,
+        "Credit": 32930.000
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FT2403156XF9 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FT2403156XF9 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "PAIEMENT FT2403156XF9 DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "PAIEMENT FT2403156XF9 DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009867017219",
+        "Debit": null,
+        "Credit": -1669.074
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FT24031FQXW5 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FT24031FQXW5 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "PAIEMENT FT24031FQXW5 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "PAIEMENT FT24031FQXW5 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009874407649",
+        "Debit": null,
+        "Credit": -9760.461
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FT240318W63S [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "FT240318W63S [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "PAIEMENT FT240318W63S DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2024",
+        "Libelle": "PAIEMENT FT240318W63S DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009822380147",
+        "Debit": null,
+        "Credit": -16000.000
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "DEBLOCAGE FT240307TLB8 DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.131
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "DEBLOCAGE FT240307TLB8 DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] PROVISION deb",
+        "Debit": null,
+        "Credit": 19000.000
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "COM VIR TN FT240300RWYN [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "COM VIR TN FT240300RWYN [LIGNE FUSIONNEE 2/2 - a verifier manuellement] AUTRE BQ AC- TND105050001",
+        "Debit": null,
+        "Credit": -2.380
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "VIR TN AUTRE FT240300RWYN DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "VIR TN AUTRE FT240300RWYN DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] BQ",
+        "Debit": null,
+        "Credit": -12855.227
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "COM VIR TN FT24030KBJYG [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "COM VIR TN FT24030KBJYG [LIGNE FUSIONNEE 2/2 - a verifier manuellement] AUTRE BQ AC- TND105050001",
+        "Debit": null,
+        "Credit": -2.380
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "VIR TN AUTRE FT24030KBJYG [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "VIR TN AUTRE FT24030KBJYG [LIGNE FUSIONNEE 2/2 - a verifier manuellement] BQ",
+        "Debit": null,
+        "Credit": -5615.667
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "RECUP FRAIS DC2403060350770 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "RECUP FRAIS DC2403060350770 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFETS REJETES 25 009915053462",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "FT24030KPZTC [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.129
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "FT24030KPZTC [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "PAIEMENT FT24030KPZTC [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.129
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "PAIEMENT FT24030KPZTC [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009834407662",
+        "Debit": null,
+        "Credit": -1648.262
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "VERSEMENT TT24030WKV9Y [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.130
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "VERSEMENT TT24030WKV9Y [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES AGENCE BEN",
+        "Debit": null,
+        "Credit": 5400.000
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "FT24030RFSVY [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.129
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "FT24030RFSVY [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "PAIEMENT FT24030RFSVY [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.129
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "PAIEMENT FT24030RFSVY [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009895837083",
+        "Debit": null,
+        "Credit": -1767.503
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "FT24030W2XPJ [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.129
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "FT24030W2XPJ [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "PAIEMENT FT24030W2XPJ [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.129
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2024",
+        "Libelle": "PAIEMENT FT24030W2XPJ [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009844803637",
+        "Debit": null,
+        "Credit": -1966.798
+      },
+      {
+        "Solde": null,
+        "Date": "29/01/2024",
+        "Libelle": "VERSEMENT TT24029MLWN1 DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.129
+      },
+      {
+        "Solde": null,
+        "Date": "29/01/2024",
+        "Libelle": "VERSEMENT TT24029MLWN1 DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES AGENCE BEN",
+        "Debit": null,
+        "Credit": 19000.000
+      },
+      {
+        "Solde": null,
+        "Date": "29/01/2024",
+        "Libelle": "BLOCAGE FT24029TP443 DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.126
+      },
+      {
+        "Solde": null,
+        "Date": "29/01/2024",
+        "Libelle": "BLOCAGE FT24029TP443 DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] PROVISION blocage",
+        "Debit": null,
+        "Credit": -19000.000
+      },
+      {
+        "Solde": null,
+        "Date": "25/01/2024",
+        "Libelle": "FRAIS PDL CHG2402504341 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.125
+      },
+      {
+        "Solde": null,
+        "Date": "25/01/2024",
+        "Libelle": "FRAIS PDL CHG2402504341 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240125 FT2402444LRW",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2024",
+        "Libelle": "FRAIS PDL CHG2402484689 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.124
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2024",
+        "Libelle": "FRAIS PDL CHG2402484689 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240124 FT24023NCSGJ",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2024",
+        "Libelle": "VERSEMENT TT24024NPF33 DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.124
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2024",
+        "Libelle": "VERSEMENT TT24024NPF33 DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES AGENCE BEN",
+        "Debit": null,
+        "Credit": 19260.000
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2024",
+        "Libelle": "COM VIREMENT FT2402444LRW [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.123
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2024",
+        "Libelle": "COM VIREMENT FT2402444LRW [LIGNE FUSIONNEE 2/2 - a verifier manuellement] MM BQ AC- 0000122457",
+        "Debit": null,
+        "Credit": -1.785
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2024",
+        "Libelle": "VIREMENT TN FT2402444LRW DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.123
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2024",
+        "Libelle": "VIREMENT TN FT2402444LRW DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] MM BQ SOCIETE AFRIQUE",
+        "Debit": null,
+        "Credit": -18994.051
+      },
+      {
+        "Solde": null,
+        "Date": "23/01/2024",
+        "Libelle": "FRAIS PDL CHG2402305058 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.123
+      },
+      {
+        "Solde": null,
+        "Date": "23/01/2024",
+        "Libelle": "FRAIS PDL CHG2402305058 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240123 FT24022YYQVQ",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "23/01/2024",
+        "Libelle": "COMMISSIONS FT24023NCSGJ [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.123
+      },
+      {
+        "Solde": null,
+        "Date": "23/01/2024",
+        "Libelle": "COMMISSIONS FT24023NCSGJ [LIGNE FUSIONNEE 2/2 - a verifier manuellement] PAYEES AC- TND105750001",
+        "Debit": null,
+        "Credit": -1.190
+      },
+      {
+        "Solde": null,
+        "Date": "23/01/2024",
+        "Libelle": "PAIEMENT FT24023NCSGJ [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.123
+      },
+      {
+        "Solde": null,
+        "Date": "23/01/2024",
+        "Libelle": "PAIEMENT FT24023NCSGJ [LIGNE FUSIONNEE 2/2 - a verifier manuellement] PRELEVEMENT MIN DES FINANCES",
+        "Debit": null,
+        "Credit": -6319.130
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "FRAIS PDL CHG2402208058 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.122
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "FRAIS PDL CHG2402208058 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240122 FT24019KC6ZQ",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "VERSEMENT TT240221RRLV DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.122
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "VERSEMENT TT240221RRLV DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES AGENCE BEN",
+        "Debit": null,
+        "Credit": 16000.000
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "FT24022YYQVQ [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.119
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "FT24022YYQVQ [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "PAIEMENT FT24022YYQVQ DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.119
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "PAIEMENT FT24022YYQVQ DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009806905058",
+        "Debit": null,
+        "Credit": -10000.000
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "RECUP FRAIS DC2402260350010 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.122
+      },
+      {
+        "Solde": null,
+        "Date": "22/01/2024",
+        "Libelle": "RECUP FRAIS DC2402260350010 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFETS REJETES 33 009156265045",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "19/01/2024",
+        "Libelle": "VIR TN AUTRE FT24019KC6ZQ [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.119
+      },
+      {
+        "Solde": null,
+        "Date": "19/01/2024",
+        "Libelle": "VIR TN AUTRE FT24019KC6ZQ [LIGNE FUSIONNEE 2/2 - a verifier manuellement] BQ ML INNOVATION",
+        "Debit": null,
+        "Credit": 447.998
+      },
+      {
+        "Solde": null,
+        "Date": "19/01/2024",
+        "Libelle": "COM VIR TN FT24019KC6ZQ [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.119
+      },
+      {
+        "Solde": null,
+        "Date": "19/01/2024",
+        "Libelle": "COM VIR TN FT24019KC6ZQ [LIGNE FUSIONNEE 2/2 - a verifier manuellement] AUTRE BQ AC- 0001177780",
+        "Debit": null,
+        "Credit": -1.785
+      },
+      {
+        "Solde": null,
+        "Date": "18/01/2024",
+        "Libelle": "FRAIS PDL CHG2401865458 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.118
+      },
+      {
+        "Solde": null,
+        "Date": "18/01/2024",
+        "Libelle": "FRAIS PDL CHG2401865458 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240118 FT24017DB17W",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "18/01/2024",
+        "Libelle": "FRAIS PDL CHG2401881400 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.118
+      },
+      {
+        "Solde": null,
+        "Date": "18/01/2024",
+        "Libelle": "FRAIS PDL CHG2401881400 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240118 FT24017Z8ZV2",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "VERSEMENT TT24017G765N DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.117
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "VERSEMENT TT24017G765N DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES KAMEL ARRAZ AGENCE GABES",
+        "Debit": null,
+        "Credit": 2000.000
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "COMMISSIONS FT24017DB17W [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.117
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "COMMISSIONS FT24017DB17W [LIGNE FUSIONNEE 2/2 - a verifier manuellement] PAYEES AC- TND105750001",
+        "Debit": null,
+        "Credit": -1.190
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "PAIEMENT FT24017DB17W [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.117
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "PAIEMENT FT24017DB17W [LIGNE FUSIONNEE 2/2 - a verifier manuellement] PRELEVEMENT S.s",
+        "Debit": null,
+        "Credit": -1169.268
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "VERSEMENT TT240172ZVLD DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.117
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "VERSEMENT TT240172ZVLD DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES AGENCE BEN",
+        "Debit": null,
+        "Credit": 2000.000
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "COMMISSIONS FT24017Z8ZV2 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.117
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "COMMISSIONS FT24017Z8ZV2 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] PAYEES AC- TND105750001",
+        "Debit": null,
+        "Credit": -1.190
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "PAIEMENT FT24017Z8ZV2 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.117
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2024",
+        "Libelle": "PAIEMENT FT24017Z8ZV2 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] PRELEVEMENT S.s",
+        "Debit": null,
+        "Credit": -6470.614
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401600688 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.116
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401600688 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240116 FT2401564372",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401697930 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.116
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401697930 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240116 FT2401545Z52",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401664000 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.116
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401664000 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240116 FT24015J9TP4",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401662138 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.116
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401662138 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240116 FT240159FD85",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401617560 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.116
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401617560 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240116 FT240156B1FB",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401604805 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.116
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "FRAIS PDL CHG2401604805 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240116 FT24015GT9F4",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "COMMISSION FT24016LR13D [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.116
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2024",
+        "Libelle": "COMMISSION FT24016LR13D [LIGNE FUSIONNEE 2/2 - a verifier manuellement] RETOUR EFFET AC- TND106350001",
+        "Debit": null,
+        "Credit": -9.520
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FRAIS PDL CHG2401520175 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.115
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FRAIS PDL CHG2401520175 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240115 CHG2401243846",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "VERSEMENT TT24015BJQ83 DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.115
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "VERSEMENT TT24015BJQ83 DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES AGENCE BEN",
+        "Debit": null,
+        "Credit": 37500.000
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FT240159FD85 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FT240159FD85 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106250001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "PAIEMENT FT240159FD85 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "PAIEMENT FT240159FD85 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 008728822905",
+        "Debit": null,
+        "Credit": -1402.212
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FT24015GT9F4 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FT24015GT9F4 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106250001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "PAIEMENT FT24015GT9F4 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "PAIEMENT FT24015GT9F4 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009692485604",
+        "Debit": null,
+        "Credit": -4406.830
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FT2401564372 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FT2401564372 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "PAIEMENT FT2401564372 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "PAIEMENT FT2401564372 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009874407552",
+        "Debit": null,
+        "Credit": -9000.000
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FT240156B1FB [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "FT240156B1FB [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "PAIEMENT FT240156B1FB [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "PAIEMENT FT240156B1FB [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009870222196",
+        "Debit": null,
+        "Credit": -2372.634
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "COM VIR TN FT24015J9TP4 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.115
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "COM VIR TN FT24015J9TP4 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] AUTRE BQ AC- TND105050001",
+        "Debit": null,
+        "Credit": -2.380
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "VIR TN AUTRE FT24015J9TP4 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.115
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "VIR TN AUTRE FT24015J9TP4 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] BQ",
+        "Debit": null,
+        "Credit": -3867.085
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "COM VIR TN FT2401545Z52 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.115
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "COM VIR TN FT2401545Z52 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] AUTRE BQ AC- TND105050001",
+        "Debit": null,
+        "Credit": -2.380
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "VIR TN AUTRE FT2401545Z52 DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.115
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "VIR TN AUTRE FT2401545Z52 DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] BQ",
+        "Debit": null,
+        "Credit": -13365.795
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "RECUP FRAIS DC2401560350010 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.115
+      },
+      {
+        "Solde": null,
+        "Date": "15/01/2024",
+        "Libelle": "RECUP FRAIS DC2401560350010 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFETS REJETES 28 009822380244",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2024",
+        "Libelle": "FRAIS PDL CHG2401207728 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2024",
+        "Libelle": "FRAIS PDL CHG2401207728 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240112 FT24011D8WSW",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2024",
+        "Libelle": "FRAIS PDL CHG2401286249 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2024",
+        "Libelle": "FRAIS PDL CHG2401286249 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240112 FT24011CPOYN",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2024",
+        "Libelle": "TVA CHG2401243846 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2024",
+        "Libelle": "TVA CHG2401243846 [LIGNE FUSIONNEE 2/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": -1.900
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2024",
+        "Libelle": "COMMISSION CHG2401243846 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.112
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2024",
+        "Libelle": "COMMISSION CHG2401243846 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] TAWASSOL",
+        "Debit": null,
+        "Credit": -10.000
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FRAIS PDL CHG2401106037 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.111
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FRAIS PDL CHG2401106037 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240111 FT24010Y1C14",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FRAIS PDL CHG2401150578 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.111
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FRAIS PDL CHG2401150578 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240111 FT24010KSKZL",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FRAIS PDL CHG2401159560 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.111
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FRAIS PDL CHG2401159560 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240111 FT24010GWY7B",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FRAIS PDL CHG2401116204 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.111
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FRAIS PDL CHG2401116204 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240111 FT24010V5MS5",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FT24011D8WSW [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.110
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FT24011D8WSW [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "PAIEMENT FT24011D8WSW [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.110
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "PAIEMENT FT24011D8WSW [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009939544604",
+        "Debit": null,
+        "Credit": -1166.521
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FT24011CPOYN [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.110
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "FT24011CPOYN [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "PAIEMENT FT24011CPOYN DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.110
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2024",
+        "Libelle": "PAIEMENT FT24011CPOYN DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009915053559",
+        "Debit": null,
+        "Credit": -16373.690
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "VERSEMENT TT240107P9NP DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.110
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "VERSEMENT TT240107P9NP DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES AGENCE BEN",
+        "Debit": null,
+        "Credit": 42000.000
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "FT24010V5MS5 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "FT24010V5MS5 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "PAIEMENT FT24010V5MS5 DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "PAIEMENT FT24010V5MS5 DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009874422005",
+        "Debit": null,
+        "Credit": -10000.000
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "FT24010Y1C14 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "FT24010Y1C14 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "PAIEMENT FT24010Y1C14 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "PAIEMENT FT24010Y1C14 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009907197432",
+        "Debit": null,
+        "Credit": -586.690
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "FT24010GWY7B [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "FT24010GWY7B [LIGNE FUSIONNEE 2/2 - a verifier manuellement] REGLEMENT EFFET AC- TND106400001",
+        "Debit": null,
+        "Credit": -5.950
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "PAIEMENT FT24010GWY7B DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "PAIEMENT FT24010GWY7B DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET 009156264463",
+        "Debit": null,
+        "Credit": -16000.000
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "VIR TN AUTRE FT24010KSKZL [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.110
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "VIR TN AUTRE FT24010KSKZL [LIGNE FUSIONNEE 2/2 - a verifier manuellement] SOCIETEMONDI ALH",
+        "Debit": null,
+        "Credit": 1137.000
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "COM VIR TN FT24010KSKZL [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.110
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2024",
+        "Libelle": "COM VIR TN FT24010KSKZL [LIGNE FUSIONNEE 2/2 - a verifier manuellement] AUTRE BQ AC- 0001177780",
+        "Debit": null,
+        "Credit": -1.785
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2024",
+        "Libelle": "FRAIS PDL CHG2400909966 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2024",
+        "Libelle": "FRAIS PDL CHG2400909966 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240109 FT240083M430",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2024",
+        "Libelle": "TVA CHG2400941412 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2024",
+        "Libelle": "TVA CHG2400941412 [LIGNE FUSIONNEE 2/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": -0.950
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2024",
+        "Libelle": "COMM REMISE CHG2400941412 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2024",
+        "Libelle": "COMM REMISE CHG2400941412 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET",
+        "Debit": null,
+        "Credit": -5.000
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2024",
+        "Libelle": "COMMISSION FT24009NDJ84 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.109
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2024",
+        "Libelle": "COMMISSION FT24009NDJ84 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] RETOUR EFFET AC- TND106350001",
+        "Debit": null,
+        "Credit": -9.520
+      },
+      {
+        "Solde": null,
+        "Date": "08/01/2024",
+        "Libelle": "VIR TN AUTRE [FT240083M430 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.108
+      },
+      {
+        "Solde": null,
+        "Date": "08/01/2024",
+        "Libelle": "VIR TN AUTRE [FT240083M430 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] BQ BEN AROUS",
+        "Debit": null,
+        "Credit": 400.000
+      },
+      {
+        "Solde": null,
+        "Date": "08/01/2024",
+        "Libelle": "COM VIR TN FT240083M430 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.108
+      },
+      {
+        "Solde": null,
+        "Date": "08/01/2024",
+        "Libelle": "COM VIR TN FT240083M430 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] AUTRE BQ AC- 0001177780",
+        "Debit": null,
+        "Credit": -1.785
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2024",
+        "Libelle": "FRAIS PDL CHG2400417910 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.104
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2024",
+        "Libelle": "FRAIS PDL CHG2400417910 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240104 FT240031BWF8",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2024",
+        "Libelle": "TVA 01162400407737 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.104
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2024",
+        "Libelle": "TVA 01162400407737 [LIGNE FUSIONNEE 2/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": -0.950
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2024",
+        "Libelle": "COMM REMISE [CHG2400407737 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.104
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2024",
+        "Libelle": "COMM REMISE [CHG2400407737 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] EFFET",
+        "Debit": null,
+        "Credit": -5.000
+      },
+      {
+        "Solde": null,
+        "Date": "03/01/2024",
+        "Libelle": "FRAIS PDL CHG2400322738 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.103
+      },
+      {
+        "Solde": null,
+        "Date": "03/01/2024",
+        "Libelle": "FRAIS PDL CHG2400322738 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240103 FT24002NRFZH",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "03/01/2024",
+        "Libelle": "VERSEMENT TT240039YXYY [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.103
+      },
+      {
+        "Solde": null,
+        "Date": "03/01/2024",
+        "Libelle": "VERSEMENT TT240039YXYY [LIGNE FUSIONNEE 2/2 - a verifier manuellement] ESPECES AGENCE BEN",
+        "Debit": null,
+        "Credit": 1300.000
+      },
+      {
+        "Solde": null,
+        "Date": "03/01/2024",
+        "Libelle": "COM VIR TN FT240031BWF8 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.103
+      },
+      {
+        "Solde": null,
+        "Date": "03/01/2024",
+        "Libelle": "COM VIR TN FT240031BWF8 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] AUTRE BQ AC- TND105050001",
+        "Debit": null,
+        "Credit": -2.380
+      },
+      {
+        "Solde": null,
+        "Date": "03/01/2024",
+        "Libelle": "VIR TN AUTRE … FT240031BWF8 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.103
+      },
+      {
+        "Solde": null,
+        "Date": "03/01/2024",
+        "Libelle": "VIR TN AUTRE … FT240031BWF8 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] BQ",
+        "Debit": null,
+        "Credit": -1300.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "FRAIS PDL CHG2400200130 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.102
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "FRAIS PDL CHG2400200130 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] 20240102 FT23363LQLTD",
+        "Debit": null,
+        "Credit": -0.500
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "Encaiss cheque FT24002H7KSZ DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.102
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "Encaiss cheque FT24002H7KSZ DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] preavise 9272896",
+        "Debit": null,
+        "Credit": 2600.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "COM VIREMENT FT24002NRFZH [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20231.229
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "COM VIREMENT FT24002NRFZH [LIGNE FUSIONNEE 2/2 - a verifier manuellement] MM BQ AC- 0000845030",
+        "Debit": null,
+        "Credit": -1.785
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "VIREMENT TN FT24002NRFZH DT [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20231.229
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "VIREMENT TN FT24002NRFZH DT [LIGNE FUSIONNEE 2/2 - a verifier manuellement] MM BQ RADHIA MAJDOUB",
+        "Debit": null,
+        "Credit": -1200.000
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "COMM PERQ DE _ 0001177780 [LIGNE FUSIONNEE 1/2 - a verifier manuellement]",
+        "Debit": null,
+        "Credit": 20240.101
+      },
+      {
+        "Solde": null,
+        "Date": "02/01/2024",
+        "Libelle": "COMM PERQ DE _ 0001177780 [LIGNE FUSIONNEE 2/2 - a verifier manuellement] CHANGE- 20231231 GARANTIE",
+        "Debit": null,
+        "Credit": -0.121
+      }
+    ]
+  }
+}

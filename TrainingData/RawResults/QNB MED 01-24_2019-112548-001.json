@@ -1,0 +1,293 @@
+{
+  "FileName": "QNB MED 01-24.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 89.25,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "2019-112548-001",
+    "Currency": "TND",
+    "Rib": "TN5923019111112548178875",
+    "SoldeInitial": -2153.105,
+    "SoldeFinal": -517.865,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": -2159.105,
+        "Date": "02/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009063739364 23019111112548178875 COPIGER MOHAMED 23-CAG-41-21-0004-02012024-100000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -2165.105,
+        "Date": "02/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009665804881 23019111112548178875 LAMJED ROULEMENT 23-CAG-41-21-0004-02012024-100000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -2171.105,
+        "Date": "02/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009859070591 23019111112548178875 STE CPIA SARL med zarragua 23-CAG-41-21-0001-02012024-073000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -2172.245,
+        "Date": "02/01/2024",
+        "Libelle": "Tax on Charges 009063739364",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -2173.385,
+        "Date": "02/01/2024",
+        "Libelle": "Tax on Charges 009665804881",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -2174.525,
+        "Date": "02/01/2024",
+        "Libelle": "Tax on Charges 009859070591",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -198.945,
+        "Date": "02/01/2024",
+        "Libelle": "CHQ DEPOSIT-CLEARING 0212244 QNBTREMCHQ020120240010 - C BORDN0212244DU291223 -0212244 23019111112548178875",
+        "Debit": null,
+        "Credit": 1975.580
+      },
+      {
+        "Solde": -200.945,
+        "Date": "03/01/2024",
+        "Libelle": "Charges/Fees",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": -201.325,
+        "Date": "03/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": -203.325,
+        "Date": "09/01/2024",
+        "Libelle": "Charges/Fees",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": -203.705,
+        "Date": "09/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": -303.705,
+        "Date": "11/01/2024",
+        "Libelle": "Charges/Fees",
+        "Debit": 100.000,
+        "Credit": null
+      },
+      {
+        "Solde": -403.705,
+        "Date": "11/01/2024",
+        "Libelle": "Charges/Fees",
+        "Debit": 100.000,
+        "Credit": null
+      },
+      {
+        "Solde": -422.705,
+        "Date": "11/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 19.000,
+        "Credit": null
+      },
+      {
+        "Solde": -441.705,
+        "Date": "11/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 19.000,
+        "Credit": null
+      },
+      {
+        "Solde": -447.705,
+        "Date": "15/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -453.705,
+        "Date": "15/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -459.705,
+        "Date": "15/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -465.705,
+        "Date": "15/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -466.845,
+        "Date": "15/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -467.985,
+        "Date": "15/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -469.125,
+        "Date": "15/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -470.265,
+        "Date": "15/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -472.265,
+        "Date": "25/01/2024",
+        "Libelle": "Charges/Fees",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": -474.265,
+        "Date": "25/01/2024",
+        "Libelle": "Charges/Fees",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": -474.645,
+        "Date": "25/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": -475.025,
+        "Date": "25/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": -481.025,
+        "Date": "29/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -482.165,
+        "Date": "29/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -488.165,
+        "Date": "31/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -494.165,
+        "Date": "31/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -500.165,
+        "Date": "31/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -506.165,
+        "Date": "31/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -512.165,
+        "Date": "31/01/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Solde": -513.305,
+        "Date": "31/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -514.445,
+        "Date": "31/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -515.585,
+        "Date": "31/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -516.725,
+        "Date": "31/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Solde": -517.865,
+        "Date": "31/01/2024",
+        "Libelle": "Tax on Charges",
+        "Debit": 1.140,
+        "Credit": null
+      }
+    ]
+  }
+}

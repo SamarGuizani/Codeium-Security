@@ -1,0 +1,475 @@
+{
+  "FileName": "biat 01-2023.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 3,
+  "OcrConfidence": 87,
+  "NeedsReview": true,
+  "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
+  "Account": {
+    "AccountNumber": "",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": 55956.422,
+    "SoldeFinal": 29467.577,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": null,
+        "Date": "03/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 2365174",
+        "Debit": null,
+        "Credit": 5385.866
+      },
+      {
+        "Solde": null,
+        "Date": "03/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 2365174",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 357.430
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 0220588",
+        "Debit": null,
+        "Credit": 500.000
+      },
+      {
+        "Solde": null,
+        "Date": "04/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 0220588",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "05/01/2022",
+        "Libelle": "RETRAIT CHEQUE 0000113",
+        "Debit": 3000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/01/2022",
+        "Libelle": "COMMISSION REM EFFETS 1041125",
+        "Debit": 2.090,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/01/2022",
+        "Libelle": "COMMISSION REM EFFETS 1041125",
+        "Debit": 11.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2022",
+        "Libelle": "REGLEMENT CHEQUE 0000109",
+        "Debit": 102.600,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/01/2022",
+        "Libelle": "REGLEMENT CHEQUE 0000114",
+        "Debit": 337.532,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 0387567",
+        "Debit": null,
+        "Credit": 1824.382
+      },
+      {
+        "Solde": null,
+        "Date": "10/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 0387567",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 278.830
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2022",
+        "Libelle": "REGLEMENT CHEQUE 0000106",
+        "Debit": 1066.348,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2022",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 492.182
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2022",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 3035.662
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 0387569",
+        "Debit": null,
+        "Credit": 1201.677
+      },
+      {
+        "Solde": null,
+        "Date": "11/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 0387569",
+        "Debit": 4.463,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2022",
+        "Libelle": "VIREMENT TN AUTRE BQ 1362838",
+        "Debit": 2.618,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2022",
+        "Libelle": "VIREMENT TN AUTRE BQ 1362838",
+        "Debit": 24902.139,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 0220591",
+        "Debit": null,
+        "Credit": 570.000
+      },
+      {
+        "Solde": null,
+        "Date": "12/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 0220591",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/01/2022",
+        "Libelle": "RETRAIT CHEQUE 0000118",
+        "Debit": 2000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 0387573",
+        "Debit": null,
+        "Credit": 673.788
+      },
+      {
+        "Solde": null,
+        "Date": "13/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 0387573",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ 1362839",
+        "Debit": 30000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ الجملة TOTAUX o T o INAR TUNISIEN الرصيد ا ce بفرعكم بالإتصال التفضل منكم الرجاء الكشف. هذا على موافقتكم أقصاه أجل «Encasd le de relevé, nous vous prions de contacter votre agence محتوى عدم oy . » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان صندوق يضمن * précisées la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 -2017 فيغري 1 في المؤرخ 268 الأمر 2016 11جويلية في المؤرخ 48 بالقانون par عدد و عدد -0 --620 1x - - au -- : : شهري حساب كشف RELEVE COMPTE DE MENSUEL العربي تونس الدولي بنك BANQUE INTERNATIONALE ARASE DE TUNISIE الحساب صاحب Titulaire du 'compte RIB : 08 307 00059 10 02049 0 36 STE TOPDIS Rue 8600 n92 , cluusdi ad, N° de compte 59 10 02049 0 31 01 2023 2035 TUNIS CARTHAGE Cher client, : الكريم حريفنا Nous avons l'honneur de vous communiquer ci-dessous le relevé détaillé des opérations",
+        "Debit": null,
+        "Credit": 324.790
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 0387575",
+        "Debit": null,
+        "Credit": 263.795
+      },
+      {
+        "Solde": null,
+        "Date": "17/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 0387575",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/01/2022",
+        "Libelle": "VERSEMENT ESPECES",
+        "Debit": null,
+        "Credit": 895.250
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2022",
+        "Libelle": "COMMISSION REM EFFETS 1041133",
+        "Debit": 2.565,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2022",
+        "Libelle": "COMMISSION REM EFFETS 1041133",
+        "Debit": 13.500,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2022",
+        "Libelle": "COMMISSION REM EFFETS 1041134",
+        "Debit": 1.045,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2022",
+        "Libelle": "COMMISSION REM EFFETS 1041134",
+        "Debit": 5.500,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 0387578",
+        "Debit": null,
+        "Credit": 63.994
+      },
+      {
+        "Solde": null,
+        "Date": "24/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 0387578",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "25/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 713.570
+      },
+      {
+        "Solde": null,
+        "Date": "25/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "25/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "25/01/2022",
+        "Libelle": "COMMISSION REM EFFETS 0138361",
+        "Debit": 1.045,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "25/01/2022",
+        "Libelle": "COMMISSION REM EFFETS 0138361",
+        "Debit": 5.500,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/01/2022",
+        "Libelle": "VERSEMENT ESPECES",
+        "Debit": null,
+        "Credit": 90.470
+      },
+      {
+        "Solde": null,
+        "Date": "26/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 0276961",
+        "Debit": null,
+        "Credit": 224.720
+      },
+      {
+        "Solde": null,
+        "Date": "26/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 0276961",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/01/2022",
+        "Libelle": "VERSEMENT ESPECES",
+        "Debit": null,
+        "Credit": 1501.250
+      },
+      {
+        "Solde": null,
+        "Date": "27/01/2022",
+        "Libelle": "REGLEMENT CHEQUE 0000119",
+        "Debit": 3993.759,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2022",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 1221.005
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 0276963",
+        "Debit": null,
+        "Credit": 863.576
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 1092706",
+        "Debit": null,
+        "Credit": 1332.142
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 0276963",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "30/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 1092706",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 420.950
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2022",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2022",
+        "Libelle": "PRELEVEMENT BANCAIRE",
+        "Debit": 2.975,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2022",
+        "Libelle": "PRELEVEMENT BANCAIRE الجملة TOTAUX \" T INAR TUNISIEN الرصيد SOLDE «Encasd le de ce relevé, prions يفرعكم بالإتصال التفضل منكم الرجاء الكشف. هذا محتوى على موافقتكم oy nous vous de contacter votre agence عدم اج . » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان صندوق يضمن * précisées la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 -2017 فيغري 1 في المؤرخ 268 الأمر 2016 11جويلية في المؤرخ 48 بالقانون par عدد و عدد -0 --620 1x - - au -- : : BIAT )_v_.u\\.al_ug_i_‘.us RELEVÉ DE COMPTE MENSUEL P الدولي العربي تونس بنك ARASE DE TUNISIE BANQUE INTERNATIONALE الحساب صاحب Titulaire du 'compte RIB : 08 307 00059 10 02049 0 36 STE TOPDIS Rue 8600 n92 , الحساب رقم N°de compte 59 10 02049 0 31012023 2035 TUNIS CARTHAGE Cher client, : الكريم حريفنا Nous avons l'honneur de vous communiquer ci-dessous le relevé détaillé des opérations inscrites à votre compte sur nos livres. Nous vous souhaitons bonne ب",
+        "Debit": 541.308,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2022",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 15365.246
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2022",
+        "Libelle": "ENCAISSEMENT CHEQUE 1092709",
+        "Debit": null,
+        "Credit": 1930.074
+      },
+      {
+        "Solde": null,
+        "Date": "31/01/2022",
+        "Libelle": "COM TVA/REM CHQ ENC 1092709 الجملة TND DINAR TUNISIEN الرصيد الكشف. على صورة في -E d le d relevé, nous vous prions de contacter votre agence بفرعكم بالإتصال التفضل منكم الرجاء هذا محتوى موافقتكم عدم . dans un délai maximum de 20 jours, à dater de la réception dudit relevé. اسثلامكم تاريخ من أقصاه أجل في « Les dépôts sont garantis تدم le Fonds de Garantie des Dépôts Bancaires dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان صندوق يضمن * في الأمر 11جوبلية في précisées par دا loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02- 2017. 2017. فيغري 1 المؤرخ 268 عدد و 2016 المؤرخ 48 عدد بالقانون ecteur Agence : MEHDI MANAI 71342 : :71131000 620 -- - هئ Capital de 170000000 D RNE Identifiant Unique 00001102 - Siège Social : 70/72, Av. Habib Bourguiba - 86 520 - 1080 Tunis Cédex - Tél : 71 131 000 - Télex : BIATUN 14080 Fax 71 342 820 www.biat.com.tn au -- : -",
+        "Debit": 0.893,
+        "Credit": null
+      }
+    ]
+  }
+}

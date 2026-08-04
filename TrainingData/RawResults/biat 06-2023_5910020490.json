@@ -1,0 +1,419 @@
+{
+  "FileName": "biat 06-2023.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 2,
+  "OcrConfidence": 86,
+  "NeedsReview": false,
+  "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
+  "Account": {
+    "AccountNumber": "5910020490",
+    "Currency": "EUR",
+    "Rib": "",
+    "SoldeInitial": 7280.794,
+    "SoldeFinal": 1979.759,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": null,
+        "Date": "01/06/2023",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 1292.674
+      },
+      {
+        "Solde": null,
+        "Date": "01/06/2023",
+        "Libelle": "REDRESSEMENT 93",
+        "Debit": 8.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "01/06/2023",
+        "Libelle": "REDRESSEMENT 93",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "01/06/2023",
+        "Libelle": "REDRESSEMENT S0310523",
+        "Debit": 16.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "01/06/2023",
+        "Libelle": "REDRESSEMENT S0310523",
+        "Debit": 3.040,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "01/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0276995",
+        "Debit": null,
+        "Credit": 676.492
+      },
+      {
+        "Solde": null,
+        "Date": "01/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0276995",
+        "Debit": 1.784,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "02/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 1189253",
+        "Debit": null,
+        "Credit": 249.758
+      },
+      {
+        "Solde": null,
+        "Date": "02/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 1189253",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "06/06/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000150",
+        "Debit": 941.100,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/06/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 6379.560
+      },
+      {
+        "Solde": null,
+        "Date": "07/06/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/06/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/06/2023",
+        "Libelle": "REDRESSEMENT 93",
+        "Debit": 8.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "07/06/2023",
+        "Libelle": "REDRESSEMENT 93",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "08/06/2023",
+        "Libelle": "COMMISSION REM EFFETS 1755091",
+        "Debit": 1.045,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "08/06/2023",
+        "Libelle": "COMMISSION REM EFFETS 1755091",
+        "Debit": 5.500,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "08/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0276998",
+        "Debit": null,
+        "Credit": 3778.776
+      },
+      {
+        "Solde": null,
+        "Date": "08/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0276998",
+        "Debit": 7.140,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/06/2023",
+        "Libelle": "VERSEMENT ESPECES",
+        "Debit": null,
+        "Credit": 231.000
+      },
+      {
+        "Solde": null,
+        "Date": "09/06/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0242878",
+        "Debit": 4452.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "09/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 4491950",
+        "Debit": null,
+        "Credit": 1311.000
+      },
+      {
+        "Solde": null,
+        "Date": "09/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 4491950",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "12/06/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000153",
+        "Debit": 1292.045,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/06/2023",
+        "Libelle": "REDRESSEMENT s0120623",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "13/06/2023",
+        "Libelle": "REDRESSEMENT s0120623",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "15/06/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000157",
+        "Debit": 273.587,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "15/06/2023",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 690.938
+      },
+      {
+        "Solde": null,
+        "Date": "15/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0472435",
+        "Debit": null,
+        "Credit": 2682.899
+      },
+      {
+        "Solde": null,
+        "Date": "15/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0472435",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/06/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000147 الجملة TOTAUX ايها T INAR TUNISIEN الرصيد 0 ce بفرعكم بالإتصال التفضل منكم الرجاء الكشف. هذا على موافقتكم Encasd le de relevé, nous vous prions عل contacter votre agence محتوى عدم &) اج . » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires dans les conditions المبيئة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان صندوق يضمن * précisées la loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02-2017 -2017 فيغري 1 في المؤرخ 268 الأمر 2016 11جويلية في المؤرخ 48 بالقانون par عدد g عدد -0 -820 P~ - au -- : : RELEVÉ DE COMPTE MENSUEL / الدولي العربي تونس بنك BANQUE INTERNATIONALE ARASE DE TUNISIE cs lLuusdf Gs ) Titulaire du 'compte RIB : 08 307 00059 10 02049 0 36 STE TOPDIS Rue 8600 n92 , الحساب رقم N° de compte 59 10 02049 0 30 06 2023 2035 TUNIS CARTHAGE ا اه e ا ااا ue لاه كد انه مده à ls Gtn ل es d",
+        "Debit": 3000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "16/06/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000156",
+        "Debit": 307.020,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/06/2023",
+        "Libelle": "REDRESSEMENT S0160623",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/06/2023",
+        "Libelle": "REDRESSEMENT S0160623",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/06/2023",
+        "Libelle": "VERSEMENT ESPECES",
+        "Debit": 381.458,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0472437",
+        "Debit": 1238.050,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "19/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0472437",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "20/06/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0242879",
+        "Debit": 24000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "21/06/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0242880",
+        "Debit": 30000.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "21/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0276999",
+        "Debit": 1180.564,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "21/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0276999",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "22/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0472442",
+        "Debit": 3076.692,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "22/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0472442",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0277000",
+        "Debit": 224.720,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "23/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0277000",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/06/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 1189256",
+        "Debit": 759.744,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "26/06/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 1189256",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/06/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/06/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/06/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 715.000,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/06/2023",
+        "Libelle": "COMMISSION REM EFFETS 1041296",
+        "Debit": 3.895,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/06/2023",
+        "Libelle": "COMMISSION REM EFFETS 1041296",
+        "Debit": 20.500,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/06/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000146",
+        "Debit": 102.600,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "27/06/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000158",
+        "Debit": 2697.552,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "30/06/2023",
+        "Libelle": "TVA SUR COM",
+        "Debit": 11.496,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "30/06/2023",
+        "Libelle": "COM CPC ET CG",
+        "Debit": 2.288,
+        "Credit": null
+      },
+      {
+        "Solde": null,
+        "Date": "30/06/2023",
+        "Libelle": "FRAIS ABONNEMENT PACK الجملة ولد T, INAR TUNISIEN الرصيد ce الكشف. الوراج +Encasd le de relevé, nous vous prions عل contacter votre agence بفرعكم بالإتصال التفضل منكم الرجاء هذا محتوى على موافقتكم عدم &) . » Les dépôts sont garantis par le Fonds de Garantie des Dépôts Bancaires dans les conditions المبينة للشروط طبقا البنك لدى المودعة الأموال البنكية الودائع ضمان صندوق يضمن * précisées ذا loi 2016-48 du 11-07- 2016 et le décret n°2017-268 du 01-02- 2017. -2017 فيغري 1 في المؤرخ 268 الأمر 2016 11جويلية في المؤرخ 48 بالقانون par عدد و عدد ecteur Agence : Mr MEHDI MANAI -: -: -- -٠ : -",
+        "Debit": 60.504,
+        "Credit": null
+      }
+    ]
+  }
+}

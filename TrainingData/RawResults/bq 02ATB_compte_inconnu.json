@@ -1,0 +1,19 @@
+{
+  "FileName": "bq 02ATB.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 5,
+  "OcrConfidence": 77.4,
+  "NeedsReview": true,
+  "BankName": "Arab Tunisian Bank (ATB)",
+  "Account": {
+    "AccountNumber": "",
+    "Currency": "TND",
+    "Rib": "TN5901044088110000864246",
+    "SoldeInitial": 0,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": []
+  }
+}

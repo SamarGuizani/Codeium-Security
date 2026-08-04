@@ -1,0 +1,118 @@
+{
+  "FileName": "BANK-USDbtk.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 2,
+  "OcrConfidence": 84,
+  "NeedsReview": true,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "02222-25100815949-69",
+    "Currency": "USD",
+    "Rib": "TN5920022222510081594969",
+    "SoldeInitial": 0,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": 12027.89,
+    "TotalCredit": 9100.00,
+    "Transactions": [
+      {
+        "Solde": 4251.06,
+        "Date": "14/05/2025",
+        "Libelle": "Date de PAIEMENT TPE INTERNATIONAL",
+        "Debit": 39.92,
+        "Credit": null
+      },
+      {
+        "Solde": 4250.66,
+        "Date": "14/05/2025",
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.40
+      },
+      {
+        "Solde": 4250.58,
+        "Date": "14/05/2025",
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.08
+      },
+      {
+        "Solde": 2325.06,
+        "Date": "19/05/2025",
+        "Libelle": "PAIEMENT TPE INTERNATIONAL",
+        "Debit": 1925.52,
+        "Credit": null
+      },
+      {
+        "Solde": 2300.39,
+        "Date": "19/05/2025",
+        "Libelle": "PAIEMENT TPE INTERNATIONAL",
+        "Debit": 24.67,
+        "Credit": null
+      },
+      {
+        "Solde": 2286.48,
+        "Date": "19/05/2025",
+        "Libelle": "PAIEMENT TPE INTERNATIONAL",
+        "Debit": 13.91,
+        "Credit": null
+      },
+      {
+        "Solde": 226.722,
+        "Date": "19/05/2025",
+        "Libelle": "COM & TVA RET. CARTE 226722",
+        "Debit": 19.26,
+        "Credit": null
+      },
+      {
+        "Solde": 2266.97,
+        "Date": "19/05/2025",
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.25
+      },
+      {
+        "Solde": 2266.83,
+        "Date": "19/05/2025",
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.14
+      },
+      {
+        "Solde": 2266.78,
+        "Date": "19/05/2025",
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.05
+      },
+      {
+        "Solde": 2266.75,
+        "Date": "19/05/2025",
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 0.03
+      },
+      {
+        "Solde": 2263.09,
+        "Date": "19/05/2025",
+        "Libelle": "COM & TVA RET. CARTE",
+        "Debit": null,
+        "Credit": 3.66
+      },
+      {
+        "Solde": 11363.09,
+        "Date": "24/06/2025",
+        "Libelle": "& TRANSFERT RECU 25004107 ا ORD: Upwork Escrow Inc. Date de",
+        "Debit": null,
+        "Credit": 9100.00
+      },
+      {
+        "Solde": 1363.09,
+        "Date": "08/07/2025",
+        "Libelle": "&VIREMENT EMIS MEM كح ا En faveur SOCIETE IT CAPACITIES Imprimé le 09/08/2025 Fermer cette fenêtre Imprimer",
+        "Debit": 10000.00,
+        "Credit": null
+      }
+    ]
+  }
+}

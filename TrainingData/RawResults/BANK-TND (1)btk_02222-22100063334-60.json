@@ -1,0 +1,314 @@
+{
+  "FileName": "BANK-TND (1)btk.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 86.5,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "02222-22100063334-60",
+    "Currency": "TND",
+    "Rib": "TN5920022222210006333460",
+    "SoldeInitial": 0,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": 40488.976,
+    "TotalCredit": 28400.000,
+    "Transactions": [
+      {
+        "Solde": 24341.097,
+        "Date": "05/05/2025",
+        "Libelle": "Date de KONNECT NETWORKS DU",
+        "Debit": 47.818,
+        "Credit": null
+      },
+      {
+        "Solde": 24338.717,
+        "Date": "08/05/2025",
+        "Libelle": "CESSION DEV. AVA.N°",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Solde": 18318.717,
+        "Date": "08/05/2025",
+        "Libelle": "CESSION DEV. AVA.N°",
+        "Debit": 6020.000,
+        "Credit": null
+      },
+      {
+        "Solde": 17318.717,
+        "Date": "08/05/2025",
+        "Libelle": "RETRAIT ESPECE 84281",
+        "Debit": 1000.000,
+        "Credit": null
+      },
+      {
+        "Solde": 16918.717,
+        "Date": "20/05/2025",
+        "Libelle": "ATM BTK CHARGUIA DU",
+        "Debit": 400.000,
+        "Credit": null
+      },
+      {
+        "Solde": 16518.717,
+        "Date": "20/05/2025",
+        "Libelle": "ATM BTK CHARGUIA DU",
+        "Debit": 400.000,
+        "Credit": null
+      },
+      {
+        "Solde": 400.000,
+        "Date": "20/05/2025",
+        "Libelle": "ATM BTK CHARGUIA DU 16 118717",
+        "Debit": 400.000,
+        "Credit": null
+      },
+      {
+        "Solde": 15470.469,
+        "Date": "21/05/2025",
+        "Libelle": "PRELEV. RECU AUT BQE 166172",
+        "Debit": 648.248,
+        "Credit": null
+      },
+      {
+        "Solde": 15363.369,
+        "Date": "23/05/2025",
+        "Libelle": "FRAIS ADHESION CARTE",
+        "Debit": 107.100,
+        "Credit": null
+      },
+      {
+        "Solde": 15362.179,
+        "Date": "02/06/2025",
+        "Libelle": "& COM. & TVA VIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
+        "Debit": 1.190,
+        "Credit": null
+      },
+      {
+        "Solde": 13916.337,
+        "Date": "02/06/2025",
+        "Libelle": "= VIREMENT EMIS AUT BQ ا En faveur Jihed Werdien Date de",
+        "Debit": 1445.842,
+        "Credit": null
+      },
+      {
+        "Solde": 13915.147,
+        "Date": "02/06/2025",
+        "Libelle": "& COM. & TVA VIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
+        "Debit": 1.190,
+        "Credit": null
+      },
+      {
+        "Solde": 12469.305,
+        "Date": "02/06/2025",
+        "Libelle": "& VIREMENT EMIS AUT BQ 1 2 ا En faveur Safa Ghandri",
+        "Debit": 1445.842,
+        "Credit": null
+      },
+      {
+        "Solde": 12468.115,
+        "Date": "09/06/2025",
+        "Libelle": "& COM. & TVA VIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
+        "Debit": 1.190,
+        "Credit": null
+      },
+      {
+        "Solde": 10518.115,
+        "Date": "09/06/2025",
+        "Libelle": "B VIREMENT EMIS AUT BQ ا En faveur Sinda Ardhaoui",
+        "Debit": 1950.000,
+        "Credit": null
+      },
+      {
+        "Solde": 9518.115,
+        "Date": "09/06/2025",
+        "Libelle": "& VIREMENT EMIS MEM 9518115 AG ا En faveur OUEDERNI MOHAMED",
+        "Debit": 1000.000,
+        "Credit": null
+      },
+      {
+        "Solde": 8835.461,
+        "Date": "23/06/2025",
+        "Libelle": "PRELEV. RECU AUT BQE 166677",
+        "Debit": 682.654,
+        "Credit": null
+      },
+      {
+        "Solde": 8747.120,
+        "Date": "24/06/2025",
+        "Libelle": "& COM & TVA TRS RECU 25004107 ا com. transfert recu ا TVA/commission",
+        "Debit": 88.341,
+        "Credit": null
+      },
+      {
+        "Solde": 8706.660,
+        "Date": "30/06/2025",
+        "Libelle": "AGIOS DU 31/03/25 AU 30/06/25",
+        "Debit": 40.460,
+        "Credit": null
+      },
+      {
+        "Solde": 8705.470,
+        "Date": "01/07/2025",
+        "Libelle": "& COM. & TVA VIR. EMIS L_ Comm. Virement E- ا TVA/Comm. Virement",
+        "Debit": 1.190,
+        "Credit": null
+      },
+      {
+        "Solde": 7259.628,
+        "Date": "01/07/2025",
+        "Libelle": "& VIREMENT EMIS AUT BQ 1 2 ا En faveur Jihed Werdien Date de",
+        "Debit": 1445.842,
+        "Credit": null
+      },
+      {
+        "Solde": 7258.438,
+        "Date": "01/07/2025",
+        "Libelle": "& COM. & TVA VIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
+        "Debit": 1.190,
+        "Credit": null
+      },
+      {
+        "Solde": 5812.596,
+        "Date": "01/07/2025",
+        "Libelle": "& VIREMENT EMIS AUT BQ 1 2 ا En faveur Safa Ghandri",
+        "Debit": 1445.842,
+        "Credit": null
+      },
+      {
+        "Solde": 5012.596,
+        "Date": "07/07/2025",
+        "Libelle": "ATM BTK JERBA DU",
+        "Debit": 800.000,
+        "Credit": null
+      },
+      {
+        "Solde": 4212.596,
+        "Date": "07/07/2025",
+        "Libelle": "ATM BTK JERBA DU",
+        "Debit": 800.000,
+        "Credit": null
+      },
+      {
+        "Solde": 3412.596,
+        "Date": "07/07/2025",
+        "Libelle": "ATM BTK JERBA DU",
+        "Debit": 800.000,
+        "Credit": null
+      },
+      {
+        "Solde": 3400.696,
+        "Date": "08/07/2025",
+        "Libelle": "COM & TVA VIR. EMIS",
+        "Debit": 11.900,
+        "Credit": null
+      },
+      {
+        "Solde": 31800.696,
+        "Date": "08/07/2025",
+        "Libelle": "VIREMENT RECU MEM AG",
+        "Debit": null,
+        "Credit": 28400.000
+      },
+      {
+        "Solde": 26800.696,
+        "Date": "09/07/2025",
+        "Libelle": "& RETRAIT ESP. DEPLACE ا ref. 060695",
+        "Debit": 5000.000,
+        "Credit": null
+      },
+      {
+        "Solde": 26798.316,
+        "Date": "09/07/2025",
+        "Libelle": "COM&TVA RETRAIT DEPL 60695",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Solde": 20798.316,
+        "Date": "11/07/2025",
+        "Libelle": "& RETRAIT ESP. DEPLACE ا ref. 060736",
+        "Debit": 6000.000,
+        "Credit": null
+      },
+      {
+        "Solde": 20795.936,
+        "Date": "11/07/2025",
+        "Libelle": "COM&TVA RETRAIT DEPL 60736",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Solde": 17835.319,
+        "Date": "17/07/2025",
+        "Libelle": "PRELEV. RECU AUT BQE 166970",
+        "Debit": 2960.617,
+        "Credit": null
+      },
+      {
+        "Solde": 17383.984,
+        "Date": "17/07/2025",
+        "Libelle": "PRELEV. RECU AUT BQE 166975",
+        "Debit": 451.335,
+        "Credit": null
+      },
+      {
+        "Solde": 16518.003,
+        "Date": "22/07/2025",
+        "Libelle": "PRELEV. RECU AUT BQE 167036",
+        "Debit": 865.981,
+        "Credit": null
+      },
+      {
+        "Solde": 16118.003,
+        "Date": "01/08/2025",
+        "Libelle": "ATM BTK CHARGUIA DU",
+        "Debit": 400.000,
+        "Credit": null
+      },
+      {
+        "Solde": 16116.813,
+        "Date": "04/08/2025",
+        "Libelle": "Date de &COM. & TVAVIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
+        "Debit": 1.190,
+        "Credit": null
+      },
+      {
+        "Solde": 14670.971,
+        "Date": "04/08/2025",
+        "Libelle": "E&VIREMENT EMIS AUT BQ ا En faveur Jihed Werdien",
+        "Debit": 1445.842,
+        "Credit": null
+      },
+      {
+        "Solde": 14669.781,
+        "Date": "04/08/2025",
+        "Libelle": "&COM. & TVA VIR. EMIS ا Comm. Virement E- ا TVA/Comm. Virement",
+        "Debit": 1.190,
+        "Credit": null
+      },
+      {
+        "Solde": 13223.939,
+        "Date": "04/08/2025",
+        "Libelle": "&VIREMENT EMIS AUT BQ ا En faveur Safa Ghandri",
+        "Debit": 1445.842,
+        "Credit": null
+      },
+      {
+        "Solde": 12423.939,
+        "Date": "08/08/2025",
+        "Libelle": "ATM BTK CHARGUIA DU",
+        "Debit": 800.000,
+        "Credit": null
+      },
+      {
+        "Solde": 12299.939,
+        "Date": "11/08/2025",
+        "Libelle": "PAIEMENT TPE ® Imprimé le 09/08/2025 Fermer cette fenêtre Imprimer",
+        "Debit": 124.000,
+        "Credit": null
+      }
+    ]
+  }
+}
