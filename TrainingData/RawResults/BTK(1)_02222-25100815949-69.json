@@ -1,5 +1,5 @@
 {
-  "FileName": "BANK-USD (1).pdf",
+  "FileName": "BTK(1).pdf",
   "DetectedType": "Bank",
   "PageCount": 2,
   "OcrConfidence": 88.5,
@@ -12,39 +12,34 @@
     "SoldeInitial": 0,
     "SoldeFinal": null,
     "SoldeDisponible": 0,
-    "TotalDebit": null,
-    "TotalCredit": null,
+    "TotalDebit": 6009.83,
+    "TotalCredit": 8000.00,
     "Transactions": [
       {
-        "Solde": 3291.10,
         "Date": "25/11/2024",
         "Libelle": "Date de PAIEMENT TPE INTERNATIONAL",
         "Debit": null,
         "Credit": 3291.10
       },
       {
-        "Solde": 7290.98,
         "Date": "10/12/2024",
         "Libelle": "25/11/2024 COM & TVA RET. CARTE 30 25/11/2024 COM & TVA RET. CARTE 38 E&TRANSFERT نع 4 0 24007858 ا ORD: THE RAINMAKER INSTITUTE LLC",
         "Debit": null,
-        "Credit": 3999.88
+        "Credit": 7290.98
       },
       {
-        "Solde": 11290.98,
         "Date": "09/01/2025",
         "Libelle": "ETRANSFERT RECU 25000082 ا ORD: THE RAINMAKER INSTITUTE LLC",
         "Debit": null,
         "Credit": 4000.00
       },
       {
-        "Solde": 8290.98,
         "Date": "13/01/2025",
         "Libelle": "&VIREMENT EMIS MEM AG ا En faveur SOCIETE IT CAPACITIES",
         "Debit": 3000.00,
         "Credit": null
       },
       {
-        "Solde": 5290.98,
         "Date": "04/02/2025",
         "Libelle": "&VIREMENT EMIS MEM AG ا En faveur SOCIETE IT CAPACITIES Imprimé le 05/03/2025 , Fermer cette fenêtre Imprimer",
         "Debit": 3000.00,

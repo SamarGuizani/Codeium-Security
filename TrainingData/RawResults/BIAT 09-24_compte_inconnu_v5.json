@@ -1,0 +1,2132 @@
+{
+  "FileName": "BIAT 09-24.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 12,
+  "OcrConfidence": 83.416664,
+  "NeedsReview": true,
+  "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
+  "Account": {
+    "AccountNumber": "",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": 4942.518,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 VIREMENT TN MEME BQ 1631835",
+        "Debit": 1100.000,
+        "Credit": null
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 REDRESSEMENT s0300824",
+        "Debit": 2.470,
+        "Credit": null
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 13.000,
+        "Credit": null
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.879,
+        "Credit": null
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 375.750
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2330.300
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 11.652,
+        "Credit": null
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 2.408,
+        "Credit": null
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 481.500
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2078.000
+      },
+      {
+        "Date": "02/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 10.390,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 19200.000,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 REDRESSEMENT s0020924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2406.200
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 12.031,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 8.490,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1698.000
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 604.000
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 3.020,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 3969.000
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 19.845,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 3247.088
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 16.235,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.963,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 JENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 392.500
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2462.000
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 12.310,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.900,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 180.000
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 10.069,
+        "Credit": null
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2013.700
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137009",
+        "Debit": null,
+        "Credit": 1160.000
+      },
+      {
+        "Date": "03/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137009",
+        "Debit": 2.094,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 4500.000,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 VIREMENT TN MEME BQ 1453783",
+        "Debit": 3000.000,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 PRINCIPAL CREDIT",
+        "Debit": 1361.505,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 PRINCIPAL CREDIT",
+        "Debit": 3225.806,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 REDRESSEMENT S0030924",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 REDRESSEMENT S0030924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 REDRESSEMENT S0080724",
+        "Debit": 2.470,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 REDRESSEMENT S0080724",
+        "Debit": 13.000,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 COMMISSION ECH.CRD",
+        "Debit": 0.713,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 COMMISSION ECH.CRD",
+        "Debit": 3.750,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 110.000
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.550,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 15.125,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 3025.000
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2743.000
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 13.715,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137010",
+        "Debit": null,
+        "Credit": 871.000
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137011",
+        "Debit": null,
+        "Credit": 776.000
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137012",
+        "Debit": null,
+        "Credit": 2000.000
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137010",
+        "Debit": 1.833,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137011",
+        "Debit": 1.833,
+        "Credit": null
+      },
+      {
+        "Date": "04/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137012",
+        "Debit": 0.262,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 4300.000,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 VIREMENT TN MEME BQ 1631903",
+        "Debit": 3000.000,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 2.470,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 13.000,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 200.000
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.000,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 10.570,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2114.000
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 463.000
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 2.315,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2616.500
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 13.083,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137013",
+        "Debit": null,
+        "Credit": 1500.000
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4300387",
+        "Debit": null,
+        "Credit": 235.000
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137013",
+        "Debit": 1.309,
+        "Credit": null
+      },
+      {
+        "Date": "05/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4300387",
+        "Debit": 0.524,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 5600.000,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 VIREMENT TN MEME BQ 5635355",
+        "Debit": 3000.000,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 REDRESSEMENT S0050924",
+        "Debit": 13.000,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 REDRESSEMENT S0050924",
+        "Debit": 2.470,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 204.000
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.020,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 9.570,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1914.001
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 644.000
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 3.220,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1184.000
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 5.920,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1807.000
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 9.035,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137014",
+        "Debit": null,
+        "Credit": 2597.500
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137015",
+        "Debit": null,
+        "Credit": 300.000
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137014",
+        "Debit": 0.785,
+        "Credit": null
+      },
+      {
+        "Date": "06/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137015",
+        "Debit": 0.262,
+        "Credit": null
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 REDRESSEMENT S0060924",
+        "Debit": 13.000,
+        "Credit": null
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 REDRESSEMENT S0060924",
+        "Debit": 2.470,
+        "Credit": null
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.250,
+        "Credit": null
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2860.000
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 14.300,
+        "Credit": null
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 2.035,
+        "Credit": null
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 407.000
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.900,
+        "Credit": null
+      },
+      {
+        "Date": "09/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 180.000
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 44800.000,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 3014.845
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 15.074,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.725,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 145.000
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 14.121,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2824.200
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 14.369,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2873.800
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 10.650,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2130.000
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2466.000
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 12.330,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 9.880,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1976.000
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 4.995,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 999.000
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 VERSEMENT ESPECES",
+        "Debit": null,
+        "Credit": 25000.000
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137016",
+        "Debit": null,
+        "Credit": 2584.000
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137017",
+        "Debit": null,
+        "Credit": 313.000
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137016",
+        "Debit": 3.665,
+        "Credit": null
+      },
+      {
+        "Date": "10/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137017",
+        "Debit": 1.047,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 5200.000,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 REDRESSEMENT S0100924",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 REDRESSEMENT S0100924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 370.000
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.850,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2231.000
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 11.155,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.200,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 335.000
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.675,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 685.000
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 3.425,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 706.500
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 3.533,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137018",
+        "Debit": null,
+        "Credit": 250.000
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4184864",
+        "Debit": null,
+        "Credit": 588.000
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137018",
+        "Debit": 0.262,
+        "Credit": null
+      },
+      {
+        "Date": "11/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4184864",
+        "Debit": 1.833,
+        "Credit": null
+      },
+      {
+        "Date": "12/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 4000.000,
+        "Credit": null
+      },
+      {
+        "Date": "12/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 190.000
+      },
+      {
+        "Date": "12/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "12/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2550.000
+      },
+      {
+        "Date": "12/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 12.750,
+        "Credit": null
+      },
+      {
+        "Date": "12/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 3.310,
+        "Credit": null
+      },
+      {
+        "Date": "12/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 662.000
+      },
+      {
+        "Date": "12/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137019",
+        "Debit": null,
+        "Credit": 575.000
+      },
+      {
+        "Date": "12/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137019",
+        "Debit": 1.309,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 6800.000,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 REDRESSEMENT S0110924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 REDRESSEMENT S0120924",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 REDRESSEMENT S0120924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.100,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.660,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 332.000
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 13.655,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2731.000
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 13.830,
+        "Credit": null
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2766.000
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137020",
+        "Debit": null,
+        "Credit": 1017.000
+      },
+      {
+        "Date": "13/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137020",
+        "Debit": 2.618,
+        "Credit": null
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 6900.000,
+        "Credit": null
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2560.200
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 12.801,
+        "Credit": null
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 16.590,
+        "Credit": null
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 3317.833
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 200.000
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.000,
+        "Credit": null
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 187.000
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.935,
+        "Credit": null
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137021",
+        "Debit": null,
+        "Credit": 442.000
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137022",
+        "Debit": null,
+        "Credit": 340.000
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 CHEQUE PREAVISE 0000531",
+        "Debit": 100.000,
+        "Credit": null
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137021",
+        "Debit": 1.309,
+        "Credit": null
+      },
+      {
+        "Date": "16/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137022",
+        "Debit": 0.785,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 2900.000,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 12000.000,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1702.000
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 8.510,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 8.870,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1774.000
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 15.372,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 3074.400
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2944.019
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 14.720,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 895.000
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 4.475,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 12.790,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2558.000
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 REJET PRELEVEMENT AUT",
+        "Debit": 2.975,
+        "Credit": null
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137023",
+        "Debit": null,
+        "Credit": 2020.000
+      },
+      {
+        "Date": "17/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137023",
+        "Debit": 2.094,
+        "Credit": null
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 6300.000,
+        "Credit": null
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1567.000
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 7.835,
+        "Credit": null
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 11.315,
+        "Credit": null
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2263.000
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1374.000
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 6.870,
+        "Credit": null
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.625,
+        "Credit": null
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 325.000
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137024",
+        "Debit": null,
+        "Credit": 777.000
+      },
+      {
+        "Date": "18/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137024",
+        "Debit": 2.880,
+        "Credit": null
+      },
+      {
+        "Date": "19/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 7000.000,
+        "Credit": null
+      },
+      {
+        "Date": "19/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 493.500
+      },
+      {
+        "Date": "19/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 2.468,
+        "Credit": null
+      },
+      {
+        "Date": "19/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2400.000
+      },
+      {
+        "Date": "19/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 12.000,
+        "Credit": null
+      },
+      {
+        "Date": "19/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2066.000
+      },
+      {
+        "Date": "19/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 10.330,
+        "Credit": null
+      },
+      {
+        "Date": "19/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 10.885,
+        "Credit": null
+      },
+      {
+        "Date": "19/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL 000",
+        "Debit": null,
+        "Credit": 2.177
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 7000.000,
+        "Credit": null
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.940,
+        "Credit": null
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 188.000
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 700.000
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 3.500,
+        "Credit": null
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2816.720
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 14.084,
+        "Credit": null
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2495.495
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 12.478,
+        "Credit": null
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137025",
+        "Debit": null,
+        "Credit": 979.000
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 ANNUL CHQ PREAVISE 0000531",
+        "Debit": null,
+        "Credit": 100.000
+      },
+      {
+        "Date": "20/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137025",
+        "Debit": 2.356,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 REDRESSEMENT S0160924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 REDRESSEMENT S0160924",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 REDRESSEMENT S0170924",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 REDRESSEMENT S0170924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 REDRESSEMENT S0180924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 REDRESSEMENT S0180924",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.100,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 9.167,
+        "Credit": null
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1833.564
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4184683",
+        "Debit": null,
+        "Credit": 416.880
+      },
+      {
+        "Date": "23/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4184683",
+        "Debit": 0.524,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 22000.000,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 1900.000
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 REDRESSEMENT S0190924",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 REDRESSEMENT S0190924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 REDRESSEMENT S0200924",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 REDRESSEMENT S0200924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 791.070
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 3.955,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.100,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1790.500
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 8.953,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.100,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 13.921,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2784.184
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 11.126,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2225.270
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1395.000
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 6.975,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2639.500
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 13.199,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.595,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 119.000
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1783.000
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 8.915,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 902.000
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 4.510,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137026",
+        "Debit": null,
+        "Credit": 545.500
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137027",
+        "Debit": null,
+        "Credit": 1882.000
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137028",
+        "Debit": null,
+        "Credit": 723.000
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137026",
+        "Debit": 1.309,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137027",
+        "Debit": 3.142,
+        "Credit": null
+      },
+      {
+        "Date": "24/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137028",
+        "Debit": 2.356,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 200.000,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 600.000,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.300,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 4.255,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 851.000
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 400.000
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 1.250,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 250.000
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.855,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 171.000
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1411.900
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 7.060,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137029",
+        "Debit": null,
+        "Credit": 300.000
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137030",
+        "Debit": null,
+        "Credit": 566.000
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 CHEQUE PREAVISE 2475740",
+        "Debit": 300.000,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137029",
+        "Debit": 0.262,
+        "Credit": null
+      },
+      {
+        "Date": "25/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137030",
+        "Debit": 1.833,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 8200.000,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 PRELEVEMENT BANCAIRE",
+        "Debit": 2.975,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 PRELEVEMENT BANCAIRE",
+        "Debit": 2212.115,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 TPE G277",
+        "Debit": 4.750,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 TPE G277",
+        "Debit": 25.000,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 TPE G277",
+        "Debit": 4.750,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 TPE G277",
+        "Debit": 25.000,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 10.915,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2183.000
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2860.500
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 14.303,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 10.843,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2168.500
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.625,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 125.000
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137031",
+        "Debit": null,
+        "Credit": 385.000
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 CHEQUE PREAVISE 0000467",
+        "Debit": 65.000,
+        "Credit": null
+      },
+      {
+        "Date": "26/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137031",
+        "Debit": 1.309,
+        "Credit": null
+      },
+      {
+        "Date": "27/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 4300.000,
+        "Credit": null
+      },
+      {
+        "Date": "27/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "27/09/2024",
+        "Libelle": "09 REDRESSEMENT S0260924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "27/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 13.690,
+        "Credit": null
+      },
+      {
+        "Date": "27/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2738.000
+      },
+      {
+        "Date": "27/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 1501.200
+      },
+      {
+        "Date": "27/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 7.506,
+        "Credit": null
+      },
+      {
+        "Date": "27/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "27/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.050,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 RETRAIT CHEQUE",
+        "Debit": 600.000,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 VIREMENT TN MEME 80",
+        "Debit": 1100.000,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 VIREMENT TN AUTRE BQ 0523862",
+        "Debit": 3.570,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 VIREMENT TN AUTRE BQ 0523862",
+        "Debit": 1196.534,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 REDRESSEMENT",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 REDRESSEMENT S0270924",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 FRAIS TENUE DE COMPTE",
+        "Debit": 29.000,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 TVA SUR COM",
+        "Debit": 5.510,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 TVA SUR COM",
+        "Debit": 0.001,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 TVA SUR COM",
+        "Debit": 21.136,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM DECOUVERT",
+        "Debit": 0.002,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM DECOUVERT",
+        "Debit": 111.242,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 INTERETS DEBITEURS",
+        "Debit": 901.979,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM CPC ET CG",
+        "Debit": 0.002,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM CPC ET CG",
+        "Debit": 91.152,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 CORREC INT DEBITEURS",
+        "Debit": 0.022,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.050,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 140.000
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 0.700,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM/ TVA REMISE AFFIL",
+        "Debit": 12.610,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 ENCAISSE REMISE AFFIL",
+        "Debit": null,
+        "Credit": 2522.000
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137032",
+        "Debit": null,
+        "Credit": 233.000
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137033",
+        "Debit": null,
+        "Credit": 336.000
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 ENCAISSEMENT CHEQUE 4137034",
+        "Debit": null,
+        "Credit": 170.000
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137032",
+        "Debit": 1.047,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137033",
+        "Debit": 1.571,
+        "Credit": null
+      },
+      {
+        "Date": "30/09/2024",
+        "Libelle": "09 COM TVA/REM CHQ ENC 4137034",
+        "Debit": 0.524,
+        "Credit": null
+      }
+    ]
+  }
+}

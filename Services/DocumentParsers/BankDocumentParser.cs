@@ -18,6 +18,40 @@ namespace Codeium_Security.Services.DocumentParsers
         private static readonly Regex AmountRegex =
 new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
+        // [BIAT] Toute présence de script arabe dans une ligne "texte de continuation" (sans
+        // date/montant) identifie de façon fiable le bruit d'en-tête/pied de page bilingue
+        // (mentions légales, coordonnées d'agence, etc.) : les libellés d'opérations BIAT sont
+        // toujours en français/latin dans les relevés observés.
+        private static readonly Regex ArabicScriptRegex = new("[؀-ۿ]");
+
+        private List<TableRow> SplitDuplicatedRows(List<TableRow> rows)
+        {
+            var result = new List<TableRow>();
+            foreach (var row in rows)
+            {
+                string joined = string.Join(" ", row.Cells.Select(c => c.Text));
+                // heuristique : si un motif de 15+ caractères apparaît 2 fois dans la même row,
+                // c'est probablement 2 lignes PDF fusionnées à tort -> on garde la row telle quelle
+                // mais on la signale pour investigation (log), car un vrai split nécessite les positions Top d'origine.
+                if (HasRepeatedSubstring(joined, minLength: 15))
+                {
+                    Console.WriteLine($"[WARN] Row potentiellement fusionnée (texte dupliqué) : {joined}");
+                }
+                result.Add(row);
+            }
+            return result;
+        }
+
+        private bool HasRepeatedSubstring(string text, int minLength)
+        {
+            for (int i = 0; i + minLength * 2 <= text.Length; i++)
+            {
+                string chunk = text.Substring(i, minLength);
+                if (text.IndexOf(chunk, i + minLength, StringComparison.OrdinalIgnoreCase) >= 0)
+                    return true;
+            }
+            return false;
+        }
         public object Parse(string fullText, List<TextLine> lines)
         {
             var engine = new DocumentAnalysisEngine();
@@ -25,11 +59,14 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             string bankName = ExtractBankName(fullText);
             bool isBiat = bankName.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
             bool isZitouna = fullText.Contains("ZITOUNA", StringComparison.OrdinalIgnoreCase);
+            bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);   // ← ajouter
 
-            if (isBiat || isZitouna)
+            if (isBiat || isZitouna || isBtk)
                 engine.VerticalTolerance = 1;
 
             var rows = engine.BuildTable(lines);
+            // AJOUT : détecte les rows où le texte semble dupliqué (fusion accidentelle de 2 lignes)
+            rows = SplitDuplicatedRows(rows);
 
             var document = new BankDocument
             {
@@ -50,6 +87,14 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             string pendingLibelleBuffer = "";
             string pendingDate = "";
             string sectionRawText = "";
+
+            // [BIAT] Une fois qu'on a détecté du bruit d'en-tête/pied de page (IsBiatNoise),
+            // on reste en "zone de bruit" jusqu'à la prochaine vraie transaction datée. Ça évite
+            // de devoir lister tous les fragments possibles d'un même bloc légal/en-tête : un
+            // bloc de bruit contient souvent plusieurs lignes fragmentées par l'OCR dont certaines
+            // (ex: un simple "»" ou "au -- : :") ne matchent aucun mot-clé individuellement, mais
+            // qui ne doivent jamais être recollées à une transaction pour autant.
+            bool biatInNoiseZone = false;
 
             int? debitAnchor = null, creditAnchor = null, soldeAnchor = null, montantAnchor = null;
             string documentRib = ExtractRib(fullText);
@@ -74,6 +119,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             // [QNB] Détection de la banque
             bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
+            bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
 
             foreach (var row in rows)
             {
@@ -120,7 +166,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         {
                             Date = NormalizeDate(date, null),
                             Libelle = libelle,
-                            Solde = solde
+                            //Solde = solde
                         };
 
                         decimal absVal = Math.Abs(debit);
@@ -153,13 +199,31 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 var montantCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bMontant\b", RegexOptions.IgnoreCase));
                 if (isBiat)
                 {
-                    var arabicDebit = cells.FirstOrDefault(c => c.Text.Contains("عليه"));
-                    var arabicCredit = cells.FirstOrDefault(c => c.Text.Contains("له"));
+                    // [BIAT] "عليه"/"له" sont aussi des mots arabes tres courants dans les
+                    // mentions legales/formules de politesse repetees a chaque page. Un simple
+                    // Contains() sur la cellule matche alors ces phrases (bien plus longues que
+                    // le simple libelle d'en-tete) et corrompt debitAnchor/creditAnchor pour
+                    // toutes les transactions suivantes. On exige donc une cellule courte
+                    // (juste le mot d'en-tete) pour valider le match.
+                    var arabicDebit = cells.FirstOrDefault(c => IsBiatArabicHeaderCell(c.Text, "عليه"));
+                    var arabicCredit = cells.FirstOrDefault(c => IsBiatArabicHeaderCell(c.Text, "له"));
                     if (arabicDebit != null) debitCell = arabicDebit;
                     if (arabicCredit != null) creditCell = arabicCredit;
                 }
 
-                if (debitCell != null || creditCell != null)
+                // [BIAT] Le libellé de certaines opérations BIAT contient littéralement le mot
+                // "CREDIT" ou "DEBIT(EURS)" (ex: "DEBLOCAGE CREDIT ECOM", "AGIOS CREDIT ECOM",
+                // "INTERETS DEBITEURS"). Le Regex.IsMatch ci-dessus matche alors cette cellule
+                // comme s'il s'agissait de l'en-tête de colonne : la ligne entière est traitée
+                // comme un en-tête (continue plus bas) et la TRANSACTION DISPARAÎT, tout en
+                // corrompant debitAnchor/creditAnchor avec la position de ce mot dans le libellé
+                // au lieu de la vraie colonne. Une vraie ligne d'en-tête BIAT n'a jamais de date
+                // ni de montant décimal : on l'exige pour confirmer qu'il s'agit bien d'un en-tête
+                // avant de la traiter comme tel.
+                bool biatLooksLikeTransactionRow = isBiat && (debitCell != null || creditCell != null) &&
+                    (!string.IsNullOrEmpty(GetNormalizedDateFromCells(cellTexts, documentYear)) || cells.Any(c => AmountRegex.IsMatch(c.Text)));
+
+                if ((debitCell != null || creditCell != null) && !biatLooksLikeTransactionRow)
                 {
                     if (debitCell != null) debitAnchor = debitCell.Left;
                     if (creditCell != null) creditAnchor = creditCell.Left;
@@ -292,6 +356,15 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 if (isQnb && Regex.IsMatch(joined, @"\b(Pour toute remarque|N\.B:|support@|hotline|Page\s*\d+ of \d+)\b", RegexOptions.IgnoreCase))
                     continue;
 
+                // [BTK] Filtrer le bruit d'en-tete/pied de page repete a chaque saut de page
+                // (ex: "Titulaire du compte : ...", "Valeur Libellé de l'opération Solde (TND)",
+                // "Report du 11/01/2024 127,9", "4 Page sur 112"). Sans ce filtre, ces lignes
+                // ne matchent ni une date ni un montant valide et sont donc collées comme texte
+                // de continuation sur la derniere transaction (voir bloc "Texte de continuation"
+                // plus bas), ce qui pollue/fusionne plusieurs opérations BTK entre elles.
+                if (isBtk && Regex.IsMatch(joined, @"Titulaire\s+du\s+compte|Valeur\s+Libell[ée]|Report\s+du\s+\d{2}[/\-.]\d{2}[/\-.]\d{2,4}|Page\s+sur\s+\d+", RegexOptions.IgnoreCase))
+                    continue;
+
                 // Normalisation de la date
                 string normalizedDate = GetNormalizedDateFromCells(cellTexts, isBiat ? documentYear : null);
 
@@ -314,6 +387,12 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     .Select(c => new { Left = c.Left, Value = ParseAmount(AmountRegex.Match(c.Text).Value) })
                     .ToList();
 
+                // AJOUT : élimine les doublons exacts (même valeur, positions très proches)
+                // causés par une fusion accidentelle de 2 lignes PDF en une seule row.
+                amountCandidates = amountCandidates
+                    .GroupBy(c => new { c.Value, ZoneLeft = c.Left / 20 }) // regroupe par valeur + zone de 20px
+                    .Select(g => g.First())
+                    .ToList();
                 //update le 3 aout 
                 // [FIX - montants sans aucun separateur] Un montant peut perdre TOUS ses separateurs
                 // lors de l'OCR (ex: "20 798,316" devient "20798316"). AmountRegex ne le reconnait jamais
@@ -371,7 +450,10 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 }
 
                 // Détection du bruit général
-                bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase);
+                bool biatNoiseHit = isBiat && IsBiatNoise(joined);
+                if (biatNoiseHit) biatInNoiseZone = true;
+                bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
+                    || biatNoiseHit;
 
                 // Si la date est vide, tenter de la trouver dans le libellé (date 8 chiffres)
                 if (string.IsNullOrEmpty(normalizedDate) && amountCandidates.Count > 0)
@@ -389,11 +471,28 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
                     if (isPureAmountLine)
                     {
-                        if (string.IsNullOrEmpty(pendingDate)) continue;
+                        if (string.IsNullOrEmpty(pendingDate))
+                        {
+                            // [BTK] Une ligne de commission/TVA (ex: "COM & TVA RET. CARTE") suit
+                            // directement une transaction complete (date+montant sur la meme ligne)
+                            // sans repeter sa propre date : il n'y a donc jamais de pendingDate pour
+                            // elle (pendingDate n'est renseigne que par une ligne "date seule, sans
+                            // montant"). Sans ce cas particulier, la ligne est perdue ici (continue)
+                            // au lieu de devenir sa propre transaction. On reprend la date de la
+                            // derniere transaction de la section, comme sur le releve BTK.
+                            if (isBtk && current.Transactions.Count > 0)
+                                pendingDate = current.Transactions[current.Transactions.Count - 1].Date;
+                            else
+                                continue;
+                        }
 
                         string fullDesc = pendingLibelleBuffer.Trim();
 
-                        if (isAmenDocument)
+                        // [BTK] Comme pour AMEN : cette ligne porte sa PROPRE description (ex.
+                        // "COM & TVA RET. CARTE") a cote de son montant, elle n'arrive jamais via
+                        // pendingLibelleBuffer (qui n'est alimente que par des lignes sans montant).
+                        // Sans ceci, fullDesc resterait vide et le libelle de l'operation serait perdu.
+                        if (isAmenDocument || isBtk)
                         {
                             string currentNonAmount = string.Join(" ", cellTexts.Where(c => !AmountRegex.IsMatch(c))).Trim();
                             currentNonAmount = Regex.Replace(currentNonAmount, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
@@ -446,15 +545,17 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                             foreach (var splitTx in SplitMergedRow(pendingDate, fullDesc, amountCandidates, debitAnchor, creditAnchor))
                                 current.Transactions.Add(splitTx);
                             pendingDate = "";
+                            biatInNoiseZone = false;
                             continue;
                         }
                         decimal? soldeAvant2 = previousSolde;
                         var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
-                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, ref previousSolde);
-                        ApplyMovementFallback(tx2, soldeAvant2);
+                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde , out var soldeCourantTX);
+                        ApplyMovementFallback(tx2, soldeAvant2, soldeCourantTX);
                         if (isQnb) ApplyQnbSignRule(tx2);   // <-- AJOUTE CETTE LIGNE
                         current.Transactions.Add(tx2);
                         pendingDate = "";
+                        biatInNoiseZone = false;
                         continue;
                     }
 
@@ -464,17 +565,23 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         if (current.Transactions.Count > 0 && string.IsNullOrEmpty(pendingDate))
                         {
                             var lastTx = current.Transactions[current.Transactions.Count - 1];
-                            // Éviter de coller les footers
-                            if (!isNoise && !(isQnb && Regex.IsMatch(joined, @"support|hotline|N\.B", RegexOptions.IgnoreCase)))
+                            // Éviter de coller les footers (et, pour BIAT, tout fragment tant qu'on
+                            // est dans une zone de bruit déjà détectée, même s'il ne matche aucun
+                            // mot-clé individuellement)
+                            if (!isNoise && !biatInNoiseZone && !(isQnb && Regex.IsMatch(joined, @"support|hotline|N\.B", RegexOptions.IgnoreCase)))
                                 lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
                         }
-                        else
+                        else if (!biatInNoiseZone)
                         {
                             pendingLibelleBuffer = (pendingLibelleBuffer + " " + joined.Trim()).Trim();
                         }
                     }
                     continue;
                 }
+
+                // Ligne avec date valide : une vraie date marque le début d'une nouvelle
+                // opération, donc la zone de bruit BIAT (s'il y en avait une) est terminée.
+                biatInNoiseZone = false;
 
                 // Ligne avec date valide
                 if (amountCandidates.Count == 0)
@@ -539,22 +646,32 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         current.Transactions.Add(tx);
                 }
             }*/
-                //update le 2 aout aussi meme raison 
+                //update le 2 aout aussi meme raison
                 if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
                 {
                     foreach (var splitTx in SplitMergedRow(normalizedDate, fullDescription, amountCandidates, debitAnchor, creditAnchor))
                         current.Transactions.Add(splitTx);
+                    biatInNoiseZone = false;
                     continue;
                 }
 
                 decimal? soldeAvantTx = previousSolde;
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
-                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, ref previousSolde);
-                ApplyMovementFallback(tx, soldeAvantTx);
+                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, out  var soldeCourantTx);
+                ApplyMovementFallback(tx, soldeAvantTx, soldeCourantTx);
                 if (isQnb) ApplyQnbSignRule(tx);   // <-- AJOUTE CETTE LIGNE
                 current.Transactions.Add(tx);
+                biatInNoiseZone = false;
             }
-  current.RawSectionText = sectionRawText;
+            }
+
+            // Ferme la derniere section en cours (les sections precedentes sont deja
+            // fermees/ajoutees a "sections" au moment ou un nouveau "Solde Initial" /
+            // "SOLDE AU" / "Solde actuel" est detecte). Sans ce bloc, la derniere section
+            // du document n'etait jamais ajoutee a "sections".
+            if (current != null && !sections.Contains(current))
+            {
+                current.RawSectionText = sectionRawText;
                 sections.Add(current);
             }
 
@@ -737,23 +854,41 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             return result;
         }
 
-        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, int? montantAnchor, ref decimal? previousSolde)
+        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, int? montantAnchor, bool isBtk, ref decimal? previousSolde ,  out decimal? soldeCourant)
         {
             const int Tolerance = 15;
+
+            soldeCourant = null;   // remplace tx.Solde
 
             if (debitAnchor.HasValue && creditAnchor.HasValue)
             {
                 var ambiguous = new List<dynamic>();
 
-                foreach (var cand in amountCandidates)
+                // [BTK] Chaque ligne BTK n'affiche que Montant (Débit OU Crédit) + Solde,
+                // et soldeAnchor n'est pas fiable pour cette banque (l'en-tete "Solde" peut
+                // se trouver sur une autre ligne que "Débit"/"Crédit"). On retire donc
+                // explicitement le DERNIER montant de la ligne (toujours le solde courant,
+                // le plus a droite) avant tout classement Débit/Crédit, pour ne jamais le
+                // confondre avec un Crédit. Les autres banques ne sont pas affectees.
+                dynamic classifiable = amountCandidates;
+                if (isBtk && amountCandidates.Count > 1)
+                {
+                    var trimmed = new List<dynamic>();
+                    foreach (var c in amountCandidates) trimmed.Add(c);
+                    soldeCourant = trimmed[trimmed.Count - 1].Value;
+                    trimmed.RemoveAt(trimmed.Count - 1);
+                    classifiable = trimmed;
+                }
+
+                foreach (var cand in classifiable)
                 {
                     int distDebit = Math.Abs((int)cand.Left - debitAnchor.Value);
                     int distCredit = Math.Abs((int)cand.Left - creditAnchor.Value);
                     int distSolde = soldeAnchor.HasValue ? Math.Abs((int)cand.Left - soldeAnchor.Value) : int.MaxValue;
 
-                    if (distSolde <= distDebit && distSolde <= distCredit)
+                    if (!isBtk && distSolde <= distDebit && distSolde <= distCredit)
                     {
-                        tx.Solde = cand.Value;
+                        soldeCourant = cand.Value;
                     }
                     else if (Math.Abs(distDebit - distCredit) < Tolerance)
                     {
@@ -761,7 +896,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     }
                     else if (distDebit < distCredit)
                     {
-                        //le 4 aout le changement des signes 
+                        //le 4 aout le changement des signes
                         tx.Debit = Math.Abs(cand.Value);
 
                         //tx.Debit = cand.Value;
@@ -773,16 +908,16 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     }
                 }
 
-                if (!tx.Solde.HasValue && soldeAnchor.HasValue && amountCandidates.Count > 0)
-                    tx.Solde = amountCandidates[amountCandidates.Count - 1].Value;
+                if (!isBtk && !soldeCourant.HasValue && soldeAnchor.HasValue && amountCandidates.Count > 0)
+                    soldeCourant = amountCandidates[amountCandidates.Count - 1].Value;
 
                 foreach (var cand in ambiguous)
                 {
                     decimal value = cand.Value;
-                    if (previousSolde.HasValue && tx.Solde.HasValue)
+                    if (previousSolde.HasValue && soldeCourant.HasValue)
                     {
-                        if (tx.Solde.Value < previousSolde.Value) tx.Debit = value;
-                        else if (tx.Solde.Value > previousSolde.Value) tx.Credit = value;
+                        if (soldeCourant.Value < previousSolde.Value) tx.Debit = value;
+                        else if (soldeCourant.Value > previousSolde.Value) tx.Credit = value;
                     }
                     else if (value < 0)
                     {
@@ -798,23 +933,20 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             {
                 var amounts = new List<decimal>();
                 foreach (var a in amountCandidates) amounts.Add((decimal)a.Value);
-                if (montantAnchor.HasValue)
+                if (amounts.Count == 1)
                 {
                     decimal val = amounts[0];
                     if (val < 0) tx.Debit = Math.Abs(val);
                     else if (val > 0) tx.Credit = val;
-                    previousSolde = tx.Solde; // reste null si pas de solde courant
-                    return;
+                    soldeCourant = null;// reste null si pas de solde courant
+                  
                 }
-                if (amounts.Count == 1)
-                {
-                    tx.Solde = amounts[0];
-                }
+                
                 else
                 {
                     decimal mouvement = amounts[0];
                     decimal solde = amounts[amounts.Count - 1];
-                    tx.Solde = solde;
+                    soldeCourant = solde;
                     if (previousSolde.HasValue)
                     {
                         if (solde < previousSolde.Value) tx.Debit = mouvement;
@@ -823,15 +955,15 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     else tx.Debit = mouvement;
                 }
             }
-            previousSolde = tx.Solde;
+            previousSolde = soldeCourant;
         }
 
-        private void ApplyMovementFallback(Transaction tx, decimal? soldeAvant)
+        private void ApplyMovementFallback(Transaction tx, decimal? soldeAvant , decimal? soldeCourant)
         {
             if (tx.Debit.HasValue || tx.Credit.HasValue) return;
-            if (!soldeAvant.HasValue || !tx.Solde.HasValue) return;
+            if (!soldeAvant.HasValue || !soldeCourant.HasValue) return;
 
-            decimal diff = tx.Solde.Value - soldeAvant.Value;
+            decimal diff = soldeCourant.Value - soldeAvant.Value;
             if (diff < 0) tx.Debit = Math.Abs(diff);
             else if (diff > 0) tx.Credit = diff;
         }
@@ -862,8 +994,36 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             return last.Date == tx.Date
                 && last.Libelle == tx.Libelle
                 && last.Debit == tx.Debit
-                && last.Credit == tx.Credit
-                && last.Solde == tx.Solde;
+                && last.Credit == tx.Credit; 
+               
+        }
+
+        // [BIAT] Bruit d'en-tête/pied de page répété sur chaque page (titulaire du compte,
+        // coordonnées d'agence, mentions légales bilingues, nom de banque, "TOTAUX", etc.).
+        // Ces lignes ne sont jamais des transactions : sans ce filtre, elles sont collées au
+        // libellé de la dernière transaction par la logique générique de "texte de
+        // continuation", ce qui pollue/fusionne les opérations à chaque saut de page (la
+        // quasi-totalité des relevés BIAT ont plusieurs pages).
+        private static bool IsBiatNoise(string text)
+        {
+            if (ArabicScriptRegex.IsMatch(text)) return true;
+            return Regex.IsMatch(text,
+                // "Agence\s*:\s*Mr" plutot que "Directeur Agence" : l'OCR tronque parfois le
+                // "D" initial ("ecteur Agence : Mr ..."), donc matcher sur "Directeur" seul
+                // rate cette ligne à chaque fois qu'elle est mal reconnue.
+                @"Titulaire\s+du\s+compte|N[°o]?\s*de\s+compte|\bRIB\b|Cher\s+client|Agence\s*:\s*Mr\b|Fonds\s+de\s+Garantie|RELEVE\s+.*MENSUEL|BANQUE\s+INTERNATIONALE\s+ARABE|TOTAUX|Nous\s+avons\s+l.honneur|Nous\s+vous\s+prions\s+de\s+contacter",
+                RegexOptions.IgnoreCase);
+        }
+
+        // [BIAT] "عليه"/"له" sont des mots arabes très courants qui apparaissent aussi dans les
+        // mentions légales/formules de politesse (bien plus longues qu'un simple libellé
+        // d'en-tête). On exige donc une cellule courte pour ne matcher que le véritable en-tête
+        // de colonne, et éviter de corrompre debitAnchor/creditAnchor avec la position d'une
+        // phrase quelconque contenant accidentellement ce mot.
+        private static bool IsBiatArabicHeaderCell(string text, string keyword)
+        {
+            string trimmed = text.Trim().Trim('‏', '‎', '.', ':', '»', '«', '،', ' ');
+            return trimmed.Length > 0 && trimmed.Length <= 8 && trimmed.Contains(keyword);
         }
 
         private string ExtractCurrency(string text)
@@ -921,7 +1081,8 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 ("UIB", "Union Internationale de Banques (UIB)"),
                 ("ATTIJARI", "Attijari Bank"),
                 ("AMEN BANK", "Amen Bank"),
-                ("BH", "Banque de l'Habitat (BH)")
+                ("BH", "Banque de l'Habitat (BH)"),
+                ("BTK", "Banque Tuniso-Koweitienne (BTK)")   // ← ajouter
             };
 
             foreach (var bank in knownBanks)

@@ -1,0 +1,769 @@
+{
+  "FileName": "EXTRAIT BANCAIRE 02-2026.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 5,
+  "OcrConfidence": 81.6,
+  "NeedsReview": true,
+  "BankName": "Banque de l'Habitat (BH)",
+  "Account": {
+    "AccountNumber": "14034034101700148178",
+    "Currency": "",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": 3664.891,
+        "Date": "02/02/2026",
+        "Libelle": "PRLV. [AIL 3664891",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6472.402,
+        "Date": "02/02/2026",
+        "Libelle": "COMMISSION [AIL 02022026 30/01/2026 3 TVA [AIL 02022026 30/01/2026 057 PRLV. [AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 46.218,
+        "Date": "03/02/2026",
+        "Libelle": "COMMISSION [AIL 02022026 30/01/2026 3 [AIL 02022026 30/01/2026 057 VERSEMENT TPE [R033000419 09/02/2026 1100 VERSEMENT TPE [R033000346 09/02/2026 480 COMMISSION (033000419 46218",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 20.168,
+        "Date": "03/02/2026",
+        "Libelle": "COMMISSION (033000346",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "03/02/2026",
+        "Libelle": "[VRST. 4325675 04/02/2026 10920] VERS.CHA.ORDIN 419 04/02/2026 1876 576 VSR SHIPPING TRANSPORT 1B PAYFACN305 04/02/2026 2551 COMMISSION 1B PAYFACN305 04/02/2026 24 TVA 18",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 23.529,
+        "Date": "03/02/2026",
+        "Libelle": "[R034000421 PAYFACNSO: VERSEMENT TPE 09/02/2026 560 COMMISSION (034000421",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "03/02/2026",
+        "Libelle": "ENC CHQ TN 7390265 04/02/2026 240 [commission 7390265 04/02/2026 08 TVA 7390265",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "03/02/2026",
+        "Libelle": "ENC.CHQ.TN [9953144 04/02/2026 2401 [COMMISSION 9953144 04/02/2026 03 TVA 9953144",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "04/02/2026",
+        "Libelle": "[COMFORC PRLV. [AIL 02022026 03/02/2026 10 TVA [AIL 02022026 03/02/2026 19 [COMFORC PRLV. [AIL 02022026 03/02/2026 10 TVA [AIL 02022026 03/02/2026 1.9 VRST. 4325678 05/02/2026 4990 ENC.CHQ.TN 20 05/02/2026 2287 [COMMISSION 20 05/02/2026 03 TVA 20",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3206.517,
+        "Date": "05/02/2026",
+        "Libelle": "VERSEMENT TPE [R035000439 10/02/2026 2500] [COMMISSION C035000439 03/02/2026 37,5 [VRST. 4325679 06/02/2026 5620 [VRST. 4325680 06/02/2026 14370] PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6482.797,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION HL 04022026 04/02/2026 3 HL 04022026 04/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9427.78,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION HL 04022026 04/02/2026 3 TVA HL 04022026 04/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2734.068,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION HL 04022026 04/02/2026 3 TVA HL 04022026 04/02/2026 057 PRLV. [TLEAS04022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4736.156,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION TLEAS04022026 04/02/2026 3 TVA [TLEAS04022026 04/02/2026 057 PRLV. [TLEAS04022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6198.491,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION [TLEAS04022026 04/02/2026 3 TVA [TLEAS04022026 04/02/2026 057 PRLV. [TLEAS04022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6398.304,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION TLEAS04022026 04/02/2026 3 TVA [TLEAS04022026 04/02/2026 057 PRLV. [TLEAS04022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9649.985,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION TLEAS04022026 04/02/2026 3 TVA [TLEAS04022026 04/02/2026 057 VRST. 4325681 06/02/2026 5180 [VRST. 325682 06/02/2026 4000 PRLV. [TLEAS04022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10391.377,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION [TLEAS04022026 04/02/2026 3 [TLEAS04022026 04/02/2026 PRLV. [TLEAS04022026 04/02/2026 ;",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12202.298,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION [TLEAS04022026 04/02/2026 3 TVA [TLEAS04022026 04/02/2026 057 PRLV. [TLEAS04022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 13795.362,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION TLEAS04022026 04/02/2026 3 TVA [TLEAS04022026 04/02/2026 057 PRLV. [TLEAS04022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 866.764,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION TLEAS04022026 04/02/2026 3 TVA [TLEAS04022026 04/02/2026 057 PRLV. HL 05022026 04/02/2026 9433 877 [COMMISSION HL 05022026 04/02/2026 3 HL 05022026 04/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7484.444,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION HL 05022026 04/02/2026 3 HL 05022026 04/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.57,
+        "Date": "05/02/2026",
+        "Libelle": "[COMMISSION HL 05022026 04/02/2026 3 HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4391.804,
+        "Date": "06/02/2026",
+        "Libelle": "VRST. 4356956 09/02/2026 7287.7 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12356.329,
+        "Date": "06/02/2026",
+        "Libelle": "[COMMISSION HL 05022026 05/02/2026 3 HL 05022026 05/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.57,
+        "Date": "06/02/2026",
+        "Libelle": "[COMMISSION HL 05022026 05/02/2026 3 HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 50.42,
+        "Date": "06/02/2026",
+        "Libelle": "TPE 12/02/2026 1200 COMMISSION",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12039.42,
+        "Date": "09/02/2026",
+        "Libelle": "VRST. c03700 09/02/2026 4325685 9416,3 [COMFORC PRLV. 06/02/2026 10 TVA 1711 06/02/2026 19 [COMFORC PRLV. 06/02/2026 10 TVA [TLEAS04022026 06/02/2026 1.9 [COMFORC PRLV. 06/02/2026 10 [TLEAS04022026 06/02/2026 1.9] COMFORC PRLV. HL 05022026 06/02/2026 10| HL 05022026 06/02/2026 19| COMFORC PRLV. HL 05022026 06/02/2026 10 TVA HL 05022026 06/02/2026 19| COMFORC PRLV. HL 05022026 06/02/2026 10 HL 05022026 06/02/2026 1.9] VRST. [4325686",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "09/02/2026",
+        "Libelle": "[VRST.AUT.AG. [4569152-104 10/02/2026 4400 COMMISSION [4569152-104 10/02/2026 3 [TVA [4569152-104 10/02/2026 05 Tssam Laouini 1B Virement r 10/02/2026 880 COMMISSION TB Virement r 10/02/2026 24 TVA 1B Virement «",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2206.267,
+        "Date": "09/02/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 50.42,
+        "Date": "10/02/2026",
+        "Libelle": "COMMISSION CIL 25012026 06/02/2026 3 CIL 25012026 06/02/2026 05 VIRTNMM BQ 10/02/2026 30000 [COMFORC PRLV. HL 05022026 09/02/2026 10 [TVA HL 05022026 09/02/2026 1.9 [COMFORC PRLV. HL 05022026 09/02/2026 10 TVA HL 05022026 09/02/2026 1.9] VERSEMENT TPE [R040000342 16/02/2026 1200 Vers ESP RECU ( 4889421 11/02/2026 1895| COMMISSION 040000342",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "10/02/2026",
+        "Libelle": "VRST. 132568 11/02/2026 7116.2| ENC.CHQ.TN 7390266 11/02/2026 240 [COMMISSION 7390266 11/02/2026 038 TVA 7390266",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7534.317,
+        "Date": "10/02/2026",
+        "Libelle": "[VRST. [4325688 11/02/2026 10200 PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7138.504,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION CIL 10022026 09/02/2026 3 [TVA CIL 10022026 09/02/2026 57| PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9475.241,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION CIL 10022026 09/02/2026 3 TVA CIL 10022026 09/02/2026 057 PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3584.672,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION CIL 10022026 09/02/2026 3 [TVA [CIL 10022026 09/02/2026 05 PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2198.799,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION [CIL 10022026 09/02/2026 3 [TVA [CIL 10022026 09/02/2026 057 PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.57,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION [CIL 10022026 09/02/2026 3 CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8072.477,
+        "Date": "10/02/2026",
+        "Libelle": "PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1876.087,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION [CIL 10022026 09/02/2026 3 [CIL 10022026 09/02/2026 057 PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.57,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION [CIL 10022026 09/02/2026 3 TVA [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4009.584,
+        "Date": "10/02/2026",
+        "Libelle": "PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 13255.112,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION [CIL 10022026 09/02/2026 3 [TVA [CIL 10022026 09/02/2026 057 PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3987.131,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION [CIL 10022026 09/02/2026 3 [TVA [CIL 10022026 09/02/2026 057 PRLV. [CIL 3987131",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8293.026,
+        "Date": "10/02/2026",
+        "Libelle": "[COMMISSION [CIL 10022026 09/02/2026 TVA [CIL 10022026 09/02/2026 PRLV. [CIL 09/02/2026 I",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7.563,
+        "Date": "11/02/2026",
+        "Libelle": "[COMMISSION [CIL 10022026 09/02/2026 3 [CIL 10022026 09/02/2026 057 [COMFORC PRLV. [CIL 25012026 10/02/2026 10 [CIL 25012026 10/02/2026 1.9] [VRST. 4325689 12/02/2026 4950 VERSEMENT TPE [R042000443 17/02/2026 180 COMMISSION [C042000443",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "12/02/2026",
+        "Libelle": "[COMFORC PRLV. [CIL 10022026 11/02/2026 10 [TVA [CIL 10022026 11/02/2026 1.9] [COMFORC PRLV. [CIL 10022026 11/02/2026 10 [CIL 10022026 11/02/2026 1.9] [COMFORC PRLV. [CIL 10022026 11/02/2026 10 هلا [CIL 10022026 11/02/2026 1.9] [COMFORC PRLV. [CIL 10022026 11/02/2026 10 [CIL 10022026 11/02/2026 1.9] [COMFORC PRLV. [CIL 10022026 11/02/2026 10 [TVA [CIL 10022026 11/02/2026 1.9] [COMFORC PRLV. [CIL 10022026 11/02/2026 10 [TVA [CIL 10022026 11/02/2026 1.9] [COMFORC PRLV. [CIL 10022026 11/02/2026 10 هلا [CIL 10022026 11/02/2026 1.9] [COMFORC PRLV. [CIL 10022026 11/02/2026 10 [TVA [CIL 10022026 11/02/2026 1.9] [COMFORC PRLV. [CIL 10022026 11/02/2026 10 [CIL 10022026 11/02/2026 1.9] [COMFORC PRLV. [CIL 10022026 11/02/2026 10 TVA [CIL 10022026 11/02/2026 1.9] VRST. 4325690 13/02/2026 13360 VRST. 4325691 13/02/2026 3730 IMEHDI BOUMIZA 1B Location 13/02/2026 800 [COMMISSION v 13/02/2026 1B Location v 24 1B Location",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "13/02/2026",
+        "Libelle": "VRST. [4325693 v 16/02/2026 38812 [ENC.CHQTN lgﬁ 16/02/2026 2100 [COMMISSION 85 16/02/2026 0.8 TVA 85",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "13/02/2026",
+        "Libelle": "[ENC.CHQ.TN 278 16/02/2026 1500 [COMMISSION 278 16/02/2026 08 TVA 278",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "13/02/2026",
+        "Libelle": "[ENC.CHQ.TN [9694369 16/02/2026 2500 [COMMISSION 9694369 16/02/2026 08 هلا 9694369|",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2905.717,
+        "Date": "16/02/2026",
+        "Libelle": "TPE Ro44000 19/02/2026 1300 COMMISSION [C044000428 12/02/2026 19,5 _{ [Vers ESP RECU ( 3857829 17/02/2026 4415 VRST. 4326606 17/02/2026 21110 VRST. 4325695 17/02/2026 11250 ENC.CHQ.TN 7615673",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "16/02/2026",
+        "Libelle": "COMMISSION 7615673 17/02/2026 08 7615673",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3668.922,
+        "Date": "16/02/2026",
+        "Libelle": "PRLV. [TLEAS13022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8206.043,
+        "Date": "16/02/2026",
+        "Libelle": "COMMISSION [TLEAS13022026 13/02/2026 3 [TLEAS13022026 13/02/2026 05 PRLV. [TLEAS13022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "16/02/2026",
+        "Libelle": "COMMISSION [TLEAS13022026 13/02/2026 3 [TLEAS13022026 13/02/2026 05 [VRST. [4325698 17/02/2026 5170 ها societe ELBARAKARA DES TRAV E 17/02/2026 5545| COMMISSION 8 17/02/2026 24 8",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "16/02/2026",
+        "Libelle": "STE ELECTRICITY ET SECURITY SY 18 Location 17/02/2026 721 v COMMISSION 18 Location v 17/02/2026 24 18 Location",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2095.714,
+        "Date": "16/02/2026",
+        "Libelle": "PRLV. v",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4114.98,
+        "Date": "16/02/2026",
+        "Libelle": "[COMMISSION [AIL 16022026 13/02/2026 3 TVA [AIL 16022026 13/02/2026 057 PRLV. [AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 16715.841,
+        "Date": "16/02/2026",
+        "Libelle": "[COMMISSION [AIL 16022026 13/02/2026 3 [TVA [AIL 16022026 13/02/2026 PRLV. 13/02/2026 ;",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 11090.627,
+        "Date": "16/02/2026",
+        "Libelle": "[COMMISSION [AIL 16022026 13/02/2026 3 TVA [AIL 16022026 13/02/2026 057 PRLV. [AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9754.994,
+        "Date": "16/02/2026",
+        "Libelle": "[COMMISSION [AIL 16022026 13/02/2026 3 [TVA [AIL 16022026 13/02/2026 05 PRLV. 17",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3488.216,
+        "Date": "16/02/2026",
+        "Libelle": "[COMMISSION 17 13/02/2026 3 [TVA 17 13/02/2026 05 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10581.714,
+        "Date": "16/02/2026",
+        "Libelle": "[COMMISSION HL 15022026 13/02/2026 HL 15022026 13/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7086.41,
+        "Date": "18/02/2026",
+        "Libelle": "[COMMISSION HL 15022026 13/02/2026 3 HL 15022026 13/02/2026 05 VERSEMENT TPE [R047000439 23/02/2026 300 [COMMISSION [C047000439 16/02/2026 45 [VRST. [4325699 18/02/2026 4840 [COMFORC PRLV. [AIL 16022026 17/02/2026 10 [AIL 16022026 17/02/2026 1.9 [COMFORC PRLV. [AIL 16022026 17/02/2026 10 [AIL 16022026 17/02/2026 1.9 [COMFORC PRLV. 17 17/02/2026 10 [TVA 17 17/02/2026 1.9] [COMFORC PRLV. HL 15022026 17/02/2026 10 HL 15022026 17/02/2026 1.9] [COMFORC PRLV. HL 15022026 17/02/2026 10 [TVA HL 15022026 17/02/2026 1.9] VRST. 4326568",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "18/02/2026",
+        "Libelle": "ENC.CHQ.TN 128 19/02/2026 2080 [COMMISSION 128 19/02/2026 08 هلا 128",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "19/02/2026",
+        "Libelle": "[VRST. (43266074 20/02/2026 5580 [Mr CHAOUCH ABDELJELIL 1B VIREMENT 20/02/2026 20100 [COMMISSION 1B VIREMENT 20/02/2026 24 TVA 1B VIREMENT",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4664.15,
+        "Date": "20/02/2026",
+        "Libelle": "VRST. 4326608",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "20/02/2026",
+        "Libelle": "[SEGOR 1B SOCIETE SE 23/02/2026 29185 [COMMISSION 1B SOCIETE SE 23/02/2026 24 TVA 18 SOCIETE SE",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5028.602,
+        "Date": "20/02/2026",
+        "Libelle": "[VRST. 4326609 23/02/2026 12700 INES JABNOUNI 1B ECHEANCE 23/02/2026 4400 [COMMISSION 1B ECHEANCE 23/02/2026 24 [TVA 1B ECHEANCE 23/02/2026 045 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6337.455,
+        "Date": "20/02/2026",
+        "Libelle": "[COMMISSION HL 20022026 19/02/2026 TVA HL 20022026 19/02/2026 057 PRLV. HL 6337455",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3615.176,
+        "Date": "20/02/2026",
+        "Libelle": "[COMMISSION HL 20022026 19/02/2026 3 HL 20022026 19/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8257.521,
+        "Date": "20/02/2026",
+        "Libelle": "[COMMISSION HL 20022026 19/02/2026 3 HL 20022026 19/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5053.003,
+        "Date": "20/02/2026",
+        "Libelle": "[COMMISSION HL 20022026 19/02/2026 3 هلا HL 20022026 19/02/2026 .57 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6807.326,
+        "Date": "20/02/2026",
+        "Libelle": "[COMMISSION HL 19022026 19/02/2026 3 [TVA HL 19022026 19/02/2026 057 PRLV. HL 6807326",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7101.071,
+        "Date": "20/02/2026",
+        "Libelle": "[COMMISSION HL 19022026 19/02/2026 3 TVA HL 19022026 19/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9920.274,
+        "Date": "20/02/2026",
+        "Libelle": "[COMMISSION HL 19022026 19/02/2026 3 [TVA HL 19022026 19/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10334.868,
+        "Date": "20/02/2026",
+        "Libelle": "[COMMISSION HL 20022026 19/02/2026 3 [TVA HL 20022026 19/02/2026 057 VERSEMENT TPE R051000365 26/02/2026 240 [COMMISSION [C051000365 19/02/2026 36 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "23/02/2026",
+        "Libelle": "[COMMISSION HL 19022026 19/02/2026 3 [TVA HL 19022026 19/02/2026 057 VRST. [4326610 2410272026 23101,6 INES JABNOUNI 1B Paiement 2410272026 1000 [COMMISSION e 2410272026 1B Paiement e 24 هلا 1B Paiement",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1153.82,
+        "Date": "23/02/2026",
+        "Libelle": "PRLV. e 20/02/2026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9248.55,
+        "Date": "23/02/2026",
+        "Libelle": "COMMISSION MF 23022026 20/02/2026 3 MF 23022026 20/02/2026 057 PRLV. BHL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 55.084,
+        "Date": "23/02/2026",
+        "Libelle": "COMMISSION BHL 20022026 20/02/2026 3 TVA BHL 20022026 20/02/2026 057 COMFORC PRLV. HL 20022026 23/02/2026 10 HL 20022026 23/02/2026 1.9] COMFORC PRLV. HL 19022026 23/02/2026 10 TVA HL 19022026 23/02/2026 1.9 2426 TPE 02/03/2026 3240 2410212026 SEMENT TPE 02/03/2026 3450",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "24/02/2026",
+        "Libelle": "[VRST. (4326611 25/02/2026 6600 VERS.CHQ.ORDIN [433 25/02/2026 1876 ENC.CHQTN 1572 25/02/2026 160 242 COMMISSION 1572 25/02/2026 038 2470272026 VRST. 4326612 25/02/2026 25050] 2470272026 VERSEMENT TPE [R055000345 02/03/2026 800",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 33.613,
+        "Date": "24/02/2026",
+        "Libelle": "COMMISSION C055000345",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1458.037,
+        "Date": "25/02/2026",
+        "Libelle": "[COMFORC PRLV. MF 23022026 24/02/2026 10 TVA MF 23022026 24/02/2026 1.9] [COMFORC PRLV. BHL 20022026 24/02/2026 10 2470272026 [TVA BHL 20022026 2410212026 1.9 Vers ESP RECU( 4656590 26/02/2026 4860 11: CHEFAK HAMZA 1B VIR 26/02/2026 2043 [COMMISSION 1B VIR 26/02/2026 TVA [BVIR 26/02/2026 [VRST. [4326614 26/02/2026 14980 PRLV. CIL 25022026 24/02/2026 [COMMISSION CIL 25022026 2470272026 [TVA CIL 25022026 2410212026 PRLV. CIL 25022026 2410212026 [COMMISSION CIL 25022026 2470272026 TVA CIL 25022026 24/02/2026 057 PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2206.267,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION CIL 25022026 24/02/2026 3 [TVA [CIL 25022026 2410212026 05 PRLV. [CIL 2410212026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1556.308,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 24/02/2026 3 [TVA [CIL 25022026 2410212026 057 PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.57,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 24/02/2026 3 CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12708.682,
+        "Date": "25/02/2026",
+        "Libelle": "VRST. 4326615 26/02/2026 6220 VRST. 4326616 26/02/2026 4340] PRLV. [CIL 2470272026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1831.403,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 2470272026 3 [TVA [CIL 25022026 2470272026 057 PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.57,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 24/02/2026 3 TVA [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12121.789,
+        "Date": "25/02/2026",
+        "Libelle": "PRLV. [CIL 2470272026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 11651.808,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 2470272026 3 [TVA [CIL 25022026 2470272026 057 PRLV. [CIL 2470272026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1488.197,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 24/02/2026 3 [CIL 25022026 24/02/2026 057 PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9297.035,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 2470272026 [CIL 25022026 2470272026 057 PRLV. [CIL 2470272026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5971.839,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 2470272026 3 [CIL 25022026 24/02/2026 057 PRLV. [CIL 5971839",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7292.619,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 24/02/2026 3 [CIL 25022026 24/02/2026 057 PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3467.033,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 24/02/2026 3 [CIL 25022026 24/02/2026 057 PRLV. [CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3509.814,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [CIL 25022026 24/02/2026 3 هلا [CIL 25022026 24/02/2026 0:57 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 13602.338,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION HL 24022026 24/02/2026 3 [TVA HL 24022026 24/02/2026 057 PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8977.443,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION HL 24022026 24/02/2026 3 [TVA HL 24022026 24/02/2026 057 PRLV. [TLEAS24022026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9139.645,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [TLEAS24022026 24/02/2026 3 17 24/02/2026 057 PRLV. 17",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9266.953,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION 17 24/02/2026 3 17 24/02/2026 057 PRLV. 17",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 11365.673,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION [TLEAS24022026 24/02/2026 3 [TLEAS24022026 24/02/2026 PRLV. 241022026 .",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "25/02/2026",
+        "Libelle": "[COMMISSION 17 22 3 17 22 057 [ENC.CHQ.TN 915 26/02/2026 700 [COMMISSION 915 26/02/2026 038 TVA",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "26/02/2026",
+        "Libelle": "[VRST. 4326617 26/02/2026 7280 TPE 03/03/2026 160 [COMMISSION 2410212026 24 2610212026 [C05600037\" 27/02/2026 INES JABNOUNI 1B Paiement e 4190 2610212026 [COMMISSION 1B Paiement 27/02/2026 24 e 27/02/2026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 26.891,
+        "Date": "26/02/2026",
+        "Libelle": "VRST. [4326618 2710212026 7640 VERSEMENT TPE [R057000384 04/03/2026 640 [C057000384",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 76618.368,
+        "Date": "27/02/2026",
+        "Libelle": "COMFORC PRLV. (CIL 25022026 26/02/2026 10] CIL 25022026 26/02/2026 19| COMFORC PRLV. CIL 25022026 26/02/2026 10 TVA CIL 25022026 26/02/2026 19| COMFORC PRLV. CIL 25022026 26/02/2026 10 CIL 25022026 26/02/2026 19| COMFORC PRLV. HL 24022026 26/02/2026 10 TVA HL 24022026 26/02/2026 1.9] COMFORC PRLV. HL 24022026 26/02/2026 10 [TVA HL 24022026 26/02/2026 1.9 COMFORC PRLV. 17 26/02/2026 10 [TVA 17 26/02/2026 1.9 COMFORC PRLV. 17 26/02/2026 10 TVA [TLEAS24022026 26/02/2026 1.9] COMFORC PRLV. [TLEAS24022026 26/02/2026 10 TVA [TLEAS24022026 26/02/2026 1.9 [COMFORC PRLV. 26/02/2026 10 [TVA 26/02/2026 1.9 VRST. 4326619 02/03/2026 10610 SEMENT TPE 05/03/2026 2100 [COMMISSION C058000388 26/02/2026 31.5",
+        "Debit": null,
+        "Credit": null
+      }
+    ]
+  }
+}

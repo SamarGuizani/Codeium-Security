@@ -1,0 +1,2869 @@
+{
+  "FileName": "extrait BH.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 8,
+  "OcrConfidence": 81.5,
+  "NeedsReview": true,
+  "BankName": "Banque de l'Habitat (BH)",
+  "Account": {
+    "AccountNumber": "034101700148",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": 30861.900,
+        "Date": "01/06/2026",
+        "Libelle": "VRST. 3913061",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3341.636,
+        "Date": "01/06/2026",
+        "Libelle": "PRLV. AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "01/06/2026",
+        "Libelle": "COMMISSION AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "01/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4310.236,
+        "Date": "01/06/2026",
+        "Libelle": "PRLV. AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "01/06/2026",
+        "Libelle": "COMMISSION AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "01/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3664.891,
+        "Date": "01/06/2026",
+        "Libelle": "PRLV. lAIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "01/06/2026",
+        "Libelle": "COMMISSION AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "01/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6472.402,
+        "Date": "01/06/2026",
+        "Libelle": "PRLV. lAIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "01/06/2026",
+        "Libelle": "COMMISSION lAIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "01/06/2026",
+        "Libelle": "T.V.A lAIL ÊËËÊËFÊTÊÇCIW ET",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1441.000,
+        "Date": "01/06/2026",
+        "Libelle": "IB reg fac 31",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2.400,
+        "Date": "01/06/2026",
+        "Libelle": "COMMISSION IB fac 31 reg",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "01/06/2026",
+        "Libelle": "T.V.A IB fac 31 reg",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1560.000,
+        "Date": "01/06/2026",
+        "Libelle": "MEJRIaaaMERIAM IB amalabenar",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2.400,
+        "Date": "01/06/2026",
+        "Libelle": "COMMISSION IB amalabenar",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "01/06/2026",
+        "Libelle": "T.V.A IB amalabenar",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 560.000,
+        "Date": "02/06/2026",
+        "Libelle": "VERSEMENT TPE R152000760",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1590.000,
+        "Date": "02/06/2026",
+        "Libelle": "VERSEMENT TPE R152000813",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8.400,
+        "Date": "02/06/2026",
+        "Libelle": "COMMISSION C152000760",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 66.806,
+        "Date": "02/06/2026",
+        "Libelle": "COMMISSION C152000813",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10200.000,
+        "Date": "02/06/2026",
+        "Libelle": "VRST. 3913062",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 59880.150,
+        "Date": "02/06/2026",
+        "Libelle": "STE SEGOR IB Rglement F",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2.400,
+        "Date": "02/06/2026",
+        "Libelle": "COMMISSION IB Rglement F",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "02/06/2026",
+        "Libelle": "T.V.A IB Rglement F",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "02/06/2026",
+        "Libelle": "COMFORC PRLV. AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "02/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "02/06/2026",
+        "Libelle": "COMFORC PRLV. AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "02/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "02/06/2026",
+        "Libelle": "COMFORC PRLV. AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "02/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "02/06/2026",
+        "Libelle": "COMFORC PRLV. lAIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "02/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2200.000,
+        "Date": "03/06/2026",
+        "Libelle": "VERSEMENT TPE R153000824",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 92.437,
+        "Date": "03/06/2026",
+        "Libelle": "COMMISSION C153000824",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8850.000,
+        "Date": "03/06/2026",
+        "Libelle": "VRST. 3913063",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 500.000,
+        "Date": "03/06/2026",
+        "Libelle": "08:19 Impression du relevé VERSEMENT TPE R154000842",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 21.008,
+        "Date": "03/06/2026",
+        "Libelle": "COMMISSION C154000842",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10730.000,
+        "Date": "04/06/2026",
+        "Libelle": "VRST. 3913064",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2080.000,
+        "Date": "04/06/2026",
+        "Libelle": "ENC.CHQ.TN 0000214",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.800,
+        "Date": "04/06/2026",
+        "Libelle": "COMMISSION 0000214",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "04/06/2026",
+        "Libelle": "T.V.A 0000214",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4734.300,
+        "Date": "05/06/2026",
+        "Libelle": "VRST. 3884312",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 360.000,
+        "Date": "05/06/2026",
+        "Libelle": "ENC.CHQ.TN 0000337",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.800,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION 0000337",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A 0000337",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5800.000,
+        "Date": "05/06/2026",
+        "Libelle": "VRST. 3884313",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 11635.415,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12356.329,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4391.804,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3206.517,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6482.797,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9427.780,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2734.068,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION ITLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6198.491,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6398.304,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10391.377,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A ITLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7484.444,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12202.298,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. ITLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9433.877,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4866.764,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5066.728,
+        "Date": "05/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "05/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "05/06/2026",
+        "Libelle": "08:19 Impression du relevé T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 20781.900,
+        "Date": "08/06/2026",
+        "Libelle": "VRST. 3884314",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5100.000,
+        "Date": "08/06/2026",
+        "Libelle": "SOCIETE TABULARASA 8",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2.400,
+        "Date": "08/06/2026",
+        "Libelle": "COMMISSION IB",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "08/06/2026",
+        "Libelle": "T.V.A 8",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 140.000,
+        "Date": "08/06/2026",
+        "Libelle": "VERSEMENT TPE R159000851",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 240.000,
+        "Date": "08/06/2026",
+        "Libelle": "VERSEMENT TPE R159000677",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5.882,
+        "Date": "08/06/2026",
+        "Libelle": "COMMISSION C159000851",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.084,
+        "Date": "08/06/2026",
+        "Libelle": "COMMISSION C159000677 (SJBEIVIËË:\\IOYN PLASTIC",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2080.000,
+        "Date": "08/06/2026",
+        "Libelle": "1BV",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2.400,
+        "Date": "08/06/2026",
+        "Libelle": "COMMISSION [B V",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "08/06/2026",
+        "Libelle": "TVA IBV",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "08/06/2026",
+        "Libelle": "COMFORC PRLV. TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "08/06/2026",
+        "Libelle": "TV.A TLEAS04062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "08/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "08/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "08/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "08/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "08/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "08/06/2026",
+        "Libelle": "TVA HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2700.000,
+        "Date": "09/06/2026",
+        "Libelle": "Vers ESP RECU ( 4993074",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 14740.000,
+        "Date": "09/06/2026",
+        "Libelle": "VRST. 3884315",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9230.000,
+        "Date": "09/06/2026",
+        "Libelle": "VRST. 3884316",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1895.000,
+        "Date": "10/06/2026",
+        "Libelle": "Vers ESP RECU ( 4158026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12760.000,
+        "Date": "10/06/2026",
+        "Libelle": "VRST. 3884317",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4497.984,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8293.026,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5597.260,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 13255.112,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3987.131,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1876.087,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10200.000,
+        "Date": "10/06/2026",
+        "Libelle": "VRST. 3884318",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2198.799,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8072.477,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7658.957,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3584.672,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "08:19 Impression du relevé COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7534.317,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7138.504,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9475.241,
+        "Date": "10/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "10/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "10/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3800.000,
+        "Date": "11/06/2026",
+        "Libelle": "Vers ESP RECU ( 5813870",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3780.000,
+        "Date": "11/06/2026",
+        "Libelle": "VRST. 3884319",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "11/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "11/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "11/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "11/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "11/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "11/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "11/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "11/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "11/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "11/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 14600.000,
+        "Date": "12/06/2026",
+        "Libelle": "VRST. 5455146",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1876.000,
+        "Date": "12/06/2026",
+        "Libelle": "VERS.CHQ.ORDIN 0000475",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 360.000,
+        "Date": "12/06/2026",
+        "Libelle": "VERSEMENT TPE R163000843",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 15.126,
+        "Date": "12/06/2026",
+        "Libelle": "COMMISSION C163000843",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 24430.000,
+        "Date": "15/06/2026",
+        "Libelle": "VRST. 5455147",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12400.000,
+        "Date": "15/06/2026",
+        "Libelle": "VRST. 5455149",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2155.610,
+        "Date": "15/06/2026",
+        "Libelle": "PRLV. AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4114.980,
+        "Date": "15/06/2026",
+        "Libelle": "PRLV. AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 16715.841,
+        "Date": "15/06/2026",
+        "Libelle": "PRLV. AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/06/2026",
+        "Libelle": "TV.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3720.000,
+        "Date": "15/06/2026",
+        "Libelle": "VRST. 6587502",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10200.000,
+        "Date": "15/06/2026",
+        "Libelle": "VRST. 5455150",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 11090.627,
+        "Date": "15/06/2026",
+        "Libelle": "PRLV. AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/06/2026",
+        "Libelle": "T.V.A AIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3668.922,
+        "Date": "15/06/2026",
+        "Libelle": "PRLV. TLEAS",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION TLEAS12062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/06/2026",
+        "Libelle": "T.V.A TLEAS12062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8206.043,
+        "Date": "15/06/2026",
+        "Libelle": "PRLV. TLEAS12062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION TLEAS",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/06/2026",
+        "Libelle": "T.V.A TLEAS12062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9804.434,
+        "Date": "15/06/2026",
+        "Libelle": "PRLV. TLEAS",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION TLEAS12062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/06/2026",
+        "Libelle": "T.V.A TLEAS",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10581.714,
+        "Date": "15/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3488.216,
+        "Date": "15/06/2026",
+        "Libelle": "08:19 Impression du relevé PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/06/2026",
+        "Libelle": "TV.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 450.000,
+        "Date": "15/06/2026",
+        "Libelle": "VERSEMENT TPE R166000827",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6.750,
+        "Date": "15/06/2026",
+        "Libelle": "COMMISSION C166000827",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 17390.000,
+        "Date": "17/06/2026",
+        "Libelle": "VRST. 6587505",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9754.994,
+        "Date": "17/06/2026",
+        "Libelle": "PRLV. ITLEAS15062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "17/06/2026",
+        "Libelle": "COMMISSION TLEAS15062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "17/06/2026",
+        "Libelle": "TV.A ITLEAS15062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "17/06/2026",
+        "Libelle": "COMFORC PRLV. TLEAS12062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "17/06/2026",
+        "Libelle": "TV.A ITLEAS12062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "17/06/2026",
+        "Libelle": "COMFORC PRLV. TLEAS12062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "17/06/2026",
+        "Libelle": "TV.A ITLEAS12062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "17/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "17/06/2026",
+        "Libelle": "TV.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "17/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "17/06/2026",
+        "Libelle": "TV.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 14130.000,
+        "Date": "18/06/2026",
+        "Libelle": "VRST. 6587651",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4158.000,
+        "Date": "18/06/2026",
+        "Libelle": "ENC.CHQ.TN 0000108",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.800,
+        "Date": "18/06/2026",
+        "Libelle": "COMMISSION 0000108",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "18/06/2026",
+        "Libelle": "TV.A 0000108",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1530.000,
+        "Date": "18/06/2026",
+        "Libelle": "ENC.CHQ.TN 9801184",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.800,
+        "Date": "18/06/2026",
+        "Libelle": "COMMISSION 9801184",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "18/06/2026",
+        "Libelle": "TV.A 9801184",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 481.000,
+        "Date": "18/06/2026",
+        "Libelle": "ENC.CHQ.TN 9192440",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.800,
+        "Date": "18/06/2026",
+        "Libelle": "COMMISSION 9192440",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "18/06/2026",
+        "Libelle": "TV.A 9192440",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "18/06/2026",
+        "Libelle": "COMFORC PRLV. TLEAS15062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "18/06/2026",
+        "Libelle": "TV.A TLEAS15062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4500.000,
+        "Date": "19/06/2026",
+        "Libelle": "VRST. 3884321",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 500.000,
+        "Date": "19/06/2026",
+        "Libelle": "ENC.CHQ.TN 0000059",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.800,
+        "Date": "19/06/2026",
+        "Libelle": "COMMISSION 0000059",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "19/06/2026",
+        "Libelle": "T.V.A 0000059",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6101.400,
+        "Date": "19/06/2026",
+        "Libelle": "ENC.CHQ.TN 0178869",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.800,
+        "Date": "19/06/2026",
+        "Libelle": "COMMISSION 0178869",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.152,
+        "Date": "19/06/2026",
+        "Libelle": "TV.A 0178869",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 11000.000,
+        "Date": "19/06/2026",
+        "Libelle": "VRST. 3884322",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 20799.350,
+        "Date": "22/06/2026",
+        "Libelle": "VRST. 3884323",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6337.455,
+        "Date": "22/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "22/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "22/06/2026",
+        "Libelle": "TV.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6807.326,
+        "Date": "22/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "22/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "22/06/2026",
+        "Libelle": "TV.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7101.071,
+        "Date": "22/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "22/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "22/06/2026",
+        "Libelle": "TV.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10334.868,
+        "Date": "22/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "22/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "22/06/2026",
+        "Libelle": "TV.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9248.550,
+        "Date": "22/06/2026",
+        "Libelle": "PRLV. BHL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "22/06/2026",
+        "Libelle": "COMMISSION BHL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "22/06/2026",
+        "Libelle": "TV.A BHL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3615.176,
+        "Date": "22/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "22/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "22/06/2026",
+        "Libelle": "08:19 Impression du relevé T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8257.521,
+        "Date": "22/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "22/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "22/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 440.000,
+        "Date": "22/06/2026",
+        "Libelle": "VERSEMENT TPE R173000801",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 980.000,
+        "Date": "22/06/2026",
+        "Libelle": "VERSEMENT TPE R173000803",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 18.487,
+        "Date": "22/06/2026",
+        "Libelle": "COMMISSION C173000801",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 41.176,
+        "Date": "22/06/2026",
+        "Libelle": "COMMISSION C173000803",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 300.000,
+        "Date": "23/06/2026",
+        "Libelle": "VERSEMENT TPE R174000801",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4.500,
+        "Date": "23/06/2026",
+        "Libelle": "COMMISSION C174000801",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1355.548,
+        "Date": "23/06/2026",
+        "Libelle": "PRLV. MF",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "23/06/2026",
+        "Libelle": "COMMISSION MF",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "23/06/2026",
+        "Libelle": "T.V.A MF",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "23/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "23/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "23/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "23/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 24330.000,
+        "Date": "24/06/2026",
+        "Libelle": "VRST. 6587757",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 13540.000,
+        "Date": "24/06/2026",
+        "Libelle": "VRST. 3884324",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "24/06/2026",
+        "Libelle": "COMFORC PRLV. MF",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "24/06/2026",
+        "Libelle": "T.V.A MF",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 18420.000,
+        "Date": "25/06/2026",
+        "Libelle": "VRST. 4758443",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7890.153,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6486.814,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1847.418,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7292.619,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3467.033,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5971.839,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9297.035,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "_ PRLV. CIL 25062026 24/06/2026 148,7 COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1828.550,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 11651.808,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1556.308,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1831.403,
+        "Date": "25/06/2026",
+        "Libelle": "08:19 Impression du relevé PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12121.789,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 12708.682,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5329.184,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1458.037,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2206.267,
+        "Date": "25/06/2026",
+        "Libelle": "PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "25/06/2026",
+        "Libelle": "COMMISSION CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "25/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 30680.000,
+        "Date": "25/06/2026",
+        "Libelle": "VRST. 4758444",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2250.000,
+        "Date": "25/06/2026",
+        "Libelle": "VRST. 3884326",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5470.000,
+        "Date": "25/06/2026",
+        "Libelle": "VRST. 4758445",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 45.000,
+        "Date": "25/06/2026",
+        "Libelle": "_ VERSEMENT TPE R176000844 01/07/2026 3 0 COMMISSION C176000844",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7130.000,
+        "Date": "25/06/2026",
+        "Libelle": "VRST. 3884327",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9784.000,
+        "Date": "26/06/2026",
+        "Libelle": "VRST. 3884328",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 7180.000,
+        "Date": "26/06/2026",
+        "Libelle": "VRST. 3884329",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 11365.673,
+        "Date": "26/06/2026",
+        "Libelle": "PRLV. ITLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3509.814,
+        "Date": "26/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 8977.443,
+        "Date": "26/06/2026",
+        "Libelle": "PRLV. ITLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A ITLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9139.645,
+        "Date": "26/06/2026",
+        "Libelle": "PRLV. TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9266.953,
+        "Date": "26/06/2026",
+        "Libelle": "PRLV. TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A ITLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 6309.289,
+        "Date": "26/06/2026",
+        "Libelle": "PRLV. TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION ITLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4828.206,
+        "Date": "26/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 5143.942,
+        "Date": "26/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 13602.338,
+        "Date": "26/06/2026",
+        "Libelle": "PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1877.000,
+        "Date": "26/06/2026",
+        "Libelle": "VERS.CHQ.ORDIN 0000476",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "26/06/2026",
+        "Libelle": "08:19 Impression du relevé T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMFORC PRLV. CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A CIL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4752.990,
+        "Date": "26/06/2026",
+        "Libelle": "ENC.EFFET TN 010854128989",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 4.000,
+        "Date": "26/06/2026",
+        "Libelle": "COMMISSION 010854128989",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.760,
+        "Date": "26/06/2026",
+        "Libelle": "T.V.A 010854128989",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 24740.000,
+        "Date": "29/06/2026",
+        "Libelle": "VRST. 3884330",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2890.000,
+        "Date": "29/06/2026",
+        "Libelle": "VERSEMENT TPE R180000806",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 121.428,
+        "Date": "29/06/2026",
+        "Libelle": "COMMISSION C180000806",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "29/06/2026",
+        "Libelle": "COMFORC PRLV. ITLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "29/06/2026",
+        "Libelle": "T.V.A TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "29/06/2026",
+        "Libelle": "COMFORC PRLV. ITLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "29/06/2026",
+        "Libelle": "T.V.A TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "29/06/2026",
+        "Libelle": "COMFORC PRLV. TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "29/06/2026",
+        "Libelle": "T.V.A TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "29/06/2026",
+        "Libelle": "COMFORC PRLV. TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "29/06/2026",
+        "Libelle": "T.V.A TLEAS25062026",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "29/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "29/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "29/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "29/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 10.000,
+        "Date": "29/06/2026",
+        "Libelle": "COMFORC PRLV. HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 1.900,
+        "Date": "29/06/2026",
+        "Libelle": "T.V.A HL",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 9320.000,
+        "Date": "30/06/2026",
+        "Libelle": "VRST. 3884331 كي اي لس",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3000.000,
+        "Date": "30/06/2026",
+        "Libelle": "IB AUTRES",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2.400,
+        "Date": "30/06/2026",
+        "Libelle": "COMMISSION IB AUTRES",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.456,
+        "Date": "30/06/2026",
+        "Libelle": "T.V.A IB AUTRES",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 2289.249,
+        "Date": "30/06/2026",
+        "Libelle": "PRLV. MF",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 3.000,
+        "Date": "30/06/2026",
+        "Libelle": "COMMISSION MF",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "30/06/2026",
+        "Libelle": "T.V.A MF",
+        "Debit": null,
+        "Credit": null
+      }
+    ]
+  }
+}

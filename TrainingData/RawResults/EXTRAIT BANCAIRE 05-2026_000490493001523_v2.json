@@ -1,0 +1,510 @@
+{
+  "FileName": "EXTRAIT BANCAIRE 05-2026.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 2,
+  "OcrConfidence": 88.5,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "000490493001523",
+    "Currency": "EUR",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": 91.370,
+        "Date": "29/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 91370",
+        "Debit": null,
+        "Credit": 150.000
+      },
+      {
+        "Solde": 91.627,
+        "Date": "29/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 91627",
+        "Debit": null,
+        "Credit": 369.600
+      },
+      {
+        "Solde": 1809.000,
+        "Date": "29/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 26/05/26 000376 0590032090",
+        "Debit": null,
+        "Credit": 1809.000
+      },
+      {
+        "Solde": 21.708,
+        "Date": "29/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 26/05/26 000376 0590032090",
+        "Debit": 21.708,
+        "Credit": null
+      },
+      {
+        "Solde": 91.370,
+        "Date": "26/05/2026",
+        "Libelle": "COM & TVA REMISE CHQ 91370",
+        "Debit": 0.833,
+        "Credit": null
+      },
+      {
+        "Solde": 91.627,
+        "Date": "26/05/2026",
+        "Libelle": "COM & TVA REMISE CHQ 91627",
+        "Debit": 0.833,
+        "Credit": null
+      },
+      {
+        "Solde": 49.000,
+        "Date": "26/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 25/05/26 000346 0590032090",
+        "Debit": null,
+        "Credit": 49.000
+      },
+      {
+        "Solde": 1602.000,
+        "Date": "26/05/2026",
+        "Libelle": "_ PAIEMENT REMISE DU 25/05/26 000346 0590032090 26/05/2026 58 PAIEMENT REMISE DU 25/05/26 000333 0590032090",
+        "Debit": null,
+        "Credit": 1602.000
+      },
+      {
+        "Solde": 19.224,
+        "Date": "26/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 25/05/26 000333 0590032090",
+        "Debit": 19.224,
+        "Credit": null
+      },
+      {
+        "Solde": 88.365,
+        "Date": "25/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 88365",
+        "Debit": null,
+        "Credit": 330.000
+      },
+      {
+        "Solde": 88.365,
+        "Date": "22/05/2026",
+        "Libelle": "COM & TVA REMISE CHQ 88365",
+        "Debit": 0.833,
+        "Credit": null
+      },
+      {
+        "Solde": 1580.000,
+        "Date": "22/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 21/05/26 000334 0590032090",
+        "Debit": null,
+        "Credit": 1580.000
+      },
+      {
+        "Solde": 18.960,
+        "Date": "22/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 21/05/26 000334 0590032090",
+        "Debit": 18.960,
+        "Credit": null
+      },
+      {
+        "Solde": 86.656,
+        "Date": "21/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 86656",
+        "Debit": null,
+        "Credit": 298.000
+      },
+      {
+        "Solde": 86.656,
+        "Date": "21/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 86656",
+        "Debit": null,
+        "Credit": 247.500
+      },
+      {
+        "Solde": 20000.000,
+        "Date": "21/05/2026",
+        "Libelle": "RETRAIT ESPECE 2916",
+        "Debit": 20000.000,
+        "Credit": null
+      },
+      {
+        "Solde": 529.000,
+        "Date": "21/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 20/05/26 000337 0590032090",
+        "Debit": null,
+        "Credit": 529.000
+      },
+      {
+        "Solde": 10.722,
+        "Date": "21/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 20/05/26 000337 0590032090",
+        "Debit": 10.722,
+        "Credit": null
+      },
+      {
+        "Solde": 465.210,
+        "Date": "21/05/2026",
+        "Libelle": "PAYEMENT PRELEVEMENT 893 Ministère des finances / REGLE DE LA DECLARATION: 84049",
+        "Debit": 465.210,
+        "Credit": null
+      },
+      {
+        "Solde": 86.656,
+        "Date": "20/05/2026",
+        "Libelle": "COM & TVA PAY. PRELE 893 20/05/2026 5 COM & TVA REMISE CHQ 86656",
+        "Debit": 1.666,
+        "Credit": null
+      },
+      {
+        "Solde": 85.398,
+        "Date": "20/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 85398",
+        "Debit": null,
+        "Credit": 1550.000
+      },
+      {
+        "Solde": 866.000,
+        "Date": "20/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 19/05/26 000326 0590032090",
+        "Debit": null,
+        "Credit": 866.000
+      },
+      {
+        "Solde": 10.392,
+        "Date": "20/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 19/05/26 000326 0590032090",
+        "Debit": 10.392,
+        "Credit": null
+      },
+      {
+        "Solde": 85.398,
+        "Date": "19/05/2026",
+        "Libelle": "COM & TVA REMISE CHQ 85398",
+        "Debit": 0.833,
+        "Credit": null
+      },
+      {
+        "Solde": 13184.000,
+        "Date": "19/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 18/05/26 000325 0590032090",
+        "Debit": null,
+        "Credit": 13184.000
+      },
+      {
+        "Solde": 158.208,
+        "Date": "19/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 18/05/26 000325 0590032090",
+        "Debit": 158.208,
+        "Credit": null
+      },
+      {
+        "Solde": 2430.000,
+        "Date": "19/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 18/05/26 000331 0590032090",
+        "Debit": null,
+        "Credit": 2430.000
+      },
+      {
+        "Solde": 29.160,
+        "Date": "19/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 18/05/26 000331 0590032090",
+        "Debit": 29.160,
+        "Credit": null
+      },
+      {
+        "Solde": 600.000,
+        "Date": "18/05/2026",
+        "Libelle": "PAYEMENT EFFET 818 ECHEANCE : / N° EFFET : 011205887461",
+        "Debit": 600.000,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "18/05/2026",
+        "Libelle": "COM & TVA PAY. EFFET 818 DONT 0",
+        "Debit": 599.430,
+        "Credit": null
+      },
+      {
+        "Solde": 83.480,
+        "Date": "18/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 83480",
+        "Debit": null,
+        "Credit": 1954.260
+      },
+      {
+        "Solde": 80.000,
+        "Date": "18/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 15/05/26 000331 0590032090",
+        "Debit": null,
+        "Credit": 80.000
+      },
+      {
+        "Solde": 2.400,
+        "Date": "18/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 15/05/26 000331 0590032090",
+        "Debit": 2.400,
+        "Credit": null
+      },
+      {
+        "Solde": 83.480,
+        "Date": "15/05/2026",
+        "Libelle": "COM & TVA REMISE CHQ 83480",
+        "Debit": 0.833,
+        "Credit": null
+      },
+      {
+        "Solde": 3731.465,
+        "Date": "15/05/2026",
+        "Libelle": "PAYEMENT EFFET 810 ECHEANCE : / N° EFFET : 011205884939",
+        "Debit": 3731.465,
+        "Credit": null
+      },
+      {
+        "Solde": 0.570,
+        "Date": "15/05/2026",
+        "Libelle": "COM & TVA PAY. EFFET 810 DONT 0",
+        "Debit": 3730.895,
+        "Credit": null
+      },
+      {
+        "Solde": 1514.000,
+        "Date": "15/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 14/05/26 000326 0590032090",
+        "Debit": null,
+        "Credit": 1514.000
+      },
+      {
+        "Solde": 36.204,
+        "Date": "15/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 14/05/26 000326 0590032090",
+        "Debit": 36.204,
+        "Credit": null
+      },
+      {
+        "Solde": 682.000,
+        "Date": "14/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 13/05/26 000343 0590032090",
+        "Debit": null,
+        "Credit": 682.000
+      },
+      {
+        "Solde": 8.184,
+        "Date": "14/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 13/05/26 000343 0590032090",
+        "Debit": 8.184,
+        "Credit": null
+      },
+      {
+        "Solde": 81.150,
+        "Date": "13/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 81150",
+        "Debit": null,
+        "Credit": 495.000
+      },
+      {
+        "Solde": 1500.000,
+        "Date": "13/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 12/05/26 000321 0590032090",
+        "Debit": null,
+        "Credit": 1500.000
+      },
+      {
+        "Solde": 18.000,
+        "Date": "13/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 12/05/26 000321 0590032090",
+        "Debit": 18.000,
+        "Credit": null
+      },
+      {
+        "Solde": 81.150,
+        "Date": "12/05/2026",
+        "Libelle": "COM & TVA REMISE CHQ 81150",
+        "Debit": 0.833,
+        "Credit": null
+      },
+      {
+        "Solde": 4961.000,
+        "Date": "12/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 11/05/26 000324 0590032090",
+        "Debit": null,
+        "Credit": 4961.000
+      },
+      {
+        "Solde": 61.800,
+        "Date": "12/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 11/05/26 000324 0590032090",
+        "Debit": 61.800,
+        "Credit": null
+      },
+      {
+        "Solde": 2131.000,
+        "Date": "12/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 11/05/26 000331 0590032090",
+        "Debit": null,
+        "Credit": 2131.000
+      },
+      {
+        "Solde": 42.636,
+        "Date": "12/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 11/05/26 000331 0590032090",
+        "Debit": 42.636,
+        "Credit": null
+      },
+      {
+        "Solde": 78.553,
+        "Date": "11/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 78553",
+        "Debit": null,
+        "Credit": 1500.000
+      },
+      {
+        "Solde": 1066.000,
+        "Date": "11/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 08/05/26 000339 0590032090",
+        "Debit": null,
+        "Credit": 1066.000
+      },
+      {
+        "Solde": 12.792,
+        "Date": "11/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 08/05/26 000339 0590032090",
+        "Debit": 12.792,
+        "Credit": null
+      },
+      {
+        "Solde": 78.553,
+        "Date": "08/05/2026",
+        "Libelle": "COM & TVA REMISE CHQ 78553",
+        "Debit": 0.833,
+        "Credit": null
+      },
+      {
+        "Solde": 270.000,
+        "Date": "08/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 07/05/26 000343 0590032090",
+        "Debit": null,
+        "Credit": 270.000
+      },
+      {
+        "Solde": 3.240,
+        "Date": "08/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 07/05/26 000343 0590032090",
+        "Debit": 3.240,
+        "Credit": null
+      },
+      {
+        "Solde": 3483.600,
+        "Date": "07/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 06/05/26 000351 0590032090",
+        "Debit": null,
+        "Credit": 3483.600
+      },
+      {
+        "Solde": 51.408,
+        "Date": "07/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 06/05/26 000351 0590032090",
+        "Debit": 51.408,
+        "Credit": null
+      },
+      {
+        "Solde": 1000.000,
+        "Date": "07/05/2026",
+        "Libelle": "VIREMENT EMIS MM AG FAVEUR HARBEGUE SALAH / SALAIRE",
+        "Debit": 1000.000,
+        "Credit": null
+      },
+      {
+        "Solde": 75.190,
+        "Date": "06/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 75190",
+        "Debit": null,
+        "Credit": 837.540
+      },
+      {
+        "Solde": 2170.000,
+        "Date": "06/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 05/05/26 000319 0590032090",
+        "Debit": null,
+        "Credit": 2170.000
+      },
+      {
+        "Solde": 26.040,
+        "Date": "06/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 05/05/26 000319 0590032090",
+        "Debit": 26.040,
+        "Credit": null
+      },
+      {
+        "Solde": 75.190,
+        "Date": "05/05/2026",
+        "Libelle": "COM & TVA REMISE CHQ 75190",
+        "Debit": 0.833,
+        "Credit": null
+      },
+      {
+        "Solde": 220.000,
+        "Date": "05/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 04/05/26 000358 0590032090",
+        "Debit": null,
+        "Credit": 220.000
+      },
+      {
+        "Solde": 2.640,
+        "Date": "05/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 04/05/26 000358 0590032090",
+        "Debit": 2.640,
+        "Credit": null
+      },
+      {
+        "Solde": 1315.000,
+        "Date": "05/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 04/05/26 000339 0590032090",
+        "Debit": null,
+        "Credit": 1315.000
+      },
+      {
+        "Solde": 15.780,
+        "Date": "05/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 04/05/26 000339 0590032090",
+        "Debit": 15.780,
+        "Credit": null
+      },
+      {
+        "Solde": 3922.000,
+        "Date": "05/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 04/05/26 000237 0590032090",
+        "Debit": null,
+        "Credit": 3922.000
+      },
+      {
+        "Solde": 49.800,
+        "Date": "05/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 04/05/26 000237 0590032090",
+        "Debit": 49.800,
+        "Credit": null
+      },
+      {
+        "Solde": 72.654,
+        "Date": "04/05/2026",
+        "Libelle": "ENCAISS. REM. CHQ 72654",
+        "Debit": null,
+        "Credit": 3100.000
+      },
+      {
+        "Solde": 560.000,
+        "Date": "04/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 30/04/26 000344 0590032090",
+        "Debit": null,
+        "Credit": 560.000
+      },
+      {
+        "Solde": 6.720,
+        "Date": "04/05/2026",
+        "Libelle": "PAIEMENT REMISE DU 30/04/26 000344 0590032090",
+        "Debit": 6.720,
+        "Credit": null
+      }
+    ]
+  }
+}

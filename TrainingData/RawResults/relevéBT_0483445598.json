@@ -1,0 +1,146 @@
+{
+  "FileName": "relevéBT.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 1,
+  "OcrConfidence": 90,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "0483445598",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": 3297.740,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Date": "06/01/2026",
+        "Libelle": "AGIOS TENUE DE COMPTE D",
+        "Debit": 25.000,
+        "Credit": null
+      },
+      {
+        "Date": "06/01/2026",
+        "Libelle": "AGIOS TRM 12 2025 D",
+        "Debit": 12.562,
+        "Credit": null
+      },
+      {
+        "Date": "06/01/2026",
+        "Libelle": "AGIOS T.V.A D",
+        "Debit": 5.113,
+        "Credit": null
+      },
+      {
+        "Date": "07/01/2026",
+        "Libelle": "COMM D'ACCES BT NET D",
+        "Debit": 4.760,
+        "Credit": null
+      },
+      {
+        "Date": "13/01/2026",
+        "Libelle": "VERSEMENT ESPECES BV19473102 c",
+        "Debit": null,
+        "Credit": 700.000
+      },
+      {
+        "Date": "15/01/2026",
+        "Libelle": "REGLEMENT ACHAT PORTEUR BT ACH D",
+        "Debit": 5.700,
+        "Credit": null
+      },
+      {
+        "Date": "15/01/2026",
+        "Libelle": "VERSEMENT ESPECES BV19477902 c",
+        "Debit": null,
+        "Credit": 3000.000
+      },
+      {
+        "Date": "15/01/2026",
+        "Libelle": "REGLEMENT ACHAT PORTEUR BT ACH D",
+        "Debit": 5.700,
+        "Credit": null
+      },
+      {
+        "Date": "15/01/2026",
+        "Libelle": "PAYEMENT EFFET 150126 D",
+        "Debit": 2600.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/01/2026",
+        "Libelle": "PAYEMENT EFFET 150126COM D",
+        "Debit": 3.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/01/2026",
+        "Libelle": "PAYEMENT EFFET 150126TVA D",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "16/01/2026",
+        "Libelle": "PAYEMENT PRELEVEMENT M. FINANC D",
+        "Debit": 220.903,
+        "Credit": null
+      },
+      {
+        "Date": "16/01/2026",
+        "Libelle": "PAYEMENT PRELEVEMENT COMMISSIO D",
+        "Debit": 1.500,
+        "Credit": null
+      },
+      {
+        "Date": "16/01/2026",
+        "Libelle": "PAYEMENT PRELEVEMENT TVA D",
+        "Debit": 0.285,
+        "Credit": null
+      },
+      {
+        "Date": "26/01/2026",
+        "Libelle": "VIREMENT RECU AUT BQ c BOUKARI MANSOUR",
+        "Debit": null,
+        "Credit": 2000.000
+      },
+      {
+        "Date": "26/01/2026",
+        "Libelle": "COM & TVA VIR. RECU D",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Date": "28/01/2026",
+        "Libelle": "PAYEMENT PRELEVEMENT 1 D CALIFORNYA GYM Prelevement",
+        "Debit": 110.000,
+        "Credit": null
+      },
+      {
+        "Date": "28/01/2026",
+        "Libelle": "COM & TVAPAY.PRELE 1 D",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Date": "28/01/2026",
+        "Libelle": "COM & TVA REMISE CHQ 6486 D",
+        "Debit": 0.833,
+        "Credit": null
+      },
+      {
+        "Date": "29/01/2026",
+        "Libelle": "ENCAISS. REM. CHQ 6486 c",
+        "Debit": null,
+        "Credit": 727.971
+      },
+      {
+        "Date": "30/01/2026",
+        "Libelle": "ACHAT ORANGE TUNISIE D",
+        "Debit": 5.700,
+        "Credit": null
+      }
+    ]
+  }
+}

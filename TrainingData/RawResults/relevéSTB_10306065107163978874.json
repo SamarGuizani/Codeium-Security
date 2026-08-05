@@ -1,0 +1,34 @@
+{
+  "FileName": "relevéSTB.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 1,
+  "OcrConfidence": 87,
+  "NeedsReview": false,
+  "BankName": "Société Tunisienne de Banque (STB)",
+  "Account": {
+    "AccountNumber": "10306065107163978874",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Solde": null,
+        "Date": "12/03/2026",
+        "Libelle": "VIREMENT RECU SOCIETE KOTHRA EXP",
+        "Debit": null,
+        "Credit": 1000.000
+      },
+      {
+        "Solde": null,
+        "Date": "12/03/2026",
+        "Libelle": "COMMISSION VIREMENT RECUEN DINA 1 Us حالة في فرعكم إشعار الرجاء الجديد الرصيد Priére aviser votre agence en cas d'erreur 50106 à nouveau — -- _",
+        "Debit": 1.785,
+        "Credit": null
+      }
+    ]
+  }
+}

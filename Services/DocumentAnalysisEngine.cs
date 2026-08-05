@@ -15,6 +15,8 @@ namespace Codeium_Security.Services
     {
         public string Text { get; set; } = "";
         public int Left { get; set; }
+         
+        //public int Right { get; set; } // le 05 aout j'ai ajouter ceci 
     }
 
     public class TableRow
@@ -76,19 +78,21 @@ namespace Codeium_Security.Services
                 {
                     if (currentCell == null)
                     {
-                        currentCell = new TableCell { Text = word.Text, Left = word.Left };
+                        currentCell = new TableCell { Text = word.Text, Left = word.Left };//Right = word.Right 
                     }
                     else
                     {
                         var estimatedRight = currentCell.Left + currentCell.Text.Length * 8;
                         if (word.Left - estimatedRight < tolerance)
+                        //if( word.Left - currentCell.Right < tolerance)
                         {
                             currentCell.Text += " " + word.Text;
+                            //currentCell.Right = word.Right; //ajout de cette ligne le 5 aout 
                         }
                         else
                         {
                             row.Cells.Add(currentCell);
-                            currentCell = new TableCell { Text = word.Text, Left = word.Left };
+                            currentCell = new TableCell { Text = word.Text, Left = word.Left }; //Right = word.Right 
                         }
                     }
                 }
