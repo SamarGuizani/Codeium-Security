@@ -120,7 +120,9 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
             bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
-
+            // Document utilise des montants signes (QNB, Zitouna, BIAT-extrait...) :
+            // negatif = Debit, positif = Credit, strictement, partout dans ce document.
+            bool hasSignedAmounts = Regex.IsMatch(fullText, @"-\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             foreach (var row in rows)
             {
                 var cells = row.Cells.OrderBy(c => c.Left).ToList();
@@ -141,8 +143,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 {
                     Console.WriteLine($"[QNB-DEBUG] joined='{joined}' | current==null: {current == null}");
                     var qnbMatch = Regex.Match(joined,
-                        @"^(\d{2}/\d{2}/\d{4})\s+(.*?)\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})$",
-                        RegexOptions.IgnoreCase);
+                        @"^(\d{2}/\d{2}/\d{4})\s+(.*?)\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})$", RegexOptions.IgnoreCase);
                     if (qnbMatch.Success)
                     {
                         string date = qnbMatch.Groups[1].Value;
@@ -552,7 +553,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
                         AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde , out var soldeCourantTX);
                         ApplyMovementFallback(tx2, soldeAvant2, soldeCourantTX);
-                        if (isQnb) ApplyQnbSignRule(tx2);   // <-- AJOUTE CETTE LIGNE
+                        //if (isQnb) ApplyQnbSignRule(tx2);   // <-- AJOUTE CETTE LIGNE
                         current.Transactions.Add(tx2);
                         pendingDate = "";
                         biatInNoiseZone = false;
@@ -659,7 +660,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
                 AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, out  var soldeCourantTx);
                 ApplyMovementFallback(tx, soldeAvantTx, soldeCourantTx);
-                if (isQnb) ApplyQnbSignRule(tx);   // <-- AJOUTE CETTE LIGNE
+                //if (isQnb) ApplyQnbSignRule(tx);   // <-- AJOUTE CETTE LIGNE
                 current.Transactions.Add(tx);
                 biatInNoiseZone = false;
             }

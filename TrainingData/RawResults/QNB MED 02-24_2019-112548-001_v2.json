@@ -1,0 +1,248 @@
+{
+  "FileName": "QNB MED 02-24.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 89.25,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "2019-112548-001",
+    "Currency": "TND",
+    "Rib": "TN5923019111112548178875",
+    "SoldeInitial": -517.865,
+    "SoldeFinal": -644.005,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Date": "01/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009915053365 23019111112548178875 STEAFARBA MED ZORRAGE 23-CAG-41-21-0001-01022024-073000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Tax on Charges 009915053365",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "05/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009862743108 23019111112548178875 COPIGER mpohamed 23-CAG-41-21-0003-05022024-093000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "05/02/2024",
+        "Libelle": "Tax on Charges 009862743108",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "06/02/2024",
+        "Libelle": "Charges/Fees 0002777 000005 23019111112548178875 MAGHREBIA ASSURANCES Assurance Vie 23-CAG-20-21-0001-06022024-073000-7",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "06/02/2024",
+        "Libelle": "Tax on Charges 0002777",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "14/02/2024",
+        "Libelle": "Charges/Fees 0000480 000005 23019111112548178875 MAGHREBIA ASSURANCES Assurance Vie 23-CAG-20-21-0001-14022024-073000-7",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "14/02/2024",
+        "Libelle": "Tax on Charges 0000480 Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire عل la banque par écrit فصقل les 15 jours suivant la date d'émission. نج N 1 mars 2024 26 0 ل 3 Relevé bancaire MOHAMED ZARRAGA ZPA AGENCE BEN AROUS",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009831512697 23019111112548178875 SOCOFA GROS ZRAGGA PIECE 23-CAG-41-21-0001-15022024-073000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009831518129 23019111112548178875 SOCOFA GROS ZARRGA PIECES AUTO 23-CAG-41-21-0001-15022024-073000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009859073792 23019111112548178875 STE CPIA SARL moh zorraga 23-CAG-41-21-0001-15022024-073000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009862742914 23019111112548178875 COPIGER mohamed 23-CAG-41-21-0004-15022024-093000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009936763420 23019111112548178875 STE DE TOUT PIECES ALLEMANDE MED ZORAAGA ZPA 23-CAG-41-21-0003-15022024-085000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "Tax on Charges 009831512697",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "Tax on Charges 009831518129",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "Tax on Charges 009859073792",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "Tax on Charges 009862742914",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "15/02/2024",
+        "Libelle": "Tax on Charges 009936763420",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "16/02/2024",
+        "Libelle": "Charges/Fees 2301910077 LOYER TPE - 01/2024 POS 2301910077 23019111112548178875 2019-112548-001",
+        "Debit": 10.000,
+        "Credit": null
+      },
+      {
+        "Date": "16/02/2024",
+        "Libelle": "Charges/Fees 2301910085 LOYER TPE - 01/2024 POS 2301910085 23019111112548178875 2019-112548-001 Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire عل la banque par écrit فصقل les 15 jours suivant la date d'émission. نج N 1 mars 2024 26 0 ل 3 Relevé bancaire MOHAMED ZARRAGA ZPA AGENCE BEN AROUS",
+        "Debit": 10.000,
+        "Credit": null
+      },
+      {
+        "Date": "16/02/2024",
+        "Libelle": "Tax on Charges 2301910077 TVA LOYER TPE - 01/2024 POS 2301910077 23019111112548178875 2019-112548-001",
+        "Debit": 1.900,
+        "Credit": null
+      },
+      {
+        "Date": "16/02/2024",
+        "Libelle": "Tax on Charges 2301910085 TVA LOYER TPE - 4 POS 2301910085 23019111112548178875 2019-112548-001",
+        "Debit": 1.900,
+        "Credit": null
+      },
+      {
+        "Date": "26/02/2024",
+        "Libelle": "Charges/Fees 0003816 000005 23019111112548178875 MAGHREBIA ASSURANCES Assurance Vie 23-CAG-20-21-0003-26022024-085000-7",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "26/02/2024",
+        "Libelle": "Charges/Fees 0003817 000005 23019111112548178875 MAGHREBIA ASSURANCES Assurance Vie 23-CAG-20-21-0003-26022024-085000-7",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "26/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009862743011 23019111112548178875 COPIGER mohamed 23-CAG-41-21-0004-26022024-093000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "26/02/2024",
+        "Libelle": "Tax on Charges 0003816",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "26/02/2024",
+        "Libelle": "Tax on Charges 0003817",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "26/02/2024",
+        "Libelle": "Tax on Charges 009862743011",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "28/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009831512891 23019111112548178875 SOCOFA GROS zagga peice 23-CAG-41-21-0001-28022024-073000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "28/02/2024",
+        "Libelle": "Tax on Charges 009831512891",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "29/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009859718745 23019111112548178875 COMPTOIRE FOURNITURES AUTOMOBI MOHAMED Z 23-CAG-41-21-0005-29022024-100000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "29/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009862742817 23019111112548178875 COPIGER mohamed 23-CAG-41-21-0004-29022024-093000-7 Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire عل la banque par écrit فصقل les 15 jours suivant la date d'émission. % x*ons 1 mars 2024 Relevé z bancaire . MOHAMED ZARRAGA ZPA AGENCE BEN AROUS",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "29/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009907195104 23019111112548178875 SOCIETE COTUMAU MED ZORRAGA 23-CAG-41-21-0001-29022024-073000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "29/02/2024",
+        "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009936763323 23019111112548178875 STE DE TOUT PIECES ALLEMANDE MED ZORRAGA ZPA 23-CAG-41-21-0001-29022024-073000-7",
+        "Debit": 6.000,
+        "Credit": null
+      },
+      {
+        "Date": "29/02/2024",
+        "Libelle": "Tax on Charges 009859718745",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "29/02/2024",
+        "Libelle": "Tax on Charges 009862742817",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "29/02/2024",
+        "Libelle": "Tax on Charges 009907195104",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "29/02/2024",
+        "Libelle": "Tax on Charges 009936763323 Account (IBAN) Type de Compte Devise 2 ب 0 0 Current Account - Normal and (TN59 0294) TUNISIAN DINAR Local",
+        "Debit": 1.140,
+        "Credit": null
+      }
+    ]
+  }
+}

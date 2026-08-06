@@ -1,0 +1,350 @@
+{
+  "FileName": "bq bidah 02-2025ubci.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 3,
+  "OcrConfidence": 78.666664,
+  "NeedsReview": true,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "2503605157682068",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Date": "05/02/2025",
+        "Libelle": "ا LEASE 2503605157682068 PDL : STE BIDAH RENT À CAR HANNIBAL LEASE 04/02/2025 900ZRSP2503600A8",
+        "Debit": 3.06,
+        "Credit": null
+      },
+      {
+        "Date": "05/02/2025",
+        "Libelle": "2503605137682068 À HANNIBALLEASE TVA : STE BIDAH RENT CAR 04/02/2025 900ZRSP2503600A9",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Date": "05/02/2025",
+        "Libelle": "Deonoos137682068 635 COMMISSION SUR PRELEVEMENT : STE BIDAH RENT A CAR 04/02/2025 900ZRSP2503600BA HANNIBAL LEASE 2503605137682059 PDL : STE BIDAH RENT A CAR HANNIBAL LEASE 04/02/2025 900ZRSP2503600BB",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "05/02/2025",
+        "Libelle": "2503605137682059 TVA : STE BIDAH RENT À CAR HANNIBAL LEASE 04/02/2025 900ZRSP2503600BC",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Date": "05/02/2025",
+        "Libelle": "e tnoos137682059 COMMISSION SUR PRELEVEMENT : STE BIDAH RENT A CAR 04/02/2025 900ZRSP2503600DD",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "05/02/2025",
+        "Libelle": "HANNIBAL LEASE 2503605137682076 PDL : STE BIDAH RENT A CAR HANNIBAL LEASE 04/02/2025 900ZRSP2503600DE",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "05/02/2025",
+        "Libelle": "2503605137682076 TVA : STE BIDAH RENT A CAR HANNIBAL LEASE 04/02/2025 900ZRSP2503600DF",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Date": "05/02/2025",
+        "Libelle": "2503605137682076 ESPÈCE ESPECES 0552503800380308 1010212025 2503807581320000",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "07/02/2025",
+        "Libelle": "V 7 MENT : ESPÈCE T ESPECES 0552503800380345 1010212025 2503807561840000",
+        "Debit": null,
+        "Credit": 500.000
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "MENT V : \"٠ ESPÈCE T ESPECES 0552504100391578 110212025 2504107527390000 T : ESPECE MENT ESPECES 0552504100388881 1110212025 2504110442830000 ESPÈCE NT ESPECES 0552504100391517 1110212025 2504110526530000",
+        "Debit": null,
+        "Credit": 3800.000
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "T : حب PRELEVEMENT RECU : SOCIETE BIDAH RENT A CAR D7/02/2025 b S COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2504104138318065 COMMISSION SUR PRELEVEMENT : SOCIETE BIDAH RENT A CAR 07/02/2025 B00ZEXAZ5031 0185",
+        "Debit": 2060.476,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "2504104138318065 COMPAGNIE INTERNATIONALE DE LEASING (CIL) : COMPAGNIE TVA SOCIETE BIDAH RENT A CAR 07/02/2026 SOCZEXA2509101B6",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "INTERNATIONALE DE LEASING (CIL) 2504104138318065 : MPAGNIE PDL SOCIETE BIDAH RENT À C OTIOA/2025 se",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "INTERNATIONALE DE LEASING (cn_) 2504104138318065 : VIR 0710212025 900ZEXA2504101X0",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "PDL 2504105138379251 MME BEN MEDDEB NOURA 0753 VIREMENT DOMESTIQUE RECU : 2504105136379251 MME BEN MEDDEB 11/02/2025 900ZEXA2504101X0 VIR NOURA : VIR 07/02/2025 900ZEXA2504101X0",
+        "Debit": null,
+        "Credit": 350.000
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "TVA 2504105138379251 MME BEN MEDDEB NOURA 3588",
+        "Debit": 1.500,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "MEDDEB NOURA VIR PDL : SOCIETE BIDAH RENT A CAR COMPAGNIE 07/02/2025 S00ZEXAZHOHIOME 2504104138318052 INTERNATIONALE DE LEASING (CIL) PRELEVEMENT RECU : SOCIETE BIDAH RENT A CAR 07/02/2025 900ZEXA2504104HR A COMMISSION SUR PRELEVEMENT SOCIETE BIDAH RENT CAR 07/02/2025 Bp0zEXEZS0H1 OIR",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": ": 2504104138318052 COMPAGNIE INTERNATIONALE DE LEASING (CIL) TVA : SOCIÈTE BIDAH RENT À CAR COMPAGNIE Or/02/2025 SOOZEXA2SOMICAHR",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "INTERNATIONALE DE LEASING (CIL) 2504104138318052 PRELEVEMENT RECU : SOCIETE BIDAH RENT À CAR D7/02/2025 BO0ZEXAZE0HIDAHY",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2504104138318066 : COMPAGNIE PDL SOCIETE BIDAH RENT A CAR 07/02/2025 SDOZEXAZSOSIOIHY\"",
+        "Debit": 4105.856,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "INTERNATIONALE DE LEASING (CIL) 2504 104138318066 : OMPAGNIE TVA SOCIETE BIDAH RENT A CAR 2504104138316086 Q7/02/2025 BO0ZEXAZHO4AHY INTERNATIONALE DE LEASING (CIL) -. Tunis-Belvadére -18: 81100 000 au Unique N° 0002707P SWIFT عة.نا TNTT - UBCI B.P N° 771 - 1080 Tunis Cedex TUNISIE - www.ubcitn R. N. E Identifiant - JBCI ور L قلت CONMENCE EF CNDUSTME للتجسارة البنكي الإهاد ns 6 ا اا SE o",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "07/02/2025 SOOZEXAZR0AIOAIC domi2025 O7/02/2028 HORTES SEME COMPAGNIE INTERNATIONALE DE LEASING ÎC)ÎLÎÊÊM1D41",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "900ZEXA25041041C S SR ST e e s vs - COMMISSION SUR PRELEVEMENT ey ناو 10/02/",
+        "Debit": 2809.353,
+        "Credit": null
+      },
+      {
+        "Date": "10/02/2025",
+        "Libelle": "-1010212025 900ZRSP2504200EQ",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Date": "11/02/2025",
+        "Libelle": "10/02/2025 900ZRSP2504200ER TVAIPRL SPECIAL EOHEANCEDL 1002/ ARAB INTERNATIONAL 122025 ds 10/02/2025 900ZRSP2504200ET 1210212025 7 ESPÈCE T ESPECES : 0552504300413040 1310212025 2504310491860000 1310212025 PDL : 2504304467143000 SALAIRE ds 12/02/2025 900ZEXA2504400FB",
+        "Debit": null,
+        "Credit": 4000.000
+      },
+      {
+        "Date": "13/02/2025",
+        "Libelle": "TVA : 2504304467143000 SALAIRE 900ZEXA2504400FB",
+        "Debit": 0.475,
+        "Credit": null
+      },
+      {
+        "Date": "13/02/2025",
+        "Libelle": "VIREMENT DOMESTIQUE EMIS : 2504304467143000 SALAIRE sh 06 12/02/2025 900ZEXA2504400FB 5600 COMMISSION SUR VIREMENT DOMESTIQUE : 2504304467143000 SALAIRE 12/02/2025 900ZEXA2504400FB 7 ESPÈCE 7 ESPECES : 0 00445549 18/02/2025 2504807410970000 VERSEMENT ESPÈCE VERSEMENT ESPECES : 0552504800450582 18/02/2025 2504808565110000 SEMENT ESPÈCE VERSEMENT ESPECES : 0552504800445533 18/02/2025 ان 25048094 10340000 p ا ا E حا لان لح بحا ل TR ARAB Œ;ÈOÏSÏCLÊPÊÊÛËËÜESÂS‘Î = = وات 9 ARAB",
+        "Debit": null,
+        "Credit": 4440.000
+      },
+      {
+        "Date": "14/02/2025",
+        "Libelle": "900ZEXA25048062T RSAG INTERNATIONAL LS DD EME ال",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Date": "17/02/2025",
+        "Libelle": "44 0212026( تا تت اس MRE CHERNEE 102202 DO 1 1798 ARAB 175 875 1410212025 900ZEXA2504806HI نا AN ME سن e ARAB",
+        "Debit": 7621.001,
+        "Credit": null
+      },
+      {
+        "Date": "17/02/7025",
+        "Libelle": "900ZEXA2504806H1",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "18/02/2025",
+        "Libelle": "PDL : 2504905138052038 FEDERATION NATIDE AR TISANAT E AUTRES 1710212025 900ZEXA25049001M 38052038 01760 500 COVMISSION SUR VIREMENT DOMESTIQUE : 2504305 FEDERATION و مس جوت",
+        "Debit": 1.285,
+        "Credit": null
+      },
+      {
+        "Date": "18/02/2025",
+        "Libelle": "TVA : 2504905138052038 FEDERATION NATIDE AR TISANAT E AUTRES 17/02/2025 900ZEXA2504900JM YREMENT DOMESTIQUE RECU : Z504905138052038 FEDERATION NATIDE AR و oo 1910212025 PV VIREMENT DOMESTIQUE 227 RECU : 2505004136617 EUCALIPTUS DE BOVAUX mn COMMISSION SUR VIREMENT DOMESTIQUE 05004138617227 EUCALIPTUS 1910212025 18/02/2025 900ZEXA2505001 1/ A :2605004138617227 EUCALIPTUS DE BOVAUX SALES ET PAYMENT pre— 022025 0205 PRI PDL. 26056004T38617227 EUCALIPTUS DE BOYAUX SALES ET PAYMENT 022025 0750 51022025 ا ا",
+        "Debit": null,
+        "Credit": 100.000
+      },
+      {
+        "Date": "20/02/2025",
+        "Libelle": "7 ESPÈCE T ESPECES : 0552505100479240 21/02/2025 2505108492160000",
+        "Debit": null,
+        "Credit": 2.06
+      },
+      {
+        "Date": "20/02/2025",
+        "Libelle": "VERSEMENT ESPECE VERSEMENT ESPECES : 0552505100479255 21/02/2025 2505108493900000 oA REPRESENTATION PP2361163 BRABINTERNATIONAL",
+        "Debit": null,
+        "Credit": 5000.000
+      },
+      {
+        "Date": "20/02/2025",
+        "Libelle": "19/02/2025 900ZEXA250510515 88 لا ديات سوا RR FOLIREFRESENTATION PR2361163 ARAB INTERNATIONAL تلطا 5750 19/02/2025 900ZEXA2505105J5 TVA: HANNIBAL LEASE 2505102137686031 1910212025 900ZEXA2505105J6 RELE/EMENT RECU: HANNIBALEEASE",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "21/02/2025",
+        "Libelle": "o 19/02/2025 900ZEXA2505105J6 PDL: HANNIBAL LEASE 2505102137686031 19/02/2025 000ZEXA2505105J6 0750 COMMISEION S RE e ! € HANNIBAL. 2022025 28 19/02/2025 900ZEXA2505105J6 PDL 0750 0/02/20 — COMMISSION SUR EFFET 220 0/02/20 055EF 1 81100 000 البلقيدير تونس 1002 139 : للنجارة R.N. E Identifiant Unique N° 0002707P - SWIFT: UB.C.I TNTT - UBCI B.P N° 771 - 1080 Tunis Cedex TUNISIE - www.ubcitn 080 معت وود واد اللتجارة Date 1 Date valeur Ref Banque",
+        "Debit": 2723.941,
+        "Credit": null
+      },
+      {
+        "Date": "21/02/2025",
+        "Libelle": "TVA p 20/02/2025 055EF18250520001  PRELEVEMENT RECU : REGLE DE LA DECLARATION: 4373536 MINISTERE DES FINANCES 2505203137778085 20/02/2025",
+        "Debit": 414.183,
+        "Credit": null
+      },
+      {
+        "Date": "21/02/2025",
+        "Libelle": ": REGLE DE LA DECLARATION: 4373536 MINISTERE DES FINANCES 5 Î _ 0750 20/02/2025  COMMISSION SUR PRELEVEMENT : REGLE DE LA DECLARATION: 4373536 MINISTERE DES FINANCES 2505203137778085  20/02/2025 TVA 2000 S00ZEXA250520060 : RÈGLE DE LA DECLARATION: 4373536 MINISTÈRE DES Î 900ZEXA25052036D",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "24/02/2025",
+        "Libelle": "VERSEMENT ESPÈCE VERSEMENT ESPECES 0552505500508605 :  02/20",
+        "Debit": null,
+        "Credit": 4500.06
+      },
+      {
+        "Date": "24/02/2025",
+        "Libelle": "24/02/2025 NT ESPECE VER T ESPECES T . : : 8",
+        "Debit": null,
+        "Credit": 4000.000
+      },
+      {
+        "Date": "24/02/2025",
+        "Libelle": "24/02/2025 VERSEMENT ESPÈCE VE T : ا F ESPECES ( 1",
+        "Debit": null,
+        "Credit": 2000.000
+      },
+      {
+        "Date": "25/02/2025",
+        "Libelle": "ERSEMENT ESPÈCE VER T ESPECES 0552505600514967 ’ : 2610212025 إ 2505609378840001 ١ JENT ESPÈCE T ESPECES : 20518033 2505609453260000",
+        "Debit": null,
+        "Credit": 0.000
+      },
+      {
+        "Date": "22/02/2025",
+        "Libelle": "VERSEMENT ESPECE AMER YOUSFI CIN VERSEMENT مت _| ESPÈCES: 3022505600518749 6102720",
+        "Debit": null,
+        "Credit": 22022.025
+      },
+      {
+        "Date": "25/02/2025",
+        "Libelle": "VERSEMENT ESPÈCE VERSEMENT ESPECES 05525056005 : 14986 26/02/2025 p 2505610379400000 VERSEMENT ESPECE VERSEMENT ESPECES 0552505600515012 -A : 26/02/2025 TVA SOCIETE BIDAH RENT CAR s50506 COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851062 2410272025 RECU : SOCIETE BIDAH RENT À CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851062 2410212025 : BIDAH RENT À CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851062 24/02/2025 1 SUR PRELEVEMENT : SOCIETE BIDAH RENT A CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851062 24022025 25022025 ;  : BIDAH RENT À CAR COMPAGNIE 1048 NTERNATIONALE DE LEASING (CIL) 250560513785 24102/2025 1 [ 28/02/2028 RECU : SOCIETE BIDAH RENT A CAR COMPAGNIE INTERNATIONALE DE LEASING",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "25/02/2025",
+        "Libelle": "25/02/2025 PDL : SOCIETE BIDAH RENT À CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851045 20212025",
+        "Debit": 0.750,
+        "Credit": null
+      },
+      {
+        "Date": "26/02/2025",
+        "Libelle": "COMMISSION SUR PRELEVEMENT : SOCIETE BIDAH RENT CAR",
+        "Debit": 260860512705.045,
+        "Credit": null
+      },
+      {
+        "Date": "25/02/2025",
+        "Libelle": "PRELEVEMENT RECU : SOCIETE BIDAH RENT CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851038 2o2r2026 (200ZEXA2505E07L8",
+        "Debit": 260860487683.020,
+        "Credit": null
+      },
+      {
+        "Date": "25/02/2025",
+        "Libelle": ": BIDAH RENT À CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851038 24/02/2028 2502/2025  : SOCIETE BIDAH RENT À CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851038 2410212025",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Date": "25/02/2025",
+        "Libelle": "SUR PRELEVEMENT : SOCIETE BIDAH RENT CAR COMPAGNIE INTERNATIONALE DE LEASING (CIL) 2505605137851038 24/02/2025",
+        "Debit": null,
+        "Credit": null
+      },
+      {
+        "Date": "27/02/2025",
+        "Libelle": "TVA",
+        "Debit": 0.646,
+        "Credit": null
+      },
+      {
+        "Date": "27/02/2025",
+        "Libelle": "EFFET RECU : RECEPTION EFFET NORMALISE N[010426526993] A.576175 26/02/2025 055EF 18250580002",
+        "Debit": null,
+        "Credit": 27021.379
+      },
+      {
+        "Date": "27/02/2025",
+        "Libelle": "PDL 0750 26/02/2025 055EF 18250580002 COMMISSION SUR EFFET 3400 26/02/2025 055EF18250580002 VER 7 ESPÈCE VER T ESPECES : ( 20543800 28/02/2025",
+        "Debit": null,
+        "Credit": 1600.000
+      },
+      {
+        "Date": "28/02/2025",
+        "Libelle": "ABONNEMENT MOBIBANK } 3,0 27/02/2025 055MB02250590038 TVA",
+        "Debit": 0.638,
+        "Credit": null
+      },
+      {
+        "Date": "27/02/2025",
+        "Libelle": "TARIFICATION PACK 27/02/2025",
+        "Debit": 19.501,
+        "Credit": null
+      },
+      {
+        "Date": "28/02/2025",
+        "Libelle": "VERSEMENT ESPÈCE VERSEMENT ESPECES 0552505900556566 : 03/03/2025 SOLDE DE CLOTURE f (*) Cette opération est provisoire et en attente عل validation. التاكيد انتظار في موقتة العملية هذه و (*) 81100 000 الهاتف: . البلفيدير -راس البسص شركة للتجارة البنكي الإتحاد é Dinars Siège Social: 13 9, Avenue de  à Liberté - 1002 Tunis-Beivédère R.N.E Identifiant Unique N° 781: 81100 006 0002707P - SWIFT: U.B.C/ TNTT -UBCIBP N°771- 1080 Tunis Cedex TUNISIE - www.ubcitn",
+        "Debit": null,
+        "Credit": 0.000
+      }
+    ]
+  }
+}

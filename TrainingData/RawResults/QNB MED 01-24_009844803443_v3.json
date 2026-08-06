@@ -1,0 +1,19 @@
+{
+  "FileName": "QNB MED 01-24.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 89.25,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "009844803443",
+    "Currency": "TND",
+    "Rib": "TN5923019111112548178875",
+    "SoldeInitial": 69.395,
+    "SoldeFinal": 69.395,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": []
+  }
+}

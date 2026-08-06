@@ -1,0 +1,686 @@
+{
+  "FileName": "biat 11-2023.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 88.5,
+  "NeedsReview": true,
+  "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
+  "Account": {
+    "AccountNumber": "",
+    "Currency": "TND",
+    "Rib": "",
+    "SoldeInitial": 1667.523,
+    "SoldeFinal": 28400.837,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Date": "01/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0833313",
+        "Debit": 1.190,
+        "Credit": null
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0833313",
+        "Debit": 1800.000,
+        "Credit": null
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000208",
+        "Debit": 131.849,
+        "Credit": null
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "REDRESSEMENT s0311023",
+        "Debit": 5.000,
+        "Credit": null
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "REDRESSEMENT s0311023",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.165,
+        "Credit": null
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "COM ET TVA/VIR AUT BQ",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "VIREMENT TN AUTRE BQ",
+        "Debit": null,
+        "Credit": 1025.937
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 1052612",
+        "Debit": null,
+        "Credit": 1129.050
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 1293166",
+        "Debit": null,
+        "Credit": 659.665
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 1052612",
+        "Debit": 2.678,
+        "Credit": null
+      },
+      {
+        "Date": "01/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 1293166",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Date": "02/11/2023",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 2222.698
+      },
+      {
+        "Date": "03/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000207",
+        "Debit": 415.723,
+        "Credit": null
+      },
+      {
+        "Date": "03/11/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.578,
+        "Credit": null
+      },
+      {
+        "Date": "03/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0471184",
+        "Debit": null,
+        "Credit": 3429.951
+      },
+      {
+        "Date": "03/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0471184",
+        "Debit": 4.463,
+        "Credit": null
+      },
+      {
+        "Date": "06/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0833306",
+        "Debit": 8000.000,
+        "Credit": null
+      },
+      {
+        "Date": "06/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 1858302",
+        "Debit": null,
+        "Credit": 15335.942
+      },
+      {
+        "Date": "06/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 1858303",
+        "Debit": null,
+        "Credit": 2505.442
+      },
+      {
+        "Date": "06/11/2023",
+        "Libelle": "CHEQUE PREAVISE 0001515",
+        "Debit": 15335.942,
+        "Credit": null
+      },
+      {
+        "Date": "06/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 1858302",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Date": "06/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 1858303",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Date": "07/11/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 6.513,
+        "Credit": null
+      },
+      {
+        "Date": "08/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0704659",
+        "Debit": 48000.000,
+        "Credit": null
+      },
+      {
+        "Date": "08/11/2023",
+        "Libelle": "COM ET TVA/VIR AUT BQ",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Date": "08/11/2023",
+        "Libelle": "VIREMENT TN AUTRE BQ",
+        "Debit": null,
+        "Credit": 518.650
+      },
+      {
+        "Date": "09/11/2023",
+        "Libelle": "REDRESSEMENT s0081123",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Date": "09/11/2023",
+        "Libelle": "REDRESSEMENT s0081123",
+        "Debit": 8.000,
+        "Credit": null
+      },
+      {
+        "Date": "09/11/2023",
+        "Libelle": "COM ET TVA/VIR AUT BQ",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Date": "09/11/2023",
+        "Libelle": "VIREMENT TN AUTRE BQ",
+        "Debit": null,
+        "Credit": 855.113
+      },
+      {
+        "Date": "10/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000218",
+        "Debit": 519.426,
+        "Credit": null
+      },
+      {
+        "Date": "10/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 2509552",
+        "Debit": null,
+        "Credit": 48000.000
+      },
+      {
+        "Date": "10/11/2023",
+        "Libelle": "ANNUL CHQ PREAVISE 0001515",
+        "Debit": null,
+        "Credit": 15335.942
+      },
+      {
+        "Date": "10/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 2509552",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 1367.586
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 5067.810
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000181",
+        "Debit": 1300.000,
+        "Credit": null
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000185",
+        "Debit": 1422.476,
+        "Credit": null
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000224",
+        "Debit": 919.000,
+        "Credit": null
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 2509553",
+        "Debit": null,
+        "Credit": 14591.559
+      },
+      {
+        "Date": "13/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 2509553",
+        "Debit": 3.570,
+        "Credit": null
+      },
+      {
+        "Date": "14/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000214",
+        "Debit": 868.140,
+        "Credit": null
+      },
+      {
+        "Date": "14/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000222",
+        "Debit": 1100.000,
+        "Credit": null
+      },
+      {
+        "Date": "14/11/2023",
+        "Libelle": "VERSEMENT ESPECES",
+        "Debit": null,
+        "Credit": 300.000
+      },
+      {
+        "Date": "14/11/2023",
+        "Libelle": "COM ET TVA/VIR AUT BQ",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Date": "14/11/2023",
+        "Libelle": "VIREMENT TN AUTRE BQ",
+        "Debit": null,
+        "Credit": 11222.393
+      },
+      {
+        "Date": "14/11/2023",
+        "Libelle": "COM ET TVA/VIR AUT BQ",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Date": "14/11/2023",
+        "Libelle": "VIREMENT TN AUTRE BQ",
+        "Debit": null,
+        "Credit": 346.100
+      },
+      {
+        "Date": "14/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 2509554",
+        "Debit": null,
+        "Credit": 5940.400
+      },
+      {
+        "Date": "14/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 2509554",
+        "Debit": 7.140,
+        "Credit": null
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0704663",
+        "Debit": 39000.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0704665",
+        "Debit": 10000.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 863.750
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "PAIEMENT EFFET",
+        "Debit": 4.165,
+        "Credit": null
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "PAIEMENT EFFET",
+        "Debit": 10000.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000220",
+        "Debit": 1000.000,
+        "Credit": null
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 2854846",
+        "Debit": null,
+        "Credit": 1128.973
+      },
+      {
+        "Date": "15/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 2854846",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000202",
+        "Debit": 2500.000,
+        "Credit": null
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "REDRESSEMENT s0151123",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "REDRESSEMENT s0151123",
+        "Debit": 8.000,
+        "Credit": null
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 1858306",
+        "Debit": null,
+        "Credit": 12071.350
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 1858307",
+        "Debit": null,
+        "Credit": 1212.850
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 2493220",
+        "Debit": null,
+        "Credit": 5139.088
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "CHEQUE PREAVISE 4543772",
+        "Debit": 3996.728,
+        "Credit": null
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 1858306",
+        "Debit": 7.140,
+        "Credit": null
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 1858307",
+        "Debit": 3.570,
+        "Credit": null
+      },
+      {
+        "Date": "16/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 2493220",
+        "Debit": 1.785,
+        "Credit": null
+      },
+      {
+        "Date": "17/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0471187",
+        "Debit": null,
+        "Credit": 9655.419
+      },
+      {
+        "Date": "17/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0471188",
+        "Debit": null,
+        "Credit": 1259.961
+      },
+      {
+        "Date": "17/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 2509555",
+        "Debit": null,
+        "Credit": 1034.839
+      },
+      {
+        "Date": "17/11/2023",
+        "Libelle": "CHEQUE IMPAYE 1351911",
+        "Debit": 342.639,
+        "Credit": null
+      },
+      {
+        "Date": "17/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0471187",
+        "Debit": 6.248,
+        "Credit": null
+      },
+      {
+        "Date": "17/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0471188",
+        "Debit": 5.355,
+        "Credit": null
+      },
+      {
+        "Date": "17/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 2509555",
+        "Debit": 2.678,
+        "Credit": null
+      },
+      {
+        "Date": "20/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000215",
+        "Debit": 900.000,
+        "Credit": null
+      },
+      {
+        "Date": "21/11/2023",
+        "Libelle": "REGLEMENT CHEQUE 0000217",
+        "Debit": 1333.452,
+        "Credit": null
+      },
+      {
+        "Date": "22/11/2023",
+        "Libelle": "COMMISSION REM EFFETS 1816862",
+        "Debit": 1.045,
+        "Credit": null
+      },
+      {
+        "Date": "22/11/2023",
+        "Libelle": "COMMISSION REM EFFETS 1816862",
+        "Debit": 5.500,
+        "Credit": null
+      },
+      {
+        "Date": "22/11/2023",
+        "Libelle": "COMMISSION REM EFFETS 1816863",
+        "Debit": 2.090,
+        "Credit": null
+      },
+      {
+        "Date": "22/11/2023",
+        "Libelle": "COMMISSION REM EFFETS 1816863",
+        "Debit": 11.000,
+        "Credit": null
+      },
+      {
+        "Date": "22/11/2023",
+        "Libelle": "COM TVA/CHQ IMPAYE 4543772",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "22/11/2023",
+        "Libelle": "COM TVA/CHQ IMPAYE 4543772",
+        "Debit": 4.000,
+        "Credit": null
+      },
+      {
+        "Date": "22/11/2023",
+        "Libelle": "CHEQUE IMPAYE 4543772",
+        "Debit": 3996.728,
+        "Credit": null
+      },
+      {
+        "Date": "22/11/2023",
+        "Libelle": "CHEQUE IMPAYE 4543772",
+        "Debit": null,
+        "Credit": 3996.728
+      },
+      {
+        "Date": "23/11/2023",
+        "Libelle": "ACHAT TPE A L ETRANGE",
+        "Debit": 4.165,
+        "Credit": null
+      },
+      {
+        "Date": "24/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ 0704656",
+        "Debit": 5800.000,
+        "Credit": null
+      },
+      {
+        "Date": "24/11/2023",
+        "Libelle": "VIRE Q902 0000123",
+        "Debit": 4.329,
+        "Credit": null
+      },
+      {
+        "Date": "24/11/2023",
+        "Libelle": "ENCAISSEMENT CHEQUE 0471192",
+        "Debit": null,
+        "Credit": 342.639
+      },
+      {
+        "Date": "24/11/2023",
+        "Libelle": "COM TVA/REM CHQ ENC 0471192",
+        "Debit": 0.893,
+        "Credit": null
+      },
+      {
+        "Date": "27/11/2023",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 14737.779
+      },
+      {
+        "Date": "27/11/2023",
+        "Libelle": "ENCAISSEMENT EFFETTN",
+        "Debit": null,
+        "Credit": 5761.877
+      },
+      {
+        "Date": "28/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "28/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": 2.000,
+        "Credit": null
+      },
+      {
+        "Date": "28/11/2023",
+        "Libelle": "VIREMENT TN MEME BQ",
+        "Debit": null,
+        "Credit": 2027.322
+      },
+      {
+        "Date": "28/11/2023",
+        "Libelle": "27112023 COM ET TVA/VIR AUT BQ",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Date": "28/11/2023",
+        "Libelle": "VIREMENT TN AUTRE BQ",
+        "Debit": null,
+        "Credit": 1709.245
+      },
+      {
+        "Date": "29/11/2023",
+        "Libelle": "PRELEVEMENT BANCAIRE",
+        "Debit": 2.975,
+        "Credit": null
+      },
+      {
+        "Date": "29/11/2023",
+        "Libelle": "PRELEVEMENT BANCAIRE",
+        "Debit": 2800.182,
+        "Credit": null
+      },
+      {
+        "Date": "29/11/2023",
+        "Libelle": "VIR ORD CARTE PREPAYE",
+        "Debit": 1.190,
+        "Credit": null
+      },
+      {
+        "Date": "29/11/2023",
+        "Libelle": "VIR ORD CARTE PREPAYE",
+        "Debit": 350.000,
+        "Credit": null
+      },
+      {
+        "Date": "30/11/2023",
+        "Libelle": "REGLEMENT CHEQUE =— 0000205",
+        "Debit": 891.459,
+        "Credit": null
+      },
+      {
+        "Date": "30/11/2023",
+        "Libelle": "BQ A DISTANCE BIATNET",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "30/11/2023",
+        "Libelle": "BQ A DISTANCE BIATNET",
+        "Debit": 3.000,
+        "Credit": null
+      }
+    ]
+  }
+}

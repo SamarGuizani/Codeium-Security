@@ -1,0 +1,44 @@
+{
+  "FileName": "WhatsApp Image 2026-08-05 at 2.57.39 PM.jpeg",
+  "DetectedType": "Bank",
+  "PageCount": 1,
+  "OcrConfidence": 82,
+  "NeedsReview": true,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "",
+    "Currency": "",
+    "Rib": "",
+    "SoldeInitial": null,
+    "SoldeFinal": null,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Date": "23/06/2026",
+        "Libelle": "",
+        "Debit": 1.52,
+        "Credit": null
+      },
+      {
+        "Date": "26/06/2026",
+        "Libelle": "",
+        "Debit": null,
+        "Credit": 3000.000
+      },
+      {
+        "Date": "29/06/2026",
+        "Libelle": "",
+        "Debit": null,
+        "Credit": 1000.000
+      },
+      {
+        "Date": "26/06/2026",
+        "Libelle": "Tel Agence: 31372073 / 10242073 يفرعكم منكم الكشف. هذا محتوى على موافقتكم عدم أقماة صورة أدل في عي = B التفضل és الرجاء Ain‘:\"àlﬂ من يوما عشرون بالسجل ا م 342 420 اي P £ 1 - سد ce",
+        "Debit": 1.190,
+        "Credit": null
+      }
+    ]
+  }
+}

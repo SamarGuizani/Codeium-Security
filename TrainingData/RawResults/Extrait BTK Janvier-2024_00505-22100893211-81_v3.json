@@ -1,0 +1,1850 @@
+{
+  "FileName": "Extrait BTK Janvier-2024.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 8,
+  "OcrConfidence": 87.375,
+  "NeedsReview": false,
+  "BankName": "Banque Tuniso-Koweitienne (BTK)",
+  "Account": {
+    "AccountNumber": "00505-22100893211-81",
+    "Currency": "TND",
+    "Rib": "TN5920005052210089321181",
+    "SoldeInitial": 0,
+    "SoldeFinal": 825.493,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Date": "02/01/2024",
+        "Libelle": "PRELV. LOYER TPE GPR",
+        "Debit": 53.550,
+        "Credit": null
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 309547",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 634691",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 931303",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 753572",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 337247 سس sur TPE 2005050535 N 9",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 634",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 931",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "سات sur TPE 2005050535 N 753",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 7",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "04/01/2024",
+        "Libelle": "",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 990909",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 478472",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 129464",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 200439",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 934902",
+        "Debit": null,
+        "Credit": 45.000
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 318272",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 118313",
+        "Debit": null,
+        "Credit": 100.000
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "Trs TPE 2005050535 N R5L2W7 117 sur TPE 2005050535 N R5L",
+        "Debit": null,
+        "Credit": 120.000
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 478",
+        "Debit": 2.280,
+        "Credit": null
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 0",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "ساي sur TPE 2005050535 N 129",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 200",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "gg;\"m sur TPE 2005050535 N 934",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "سا sur TPE 2005050535 N 318",
+        "Debit": 0.855,
+        "Credit": null
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "ïg“m sur TPE 2005050535 N 118",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "05/01/2024",
+        "Libelle": "",
+        "Debit": 1.900,
+        "Credit": null
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 200710",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 511437",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 768736",
+        "Debit": null,
+        "Credit": 25.000
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 429644",
+        "Debit": null,
+        "Credit": 80.000
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 958306 سس sur TPE 2005050535 N 511",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 958",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "الا sur TPE 2005050535 N 768",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "227 sur TPE 2005050535 N 429",
+        "Debit": 0.475,
+        "Credit": null
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "بسلا sur TPE 2005050535 N 200",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "08/01/2024",
+        "Libelle": "SERVICE BTKDOC BUSINESS",
+        "Debit": 17.850,
+        "Credit": null
+      },
+      {
+        "Date": "09/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 987388 ggg‘m sur TPE 2005050535 N 987",
+        "Debit": null,
+        "Credit": 110.000
+      },
+      {
+        "Date": "09/01/2024",
+        "Libelle": "",
+        "Debit": 2.090,
+        "Credit": null
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 264727",
+        "Debit": null,
+        "Credit": 100.000
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 302898",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 356767",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 594862 1004019",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 953306 1034019",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 433065 اا sur TPE 2005050535 N 264",
+        "Debit": null,
+        "Credit": 80.000
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "سا sur TPE 2005050535 N 302",
+        "Debit": 1.900,
+        "Credit": null
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "8 sur TPE 2005050535 لا 6",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 4",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 953",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 433",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "10/01/2024",
+        "Libelle": "",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 287017",
+        "Debit": null,
+        "Credit": 100.000
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 986955",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 778347",
+        "Debit": null,
+        "Credit": 25.000
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 464116",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 788339",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 512608 g‘l’;\"m sur TPE 2005050535 N 287",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 986",
+        "Debit": 1.900,
+        "Credit": null
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 778",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "سلا sur TPE 2005050535 N 464",
+        "Debit": 0.475,
+        "Credit": null
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "ggg‘m sur TPE 2005050535 N 788",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "ggg‘m sur TPE 2005050535 N 512",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "11/01/2024",
+        "Libelle": "",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "18/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 082689 ggg‘m sur TPE 2005050535 N 082",
+        "Debit": null,
+        "Credit": 80.000
+      },
+      {
+        "Date": "18/01/2024",
+        "Libelle": "جارد DEPLACE",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Date": "18/01/2024",
+        "Libelle": "",
+        "Debit": 1300.000,
+        "Credit": null
+      },
+      {
+        "Date": "18/01/2024",
+        "Libelle": "COM&TVA RETRAIT DEPL 220682",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 025269",
+        "Debit": null,
+        "Credit": 150.000
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 501248",
+        "Debit": null,
+        "Credit": 15.000
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 476926",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 129800",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 076722 سي sur TPE 2005050535 N 025",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "COMM sur TPE 2005050535 N 501",
+        "Debit": 2.850,
+        "Credit": null
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "248 7 sur TPE 2005050535 N 476",
+        "Debit": 0.285,
+        "Credit": null
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 129",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "سا sur TPE 2005050535 N 076",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "19/01/2024",
+        "Libelle": "",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "[Trs TPE 2005050535 N R3H0Q8",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "Trs TPE 2005050535 N W1S4E8",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 237040",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 355851",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 607752 سيج sur TPE 2005050535 N R3H",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "ست sur TPE 2005050535 N 5",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 7",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "سي sur TPE 2005050535 لا 5",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "لاد sur TPE 2005050535 N 7",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "22/01/2024",
+        "Libelle": "",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 669500",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 502384",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N S2P4K1",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 463867",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 488079",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 082347",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 755352",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 200631",
+        "Debit": null,
+        "Credit": 22.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 668894",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 654319",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 642165",
+        "Debit": null,
+        "Credit": 34.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 007420",
+        "Debit": null,
+        "Credit": 35.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 648348",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 400801",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 335359",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N D5M2T8",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 008578",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 502697",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 646485",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N E3U5B3",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N RICAU1",
+        "Debit": null,
+        "Credit": 63.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 228828",
+        "Debit": null,
+        "Credit": 110.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 022511",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 085563",
+        "Debit": null,
+        "Credit": 150.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 699358",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 692255",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 330853",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 614744 COMM sur TPE 2005050535 N S2P",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "4K1 سي sur TPE 2005050535 N 9",
+        "Debit": 0.190,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 755",
+        "Debit": 0.190,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "ggg“m sur TPE 2005050535 N 0",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "ساي sur TPE 2005050535 N 614",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "ساي sur TPE 2005050535 N 502",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 9",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 463",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 488",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 082",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Ëng sur TPE 2005050535 N 200",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "اساي sur TPE 2005050535 N 668",
+        "Debit": 0.418,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سلا sur TPE 2005050535 N 654",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 2",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 007",
+        "Debit": 0.646,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 648",
+        "Debit": 0.665,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 400",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سي sur TPE 2005050535 لا 5",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سات sur TPE 2005050535 N 4",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "ggg‘m sur TPE 2005050535 N 008",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "gg;“m sur TPE 2005050535 N 2",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سئي sur TPE 2005050535 N E3U",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 646",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N R1C",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 085",
+        "Debit": 1.197,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 228",
+        "Debit": 2.850,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 2",
+        "Debit": 2.090,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سيلا sur TPE 2005050535 N 022",
+        "Debit": 0.190,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "",
+        "Debit": 0.190,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 920256",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 304014",
+        "Debit": null,
+        "Credit": 125.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 975553 اي sur TPE 2005050535 N 975",
+        "Debit": null,
+        "Credit": 193.000
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 920",
+        "Debit": 7.238,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "سلا sur TPE 2005050535 N 304",
+        "Debit": 1.875,
+        "Credit": null
+      },
+      {
+        "Date": "23/01/2024",
+        "Libelle": "",
+        "Debit": 4.688,
+        "Credit": null
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 590231",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 666680",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 138250",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 756293",
+        "Debit": null,
+        "Credit": 38.000
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 302244",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 281898 ggg‘m sur TPE 2005050535 N 666",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 0",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "COMM sur TPE 2005050535 N 138",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "250 سس sur TPE 2005050535 N 756",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 302",
+        "Debit": 0.722,
+        "Credit": null
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "سا sur TPE 2005050535 N 281",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "24/01/2024",
+        "Libelle": "",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "25/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 992236",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "25/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 680339",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "25/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 221117",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "25/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 687502 سي sur TPE 2005050535 N 992",
+        "Debit": null,
+        "Credit": 100.000
+      },
+      {
+        "Date": "25/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 687",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "25/01/2024",
+        "Libelle": "ÎÎ;“\"‘ sur TPE 2005050535 N 221",
+        "Debit": 1.900,
+        "Credit": null
+      },
+      {
+        "Date": "25/01/2024",
+        "Libelle": "ggg‘m sur TPE 2005050535 N 0",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "25/01/2024",
+        "Libelle": "",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 097399",
+        "Debit": null,
+        "Credit": 133.400
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 258453",
+        "Debit": null,
+        "Credit": 7.000
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 303203",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 699709 سس sur TPE 2005050535 N 8",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "بس sur TPE 2005050535 N 9",
+        "Debit": 0.133,
+        "Credit": null
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 303",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 097",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "جارد DEPLACE",
+        "Debit": 2.535,
+        "Credit": null
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "",
+        "Debit": 2400.000,
+        "Credit": null
+      },
+      {
+        "Date": "26/01/2024",
+        "Libelle": "COM&TVA RETRAIT DEPL 221212",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 895022",
+        "Debit": null,
+        "Credit": 90.000
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 982107",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 918266",
+        "Debit": null,
+        "Credit": 27.000
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 140949",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 356726",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 207389",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 755017 g‘l’;\"m sur TPE 2005050535 N 755",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "سج sur TPE 2005050535 N 207",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "اا sur TPE 2005050535 لا 6",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 140",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 918",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "Îg;“m sur TPE 2005050535 N 982",
+        "Debit": 0.513,
+        "Credit": null
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 895",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "29/01/2024",
+        "Libelle": "",
+        "Debit": 1.710,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 200078",
+        "Debit": null,
+        "Credit": 6.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 822319",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 672538",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 792217",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 152111",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 866450",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 909054",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 007843",
+        "Debit": null,
+        "Credit": 80.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 460508",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 886998",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 164349",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 875733",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 233315",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 302619",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 092234",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 083339",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 879539",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 707848",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 042112",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 463128",
+        "Debit": null,
+        "Credit": 56.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 375009",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 215880",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N N3E5N7",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 200351 7 sur TPE 2005050535 N 007",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 707",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "ÎÏÊW sur TPE 2005050535 N 2",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Îgg‘m sur TPE 2005050535 N 463",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 5",
+        "Debit": 1.064,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 5",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "17 sur TPE 2005050535 N N3E",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "اا sur TPE 2005050535 N 879",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "ggg‘m sur TPE 2005050535 N 083",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "ساي sur TPE 2005050535 N 092",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سلا sur TPE 2005050535 N 302",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سسا sur TPE 2005050535 N 233",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سا sur TPE 2005050535 N 875",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 164",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "ggg‘m sur TPE 2005050535 N 886",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سا sur TPE 2005050535 N 460",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سي sur TPE 2005050535 N 200",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "لالت sur TPE 2005050535 N 9",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 866",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "ÎÏT\"‘ sur TPE 2005050535 N 152",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 792",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سا sur TPE 2005050535 N 2",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "سلا sur TPE 2005050535 N 822",
+        "Debit": 0.190,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 200",
+        "Debit": 0.190,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "",
+        "Debit": 0.114,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 221419",
+        "Debit": null,
+        "Credit": 90.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "Trs TPE 2005050535 N ON4CT3 ساي sur TPE 2005050535 N 221",
+        "Debit": null,
+        "Credit": 7.000
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "الت sur TPE 2005050535 N 4",
+        "Debit": 3.375,
+        "Credit": null
+      },
+      {
+        "Date": "30/01/2024",
+        "Libelle": "",
+        "Debit": 0.263,
+        "Credit": null
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 063293",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 280783",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 702321",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 328524",
+        "Debit": null,
+        "Credit": 80.000
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 905819",
+        "Debit": null,
+        "Credit": 115.000
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 200146",
+        "Debit": null,
+        "Credit": 130.000
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "Trs TPE 2005050535 N 622190 سس sur TPE 2005050535 N 063",
+        "Debit": null,
+        "Credit": 155.000
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "اا sur TPE 2005050535 N 280",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "gg;“m sur TPE 2005050535 N 702",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "gng sur TPE 2005050535 N 328",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "سس sur TPE 2005050535 N 200",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "7 sur TPE 2005050535 N 5",
+        "Debit": 2.470,
+        "Credit": null
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "سا sur TPE 2005050535 N 622",
+        "Debit": 2.185,
+        "Credit": null
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "",
+        "Debit": 2.945,
+        "Credit": null
+      },
+      {
+        "Date": "31/01/2024",
+        "Libelle": "PRELV. LOYER TPE GPR",
+        "Debit": 53.550,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 340406",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 111088",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 366288",
+        "Debit": null,
+        "Credit": 22.200
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 200031",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 431537",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 118234",
+        "Debit": null,
+        "Credit": 10.000
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 336641",
+        "Debit": null,
+        "Credit": 80.000
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 496761",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 764277 سا sur TPE 2005050535 N 366",
+        "Debit": null,
+        "Credit": 42.000
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "gng sur TPE 2005050535 N 200",
+        "Debit": 0.422,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "سي sur TPE 2005050535 N 340",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "سس sur TPE 2005050535 N 6",
+        "Debit": 0.190,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "سي sur TPE 2005050535 N 496",
+        "Debit": 1.520,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "سي sur TPE 2005050535 N 764",
+        "Debit": 1.140,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "gg;“m sur TPE 2005050535 N 431",
+        "Debit": 0.798,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "سل sur TPE 2005050535 N 111",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "ساي sur TPE 2005050535 N 118",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "جارد DEPLACE",
+        "Debit": 0.190,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "",
+        "Debit": 1900.000,
+        "Credit": null
+      },
+      {
+        "Date": "01/02/2024",
+        "Libelle": "COM&TVA RETRAIT DEPL 92695",
+        "Debit": 2.380,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 326576",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 470529",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 944522",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 356032",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N N6L4T1",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 472390",
+        "Debit": null,
+        "Credit": 30.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 477109",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N K2Z6R7",
+        "Debit": null,
+        "Credit": 40.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 147922",
+        "Debit": null,
+        "Credit": 50.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 996894",
+        "Debit": null,
+        "Credit": 60.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 525214",
+        "Debit": null,
+        "Credit": 100.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "Trs TPE 2005050535 N 371975 سس sur TPE 2005050535 N 472",
+        "Debit": null,
+        "Credit": 20.000
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "يات sur TPE 2005050535 N 326",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "7 sur TPE 2005050535 N 371",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "ggg‘m sur TPE 2005050535 N 470",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "سا sur TPE 2005050535 N 944",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "7 sur TPE 2005050535 لا 6",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "سلا sur TPE 2005050535 N 5",
+        "Debit": 0.380,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "سا sur TPE 2005050535 N N6L",
+        "Debit": 1.900,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "سس sur TPE 2005050535 N )2",
+        "Debit": 0.570,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "بسي sur TPE 2005050535 N 477",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "7 sur TPE 2005050535 لا 7",
+        "Debit": 0.760,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "اساي sur TPE 2005050535 N 996",
+        "Debit": 0.950,
+        "Credit": null
+      },
+      {
+        "Date": "02/02/2024",
+        "Libelle": "",
+        "Debit": 1.140,
+        "Credit": null
+      }
+    ]
+  }
+}

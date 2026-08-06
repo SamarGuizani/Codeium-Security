@@ -1,0 +1,4716 @@
+{
+  "FileName": "Biat-scanner.pdf",
+  "DetectedType": "Receipt",
+  "PageCount": 1,
+  "OcrConfidence": 77,
+  "NeedsReview": true,
+  "RawOcrText": null,
+  "Document": {
+    "StoreName": "",
+    "Date": null,
+    "Total": 190120263.370,
+    "Currency": ""
+  },
+  "DebugLines": [
+    "Directeur 16 15 15 15 15 15 14 14 14 14 14 14 14 13 13 12 12 09",
+    "0 لسسع",
+    "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01",
+    "7+",
+    "ع VERSEMENT REDRESSEMENT REDRESSEMEN VIREMENT VIREMENT VERSEMENT [ANN ANN VIREMENT VIREMENT VIREMENT VIREMENT VERSEMENT REDRESSEMENT REDRESSEMENT VERSEMENT VERSEMENT",
+    "و PAIEMENT PAIEMENT",
+    "DI",
+    "Agence DINAR",
+    "د — VIREMENT VIREMENT",
+    "00D",
+    "طقلا p TUNISIEN TONIS",
+    "à تلكس. TN TN TN TN TN TN EFFET EFFET",
+    ": ESPECES ESPECES ESPECES ESPECES ESPECES",
+    "حبس «",
+    "Mr MEME MEME AUTRE AUTRE AUTRE AUTRE",
+    "AUTRE AUTRE",
+    "يحم",
+    ";",
+    "لم HICHEM",
+    ". BQ BQ",
+    "رجو 3 BQ BQ BQ BQ",
+    "BQ BQ",
+    "سمح",
+    "02331128 s0140126 s0140126 43111017 03330032 03330032 00612032 00612032 78740289 s0120126 80120126 80124876 80124876 01846547 02269442 08869890 61008320 03588540 00819507 14304143",
+    "مجيد فا ل ESSADDEM 0889228 0889228 0612032 0612032 0612142 0612142 0096922 0096922 06612135 0612135 0096937",
+    ";",
+    "جر",
+    "كفا",
+    "٠٠",
+    "مكوجة بورقيية",
+    "           ",
+    "الحبيب 19012026 14012026 14012026 15012026 15012026 16012026 13012026 13012026 13012026 13012026 13012026 13012026 1501202€ 12012026 12012026 09012026 09012026 12012026 09012026 08012026 09012026 06012026 06012026 06012026 08012026 07012026 حسناد",
+    "02012026 31122025",
+    "اا .",
+    "قيولا",
+    "12026 12026",
+    "لكم",
+    "026 2013 07 STE",
+    "وتتمنى",
+    "دفتزلا. AV",
+    "4 UNIVERS",
+    "BEN RELEVE",
+    "في DE",
+    "بحسايكم",
+    "AROUS PARIS",
+    "3.000,000 1.345,687 1.307,000 1.194,000 1.927,000 2.000,000 1.200,000 1.600,000 المسجلة",
+    "790,000 PARA DE",
+    "0,950 5,000 1,190 2 0,950 5,000 4,165 1,190 1,190 2,618 لتعمليات",
+    "CON",
+    "BEN",
+    "المفصل",
+    "الكشف AROUS,",
+    "أسقله",
+    "لكو",
+    "3.370,000 1.250,000 1.300,000 1.000,000 1.748, 2.260,000 4.112,",
+    "تقدم :",
+    ") 800,000 300,000 الكويم",
+    "بآن",
+    "2,618 تتشرف حريلنا",
+    "- 0 6"
+  ],
+  "Words": [
+    {
+      "Text": "RELEVE",
+      "Confidence": 92.20924,
+      "Left": 1647,
+      "Top": 1415,
+      "Right": 1662,
+      "Bottom": 1508
+    },
+    {
+      "Text": "DE",
+      "Confidence": 96.066086,
+      "Left": 1647,
+      "Top": 1520,
+      "Right": 1661,
+      "Bottom": 1549
+    },
+    {
+      "Text": "CON",
+      "Confidence": 70.61706,
+      "Left": 1647,
+      "Top": 1561,
+      "Right": 1661,
+      "Bottom": 1610
+    },
+    {
+      "Text": "STE",
+      "Confidence": 92.54597,
+      "Left": 1428,
+      "Top": 1330,
+      "Right": 1444,
+      "Bottom": 1373
+    },
+    {
+      "Text": "UNIVERS",
+      "Confidence": 91.630196,
+      "Left": 1430,
+      "Top": 1395,
+      "Right": 1446,
+      "Bottom": 1501
+    },
+    {
+      "Text": "PARA",
+      "Confidence": 91.46014,
+      "Left": 1431,
+      "Top": 1524,
+      "Right": 1447,
+      "Bottom": 1583
+    },
+    {
+      "Text": "07",
+      "Confidence": 95.90754,
+      "Left": 1403,
+      "Top": 1331,
+      "Right": 1420,
+      "Bottom": 1357
+    },
+    {
+      "Text": "AV",
+      "Confidence": 92.00069,
+      "Left": 1405,
+      "Top": 1377,
+      "Right": 1421,
+      "Bottom": 1406
+    },
+    {
+      "Text": "DE",
+      "Confidence": 92.725006,
+      "Left": 1406,
+      "Top": 1427,
+      "Right": 1421,
+      "Bottom": 1454
+    },
+    {
+      "Text": "PARIS",
+      "Confidence": 90.76445,
+      "Left": 1407,
+      "Top": 1476,
+      "Right": 1422,
+      "Bottom": 1551
+    },
+    {
+      "Text": "BEN",
+      "Confidence": 85.99488,
+      "Left": 1406,
+      "Top": 1588,
+      "Right": 1422,
+      "Bottom": 1631
+    },
+    {
+      "Text": "AROUS,",
+      "Confidence": 90.3799,
+      "Left": 1404,
+      "Top": 1650,
+      "Right": 1422,
+      "Bottom": 1740
+    },
+    {
+      "Text": "2013",
+      "Confidence": 93.30378,
+      "Left": 1354,
+      "Top": 1329,
+      "Right": 1372,
+      "Bottom": 1388
+    },
+    {
+      "Text": "BEN",
+      "Confidence": 91.96267,
+      "Left": 1357,
+      "Top": 1411,
+      "Right": 1372,
+      "Bottom": 1454
+    },
+    {
+      "Text": "AROUS",
+      "Confidence": 90.86064,
+      "Left": 1357,
+      "Top": 1474,
+      "Right": 1373,
+      "Bottom": 1550
+    },
+    {
+      "Text": "حريلنا",
+      "Confidence": 57.27118,
+      "Left": 1283,
+      "Top": 1818,
+      "Right": 1313,
+      "Bottom": 1860
+    },
+    {
+      "Text": "الكويم",
+      "Confidence": 85.7483,
+      "Left": 1283,
+      "Top": 1777,
+      "Right": 1313,
+      "Bottom": 1813
+    },
+    {
+      "Text": ":",
+      "Confidence": 89.31311,
+      "Left": 1296,
+      "Top": 1768,
+      "Right": 1298,
+      "Bottom": 1770
+    },
+    {
+      "Text": "تتشرف",
+      "Confidence": 82.17264,
+      "Left": 1254,
+      "Top": 1818,
+      "Right": 1288,
+      "Bottom": 1851
+    },
+    {
+      "Text": "بآن",
+      "Confidence": 67.16301,
+      "Left": 1254,
+      "Top": 1790,
+      "Right": 1288,
+      "Bottom": 1810
+    },
+    {
+      "Text": "تقدم",
+      "Confidence": 92.155525,
+      "Left": 1254,
+      "Top": 1758,
+      "Right": 1288,
+      "Bottom": 1784
+    },
+    {
+      "Text": "لكو",
+      "Confidence": 85.17317,
+      "Left": 1254,
+      "Top": 1730,
+      "Right": 1288,
+      "Bottom": 1750
+    },
+    {
+      "Text": "أسقله",
+      "Confidence": 13.774872,
+      "Left": 1254,
+      "Top": 1692,
+      "Right": 1288,
+      "Bottom": 1725
+    },
+    {
+      "Text": "الكشف",
+      "Confidence": 83.98794,
+      "Left": 1254,
+      "Top": 1652,
+      "Right": 1288,
+      "Bottom": 1687
+    },
+    {
+      "Text": "المفصل",
+      "Confidence": 91.29772,
+      "Left": 1254,
+      "Top": 1603,
+      "Right": 1288,
+      "Bottom": 1646
+    },
+    {
+      "Text": "لتعمليات",
+      "Confidence": 85.94618,
+      "Left": 1254,
+      "Top": 1548,
+      "Right": 1288,
+      "Bottom": 1597
+    },
+    {
+      "Text": "المسجلة",
+      "Confidence": 74.755005,
+      "Left": 1254,
+      "Top": 1497,
+      "Right": 1288,
+      "Bottom": 1542
+    },
+    {
+      "Text": "بحسايكم",
+      "Confidence": 81.73438,
+      "Left": 1254,
+      "Top": 1441,
+      "Right": 1288,
+      "Bottom": 1489
+    },
+    {
+      "Text": "في",
+      "Confidence": 75.33217,
+      "Left": 1254,
+      "Top": 1424,
+      "Right": 1288,
+      "Bottom": 1436
+    },
+    {
+      "Text": "دفتزلا.",
+      "Confidence": 17.201698,
+      "Left": 1254,
+      "Top": 1384,
+      "Right": 1288,
+      "Bottom": 1418
+    },
+    {
+      "Text": "وتتمنى",
+      "Confidence": 76.837845,
+      "Left": 1254,
+      "Top": 1344,
+      "Right": 1288,
+      "Bottom": 1379
+    },
+    {
+      "Text": "لكم",
+      "Confidence": 92.81119,
+      "Left": 1254,
+      "Top": 1314,
+      "Right": 1288,
+      "Bottom": 1336
+    },
+    {
+      "Text": "قيولا",
+      "Confidence": 87.86904,
+      "Left": 1254,
+      "Top": 1278,
+      "Right": 1288,
+      "Bottom": 1308
+    },
+    {
+      "Text": "حسناد",
+      "Confidence": 19.300568,
+      "Left": 1254,
+      "Top": 1240,
+      "Right": 1288,
+      "Bottom": 1272
+    },
+    {
+      "Text": "4.112,",
+      "Confidence": 87.348526,
+      "Left": 1160,
+      "Top": 1748,
+      "Right": 1179,
+      "Bottom": 1888
+    },
+    {
+      "Text": "6",
+      "Confidence": 66.728386,
+      "Left": 1154,
+      "Top": 1870,
+      "Right": 1183,
+      "Bottom": 1891
+    },
+    {
+      "Text": "14304143",
+      "Confidence": 93.30057,
+      "Left": 1107,
+      "Top": 1089,
+      "Right": 1122,
+      "Bottom": 1211
+    },
+    {
+      "Text": "31122025",
+      "Confidence": 83.007996,
+      "Left": 1108,
+      "Top": 1249,
+      "Right": 1125,
+      "Bottom": 1370
+    },
+    {
+      "Text": "1.600,000",
+      "Confidence": 91.28839,
+      "Left": 1109,
+      "Top": 1490,
+      "Right": 1126,
+      "Bottom": 1628
+    },
+    {
+      "Text": "0096937",
+      "Confidence": 95.08466,
+      "Left": 1083,
+      "Top": 1106,
+      "Right": 1098,
+      "Bottom": 1210
+    },
+    {
+      "Text": "02012026",
+      "Confidence": 91.09151,
+      "Left": 1084,
+      "Top": 1249,
+      "Right": 1100,
+      "Bottom": 1371
+    },
+    {
+      "Text": "1.200,000",
+      "Confidence": 91.961136,
+      "Left": 1085,
+      "Top": 1490,
+      "Right": 1102,
+      "Bottom": 1628
+    },
+    {
+      "Text": "00819507",
+      "Confidence": 95.96559,
+      "Left": 1058,
+      "Top": 1089,
+      "Right": 1074,
+      "Bottom": 1210
+    },
+    {
+      "Text": "",
+      "Confidence": 0,
+      "Left": 1050,
+      "Top": 1229,
+      "Right": 1082,
+      "Bottom": 1243
+    },
+    {
+      "Text": "07012026",
+      "Confidence": 0,
+      "Left": 1059,
+      "Top": 1248,
+      "Right": 1076,
+      "Bottom": 1371
+    },
+    {
+      "Text": "2.260,000",
+      "Confidence": 91.99346,
+      "Left": 1062,
+      "Top": 1747,
+      "Right": 1080,
+      "Bottom": 1887
+    },
+    {
+      "Text": "03588540",
+      "Confidence": 95.302795,
+      "Left": 1035,
+      "Top": 1089,
+      "Right": 1050,
+      "Bottom": 1210
+    },
+    {
+      "Text": "08012026",
+      "Confidence": 16.461678,
+      "Left": 1035,
+      "Top": 1248,
+      "Right": 1051,
+      "Bottom": 1371
+    },
+    {
+      "Text": "1.748,",
+      "Confidence": 90.32086,
+      "Left": 1037,
+      "Top": 1748,
+      "Right": 1056,
+      "Bottom": 1887
+    },
+    {
+      "Text": "0",
+      "Confidence": 86.13976,
+      "Left": 1030,
+      "Top": 1869,
+      "Right": 1063,
+      "Bottom": 1891
+    },
+    {
+      "Text": "61008320",
+      "Confidence": 95.56523,
+      "Left": 1010,
+      "Top": 1090,
+      "Right": 1025,
+      "Bottom": 1210
+    },
+    {
+      "Text": "06012026",
+      "Confidence": 91.3255,
+      "Left": 1011,
+      "Top": 1248,
+      "Right": 1026,
+      "Bottom": 1371
+    },
+    {
+      "Text": "2.000,000",
+      "Confidence": 90.856735,
+      "Left": 1011,
+      "Top": 1489,
+      "Right": 1029,
+      "Bottom": 1628
+    },
+    {
+      "Text": "0612135",
+      "Confidence": 95.61079,
+      "Left": 986,
+      "Top": 1106,
+      "Right": 1001,
+      "Bottom": 1210
+    },
+    {
+      "Text": "",
+      "Confidence": 18.668861,
+      "Left": 977,
+      "Top": 1231,
+      "Right": 1010,
+      "Bottom": 1243
+    },
+    {
+      "Text": "06012026",
+      "Confidence": 18.668861,
+      "Left": 987,
+      "Top": 1248,
+      "Right": 1002,
+      "Bottom": 1371
+    },
+    {
+      "Text": "2,618",
+      "Confidence": 95.02939,
+      "Left": 986,
+      "Top": 1554,
+      "Right": 1004,
+      "Bottom": 1627
+    },
+    {
+      "Text": "06612135",
+      "Confidence": 58.92845,
+      "Left": 962,
+      "Top": 1106,
+      "Right": 976,
+      "Bottom": 1210
+    },
+    {
+      "Text": "",
+      "Confidence": 0,
+      "Left": 953,
+      "Top": 1230,
+      "Right": 985,
+      "Bottom": 1244
+    },
+    {
+      "Text": "06012026",
+      "Confidence": 0,
+      "Left": 963,
+      "Top": 1248,
+      "Right": 977,
+      "Bottom": 1370
+    },
+    {
+      "Text": "1.927,000",
+      "Confidence": 90.48057,
+      "Left": 962,
+      "Top": 1490,
+      "Right": 980,
+      "Bottom": 1628
+    },
+    {
+      "Text": "08869890",
+      "Confidence": 92.99224,
+      "Left": 937,
+      "Top": 1089,
+      "Right": 952,
+      "Bottom": 1210
+    },
+    {
+      "Text": "",
+      "Confidence": 0,
+      "Left": 928,
+      "Top": 1229,
+      "Right": 960,
+      "Bottom": 1243
+    },
+    {
+      "Text": "09012026",
+      "Confidence": 0,
+      "Left": 938,
+      "Top": 1248,
+      "Right": 952,
+      "Bottom": 1369
+    },
+    {
+      "Text": "0096922",
+      "Confidence": 95.85878,
+      "Left": 913,
+      "Top": 1106,
+      "Right": 928,
+      "Bottom": 1209
+    },
+    {
+      "Text": "",
+      "Confidence": 6.949074,
+      "Left": 904,
+      "Top": 1230,
+      "Right": 936,
+      "Bottom": 1244
+    },
+    {
+      "Text": "08012026",
+      "Confidence": 6.949074,
+      "Left": 914,
+      "Top": 1248,
+      "Right": 928,
+      "Bottom": 1368
+    },
+    {
+      "Text": "1,190",
+      "Confidence": 95.76288,
+      "Left": 913,
+      "Top": 1556,
+      "Right": 931,
+      "Bottom": 1628
+    },
+    {
+      "Text": "0096922",
+      "Confidence": 96.127914,
+      "Left": 888,
+      "Top": 1105,
+      "Right": 903,
+      "Bottom": 1209
+    },
+    {
+      "Text": "12026",
+      "Confidence": 96.62742,
+      "Left": 890,
+      "Top": 1299,
+      "Right": 904,
+      "Bottom": 1368
+    },
+    {
+      "Text": "1.194,000",
+      "Confidence": 89.98444,
+      "Left": 888,
+      "Top": 1490,
+      "Right": 906,
+      "Bottom": 1628
+    },
+    {
+      "Text": "0612142",
+      "Confidence": 96.10742,
+      "Left": 864,
+      "Top": 1105,
+      "Right": 879,
+      "Bottom": 1208
+    },
+    {
+      "Text": "12026",
+      "Confidence": 95.14292,
+      "Left": 866,
+      "Top": 1298,
+      "Right": 880,
+      "Bottom": 1368
+    },
+    {
+      "Text": "1,190",
+      "Confidence": 94.76151,
+      "Left": 864,
+      "Top": 1555,
+      "Right": 882,
+      "Bottom": 1627
+    },
+    {
+      "Text": "0612142",
+      "Confidence": 96.04633,
+      "Left": 839,
+      "Top": 1105,
+      "Right": 855,
+      "Bottom": 1209
+    },
+    {
+      "Text": "026",
+      "Confidence": 93.953445,
+      "Left": 842,
+      "Top": 1328,
+      "Right": 855,
+      "Bottom": 1368
+    },
+    {
+      "Text": "1.307,000",
+      "Confidence": 92.06801,
+      "Left": 839,
+      "Top": 1490,
+      "Right": 857,
+      "Bottom": 1627
+    },
+    {
+      "Text": "VERSEMENT",
+      "Confidence": 91.21343,
+      "Left": 813,
+      "Top": 734,
+      "Right": 828,
+      "Bottom": 874
+    },
+    {
+      "Text": "ESPECES",
+      "Confidence": 92.198265,
+      "Left": 813,
+      "Top": 895,
+      "Right": 829,
+      "Bottom": 1002
+    },
+    {
+      "Text": "02269442",
+      "Confidence": 93.297386,
+      "Left": 816,
+      "Top": 1089,
+      "Right": 831,
+      "Bottom": 1208
+    },
+    {
+      "Text": "09012026",
+      "Confidence": 87.9325,
+      "Left": 817,
+      "Top": 1248,
+      "Right": 831,
+      "Bottom": 1368
+    },
+    {
+      "Text": "1.000,000",
+      "Confidence": 91.57741,
+      "Left": 816,
+      "Top": 1747,
+      "Right": 834,
+      "Bottom": 1886
+    },
+    {
+      "Text": "09",
+      "Confidence": 95.1203,
+      "Left": 787,
+      "Top": 624,
+      "Right": 804,
+      "Bottom": 651
+    },
+    {
+      "Text": "01",
+      "Confidence": 93.04103,
+      "Left": 788,
+      "Top": 673,
+      "Right": 803,
+      "Bottom": 698
+    },
+    {
+      "Text": "VERSEMENT",
+      "Confidence": 88.6223,
+      "Left": 788,
+      "Top": 734,
+      "Right": 804,
+      "Bottom": 874
+    },
+    {
+      "Text": "ESPECES",
+      "Confidence": 91.395485,
+      "Left": 789,
+      "Top": 895,
+      "Right": 804,
+      "Bottom": 1002
+    },
+    {
+      "Text": "01846547",
+      "Confidence": 94.72827,
+      "Left": 792,
+      "Top": 1089,
+      "Right": 807,
+      "Bottom": 1209
+    },
+    {
+      "Text": "",
+      "Confidence": 22.632408,
+      "Left": 783,
+      "Top": 1228,
+      "Right": 816,
+      "Bottom": 1242
+    },
+    {
+      "Text": "12012026",
+      "Confidence": 22.632408,
+      "Left": 793,
+      "Top": 1248,
+      "Right": 807,
+      "Bottom": 1368
+    },
+    {
+      "Text": "1.300,000",
+      "Confidence": 90.44002,
+      "Left": 792,
+      "Top": 1747,
+      "Right": 809,
+      "Bottom": 1886
+    },
+    {
+      "Text": "12",
+      "Confidence": 96.8039,
+      "Left": 763,
+      "Top": 624,
+      "Right": 779,
+      "Bottom": 650
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.48881,
+      "Left": 763,
+      "Top": 673,
+      "Right": 779,
+      "Bottom": 696
+    },
+    {
+      "Text": "PAIEMENT",
+      "Confidence": 85.48823,
+      "Left": 763,
+      "Top": 735,
+      "Right": 779,
+      "Bottom": 858
+    },
+    {
+      "Text": "EFFET",
+      "Confidence": 91.880356,
+      "Left": 764,
+      "Top": 879,
+      "Right": 779,
+      "Bottom": 954
+    },
+    {
+      "Text": "80124876",
+      "Confidence": 93.28319,
+      "Left": 766,
+      "Top": 1088,
+      "Right": 783,
+      "Bottom": 1209
+    },
+    {
+      "Text": "09012026",
+      "Confidence": 74.496765,
+      "Left": 768,
+      "Top": 1247,
+      "Right": 783,
+      "Bottom": 1368
+    },
+    {
+      "Text": "4,165",
+      "Confidence": 96.07313,
+      "Left": 766,
+      "Top": 1554,
+      "Right": 783,
+      "Bottom": 1627
+    },
+    {
+      "Text": "12",
+      "Confidence": 95.45534,
+      "Left": 739,
+      "Top": 624,
+      "Right": 754,
+      "Bottom": 649
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.90774,
+      "Left": 740,
+      "Top": 672,
+      "Right": 755,
+      "Bottom": 696
+    },
+    {
+      "Text": "PAIEMENT",
+      "Confidence": 90.7072,
+      "Left": 740,
+      "Top": 735,
+      "Right": 755,
+      "Bottom": 858
+    },
+    {
+      "Text": "EFFET",
+      "Confidence": 91.08124,
+      "Left": 741,
+      "Top": 879,
+      "Right": 755,
+      "Bottom": 954
+    },
+    {
+      "Text": "80124876",
+      "Confidence": 93.28728,
+      "Left": 743,
+      "Top": 1089,
+      "Right": 758,
+      "Bottom": 1209
+    },
+    {
+      "Text": "",
+      "Confidence": 11.993774,
+      "Left": 734,
+      "Top": 1228,
+      "Right": 767,
+      "Bottom": 1242
+    },
+    {
+      "Text": "09012026",
+      "Confidence": 11.993774,
+      "Left": 743,
+      "Top": 1247,
+      "Right": 758,
+      "Bottom": 1368
+    },
+    {
+      "Text": "1.345,687",
+      "Confidence": 92.29879,
+      "Left": 741,
+      "Top": 1490,
+      "Right": 759,
+      "Bottom": 1625
+    },
+    {
+      "Text": "13",
+      "Confidence": 96.52006,
+      "Left": 714,
+      "Top": 625,
+      "Right": 730,
+      "Bottom": 650
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.11979,
+      "Left": 715,
+      "Top": 672,
+      "Right": 730,
+      "Bottom": 697
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 91.38528,
+      "Left": 715,
+      "Top": 734,
+      "Right": 730,
+      "Bottom": 922
+    },
+    {
+      "Text": "80120126",
+      "Confidence": 84.6983,
+      "Left": 718,
+      "Top": 1087,
+      "Right": 734,
+      "Bottom": 1209
+    },
+    {
+      "Text": "12012026",
+      "Confidence": 90.31331,
+      "Left": 719,
+      "Top": 1248,
+      "Right": 734,
+      "Bottom": 1368
+    },
+    {
+      "Text": "5,000",
+      "Confidence": 96.365974,
+      "Left": 716,
+      "Top": 1554,
+      "Right": 734,
+      "Bottom": 1626
+    },
+    {
+      "Text": "13",
+      "Confidence": 96.76931,
+      "Left": 690,
+      "Top": 624,
+      "Right": 705,
+      "Bottom": 649
+    },
+    {
+      "Text": "01",
+      "Confidence": 90.553246,
+      "Left": 690,
+      "Top": 672,
+      "Right": 706,
+      "Bottom": 696
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 90.32059,
+      "Left": 690,
+      "Top": 734,
+      "Right": 706,
+      "Bottom": 921
+    },
+    {
+      "Text": "s0120126",
+      "Confidence": 92.97089,
+      "Left": 693,
+      "Top": 1087,
+      "Right": 709,
+      "Bottom": 1209
+    },
+    {
+      "Text": "12012026",
+      "Confidence": 90.72014,
+      "Left": 694,
+      "Top": 1248,
+      "Right": 709,
+      "Bottom": 1368
+    },
+    {
+      "Text": "0,950",
+      "Confidence": 90.84446,
+      "Left": 692,
+      "Top": 1554,
+      "Right": 709,
+      "Bottom": 1626
+    },
+    {
+      "Text": "14",
+      "Confidence": 96.73731,
+      "Left": 666,
+      "Top": 624,
+      "Right": 680,
+      "Bottom": 648
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.500244,
+      "Left": 666,
+      "Top": 671,
+      "Right": 681,
+      "Bottom": 695
+    },
+    {
+      "Text": "VERSEMENT",
+      "Confidence": 92.387245,
+      "Left": 666,
+      "Top": 733,
+      "Right": 681,
+      "Bottom": 872
+    },
+    {
+      "Text": "ESPECES",
+      "Confidence": 90.7271,
+      "Left": 667,
+      "Top": 894,
+      "Right": 682,
+      "Bottom": 1001
+    },
+    {
+      "Text": "78740289",
+      "Confidence": 93.151085,
+      "Left": 668,
+      "Top": 1086,
+      "Right": 685,
+      "Bottom": 1209
+    },
+    {
+      "Text": "1501202€",
+      "Confidence": 76.34406,
+      "Left": 669,
+      "Top": 1248,
+      "Right": 685,
+      "Bottom": 1368
+    },
+    {
+      "Text": "1.250,000",
+      "Confidence": 91.51366,
+      "Left": 668,
+      "Top": 1747,
+      "Right": 686,
+      "Bottom": 1886
+    },
+    {
+      "Text": "14",
+      "Confidence": 96.63444,
+      "Left": 641,
+      "Top": 624,
+      "Right": 656,
+      "Bottom": 647
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.93708,
+      "Left": 642,
+      "Top": 671,
+      "Right": 657,
+      "Bottom": 694
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 89.30829,
+      "Left": 642,
+      "Top": 733,
+      "Right": 656,
+      "Bottom": 856
+    },
+    {
+      "Text": "TN",
+      "Confidence": 93.299164,
+      "Left": 643,
+      "Top": 877,
+      "Right": 656,
+      "Bottom": 904
+    },
+    {
+      "Text": "AUTRE",
+      "Confidence": 92.90279,
+      "Left": 643,
+      "Top": 925,
+      "Right": 657,
+      "Bottom": 1001
+    },
+    {
+      "Text": "BQ",
+      "Confidence": 96.4687,
+      "Left": 640,
+      "Top": 1021,
+      "Right": 657,
+      "Bottom": 1049
+    },
+    {
+      "Text": "0612032",
+      "Confidence": 93.23956,
+      "Left": 644,
+      "Top": 1103,
+      "Right": 661,
+      "Bottom": 1208
+    },
+    {
+      "Text": "13012026",
+      "Confidence": 89.27549,
+      "Left": 644,
+      "Top": 1248,
+      "Right": 661,
+      "Bottom": 1368
+    },
+    {
+      "Text": "14",
+      "Confidence": 96.65192,
+      "Left": 617,
+      "Top": 623,
+      "Right": 632,
+      "Bottom": 647
+    },
+    {
+      "Text": "01",
+      "Confidence": 91.044205,
+      "Left": 617,
+      "Top": 671,
+      "Right": 632,
+      "Bottom": 694
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 91.0941,
+      "Left": 617,
+      "Top": 733,
+      "Right": 632,
+      "Bottom": 856
+    },
+    {
+      "Text": "TN",
+      "Confidence": 93.192444,
+      "Left": 618,
+      "Top": 877,
+      "Right": 631,
+      "Bottom": 903
+    },
+    {
+      "Text": "AUTRE",
+      "Confidence": 92.38919,
+      "Left": 618,
+      "Top": 924,
+      "Right": 632,
+      "Bottom": 1000
+    },
+    {
+      "Text": "BQ",
+      "Confidence": 95.50481,
+      "Left": 616,
+      "Top": 1021,
+      "Right": 632,
+      "Bottom": 1049
+    },
+    {
+      "Text": "0612032",
+      "Confidence": 90.656,
+      "Left": 620,
+      "Top": 1103,
+      "Right": 636,
+      "Bottom": 1208
+    },
+    {
+      "Text": "13012026",
+      "Confidence": 88.934326,
+      "Left": 620,
+      "Top": 1248,
+      "Right": 637,
+      "Bottom": 1368
+    },
+    {
+      "Text": "14",
+      "Confidence": 96.347824,
+      "Left": 592,
+      "Top": 624,
+      "Right": 607,
+      "Bottom": 645
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.5775,
+      "Left": 593,
+      "Top": 670,
+      "Right": 608,
+      "Bottom": 693
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 82.20503,
+      "Left": 593,
+      "Top": 733,
+      "Right": 607,
+      "Bottom": 855
+    },
+    {
+      "Text": "TN",
+      "Confidence": 93.29035,
+      "Left": 593,
+      "Top": 877,
+      "Right": 607,
+      "Bottom": 903
+    },
+    {
+      "Text": "AUTRE",
+      "Confidence": 93.03507,
+      "Left": 593,
+      "Top": 924,
+      "Right": 608,
+      "Bottom": 999
+    },
+    {
+      "Text": "BQ",
+      "Confidence": 94.854385,
+      "Left": 591,
+      "Top": 1021,
+      "Right": 608,
+      "Bottom": 1049
+    },
+    {
+      "Text": "00612032",
+      "Confidence": 93.19646,
+      "Left": 594,
+      "Top": 1086,
+      "Right": 612,
+      "Bottom": 1208
+    },
+    {
+      "Text": "13012026",
+      "Confidence": 91.22529,
+      "Left": 595,
+      "Top": 1248,
+      "Right": 612,
+      "Bottom": 1368
+    },
+    {
+      "Text": "2",
+      "Confidence": 96.79687,
+      "Left": 596,
+      "Top": 1553,
+      "Right": 610,
+      "Bottom": 1562
+    },
+    {
+      "Text": "14",
+      "Confidence": 96.466896,
+      "Left": 568,
+      "Top": 621,
+      "Right": 582,
+      "Bottom": 645
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.73581,
+      "Left": 569,
+      "Top": 670,
+      "Right": 583,
+      "Bottom": 692
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 85.765305,
+      "Left": 569,
+      "Top": 733,
+      "Right": 582,
+      "Bottom": 855
+    },
+    {
+      "Text": "TN",
+      "Confidence": 92.89009,
+      "Left": 568,
+      "Top": 877,
+      "Right": 582,
+      "Bottom": 903
+    },
+    {
+      "Text": "AUTRE",
+      "Confidence": 91.26814,
+      "Left": 569,
+      "Top": 924,
+      "Right": 583,
+      "Bottom": 999
+    },
+    {
+      "Text": "BQ",
+      "Confidence": 95.979744,
+      "Left": 567,
+      "Top": 1021,
+      "Right": 584,
+      "Bottom": 1048
+    },
+    {
+      "Text": "00612032",
+      "Confidence": 92.489525,
+      "Left": 570,
+      "Top": 1086,
+      "Right": 587,
+      "Bottom": 1208
+    },
+    {
+      "Text": "13012026",
+      "Confidence": 90.683365,
+      "Left": 571,
+      "Top": 1247,
+      "Right": 588,
+      "Bottom": 1368
+    },
+    {
+      "Text": "3.000,000",
+      "Confidence": 91.39019,
+      "Left": 568,
+      "Top": 1489,
+      "Right": 586,
+      "Bottom": 1626
+    },
+    {
+      "Text": "14",
+      "Confidence": 94.941635,
+      "Left": 543,
+      "Top": 623,
+      "Right": 557,
+      "Bottom": 645
+    },
+    {
+      "Text": "01",
+      "Confidence": 91.75592,
+      "Left": 544,
+      "Top": 669,
+      "Right": 558,
+      "Bottom": 693
+    },
+    {
+      "Text": "ANN",
+      "Confidence": 91.75592,
+      "Left": 544,
+      "Top": 733,
+      "Right": 558,
+      "Bottom": 775
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 92.31466,
+      "Left": 543,
+      "Top": 797,
+      "Right": 557,
+      "Bottom": 918
+    },
+    {
+      "Text": "AUTRE",
+      "Confidence": 92.06116,
+      "Left": 544,
+      "Top": 940,
+      "Right": 557,
+      "Bottom": 1015
+    },
+    {
+      "Text": "BQ",
+      "Confidence": 95.69136,
+      "Left": 541,
+      "Top": 1036,
+      "Right": 558,
+      "Bottom": 1064
+    },
+    {
+      "Text": "03330032",
+      "Confidence": 93.24518,
+      "Left": 545,
+      "Top": 1085,
+      "Right": 563,
+      "Bottom": 1208
+    },
+    {
+      "Text": "13012026",
+      "Confidence": 89.28311,
+      "Left": 546,
+      "Top": 1247,
+      "Right": 563,
+      "Bottom": 1368
+    },
+    {
+      "Text": "2,618",
+      "Confidence": 74.81169,
+      "Left": 545,
+      "Top": 1809,
+      "Right": 563,
+      "Bottom": 1885
+    },
+    {
+      "Text": "14",
+      "Confidence": 95.99921,
+      "Left": 518,
+      "Top": 623,
+      "Right": 533,
+      "Bottom": 645
+    },
+    {
+      "Text": "01",
+      "Confidence": 91.296234,
+      "Left": 519,
+      "Top": 669,
+      "Right": 534,
+      "Bottom": 694
+    },
+    {
+      "Text": "[ANN",
+      "Confidence": 61.835365,
+      "Left": 520,
+      "Top": 732,
+      "Right": 533,
+      "Bottom": 774
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 91.826126,
+      "Left": 518,
+      "Top": 796,
+      "Right": 533,
+      "Bottom": 917
+    },
+    {
+      "Text": "AUTRE",
+      "Confidence": 91.28458,
+      "Left": 518,
+      "Top": 939,
+      "Right": 532,
+      "Bottom": 998
+    },
+    {
+      "Text": "BQ",
+      "Confidence": 94.891045,
+      "Left": 517,
+      "Top": 1037,
+      "Right": 533,
+      "Bottom": 1064
+    },
+    {
+      "Text": "03330032",
+      "Confidence": 93.299194,
+      "Left": 520,
+      "Top": 1085,
+      "Right": 538,
+      "Bottom": 1207
+    },
+    {
+      "Text": "13012026",
+      "Confidence": 80.77992,
+      "Left": 521,
+      "Top": 1247,
+      "Right": 539,
+      "Bottom": 1368
+    },
+    {
+      "Text": "300,000",
+      "Confidence": 96.38718,
+      "Left": 521,
+      "Top": 1778,
+      "Right": 538,
+      "Bottom": 1885
+    },
+    {
+      "Text": "15",
+      "Confidence": 96.835495,
+      "Left": 494,
+      "Top": 622,
+      "Right": 509,
+      "Bottom": 644
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.68539,
+      "Left": 495,
+      "Top": 669,
+      "Right": 509,
+      "Bottom": 691
+    },
+    {
+      "Text": "VERSEMENT",
+      "Confidence": 91.69696,
+      "Left": 494,
+      "Top": 731,
+      "Right": 509,
+      "Bottom": 870
+    },
+    {
+      "Text": "ESPECES",
+      "Confidence": 91.91334,
+      "Left": 494,
+      "Top": 891,
+      "Right": 507,
+      "Bottom": 997
+    },
+    {
+      "Text": "43111017",
+      "Confidence": 93.2965,
+      "Left": 495,
+      "Top": 1086,
+      "Right": 513,
+      "Bottom": 1207
+    },
+    {
+      "Text": "16012026",
+      "Confidence": 89.73712,
+      "Left": 496,
+      "Top": 1247,
+      "Right": 515,
+      "Bottom": 1368
+    },
+    {
+      "Text": "800,000",
+      "Confidence": 92.531876,
+      "Left": 496,
+      "Top": 1778,
+      "Right": 514,
+      "Bottom": 1885
+    },
+    {
+      "Text": "15",
+      "Confidence": 96.39832,
+      "Left": 469,
+      "Top": 620,
+      "Right": 484,
+      "Bottom": 645
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.28667,
+      "Left": 471,
+      "Top": 669,
+      "Right": 485,
+      "Bottom": 693
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 90.74628,
+      "Left": 469,
+      "Top": 732,
+      "Right": 484,
+      "Bottom": 852
+    },
+    {
+      "Text": "TN",
+      "Confidence": 93.158134,
+      "Left": 469,
+      "Top": 875,
+      "Right": 482,
+      "Bottom": 901
+    },
+    {
+      "Text": "MEME",
+      "Confidence": 89.955505,
+      "Left": 468,
+      "Top": 922,
+      "Right": 482,
+      "Bottom": 982
+    },
+    {
+      "Text": "BQ",
+      "Confidence": 94.966415,
+      "Left": 466,
+      "Top": 1004,
+      "Right": 482,
+      "Bottom": 1030
+    },
+    {
+      "Text": "0889228",
+      "Confidence": 93.41838,
+      "Left": 471,
+      "Top": 1101,
+      "Right": 488,
+      "Bottom": 1207
+    },
+    {
+      "Text": "",
+      "Confidence": 0,
+      "Left": 465,
+      "Top": 1225,
+      "Right": 494,
+      "Bottom": 1240
+    },
+    {
+      "Text": "15012026",
+      "Confidence": 0,
+      "Left": 471,
+      "Top": 1247,
+      "Right": 490,
+      "Bottom": 1369
+    },
+    {
+      "Text": "1,190",
+      "Confidence": 95.86191,
+      "Left": 467,
+      "Top": 1554,
+      "Right": 486,
+      "Bottom": 1627
+    },
+    {
+      "Text": "15",
+      "Confidence": 96.19575,
+      "Left": 444,
+      "Top": 620,
+      "Right": 460,
+      "Bottom": 644
+    },
+    {
+      "Text": "01",
+      "Confidence": 93.003876,
+      "Left": 445,
+      "Top": 668,
+      "Right": 461,
+      "Bottom": 691
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 91.03634,
+      "Left": 444,
+      "Top": 731,
+      "Right": 460,
+      "Bottom": 853
+    },
+    {
+      "Text": "TN",
+      "Confidence": 93.27325,
+      "Left": 444,
+      "Top": 875,
+      "Right": 458,
+      "Bottom": 901
+    },
+    {
+      "Text": "MEME",
+      "Confidence": 90.60517,
+      "Left": 444,
+      "Top": 922,
+      "Right": 458,
+      "Bottom": 982
+    },
+    {
+      "Text": "BQ",
+      "Confidence": 96.4091,
+      "Left": 441,
+      "Top": 1004,
+      "Right": 458,
+      "Bottom": 1030
+    },
+    {
+      "Text": "0889228",
+      "Confidence": 96.14054,
+      "Left": 445,
+      "Top": 1101,
+      "Right": 464,
+      "Bottom": 1207
+    },
+    {
+      "Text": "",
+      "Confidence": 6.7805023,
+      "Left": 438,
+      "Top": 1226,
+      "Right": 471,
+      "Bottom": 1240
+    },
+    {
+      "Text": "15012026",
+      "Confidence": 6.7805023,
+      "Left": 446,
+      "Top": 1247,
+      "Right": 465,
+      "Bottom": 1368
+    },
+    {
+      "Text": "790,000",
+      "Confidence": 95.5643,
+      "Left": 442,
+      "Top": 1521,
+      "Right": 461,
+      "Bottom": 1627
+    },
+    {
+      "Text": "15",
+      "Confidence": 96.14489,
+      "Left": 420,
+      "Top": 619,
+      "Right": 435,
+      "Bottom": 645
+    },
+    {
+      "Text": "01",
+      "Confidence": 92.93199,
+      "Left": 420,
+      "Top": 668,
+      "Right": 436,
+      "Bottom": 690
+    },
+    {
+      "Text": "REDRESSEMEN",
+      "Confidence": 91.50596,
+      "Left": 420,
+      "Top": 732,
+      "Right": 435,
+      "Bottom": 900
+    },
+    {
+      "Text": "s0140126",
+      "Confidence": 93.08255,
+      "Left": 420,
+      "Top": 1085,
+      "Right": 439,
+      "Bottom": 1208
+    },
+    {
+      "Text": "",
+      "Confidence": 25.349442,
+      "Left": 412,
+      "Top": 1226,
+      "Right": 445,
+      "Bottom": 1238
+    },
+    {
+      "Text": "14012026",
+      "Confidence": 0,
+      "Left": 420,
+      "Top": 1247,
+      "Right": 440,
+      "Bottom": 1368
+    },
+    {
+      "Text": "5,000",
+      "Confidence": 96.87265,
+      "Left": 417,
+      "Top": 1554,
+      "Right": 436,
+      "Bottom": 1627
+    },
+    {
+      "Text": "15",
+      "Confidence": 94.88758,
+      "Left": 395,
+      "Top": 620,
+      "Right": 410,
+      "Bottom": 645
+    },
+    {
+      "Text": "01",
+      "Confidence": 95.769196,
+      "Left": 396,
+      "Top": 668,
+      "Right": 411,
+      "Bottom": 691
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 89.20466,
+      "Left": 394,
+      "Top": 732,
+      "Right": 411,
+      "Bottom": 917
+    },
+    {
+      "Text": "s0140126",
+      "Confidence": 91.40085,
+      "Left": 395,
+      "Top": 1084,
+      "Right": 414,
+      "Bottom": 1208
+    },
+    {
+      "Text": "",
+      "Confidence": 0,
+      "Left": 390,
+      "Top": 1225,
+      "Right": 420,
+      "Bottom": 1238
+    },
+    {
+      "Text": "14012026",
+      "Confidence": 0,
+      "Left": 396,
+      "Top": 1246,
+      "Right": 416,
+      "Bottom": 1369
+    },
+    {
+      "Text": "0,950",
+      "Confidence": 92.700096,
+      "Left": 392,
+      "Top": 1554,
+      "Right": 412,
+      "Bottom": 1627
+    },
+    {
+      "Text": "16",
+      "Confidence": 95.44345,
+      "Left": 370,
+      "Top": 620,
+      "Right": 386,
+      "Bottom": 644
+    },
+    {
+      "Text": "01",
+      "Confidence": 93.11431,
+      "Left": 371,
+      "Top": 668,
+      "Right": 386,
+      "Bottom": 691
+    },
+    {
+      "Text": "VERSEMENT",
+      "Confidence": 91.995094,
+      "Left": 370,
+      "Top": 731,
+      "Right": 386,
+      "Bottom": 868
+    },
+    {
+      "Text": "ESPECES",
+      "Confidence": 89.278786,
+      "Left": 369,
+      "Top": 891,
+      "Right": 383,
+      "Bottom": 996
+    },
+    {
+      "Text": "02331128",
+      "Confidence": 94.09418,
+      "Left": 370,
+      "Top": 1084,
+      "Right": 389,
+      "Bottom": 1207
+    },
+    {
+      "Text": "",
+      "Confidence": 21.600334,
+      "Left": 363,
+      "Top": 1225,
+      "Right": 396,
+      "Bottom": 1237
+    },
+    {
+      "Text": "19012026",
+      "Confidence": 21.600334,
+      "Left": 371,
+      "Top": 1246,
+      "Right": 391,
+      "Bottom": 1369
+    },
+    {
+      "Text": "3.370,000",
+      "Confidence": 86.89036,
+      "Left": 373,
+      "Top": 1745,
+      "Right": 392,
+      "Bottom": 1883
+    },
+    {
+      "Text": "DI",
+      "Confidence": 93.59683,
+      "Left": 273,
+      "Top": 747,
+      "Right": 287,
+      "Bottom": 771
+    },
+    {
+      "Text": "TONIS",
+      "Confidence": 86.226974,
+      "Left": 271,
+      "Top": 842,
+      "Right": 286,
+      "Bottom": 915
+    },
+    {
+      "Text": "لسسع",
+      "Confidence": 55.817734,
+      "Left": 269,
+      "Top": 629,
+      "Right": 292,
+      "Bottom": 727
+    },
+    {
+      "Text": "DINAR",
+      "Confidence": 91.61261,
+      "Left": 272,
+      "Top": 778,
+      "Right": 287,
+      "Bottom": 820
+    },
+    {
+      "Text": "TUNISIEN",
+      "Confidence": 75.95416,
+      "Left": 269,
+      "Top": 844,
+      "Right": 286,
+      "Bottom": 963
+    },
+    {
+      "Text": "4",
+      "Confidence": 72.90709,
+      "Left": 230,
+      "Top": 1405,
+      "Right": 238,
+      "Bottom": 1416
+    },
+    {
+      "Text": "-",
+      "Confidence": 94.928925,
+      "Left": 223,
+      "Top": 1870,
+      "Right": 230,
+      "Bottom": 1882
+    },
+    {
+      "Text": "Directeur",
+      "Confidence": 92.51551,
+      "Left": 197,
+      "Top": 617,
+      "Right": 214,
+      "Bottom": 756
+    },
+    {
+      "Text": "Agence",
+      "Confidence": 91.67254,
+      "Left": 194,
+      "Top": 776,
+      "Right": 213,
+      "Bottom": 867
+    },
+    {
+      "Text": ":",
+      "Confidence": 91.98123,
+      "Left": 197,
+      "Top": 892,
+      "Right": 208,
+      "Bottom": 896
+    },
+    {
+      "Text": "Mr",
+      "Confidence": 89.80192,
+      "Left": 196,
+      "Top": 921,
+      "Right": 209,
+      "Bottom": 947
+    },
+    {
+      "Text": "HICHEM",
+      "Confidence": 89.80192,
+      "Left": 195,
+      "Top": 985,
+      "Right": 209,
+      "Bottom": 1077
+    },
+    {
+      "Text": "ESSADDEM",
+      "Confidence": 93.11645,
+      "Left": 197,
+      "Top": 1099,
+      "Right": 217,
+      "Bottom": 1223
+    },
+    {
+      "Text": ")",
+      "Confidence": 64.30351,
+      "Left": 198,
+      "Top": 1784,
+      "Right": 200,
+      "Bottom": 1788
+    },
+    {
+      "Text": ";",
+      "Confidence": 76.90281,
+      "Left": 124,
+      "Top": 1120,
+      "Right": 130,
+      "Bottom": 1187
+    },
+    {
+      "Text": "الحبيب",
+      "Confidence": 71.06385,
+      "Left": 78,
+      "Top": 1238,
+      "Right": 108,
+      "Bottom": 1272
+    },
+    {
+      "Text": "بورقيية",
+      "Confidence": 64.15149,
+      "Left": 78,
+      "Top": 1197,
+      "Right": 108,
+      "Bottom": 1233
+    },
+    {
+      "Text": "٠٠",
+      "Confidence": 83.12456,
+      "Left": 78,
+      "Top": 1182,
+      "Right": 108,
+      "Bottom": 1190
+    },
+    {
+      "Text": "فا",
+      "Confidence": 53.570347,
+      "Left": 77,
+      "Top": 1104,
+      "Right": 106,
+      "Bottom": 1123
+    },
+    {
+      "Text": "ل",
+      "Confidence": 52.59779,
+      "Left": 89,
+      "Top": 1098,
+      "Right": 93,
+      "Bottom": 1100
+    },
+    {
+      "Text": "3",
+      "Confidence": 91.992744,
+      "Left": 85,
+      "Top": 1015,
+      "Right": 88,
+      "Bottom": 1019
+    },
+    {
+      "Text": ";",
+      "Confidence": 65.797035,
+      "Left": 86,
+      "Top": 969,
+      "Right": 89,
+      "Bottom": 972
+    },
+    {
+      "Text": "«",
+      "Confidence": 77.82758,
+      "Left": 85,
+      "Top": 915,
+      "Right": 88,
+      "Bottom": 918
+    },
+    {
+      "Text": "تلكس.",
+      "Confidence": 46.86328,
+      "Left": 76,
+      "Top": 881,
+      "Right": 105,
+      "Bottom": 911
+    },
+    {
+      "Text": "00D",
+      "Confidence": 27.537079,
+      "Left": 81,
+      "Top": 809,
+      "Right": 95,
+      "Bottom": 875
+    },
+    {
+      "Text": "p",
+      "Confidence": 21.412476,
+      "Left": 76,
+      "Top": 843,
+      "Right": 105,
+      "Bottom": 859
+    },
+    {
+      "Text": "à",
+      "Confidence": 24.457466,
+      "Left": 76,
+      "Top": 872,
+      "Right": 105,
+      "Bottom": 876
+    },
+    {
+      "Text": "—",
+      "Confidence": 57.83155,
+      "Left": 87,
+      "Top": 802,
+      "Right": 91,
+      "Bottom": 806
+    },
+    {
+      "Text": "و",
+      "Confidence": 46.989365,
+      "Left": 85,
+      "Top": 744,
+      "Right": 96,
+      "Bottom": 755
+    },
+    {
+      "Text": "ع",
+      "Confidence": 43.465347,
+      "Left": 85,
+      "Top": 724,
+      "Right": 96,
+      "Bottom": 734
+    },
+    {
+      "Text": "7+",
+      "Confidence": 66.328705,
+      "Left": 86,
+      "Top": 698,
+      "Right": 96,
+      "Bottom": 714
+    },
+    {
+      "Text": "اا",
+      "Confidence": 0,
+      "Left": 59,
+      "Top": 1275,
+      "Right": 100,
+      "Bottom": 1291
+    },
+    {
+      "Text": ".",
+      "Confidence": 0,
+      "Left": 79,
+      "Top": 1265,
+      "Right": 83,
+      "Bottom": 1268
+    },
+    {
+      "Text": "مكوجة",
+      "Confidence": 0,
+      "Left": 59,
+      "Top": 1203,
+      "Right": 100,
+      "Bottom": 1258
+    },
+    {
+      "Text": "كفا",
+      "Confidence": 25.100372,
+      "Left": 59,
+      "Top": 1168,
+      "Right": 100,
+      "Bottom": 1194
+    },
+    {
+      "Text": "جر",
+      "Confidence": 41.037323,
+      "Left": 59,
+      "Top": 1142,
+      "Right": 100,
+      "Bottom": 1156
+    },
+    {
+      "Text": "مجيد",
+      "Confidence": 0,
+      "Left": 59,
+      "Top": 1103,
+      "Right": 100,
+      "Bottom": 1133
+    },
+    {
+      "Text": "سمح",
+      "Confidence": 13.336075,
+      "Left": 59,
+      "Top": 1057,
+      "Right": 100,
+      "Bottom": 1094
+    },
+    {
+      "Text": "رجو",
+      "Confidence": 56.023453,
+      "Left": 59,
+      "Top": 1021,
+      "Right": 100,
+      "Bottom": 1045
+    },
+    {
+      "Text": ".",
+      "Confidence": 57.42042,
+      "Left": 69,
+      "Top": 1009,
+      "Right": 71,
+      "Bottom": 1011
+    },
+    {
+      "Text": "لم",
+      "Confidence": 38.407127,
+      "Left": 59,
+      "Top": 986,
+      "Right": 100,
+      "Bottom": 1002
+    },
+    {
+      "Text": "يحم",
+      "Confidence": 34.772995,
+      "Left": 59,
+      "Top": 950,
+      "Right": 100,
+      "Bottom": 979
+    },
+    {
+      "Text": "حبس",
+      "Confidence": 30.399452,
+      "Left": 59,
+      "Top": 906,
+      "Right": 100,
+      "Bottom": 940
+    },
+    {
+      "Text": "طقلا",
+      "Confidence": 26.486069,
+      "Left": 59,
+      "Top": 842,
+      "Right": 100,
+      "Bottom": 887
+    },
+    {
+      "Text": "د",
+      "Confidence": 11.225212,
+      "Left": 69,
+      "Top": 806,
+      "Right": 96,
+      "Bottom": 833
+    },
+    {
+      "Text": "0",
+      "Confidence": 33.20543,
+      "Left": 66,
+      "Top": 639,
+      "Right": 81,
+      "Bottom": 710
+    }
+  ],
+  "Lines": [
+    {
+      "LineText": "Directeur 16 15 15 15 15 15 14 14 14 14 14 14 14 13 13 12 12 09",
+      "Words": [
+        {
+          "Text": "Directeur",
+          "Confidence": 92.51551,
+          "Left": 197,
+          "Top": 617,
+          "Right": 214,
+          "Bottom": 756
+        },
+        {
+          "Text": "15",
+          "Confidence": 96.14489,
+          "Left": 420,
+          "Top": 619,
+          "Right": 435,
+          "Bottom": 645
+        },
+        {
+          "Text": "15",
+          "Confidence": 96.39832,
+          "Left": 469,
+          "Top": 620,
+          "Right": 484,
+          "Bottom": 645
+        },
+        {
+          "Text": "15",
+          "Confidence": 96.19575,
+          "Left": 444,
+          "Top": 620,
+          "Right": 460,
+          "Bottom": 644
+        },
+        {
+          "Text": "15",
+          "Confidence": 94.88758,
+          "Left": 395,
+          "Top": 620,
+          "Right": 410,
+          "Bottom": 645
+        },
+        {
+          "Text": "16",
+          "Confidence": 95.44345,
+          "Left": 370,
+          "Top": 620,
+          "Right": 386,
+          "Bottom": 644
+        },
+        {
+          "Text": "14",
+          "Confidence": 96.466896,
+          "Left": 568,
+          "Top": 621,
+          "Right": 582,
+          "Bottom": 645
+        },
+        {
+          "Text": "15",
+          "Confidence": 96.835495,
+          "Left": 494,
+          "Top": 622,
+          "Right": 509,
+          "Bottom": 644
+        },
+        {
+          "Text": "14",
+          "Confidence": 96.65192,
+          "Left": 617,
+          "Top": 623,
+          "Right": 632,
+          "Bottom": 647
+        },
+        {
+          "Text": "14",
+          "Confidence": 94.941635,
+          "Left": 543,
+          "Top": 623,
+          "Right": 557,
+          "Bottom": 645
+        },
+        {
+          "Text": "14",
+          "Confidence": 95.99921,
+          "Left": 518,
+          "Top": 623,
+          "Right": 533,
+          "Bottom": 645
+        },
+        {
+          "Text": "09",
+          "Confidence": 95.1203,
+          "Left": 787,
+          "Top": 624,
+          "Right": 804,
+          "Bottom": 651
+        },
+        {
+          "Text": "12",
+          "Confidence": 96.8039,
+          "Left": 763,
+          "Top": 624,
+          "Right": 779,
+          "Bottom": 650
+        },
+        {
+          "Text": "12",
+          "Confidence": 95.45534,
+          "Left": 739,
+          "Top": 624,
+          "Right": 754,
+          "Bottom": 649
+        },
+        {
+          "Text": "13",
+          "Confidence": 96.76931,
+          "Left": 690,
+          "Top": 624,
+          "Right": 705,
+          "Bottom": 649
+        },
+        {
+          "Text": "14",
+          "Confidence": 96.73731,
+          "Left": 666,
+          "Top": 624,
+          "Right": 680,
+          "Bottom": 648
+        },
+        {
+          "Text": "14",
+          "Confidence": 96.63444,
+          "Left": 641,
+          "Top": 624,
+          "Right": 656,
+          "Bottom": 647
+        },
+        {
+          "Text": "14",
+          "Confidence": 96.347824,
+          "Left": 592,
+          "Top": 624,
+          "Right": 607,
+          "Bottom": 645
+        },
+        {
+          "Text": "13",
+          "Confidence": 96.52006,
+          "Left": 714,
+          "Top": 625,
+          "Right": 730,
+          "Bottom": 650
+        }
+      ]
+    },
+    {
+      "LineText": "0 لسسع",
+      "Words": [
+        {
+          "Text": "لسسع",
+          "Confidence": 55.817734,
+          "Left": 269,
+          "Top": 629,
+          "Right": 292,
+          "Bottom": 727
+        },
+        {
+          "Text": "0",
+          "Confidence": 33.20543,
+          "Left": 66,
+          "Top": 639,
+          "Right": 81,
+          "Bottom": 710
+        }
+      ]
+    },
+    {
+      "LineText": "01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01",
+      "Words": [
+        {
+          "Text": "01",
+          "Confidence": 93.003876,
+          "Left": 445,
+          "Top": 668,
+          "Right": 461,
+          "Bottom": 691
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.93199,
+          "Left": 420,
+          "Top": 668,
+          "Right": 436,
+          "Bottom": 690
+        },
+        {
+          "Text": "01",
+          "Confidence": 95.769196,
+          "Left": 396,
+          "Top": 668,
+          "Right": 411,
+          "Bottom": 691
+        },
+        {
+          "Text": "01",
+          "Confidence": 93.11431,
+          "Left": 371,
+          "Top": 668,
+          "Right": 386,
+          "Bottom": 691
+        },
+        {
+          "Text": "01",
+          "Confidence": 91.75592,
+          "Left": 544,
+          "Top": 669,
+          "Right": 558,
+          "Bottom": 693
+        },
+        {
+          "Text": "01",
+          "Confidence": 91.296234,
+          "Left": 519,
+          "Top": 669,
+          "Right": 534,
+          "Bottom": 694
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.68539,
+          "Left": 495,
+          "Top": 669,
+          "Right": 509,
+          "Bottom": 691
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.28667,
+          "Left": 471,
+          "Top": 669,
+          "Right": 485,
+          "Bottom": 693
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.5775,
+          "Left": 593,
+          "Top": 670,
+          "Right": 608,
+          "Bottom": 693
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.73581,
+          "Left": 569,
+          "Top": 670,
+          "Right": 583,
+          "Bottom": 692
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.500244,
+          "Left": 666,
+          "Top": 671,
+          "Right": 681,
+          "Bottom": 695
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.93708,
+          "Left": 642,
+          "Top": 671,
+          "Right": 657,
+          "Bottom": 694
+        },
+        {
+          "Text": "01",
+          "Confidence": 91.044205,
+          "Left": 617,
+          "Top": 671,
+          "Right": 632,
+          "Bottom": 694
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.90774,
+          "Left": 740,
+          "Top": 672,
+          "Right": 755,
+          "Bottom": 696
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.11979,
+          "Left": 715,
+          "Top": 672,
+          "Right": 730,
+          "Bottom": 697
+        },
+        {
+          "Text": "01",
+          "Confidence": 90.553246,
+          "Left": 690,
+          "Top": 672,
+          "Right": 706,
+          "Bottom": 696
+        },
+        {
+          "Text": "01",
+          "Confidence": 93.04103,
+          "Left": 788,
+          "Top": 673,
+          "Right": 803,
+          "Bottom": 698
+        },
+        {
+          "Text": "01",
+          "Confidence": 92.48881,
+          "Left": 763,
+          "Top": 673,
+          "Right": 779,
+          "Bottom": 696
+        }
+      ]
+    },
+    {
+      "LineText": "7+",
+      "Words": [
+        {
+          "Text": "7+",
+          "Confidence": 66.328705,
+          "Left": 86,
+          "Top": 698,
+          "Right": 96,
+          "Bottom": 714
+        }
+      ]
+    },
+    {
+      "LineText": "ع VERSEMENT REDRESSEMENT REDRESSEMEN VIREMENT VIREMENT VERSEMENT [ANN ANN VIREMENT VIREMENT VIREMENT VIREMENT VERSEMENT REDRESSEMENT REDRESSEMENT VERSEMENT VERSEMENT",
+      "Words": [
+        {
+          "Text": "ع",
+          "Confidence": 43.465347,
+          "Left": 85,
+          "Top": 724,
+          "Right": 96,
+          "Bottom": 734
+        },
+        {
+          "Text": "VERSEMENT",
+          "Confidence": 91.69696,
+          "Left": 494,
+          "Top": 731,
+          "Right": 509,
+          "Bottom": 870
+        },
+        {
+          "Text": "VIREMENT",
+          "Confidence": 91.03634,
+          "Left": 444,
+          "Top": 731,
+          "Right": 460,
+          "Bottom": 853
+        },
+        {
+          "Text": "VERSEMENT",
+          "Confidence": 91.995094,
+          "Left": 370,
+          "Top": 731,
+          "Right": 386,
+          "Bottom": 868
+        },
+        {
+          "Text": "[ANN",
+          "Confidence": 61.835365,
+          "Left": 520,
+          "Top": 732,
+          "Right": 533,
+          "Bottom": 774
+        },
+        {
+          "Text": "VIREMENT",
+          "Confidence": 90.74628,
+          "Left": 469,
+          "Top": 732,
+          "Right": 484,
+          "Bottom": 852
+        },
+        {
+          "Text": "REDRESSEMEN",
+          "Confidence": 91.50596,
+          "Left": 420,
+          "Top": 732,
+          "Right": 435,
+          "Bottom": 900
+        },
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 89.20466,
+          "Left": 394,
+          "Top": 732,
+          "Right": 411,
+          "Bottom": 917
+        },
+        {
+          "Text": "VERSEMENT",
+          "Confidence": 92.387245,
+          "Left": 666,
+          "Top": 733,
+          "Right": 681,
+          "Bottom": 872
+        },
+        {
+          "Text": "VIREMENT",
+          "Confidence": 89.30829,
+          "Left": 642,
+          "Top": 733,
+          "Right": 656,
+          "Bottom": 856
+        },
+        {
+          "Text": "VIREMENT",
+          "Confidence": 91.0941,
+          "Left": 617,
+          "Top": 733,
+          "Right": 632,
+          "Bottom": 856
+        },
+        {
+          "Text": "VIREMENT",
+          "Confidence": 82.20503,
+          "Left": 593,
+          "Top": 733,
+          "Right": 607,
+          "Bottom": 855
+        },
+        {
+          "Text": "VIREMENT",
+          "Confidence": 85.765305,
+          "Left": 569,
+          "Top": 733,
+          "Right": 582,
+          "Bottom": 855
+        },
+        {
+          "Text": "ANN",
+          "Confidence": 91.75592,
+          "Left": 544,
+          "Top": 733,
+          "Right": 558,
+          "Bottom": 775
+        },
+        {
+          "Text": "VERSEMENT",
+          "Confidence": 91.21343,
+          "Left": 813,
+          "Top": 734,
+          "Right": 828,
+          "Bottom": 874
+        },
+        {
+          "Text": "VERSEMENT",
+          "Confidence": 88.6223,
+          "Left": 788,
+          "Top": 734,
+          "Right": 804,
+          "Bottom": 874
+        },
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 91.38528,
+          "Left": 715,
+          "Top": 734,
+          "Right": 730,
+          "Bottom": 922
+        },
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 90.32059,
+          "Left": 690,
+          "Top": 734,
+          "Right": 706,
+          "Bottom": 921
+        }
+      ]
+    },
+    {
+      "LineText": "و PAIEMENT PAIEMENT",
+      "Words": [
+        {
+          "Text": "PAIEMENT",
+          "Confidence": 85.48823,
+          "Left": 763,
+          "Top": 735,
+          "Right": 779,
+          "Bottom": 858
+        },
+        {
+          "Text": "PAIEMENT",
+          "Confidence": 90.7072,
+          "Left": 740,
+          "Top": 735,
+          "Right": 755,
+          "Bottom": 858
+        },
+        {
+          "Text": "و",
+          "Confidence": 46.989365,
+          "Left": 85,
+          "Top": 744,
+          "Right": 96,
+          "Bottom": 755
+        }
+      ]
+    },
+    {
+      "LineText": "DI",
+      "Words": [
+        {
+          "Text": "DI",
+          "Confidence": 93.59683,
+          "Left": 273,
+          "Top": 747,
+          "Right": 287,
+          "Bottom": 771
+        }
+      ]
+    },
+    {
+      "LineText": "Agence DINAR",
+      "Words": [
+        {
+          "Text": "Agence",
+          "Confidence": 91.67254,
+          "Left": 194,
+          "Top": 776,
+          "Right": 213,
+          "Bottom": 867
+        },
+        {
+          "Text": "DINAR",
+          "Confidence": 91.61261,
+          "Left": 272,
+          "Top": 778,
+          "Right": 287,
+          "Bottom": 820
+        }
+      ]
+    },
+    {
+      "LineText": "د — VIREMENT VIREMENT",
+      "Words": [
+        {
+          "Text": "VIREMENT",
+          "Confidence": 91.826126,
+          "Left": 518,
+          "Top": 796,
+          "Right": 533,
+          "Bottom": 917
+        },
+        {
+          "Text": "VIREMENT",
+          "Confidence": 92.31466,
+          "Left": 543,
+          "Top": 797,
+          "Right": 557,
+          "Bottom": 918
+        },
+        {
+          "Text": "—",
+          "Confidence": 57.83155,
+          "Left": 87,
+          "Top": 802,
+          "Right": 91,
+          "Bottom": 806
+        },
+        {
+          "Text": "د",
+          "Confidence": 11.225212,
+          "Left": 69,
+          "Top": 806,
+          "Right": 96,
+          "Bottom": 833
+        }
+      ]
+    },
+    {
+      "LineText": "00D",
+      "Words": [
+        {
+          "Text": "00D",
+          "Confidence": 27.537079,
+          "Left": 81,
+          "Top": 809,
+          "Right": 95,
+          "Bottom": 875
+        }
+      ]
+    },
+    {
+      "LineText": "طقلا p TUNISIEN TONIS",
+      "Words": [
+        {
+          "Text": "TONIS",
+          "Confidence": 86.226974,
+          "Left": 271,
+          "Top": 842,
+          "Right": 286,
+          "Bottom": 915
+        },
+        {
+          "Text": "طقلا",
+          "Confidence": 26.486069,
+          "Left": 59,
+          "Top": 842,
+          "Right": 100,
+          "Bottom": 887
+        },
+        {
+          "Text": "p",
+          "Confidence": 21.412476,
+          "Left": 76,
+          "Top": 843,
+          "Right": 105,
+          "Bottom": 859
+        },
+        {
+          "Text": "TUNISIEN",
+          "Confidence": 75.95416,
+          "Left": 269,
+          "Top": 844,
+          "Right": 286,
+          "Bottom": 963
+        }
+      ]
+    },
+    {
+      "LineText": "à تلكس. TN TN TN TN TN TN EFFET EFFET",
+      "Words": [
+        {
+          "Text": "à",
+          "Confidence": 24.457466,
+          "Left": 76,
+          "Top": 872,
+          "Right": 105,
+          "Bottom": 876
+        },
+        {
+          "Text": "TN",
+          "Confidence": 93.158134,
+          "Left": 469,
+          "Top": 875,
+          "Right": 482,
+          "Bottom": 901
+        },
+        {
+          "Text": "TN",
+          "Confidence": 93.27325,
+          "Left": 444,
+          "Top": 875,
+          "Right": 458,
+          "Bottom": 901
+        },
+        {
+          "Text": "TN",
+          "Confidence": 93.299164,
+          "Left": 643,
+          "Top": 877,
+          "Right": 656,
+          "Bottom": 904
+        },
+        {
+          "Text": "TN",
+          "Confidence": 93.192444,
+          "Left": 618,
+          "Top": 877,
+          "Right": 631,
+          "Bottom": 903
+        },
+        {
+          "Text": "TN",
+          "Confidence": 93.29035,
+          "Left": 593,
+          "Top": 877,
+          "Right": 607,
+          "Bottom": 903
+        },
+        {
+          "Text": "TN",
+          "Confidence": 92.89009,
+          "Left": 568,
+          "Top": 877,
+          "Right": 582,
+          "Bottom": 903
+        },
+        {
+          "Text": "EFFET",
+          "Confidence": 91.880356,
+          "Left": 764,
+          "Top": 879,
+          "Right": 779,
+          "Bottom": 954
+        },
+        {
+          "Text": "EFFET",
+          "Confidence": 91.08124,
+          "Left": 741,
+          "Top": 879,
+          "Right": 755,
+          "Bottom": 954
+        },
+        {
+          "Text": "تلكس.",
+          "Confidence": 46.86328,
+          "Left": 76,
+          "Top": 881,
+          "Right": 105,
+          "Bottom": 911
+        }
+      ]
+    },
+    {
+      "LineText": ": ESPECES ESPECES ESPECES ESPECES ESPECES",
+      "Words": [
+        {
+          "Text": "ESPECES",
+          "Confidence": 91.91334,
+          "Left": 494,
+          "Top": 891,
+          "Right": 507,
+          "Bottom": 997
+        },
+        {
+          "Text": "ESPECES",
+          "Confidence": 89.278786,
+          "Left": 369,
+          "Top": 891,
+          "Right": 383,
+          "Bottom": 996
+        },
+        {
+          "Text": ":",
+          "Confidence": 91.98123,
+          "Left": 197,
+          "Top": 892,
+          "Right": 208,
+          "Bottom": 896
+        },
+        {
+          "Text": "ESPECES",
+          "Confidence": 90.7271,
+          "Left": 667,
+          "Top": 894,
+          "Right": 682,
+          "Bottom": 1001
+        },
+        {
+          "Text": "ESPECES",
+          "Confidence": 92.198265,
+          "Left": 813,
+          "Top": 895,
+          "Right": 829,
+          "Bottom": 1002
+        },
+        {
+          "Text": "ESPECES",
+          "Confidence": 91.395485,
+          "Left": 789,
+          "Top": 895,
+          "Right": 804,
+          "Bottom": 1002
+        }
+      ]
+    },
+    {
+      "LineText": "حبس «",
+      "Words": [
+        {
+          "Text": "حبس",
+          "Confidence": 30.399452,
+          "Left": 59,
+          "Top": 906,
+          "Right": 100,
+          "Bottom": 940
+        },
+        {
+          "Text": "«",
+          "Confidence": 77.82758,
+          "Left": 85,
+          "Top": 915,
+          "Right": 88,
+          "Bottom": 918
+        }
+      ]
+    },
+    {
+      "LineText": "Mr MEME MEME AUTRE AUTRE AUTRE AUTRE",
+      "Words": [
+        {
+          "Text": "Mr",
+          "Confidence": 89.80192,
+          "Left": 196,
+          "Top": 921,
+          "Right": 209,
+          "Bottom": 947
+        },
+        {
+          "Text": "MEME",
+          "Confidence": 89.955505,
+          "Left": 468,
+          "Top": 922,
+          "Right": 482,
+          "Bottom": 982
+        },
+        {
+          "Text": "MEME",
+          "Confidence": 90.60517,
+          "Left": 444,
+          "Top": 922,
+          "Right": 458,
+          "Bottom": 982
+        },
+        {
+          "Text": "AUTRE",
+          "Confidence": 92.38919,
+          "Left": 618,
+          "Top": 924,
+          "Right": 632,
+          "Bottom": 1000
+        },
+        {
+          "Text": "AUTRE",
+          "Confidence": 93.03507,
+          "Left": 593,
+          "Top": 924,
+          "Right": 608,
+          "Bottom": 999
+        },
+        {
+          "Text": "AUTRE",
+          "Confidence": 91.26814,
+          "Left": 569,
+          "Top": 924,
+          "Right": 583,
+          "Bottom": 999
+        },
+        {
+          "Text": "AUTRE",
+          "Confidence": 92.90279,
+          "Left": 643,
+          "Top": 925,
+          "Right": 657,
+          "Bottom": 1001
+        }
+      ]
+    },
+    {
+      "LineText": "AUTRE AUTRE",
+      "Words": [
+        {
+          "Text": "AUTRE",
+          "Confidence": 91.28458,
+          "Left": 518,
+          "Top": 939,
+          "Right": 532,
+          "Bottom": 998
+        },
+        {
+          "Text": "AUTRE",
+          "Confidence": 92.06116,
+          "Left": 544,
+          "Top": 940,
+          "Right": 557,
+          "Bottom": 1015
+        }
+      ]
+    },
+    {
+      "LineText": "يحم",
+      "Words": [
+        {
+          "Text": "يحم",
+          "Confidence": 34.772995,
+          "Left": 59,
+          "Top": 950,
+          "Right": 100,
+          "Bottom": 979
+        }
+      ]
+    },
+    {
+      "LineText": ";",
+      "Words": [
+        {
+          "Text": ";",
+          "Confidence": 65.797035,
+          "Left": 86,
+          "Top": 969,
+          "Right": 89,
+          "Bottom": 972
+        }
+      ]
+    },
+    {
+      "LineText": "لم HICHEM",
+      "Words": [
+        {
+          "Text": "HICHEM",
+          "Confidence": 89.80192,
+          "Left": 195,
+          "Top": 985,
+          "Right": 209,
+          "Bottom": 1077
+        },
+        {
+          "Text": "لم",
+          "Confidence": 38.407127,
+          "Left": 59,
+          "Top": 986,
+          "Right": 100,
+          "Bottom": 1002
+        }
+      ]
+    },
+    {
+      "LineText": ". BQ BQ",
+      "Words": [
+        {
+          "Text": "BQ",
+          "Confidence": 94.966415,
+          "Left": 466,
+          "Top": 1004,
+          "Right": 482,
+          "Bottom": 1030
+        },
+        {
+          "Text": "BQ",
+          "Confidence": 96.4091,
+          "Left": 441,
+          "Top": 1004,
+          "Right": 458,
+          "Bottom": 1030
+        },
+        {
+          "Text": ".",
+          "Confidence": 57.42042,
+          "Left": 69,
+          "Top": 1009,
+          "Right": 71,
+          "Bottom": 1011
+        }
+      ]
+    },
+    {
+      "LineText": "رجو 3 BQ BQ BQ BQ",
+      "Words": [
+        {
+          "Text": "3",
+          "Confidence": 91.992744,
+          "Left": 85,
+          "Top": 1015,
+          "Right": 88,
+          "Bottom": 1019
+        },
+        {
+          "Text": "BQ",
+          "Confidence": 96.4687,
+          "Left": 640,
+          "Top": 1021,
+          "Right": 657,
+          "Bottom": 1049
+        },
+        {
+          "Text": "BQ",
+          "Confidence": 95.50481,
+          "Left": 616,
+          "Top": 1021,
+          "Right": 632,
+          "Bottom": 1049
+        },
+        {
+          "Text": "BQ",
+          "Confidence": 94.854385,
+          "Left": 591,
+          "Top": 1021,
+          "Right": 608,
+          "Bottom": 1049
+        },
+        {
+          "Text": "BQ",
+          "Confidence": 95.979744,
+          "Left": 567,
+          "Top": 1021,
+          "Right": 584,
+          "Bottom": 1048
+        },
+        {
+          "Text": "رجو",
+          "Confidence": 56.023453,
+          "Left": 59,
+          "Top": 1021,
+          "Right": 100,
+          "Bottom": 1045
+        }
+      ]
+    },
+    {
+      "LineText": "BQ BQ",
+      "Words": [
+        {
+          "Text": "BQ",
+          "Confidence": 95.69136,
+          "Left": 541,
+          "Top": 1036,
+          "Right": 558,
+          "Bottom": 1064
+        },
+        {
+          "Text": "BQ",
+          "Confidence": 94.891045,
+          "Left": 517,
+          "Top": 1037,
+          "Right": 533,
+          "Bottom": 1064
+        }
+      ]
+    },
+    {
+      "LineText": "سمح",
+      "Words": [
+        {
+          "Text": "سمح",
+          "Confidence": 13.336075,
+          "Left": 59,
+          "Top": 1057,
+          "Right": 100,
+          "Bottom": 1094
+        }
+      ]
+    },
+    {
+      "LineText": "02331128 s0140126 s0140126 43111017 03330032 03330032 00612032 00612032 78740289 s0120126 80120126 80124876 80124876 01846547 02269442 08869890 61008320 03588540 00819507 14304143",
+      "Words": [
+        {
+          "Text": "s0140126",
+          "Confidence": 91.40085,
+          "Left": 395,
+          "Top": 1084,
+          "Right": 414,
+          "Bottom": 1208
+        },
+        {
+          "Text": "02331128",
+          "Confidence": 94.09418,
+          "Left": 370,
+          "Top": 1084,
+          "Right": 389,
+          "Bottom": 1207
+        },
+        {
+          "Text": "03330032",
+          "Confidence": 93.24518,
+          "Left": 545,
+          "Top": 1085,
+          "Right": 563,
+          "Bottom": 1208
+        },
+        {
+          "Text": "03330032",
+          "Confidence": 93.299194,
+          "Left": 520,
+          "Top": 1085,
+          "Right": 538,
+          "Bottom": 1207
+        },
+        {
+          "Text": "s0140126",
+          "Confidence": 93.08255,
+          "Left": 420,
+          "Top": 1085,
+          "Right": 439,
+          "Bottom": 1208
+        },
+        {
+          "Text": "78740289",
+          "Confidence": 93.151085,
+          "Left": 668,
+          "Top": 1086,
+          "Right": 685,
+          "Bottom": 1209
+        },
+        {
+          "Text": "00612032",
+          "Confidence": 93.19646,
+          "Left": 594,
+          "Top": 1086,
+          "Right": 612,
+          "Bottom": 1208
+        },
+        {
+          "Text": "00612032",
+          "Confidence": 92.489525,
+          "Left": 570,
+          "Top": 1086,
+          "Right": 587,
+          "Bottom": 1208
+        },
+        {
+          "Text": "43111017",
+          "Confidence": 93.2965,
+          "Left": 495,
+          "Top": 1086,
+          "Right": 513,
+          "Bottom": 1207
+        },
+        {
+          "Text": "80120126",
+          "Confidence": 84.6983,
+          "Left": 718,
+          "Top": 1087,
+          "Right": 734,
+          "Bottom": 1209
+        },
+        {
+          "Text": "s0120126",
+          "Confidence": 92.97089,
+          "Left": 693,
+          "Top": 1087,
+          "Right": 709,
+          "Bottom": 1209
+        },
+        {
+          "Text": "80124876",
+          "Confidence": 93.28319,
+          "Left": 766,
+          "Top": 1088,
+          "Right": 783,
+          "Bottom": 1209
+        },
+        {
+          "Text": "14304143",
+          "Confidence": 93.30057,
+          "Left": 1107,
+          "Top": 1089,
+          "Right": 1122,
+          "Bottom": 1211
+        },
+        {
+          "Text": "00819507",
+          "Confidence": 95.96559,
+          "Left": 1058,
+          "Top": 1089,
+          "Right": 1074,
+          "Bottom": 1210
+        },
+        {
+          "Text": "03588540",
+          "Confidence": 95.302795,
+          "Left": 1035,
+          "Top": 1089,
+          "Right": 1050,
+          "Bottom": 1210
+        },
+        {
+          "Text": "08869890",
+          "Confidence": 92.99224,
+          "Left": 937,
+          "Top": 1089,
+          "Right": 952,
+          "Bottom": 1210
+        },
+        {
+          "Text": "02269442",
+          "Confidence": 93.297386,
+          "Left": 816,
+          "Top": 1089,
+          "Right": 831,
+          "Bottom": 1208
+        },
+        {
+          "Text": "01846547",
+          "Confidence": 94.72827,
+          "Left": 792,
+          "Top": 1089,
+          "Right": 807,
+          "Bottom": 1209
+        },
+        {
+          "Text": "80124876",
+          "Confidence": 93.28728,
+          "Left": 743,
+          "Top": 1089,
+          "Right": 758,
+          "Bottom": 1209
+        },
+        {
+          "Text": "61008320",
+          "Confidence": 95.56523,
+          "Left": 1010,
+          "Top": 1090,
+          "Right": 1025,
+          "Bottom": 1210
+        }
+      ]
+    },
+    {
+      "LineText": "مجيد فا ل ESSADDEM 0889228 0889228 0612032 0612032 0612142 0612142 0096922 0096922 06612135 0612135 0096937",
+      "Words": [
+        {
+          "Text": "ل",
+          "Confidence": 52.59779,
+          "Left": 89,
+          "Top": 1098,
+          "Right": 93,
+          "Bottom": 1100
+        },
+        {
+          "Text": "ESSADDEM",
+          "Confidence": 93.11645,
+          "Left": 197,
+          "Top": 1099,
+          "Right": 217,
+          "Bottom": 1223
+        },
+        {
+          "Text": "0889228",
+          "Confidence": 93.41838,
+          "Left": 471,
+          "Top": 1101,
+          "Right": 488,
+          "Bottom": 1207
+        },
+        {
+          "Text": "0889228",
+          "Confidence": 96.14054,
+          "Left": 445,
+          "Top": 1101,
+          "Right": 464,
+          "Bottom": 1207
+        },
+        {
+          "Text": "0612032",
+          "Confidence": 93.23956,
+          "Left": 644,
+          "Top": 1103,
+          "Right": 661,
+          "Bottom": 1208
+        },
+        {
+          "Text": "0612032",
+          "Confidence": 90.656,
+          "Left": 620,
+          "Top": 1103,
+          "Right": 636,
+          "Bottom": 1208
+        },
+        {
+          "Text": "مجيد",
+          "Confidence": 0,
+          "Left": 59,
+          "Top": 1103,
+          "Right": 100,
+          "Bottom": 1133
+        },
+        {
+          "Text": "فا",
+          "Confidence": 53.570347,
+          "Left": 77,
+          "Top": 1104,
+          "Right": 106,
+          "Bottom": 1123
+        },
+        {
+          "Text": "0096922",
+          "Confidence": 96.127914,
+          "Left": 888,
+          "Top": 1105,
+          "Right": 903,
+          "Bottom": 1209
+        },
+        {
+          "Text": "0612142",
+          "Confidence": 96.10742,
+          "Left": 864,
+          "Top": 1105,
+          "Right": 879,
+          "Bottom": 1208
+        },
+        {
+          "Text": "0612142",
+          "Confidence": 96.04633,
+          "Left": 839,
+          "Top": 1105,
+          "Right": 855,
+          "Bottom": 1209
+        },
+        {
+          "Text": "0096937",
+          "Confidence": 95.08466,
+          "Left": 1083,
+          "Top": 1106,
+          "Right": 1098,
+          "Bottom": 1210
+        },
+        {
+          "Text": "0612135",
+          "Confidence": 95.61079,
+          "Left": 986,
+          "Top": 1106,
+          "Right": 1001,
+          "Bottom": 1210
+        },
+        {
+          "Text": "06612135",
+          "Confidence": 58.92845,
+          "Left": 962,
+          "Top": 1106,
+          "Right": 976,
+          "Bottom": 1210
+        },
+        {
+          "Text": "0096922",
+          "Confidence": 95.85878,
+          "Left": 913,
+          "Top": 1106,
+          "Right": 928,
+          "Bottom": 1209
+        }
+      ]
+    },
+    {
+      "LineText": ";",
+      "Words": [
+        {
+          "Text": ";",
+          "Confidence": 76.90281,
+          "Left": 124,
+          "Top": 1120,
+          "Right": 130,
+          "Bottom": 1187
+        }
+      ]
+    },
+    {
+      "LineText": "جر",
+      "Words": [
+        {
+          "Text": "جر",
+          "Confidence": 41.037323,
+          "Left": 59,
+          "Top": 1142,
+          "Right": 100,
+          "Bottom": 1156
+        }
+      ]
+    },
+    {
+      "LineText": "كفا",
+      "Words": [
+        {
+          "Text": "كفا",
+          "Confidence": 25.100372,
+          "Left": 59,
+          "Top": 1168,
+          "Right": 100,
+          "Bottom": 1194
+        }
+      ]
+    },
+    {
+      "LineText": "٠٠",
+      "Words": [
+        {
+          "Text": "٠٠",
+          "Confidence": 83.12456,
+          "Left": 78,
+          "Top": 1182,
+          "Right": 108,
+          "Bottom": 1190
+        }
+      ]
+    },
+    {
+      "LineText": "مكوجة بورقيية",
+      "Words": [
+        {
+          "Text": "بورقيية",
+          "Confidence": 64.15149,
+          "Left": 78,
+          "Top": 1197,
+          "Right": 108,
+          "Bottom": 1233
+        },
+        {
+          "Text": "مكوجة",
+          "Confidence": 0,
+          "Left": 59,
+          "Top": 1203,
+          "Right": 100,
+          "Bottom": 1258
+        }
+      ]
+    },
+    {
+      "LineText": "           ",
+      "Words": [
+        {
+          "Text": "",
+          "Confidence": 0,
+          "Left": 465,
+          "Top": 1225,
+          "Right": 494,
+          "Bottom": 1240
+        },
+        {
+          "Text": "",
+          "Confidence": 0,
+          "Left": 390,
+          "Top": 1225,
+          "Right": 420,
+          "Bottom": 1238
+        },
+        {
+          "Text": "",
+          "Confidence": 21.600334,
+          "Left": 363,
+          "Top": 1225,
+          "Right": 396,
+          "Bottom": 1237
+        },
+        {
+          "Text": "",
+          "Confidence": 6.7805023,
+          "Left": 438,
+          "Top": 1226,
+          "Right": 471,
+          "Bottom": 1240
+        },
+        {
+          "Text": "",
+          "Confidence": 25.349442,
+          "Left": 412,
+          "Top": 1226,
+          "Right": 445,
+          "Bottom": 1238
+        },
+        {
+          "Text": "",
+          "Confidence": 22.632408,
+          "Left": 783,
+          "Top": 1228,
+          "Right": 816,
+          "Bottom": 1242
+        },
+        {
+          "Text": "",
+          "Confidence": 11.993774,
+          "Left": 734,
+          "Top": 1228,
+          "Right": 767,
+          "Bottom": 1242
+        },
+        {
+          "Text": "",
+          "Confidence": 0,
+          "Left": 1050,
+          "Top": 1229,
+          "Right": 1082,
+          "Bottom": 1243
+        },
+        {
+          "Text": "",
+          "Confidence": 0,
+          "Left": 928,
+          "Top": 1229,
+          "Right": 960,
+          "Bottom": 1243
+        },
+        {
+          "Text": "",
+          "Confidence": 0,
+          "Left": 953,
+          "Top": 1230,
+          "Right": 985,
+          "Bottom": 1244
+        },
+        {
+          "Text": "",
+          "Confidence": 6.949074,
+          "Left": 904,
+          "Top": 1230,
+          "Right": 936,
+          "Bottom": 1244
+        },
+        {
+          "Text": "",
+          "Confidence": 18.668861,
+          "Left": 977,
+          "Top": 1231,
+          "Right": 1010,
+          "Bottom": 1243
+        }
+      ]
+    },
+    {
+      "LineText": "الحبيب 19012026 14012026 14012026 15012026 15012026 16012026 13012026 13012026 13012026 13012026 13012026 13012026 1501202€ 12012026 12012026 09012026 09012026 12012026 09012026 08012026 09012026 06012026 06012026 06012026 08012026 07012026 حسناد",
+      "Words": [
+        {
+          "Text": "الحبيب",
+          "Confidence": 71.06385,
+          "Left": 78,
+          "Top": 1238,
+          "Right": 108,
+          "Bottom": 1272
+        },
+        {
+          "Text": "حسناد",
+          "Confidence": 19.300568,
+          "Left": 1254,
+          "Top": 1240,
+          "Right": 1288,
+          "Bottom": 1272
+        },
+        {
+          "Text": "14012026",
+          "Confidence": 0,
+          "Left": 396,
+          "Top": 1246,
+          "Right": 416,
+          "Bottom": 1369
+        },
+        {
+          "Text": "19012026",
+          "Confidence": 21.600334,
+          "Left": 371,
+          "Top": 1246,
+          "Right": 391,
+          "Bottom": 1369
+        },
+        {
+          "Text": "09012026",
+          "Confidence": 74.496765,
+          "Left": 768,
+          "Top": 1247,
+          "Right": 783,
+          "Bottom": 1368
+        },
+        {
+          "Text": "09012026",
+          "Confidence": 11.993774,
+          "Left": 743,
+          "Top": 1247,
+          "Right": 758,
+          "Bottom": 1368
+        },
+        {
+          "Text": "13012026",
+          "Confidence": 90.683365,
+          "Left": 571,
+          "Top": 1247,
+          "Right": 588,
+          "Bottom": 1368
+        },
+        {
+          "Text": "13012026",
+          "Confidence": 89.28311,
+          "Left": 546,
+          "Top": 1247,
+          "Right": 563,
+          "Bottom": 1368
+        },
+        {
+          "Text": "13012026",
+          "Confidence": 80.77992,
+          "Left": 521,
+          "Top": 1247,
+          "Right": 539,
+          "Bottom": 1368
+        },
+        {
+          "Text": "16012026",
+          "Confidence": 89.73712,
+          "Left": 496,
+          "Top": 1247,
+          "Right": 515,
+          "Bottom": 1368
+        },
+        {
+          "Text": "15012026",
+          "Confidence": 0,
+          "Left": 471,
+          "Top": 1247,
+          "Right": 490,
+          "Bottom": 1369
+        },
+        {
+          "Text": "15012026",
+          "Confidence": 6.7805023,
+          "Left": 446,
+          "Top": 1247,
+          "Right": 465,
+          "Bottom": 1368
+        },
+        {
+          "Text": "14012026",
+          "Confidence": 0,
+          "Left": 420,
+          "Top": 1247,
+          "Right": 440,
+          "Bottom": 1368
+        },
+        {
+          "Text": "07012026",
+          "Confidence": 0,
+          "Left": 1059,
+          "Top": 1248,
+          "Right": 1076,
+          "Bottom": 1371
+        },
+        {
+          "Text": "08012026",
+          "Confidence": 16.461678,
+          "Left": 1035,
+          "Top": 1248,
+          "Right": 1051,
+          "Bottom": 1371
+        },
+        {
+          "Text": "06012026",
+          "Confidence": 91.3255,
+          "Left": 1011,
+          "Top": 1248,
+          "Right": 1026,
+          "Bottom": 1371
+        },
+        {
+          "Text": "06012026",
+          "Confidence": 18.668861,
+          "Left": 987,
+          "Top": 1248,
+          "Right": 1002,
+          "Bottom": 1371
+        },
+        {
+          "Text": "06012026",
+          "Confidence": 0,
+          "Left": 963,
+          "Top": 1248,
+          "Right": 977,
+          "Bottom": 1370
+        },
+        {
+          "Text": "09012026",
+          "Confidence": 0,
+          "Left": 938,
+          "Top": 1248,
+          "Right": 952,
+          "Bottom": 1369
+        },
+        {
+          "Text": "08012026",
+          "Confidence": 6.949074,
+          "Left": 914,
+          "Top": 1248,
+          "Right": 928,
+          "Bottom": 1368
+        },
+        {
+          "Text": "09012026",
+          "Confidence": 87.9325,
+          "Left": 817,
+          "Top": 1248,
+          "Right": 831,
+          "Bottom": 1368
+        },
+        {
+          "Text": "12012026",
+          "Confidence": 22.632408,
+          "Left": 793,
+          "Top": 1248,
+          "Right": 807,
+          "Bottom": 1368
+        },
+        {
+          "Text": "12012026",
+          "Confidence": 90.31331,
+          "Left": 719,
+          "Top": 1248,
+          "Right": 734,
+          "Bottom": 1368
+        },
+        {
+          "Text": "12012026",
+          "Confidence": 90.72014,
+          "Left": 694,
+          "Top": 1248,
+          "Right": 709,
+          "Bottom": 1368
+        },
+        {
+          "Text": "1501202€",
+          "Confidence": 76.34406,
+          "Left": 669,
+          "Top": 1248,
+          "Right": 685,
+          "Bottom": 1368
+        },
+        {
+          "Text": "13012026",
+          "Confidence": 89.27549,
+          "Left": 644,
+          "Top": 1248,
+          "Right": 661,
+          "Bottom": 1368
+        },
+        {
+          "Text": "13012026",
+          "Confidence": 88.934326,
+          "Left": 620,
+          "Top": 1248,
+          "Right": 637,
+          "Bottom": 1368
+        },
+        {
+          "Text": "13012026",
+          "Confidence": 91.22529,
+          "Left": 595,
+          "Top": 1248,
+          "Right": 612,
+          "Bottom": 1368
+        }
+      ]
+    },
+    {
+      "LineText": "02012026 31122025",
+      "Words": [
+        {
+          "Text": "31122025",
+          "Confidence": 83.007996,
+          "Left": 1108,
+          "Top": 1249,
+          "Right": 1125,
+          "Bottom": 1370
+        },
+        {
+          "Text": "02012026",
+          "Confidence": 91.09151,
+          "Left": 1084,
+          "Top": 1249,
+          "Right": 1100,
+          "Bottom": 1371
+        }
+      ]
+    },
+    {
+      "LineText": "اا .",
+      "Words": [
+        {
+          "Text": ".",
+          "Confidence": 0,
+          "Left": 79,
+          "Top": 1265,
+          "Right": 83,
+          "Bottom": 1268
+        },
+        {
+          "Text": "اا",
+          "Confidence": 0,
+          "Left": 59,
+          "Top": 1275,
+          "Right": 100,
+          "Bottom": 1291
+        }
+      ]
+    },
+    {
+      "LineText": "قيولا",
+      "Words": [
+        {
+          "Text": "قيولا",
+          "Confidence": 87.86904,
+          "Left": 1254,
+          "Top": 1278,
+          "Right": 1288,
+          "Bottom": 1308
+        }
+      ]
+    },
+    {
+      "LineText": "12026 12026",
+      "Words": [
+        {
+          "Text": "12026",
+          "Confidence": 95.14292,
+          "Left": 866,
+          "Top": 1298,
+          "Right": 880,
+          "Bottom": 1368
+        },
+        {
+          "Text": "12026",
+          "Confidence": 96.62742,
+          "Left": 890,
+          "Top": 1299,
+          "Right": 904,
+          "Bottom": 1368
+        }
+      ]
+    },
+    {
+      "LineText": "لكم",
+      "Words": [
+        {
+          "Text": "لكم",
+          "Confidence": 92.81119,
+          "Left": 1254,
+          "Top": 1314,
+          "Right": 1288,
+          "Bottom": 1336
+        }
+      ]
+    },
+    {
+      "LineText": "026 2013 07 STE",
+      "Words": [
+        {
+          "Text": "026",
+          "Confidence": 93.953445,
+          "Left": 842,
+          "Top": 1328,
+          "Right": 855,
+          "Bottom": 1368
+        },
+        {
+          "Text": "2013",
+          "Confidence": 93.30378,
+          "Left": 1354,
+          "Top": 1329,
+          "Right": 1372,
+          "Bottom": 1388
+        },
+        {
+          "Text": "STE",
+          "Confidence": 92.54597,
+          "Left": 1428,
+          "Top": 1330,
+          "Right": 1444,
+          "Bottom": 1373
+        },
+        {
+          "Text": "07",
+          "Confidence": 95.90754,
+          "Left": 1403,
+          "Top": 1331,
+          "Right": 1420,
+          "Bottom": 1357
+        }
+      ]
+    },
+    {
+      "LineText": "وتتمنى",
+      "Words": [
+        {
+          "Text": "وتتمنى",
+          "Confidence": 76.837845,
+          "Left": 1254,
+          "Top": 1344,
+          "Right": 1288,
+          "Bottom": 1379
+        }
+      ]
+    },
+    {
+      "LineText": "دفتزلا. AV",
+      "Words": [
+        {
+          "Text": "AV",
+          "Confidence": 92.00069,
+          "Left": 1405,
+          "Top": 1377,
+          "Right": 1421,
+          "Bottom": 1406
+        },
+        {
+          "Text": "دفتزلا.",
+          "Confidence": 17.201698,
+          "Left": 1254,
+          "Top": 1384,
+          "Right": 1288,
+          "Bottom": 1418
+        }
+      ]
+    },
+    {
+      "LineText": "4 UNIVERS",
+      "Words": [
+        {
+          "Text": "UNIVERS",
+          "Confidence": 91.630196,
+          "Left": 1430,
+          "Top": 1395,
+          "Right": 1446,
+          "Bottom": 1501
+        },
+        {
+          "Text": "4",
+          "Confidence": 72.90709,
+          "Left": 230,
+          "Top": 1405,
+          "Right": 238,
+          "Bottom": 1416
+        }
+      ]
+    },
+    {
+      "LineText": "BEN RELEVE",
+      "Words": [
+        {
+          "Text": "BEN",
+          "Confidence": 91.96267,
+          "Left": 1357,
+          "Top": 1411,
+          "Right": 1372,
+          "Bottom": 1454
+        },
+        {
+          "Text": "RELEVE",
+          "Confidence": 92.20924,
+          "Left": 1647,
+          "Top": 1415,
+          "Right": 1662,
+          "Bottom": 1508
+        }
+      ]
+    },
+    {
+      "LineText": "في DE",
+      "Words": [
+        {
+          "Text": "في",
+          "Confidence": 75.33217,
+          "Left": 1254,
+          "Top": 1424,
+          "Right": 1288,
+          "Bottom": 1436
+        },
+        {
+          "Text": "DE",
+          "Confidence": 92.725006,
+          "Left": 1406,
+          "Top": 1427,
+          "Right": 1421,
+          "Bottom": 1454
+        }
+      ]
+    },
+    {
+      "LineText": "بحسايكم",
+      "Words": [
+        {
+          "Text": "بحسايكم",
+          "Confidence": 81.73438,
+          "Left": 1254,
+          "Top": 1441,
+          "Right": 1288,
+          "Bottom": 1489
+        }
+      ]
+    },
+    {
+      "LineText": "AROUS PARIS",
+      "Words": [
+        {
+          "Text": "AROUS",
+          "Confidence": 90.86064,
+          "Left": 1357,
+          "Top": 1474,
+          "Right": 1373,
+          "Bottom": 1550
+        },
+        {
+          "Text": "PARIS",
+          "Confidence": 90.76445,
+          "Left": 1407,
+          "Top": 1476,
+          "Right": 1422,
+          "Bottom": 1551
+        }
+      ]
+    },
+    {
+      "LineText": "3.000,000 1.345,687 1.307,000 1.194,000 1.927,000 2.000,000 1.200,000 1.600,000 المسجلة",
+      "Words": [
+        {
+          "Text": "2.000,000",
+          "Confidence": 90.856735,
+          "Left": 1011,
+          "Top": 1489,
+          "Right": 1029,
+          "Bottom": 1628
+        },
+        {
+          "Text": "3.000,000",
+          "Confidence": 91.39019,
+          "Left": 568,
+          "Top": 1489,
+          "Right": 586,
+          "Bottom": 1626
+        },
+        {
+          "Text": "1.600,000",
+          "Confidence": 91.28839,
+          "Left": 1109,
+          "Top": 1490,
+          "Right": 1126,
+          "Bottom": 1628
+        },
+        {
+          "Text": "1.200,000",
+          "Confidence": 91.961136,
+          "Left": 1085,
+          "Top": 1490,
+          "Right": 1102,
+          "Bottom": 1628
+        },
+        {
+          "Text": "1.927,000",
+          "Confidence": 90.48057,
+          "Left": 962,
+          "Top": 1490,
+          "Right": 980,
+          "Bottom": 1628
+        },
+        {
+          "Text": "1.194,000",
+          "Confidence": 89.98444,
+          "Left": 888,
+          "Top": 1490,
+          "Right": 906,
+          "Bottom": 1628
+        },
+        {
+          "Text": "1.307,000",
+          "Confidence": 92.06801,
+          "Left": 839,
+          "Top": 1490,
+          "Right": 857,
+          "Bottom": 1627
+        },
+        {
+          "Text": "1.345,687",
+          "Confidence": 92.29879,
+          "Left": 741,
+          "Top": 1490,
+          "Right": 759,
+          "Bottom": 1625
+        },
+        {
+          "Text": "المسجلة",
+          "Confidence": 74.755005,
+          "Left": 1254,
+          "Top": 1497,
+          "Right": 1288,
+          "Bottom": 1542
+        }
+      ]
+    },
+    {
+      "LineText": "790,000 PARA DE",
+      "Words": [
+        {
+          "Text": "DE",
+          "Confidence": 96.066086,
+          "Left": 1647,
+          "Top": 1520,
+          "Right": 1661,
+          "Bottom": 1549
+        },
+        {
+          "Text": "790,000",
+          "Confidence": 95.5643,
+          "Left": 442,
+          "Top": 1521,
+          "Right": 461,
+          "Bottom": 1627
+        },
+        {
+          "Text": "PARA",
+          "Confidence": 91.46014,
+          "Left": 1431,
+          "Top": 1524,
+          "Right": 1447,
+          "Bottom": 1583
+        }
+      ]
+    },
+    {
+      "LineText": "0,950 5,000 1,190 2 0,950 5,000 4,165 1,190 1,190 2,618 لتعمليات",
+      "Words": [
+        {
+          "Text": "لتعمليات",
+          "Confidence": 85.94618,
+          "Left": 1254,
+          "Top": 1548,
+          "Right": 1288,
+          "Bottom": 1597
+        },
+        {
+          "Text": "2",
+          "Confidence": 96.79687,
+          "Left": 596,
+          "Top": 1553,
+          "Right": 610,
+          "Bottom": 1562
+        },
+        {
+          "Text": "2,618",
+          "Confidence": 95.02939,
+          "Left": 986,
+          "Top": 1554,
+          "Right": 1004,
+          "Bottom": 1627
+        },
+        {
+          "Text": "4,165",
+          "Confidence": 96.07313,
+          "Left": 766,
+          "Top": 1554,
+          "Right": 783,
+          "Bottom": 1627
+        },
+        {
+          "Text": "5,000",
+          "Confidence": 96.365974,
+          "Left": 716,
+          "Top": 1554,
+          "Right": 734,
+          "Bottom": 1626
+        },
+        {
+          "Text": "0,950",
+          "Confidence": 90.84446,
+          "Left": 692,
+          "Top": 1554,
+          "Right": 709,
+          "Bottom": 1626
+        },
+        {
+          "Text": "1,190",
+          "Confidence": 95.86191,
+          "Left": 467,
+          "Top": 1554,
+          "Right": 486,
+          "Bottom": 1627
+        },
+        {
+          "Text": "5,000",
+          "Confidence": 96.87265,
+          "Left": 417,
+          "Top": 1554,
+          "Right": 436,
+          "Bottom": 1627
+        },
+        {
+          "Text": "0,950",
+          "Confidence": 92.700096,
+          "Left": 392,
+          "Top": 1554,
+          "Right": 412,
+          "Bottom": 1627
+        },
+        {
+          "Text": "1,190",
+          "Confidence": 94.76151,
+          "Left": 864,
+          "Top": 1555,
+          "Right": 882,
+          "Bottom": 1627
+        },
+        {
+          "Text": "1,190",
+          "Confidence": 95.76288,
+          "Left": 913,
+          "Top": 1556,
+          "Right": 931,
+          "Bottom": 1628
+        }
+      ]
+    },
+    {
+      "LineText": "CON",
+      "Words": [
+        {
+          "Text": "CON",
+          "Confidence": 70.61706,
+          "Left": 1647,
+          "Top": 1561,
+          "Right": 1661,
+          "Bottom": 1610
+        }
+      ]
+    },
+    {
+      "LineText": "BEN",
+      "Words": [
+        {
+          "Text": "BEN",
+          "Confidence": 85.99488,
+          "Left": 1406,
+          "Top": 1588,
+          "Right": 1422,
+          "Bottom": 1631
+        }
+      ]
+    },
+    {
+      "LineText": "المفصل",
+      "Words": [
+        {
+          "Text": "المفصل",
+          "Confidence": 91.29772,
+          "Left": 1254,
+          "Top": 1603,
+          "Right": 1288,
+          "Bottom": 1646
+        }
+      ]
+    },
+    {
+      "LineText": "الكشف AROUS,",
+      "Words": [
+        {
+          "Text": "AROUS,",
+          "Confidence": 90.3799,
+          "Left": 1404,
+          "Top": 1650,
+          "Right": 1422,
+          "Bottom": 1740
+        },
+        {
+          "Text": "الكشف",
+          "Confidence": 83.98794,
+          "Left": 1254,
+          "Top": 1652,
+          "Right": 1288,
+          "Bottom": 1687
+        }
+      ]
+    },
+    {
+      "LineText": "أسقله",
+      "Words": [
+        {
+          "Text": "أسقله",
+          "Confidence": 13.774872,
+          "Left": 1254,
+          "Top": 1692,
+          "Right": 1288,
+          "Bottom": 1725
+        }
+      ]
+    },
+    {
+      "LineText": "لكو",
+      "Words": [
+        {
+          "Text": "لكو",
+          "Confidence": 85.17317,
+          "Left": 1254,
+          "Top": 1730,
+          "Right": 1288,
+          "Bottom": 1750
+        }
+      ]
+    },
+    {
+      "LineText": "3.370,000 1.250,000 1.300,000 1.000,000 1.748, 2.260,000 4.112,",
+      "Words": [
+        {
+          "Text": "3.370,000",
+          "Confidence": 86.89036,
+          "Left": 373,
+          "Top": 1745,
+          "Right": 392,
+          "Bottom": 1883
+        },
+        {
+          "Text": "2.260,000",
+          "Confidence": 91.99346,
+          "Left": 1062,
+          "Top": 1747,
+          "Right": 1080,
+          "Bottom": 1887
+        },
+        {
+          "Text": "1.000,000",
+          "Confidence": 91.57741,
+          "Left": 816,
+          "Top": 1747,
+          "Right": 834,
+          "Bottom": 1886
+        },
+        {
+          "Text": "1.300,000",
+          "Confidence": 90.44002,
+          "Left": 792,
+          "Top": 1747,
+          "Right": 809,
+          "Bottom": 1886
+        },
+        {
+          "Text": "1.250,000",
+          "Confidence": 91.51366,
+          "Left": 668,
+          "Top": 1747,
+          "Right": 686,
+          "Bottom": 1886
+        },
+        {
+          "Text": "4.112,",
+          "Confidence": 87.348526,
+          "Left": 1160,
+          "Top": 1748,
+          "Right": 1179,
+          "Bottom": 1888
+        },
+        {
+          "Text": "1.748,",
+          "Confidence": 90.32086,
+          "Left": 1037,
+          "Top": 1748,
+          "Right": 1056,
+          "Bottom": 1887
+        }
+      ]
+    },
+    {
+      "LineText": "تقدم :",
+      "Words": [
+        {
+          "Text": "تقدم",
+          "Confidence": 92.155525,
+          "Left": 1254,
+          "Top": 1758,
+          "Right": 1288,
+          "Bottom": 1784
+        },
+        {
+          "Text": ":",
+          "Confidence": 89.31311,
+          "Left": 1296,
+          "Top": 1768,
+          "Right": 1298,
+          "Bottom": 1770
+        }
+      ]
+    },
+    {
+      "LineText": ") 800,000 300,000 الكويم",
+      "Words": [
+        {
+          "Text": "الكويم",
+          "Confidence": 85.7483,
+          "Left": 1283,
+          "Top": 1777,
+          "Right": 1313,
+          "Bottom": 1813
+        },
+        {
+          "Text": "300,000",
+          "Confidence": 96.38718,
+          "Left": 521,
+          "Top": 1778,
+          "Right": 538,
+          "Bottom": 1885
+        },
+        {
+          "Text": "800,000",
+          "Confidence": 92.531876,
+          "Left": 496,
+          "Top": 1778,
+          "Right": 514,
+          "Bottom": 1885
+        },
+        {
+          "Text": ")",
+          "Confidence": 64.30351,
+          "Left": 198,
+          "Top": 1784,
+          "Right": 200,
+          "Bottom": 1788
+        }
+      ]
+    },
+    {
+      "LineText": "بآن",
+      "Words": [
+        {
+          "Text": "بآن",
+          "Confidence": 67.16301,
+          "Left": 1254,
+          "Top": 1790,
+          "Right": 1288,
+          "Bottom": 1810
+        }
+      ]
+    },
+    {
+      "LineText": "2,618 تتشرف حريلنا",
+      "Words": [
+        {
+          "Text": "2,618",
+          "Confidence": 74.81169,
+          "Left": 545,
+          "Top": 1809,
+          "Right": 563,
+          "Bottom": 1885
+        },
+        {
+          "Text": "حريلنا",
+          "Confidence": 57.27118,
+          "Left": 1283,
+          "Top": 1818,
+          "Right": 1313,
+          "Bottom": 1860
+        },
+        {
+          "Text": "تتشرف",
+          "Confidence": 82.17264,
+          "Left": 1254,
+          "Top": 1818,
+          "Right": 1288,
+          "Bottom": 1851
+        }
+      ]
+    },
+    {
+      "LineText": "- 0 6",
+      "Words": [
+        {
+          "Text": "0",
+          "Confidence": 86.13976,
+          "Left": 1030,
+          "Top": 1869,
+          "Right": 1063,
+          "Bottom": 1891
+        },
+        {
+          "Text": "6",
+          "Confidence": 66.728386,
+          "Left": 1154,
+          "Top": 1870,
+          "Right": 1183,
+          "Bottom": 1891
+        },
+        {
+          "Text": "-",
+          "Confidence": 94.928925,
+          "Left": 223,
+          "Top": 1870,
+          "Right": 230,
+          "Bottom": 1882
+        }
+      ]
+    }
+  ]
+}

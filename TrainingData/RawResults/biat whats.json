@@ -1,0 +1,3132 @@
+{
+  "FileName": "biat whats.jpeg",
+  "DetectedType": "Bank",
+  "PageCount": 1,
+  "OcrConfidence": 87,
+  "NeedsReview": true,
+  "RawOcrText": null,
+  "Document": {
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "BankName": "Banque Internationale Arabe de Tunisie (BIAT)",
+    "Accounts": []
+  },
+  "DebugLines": [
+    "BIAT COMPTE",
+    "RELEVÉ DE MENSUEL",
+    "الدولي العربي",
+    "تونس e بنك",
+    "ممعي mmms عع r",
+    "الحساب صاحب",
+    "Titulaire du compte",
+    "108 102 00073 10 05744 9 33",
+    "Pago",
+    "30 06 2026",
+    "حسنا. Vy لكم ونتمنى",
+    "الفاعلية تاريخ —=",
+    "Date de valeur",
+    "SOLDE AU 31 05 2026",
+    "VERSEMENT ESPECES 50790810",
+    "VERSEMENT  ESPECES 01580330",
+    "5839251",
+    "5839251",
+    "10589601",
+    "01965314",
+    "01965314",
+    "26957445",
+    "26957445",
+    "s0150626",
+    "s0150626",
+    "IEM 21376162",
+    "BAIEMENÎ 21376162",
+    "FFET 18062026",
+    "PAIEMENT EFFET 17085981",
+    "17085981 18062026",
+    "PAIEMENT EFFET 18062026",
+    "REDRESSEMENT 50180626",
+    "s0180626 18062026",
+    "REDRESSEMENT 19062026",
+    "EFFET 01965605",
+    "PAIEMENT 01965605 19062026",
+    "22 06 PAIEMENT EFFET 19062026",
+    "s0190626",
+    "22 06 REDRESSEMENT s0190626 19062026",
+    "22 06 REDRESSEMENT 02298168 22062026",
+    "PRELEVEMENT BANCAIRE 22062026",
+    "23 06 BANCAIRE 02298168",
+    "23 06 PRELEVEMENT s0220626 22062026",
+    "23 06 REDRESSEMENT 626 22062026",
+    "REDRESSEMENT s0",
+    "23 06 24062026",
+    "coM TVA/REJET BEBEZ ; 23062026",
+    "24 06",
+    "24 06 REDRESSEMENT 3062026",
+    "24 06 REDRESSEMENT 062026 ;",
+    "VERSEMENT ESPECES 26 .000,",
+    "25 06 ESPECES",
+    "06 VERSEMENT 5 1,190",
+    "26 VIREMENT TN MEMECB",
+    "& 06",
+    "لسسع DINAR TUNISIEN",
+    "Devise 72073 / 70242073",
+    "ESSADDE",
+    "Mr HICHEM",
+    "pirecteur Agence : en م"
+  ],
+  "Words": [
+    {
+      "Text": "BIAT",
+      "Confidence": 90.2671,
+      "Left": 168,
+      "Top": 59,
+      "Right": 335,
+      "Bottom": 112
+    },
+    {
+      "Text": "بنك",
+      "Confidence": 95.57953,
+      "Left": 314,
+      "Top": 131,
+      "Right": 330,
+      "Bottom": 136
+    },
+    {
+      "Text": "تونس",
+      "Confidence": 91.74872,
+      "Left": 276,
+      "Top": 133,
+      "Right": 302,
+      "Bottom": 139
+    },
+    {
+      "Text": "العربي",
+      "Confidence": 92.418976,
+      "Left": 227,
+      "Top": 118,
+      "Right": 270,
+      "Bottom": 146
+    },
+    {
+      "Text": "الدولي",
+      "Confidence": 53.516216,
+      "Left": 170,
+      "Top": 118,
+      "Right": 216,
+      "Bottom": 146
+    },
+    {
+      "Text": "e",
+      "Confidence": 42.513218,
+      "Left": 299,
+      "Top": 136,
+      "Right": 304,
+      "Bottom": 164
+    },
+    {
+      "Text": "r",
+      "Confidence": 49.044567,
+      "Left": 308,
+      "Top": 149,
+      "Right": 335,
+      "Bottom": 155
+    },
+    {
+      "Text": "عع",
+      "Confidence": 19.616959,
+      "Left": 270,
+      "Top": 150,
+      "Right": 305,
+      "Bottom": 155
+    },
+    {
+      "Text": "mmms",
+      "Confidence": 0,
+      "Left": 205,
+      "Top": 150,
+      "Right": 267,
+      "Bottom": 155
+    },
+    {
+      "Text": "ممعي",
+      "Confidence": 17.539177,
+      "Left": 170,
+      "Top": 149,
+      "Right": 200,
+      "Bottom": 156
+    },
+    {
+      "Text": "108",
+      "Confidence": 66.921646,
+      "Left": 136,
+      "Top": 284,
+      "Right": 164,
+      "Bottom": 302
+    },
+    {
+      "Text": "102",
+      "Confidence": 96.81956,
+      "Left": 185,
+      "Top": 284,
+      "Right": 220,
+      "Bottom": 298
+    },
+    {
+      "Text": "00073",
+      "Confidence": 95.70468,
+      "Left": 241,
+      "Top": 283,
+      "Right": 304,
+      "Bottom": 297
+    },
+    {
+      "Text": "10",
+      "Confidence": 95.9121,
+      "Left": 325,
+      "Top": 282,
+      "Right": 346,
+      "Bottom": 295
+    },
+    {
+      "Text": "05744",
+      "Confidence": 96.20896,
+      "Left": 366,
+      "Top": 280,
+      "Right": 428,
+      "Bottom": 294
+    },
+    {
+      "Text": "9",
+      "Confidence": 92.64805,
+      "Left": 450,
+      "Top": 280,
+      "Right": 457,
+      "Bottom": 292
+    },
+    {
+      "Text": "33",
+      "Confidence": 92.64805,
+      "Left": 478,
+      "Top": 279,
+      "Right": 498,
+      "Bottom": 292
+    },
+    {
+      "Text": "Pago",
+      "Confidence": 74.349365,
+      "Left": 486,
+      "Top": 325,
+      "Right": 525,
+      "Bottom": 341
+    },
+    {
+      "Text": "30",
+      "Confidence": 96.79057,
+      "Left": 298,
+      "Top": 368,
+      "Right": 319,
+      "Bottom": 382
+    },
+    {
+      "Text": "06",
+      "Confidence": 95.204506,
+      "Left": 339,
+      "Top": 367,
+      "Right": 361,
+      "Bottom": 381
+    },
+    {
+      "Text": "2026",
+      "Confidence": 96.55469,
+      "Left": 380,
+      "Top": 365,
+      "Right": 431,
+      "Bottom": 379
+    },
+    {
+      "Text": "31",
+      "Confidence": 96.257484,
+      "Left": 328,
+      "Top": 519,
+      "Right": 349,
+      "Bottom": 532
+    },
+    {
+      "Text": "05",
+      "Confidence": 94.63181,
+      "Left": 370,
+      "Top": 517,
+      "Right": 391,
+      "Bottom": 530
+    },
+    {
+      "Text": "2026",
+      "Confidence": 96.0347,
+      "Left": 411,
+      "Top": 516,
+      "Right": 460,
+      "Bottom": 529
+    },
+    {
+      "Text": "SOLDE",
+      "Confidence": 91.94858,
+      "Left": 188,
+      "Top": 522,
+      "Right": 254,
+      "Bottom": 537
+    },
+    {
+      "Text": "AU",
+      "Confidence": 96.48064,
+      "Left": 271,
+      "Top": 521,
+      "Right": 295,
+      "Bottom": 534
+    },
+    {
+      "Text": "VERSEMENT",
+      "Confidence": 88.00552,
+      "Left": 120,
+      "Top": 564,
+      "Right": 255,
+      "Bottom": 586
+    },
+    {
+      "Text": "ESPECES",
+      "Confidence": 92.201775,
+      "Left": 272,
+      "Top": 562,
+      "Right": 364,
+      "Bottom": 577
+    },
+    {
+      "Text": "50790810",
+      "Confidence": 96.85556,
+      "Left": 439,
+      "Top": 557,
+      "Right": 543,
+      "Bottom": 572
+    },
+    {
+      "Text": "",
+      "Confidence": 90.33046,
+      "Left": 131,
+      "Top": 587,
+      "Right": 133,
+      "Bottom": 589
+    },
+    {
+      "Text": "VERSEMENT",
+      "Confidence": 90.33046,
+      "Left": 128,
+      "Top": 586,
+      "Right": 255,
+      "Bottom": 604
+    },
+    {
+      "Text": "ESPECES",
+      "Confidence": 92.5546,
+      "Left": 272,
+      "Top": 583,
+      "Right": 365,
+      "Bottom": 598
+    },
+    {
+      "Text": "01580330",
+      "Confidence": 96.207825,
+      "Left": 440,
+      "Top": 578,
+      "Right": 543,
+      "Bottom": 593
+    },
+    {
+      "Text": "5839251",
+      "Confidence": 96.80725,
+      "Left": 454,
+      "Top": 600,
+      "Right": 542,
+      "Bottom": 614
+    },
+    {
+      "Text": "5839251",
+      "Confidence": 96.645676,
+      "Left": 454,
+      "Top": 621,
+      "Right": 542,
+      "Bottom": 635
+    },
+    {
+      "Text": "10589601",
+      "Confidence": 95.57498,
+      "Left": 441,
+      "Top": 642,
+      "Right": 543,
+      "Bottom": 656
+    },
+    {
+      "Text": "01965314",
+      "Confidence": 95.890915,
+      "Left": 441,
+      "Top": 664,
+      "Right": 543,
+      "Bottom": 678
+    },
+    {
+      "Text": "01965314",
+      "Confidence": 88.61988,
+      "Left": 441,
+      "Top": 684,
+      "Right": 543,
+      "Bottom": 699
+    },
+    {
+      "Text": "26957445",
+      "Confidence": 96.5964,
+      "Left": 441,
+      "Top": 705,
+      "Right": 544,
+      "Bottom": 720
+    },
+    {
+      "Text": "26957445",
+      "Confidence": 96.56695,
+      "Left": 441,
+      "Top": 726,
+      "Right": 544,
+      "Bottom": 741
+    },
+    {
+      "Text": "s0150626",
+      "Confidence": 95.811295,
+      "Left": 441,
+      "Top": 747,
+      "Right": 545,
+      "Bottom": 762
+    },
+    {
+      "Text": "s0150626",
+      "Confidence": 95.25874,
+      "Left": 441,
+      "Top": 768,
+      "Right": 545,
+      "Bottom": 783
+    },
+    {
+      "Text": "IEM",
+      "Confidence": 86.261185,
+      "Left": 165,
+      "Top": 799,
+      "Right": 205,
+      "Bottom": 817
+    },
+    {
+      "Text": "21376162",
+      "Confidence": 96.31373,
+      "Left": 442,
+      "Top": 789,
+      "Right": 544,
+      "Bottom": 804
+    },
+    {
+      "Text": "BAIEMENÎ",
+      "Confidence": 63.990997,
+      "Left": 132,
+      "Top": 801,
+      "Right": 246,
+      "Bottom": 838
+    },
+    {
+      "Text": "FFET",
+      "Confidence": 85.27707,
+      "Left": 274,
+      "Top": 818,
+      "Right": 328,
+      "Bottom": 832
+    },
+    {
+      "Text": "21376162",
+      "Confidence": 96.56896,
+      "Left": 442,
+      "Top": 810,
+      "Right": 544,
+      "Bottom": 825
+    },
+    {
+      "Text": "PAIEMENT",
+      "Confidence": 90.98671,
+      "Left": 138,
+      "Top": 841,
+      "Right": 245,
+      "Bottom": 858
+    },
+    {
+      "Text": "EFFET",
+      "Confidence": 92.276505,
+      "Left": 256,
+      "Top": 833,
+      "Right": 328,
+      "Bottom": 855
+    },
+    {
+      "Text": "17085981",
+      "Confidence": 96.79415,
+      "Left": 443,
+      "Top": 831,
+      "Right": 544,
+      "Bottom": 846
+    },
+    {
+      "Text": "PAIEMENT",
+      "Confidence": 92.07535,
+      "Left": 139,
+      "Top": 863,
+      "Right": 245,
+      "Bottom": 879
+    },
+    {
+      "Text": "EFFET",
+      "Confidence": 90.983055,
+      "Left": 262,
+      "Top": 860,
+      "Right": 328,
+      "Bottom": 875
+    },
+    {
+      "Text": "17085981",
+      "Confidence": 94.45526,
+      "Left": 443,
+      "Top": 851,
+      "Right": 544,
+      "Bottom": 867
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 91.88944,
+      "Left": 139,
+      "Top": 882,
+      "Right": 300,
+      "Bottom": 900
+    },
+    {
+      "Text": "50180626",
+      "Confidence": 94.51366,
+      "Left": 442,
+      "Top": 872,
+      "Right": 546,
+      "Bottom": 888
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 91.93484,
+      "Left": 139,
+      "Top": 903,
+      "Right": 300,
+      "Bottom": 921
+    },
+    {
+      "Text": "s0180626",
+      "Confidence": 95.927185,
+      "Left": 443,
+      "Top": 893,
+      "Right": 546,
+      "Bottom": 909
+    },
+    {
+      "Text": "PAIEMENT",
+      "Confidence": 91.12341,
+      "Left": 140,
+      "Top": 926,
+      "Right": 245,
+      "Bottom": 942
+    },
+    {
+      "Text": "EFFET",
+      "Confidence": 89.847725,
+      "Left": 264,
+      "Top": 923,
+      "Right": 328,
+      "Bottom": 938
+    },
+    {
+      "Text": "01965605",
+      "Confidence": 95.97452,
+      "Left": 443,
+      "Top": 914,
+      "Right": 546,
+      "Bottom": 931
+    },
+    {
+      "Text": "22",
+      "Confidence": 96.2966,
+      "Left": 42,
+      "Top": 954,
+      "Right": 64,
+      "Bottom": 967
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.289,
+      "Left": 85,
+      "Top": 952,
+      "Right": 107,
+      "Bottom": 965
+    },
+    {
+      "Text": "PAIEMENT",
+      "Confidence": 91.29802,
+      "Left": 140,
+      "Top": 947,
+      "Right": 245,
+      "Bottom": 963
+    },
+    {
+      "Text": "EFFET",
+      "Confidence": 85.84393,
+      "Left": 264,
+      "Top": 944,
+      "Right": 328,
+      "Bottom": 958
+    },
+    {
+      "Text": "01965605",
+      "Confidence": 96.50339,
+      "Left": 444,
+      "Top": 934,
+      "Right": 546,
+      "Bottom": 951
+    },
+    {
+      "Text": "22",
+      "Confidence": 96.30704,
+      "Left": 42,
+      "Top": 975,
+      "Right": 64,
+      "Bottom": 988
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.29441,
+      "Left": 85,
+      "Top": 973,
+      "Right": 107,
+      "Bottom": 986
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 91.53914,
+      "Left": 140,
+      "Top": 966,
+      "Right": 301,
+      "Bottom": 984
+    },
+    {
+      "Text": "s0190626",
+      "Confidence": 95.76366,
+      "Left": 443,
+      "Top": 955,
+      "Right": 547,
+      "Bottom": 973
+    },
+    {
+      "Text": "22",
+      "Confidence": 96.93944,
+      "Left": 42,
+      "Top": 996,
+      "Right": 65,
+      "Bottom": 1010
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.2937,
+      "Left": 86,
+      "Top": 994,
+      "Right": 107,
+      "Bottom": 1007
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 91.56087,
+      "Left": 140,
+      "Top": 987,
+      "Right": 301,
+      "Bottom": 1005
+    },
+    {
+      "Text": "s0190626",
+      "Confidence": 95.337944,
+      "Left": 443,
+      "Top": 976,
+      "Right": 547,
+      "Bottom": 993
+    },
+    {
+      "Text": "23",
+      "Confidence": 92.96933,
+      "Left": 42,
+      "Top": 1018,
+      "Right": 65,
+      "Bottom": 1031
+    },
+    {
+      "Text": "06",
+      "Confidence": 92.45364,
+      "Left": 86,
+      "Top": 1015,
+      "Right": 108,
+      "Bottom": 1029
+    },
+    {
+      "Text": "PRELEVEMENT",
+      "Confidence": 91.477585,
+      "Left": 141,
+      "Top": 1009,
+      "Right": 287,
+      "Bottom": 1026
+    },
+    {
+      "Text": "BANCAIRE",
+      "Confidence": 92.39156,
+      "Left": 305,
+      "Top": 1004,
+      "Right": 411,
+      "Bottom": 1020
+    },
+    {
+      "Text": "02298168",
+      "Confidence": 96.292946,
+      "Left": 444,
+      "Top": 996,
+      "Right": 546,
+      "Bottom": 1015
+    },
+    {
+      "Text": "23",
+      "Confidence": 96.2418,
+      "Left": 43,
+      "Top": 1039,
+      "Right": 65,
+      "Bottom": 1052
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.27003,
+      "Left": 86,
+      "Top": 1037,
+      "Right": 108,
+      "Bottom": 1050
+    },
+    {
+      "Text": "PRELEVEMENT",
+      "Confidence": 91.16673,
+      "Left": 142,
+      "Top": 1030,
+      "Right": 287,
+      "Bottom": 1047
+    },
+    {
+      "Text": "BANCAIRE",
+      "Confidence": 92.33481,
+      "Left": 305,
+      "Top": 1025,
+      "Right": 411,
+      "Bottom": 1041
+    },
+    {
+      "Text": "02298168",
+      "Confidence": 96.12602,
+      "Left": 444,
+      "Top": 1017,
+      "Right": 546,
+      "Bottom": 1036
+    },
+    {
+      "Text": "23",
+      "Confidence": 96.34716,
+      "Left": 43,
+      "Top": 1060,
+      "Right": 65,
+      "Bottom": 1073
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.26143,
+      "Left": 86,
+      "Top": 1058,
+      "Right": 108,
+      "Bottom": 1071
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 91.3835,
+      "Left": 141,
+      "Top": 1051,
+      "Right": 301,
+      "Bottom": 1069
+    },
+    {
+      "Text": "s0220626",
+      "Confidence": 96.53715,
+      "Left": 443,
+      "Top": 1038,
+      "Right": 548,
+      "Bottom": 1063
+    },
+    {
+      "Text": "23",
+      "Confidence": 96.532845,
+      "Left": 43,
+      "Top": 1081,
+      "Right": 65,
+      "Bottom": 1095
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.247055,
+      "Left": 86,
+      "Top": 1080,
+      "Right": 108,
+      "Bottom": 1092
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 90.570564,
+      "Left": 141,
+      "Top": 1072,
+      "Right": 301,
+      "Bottom": 1090
+    },
+    {
+      "Text": "s0",
+      "Confidence": 13.604187,
+      "Left": 442,
+      "Top": 1064,
+      "Right": 471,
+      "Bottom": 1093
+    },
+    {
+      "Text": "626",
+      "Confidence": 73.97064,
+      "Left": 509,
+      "Top": 1059,
+      "Right": 548,
+      "Bottom": 1074
+    },
+    {
+      "Text": "24",
+      "Confidence": 95.887115,
+      "Left": 43,
+      "Top": 1103,
+      "Right": 64,
+      "Bottom": 1116
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.15789,
+      "Left": 86,
+      "Top": 1100,
+      "Right": 108,
+      "Bottom": 1113
+    },
+    {
+      "Text": "coM",
+      "Confidence": 89.47673,
+      "Left": 141,
+      "Top": 1098,
+      "Right": 177,
+      "Bottom": 1111
+    },
+    {
+      "Text": "TVA/REJET",
+      "Confidence": 91.68218,
+      "Left": 196,
+      "Top": 1093,
+      "Right": 315,
+      "Bottom": 1109
+    },
+    {
+      "Text": "BEBEZ",
+      "Confidence": 39.772945,
+      "Left": 333,
+      "Top": 1089,
+      "Right": 398,
+      "Bottom": 1104
+    },
+    {
+      "Text": ";",
+      "Confidence": 42.813396,
+      "Left": 535,
+      "Top": 1090,
+      "Right": 537,
+      "Bottom": 1092
+    },
+    {
+      "Text": "24",
+      "Confidence": 96.06464,
+      "Left": 43,
+      "Top": 1124,
+      "Right": 65,
+      "Bottom": 1137
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.162636,
+      "Left": 87,
+      "Top": 1121,
+      "Right": 108,
+      "Bottom": 1135
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 91.414444,
+      "Left": 142,
+      "Top": 1115,
+      "Right": 301,
+      "Bottom": 1132
+    },
+    {
+      "Text": "24",
+      "Confidence": 96.86365,
+      "Left": 43,
+      "Top": 1145,
+      "Right": 65,
+      "Bottom": 1158
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.251724,
+      "Left": 87,
+      "Top": 1143,
+      "Right": 107,
+      "Bottom": 1155
+    },
+    {
+      "Text": "REDRESSEMENT",
+      "Confidence": 91.5502,
+      "Left": 142,
+      "Top": 1136,
+      "Right": 301,
+      "Bottom": 1153
+    },
+    {
+      "Text": "25",
+      "Confidence": 94.072075,
+      "Left": 43,
+      "Top": 1167,
+      "Right": 66,
+      "Bottom": 1180
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.278755,
+      "Left": 87,
+      "Top": 1165,
+      "Right": 108,
+      "Bottom": 1176
+    },
+    {
+      "Text": "VERSEMENT",
+      "Confidence": 92.09408,
+      "Left": 141,
+      "Top": 1159,
+      "Right": 260,
+      "Bottom": 1174
+    },
+    {
+      "Text": "ESPECES",
+      "Confidence": 91.787094,
+      "Left": 279,
+      "Top": 1153,
+      "Right": 371,
+      "Bottom": 1170
+    },
+    {
+      "Text": "26",
+      "Confidence": 96.54669,
+      "Left": 44,
+      "Top": 1192,
+      "Right": 66,
+      "Bottom": 1201
+    },
+    {
+      "Text": "06",
+      "Confidence": 93.26394,
+      "Left": 87,
+      "Top": 1186,
+      "Right": 107,
+      "Bottom": 1197
+    },
+    {
+      "Text": "VERSEMENT",
+      "Confidence": 92.73386,
+      "Left": 142,
+      "Top": 1180,
+      "Right": 260,
+      "Bottom": 1195
+    },
+    {
+      "Text": "ESPECES",
+      "Confidence": 92.2679,
+      "Left": 279,
+      "Top": 1175,
+      "Right": 371,
+      "Bottom": 1191
+    },
+    {
+      "Text": "&",
+      "Confidence": 64.34418,
+      "Left": 59,
+      "Top": 1211,
+      "Right": 66,
+      "Bottom": 1221
+    },
+    {
+      "Text": "06",
+      "Confidence": 91.07208,
+      "Left": 87,
+      "Top": 1207,
+      "Right": 109,
+      "Bottom": 1218
+    },
+    {
+      "Text": "VIREMENT",
+      "Confidence": 91.07208,
+      "Left": 142,
+      "Top": 1202,
+      "Right": 247,
+      "Bottom": 1216
+    },
+    {
+      "Text": "TN",
+      "Confidence": 93.26944,
+      "Left": 265,
+      "Top": 1200,
+      "Right": 288,
+      "Bottom": 1213
+    },
+    {
+      "Text": "MEMECB",
+      "Confidence": 82.05492,
+      "Left": 306,
+      "Top": 1195,
+      "Right": 385,
+      "Bottom": 1211
+    },
+    {
+      "Text": "لسسع",
+      "Confidence": 35.446693,
+      "Left": 55,
+      "Top": 1291,
+      "Right": 125,
+      "Bottom": 1309
+    },
+    {
+      "Text": "DINAR",
+      "Confidence": 92.117226,
+      "Left": 158,
+      "Top": 1287,
+      "Right": 221,
+      "Bottom": 1301
+    },
+    {
+      "Text": "TUNISIEN",
+      "Confidence": 90.92412,
+      "Left": 238,
+      "Top": 1282,
+      "Right": 344,
+      "Bottom": 1298
+    },
+    {
+      "Text": "Devise",
+      "Confidence": 58.644638,
+      "Left": 77,
+      "Top": 1308,
+      "Right": 120,
+      "Bottom": 1320
+    },
+    {
+      "Text": "pirecteur",
+      "Confidence": 92.70301,
+      "Left": 45,
+      "Top": 1354,
+      "Right": 167,
+      "Bottom": 1371
+    },
+    {
+      "Text": "Agence",
+      "Confidence": 92.45849,
+      "Left": 184,
+      "Top": 1351,
+      "Right": 262,
+      "Bottom": 1366
+    },
+    {
+      "Text": ":",
+      "Confidence": 92.800285,
+      "Left": 283,
+      "Top": 1351,
+      "Right": 287,
+      "Bottom": 1360
+    },
+    {
+      "Text": "Mr",
+      "Confidence": 92.96977,
+      "Left": 307,
+      "Top": 1347,
+      "Right": 331,
+      "Bottom": 1359
+    },
+    {
+      "Text": "HICHEM",
+      "Confidence": 90.60678,
+      "Left": 363,
+      "Top": 1340,
+      "Right": 441,
+      "Bottom": 1356
+    },
+    {
+      "Text": "ESSADDE",
+      "Confidence": 89.437325,
+      "Left": 459,
+      "Top": 1328,
+      "Right": 542,
+      "Bottom": 1351
+    },
+    {
+      "Text": "RELEVÉ",
+      "Confidence": 81.72508,
+      "Left": 712,
+      "Top": 72,
+      "Right": 793,
+      "Bottom": 94
+    },
+    {
+      "Text": "DE",
+      "Confidence": 93.25694,
+      "Left": 801,
+      "Top": 77,
+      "Right": 828,
+      "Bottom": 92
+    },
+    {
+      "Text": "COMPTE",
+      "Confidence": 91.20051,
+      "Left": 836,
+      "Top": 69,
+      "Right": 928,
+      "Bottom": 92
+    },
+    {
+      "Text": "MENSUEL",
+      "Confidence": 92.12611,
+      "Left": 936,
+      "Top": 73,
+      "Right": 1039,
+      "Bottom": 90
+    },
+    {
+      "Text": "صاحب",
+      "Confidence": 90.90573,
+      "Left": 865,
+      "Top": 172,
+      "Right": 921,
+      "Bottom": 206
+    },
+    {
+      "Text": "الحساب",
+      "Confidence": 90.964966,
+      "Left": 774,
+      "Top": 172,
+      "Right": 844,
+      "Bottom": 206
+    },
+    {
+      "Text": "Titulaire",
+      "Confidence": 91.37152,
+      "Left": 771,
+      "Top": 204,
+      "Right": 835,
+      "Bottom": 216
+    },
+    {
+      "Text": "du",
+      "Confidence": 82.520035,
+      "Left": 839,
+      "Top": 203,
+      "Right": 859,
+      "Bottom": 216
+    },
+    {
+      "Text": "compte",
+      "Confidence": 82.520035,
+      "Left": 863,
+      "Top": 203,
+      "Right": 924,
+      "Bottom": 218
+    },
+    {
+      "Text": "ونتمنى",
+      "Confidence": 83.08392,
+      "Left": 652,
+      "Top": 421,
+      "Right": 685,
+      "Bottom": 434
+    },
+    {
+      "Text": "لكم",
+      "Confidence": 93.14191,
+      "Left": 630,
+      "Top": 413,
+      "Right": 648,
+      "Bottom": 441
+    },
+    {
+      "Text": "Vy",
+      "Confidence": 0,
+      "Left": 604,
+      "Top": 423,
+      "Right": 618,
+      "Bottom": 434
+    },
+    {
+      "Text": "حسنا.",
+      "Confidence": 84.34254,
+      "Left": 569,
+      "Top": 413,
+      "Right": 594,
+      "Bottom": 441
+    },
+    {
+      "Text": "—=",
+      "Confidence": 53.065014,
+      "Left": 795,
+      "Top": 448,
+      "Right": 822,
+      "Bottom": 463
+    },
+    {
+      "Text": "تاريخ",
+      "Confidence": 80.9332,
+      "Left": 639,
+      "Top": 451,
+      "Right": 677,
+      "Bottom": 468
+    },
+    {
+      "Text": "الفاعلية",
+      "Confidence": 66.85185,
+      "Left": 581,
+      "Top": 453,
+      "Right": 631,
+      "Bottom": 470
+    },
+    {
+      "Text": "Date",
+      "Confidence": 91.093094,
+      "Left": 583,
+      "Top": 473,
+      "Right": 677,
+      "Bottom": 489
+    },
+    {
+      "Text": "de",
+      "Confidence": 92.52818,
+      "Left": 618,
+      "Top": 469,
+      "Right": 633,
+      "Bottom": 497
+    },
+    {
+      "Text": "valeur",
+      "Confidence": 85.27857,
+      "Left": 637,
+      "Top": 473,
+      "Right": 677,
+      "Bottom": 489
+    },
+    {
+      "Text": "18062026",
+      "Confidence": 96.427025,
+      "Left": 579,
+      "Top": 826,
+      "Right": 681,
+      "Bottom": 841
+    },
+    {
+      "Text": "18062026",
+      "Confidence": 96.4097,
+      "Left": 579,
+      "Top": 847,
+      "Right": 681,
+      "Bottom": 862
+    },
+    {
+      "Text": "18062026",
+      "Confidence": 96.49182,
+      "Left": 579,
+      "Top": 867,
+      "Right": 681,
+      "Bottom": 883
+    },
+    {
+      "Text": "18062026",
+      "Confidence": 96.67547,
+      "Left": 579,
+      "Top": 888,
+      "Right": 681,
+      "Bottom": 904
+    },
+    {
+      "Text": "19062026",
+      "Confidence": 96.25847,
+      "Left": 579,
+      "Top": 909,
+      "Right": 681,
+      "Bottom": 925
+    },
+    {
+      "Text": "19062026",
+      "Confidence": 96.22834,
+      "Left": 579,
+      "Top": 930,
+      "Right": 681,
+      "Bottom": 945
+    },
+    {
+      "Text": "19062026",
+      "Confidence": 95.77935,
+      "Left": 579,
+      "Top": 951,
+      "Right": 681,
+      "Bottom": 966
+    },
+    {
+      "Text": "19062026",
+      "Confidence": 95.21292,
+      "Left": 579,
+      "Top": 972,
+      "Right": 681,
+      "Bottom": 987
+    },
+    {
+      "Text": "22062026",
+      "Confidence": 96.584114,
+      "Left": 579,
+      "Top": 993,
+      "Right": 682,
+      "Bottom": 1007
+    },
+    {
+      "Text": "22062026",
+      "Confidence": 96.914604,
+      "Left": 579,
+      "Top": 1013,
+      "Right": 682,
+      "Bottom": 1028
+    },
+    {
+      "Text": "22062026",
+      "Confidence": 96.578445,
+      "Left": 579,
+      "Top": 1034,
+      "Right": 682,
+      "Bottom": 1049
+    },
+    {
+      "Text": "22062026",
+      "Confidence": 96.655685,
+      "Left": 579,
+      "Top": 1056,
+      "Right": 682,
+      "Bottom": 1070
+    },
+    {
+      "Text": "24062026",
+      "Confidence": 96.70996,
+      "Left": 579,
+      "Top": 1076,
+      "Right": 683,
+      "Bottom": 1091
+    },
+    {
+      "Text": "23062026",
+      "Confidence": 96.67592,
+      "Left": 578,
+      "Top": 1097,
+      "Right": 683,
+      "Bottom": 1112
+    },
+    {
+      "Text": "3062026",
+      "Confidence": 96.82442,
+      "Left": 593,
+      "Top": 1118,
+      "Right": 683,
+      "Bottom": 1139
+    },
+    {
+      "Text": "062026",
+      "Confidence": 89.44794,
+      "Left": 603,
+      "Top": 1139,
+      "Right": 683,
+      "Bottom": 1154
+    },
+    {
+      "Text": ";",
+      "Confidence": 89.30159,
+      "Left": 1014,
+      "Top": 1137,
+      "Right": 1017,
+      "Bottom": 1140
+    },
+    {
+      "Text": "26",
+      "Confidence": 89.430084,
+      "Left": 657,
+      "Top": 1160,
+      "Right": 683,
+      "Bottom": 1176
+    },
+    {
+      "Text": ".000,",
+      "Confidence": 83.745804,
+      "Left": 1014,
+      "Top": 1156,
+      "Right": 1070,
+      "Bottom": 1160
+    },
+    {
+      "Text": "5",
+      "Confidence": 50.906185,
+      "Left": 684,
+      "Top": 1184,
+      "Right": 685,
+      "Bottom": 1188
+    },
+    {
+      "Text": "1,190",
+      "Confidence": 90.94987,
+      "Left": 840,
+      "Top": 1176,
+      "Right": 899,
+      "Bottom": 1191
+    },
+    {
+      "Text": "72073",
+      "Confidence": 94.53211,
+      "Left": 904,
+      "Top": 1316,
+      "Right": 965,
+      "Bottom": 1332
+    },
+    {
+      "Text": "/",
+      "Confidence": 96.85908,
+      "Left": 985,
+      "Top": 1315,
+      "Right": 991,
+      "Bottom": 1328
+    },
+    {
+      "Text": "70242073",
+      "Confidence": 96.59693,
+      "Left": 1011,
+      "Top": 1310,
+      "Right": 1113,
+      "Bottom": 1325
+    },
+    {
+      "Text": "en",
+      "Confidence": 24.194069,
+      "Left": 932,
+      "Top": 1354,
+      "Right": 992,
+      "Bottom": 1382
+    },
+    {
+      "Text": "م",
+      "Confidence": 48.52466,
+      "Left": 994,
+      "Top": 1352,
+      "Right": 1130,
+      "Bottom": 1405
+    }
+  ],
+  "Lines": [
+    {
+      "LineText": "BIAT COMPTE",
+      "Words": [
+        {
+          "Text": "BIAT",
+          "Confidence": 90.2671,
+          "Left": 168,
+          "Top": 59,
+          "Right": 335,
+          "Bottom": 112
+        },
+        {
+          "Text": "COMPTE",
+          "Confidence": 91.20051,
+          "Left": 836,
+          "Top": 69,
+          "Right": 928,
+          "Bottom": 92
+        }
+      ]
+    },
+    {
+      "LineText": "RELEVÉ DE MENSUEL",
+      "Words": [
+        {
+          "Text": "RELEVÉ",
+          "Confidence": 81.72508,
+          "Left": 712,
+          "Top": 72,
+          "Right": 793,
+          "Bottom": 94
+        },
+        {
+          "Text": "MENSUEL",
+          "Confidence": 92.12611,
+          "Left": 936,
+          "Top": 73,
+          "Right": 1039,
+          "Bottom": 90
+        },
+        {
+          "Text": "DE",
+          "Confidence": 93.25694,
+          "Left": 801,
+          "Top": 77,
+          "Right": 828,
+          "Bottom": 92
+        }
+      ]
+    },
+    {
+      "LineText": "الدولي العربي",
+      "Words": [
+        {
+          "Text": "العربي",
+          "Confidence": 92.418976,
+          "Left": 227,
+          "Top": 118,
+          "Right": 270,
+          "Bottom": 146
+        },
+        {
+          "Text": "الدولي",
+          "Confidence": 53.516216,
+          "Left": 170,
+          "Top": 118,
+          "Right": 216,
+          "Bottom": 146
+        }
+      ]
+    },
+    {
+      "LineText": "تونس e بنك",
+      "Words": [
+        {
+          "Text": "بنك",
+          "Confidence": 95.57953,
+          "Left": 314,
+          "Top": 131,
+          "Right": 330,
+          "Bottom": 136
+        },
+        {
+          "Text": "تونس",
+          "Confidence": 91.74872,
+          "Left": 276,
+          "Top": 133,
+          "Right": 302,
+          "Bottom": 139
+        },
+        {
+          "Text": "e",
+          "Confidence": 42.513218,
+          "Left": 299,
+          "Top": 136,
+          "Right": 304,
+          "Bottom": 164
+        }
+      ]
+    },
+    {
+      "LineText": "ممعي mmms عع r",
+      "Words": [
+        {
+          "Text": "r",
+          "Confidence": 49.044567,
+          "Left": 308,
+          "Top": 149,
+          "Right": 335,
+          "Bottom": 155
+        },
+        {
+          "Text": "ممعي",
+          "Confidence": 17.539177,
+          "Left": 170,
+          "Top": 149,
+          "Right": 200,
+          "Bottom": 156
+        },
+        {
+          "Text": "عع",
+          "Confidence": 19.616959,
+          "Left": 270,
+          "Top": 150,
+          "Right": 305,
+          "Bottom": 155
+        },
+        {
+          "Text": "mmms",
+          "Confidence": 0,
+          "Left": 205,
+          "Top": 150,
+          "Right": 267,
+          "Bottom": 155
+        }
+      ]
+    },
+    {
+      "LineText": "الحساب صاحب",
+      "Words": [
+        {
+          "Text": "صاحب",
+          "Confidence": 90.90573,
+          "Left": 865,
+          "Top": 172,
+          "Right": 921,
+          "Bottom": 206
+        },
+        {
+          "Text": "الحساب",
+          "Confidence": 90.964966,
+          "Left": 774,
+          "Top": 172,
+          "Right": 844,
+          "Bottom": 206
+        }
+      ]
+    },
+    {
+      "LineText": "Titulaire du compte",
+      "Words": [
+        {
+          "Text": "du",
+          "Confidence": 82.520035,
+          "Left": 839,
+          "Top": 203,
+          "Right": 859,
+          "Bottom": 216
+        },
+        {
+          "Text": "compte",
+          "Confidence": 82.520035,
+          "Left": 863,
+          "Top": 203,
+          "Right": 924,
+          "Bottom": 218
+        },
+        {
+          "Text": "Titulaire",
+          "Confidence": 91.37152,
+          "Left": 771,
+          "Top": 204,
+          "Right": 835,
+          "Bottom": 216
+        }
+      ]
+    },
+    {
+      "LineText": "108 102 00073 10 05744 9 33",
+      "Words": [
+        {
+          "Text": "33",
+          "Confidence": 92.64805,
+          "Left": 478,
+          "Top": 279,
+          "Right": 498,
+          "Bottom": 292
+        },
+        {
+          "Text": "05744",
+          "Confidence": 96.20896,
+          "Left": 366,
+          "Top": 280,
+          "Right": 428,
+          "Bottom": 294
+        },
+        {
+          "Text": "9",
+          "Confidence": 92.64805,
+          "Left": 450,
+          "Top": 280,
+          "Right": 457,
+          "Bottom": 292
+        },
+        {
+          "Text": "10",
+          "Confidence": 95.9121,
+          "Left": 325,
+          "Top": 282,
+          "Right": 346,
+          "Bottom": 295
+        },
+        {
+          "Text": "00073",
+          "Confidence": 95.70468,
+          "Left": 241,
+          "Top": 283,
+          "Right": 304,
+          "Bottom": 297
+        },
+        {
+          "Text": "108",
+          "Confidence": 66.921646,
+          "Left": 136,
+          "Top": 284,
+          "Right": 164,
+          "Bottom": 302
+        },
+        {
+          "Text": "102",
+          "Confidence": 96.81956,
+          "Left": 185,
+          "Top": 284,
+          "Right": 220,
+          "Bottom": 298
+        }
+      ]
+    },
+    {
+      "LineText": "Pago",
+      "Words": [
+        {
+          "Text": "Pago",
+          "Confidence": 74.349365,
+          "Left": 486,
+          "Top": 325,
+          "Right": 525,
+          "Bottom": 341
+        }
+      ]
+    },
+    {
+      "LineText": "30 06 2026",
+      "Words": [
+        {
+          "Text": "2026",
+          "Confidence": 96.55469,
+          "Left": 380,
+          "Top": 365,
+          "Right": 431,
+          "Bottom": 379
+        },
+        {
+          "Text": "06",
+          "Confidence": 95.204506,
+          "Left": 339,
+          "Top": 367,
+          "Right": 361,
+          "Bottom": 381
+        },
+        {
+          "Text": "30",
+          "Confidence": 96.79057,
+          "Left": 298,
+          "Top": 368,
+          "Right": 319,
+          "Bottom": 382
+        }
+      ]
+    },
+    {
+      "LineText": "حسنا. Vy لكم ونتمنى",
+      "Words": [
+        {
+          "Text": "لكم",
+          "Confidence": 93.14191,
+          "Left": 630,
+          "Top": 413,
+          "Right": 648,
+          "Bottom": 441
+        },
+        {
+          "Text": "حسنا.",
+          "Confidence": 84.34254,
+          "Left": 569,
+          "Top": 413,
+          "Right": 594,
+          "Bottom": 441
+        },
+        {
+          "Text": "ونتمنى",
+          "Confidence": 83.08392,
+          "Left": 652,
+          "Top": 421,
+          "Right": 685,
+          "Bottom": 434
+        },
+        {
+          "Text": "Vy",
+          "Confidence": 0,
+          "Left": 604,
+          "Top": 423,
+          "Right": 618,
+          "Bottom": 434
+        }
+      ]
+    },
+    {
+      "LineText": "الفاعلية تاريخ —=",
+      "Words": [
+        {
+          "Text": "—=",
+          "Confidence": 53.065014,
+          "Left": 795,
+          "Top": 448,
+          "Right": 822,
+          "Bottom": 463
+        },
+        {
+          "Text": "تاريخ",
+          "Confidence": 80.9332,
+          "Left": 639,
+          "Top": 451,
+          "Right": 677,
+          "Bottom": 468
+        },
+        {
+          "Text": "الفاعلية",
+          "Confidence": 66.85185,
+          "Left": 581,
+          "Top": 453,
+          "Right": 631,
+          "Bottom": 470
+        }
+      ]
+    },
+    {
+      "LineText": "Date de valeur",
+      "Words": [
+        {
+          "Text": "de",
+          "Confidence": 92.52818,
+          "Left": 618,
+          "Top": 469,
+          "Right": 633,
+          "Bottom": 497
+        },
+        {
+          "Text": "Date",
+          "Confidence": 91.093094,
+          "Left": 583,
+          "Top": 473,
+          "Right": 677,
+          "Bottom": 489
+        },
+        {
+          "Text": "valeur",
+          "Confidence": 85.27857,
+          "Left": 637,
+          "Top": 473,
+          "Right": 677,
+          "Bottom": 489
+        }
+      ]
+    },
+    {
+      "LineText": "SOLDE AU 31 05 2026",
+      "Words": [
+        {
+          "Text": "2026",
+          "Confidence": 96.0347,
+          "Left": 411,
+          "Top": 516,
+          "Right": 460,
+          "Bottom": 529
+        },
+        {
+          "Text": "05",
+          "Confidence": 94.63181,
+          "Left": 370,
+          "Top": 517,
+          "Right": 391,
+          "Bottom": 530
+        },
+        {
+          "Text": "31",
+          "Confidence": 96.257484,
+          "Left": 328,
+          "Top": 519,
+          "Right": 349,
+          "Bottom": 532
+        },
+        {
+          "Text": "AU",
+          "Confidence": 96.48064,
+          "Left": 271,
+          "Top": 521,
+          "Right": 295,
+          "Bottom": 534
+        },
+        {
+          "Text": "SOLDE",
+          "Confidence": 91.94858,
+          "Left": 188,
+          "Top": 522,
+          "Right": 254,
+          "Bottom": 537
+        }
+      ]
+    },
+    {
+      "LineText": "VERSEMENT ESPECES 50790810",
+      "Words": [
+        {
+          "Text": "50790810",
+          "Confidence": 96.85556,
+          "Left": 439,
+          "Top": 557,
+          "Right": 543,
+          "Bottom": 572
+        },
+        {
+          "Text": "ESPECES",
+          "Confidence": 92.201775,
+          "Left": 272,
+          "Top": 562,
+          "Right": 364,
+          "Bottom": 577
+        },
+        {
+          "Text": "VERSEMENT",
+          "Confidence": 88.00552,
+          "Left": 120,
+          "Top": 564,
+          "Right": 255,
+          "Bottom": 586
+        }
+      ]
+    },
+    {
+      "LineText": "VERSEMENT  ESPECES 01580330",
+      "Words": [
+        {
+          "Text": "01580330",
+          "Confidence": 96.207825,
+          "Left": 440,
+          "Top": 578,
+          "Right": 543,
+          "Bottom": 593
+        },
+        {
+          "Text": "ESPECES",
+          "Confidence": 92.5546,
+          "Left": 272,
+          "Top": 583,
+          "Right": 365,
+          "Bottom": 598
+        },
+        {
+          "Text": "VERSEMENT",
+          "Confidence": 90.33046,
+          "Left": 128,
+          "Top": 586,
+          "Right": 255,
+          "Bottom": 604
+        },
+        {
+          "Text": "",
+          "Confidence": 90.33046,
+          "Left": 131,
+          "Top": 587,
+          "Right": 133,
+          "Bottom": 589
+        }
+      ]
+    },
+    {
+      "LineText": "5839251",
+      "Words": [
+        {
+          "Text": "5839251",
+          "Confidence": 96.80725,
+          "Left": 454,
+          "Top": 600,
+          "Right": 542,
+          "Bottom": 614
+        }
+      ]
+    },
+    {
+      "LineText": "5839251",
+      "Words": [
+        {
+          "Text": "5839251",
+          "Confidence": 96.645676,
+          "Left": 454,
+          "Top": 621,
+          "Right": 542,
+          "Bottom": 635
+        }
+      ]
+    },
+    {
+      "LineText": "10589601",
+      "Words": [
+        {
+          "Text": "10589601",
+          "Confidence": 95.57498,
+          "Left": 441,
+          "Top": 642,
+          "Right": 543,
+          "Bottom": 656
+        }
+      ]
+    },
+    {
+      "LineText": "01965314",
+      "Words": [
+        {
+          "Text": "01965314",
+          "Confidence": 95.890915,
+          "Left": 441,
+          "Top": 664,
+          "Right": 543,
+          "Bottom": 678
+        }
+      ]
+    },
+    {
+      "LineText": "01965314",
+      "Words": [
+        {
+          "Text": "01965314",
+          "Confidence": 88.61988,
+          "Left": 441,
+          "Top": 684,
+          "Right": 543,
+          "Bottom": 699
+        }
+      ]
+    },
+    {
+      "LineText": "26957445",
+      "Words": [
+        {
+          "Text": "26957445",
+          "Confidence": 96.5964,
+          "Left": 441,
+          "Top": 705,
+          "Right": 544,
+          "Bottom": 720
+        }
+      ]
+    },
+    {
+      "LineText": "26957445",
+      "Words": [
+        {
+          "Text": "26957445",
+          "Confidence": 96.56695,
+          "Left": 441,
+          "Top": 726,
+          "Right": 544,
+          "Bottom": 741
+        }
+      ]
+    },
+    {
+      "LineText": "s0150626",
+      "Words": [
+        {
+          "Text": "s0150626",
+          "Confidence": 95.811295,
+          "Left": 441,
+          "Top": 747,
+          "Right": 545,
+          "Bottom": 762
+        }
+      ]
+    },
+    {
+      "LineText": "s0150626",
+      "Words": [
+        {
+          "Text": "s0150626",
+          "Confidence": 95.25874,
+          "Left": 441,
+          "Top": 768,
+          "Right": 545,
+          "Bottom": 783
+        }
+      ]
+    },
+    {
+      "LineText": "IEM 21376162",
+      "Words": [
+        {
+          "Text": "21376162",
+          "Confidence": 96.31373,
+          "Left": 442,
+          "Top": 789,
+          "Right": 544,
+          "Bottom": 804
+        },
+        {
+          "Text": "IEM",
+          "Confidence": 86.261185,
+          "Left": 165,
+          "Top": 799,
+          "Right": 205,
+          "Bottom": 817
+        }
+      ]
+    },
+    {
+      "LineText": "BAIEMENÎ 21376162",
+      "Words": [
+        {
+          "Text": "BAIEMENÎ",
+          "Confidence": 63.990997,
+          "Left": 132,
+          "Top": 801,
+          "Right": 246,
+          "Bottom": 838
+        },
+        {
+          "Text": "21376162",
+          "Confidence": 96.56896,
+          "Left": 442,
+          "Top": 810,
+          "Right": 544,
+          "Bottom": 825
+        }
+      ]
+    },
+    {
+      "LineText": "FFET 18062026",
+      "Words": [
+        {
+          "Text": "FFET",
+          "Confidence": 85.27707,
+          "Left": 274,
+          "Top": 818,
+          "Right": 328,
+          "Bottom": 832
+        },
+        {
+          "Text": "18062026",
+          "Confidence": 96.427025,
+          "Left": 579,
+          "Top": 826,
+          "Right": 681,
+          "Bottom": 841
+        }
+      ]
+    },
+    {
+      "LineText": "PAIEMENT EFFET 17085981",
+      "Words": [
+        {
+          "Text": "17085981",
+          "Confidence": 96.79415,
+          "Left": 443,
+          "Top": 831,
+          "Right": 544,
+          "Bottom": 846
+        },
+        {
+          "Text": "EFFET",
+          "Confidence": 92.276505,
+          "Left": 256,
+          "Top": 833,
+          "Right": 328,
+          "Bottom": 855
+        },
+        {
+          "Text": "PAIEMENT",
+          "Confidence": 90.98671,
+          "Left": 138,
+          "Top": 841,
+          "Right": 245,
+          "Bottom": 858
+        }
+      ]
+    },
+    {
+      "LineText": "17085981 18062026",
+      "Words": [
+        {
+          "Text": "18062026",
+          "Confidence": 96.4097,
+          "Left": 579,
+          "Top": 847,
+          "Right": 681,
+          "Bottom": 862
+        },
+        {
+          "Text": "17085981",
+          "Confidence": 94.45526,
+          "Left": 443,
+          "Top": 851,
+          "Right": 544,
+          "Bottom": 867
+        }
+      ]
+    },
+    {
+      "LineText": "PAIEMENT EFFET 18062026",
+      "Words": [
+        {
+          "Text": "EFFET",
+          "Confidence": 90.983055,
+          "Left": 262,
+          "Top": 860,
+          "Right": 328,
+          "Bottom": 875
+        },
+        {
+          "Text": "PAIEMENT",
+          "Confidence": 92.07535,
+          "Left": 139,
+          "Top": 863,
+          "Right": 245,
+          "Bottom": 879
+        },
+        {
+          "Text": "18062026",
+          "Confidence": 96.49182,
+          "Left": 579,
+          "Top": 867,
+          "Right": 681,
+          "Bottom": 883
+        }
+      ]
+    },
+    {
+      "LineText": "REDRESSEMENT 50180626",
+      "Words": [
+        {
+          "Text": "50180626",
+          "Confidence": 94.51366,
+          "Left": 442,
+          "Top": 872,
+          "Right": 546,
+          "Bottom": 888
+        },
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 91.88944,
+          "Left": 139,
+          "Top": 882,
+          "Right": 300,
+          "Bottom": 900
+        }
+      ]
+    },
+    {
+      "LineText": "s0180626 18062026",
+      "Words": [
+        {
+          "Text": "18062026",
+          "Confidence": 96.67547,
+          "Left": 579,
+          "Top": 888,
+          "Right": 681,
+          "Bottom": 904
+        },
+        {
+          "Text": "s0180626",
+          "Confidence": 95.927185,
+          "Left": 443,
+          "Top": 893,
+          "Right": 546,
+          "Bottom": 909
+        }
+      ]
+    },
+    {
+      "LineText": "REDRESSEMENT 19062026",
+      "Words": [
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 91.93484,
+          "Left": 139,
+          "Top": 903,
+          "Right": 300,
+          "Bottom": 921
+        },
+        {
+          "Text": "19062026",
+          "Confidence": 96.25847,
+          "Left": 579,
+          "Top": 909,
+          "Right": 681,
+          "Bottom": 925
+        }
+      ]
+    },
+    {
+      "LineText": "EFFET 01965605",
+      "Words": [
+        {
+          "Text": "01965605",
+          "Confidence": 95.97452,
+          "Left": 443,
+          "Top": 914,
+          "Right": 546,
+          "Bottom": 931
+        },
+        {
+          "Text": "EFFET",
+          "Confidence": 89.847725,
+          "Left": 264,
+          "Top": 923,
+          "Right": 328,
+          "Bottom": 938
+        }
+      ]
+    },
+    {
+      "LineText": "PAIEMENT 01965605 19062026",
+      "Words": [
+        {
+          "Text": "PAIEMENT",
+          "Confidence": 91.12341,
+          "Left": 140,
+          "Top": 926,
+          "Right": 245,
+          "Bottom": 942
+        },
+        {
+          "Text": "19062026",
+          "Confidence": 96.22834,
+          "Left": 579,
+          "Top": 930,
+          "Right": 681,
+          "Bottom": 945
+        },
+        {
+          "Text": "01965605",
+          "Confidence": 96.50339,
+          "Left": 444,
+          "Top": 934,
+          "Right": 546,
+          "Bottom": 951
+        }
+      ]
+    },
+    {
+      "LineText": "22 06 PAIEMENT EFFET 19062026",
+      "Words": [
+        {
+          "Text": "EFFET",
+          "Confidence": 85.84393,
+          "Left": 264,
+          "Top": 944,
+          "Right": 328,
+          "Bottom": 958
+        },
+        {
+          "Text": "PAIEMENT",
+          "Confidence": 91.29802,
+          "Left": 140,
+          "Top": 947,
+          "Right": 245,
+          "Bottom": 963
+        },
+        {
+          "Text": "19062026",
+          "Confidence": 95.77935,
+          "Left": 579,
+          "Top": 951,
+          "Right": 681,
+          "Bottom": 966
+        },
+        {
+          "Text": "06",
+          "Confidence": 93.289,
+          "Left": 85,
+          "Top": 952,
+          "Right": 107,
+          "Bottom": 965
+        },
+        {
+          "Text": "22",
+          "Confidence": 96.2966,
+          "Left": 42,
+          "Top": 954,
+          "Right": 64,
+          "Bottom": 967
+        }
+      ]
+    },
+    {
+      "LineText": "s0190626",
+      "Words": [
+        {
+          "Text": "s0190626",
+          "Confidence": 95.76366,
+          "Left": 443,
+          "Top": 955,
+          "Right": 547,
+          "Bottom": 973
+        }
+      ]
+    },
+    {
+      "LineText": "22 06 REDRESSEMENT s0190626 19062026",
+      "Words": [
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 91.53914,
+          "Left": 140,
+          "Top": 966,
+          "Right": 301,
+          "Bottom": 984
+        },
+        {
+          "Text": "19062026",
+          "Confidence": 95.21292,
+          "Left": 579,
+          "Top": 972,
+          "Right": 681,
+          "Bottom": 987
+        },
+        {
+          "Text": "06",
+          "Confidence": 93.29441,
+          "Left": 85,
+          "Top": 973,
+          "Right": 107,
+          "Bottom": 986
+        },
+        {
+          "Text": "22",
+          "Confidence": 96.30704,
+          "Left": 42,
+          "Top": 975,
+          "Right": 64,
+          "Bottom": 988
+        },
+        {
+          "Text": "s0190626",
+          "Confidence": 95.337944,
+          "Left": 443,
+          "Top": 976,
+          "Right": 547,
+          "Bottom": 993
+        }
+      ]
+    },
+    {
+      "LineText": "22 06 REDRESSEMENT 02298168 22062026",
+      "Words": [
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 91.56087,
+          "Left": 140,
+          "Top": 987,
+          "Right": 301,
+          "Bottom": 1005
+        },
+        {
+          "Text": "22062026",
+          "Confidence": 96.584114,
+          "Left": 579,
+          "Top": 993,
+          "Right": 682,
+          "Bottom": 1007
+        },
+        {
+          "Text": "06",
+          "Confidence": 93.2937,
+          "Left": 86,
+          "Top": 994,
+          "Right": 107,
+          "Bottom": 1007
+        },
+        {
+          "Text": "22",
+          "Confidence": 96.93944,
+          "Left": 42,
+          "Top": 996,
+          "Right": 65,
+          "Bottom": 1010
+        },
+        {
+          "Text": "02298168",
+          "Confidence": 96.292946,
+          "Left": 444,
+          "Top": 996,
+          "Right": 546,
+          "Bottom": 1015
+        }
+      ]
+    },
+    {
+      "LineText": "PRELEVEMENT BANCAIRE 22062026",
+      "Words": [
+        {
+          "Text": "BANCAIRE",
+          "Confidence": 92.39156,
+          "Left": 305,
+          "Top": 1004,
+          "Right": 411,
+          "Bottom": 1020
+        },
+        {
+          "Text": "PRELEVEMENT",
+          "Confidence": 91.477585,
+          "Left": 141,
+          "Top": 1009,
+          "Right": 287,
+          "Bottom": 1026
+        },
+        {
+          "Text": "22062026",
+          "Confidence": 96.914604,
+          "Left": 579,
+          "Top": 1013,
+          "Right": 682,
+          "Bottom": 1028
+        }
+      ]
+    },
+    {
+      "LineText": "23 06 BANCAIRE 02298168",
+      "Words": [
+        {
+          "Text": "06",
+          "Confidence": 92.45364,
+          "Left": 86,
+          "Top": 1015,
+          "Right": 108,
+          "Bottom": 1029
+        },
+        {
+          "Text": "02298168",
+          "Confidence": 96.12602,
+          "Left": 444,
+          "Top": 1017,
+          "Right": 546,
+          "Bottom": 1036
+        },
+        {
+          "Text": "23",
+          "Confidence": 92.96933,
+          "Left": 42,
+          "Top": 1018,
+          "Right": 65,
+          "Bottom": 1031
+        },
+        {
+          "Text": "BANCAIRE",
+          "Confidence": 92.33481,
+          "Left": 305,
+          "Top": 1025,
+          "Right": 411,
+          "Bottom": 1041
+        }
+      ]
+    },
+    {
+      "LineText": "23 06 PRELEVEMENT s0220626 22062026",
+      "Words": [
+        {
+          "Text": "PRELEVEMENT",
+          "Confidence": 91.16673,
+          "Left": 142,
+          "Top": 1030,
+          "Right": 287,
+          "Bottom": 1047
+        },
+        {
+          "Text": "22062026",
+          "Confidence": 96.578445,
+          "Left": 579,
+          "Top": 1034,
+          "Right": 682,
+          "Bottom": 1049
+        },
+        {
+          "Text": "06",
+          "Confidence": 93.27003,
+          "Left": 86,
+          "Top": 1037,
+          "Right": 108,
+          "Bottom": 1050
+        },
+        {
+          "Text": "s0220626",
+          "Confidence": 96.53715,
+          "Left": 443,
+          "Top": 1038,
+          "Right": 548,
+          "Bottom": 1063
+        },
+        {
+          "Text": "23",
+          "Confidence": 96.2418,
+          "Left": 43,
+          "Top": 1039,
+          "Right": 65,
+          "Bottom": 1052
+        }
+      ]
+    },
+    {
+      "LineText": "23 06 REDRESSEMENT 626 22062026",
+      "Words": [
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 91.3835,
+          "Left": 141,
+          "Top": 1051,
+          "Right": 301,
+          "Bottom": 1069
+        },
+        {
+          "Text": "22062026",
+          "Confidence": 96.655685,
+          "Left": 579,
+          "Top": 1056,
+          "Right": 682,
+          "Bottom": 1070
+        },
+        {
+          "Text": "06",
+          "Confidence": 93.26143,
+          "Left": 86,
+          "Top": 1058,
+          "Right": 108,
+          "Bottom": 1071
+        },
+        {
+          "Text": "626",
+          "Confidence": 73.97064,
+          "Left": 509,
+          "Top": 1059,
+          "Right": 548,
+          "Bottom": 1074
+        },
+        {
+          "Text": "23",
+          "Confidence": 96.34716,
+          "Left": 43,
+          "Top": 1060,
+          "Right": 65,
+          "Bottom": 1073
+        }
+      ]
+    },
+    {
+      "LineText": "REDRESSEMENT s0",
+      "Words": [
+        {
+          "Text": "s0",
+          "Confidence": 13.604187,
+          "Left": 442,
+          "Top": 1064,
+          "Right": 471,
+          "Bottom": 1093
+        },
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 90.570564,
+          "Left": 141,
+          "Top": 1072,
+          "Right": 301,
+          "Bottom": 1090
+        }
+      ]
+    },
+    {
+      "LineText": "23 06 24062026",
+      "Words": [
+        {
+          "Text": "24062026",
+          "Confidence": 96.70996,
+          "Left": 579,
+          "Top": 1076,
+          "Right": 683,
+          "Bottom": 1091
+        },
+        {
+          "Text": "06",
+          "Confidence": 93.247055,
+          "Left": 86,
+          "Top": 1080,
+          "Right": 108,
+          "Bottom": 1092
+        },
+        {
+          "Text": "23",
+          "Confidence": 96.532845,
+          "Left": 43,
+          "Top": 1081,
+          "Right": 65,
+          "Bottom": 1095
+        }
+      ]
+    },
+    {
+      "LineText": "coM TVA/REJET BEBEZ ; 23062026",
+      "Words": [
+        {
+          "Text": "BEBEZ",
+          "Confidence": 39.772945,
+          "Left": 333,
+          "Top": 1089,
+          "Right": 398,
+          "Bottom": 1104
+        },
+        {
+          "Text": ";",
+          "Confidence": 42.813396,
+          "Left": 535,
+          "Top": 1090,
+          "Right": 537,
+          "Bottom": 1092
+        },
+        {
+          "Text": "TVA/REJET",
+          "Confidence": 91.68218,
+          "Left": 196,
+          "Top": 1093,
+          "Right": 315,
+          "Bottom": 1109
+        },
+        {
+          "Text": "23062026",
+          "Confidence": 96.67592,
+          "Left": 578,
+          "Top": 1097,
+          "Right": 683,
+          "Bottom": 1112
+        },
+        {
+          "Text": "coM",
+          "Confidence": 89.47673,
+          "Left": 141,
+          "Top": 1098,
+          "Right": 177,
+          "Bottom": 1111
+        }
+      ]
+    },
+    {
+      "LineText": "24 06",
+      "Words": [
+        {
+          "Text": "06",
+          "Confidence": 93.15789,
+          "Left": 86,
+          "Top": 1100,
+          "Right": 108,
+          "Bottom": 1113
+        },
+        {
+          "Text": "24",
+          "Confidence": 95.887115,
+          "Left": 43,
+          "Top": 1103,
+          "Right": 64,
+          "Bottom": 1116
+        }
+      ]
+    },
+    {
+      "LineText": "24 06 REDRESSEMENT 3062026",
+      "Words": [
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 91.414444,
+          "Left": 142,
+          "Top": 1115,
+          "Right": 301,
+          "Bottom": 1132
+        },
+        {
+          "Text": "3062026",
+          "Confidence": 96.82442,
+          "Left": 593,
+          "Top": 1118,
+          "Right": 683,
+          "Bottom": 1139
+        },
+        {
+          "Text": "06",
+          "Confidence": 93.162636,
+          "Left": 87,
+          "Top": 1121,
+          "Right": 108,
+          "Bottom": 1135
+        },
+        {
+          "Text": "24",
+          "Confidence": 96.06464,
+          "Left": 43,
+          "Top": 1124,
+          "Right": 65,
+          "Bottom": 1137
+        }
+      ]
+    },
+    {
+      "LineText": "24 06 REDRESSEMENT 062026 ;",
+      "Words": [
+        {
+          "Text": "REDRESSEMENT",
+          "Confidence": 91.5502,
+          "Left": 142,
+          "Top": 1136,
+          "Right": 301,
+          "Bottom": 1153
+        },
+        {
+          "Text": ";",
+          "Confidence": 89.30159,
+          "Left": 1014,
+          "Top": 1137,
+          "Right": 1017,
+          "Bottom": 1140
+        },
+        {
+          "Text": "062026",
+          "Confidence": 89.44794,
+          "Left": 603,
+          "Top": 1139,
+          "Right": 683,
+          "Bottom": 1154
+        },
+        {
+          "Text": "06",
+          "Confidence": 93.251724,
+          "Left": 87,
+          "Top": 1143,
+          "Right": 107,
+          "Bottom": 1155
+        },
+        {
+          "Text": "24",
+          "Confidence": 96.86365,
+          "Left": 43,
+          "Top": 1145,
+          "Right": 65,
+          "Bottom": 1158
+        }
+      ]
+    },
+    {
+      "LineText": "VERSEMENT ESPECES 26 .000,",
+      "Words": [
+        {
+          "Text": "ESPECES",
+          "Confidence": 91.787094,
+          "Left": 279,
+          "Top": 1153,
+          "Right": 371,
+          "Bottom": 1170
+        },
+        {
+          "Text": ".000,",
+          "Confidence": 83.745804,
+          "Left": 1014,
+          "Top": 1156,
+          "Right": 1070,
+          "Bottom": 1160
+        },
+        {
+          "Text": "VERSEMENT",
+          "Confidence": 92.09408,
+          "Left": 141,
+          "Top": 1159,
+          "Right": 260,
+          "Bottom": 1174
+        },
+        {
+          "Text": "26",
+          "Confidence": 89.430084,
+          "Left": 657,
+          "Top": 1160,
+          "Right": 683,
+          "Bottom": 1176
+        }
+      ]
+    },
+    {
+      "LineText": "25 06 ESPECES",
+      "Words": [
+        {
+          "Text": "06",
+          "Confidence": 93.278755,
+          "Left": 87,
+          "Top": 1165,
+          "Right": 108,
+          "Bottom": 1176
+        },
+        {
+          "Text": "25",
+          "Confidence": 94.072075,
+          "Left": 43,
+          "Top": 1167,
+          "Right": 66,
+          "Bottom": 1180
+        },
+        {
+          "Text": "ESPECES",
+          "Confidence": 92.2679,
+          "Left": 279,
+          "Top": 1175,
+          "Right": 371,
+          "Bottom": 1191
+        }
+      ]
+    },
+    {
+      "LineText": "06 VERSEMENT 5 1,190",
+      "Words": [
+        {
+          "Text": "1,190",
+          "Confidence": 90.94987,
+          "Left": 840,
+          "Top": 1176,
+          "Right": 899,
+          "Bottom": 1191
+        },
+        {
+          "Text": "VERSEMENT",
+          "Confidence": 92.73386,
+          "Left": 142,
+          "Top": 1180,
+          "Right": 260,
+          "Bottom": 1195
+        },
+        {
+          "Text": "5",
+          "Confidence": 50.906185,
+          "Left": 684,
+          "Top": 1184,
+          "Right": 685,
+          "Bottom": 1188
+        },
+        {
+          "Text": "06",
+          "Confidence": 93.26394,
+          "Left": 87,
+          "Top": 1186,
+          "Right": 107,
+          "Bottom": 1197
+        }
+      ]
+    },
+    {
+      "LineText": "26 VIREMENT TN MEMECB",
+      "Words": [
+        {
+          "Text": "26",
+          "Confidence": 96.54669,
+          "Left": 44,
+          "Top": 1192,
+          "Right": 66,
+          "Bottom": 1201
+        },
+        {
+          "Text": "MEMECB",
+          "Confidence": 82.05492,
+          "Left": 306,
+          "Top": 1195,
+          "Right": 385,
+          "Bottom": 1211
+        },
+        {
+          "Text": "TN",
+          "Confidence": 93.26944,
+          "Left": 265,
+          "Top": 1200,
+          "Right": 288,
+          "Bottom": 1213
+        },
+        {
+          "Text": "VIREMENT",
+          "Confidence": 91.07208,
+          "Left": 142,
+          "Top": 1202,
+          "Right": 247,
+          "Bottom": 1216
+        }
+      ]
+    },
+    {
+      "LineText": "& 06",
+      "Words": [
+        {
+          "Text": "06",
+          "Confidence": 91.07208,
+          "Left": 87,
+          "Top": 1207,
+          "Right": 109,
+          "Bottom": 1218
+        },
+        {
+          "Text": "&",
+          "Confidence": 64.34418,
+          "Left": 59,
+          "Top": 1211,
+          "Right": 66,
+          "Bottom": 1221
+        }
+      ]
+    },
+    {
+      "LineText": "لسسع DINAR TUNISIEN",
+      "Words": [
+        {
+          "Text": "TUNISIEN",
+          "Confidence": 90.92412,
+          "Left": 238,
+          "Top": 1282,
+          "Right": 344,
+          "Bottom": 1298
+        },
+        {
+          "Text": "DINAR",
+          "Confidence": 92.117226,
+          "Left": 158,
+          "Top": 1287,
+          "Right": 221,
+          "Bottom": 1301
+        },
+        {
+          "Text": "لسسع",
+          "Confidence": 35.446693,
+          "Left": 55,
+          "Top": 1291,
+          "Right": 125,
+          "Bottom": 1309
+        }
+      ]
+    },
+    {
+      "LineText": "Devise 72073 / 70242073",
+      "Words": [
+        {
+          "Text": "Devise",
+          "Confidence": 58.644638,
+          "Left": 77,
+          "Top": 1308,
+          "Right": 120,
+          "Bottom": 1320
+        },
+        {
+          "Text": "70242073",
+          "Confidence": 96.59693,
+          "Left": 1011,
+          "Top": 1310,
+          "Right": 1113,
+          "Bottom": 1325
+        },
+        {
+          "Text": "/",
+          "Confidence": 96.85908,
+          "Left": 985,
+          "Top": 1315,
+          "Right": 991,
+          "Bottom": 1328
+        },
+        {
+          "Text": "72073",
+          "Confidence": 94.53211,
+          "Left": 904,
+          "Top": 1316,
+          "Right": 965,
+          "Bottom": 1332
+        }
+      ]
+    },
+    {
+      "LineText": "ESSADDE",
+      "Words": [
+        {
+          "Text": "ESSADDE",
+          "Confidence": 89.437325,
+          "Left": 459,
+          "Top": 1328,
+          "Right": 542,
+          "Bottom": 1351
+        }
+      ]
+    },
+    {
+      "LineText": "Mr HICHEM",
+      "Words": [
+        {
+          "Text": "HICHEM",
+          "Confidence": 90.60678,
+          "Left": 363,
+          "Top": 1340,
+          "Right": 441,
+          "Bottom": 1356
+        },
+        {
+          "Text": "Mr",
+          "Confidence": 92.96977,
+          "Left": 307,
+          "Top": 1347,
+          "Right": 331,
+          "Bottom": 1359
+        }
+      ]
+    },
+    {
+      "LineText": "pirecteur Agence : en م",
+      "Words": [
+        {
+          "Text": "Agence",
+          "Confidence": 92.45849,
+          "Left": 184,
+          "Top": 1351,
+          "Right": 262,
+          "Bottom": 1366
+        },
+        {
+          "Text": ":",
+          "Confidence": 92.800285,
+          "Left": 283,
+          "Top": 1351,
+          "Right": 287,
+          "Bottom": 1360
+        },
+        {
+          "Text": "م",
+          "Confidence": 48.52466,
+          "Left": 994,
+          "Top": 1352,
+          "Right": 1130,
+          "Bottom": 1405
+        },
+        {
+          "Text": "pirecteur",
+          "Confidence": 92.70301,
+          "Left": 45,
+          "Top": 1354,
+          "Right": 167,
+          "Bottom": 1371
+        },
+        {
+          "Text": "en",
+          "Confidence": 24.194069,
+          "Left": 932,
+          "Top": 1354,
+          "Right": 992,
+          "Bottom": 1382
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "FileName": "QNB MED 03-24.pdf",
+  "DetectedType": "Bank",
+  "PageCount": 4,
+  "OcrConfidence": 89.25,
+  "NeedsReview": false,
+  "BankName": "",
+  "Account": {
+    "AccountNumber": "2019-112548-001",
+    "Currency": "TND",
+    "Rib": "TN5923019111112548178875",
+    "SoldeInitial": 69.395,
+    "SoldeFinal": 49.165,
+    "SoldeDisponible": 0,
+    "TotalDebit": null,
+    "TotalCredit": null,
+    "Transactions": [
+      {
+        "Date": "29/03/2024",
+        "Libelle": "Charges/Fees 2019-112548-002 Account Keeping Commission (Retail) Charge Date 1240329",
+        "Debit": 17.000,
+        "Credit": null
+      },
+      {
+        "Date": "29/03/2024",
+        "Libelle": "Tax on Charges 2019-112548-002 Veuillez visiter : pour plus d'informations. . dans votre situation de compte incluant les transactions a date valeur antérieure ou postérieure et exclut les éventuels montants de rectification par la banque. Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire عل la banque par écrit dans les 15 jours suivant la date d'émission.",
+        "Debit": 3.230,
+        "Credit": null
+      }
+    ]
+  }
+}
