@@ -389,8 +389,9 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     .ToList();
 
                 // AJOUT : élimine les doublons exacts (même valeur, positions très proches)
+                
                 // causés par une fusion accidentelle de 2 lignes PDF en une seule row.
-                amountCandidates = amountCandidates
+               amountCandidates = amountCandidates
                     .GroupBy(c => new { c.Value, ZoneLeft = c.Left / 20 }) // regroupe par valeur + zone de 20px
                     .Select(g => g.First())
                     .ToList();

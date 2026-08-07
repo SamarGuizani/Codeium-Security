@@ -1,4 +1,5 @@
 using Codeium_Security.Factories;
+using Codeium_Security.Interfaces;
 using Codeium_Security.Models;
 using Codeium_Security.OCR;
 using Codeium_Security.Services.DocumentClassification;
@@ -10,27 +11,24 @@ namespace Codeium_Security.Services
     {
         private readonly IOcrService _ocrService;
         private readonly DocumentAnalysisEngine _engine;
-        private readonly PdfToImageConverter _pdfConverter;
+        private readonly IEnumerable<IDocumentExtractor> _extractors;
         private readonly IDocumentClassifier _classifier;
         private readonly DocumentParserFactory _parserFactory;
-        private readonly ImageFormatConverter _formatConverter;
         private readonly IConfiguration _configuration;
 
         public DocumentProcessingService(
             IOcrService ocrService,
             DocumentAnalysisEngine engine,
-            PdfToImageConverter pdfConverter,
+            IEnumerable<IDocumentExtractor> extractors,
             IDocumentClassifier classifier,
             DocumentParserFactory parserFactory,
-            ImageFormatConverter formatConverter,
             IConfiguration configuration)
         {
             _ocrService = ocrService;
             _engine = engine;
-            _pdfConverter = pdfConverter;
+            _extractors = extractors;
             _classifier = classifier;
             _parserFactory = parserFactory;
-            _formatConverter = formatConverter;
             _configuration = configuration;
         }
 
@@ -39,55 +37,10 @@ namespace Codeium_Security.Services
             var swTotal = System.Diagnostics.Stopwatch.StartNew();
             Console.WriteLine($"[TIMER] ===== DEBUT {originalFileName} =====");
 
-            if (!_pdfConverter.IsPdf(originalFileName) && _formatConverter.NeedsConversion(originalFileName))
-            {
-                filePath = _formatConverter.ConvertToPng(filePath);
-            }
-
-            OcrResult ocrResult;
-
-            if (_pdfConverter.IsPdf(originalFileName))
-            {
-                var swConvert = System.Diagnostics.Stopwatch.StartNew();
-                string pdfImagesFolder = Path.Combine("Images", "pdf_pages_" + Path.GetFileNameWithoutExtension(originalFileName));
-                var pageImagePaths = _pdfConverter.ConvertPdfToImages(filePath, pdfImagesFolder);
-                Console.WriteLine($"[TIMER] Conversion PDF->images: {swConvert.ElapsedMilliseconds} ms pour {pageImagePaths.Count} pages");
-
-                var pageResults = new List<OcrResult>();
-                foreach (var pageImagePath in pageImagePaths)
-                {
-                    var swOcr = System.Diagnostics.Stopwatch.StartNew();
-                    try
-                    {
-                        var fileInfo = new FileInfo(pageImagePath);
-                        if (!fileInfo.Exists || fileInfo.Length == 0)
-                        {
-                            pageResults.Add(new OcrResult { FullText = "", Confidence = 0, Words = new List<OcrWord>() });
-                            continue;
-                        }
-
-                        Console.WriteLine($"[TIMER] --> Debut OCR page: {pageImagePath}");
-                        pageResults.Add(await _ocrService.ExtractTextAsync(pageImagePath));
-                        Console.WriteLine($"[TIMER] <-- Fin OCR page: {pageImagePath} : {swOcr.ElapsedMilliseconds} ms");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"[TIMER] !!! ERREUR OCR page {pageImagePath} apres {swOcr.ElapsedMilliseconds} ms: {ex.Message}");
-                        pageResults.Add(new OcrResult { FullText = "", Confidence = 0, Words = new List<OcrWord>() });
-                    }
-                }
-
-                ocrResult = OcrResult.Merge(pageResults);
-            }
-            else
-            {
-                var swOcr = System.Diagnostics.Stopwatch.StartNew();
-                Console.WriteLine($"[TIMER] --> Debut OCR fichier unique: {filePath}");
-                ocrResult = await _ocrService.ExtractTextAsync(filePath);
-                Console.WriteLine($"[TIMER] <-- Fin OCR fichier unique: {swOcr.ElapsedMilliseconds} ms");
-                ocrResult.PageTexts = new List<string> { ocrResult.FullText };
-                ocrResult.PageCount = 1;
-            }
+            var extractor = _extractors.FirstOrDefault(e => e.CanHandle(originalFileName))
+                ?? throw new NotSupportedException($"Aucun extracteur ne prend en charge le fichier '{originalFileName}'.");
+            Console.WriteLine($"IMAGE UTILISEE : {filePath}");
+            var ocrResult = await extractor.ExtractAsync(filePath, originalFileName);
 
             ocrResult.FullText = TextCleaner.RemoveInvisibleMarks(ocrResult.FullText);
             ocrResult.PageTexts = ocrResult.PageTexts.Select(TextCleaner.RemoveInvisibleMarks).ToList();
@@ -101,13 +54,30 @@ namespace Codeium_Security.Services
             return ocrResult;
         }
 
+        private List<TextLine> GroupLines(OcrResult ocrResult)
+        {
+            return ocrResult.SuggestedVerticalTolerance.HasValue
+                ? _engine.GroupWordsIntoLines(ocrResult.Words, ocrResult.SuggestedVerticalTolerance.Value)
+                : _engine.GroupWordsIntoLines(ocrResult.Words);
+        }
+
         public async Task<DocumentProcessingResult> ProcessFileAsync(string filePath, string originalFileName)
         {
             var ocrResult = await RunOcrOnlyAsync(filePath, originalFileName);
 
-            var lines = _engine.GroupWordsIntoLines(ocrResult.Words);
+            var lines = GroupLines(ocrResult);
+            var diagRows = _engine.BuildTable(lines);
+            Console.WriteLine($"[DIAG] TextLines: {lines.Count} | TableRows: {diagRows.Count}");
+            for (int i = 0; i < Math.Min(10, diagRows.Count); i++)
+            {
+                string cellsDump = string.Join(" || ", diagRows[i].Cells.Select(c => $"Left={c.Left}:'{c.Text}'"));
+                Console.WriteLine($"[DIAG] Row {i}: {cellsDump}");
+            }
             var documentType = _classifier.Classify(ocrResult.FullText);
             var parser = _parserFactory.GetParser(documentType);
+            Console.WriteLine("===== TEXT SENT TO BANK PARSER START =====");
+            Console.WriteLine(ocrResult.FullText);
+            Console.WriteLine("===== TEXT SENT TO BANK PARSER END =====");
             object? document = parser?.Parse(ocrResult.FullText, lines);
 
             bool needsReview = EvaluateNeedsReview(documentType, document, ocrResult.Confidence);

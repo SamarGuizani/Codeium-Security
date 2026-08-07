@@ -9,6 +9,7 @@ namespace Codeium_Security.OCR
         public List<OcrWord> Words { get; set; } = new();
         public int PageCount { get; set; } = 1;
         public List<string> PageTexts { get; set; } = new();
+        public int? SuggestedVerticalTolerance { get; set; }
 
         public static OcrResult Merge(List<OcrResult> pageResults)
         {

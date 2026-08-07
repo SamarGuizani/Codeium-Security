@@ -3,8 +3,11 @@ using Codeium_Security.Interfaces;
 using Codeium_Security.OCR;
 using Codeium_Security.Services;
 using Codeium_Security.Services.DocumentClassification;
+using Codeium_Security.Services.DocumentExtraction;
 using Codeium_Security.Services.DocumentParsers;
 Codeium_Security.Tools.TestParser.RunTests();
+Codeium_Security.Tools.TestImageExtraction.RunTests();
+Codeium_Security.Tools.TestSkewGrouping.RunTests();
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,6 +28,9 @@ builder.Services.AddScoped<IDocumentParser, ReceiptDocumentParser>();
 builder.Services.AddScoped<DocumentParserFactory>();
 builder.Services.AddScoped<ImageFormatConverter>();
 builder.Services.AddScoped<IDocumentParser, AcademicDocumentParser>();
+builder.Services.AddScoped<ImagePreprocessor>();
+builder.Services.AddScoped<IDocumentExtractor, PdfDocumentExtractor>();
+builder.Services.AddScoped<IDocumentExtractor, ImageDocumentExtractor>();
 builder.Services.AddScoped<DocumentProcessingService>();
 
 
@@ -34,7 +40,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// app.UseHttpsRedirection(); // désactivé temporairement pour éviter l'erreur de port pendant le dev
+// app.UseHttpsRedirection(); // dï¿½sactivï¿½ temporairement pour ï¿½viter l'erreur de port pendant le dev
 
 app.UseAuthorization();
 app.MapControllers();

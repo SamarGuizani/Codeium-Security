@@ -98,6 +98,8 @@ namespace Codeium_Security.Controllers
             {
                 if (file.Length == 0) continue;
 
+                try
+                {
                 Directory.CreateDirectory("Images");
                 var filePath = Path.Combine("Images", file.FileName);
 
@@ -108,6 +110,13 @@ namespace Codeium_Security.Controllers
                 allResults.Add(result);
 
                 await SaveResultAsJson(result, file.FileName, "TrainingData/RawResults");
+                }
+                catch (Exception ex)
+                {
+                    // Un fichier invalide/corrompu (ex: mauvais scan JPG) ne doit pas faire
+                    // echouer les autres fichiers du meme lot.
+                    Console.WriteLine($"[OcrController] ERREUR traitement '{file.FileName}': {ex.Message}");
+                }
             }
 
             return Ok(allResults);
