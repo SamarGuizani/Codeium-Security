@@ -16,14 +16,12 @@
     "TotalCredit": null,
     "Transactions": [
       {
-        "Solde": 32.165,
         "Date": "28/06/2024",
         "Libelle": "Charges/Fees 2019-112548-002 Account Keeping Commission (Indiv) Charge Date 1240628",
         "Debit": 17.000,
         "Credit": null
       },
       {
-        "Solde": 28.935,
         "Date": "28/06/2024",
         "Libelle": "Tax on Charges 2019-112548-002 Veuillez visiter . dans votre situation de compte incluant les transactions a date valeur antérieure ou postérieure et exclut les éventuels montants de rectification par la banque. Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire عل la banque par écrit dans les 15 jours suivant la date d'émission.",
         "Debit": 3.230,

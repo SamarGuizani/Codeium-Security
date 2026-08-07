@@ -12,8 +12,8 @@
     "SoldeInitial": null,
     "SoldeFinal": 3297.740,
     "SoldeDisponible": 0,
-    "TotalDebit": null,
-    "TotalCredit": null,
+    "TotalDebit": 3005.196,
+    "TotalCredit": 6427.971,
     "Transactions": [
       {
         "Date": "06/01/2026",

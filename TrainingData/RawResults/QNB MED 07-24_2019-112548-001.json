@@ -16,84 +16,72 @@
     "TotalCredit": null,
     "Transactions": [
       {
-        "Solde": -1397.986,
         "Date": "01/07/2024",
         "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 010006159839 23019111112548178875 COPIGER Z.P.A 23-CAG-41-21-0004-01072024-094000-7",
         "Debit": 6.000,
         "Credit": null
       },
       {
-        "Solde": -1399.126,
         "Date": "01/07/2024",
         "Libelle": "Tax on Charges 010006159839",
         "Debit": 1.140,
         "Credit": null
       },
       {
-        "Solde": -1405.126,
         "Date": "10/07/2024",
         "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 010052795111 23019111112548178875 COPIGER MED 23-CAG-41-21-0003-10072024-090000-7",
         "Debit": 6.000,
         "Credit": null
       },
       {
-        "Solde": -1406.266,
         "Date": "10/07/2024",
         "Libelle": "Tax on Charges 010052795111",
         "Debit": 1.140,
         "Credit": null
       },
       {
-        "Solde": -1408.266,
         "Date": "12/07/2024",
         "Libelle": "Charges/Fees 0000621 000005 23019111112548178875 MAGHREBIA ASSURANCES Assurance Vie 23-CAG-20-21-0001-12072024-074000-7",
         "Debit": 2.000,
         "Credit": null
       },
       {
-        "Solde": -1408.646,
         "Date": "12/07/2024",
         "Libelle": "Tax on Charges 0000621",
         "Debit": 0.380,
         "Credit": null
       },
       {
-        "Solde": -1414.646,
         "Date": "16/07/2024",
         "Libelle": "CHGS-ST.ORDR/UTILITY PAY. REJECTN 009957050873 23019111112548178875 SOCIETE ASIA MOTORS COMPANY ZPA 23-CAG-41-21-0001-16072024-074000-7",
         "Debit": 6.000,
         "Credit": null
       },
       {
-        "Solde": -1415.786,
         "Date": "16/07/2024",
         "Libelle": "Tax on Charges 009957050873 Cette déclaration sera considérée comme correcte et approuvée par vous, sauf avis contraire عل la banque par écrit فصقل les 15 jours suivant la date d'émission. 8 xons 1 août 2024 Relevé z bancaire . MOHAMED ZARRAGA ZPA AGENCE BEN AROUS",
         "Debit": 1.140,
         "Credit": null
       },
       {
-        "Solde": -1417.786,
         "Date": "26/07/2024",
         "Libelle": "Charges/Fees 0004720 000005 23019111112548178875 MAGHREBIA ASSURANCES Assurance Vie 23-CAG-20-21-0001-26072024-074000-7",
         "Debit": 2.000,
         "Credit": null
       },
       {
-        "Solde": -1419.786,
         "Date": "26/07/2024",
         "Libelle": "Charges/Fees 0004721 000005 23019111112548178875 MAGHREBIA ASSURANCES Assurance Vie 23-CAG-20-21-0001-26072024-074000-7",
         "Debit": 2.000,
         "Credit": null
       },
       {
-        "Solde": -1420.166,
         "Date": "26/07/2024",
         "Libelle": "Tax on Charges 0004720",
         "Debit": 0.380,
         "Credit": null
       },
       {
-        "Solde": -1420.546,
         "Date": "26/07/2024",
         "Libelle": "Tax on Charges 0004721 Account (IBAN) Type de Compte Devise 2 ب 0 0 Current Account - Normal and (TN59 0294) TUNISIAN DINAR Local",
         "Debit": 0.380,
