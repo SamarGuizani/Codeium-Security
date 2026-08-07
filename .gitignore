@@ -397,3 +397,10 @@ appsettings.Local.json
 # Database local files
 *.sqlite
 *.db
+# Bank documents / OCR test data
+/Images/
+/TrainingData/RawResults/
+/TrainingData/TestFixtures/
+
+# OCR generated HTML
+*.html
