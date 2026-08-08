@@ -120,9 +120,102 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
             bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
+
+            // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
+            // montants courts). Strategie complete validee sur 3 relevés UBCI reels avant
+            // implementation (voir discussion) : le "/" des dates est parfois OCRise comme un
+            // chiffre parasite (souvent "1" ou "7") juste apres le jour et/ou le mois. La
+            // reparation de date n'est jamais utilisee seule : elle exige EN MEME TEMPS que le
+            // candidat soit la toute premiere cellule de sa ligne (jamais un fragment de
+            // reference bancaire, qui apparait toujours au milieu d'une ligne precede de ": "),
+            // qu'il soit calendairement valide, qu'il tombe dans la periode du document (a
+            // quelques jours pres) et qu'il soit chronologiquement cohere avec la derniere date
+            // confirmee de la section - verifie sur bq bidah (0300212025->03/02/2025, identique
+            // a la date confirmee de la ligne suivante) et dakhliubci (0510212025->05/02/2025,
+            // identique aux dates confirmees voisines), et testé contre un vrai faux-positif
+            // potentiel ("150031157", fragment de reference bancaire coupe par l'OCR) qui est
+            // deja rejete par le seul critere de position (pas la 1ere cellule de sa ligne).
+            bool isUbci = fullText.Contains("UBCI", StringComparison.OrdinalIgnoreCase);
+            DateTime? ubciPeriodStart = null, ubciPeriodEnd = null;
+            if (isUbci)
+            {
+                var ubciPeriodeMatch = Regex.Match(fullText, @"PERIODE\s+DU\s+(\d{2}/\d{2}/\d{4})\s+AU\s+(\d{2}/\d{2}/\d{4})", RegexOptions.IgnoreCase);
+                if (ubciPeriodeMatch.Success)
+                {
+                    if (DateTime.TryParseExact(ubciPeriodeMatch.Groups[1].Value, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var ubciPs))
+                        ubciPeriodStart = ubciPs;
+                    if (DateTime.TryParseExact(ubciPeriodeMatch.Groups[2].Value, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var ubciPe))
+                        ubciPeriodEnd = ubciPe;
+                }
+                // Repli si la ligne PERIODE elle-meme est illisible (observe sur EXTRAIT
+                // DAKHLIubci.pdf) : mois du document deduit du nom du mois le plus frequent
+                // n'est pas fiable non plus -> on reste simplement sans bornes de periode dans
+                // ce cas ; les autres garde-fous (position, calendrier, coherence
+                // chronologique) restent actifs et suffisent (voir verification 150031157).
+            }
+            DateTime? ubciLastConfirmedDate = null;
+            bool ubciClotureReached = false;
+
+            // [UBCI] Tente de reparer une date dont le "/" a ete OCRise comme un chiffre
+            // parasite. N'est appelee qu'en dernier recours (voir points d'appel plus bas),
+            // jamais depuis GetNormalizedDateFromCells (non modifiee).
+            bool TryRepairUbciDate(string rawDigits, out string repaired)
+            {
+                repaired = "";
+                if (rawDigits.Length != 9 && rawDigits.Length != 10) return false;
+                if (!Regex.IsMatch(rawDigits, @"^\d+$")) return false;
+
+                var candidates = new List<string>();
+                if (rawDigits.Length == 9)
+                {
+                    candidates.Add(rawDigits.Remove(2, 1));
+                    candidates.Add(rawDigits.Remove(4, 1));
+                }
+                else
+                {
+                    candidates.Add(rawDigits.Remove(5, 1).Remove(2, 1));
+                }
+
+                foreach (var candidate in candidates)
+                {
+                    if (candidate.Length != 8) continue;
+                    if (!DateTime.TryParseExact(candidate, "ddMMyyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed))
+                        continue;
+                    if (ubciPeriodStart.HasValue && parsed < ubciPeriodStart.Value.AddDays(-5)) continue;
+                    if (ubciPeriodEnd.HasValue && parsed > ubciPeriodEnd.Value.AddDays(5)) continue;
+                    if (ubciLastConfirmedDate.HasValue && Math.Abs((parsed - ubciLastConfirmedDate.Value).TotalDays) > 15) continue;
+
+                    repaired = parsed.ToString("dd/MM/yyyy");
+                    return true;
+                }
+                return false;
+            }
             // Document utilise des montants signes (QNB, Zitouna, BIAT-extrait...) :
             // negatif = Debit, positif = Credit, strictement, partout dans ce document.
             bool hasSignedAmounts = Regex.IsMatch(fullText, @"-\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
+
+            // [GENERIQUE] Detection de bruit d'en-tete/pied de page par repetition, independante
+            // de toute banque : une ligne (nettoyee, chiffres neutralises) qui apparait plusieurs
+            // fois IDENTIQUEMENT ailleurs dans le document est presque toujours un element repete
+            // a chaque page (mentions legales, coordonnees d'agence, titre de banque, en-tete de
+            // colonnes...) - une vraie transaction ne se repete jamais a l'identique (date/montant
+            // varient toujours). Remplace le besoin d'enumerer une regex de bruit par banque a
+            // chaque nouvelle mise en page. Seuil de longueur pour ne jamais flaguer par erreur de
+            // courts fragments generiques qui reapparaissent legitimement (ex. "TND", "COM").
+            var repeatedLineCounts = new Dictionary<string, int>();
+            foreach (var noiseRow in rows)
+            {
+                string noiseJoined = StripPrintArtifacts(string.Join(" ",
+                    noiseRow.Cells.Select(c => NormalizeSignSpacing(CleanWhitespace(c.Text)))));
+                // Seuil de longueur volontairement eleve : une phrase de commission bancaire
+                // reelle (ex. "Com retrait espece par nos porteurs sur GAB") peut elle aussi se
+                // repeter plusieurs fois sans etre du bruit de page. On ne cible que les lignes
+                // longues (mentions legales, coordonnees), rarement le format d'un libelle court.
+                if (noiseJoined.Length < 40) continue;
+                string noiseKey = Regex.Replace(noiseJoined, @"\d", "#").Trim();
+                repeatedLineCounts[noiseKey] = repeatedLineCounts.GetValueOrDefault(noiseKey) + 1;
+            }
+
             foreach (var row in rows)
             {
                 var cells = row.Cells.OrderBy(c => c.Left).ToList();
@@ -192,6 +285,58 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 // RIB
                 var ribMatch = Regex.Match(joined, @"TN\d{2}[\s\d]{15,25}");
                 if (ribMatch.Success) lastSeenRib = Regex.Replace(ribMatch.Value, @"\s+", "").Trim();
+
+                // [UBCI] Solde debiteur/crediteur d'ouverture : "SOLDE DEBITEUR AU <date>
+                // <montant>". Regex sur la ligne entiere (pas sur des positions de cellules),
+                // donc insensible au fait que la date soit en 4e position sur ce releve (apres
+                // "SOLDE", "DEBITEUR", "AU") - c'est precisement ce que GetNormalizedDateFromCells
+                // (non modifiee, limitee aux 3 premieres cellules) ne peut pas voir, et la cause
+                // racine du 0-transaction observe sur dakhliubci.pdf.
+                // IMPORTANT : positionne ICI, AVANT la detection d'en-tete Debit/Credit/Solde
+                // partagee juste en dessous (non modifiee) - "DEBITEUR" contient litteralement
+                // la sous-chaine "DEBIT", donc le Regex.IsMatch(..,"D[ée]bit",..) partage
+                // matchait a tort cette ligne comme un en-tete de colonne et l'interceptait
+                // (continue) avant qu'elle n'atteigne ce bloc, quand celui-ci etait place plus
+                // bas dans la fonction (cause du 0-transaction persistant malgre cette regle).
+                if (isUbci)
+                {
+                    var ubciOpenMatch = Regex.Match(joined,
+                        @"SOLDE\s+(DEBITEUR|CREDITEUR)\s+AU\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                        RegexOptions.IgnoreCase);
+                    if (current == null && ubciOpenMatch.Success)
+                    {
+                        decimal ubciSoldeInit = ParseAmount(ubciOpenMatch.Groups[2].Value);
+                        // Le releve n'imprime pas toujours le signe "-" pour un solde debiteur
+                        // (observe sur bq bidah 02-2025ubci.pdf) : le mot DEBITEUR fait foi.
+                        ubciSoldeInit = ubciOpenMatch.Groups[1].Value.Equals("DEBITEUR", StringComparison.OrdinalIgnoreCase)
+                            ? -Math.Abs(ubciSoldeInit)
+                            : Math.Abs(ubciSoldeInit);
+
+                        current = new BankAccountSection
+                        {
+                            AccountNumber = lastSeenAccountNumber,
+                            Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                            Currency = ExtractCurrency(fullText),
+                            SoldeInitial = ubciSoldeInit
+                        };
+                        previousSolde = ubciSoldeInit;
+                        sectionRawText = joined + "\n";
+                        pendingLibelleBuffer = "";
+                        pendingDate = "";
+                        continue;
+                    }
+
+                    // [UBCI] Solde de cloture : "SOLDE DE CLOTURE <montant>". Marque aussi la fin
+                    // des reparations UBCI (dates/montants) pour cette section : tout ce qui suit
+                    // est du pied de page (mentions legales, coordonnees), jamais une operation.
+                    var ubciCloseMatch = Regex.Match(joined, @"SOLDE\s+DE\s+CLOTURE\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    if (ubciCloseMatch.Success)
+                    {
+                        if (current != null) current.SoldeFinal = ParseAmount(ubciCloseMatch.Groups[1].Value);
+                        ubciClotureReached = true;
+                        continue;
+                    }
+                }
 
                 // Détection des en-têtes Debit/Credit/Solde
                 var debitCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"D[ée]bit", RegexOptions.IgnoreCase));
@@ -340,6 +485,40 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     continue;
                 }
 
+                // [GENERIQUE] Solde d'ouverture, formulation libre (remplace le besoin d'enumerer
+                // une regex par banque pour "Solde au :", "SOLDE DEBITEUR AU", "Solde de depart
+                // au", etc.) : une ligne contenant le mot SOLDE, une date, et EXACTEMENT un
+                // montant, rencontree avant la toute premiere transaction de la section
+                // (current == null) ne peut etre, par construction, qu'une declaration de solde
+                // d'OUVERTURE - un solde de cloture n'a de sens qu'apres au moins un mouvement,
+                // donc aucun risque de confusion avec les soldes de cloture traites plus haut/bas
+                // (qui de toute facon "continue"nt avant d'atteindre ce bloc s'ils matchent).
+                // Ne s'applique jamais aux banques deja gerees ci-dessus : leurs regex specifiques
+                // (QNB "Solde Initial", BIAT "SOLDE AU", Zitouna "Solde actuel") matchent et
+                // "continue"nt avant d'arriver ici.
+                if (current == null
+                    && Regex.IsMatch(joined, @"\bSOLDE\b", RegexOptions.IgnoreCase)
+                    && Regex.IsMatch(joined, @"\d{1,2}[/\-. ]\d{1,2}[/\-. ]\d{2,4}|\d{1,2}\s+[A-Za-z]{3,4}\s+\d{2,4}"))
+                {
+                    var genericSoldeAmounts = AmountRegex.Matches(joined);
+                    if (genericSoldeAmounts.Count == 1)
+                    {
+                        decimal genericSoldeInit = ParseAmount(genericSoldeAmounts[0].Value);
+                        current = new BankAccountSection
+                        {
+                            AccountNumber = lastSeenAccountNumber,
+                            Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                            Currency = ExtractCurrency(fullText),
+                            SoldeInitial = genericSoldeInit
+                        };
+                        previousSolde = genericSoldeInit;
+                        sectionRawText = joined + "\n";
+                        pendingLibelleBuffer = "";
+                        pendingDate = "";
+                        continue;
+                    }
+                }
+
                 // Ignorer les lignes de Total et de page
                 if (Regex.IsMatch(joined, @"\b(Total|Page\s*\d)\b", RegexOptions.IgnoreCase))
                     continue;
@@ -368,6 +547,24 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
                 // Normalisation de la date
                 string normalizedDate = GetNormalizedDateFromCells(cellTexts, isBiat ? documentYear : null);
+
+                // [UBCI] Filet de secours : uniquement si le chemin normal (inchangé) n'a rien
+                // trouvé, jamais avant la clôture de la section, et seulement si la toute
+                // première cellule de la ligne est un bloc de 9-10 chiffres purs (exclut de fait
+                // tout fragment de référence bancaire, qui apparaît toujours au milieu d'une
+                // ligne et jamais isolé en première position - voir validation avec "150031157").
+                if (isUbci && string.IsNullOrEmpty(normalizedDate) && !ubciClotureReached
+                    && cellTexts.Count > 0 && Regex.IsMatch(cellTexts[0], @"^\d{9,10}$"))
+                {
+                    if (TryRepairUbciDate(cellTexts[0], out var ubciRepairedDate))
+                        normalizedDate = ubciRepairedDate;
+                }
+
+                if (isUbci && !string.IsNullOrEmpty(normalizedDate)
+                    && DateTime.TryParseExact(normalizedDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var ubciConfirmedDate))
+                {
+                    ubciLastConfirmedDate = ubciConfirmedDate;
+                }
 
                 // Fusion des signes "-" isolés
                 var mergedWithPos = new List<(int Left, string Text)>();
@@ -403,9 +600,20 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 // sur des numeros de reference ou des dates, qui n'apparaissent jamais a ces positions X).
                 if (debitAnchor.HasValue || creditAnchor.HasValue || soldeAnchor.HasValue)
                 {
+                    // [UBCI] Meme mecanisme que ci-dessus (montant sans separateur), etendu aux
+                    // montants COURTS de 3-4 chiffres (ex. "0750", "555") observes sur les 3
+                    // relevés UBCI analysés. Garde-fous supplementaires par rapport au cas
+                    // generique 5-10 chiffres : uniquement avant la cloture de section (exclut
+                    // le pied de page, ou un fragment comme "N°771-" partage la meme position X
+                    // que l'ancre Credit sur ces documents) et seulement si la ligne contient
+                    // aussi du texte (un vrai libelle d'operation, jamais une ligne de mentions
+                    // legales pures constatee sur ces releves).
+                    bool ubciShortAmountsAllowed = isUbci && !ubciClotureReached && Regex.IsMatch(joined, @"[A-Za-zÀ-ÿ]");
+                    string bareDigitPattern = ubciShortAmountsAllowed ? @"^-?\d{3,10}$" : @"^-?\d{5,10}$";
+
                     var bareDigitCandidates = mergedWithPos
                         .Where(c => !AmountRegex.IsMatch(c.Text))
-                        .Where(c => Regex.IsMatch(c.Text.Trim(), @"^-?\d{5,10}$"))
+                        .Where(c => Regex.IsMatch(c.Text.Trim(), bareDigitPattern))
                         .Where(c =>
                         {
                             int distDebit = debitAnchor.HasValue ? Math.Abs(c.Left - debitAnchor.Value) : int.MaxValue;
@@ -419,7 +627,10 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                             string digits = c.Text.Trim();
                             bool neg = digits.StartsWith("-");
                             if (neg) digits = digits.Substring(1);
-                            string intPart = digits.Substring(0, digits.Length - 3);
+                            // Partie entiere vide (ex. "555" -> decimales seules) : equivaut a 0.
+                            // Ne se produit jamais pour le cas 5-10 chiffres deja existant
+                            // (toujours >=2 chiffres de partie entiere) - purement defensif ici.
+                            string intPart = digits.Length > 3 ? digits.Substring(0, digits.Length - 3) : "0";
                             string decPart = digits.Substring(digits.Length - 3);
                             decimal val = decimal.Parse(intPart + "." + decPart, CultureInfo.InvariantCulture);
                             if (neg) val = -val;
@@ -454,8 +665,20 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 // Détection du bruit général
                 bool biatNoiseHit = isBiat && IsBiatNoise(joined);
                 if (biatNoiseHit) biatInNoiseZone = true;
+
+                // [GENERIQUE] Cf. repeatedLineCounts ci-dessus : une ligne sans montant qui
+                // apparait ≥2 fois identiquement (chiffres neutralises) dans le document est du
+                // bruit repete a chaque page, quelle que soit la banque. On exige l'absence de
+                // montant en plus de la repetition : une ligne de montant peut legitimement se
+                // repeter (ex. plusieurs operations a "0,000") sans etre du bruit.
+                string repeatedNoiseKey = Regex.Replace(joined, @"\d", "#").Trim();
+                bool isRepeatedBoilerplate = amountCandidates.Count == 0
+                    && joined.Length >= 40
+                    && repeatedLineCounts.GetValueOrDefault(repeatedNoiseKey) >= 3;
+
                 bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
-                    || biatNoiseHit;
+                    || biatNoiseHit
+                    || isRepeatedBoilerplate;
 
                 // Si la date est vide, tenter de la trouver dans le libellé (date 8 chiffres)
                 if (string.IsNullOrEmpty(normalizedDate) && amountCandidates.Count > 0)
@@ -482,7 +705,26 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                             // montant"). Sans ce cas particulier, la ligne est perdue ici (continue)
                             // au lieu de devenir sa propre transaction. On reprend la date de la
                             // derniere transaction de la section, comme sur le releve BTK.
-                            if (isBtk && current.Transactions.Count > 0)
+                            //
+                            // NE PAS generaliser cette condition a toutes les banques sans garde :
+                            // tente le 07/08, revert immediat - fait passer BIAT/Zitouna/Attijari de
+                            // 15/16 a 3/16 (+1 transaction fantome sur presque chaque fichier). Cause
+                            // exacte non identifiee avant le revert (protocole : ne pas empiler un
+                            // 2e correctif a l'aveugle par-dessus une regression non comprise). A
+                            // generaliser seulement apres avoir isole precisement la ligne qui, chez
+                            // BIAT/Zitouna/Attijari, est un montant-seul-sans-date legitime a
+                            // ignorer (pas une sous-transaction) mais qui n'est pas deja filtre par
+                            // isNoise/IsBiatNoise.
+                            //
+                            // [UBCI] Ajoute isUbci le 08/08, apres analyse structurelle dediee sur les
+                            // 3 releves UBCI (voir discussion) : une cellule montant ancree sur la
+                            // colonne Debit/Credit doit toujours clore une transaction, meme quand la
+                            // sous-operation (TVA, COMMISSION...) ne repete pas sa propre date - le
+                            // signal fiable et commun aux 3 fichiers est la cellule montant elle-meme,
+                            // pas la presence d'une date. isUbci est une condition totalement disjointe
+                            // de isBtk/isBiat/isQnb/isZitouna (aucun document de ces banques ne
+                            // contient "UBCI"), donc ne peut pas reproduire la regression du 07/08.
+                            if ((isBtk || isUbci) && current.Transactions.Count > 0)
                                 pendingDate = current.Transactions[current.Transactions.Count - 1].Date;
                             else
                                 continue;
@@ -494,7 +736,8 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         // "COM & TVA RET. CARTE") a cote de son montant, elle n'arrive jamais via
                         // pendingLibelleBuffer (qui n'est alimente que par des lignes sans montant).
                         // Sans ceci, fullDesc resterait vide et le libelle de l'operation serait perdu.
-                        if (isAmenDocument || isBtk)
+                        // [UBCI] Meme raisonnement, ajoute le 08/08 (voir ci-dessus).
+                        if (isAmenDocument || isBtk || isUbci)
                         {
                             string currentNonAmount = string.Join(" ", cellTexts.Where(c => !AmountRegex.IsMatch(c))).Trim();
                             currentNonAmount = Regex.Replace(currentNonAmount, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
@@ -588,9 +831,31 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 // Ligne avec date valide
                 if (amountCandidates.Count == 0)
                 {
-                    pendingDate = normalizedDate;
-                    string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)));
-                    pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
+                    // Une ligne REDUITE A UNE SEULE CELLULE qui n'est QUE cette date (rien
+                    // d'autre) et qui arrive juste apres une transaction deja enregistree, sans
+                    // accumulation de pendingDate/pendingLibelleBuffer en cours, est presque
+                    // toujours un fragment de texte coupe sur 2 lignes OCR (ex. "AGIOS DU
+                    // 31/03/25 AU" puis, seule sur la ligne suivante, "30/06/25") plutot que le
+                    // debut d'une nouvelle operation : une vraie nouvelle transaction a toujours
+                    // au moins un debut de libelle a cote de sa date, jamais une date totalement
+                    // isolee sans aucun autre mot. Meme heuristique que le "Texte de continuation"
+                    // ci-dessus, seulement etendue au cas ou ce fragment ressemble aussi a une
+                    // date valide (confirme sur BANK-TND (1)btk.pdf, ou l'annee sur 2 chiffres
+                    // "30/06/25" est desormais reconnue comme date et faisait disparaitre ce
+                    // fragment du libelle de la transaction precedente).
+                    if (cellTexts.Count == 1 && current.Transactions.Count > 0
+                        && string.IsNullOrEmpty(pendingDate) && string.IsNullOrEmpty(pendingLibelleBuffer))
+                    {
+                        var lastTx = current.Transactions[current.Transactions.Count - 1];
+                        if (!isNoise && !biatInNoiseZone)
+                            lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
+                    }
+                    else
+                    {
+                        pendingDate = normalizedDate;
+                        string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)));
+                        pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
+                    }
                     continue;
                 }
 
@@ -722,7 +987,16 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             else if (raw.Length == 4 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.') && !raw.Contains(' '))
                 candidate = $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}";
 
-            var formatsWithYear = new[] { "dd/MM/yyyy", "dd-MM-yyyy", "dd.MM.yyyy", "yyyy-MM-dd", "yyyy/MM/dd" };
+            // Formats numeriques (annee sur 4 chiffres, puis sur 2 chiffres - ex. ATB "04/02/25")
+            // et formats avec nom de mois abrege (ex. BTL-extrait "01 FEB 24"). Purement additif :
+            // n'importe quel format deja accepte continue de matcher en premier via TryParseExact,
+            // donc aucune banque existante ne peut voir son comportement change par cet ajout.
+            var formatsWithYear = new[]
+            {
+                "dd/MM/yyyy", "dd-MM-yyyy", "dd.MM.yyyy", "yyyy-MM-dd", "yyyy/MM/dd",
+                "dd/MM/yy", "dd-MM-yy", "dd.MM.yy",
+                "dd MMM yyyy", "dd MMM yy", "dd-MMM-yyyy", "dd-MMM-yy", "dd.MMM.yyyy", "dd.MMM.yy",
+            };
 
             if (DateTime.TryParseExact(candidate, formatsWithYear, CultureInfo.InvariantCulture,
                     DateTimeStyles.None, out var parsed))

@@ -8,6 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Le projet de tests xUnit vit dans un sous-dossier de celui-ci ; sans cette exclusion,
+         le glob implicite **/*.cs de ce SDK essaierait de compiler ses fichiers ici aussi. -->
+    <Compile Remove="Codeium Security.Tests\**" />
+    <Content Remove="Codeium Security.Tests\**" />
+    <None Remove="Codeium Security.Tests\**" />
+    <EmbeddedResource Remove="Codeium Security.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Docnet.Core" Version="2.6.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.13" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />

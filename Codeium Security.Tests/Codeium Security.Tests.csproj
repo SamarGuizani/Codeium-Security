@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Codeium_Security.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Codeium Security.csproj" />
+  </ItemGroup>
+
+  <!--
+    Le pipeline reel (TesseractOcrService) charge le moteur OCR depuis "./tessdata"
+    (chemin relatif au repertoire de travail courant). Ces tests executent le VRAI
+    pipeline OCR (aucun mock) : il faut donc que tessdata soit present a cote de
+    l'assembly de test, exactement comme il l'est a cote de l'assembly principal.
+  -->
+  <ItemGroup>
+    <None Include="..\tessdata\ara.traineddata">
+      <Link>tessdata\ara.traineddata</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\tessdata\eng.traineddata">
+      <Link>tessdata\eng.traineddata</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\tessdata\fra.traineddata">
+      <Link>tessdata\fra.traineddata</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
