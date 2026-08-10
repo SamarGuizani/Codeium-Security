@@ -66,7 +66,7 @@ namespace Codeium_Security.Tests
                     int shown = 0;
                     foreach (var tx in acc.Transactions)
                     {
-                        if (shown >= 5 && shown < acc.Transactions.Count - 3) { shown++; continue; }
+                        if (false && shown >= 5 && shown < acc.Transactions.Count - 3) { shown++; continue; }
                         _output.WriteLine($"     [{shown}] {tx.Date} | {tx.Libelle} | D={tx.Debit} | C={tx.Credit}");
                         shown++;
                     }

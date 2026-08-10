@@ -16,7 +16,7 @@ namespace Codeium_Security.Services
         public string Text { get; set; } = "";
         public int Left { get; set; }
          
-        //public int Right { get; set; } // le 05 aout j'ai ajouter ceci 
+       // public int Right { get; set; } // le 05 aout j'ai ajouter ceci 
     }
 
     public class TableRow

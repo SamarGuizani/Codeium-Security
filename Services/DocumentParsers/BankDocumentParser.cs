@@ -59,13 +59,20 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             string bankName = ExtractBankName(fullText);
             bool isBiat = bankName.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
             bool isZitouna = fullText.Contains("ZITOUNA", StringComparison.OrdinalIgnoreCase);
-            bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);   // ← ajouter
+            bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
+            bool isBna = fullText.Contains("BNA", StringComparison.OrdinalIgnoreCase);
 
-            if (isBiat || isZitouna || isBtk)
+            // [ATB] La colonne "Jour" ne contient que le quantième (ex. "03"), jamais une date
+            // complète. La vraie date ("DATE VALEUR", format dd/mm/yy) est une cellule à part,
+            // plus loin dans la ligne (après libellé + référence d'opération).
+            bool isAtb = fullText.Contains("ATB", StringComparison.OrdinalIgnoreCase)
+                || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
+
+            // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
+            if (isBiat || isZitouna || isBtk || isBna)
                 engine.VerticalTolerance = 1;
 
             var rows = engine.BuildTable(lines);
-            // AJOUT : détecte les rows où le texte semble dupliqué (fusion accidentelle de 2 lignes)
             rows = SplitDuplicatedRows(rows);
 
             var document = new BankDocument
@@ -95,9 +102,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             // (ex: un simple "»" ou "au -- : :") ne matchent aucun mot-clé individuellement, mais
             // qui ne doivent jamais être recollées à une transaction pour autant.
             bool biatInNoiseZone = false;
-
-            int? debitAnchor = null, creditAnchor = null, soldeAnchor = null, montantAnchor = null;
-            string documentRib = ExtractRib(fullText);
+            int? debitAnchor = null, creditAnchor = null, soldeAnchor = null, montantAnchor = null, dateAnchor = null; string documentRib = ExtractRib(fullText);
 
             // [BIAT] Récupérer l'année du document
             int? documentYear = null;
@@ -120,6 +125,24 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
             bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
+
+            // [BNA] Chaque operation "principale" (Date+Libelle+Valeur+Montant+Solde) est suivie
+            // de 0 a N sous-lignes "Com ..." (commission) et "TVA" (taxe sur la commission), qui
+            // sont de VRAIES transactions distinctes dans le releve (chacune debite le compte
+            // individuellement) mais qui n'affichent ni date en colonne "Date" (uniquement la
+            // colonne "Valeur"), ni Solde. Verifie sur BNA 7-2025.pdf (dump brut BuildTable) :
+            // ex. Row 22 "Com abonnement BNA eBANKING PRO | Valeur 01/07/2025 | 10.000" et Row 23
+            // "TVA | Valeur 01/07/2025 | 1.900" suivent la transaction "frais Prelevement
+            // d'abonnement..." sans jamais porter de date en colonne A. Sans le meme mecanisme de
+            // secours que BTK/UBCI (reutiliser la Date de la derniere transaction de la section
+            // pour une ligne qui ne porte qu'un montant), ces lignes tombent dans le "continue"
+            // generique : leur montant est perdu, au lieu de devenir une transaction Debit propre.
+            bool isBna = fullText.Contains("BNA", StringComparison.OrdinalIgnoreCase);
+
+            // [ATB] Meme detection que dans Parse() : la date n'est jamais dans les premieres
+            // cellules, voir usage plus bas (GetDateFromAnyCell).
+            bool isAtb = fullText.Contains("ATB", StringComparison.OrdinalIgnoreCase)
+                || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
 
             // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
             // montants courts). Strategie complete validee sur 3 relevés UBCI reels avant
@@ -320,7 +343,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                             SoldeInitial = ubciSoldeInit
                         };
                         previousSolde = ubciSoldeInit;
-                        sectionRawText = joined + "\n";
+                    if (ribMatch.Success) lastSeenRib = Regex.Replace(ribMatch.Value, @"\s+", "").Trim();      sectionRawText = joined + "\n";
                         pendingLibelleBuffer = "";
                         pendingDate = "";
                         continue;
@@ -343,6 +366,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 var creditCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"Cr[ée]dit", RegexOptions.IgnoreCase));
                 var soldeCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bSolde\b", RegexOptions.IgnoreCase));
                 var montantCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bMontant\b", RegexOptions.IgnoreCase));
+                var dateCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"^Date$|Date\s*op[ée]ration", RegexOptions.IgnoreCase));
                 if (isBiat)
                 {
                     // [BIAT] "عليه"/"له" sont aussi des mots arabes tres courants dans les
@@ -374,6 +398,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     if (debitCell != null) debitAnchor = debitCell.Left;
                     if (creditCell != null) creditAnchor = creditCell.Left;
                     if (soldeCell != null) soldeAnchor = soldeCell.Left;
+                    if (dateCell != null) dateAnchor = dateCell.Left;
                     if (montantCell != null) montantAnchor = montantCell.Left;
                     continue;
                 }
@@ -548,6 +573,23 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 // Normalisation de la date
                 string normalizedDate = GetNormalizedDateFromCells(cellTexts, isBiat ? documentYear : null);
 
+                // [BNA] La date d'une sous-ligne (Com..., TVA) est souvent dans une cellule qui
+                // n'est PAS en premiere position (elle est dans la colonne "Valeur", apres le
+                // libelle) : GetNormalizedDateFromCells ne regarde que les cumuls depuis la
+                // position 0, donc elle ne la trouve jamais dans ce cas de figure precis.
+                if (isBna && string.IsNullOrEmpty(normalizedDate))
+                {
+                    normalizedDate = GetDateFromAnyCell(cellTexts, null);
+                }
+                // [ATB] Même raisonnement que BNA ci-dessus : la date n'est jamais dans les 3
+                // premières cellules (qui contiennent Jour + début du libellé), elle est dans la
+                // cellule "DATE VALEUR" en milieu/fin de ligne. isAtb est disjoint des autres
+                // détections (BIAT/Zitouna/BTK/BNA/QNB/UBCI/AMEN ne contiennent jamais "ATB"),
+                // donc ne peut pas réintroduire la régression du 07/08 déjà documentée plus haut.
+                if (isAtb && string.IsNullOrEmpty(normalizedDate))
+                {
+                    normalizedDate = GetDateFromAnyCell(cellTexts, null);
+                }
                 // [UBCI] Filet de secours : uniquement si le chemin normal (inchangé) n'a rien
                 // trouvé, jamais avant la clôture de la section, et seulement si la toute
                 // première cellule de la ligne est un bloc de 9-10 chiffres purs (exclut de fait
@@ -608,9 +650,8 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     // que l'ancre Credit sur ces documents) et seulement si la ligne contient
                     // aussi du texte (un vrai libelle d'operation, jamais une ligne de mentions
                     // legales pures constatee sur ces releves).
-                    bool ubciShortAmountsAllowed = isUbci && !ubciClotureReached && Regex.IsMatch(joined, @"[A-Za-zÀ-ÿ]");
-                    string bareDigitPattern = ubciShortAmountsAllowed ? @"^-?\d{3,10}$" : @"^-?\d{5,10}$";
-
+                    bool shortAmountsAllowed = ((isUbci && !ubciClotureReached) || isBna) && Regex.IsMatch(joined, @"[A-Za-zÀ-ÿ]");
+                    string bareDigitPattern = shortAmountsAllowed ? @"^-?\d{3,10}$" : @"^-?\d{5,10}$";
                     var bareDigitCandidates = mergedWithPos
                         .Where(c => !AmountRegex.IsMatch(c.Text))
                         .Where(c => Regex.IsMatch(c.Text.Trim(), bareDigitPattern))
@@ -676,8 +717,19 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     && joined.Length >= 40
                     && repeatedLineCounts.GetValueOrDefault(repeatedNoiseKey) >= 3;
 
+                // [BNA] "lSolde ... a ce jour sauf erreur ou omission ..." est le rappel de solde
+                // de cloture, imprime (parfois deux fois, en doublon OCR) en pied de derniere
+                // page, avec son propre montant sur la meme ligne. Comme il porte un montant, il
+                // n'est jamais filtre par isRepeatedBoilerplate ci-dessus (qui exige
+                // amountCandidates.Count == 0) : sans ce filtre dedie, l'ajout de isBna au
+                // mecanisme de secours "ligne avec montant mais sans date" (voir plus bas) le
+                // transformerait en fausse transaction. Verifie sur BNA 7-2025.pdf (dump brut
+                // BuildTable, Rows 236-238 et 244-246, contenu identique imprime deux fois).
+                bool bnaNoiseHit = isBna && Regex.IsMatch(joined, @"ce\s*jour\s*sauf\s*erreur\s*ou\s*omission", RegexOptions.IgnoreCase);
+
                 bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
                     || biatNoiseHit
+                    || bnaNoiseHit
                     || isRepeatedBoilerplate;
 
                 // Si la date est vide, tenter de la trouver dans le libellé (date 8 chiffres)
@@ -724,7 +776,13 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                             // pas la presence d'une date. isUbci est une condition totalement disjointe
                             // de isBtk/isBiat/isQnb/isZitouna (aucun document de ces banques ne
                             // contient "UBCI"), donc ne peut pas reproduire la regression du 07/08.
-                            if ((isBtk || isUbci) && current.Transactions.Count > 0)
+                            //
+                            // [BNA] Ajoute isBna le 08/08 : meme raisonnement que UBCI ci-dessus,
+                            // applique aux sous-lignes "Com ..."/"TVA" de BNA (voir analyse dans le
+                            // bloc de detection isBna plus haut). isBna est disjoint de
+                            // isBtk/isBiat/isQnb/isZitouna/isUbci (aucun document de ces banques ne
+                            // contient "BNA"), donc ne peut pas reproduire la regression du 07/08.
+                            if ((isBtk || isUbci || isBna) && current.Transactions.Count > 0)
                                 pendingDate = current.Transactions[current.Transactions.Count - 1].Date;
                             else
                                 continue;
@@ -737,7 +795,9 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         // pendingLibelleBuffer (qui n'est alimente que par des lignes sans montant).
                         // Sans ceci, fullDesc resterait vide et le libelle de l'operation serait perdu.
                         // [UBCI] Meme raisonnement, ajoute le 08/08 (voir ci-dessus).
-                        if (isAmenDocument || isBtk || isUbci)
+                        // [BNA] Meme raisonnement, ajoute le 08/08 (voir ci-dessus) : capture le
+                        // libelle propre ("Com ...", "TVA") des sous-lignes BNA.
+                        if (isAmenDocument || isBtk || isUbci || isBna)
                         {
                             string currentNonAmount = string.Join(" ", cellTexts.Where(c => !AmountRegex.IsMatch(c))).Trim();
                             currentNonAmount = Regex.Replace(currentNonAmount, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
@@ -829,7 +889,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 biatInNoiseZone = false;
 
                 // Ligne avec date valide
-                if (amountCandidates.Count == 0)
+                /*if (amountCandidates.Count == 0)
                 {
                     // Une ligne REDUITE A UNE SEULE CELLULE qui n'est QUE cette date (rien
                     // d'autre) et qui arrive juste apres une transaction deja enregistree, sans
@@ -857,10 +917,49 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
                     }
                     continue;
+                }*/
+                if (amountCandidates.Count == 0)
+                {
+                    // Une ligne REDUITE A UNE SEULE CELLULE qui n'est QUE cette date (rien
+                    // d'autre) et qui arrive juste apres une transaction deja enregistree, sans
+                    // accumulation de pendingDate/pendingLibelleBuffer en cours, est presque
+                    // toujours un fragment de texte coupe sur 2 lignes OCR plutot que le
+                    // debut d'une nouvelle operation.
+                    if (cellTexts.Count == 1 && current.Transactions.Count > 0
+                        && string.IsNullOrEmpty(pendingDate) && string.IsNullOrEmpty(pendingLibelleBuffer))
+                    {
+                        var lastTx = current.Transactions[current.Transactions.Count - 1];
+                        if (!isNoise && !biatInNoiseZone)
+                            lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
+                    }
+                    else
+                    {
+                        // [FIX] Si une transaction precedente est deja en attente (pendingDate
+                        // non resolu, differente de celle-ci), NE JAMAIS l'ecraser silencieusement.
+                        // Sans ca, sa date et son libelle disparaissent (ex: BTL "Reglement Cheque
+                        // 3125209" jamais retrouve, fusionne dans la transaction suivante).
+                        // On la cloture telle quelle, marquee "a verifier", avant de commencer
+                        // la nouvelle attente.
+                        if (!string.IsNullOrEmpty(pendingDate) && pendingDate != normalizedDate)
+                        {
+                            var orphanTx = new Transaction
+                            {
+                                Date = pendingDate,
+                                Libelle = (pendingLibelleBuffer.Trim() + " [MONTANT MANQUANT - a verifier manuellement]").Trim()
+                            };
+                            current.Transactions.Add(orphanTx);
+                            pendingLibelleBuffer = "";
+                        }
+
+                        pendingDate = normalizedDate;
+                        string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)));
+                        pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
+                    }
+                    continue;
                 }
 
-              
-            if (current != null)
+
+                if (current != null)
             {
                 // Cas normal : date + montant(s)
                 string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)))
@@ -1027,6 +1126,16 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             }
             return "";
         }
+        private string GetDateFromAnyCell(List<string> cellTexts, int? defaultYear = null)
+        {
+            foreach (var cell in cellTexts)
+            {
+                string normalized = NormalizeDate(cell.Trim(), defaultYear);
+                if (!string.IsNullOrEmpty(normalized))
+                    return normalized;
+            }
+            return "";
+        }
 
         private decimal ParseAmount(string raw)
         {
@@ -1057,6 +1166,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
         {
             var patterns = new[]
             {
+                @"Num[ée]ro\s*de\s*Compte\s*:?\s*(\d[\d\s-]{6,25})",   // <-- AJOUTE CETTE LIGNE
                 @"\b\d{2,5}-\d{4,12}-\d{1,4}\b",
                 @"\b\d{10,20}\b",
                 @"Compte\s*:?\s*(\d[\d\s-]{8,25})",
