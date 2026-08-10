@@ -67,9 +67,22 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             // plus loin dans la ligne (après libellé + référence d'opération).
             bool isAtb = fullText.Contains("ATB", StringComparison.OrdinalIgnoreCase)
                 || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
+            bool isBh = fullText.Contains("bhbank", StringComparison.OrdinalIgnoreCase)
+                    || fullText.Contains("BH BANK", StringComparison.OrdinalIgnoreCase)
+                    || fullText.Contains("Banque de l'Habitat", StringComparison.OrdinalIgnoreCase);
+            // en évitant complètement BuildTable pour cette banque.
+            if (isBh)
+            {
+                var bhDocument = new BankDocument
+                {
+                    BankName = "Banque de l'Habitat (BH)",
+                    Accounts = ExtractBhAccountSections(fullText)
+                };
+                return bhDocument;
+            }
 
             // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
-            if (isBiat || isZitouna || isBtk || isBna)
+            if (isBiat || isZitouna || isBtk || isBna || isBh)
                 engine.VerticalTolerance = 1;
 
             var rows = engine.BuildTable(lines);
@@ -144,6 +157,10 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             bool isAtb = fullText.Contains("ATB", StringComparison.OrdinalIgnoreCase)
                 || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
 
+            // [BH] Meme detection que dans Parse() : format lineaire, une seule colonne montant.
+            bool isBh = fullText.Contains("bhbank", StringComparison.OrdinalIgnoreCase)
+                 || fullText.Contains("BH BANK", StringComparison.OrdinalIgnoreCase)
+                 || fullText.Contains("Banque de l'Habitat", StringComparison.OrdinalIgnoreCase);
             // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
             // montants courts). Strategie complete validee sur 3 relevés UBCI reels avant
             // implementation (voir discussion) : le "/" des dates est parfois OCRise comme un
@@ -238,6 +255,29 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 string noiseKey = Regex.Replace(noiseJoined, @"\d", "#").Trim();
                 repeatedLineCounts[noiseKey] = repeatedLineCounts.GetValueOrDefault(noiseKey) + 1;
             }
+            if (isBh)
+            {
+                var splitRows = new List<TableRow>();
+                foreach (var row in rows)
+                {
+                    string rawJoined = string.Join(" ", row.Cells.Select(c => c.Text));
+                    if (Regex.IsMatch(rawJoined, @"(?<=\d)\d{2}/\d{2}/\d{4}"))
+                    {
+                        string repaired = Regex.Replace(rawJoined, @"(?<=\d)(\d{2}/\d{2}/\d{4})", "\n$1");
+                        foreach (var fragment in repaired.Split('\n', StringSplitOptions.RemoveEmptyEntries))
+                        {
+                            var fakeRow = new TableRow();
+                            fakeRow.Cells.Add(new TableCell { Text = fragment.Trim(), Left = row.Cells.FirstOrDefault()?.Left ?? 0 });
+                            splitRows.Add(fakeRow);
+                        }
+                    }
+                    else
+                    {
+                        splitRows.Add(row);
+                    }
+                }
+                rows = splitRows;
+            }
 
             foreach (var row in rows)
             {
@@ -298,6 +338,64 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 }
 
                 // ===== FIN TRAITEMENT QNB =====
+                // ===== TRAITEMENT SPÉCIFIQUE BH (format linéaire, une seule colonne montant) =====
+                if (isBh)
+                {
+                    // Motif : Date opération | Libellé (+ Réf optionnelle) | Date valeur | Montant
+                    // Le libellé et la référence ne sont pas séparés de façon fiable (pas de
+                    // colonne), donc on capture tout le bloc central sans essayer de les isoler.
+                    var bhMatch = Regex.Match(joined,
+                        @"^(\d{2}/\d{2}/\d{4})\s+(.+?)\s+(\d{2}/\d{2}/\d{4})\s*(-?\d[\d\s.,]*\d|\d)$");
+
+                    if (bhMatch.Success)
+                    {
+                        string dateOp = bhMatch.Groups[1].Value;
+                        string libelle = bhMatch.Groups[2].Value.Trim();
+                        decimal montant = ParseAmount(bhMatch.Groups[4].Value);
+
+                        if (current == null)
+                        {
+                            current = new BankAccountSection
+                            {
+                                AccountNumber = lastSeenAccountNumber,
+                                Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                                Currency = ExtractCurrency(fullText),
+                                SoldeInitial = null
+                            };
+                            sectionRawText = joined + "\n";
+                        }
+
+                        var bhTx = new Transaction
+                        {
+                            Date = NormalizeDate(dateOp, null),
+                            Libelle = libelle
+                        };
+
+                        // [BH] Pas de colonne Débit/Crédit distincte dans ce format : le sens
+                        // du mouvement se déduit du mot-clé du libellé. Liste construite à
+                        // partir des libellés observés sur EXTRAIT_BANCAIRE_02-2026.pdf.
+                        // À VALIDER contre les totaux imprimés en pied de relevé
+                        // ("489544,799" Débit / "470883,697" Crédit) avant mise en prod.
+                        if (IsBhDebitLibelle(libelle))
+                            bhTx.Debit = montant;
+                        else
+                            bhTx.Credit = montant;
+
+                        current.Transactions.Add(bhTx);
+                        continue;
+                    }
+
+                    // [BH] Solde d'ouverture : "Solde au 31/01/2026" sans montant sur la même
+                    // ligne dans ce format (le montant est sur la ligne juste avant, cf. dump :
+                    // "57957,266" précède "Solde au 31/01/2026"). Se rattache donc au bloc
+                    // générique déjà existant plus bas (repli sur amountCandidates), rien à
+                    // ajouter ici — mais NE PAS laisser "isNoise" filtrer cette ligne.
+
+                    // [BH] Ligne de totaux finale : "489544,799 470883,697" (deux montants,
+                    // aucune date) : ignorée par la regex ci-dessus (pas de date en tête), donc
+                    // tombe naturellement dans le chemin générique existant.
+                }
+                // ===== FIN TRAITEMENT BH =====
                 // Extraction du numéro de compte
                 var account = ExtractAccountNumber(joined);
                 //if (string.IsNullOrWhiteSpace(account))
@@ -1070,6 +1168,91 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
         // Toutes les autres méthodes (ExtractAccountNumber, ExtractRib, IsMergedRow, SplitMergedRow, AssignAmounts, NormalizeDate, ParseAmount, etc.) restent inchangées.
         // Assurez-vous que NormalizeDate a le paramètre defaultYear et utilise bien cette valeur.
         // Je les rappelle ici pour mémoire :
+        private List<BankAccountSection> ExtractBhAccountSections(string fullText)
+        {
+            var sections = new List<BankAccountSection>();
+            string documentRib = ExtractRib(fullText);
+            string accountNumber = ExtractAccountNumber(fullText);
+
+            var current = new BankAccountSection
+            {
+                AccountNumber = accountNumber,
+                Rib = documentRib,
+                Currency = ExtractCurrency(fullText),
+                SoldeInitial = null
+            };
+
+            var bhLineRegex = new Regex(
+                @"^(\d{2}/\d{2}/\d{4})\s+(.+?)\s+(\d{2}/\d{2}/\d{4})\s+(-?\d[\d\s.,]*\d|\d)\s*$",
+                RegexOptions.IgnoreCase);
+
+            var soldeOuvertureRegex = new Regex(@"^(-?\d[\d\s.,]*\d|\d)\s*$");
+            var soldeAuLabelRegex = new Regex(@"Solde\s+au\s+\d{2}/\d{2}/\d{4}", RegexOptions.IgnoreCase);
+
+            var lines = fullText.Split('\n');
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string line = lines[i].Trim();
+                if (string.IsNullOrWhiteSpace(line)) continue;
+
+                var soldeAmountMatch = soldeOuvertureRegex.Match(line);
+                if (soldeAmountMatch.Success)
+                {
+                    string nextLine = (i + 1 < lines.Length) ? lines[i + 1].Trim() : "";
+                    if (soldeAuLabelRegex.IsMatch(nextLine))
+                    {
+                        current.SoldeInitial = ParseAmount(soldeAmountMatch.Groups[1].Value);
+                    }
+                    continue;
+                }
+
+                if (soldeAuLabelRegex.IsMatch(line) && !Regex.IsMatch(line, @"^\d{2}/\d{2}/\d{4}"))
+                    continue;
+
+                if (Regex.IsMatch(line, @"^-?\d[\d\s.,]*\s+-?\d[\d\s.,]*$"))
+                    continue;
+
+                if (Regex.IsMatch(line, @"Total\s+des\s+mouvements|^Solde\s+au\s+\d{2}/\d{2}/\d{4}\s*:", RegexOptions.IgnoreCase))
+                {
+                    var soldeFinalMatch = AmountRegex.Match(line);
+                    if (soldeFinalMatch.Success)
+                        current.SoldeFinal = ParseAmount(soldeFinalMatch.Value);
+                    continue;
+                }
+
+                if (Regex.IsMatch(line, @"^Date\s+op[ée]ration|N[o°]\s*du\s+compte|Titulaire\s+du\s+compte|Op[ée]rations\s+du|Extrait\s+de\s+Compte", RegexOptions.IgnoreCase))
+                    continue;
+
+                var match = bhLineRegex.Match(line);
+                if (!match.Success)
+                {
+                    Console.WriteLine($"[BH-WARN] Ligne non reconnue (ignorée) : {line}");
+                    continue;
+                }
+
+                string dateOp = match.Groups[1].Value;
+                string libelle = match.Groups[2].Value.Trim();
+                decimal montant = ParseAmount(match.Groups[4].Value);
+
+                var tx = new Transaction
+                {
+                    Date = NormalizeDate(dateOp, null),
+                    Libelle = libelle
+                };
+
+                if (IsBhDebitLibelle(libelle))
+                    tx.Debit = montant;
+                else
+                    tx.Credit = montant;
+
+                current.Transactions.Add(tx);
+            }
+
+            current.RawSectionText = fullText;
+            sections.Add(current);
+            return sections;
+        }
 
         private string NormalizeDate(string raw, int? defaultYear = null)
         {
@@ -1410,6 +1593,26 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
         {
             string trimmed = text.Trim().Trim('‏', '‎', '.', ':', '»', '«', '،', ' ');
             return trimmed.Length > 0 && trimmed.Length <= 8 && trimmed.Contains(keyword);
+        }
+
+        // [BH] Mots-clés observés dans le format linéaire pour déduire le sens du
+        // mouvement (aucune colonne Débit/Crédit séparée). Construit à partir de
+        // EXTRAIT_BANCAIRE_02-2026.pdf : PRLV./COMMISSION/T.V.A/COMFORC sont toujours
+        // des sorties (débit) ; VRST./VERSEMENT TPE/ENC.CHQ/ENC.EFFET/Vers ESP RECU
+        // sont toujours des entrées (crédit). Les lignes "IB ..." (paiements reçus via
+        // IB - noms de tiers en tête de libellé) sont crédit SAUF si elles commencent
+        // par "COMMISSION"/"T.V.A" (déjà couvert ci-dessus).
+        private static readonly string[] BhDebitKeywords =
+        {
+            "PRLV.", "COMMISSION", "T.V.A", "COMFORC", "VIR.TN MM BQ"
+        };
+
+        private bool IsBhDebitLibelle(string libelle)
+        {
+            foreach (var kw in BhDebitKeywords)
+                if (libelle.StartsWith(kw, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            return false;
         }
 
         private string ExtractCurrency(string text)
