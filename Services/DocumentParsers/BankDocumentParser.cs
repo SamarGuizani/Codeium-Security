@@ -66,11 +66,20 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             // complète. La vraie date ("DATE VALEUR", format dd/mm/yy) est une cellule à part,
             // plus loin dans la ligne (après libellé + référence d'opération).
             bool isAtb = fullText.Contains("ATB", StringComparison.OrdinalIgnoreCase)
-                || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
+     || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
+
+            bool bhSignalCompte = Regex.IsMatch(fullText, @"No\s*du\s*compte\s*[-:]", RegexOptions.IgnoreCase);
+            bool bhSignalTitulaire = Regex.IsMatch(fullText, @"du\s*compte\s*:\s*\S", RegexOptions.IgnoreCase);
+            bool bhSignalPeriode = Regex.IsMatch(fullText, @"Op[ée]rations\s+du\s+\d{2}/\d{2}/\d{4}\s+au\s+\d{2}/\d{2}/\d{4}", RegexOptions.IgnoreCase);
+            int bhSignalCount = (bhSignalCompte ? 1 : 0) + (bhSignalTitulaire ? 1 : 0) + (bhSignalPeriode ? 1 : 0);
+
             bool isBh = fullText.Contains("bhbank", StringComparison.OrdinalIgnoreCase)
-                    || fullText.Contains("BH BANK", StringComparison.OrdinalIgnoreCase)
-                    || fullText.Contains("Banque de l'Habitat", StringComparison.OrdinalIgnoreCase);
-            // en évitant complètement BuildTable pour cette banque.
+                || fullText.Contains("BH BANK", StringComparison.OrdinalIgnoreCase)
+                || fullText.Contains("Banque de l'Habitat", StringComparison.OrdinalIgnoreCase)
+                || bankName.Contains("Habitat", StringComparison.OrdinalIgnoreCase)
+                || bankName.Contains("(BH)", StringComparison.OrdinalIgnoreCase)
+                || bhSignalCount >= 2;
+
             if (isBh)
             {
                 var bhDocument = new BankDocument
@@ -80,7 +89,6 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 };
                 return bhDocument;
             }
-
             // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
             if (isBiat || isZitouna || isBtk || isBna || isBh)
                 engine.VerticalTolerance = 1;
@@ -1168,6 +1176,34 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
         // Toutes les autres méthodes (ExtractAccountNumber, ExtractRib, IsMergedRow, SplitMergedRow, AssignAmounts, NormalizeDate, ParseAmount, etc.) restent inchangées.
         // Assurez-vous que NormalizeDate a le paramètre defaultYear et utilise bien cette valeur.
         // Je les rappelle ici pour mémoire :
+        // Je les rappelle ici pour mémoire :
+
+        // ↓↓↓ NOUVEAU BLOC À INSÉRER ICI ↓↓↓
+        private static readonly string[] BhKnownLibellePrefixes = {
+              "COMFORC PRLV.", "VERSEMENT TPE", "VERS.CHQ.ORDIN", "VRST.AUT.AG.",
+            "ENC.CHQ.TN", "ENC.EFFET TN", "Vers ESP RECU",
+            "COMMISSION", "T.V.A", "PRLV.", "VRST.",
+
+            };
+        private string ExtractBhLibelle(string middle) {
+            string stripped = middle.Trim();
+            if (stripped.Length == 0) return stripped;
+
+            foreach (var prefix in BhKnownLibellePrefixes)
+            {
+                if (stripped.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
+                    return stripped.Substring(0, prefix.Length).Trim();
+            }
+
+            var ibMatch = Regex.Match(stripped, @"\bIB\b");
+            if (ibMatch.Success && ibMatch.Index > 0)
+                return stripped.Substring(0, ibMatch.Index).Trim();
+
+            return stripped;
+        }
+        // ↑↑↑ FIN DU NOUVEAU BLOC ↑↑↑
+
+     
         private List<BankAccountSection> ExtractBhAccountSections(string fullText)
         {
             var sections = new List<BankAccountSection>();
@@ -1183,8 +1219,8 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             };
 
             var bhLineRegex = new Regex(
-                @"^(\d{2}/\d{2}/\d{4})\s+(.+?)\s+(\d{2}/\d{2}/\d{4})\s+(-?\d[\d\s.,]*\d|\d)\s*$",
-                RegexOptions.IgnoreCase);
+    @"^(?:\d+\s+)?(\d{2}/\d{2}/\d{4})\s+(.+?)\s+(?:(\d{2}/\d{2}/\d{4})\s+)?(-?\d[\d\s.,]*\d|\d)\s*$",
+    RegexOptions.IgnoreCase);
 
             var soldeOuvertureRegex = new Regex(@"^(-?\d[\d\s.,]*\d|\d)\s*$");
             var soldeAuLabelRegex = new Regex(@"Solde\s+au\s+\d{2}/\d{2}/\d{4}", RegexOptions.IgnoreCase);
@@ -1232,7 +1268,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 }
 
                 string dateOp = match.Groups[1].Value;
-                string libelle = match.Groups[2].Value.Trim();
+                string libelle = ExtractBhLibelle(match.Groups[2].Value);
                 decimal montant = ParseAmount(match.Groups[4].Value);
 
                 var tx = new Transaction
@@ -1609,8 +1645,12 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
         private bool IsBhDebitLibelle(string libelle)
         {
+
+            // Nettoie le bruit OCR devant le mot-clé (_, |, [, ], espaces, tirets, points isolés)
+            string cleaned = libelle.TrimStart('_', '|', '[', ']', ' ', '-', '.', '\t');
+
             foreach (var kw in BhDebitKeywords)
-                if (libelle.StartsWith(kw, StringComparison.OrdinalIgnoreCase))
+                if (cleaned.StartsWith(kw, StringComparison.OrdinalIgnoreCase))
                     return true;
             return false;
         }
