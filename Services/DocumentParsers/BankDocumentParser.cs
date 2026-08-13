@@ -67,7 +67,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             // plus loin dans la ligne (après libellé + référence d'opération).
             bool isAtb = fullText.Contains("ATB", StringComparison.OrdinalIgnoreCase)
      || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
-
+            bool isUbci = fullText.Contains("UBCI", StringComparison.OrdinalIgnoreCase);
             bool bhSignalCompte = Regex.IsMatch(fullText, @"No\s*du\s*compte\s*[-:]", RegexOptions.IgnoreCase);
             bool bhSignalTitulaire = Regex.IsMatch(fullText, @"du\s*compte\s*:\s*\S", RegexOptions.IgnoreCase);
             bool bhSignalPeriode = Regex.IsMatch(fullText, @"Op[ée]rations\s+du\s+\d{2}/\d{2}/\d{4}\s+au\s+\d{2}/\d{2}/\d{4}", RegexOptions.IgnoreCase);
@@ -90,12 +90,20 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 return bhDocument;
             }
             // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
-            if (isBiat || isZitouna || isBtk || isBna || isBh || isWifak)
+            if (isBiat || isZitouna || isBtk || isBna || isBh || isWifak || isUbci)
                 engine.VerticalTolerance = 1;
 
             var rows = engine.BuildTable(lines);
             rows = SplitDuplicatedRows(rows);
-
+            if (isUbci)
+            {
+                var ubciDocument = new BankDocument
+                {
+                    BankName = "Union Bancaire pour le Commerce et l'Industrie (UBCI)",
+                    Accounts = ExtractUbciAccountSections(rows, fullText)
+                };
+                return ubciDocument;
+            }
             var document = new BankDocument
             {
                 BankName = bankName,
@@ -1451,6 +1459,153 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 result.Add(tx);
             }
             return result;
+        }
+        private List<BankAccountSection> ExtractUbciAccountSections(List<TableRow> rows, string fullText)
+        {
+            var sections = new List<BankAccountSection>();
+            string documentRib = ExtractRib(fullText);
+            string accountNumber = ExtractAccountNumber(fullText);
+
+            // [UBCI] Le document contient souvent chaque page en double (rendu image + couche
+            // texte "propre" avec la mention "Page N / X"). On dédoublonne au niveau de la ligne
+            // brute : deux lignes strictement identiques (mêmes cellules, dans le même ordre)
+            // sont presque certainement la même transaction imprimée deux fois.
+            var seenRowKeys = new HashSet<string>();
+            var dedupedRows = new List<TableRow>();
+            foreach (var row in rows)
+            {
+                string rowKey = string.Join("|", row.Cells.Select(c => CleanWhitespace(c.Text).Trim()));
+                if (string.IsNullOrWhiteSpace(rowKey)) continue;
+                if (!seenRowKeys.Add(rowKey)) continue;
+                dedupedRows.Add(row);
+            }
+
+            int? debitAnchor = null, creditAnchor = null;
+
+            var current = new BankAccountSection
+            {
+                AccountNumber = accountNumber,
+                Rib = documentRib,
+                Currency = "TND",
+                SoldeInitial = null
+            };
+
+            string pendingDate = "";
+            string pendingLibelle = "";
+
+            foreach (var row in dedupedRows)
+            {
+                var cells = row.Cells.OrderBy(c => c.Left).ToList();
+                var texts = cells.Select(c => CleanWhitespace(c.Text).Trim()).ToList();
+                string joined = string.Join(" ", texts);
+                if (string.IsNullOrWhiteSpace(joined)) continue;
+
+                // Solde d'ouverture : "SOLDE DEBITEUR AU 01/02/2025 -20.080,474"
+                var openMatch = Regex.Match(joined,
+                    @"SOLDE\s+(DEBITEUR|CREDITEUR)\s+AU\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                    RegexOptions.IgnoreCase);
+                if (openMatch.Success)
+                {
+                    decimal init = ParseAmount(openMatch.Groups[2].Value);
+                    init = openMatch.Groups[1].Value.Equals("DEBITEUR", StringComparison.OrdinalIgnoreCase)
+                        ? -Math.Abs(init) : Math.Abs(init);
+                    current.SoldeInitial = init;
+                    continue;
+                }
+
+                // En-tête de colonnes ("Débit", "Crédit"...) : capture les ancres, ligne ignorée
+                var debitCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"^D[ée]bit$", RegexOptions.IgnoreCase));
+                var creditCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"^Cr[ée]dit$", RegexOptions.IgnoreCase));
+                if (debitCell != null || creditCell != null)
+                {
+                    if (debitCell != null) debitAnchor = debitCell.Left;
+                    if (creditCell != null) creditAnchor = creditCell.Left;
+                    continue;
+                }
+
+                // Pied de page : totaux + solde de clôture
+                if (Regex.IsMatch(joined, @"TOTAL\s+DU\s+DEBIT\s+ET\s+DU\s+CREDIT", RegexOptions.IgnoreCase))
+                {
+                    var amounts = AmountRegex.Matches(joined);
+                    if (amounts.Count >= 2)
+                    {
+                        current.TotalDebit = ParseAmount(amounts[0].Value);
+                        current.TotalCredit = ParseAmount(amounts[1].Value);
+                    }
+                    continue;
+                }
+                if (Regex.IsMatch(joined, @"SOLDE\s+DE\s+CLOTURE", RegexOptions.IgnoreCase))
+                {
+                    var m = AmountRegex.Match(joined);
+                    if (m.Success) current.SoldeFinal = ParseAmount(m.Value);
+                    continue;
+                }
+                if (Regex.IsMatch(joined, @"Cette\s+op[ée]ration\s+est\s+provisoire|Page\s*\d|^R\.?\s*N\.?\s*E|SWIFT", RegexOptions.IgnoreCase))
+                    continue;
+
+                // Ligne "date operation + libellé" = DEBUT d'une transaction
+                var dateAtStart = Regex.Match(joined, @"^(\d{2}/\d{2}/\d{4})\s+(.+)$");
+                bool lineHasAmount = cells.Any(c => AmountRegex.IsMatch(c.Text));
+                if (dateAtStart.Success && !lineHasAmount)
+                {
+                    // Une transaction précédente était en attente sans jamais avoir reçu son
+                    // montant (rare, mais on ne veut jamais la perdre silencieusement)
+                    if (!string.IsNullOrEmpty(pendingDate))
+                    {
+                        current.Transactions.Add(new Transaction
+                        {
+                            Date = pendingDate,
+                            Libelle = (pendingLibelle + " [MONTANT MANQUANT - a verifier manuellement]").Trim()
+                        });
+                    }
+                    pendingDate = dateAtStart.Groups[1].Value;
+                    pendingLibelle = dateAtStart.Groups[2].Value.Trim();
+                    continue;
+                }
+
+                // Ligne "montant + date valeur + ref banque" = FIN d'une transaction
+                var amountCell = cells.FirstOrDefault(c => AmountRegex.IsMatch(c.Text));
+                if (amountCell != null && !string.IsNullOrEmpty(pendingDate))
+                {
+                    decimal montant = ParseAmount(AmountRegex.Match(amountCell.Text).Value);
+                    var tx = new Transaction { Date = pendingDate, Libelle = pendingLibelle };
+
+                    if (debitAnchor.HasValue && creditAnchor.HasValue)
+                    {
+                        int distDebit = Math.Abs(amountCell.Left - debitAnchor.Value);
+                        int distCredit = Math.Abs(amountCell.Left - creditAnchor.Value);
+                        if (distDebit < distCredit) tx.Debit = montant; else tx.Credit = montant;
+                    }
+                    else
+                    {
+                        // Repli si les ancres n'ont pas été vues sur cette page (rare avec la
+                        // tolérance verticale activée, mais on ne veut jamais perdre le montant)
+                        tx.Debit = montant;
+                    }
+
+                    current.Transactions.Add(tx);
+                    pendingDate = "";
+                    pendingLibelle = "";
+                    continue;
+                }
+
+                // Texte de continuation : le libellé déborde sur une 2e/3e ligne physique
+                if (!string.IsNullOrEmpty(pendingDate))
+                    pendingLibelle = (pendingLibelle + " " + joined).Trim();
+            }
+
+            if (!string.IsNullOrEmpty(pendingDate))
+            {
+                current.Transactions.Add(new Transaction
+                {
+                    Date = pendingDate,
+                    Libelle = (pendingLibelle + " [MONTANT MANQUANT - a verifier manuellement]").Trim()
+                });
+            }
+
+            current.RawSectionText = fullText;
+            sections.Add(current);
+            return sections;
         }
 
         private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, int? montantAnchor, bool isBtk, ref decimal? previousSolde ,  out decimal? soldeCourant)
