@@ -1544,12 +1544,47 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     continue;
 
                 // Ligne "date operation + libellé" = DEBUT d'une transaction
+                /* var dateAtStart = Regex.Match(joined, @"^(\d{2}/\d{2}/\d{4})\s+(.+)$");
+                 bool lineHasAmount = cells.Any(c => AmountRegex.IsMatch(c.Text));
+                 if (dateAtStart.Success && !lineHasAmount)
+                 {
+                     // Une transaction précédente était en attente sans jamais avoir reçu son
+                     // montant (rare, mais on ne veut jamais la perdre silencieusement)
+                     if (!string.IsNullOrEmpty(pendingDate))
+                     {
+                         current.Transactions.Add(new Transaction
+                         {
+                             Date = pendingDate,
+                             Libelle = (pendingLibelle + " [MONTANT MANQUANT - a verifier manuellement]").Trim()
+                         });
+                     }
+                     pendingDate = dateAtStart.Groups[1].Value;
+                     pendingLibelle = dateAtStart.Groups[2].Value.Trim();
+                     continue;
+                 }*/
                 var dateAtStart = Regex.Match(joined, @"^(\d{2}/\d{2}/\d{4})\s+(.+)$");
-                bool lineHasAmount = cells.Any(c => AmountRegex.IsMatch(c.Text));
-                if (dateAtStart.Success && !lineHasAmount)
+
+                // [UBCI] Un montant est "dans une colonne Débit/Crédit" seulement s'il est ancré
+                // à droite (position Left >= ancre connue - tolérance). Un montant dans le libellé
+                // (partie gauche de la ligne) ne doit PAS bloquer le traitement date+libellé.
+                bool lineHasColumnAmount = false;
+                if (debitAnchor.HasValue || creditAnchor.HasValue)
                 {
-                    // Une transaction précédente était en attente sans jamais avoir reçu son
-                    // montant (rare, mais on ne veut jamais la perdre silencieusement)
+                    lineHasColumnAmount = cells.Any(c =>
+                        AmountRegex.IsMatch(c.Text) &&
+                        ((debitAnchor.HasValue && Math.Abs(c.Left - debitAnchor.Value) < 60) ||
+                         (creditAnchor.HasValue && Math.Abs(c.Left - creditAnchor.Value) < 60)));
+                }
+                else
+                {
+                    // Ancres pas encore vues : repli conservateur — si la DERNIERE cellule porte
+                    // un montant, c'est probablement une colonne Débit/Crédit.
+                    var lastCell = cells.LastOrDefault();
+                    lineHasColumnAmount = lastCell != null && AmountRegex.IsMatch(lastCell.Text);
+                }
+
+                if (dateAtStart.Success && !lineHasColumnAmount)
+                {
                     if (!string.IsNullOrEmpty(pendingDate))
                     {
                         current.Transactions.Add(new Transaction
@@ -1564,8 +1599,29 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 }
 
                 // Ligne "montant + date valeur + ref banque" = FIN d'une transaction
-                var amountCell = cells.FirstOrDefault(c => AmountRegex.IsMatch(c.Text));
+                //var amountCell = cells.FirstOrDefault(c => AmountRegex.IsMatch(c.Text));
+
+                //if (amountCell != null && !string.IsNullOrEmpty(pendingDate))
+
+                // APRÈS :
+                // [UBCI] Chercher le montant dans la colonne Débit/Crédit par position, pas
+                // n'importe quelle cellule (évite de consommer un montant du libellé OCR)
+                TableCell amountCell = null;
+                if (debitAnchor.HasValue || creditAnchor.HasValue)
+                {
+                    amountCell = cells.FirstOrDefault(c =>
+                        AmountRegex.IsMatch(c.Text) &&
+                        ((debitAnchor.HasValue && Math.Abs(c.Left - debitAnchor.Value) < 60) ||
+                         (creditAnchor.HasValue && Math.Abs(c.Left - creditAnchor.Value) < 60)));
+                }
+                else
+                {
+                    // Repli : dernière cellule avec montant (comportement original)
+                    amountCell = cells.LastOrDefault(c => AmountRegex.IsMatch(c.Text));
+                }
                 if (amountCell != null && !string.IsNullOrEmpty(pendingDate))
+
+
                 {
                     decimal montant = ParseAmount(AmountRegex.Match(amountCell.Text).Value);
                     var tx = new Transaction { Date = pendingDate, Libelle = pendingLibelle };
