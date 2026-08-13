@@ -963,7 +963,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                         }
                         decimal? soldeAvant2 = previousSolde;
                         var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
-                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde , out var soldeCourantTX);
+                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, hasSignedAmounts, out var soldeCourantTX);
                         ApplyMovementFallback(tx2, soldeAvant2, soldeCourantTX);
                         //if (isQnb) ApplyQnbSignRule(tx2);   // <-- AJOUTE CETTE LIGNE
                         current.Transactions.Add(tx2);
@@ -1131,7 +1131,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
                 decimal? soldeAvantTx = previousSolde;
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
-                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, out  var soldeCourantTx);
+                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, hasSignedAmounts, out  var soldeCourantTx);
                 ApplyMovementFallback(tx, soldeAvantTx, soldeCourantTx);
                 //if (isQnb) ApplyQnbSignRule(tx);   // <-- AJOUTE CETTE LIGNE
                 current.Transactions.Add(tx);
@@ -1664,7 +1664,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             return sections;
         }
 
-        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, int? montantAnchor, bool isBtk, ref decimal? previousSolde ,  out decimal? soldeCourant)
+        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, int? montantAnchor, bool isBtk, ref decimal? previousSolde , bool hasSignedAmounts, out decimal? soldeCourant)
         {
             const int Tolerance = 15;
 
@@ -1700,21 +1700,26 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     {
                         soldeCourant = cand.Value;
                     }
+                    // [FAMILLE MONTANTS SIGNES] QNB, BIAT extrait, et tout document ou hasSignedAmounts==true :
+                    // le signe du montant est OBLIGATOIRE et prime sur la position/l'ancre Debit-Credit,
+                    // meme quand une table Debit/Credit existe (cas QNB avec en-tetes detectes).
+                    // negatif = Debit, positif = Credit, toujours - jamais de fallback ambigu ici.
+                    else if (hasSignedAmounts)
+                    {
+                        if (cand.Value < 0) tx.Debit = Math.Abs(cand.Value);
+                        else if (cand.Value > 0) tx.Credit = cand.Value;
+                    }
                     else if (Math.Abs(distDebit - distCredit) < Tolerance)
                     {
                         ambiguous.Add(cand);
                     }
                     else if (distDebit < distCredit)
                     {
-                        //le 4 aout le changement des signes
                         tx.Debit = Math.Abs(cand.Value);
-
-                        //tx.Debit = cand.Value;
                     }
                     else
                     {
                         tx.Credit = Math.Abs(cand.Value);
-                        //tx.Credit = cand.Value;
                     }
                 }
 
