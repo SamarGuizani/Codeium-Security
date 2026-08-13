@@ -243,13 +243,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             bool hasSignedAmounts = Regex.IsMatch(fullText, @"-\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
             // [GENERIQUE] Detection de bruit d'en-tete/pied de page par repetition, independante
-            // de toute banque : une ligne (nettoyee, chiffres neutralises) qui apparait plusieurs
-            // fois IDENTIQUEMENT ailleurs dans le document est presque toujours un element repete
-            // a chaque page (mentions legales, coordonnees d'agence, titre de banque, en-tete de
-            // colonnes...) - une vraie transaction ne se repete jamais a l'identique (date/montant
-            // varient toujours). Remplace le besoin d'enumerer une regex de bruit par banque a
-            // chaque nouvelle mise en page. Seuil de longueur pour ne jamais flaguer par erreur de
-            // courts fragments generiques qui reapparaissent legitimement (ex. "TND", "COM").
+            
             var repeatedLineCounts = new Dictionary<string, int>();
             foreach (var noiseRow in rows)
             {
@@ -1710,6 +1704,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 ("UIB", "Union Internationale de Banques (UIB)"),
                 ("ATTIJARI", "Attijari Bank"),
                 ("AMEN BANK", "Amen Bank"),
+                ("WIFAK", "Wifak Bank"),                      // ← AJOUT
                 ("BH", "Banque de l'Habitat (BH)"),
                 ("BTK", "Banque Tuniso-Koweitienne (BTK)")   // ← ajouter
             };
