@@ -61,7 +61,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             bool isZitouna = fullText.Contains("ZITOUNA", StringComparison.OrdinalIgnoreCase);
             bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
             bool isBna = fullText.Contains("BNA", StringComparison.OrdinalIgnoreCase);
-
+            bool isWifak = fullText.Contains("WIFAK", StringComparison.OrdinalIgnoreCase);
             // [ATB] La colonne "Jour" ne contient que le quantième (ex. "03"), jamais une date
             // complète. La vraie date ("DATE VALEUR", format dd/mm/yy) est une cellule à part,
             // plus loin dans la ligne (après libellé + référence d'opération).
@@ -90,7 +90,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 return bhDocument;
             }
             // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
-            if (isBiat || isZitouna || isBtk || isBna || isBh)
+            if (isBiat || isZitouna || isBtk || isBna || isBh || isWifak)
                 engine.VerticalTolerance = 1;
 
             var rows = engine.BuildTable(lines);
