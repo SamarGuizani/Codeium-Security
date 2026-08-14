@@ -150,6 +150,15 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
             // [QNB] Détection de la banque
             bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
+            List<string> qnbAccountNumbers = new List<string>();
+            int qnbAccountIndex = 0;
+            if (isQnb)
+            {
+                qnbAccountNumbers = Regex.Matches(fullText, @"\b\d{4}-\d{6}-\d{3}\b")
+                    .Select(m => m.Value)
+                    .Distinct()
+                    .ToList();
+            }
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
             bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
 
@@ -256,6 +265,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 rows = splitRows;
             }
 
+            bool skippingSummaryTable = Regex.IsMatch(fullText, @"Resum[ée]'?\s+du\s+compte", RegexOptions.IgnoreCase);
             foreach (var row in rows)
             {
                 var cells = row.Cells.OrderBy(c => c.Left).ToList();
@@ -265,18 +275,26 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 var cellTexts = MergeLoneSignCells(cellTextsRaw);
                 if (cellTexts.Count == 0) continue;
 
+
                 string joined = string.Join(" ", cellTexts);
                 joined = StripPrintArtifacts(joined);
                 if (string.IsNullOrWhiteSpace(joined)) continue;
-                sectionRawText += joined + "\n";
 
+                if (skippingSummaryTable)
+                {
+                    if (Regex.IsMatch(joined, @"Account\s*\(IBAN\)", RegexOptions.IgnoreCase))
+                        skippingSummaryTable = false;
+                    continue;
+                }
+
+                sectionRawText += joined + "\n";
                 //update le 01/08/2026
                 // ===== TRAITEMENT SPÉCIFIQUE QNB =====
                 if (isQnb)
                 {
                     Console.WriteLine($"[QNB-DEBUG] joined='{joined}' | current==null: {current == null}");
                     var qnbMatch = Regex.Match(joined,
-                        @"^(\d{2}/\d{2}/\d{4})\s+(.*?)\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})$", RegexOptions.IgnoreCase);
+                        @"^(\d{2}/\d{2}/\d{4})\s+(.*?)\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})$", RegexOptions.IgnoreCase);
                     if (qnbMatch.Success)
                     {
                         string date = qnbMatch.Groups[1].Value;
@@ -438,6 +456,16 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     if (soldeCell != null) soldeAnchor = soldeCell.Left;
                     if (dateCell != null) dateAnchor = dateCell.Left;
                     if (montantCell != null) montantAnchor = montantCell.Left;
+
+                    if (debitAnchor.HasValue && creditAnchor.HasValue && Math.Abs(debitAnchor.Value - creditAnchor.Value) < 40)
+                    {
+                        var (inferredDebit, inferredCredit) = InferAnchorsFromAmountPositions(rows);
+                        if (inferredDebit.HasValue && inferredCredit.HasValue)
+                        {
+                            debitAnchor = inferredDebit;
+                            creditAnchor = inferredCredit;
+                        }
+                    }
                     continue;
                 }
 
@@ -466,9 +494,16 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     if (soldeInitMatch.Success)
                         soldeInit = ParseAmount(soldeInitMatch.Groups[1].Value);
 
+                    string resolvedAccountNumber = lastSeenAccountNumber;
+                    if (isQnb && qnbAccountIndex < qnbAccountNumbers.Count)
+                    {
+                        resolvedAccountNumber = qnbAccountNumbers[qnbAccountIndex];
+                        qnbAccountIndex++;
+                    }
+
                     current = new BankAccountSection
                     {
-                        AccountNumber = lastSeenAccountNumber,
+                        AccountNumber = resolvedAccountNumber,
                         Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
                         Currency = ExtractCurrency(fullText),
                         SoldeInitial = soldeInit
@@ -726,10 +761,10 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 bool bnaNoiseHit = isBna && Regex.IsMatch(joined, @"ce\s*jour\s*sauf\s*erreur\s*ou\s*omission", RegexOptions.IgnoreCase);
 
                 bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
-                    || biatNoiseHit
-                    || bnaNoiseHit
-                    || isRepeatedBoilerplate;
-
+                     || biatNoiseHit
+                     || bnaNoiseHit
+                     || isRepeatedBoilerplate
+                     || (isQnb && Regex.IsMatch(joined, @"Cette\s+d[ée]claration\s+sera\s+consid[ée]r[ée]e|dans\s+votre\s+situation\s+de\s+compte|Pour\s+toute\s+r[ée]clamation", RegexOptions.IgnoreCase));
                 // Si la date est vide, tenter de la trouver dans le libellé (date 8 chiffres)
                 if (string.IsNullOrEmpty(normalizedDate) && amountCandidates.Count > 0)
                 {
@@ -941,7 +976,34 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
         }
         // ↑↑↑ FIN DU NOUVEAU BLOC ↑↑↑
 
-     
+
+
+        
+        private (int? debit, int? credit) InferAnchorsFromAmountPositions(List<TableRow> rows)
+        {
+            var positions = new List<int>();
+            foreach (var row in rows)
+                foreach (var cell in row.Cells)
+                    if (AmountRegex.IsMatch(cell.Text))
+                        positions.Add(cell.Left);
+
+            var sorted = positions.Distinct().OrderBy(x => x).ToList();
+            if (sorted.Count < 2) return (null, null);
+
+            int bestGapIndex = 0, bestGap = 0;
+            for (int i = 0; i < sorted.Count - 1; i++)
+            {
+                int gap = sorted[i + 1] - sorted[i];
+                if (gap > bestGap) { bestGap = gap; bestGapIndex = i; }
+            }
+            // Gap trop faible : les montants ne se separent pas clairement en 2 colonnes distinctes,
+            // on renonce plutot que de deviner un mauvais decoupage.
+            if (bestGap < 40) return (null, null);
+
+            int leftCluster = (int)sorted.Take(bestGapIndex + 1).Average();
+            int rightCluster = (int)sorted.Skip(bestGapIndex + 1).Average();
+            return (leftCluster, rightCluster);
+        }
         private List<BankAccountSection> ExtractBhAccountSections(string fullText)
         {
             var sections = new List<BankAccountSection>();
@@ -1560,9 +1622,13 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
         }
 
         private string CleanWhitespace(string text) =>
-            text.Replace('\u00A0', ' ')
-                .Replace('\u202F', ' ')
-                .Replace('\u2212', '-');
+     Regex.Replace(
+         text.Replace('\u00A0', ' ')
+             .Replace('\u202F', ' ')
+             .Replace('\u2212', '-')
+             .Replace('\r', ' ')
+             .Replace('\n', ' '),
+             @"\s+", " ").Trim();
 
         private string NormalizeSignSpacing(string text) =>
             Regex.Replace(text, @"^(\s*-)\s+(?=\d)", "-");
