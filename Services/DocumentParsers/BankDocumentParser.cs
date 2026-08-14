@@ -387,9 +387,11 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 // RIB
                 var ribMatch = Regex.Match(joined, @"TN\d{2}[\s\d]{15,25}");
                 if (ribMatch.Success) lastSeenRib = Regex.Replace(ribMatch.Value, @"\s+", "").Trim();
-
+               
+                if (Regex.IsMatch(joined, @"Type\s*d['’]op[ée]ration|Montant\s*Min|Montant\s*Max|Date\s*D[ée]but|Date\s*Fin\b|Agence\s*:|Intitul[ée]\s*de\s*compte|Solde\s*actuel\s*:", RegexOptions.IgnoreCase))
+                    continue;
                 // [UBCI] Solde debiteur/crediteur d'ouverture : "SOLDE DEBITEUR AU <date>
-             
+
                 if (isUbci)
                 {
                     var ubciOpenMatch = Regex.Match(joined,
