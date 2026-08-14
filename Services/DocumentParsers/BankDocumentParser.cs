@@ -268,17 +268,27 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             bool skippingSummaryTable = Regex.IsMatch(fullText, @"Resum[ée]'?\s+du\s+compte", RegexOptions.IgnoreCase);
             foreach (var row in rows)
             {
+                /* var cells = row.Cells.OrderBy(c => c.Left).ToList();
+                 var cellTextsRaw = cells
+                     .Select(c => NormalizeSignSpacing(CleanWhitespace(c.Text)))
+                     .ToList();
+                 var cellTexts = MergeLoneSignCells(cellTextsRaw);
+                 if (cellTexts.Count == 0) continue;*/
                 var cells = row.Cells.OrderBy(c => c.Left).ToList();
                 var cellTextsRaw = cells
-                    .Select(c => NormalizeSignSpacing(CleanWhitespace(c.Text)))
+                    .Select(c =>
+                    {
+                        string t = NormalizeSignSpacing(CleanWhitespace(c.Text));
+                        if (isBiat) t = ConvertFrenchAbbrevDates(t);
+                        return t;
+                    })
                     .ToList();
                 var cellTexts = MergeLoneSignCells(cellTextsRaw);
-                if (cellTexts.Count == 0) continue;
-
 
                 string joined = string.Join(" ", cellTexts);
                 joined = StripPrintArtifacts(joined);
                 if (string.IsNullOrWhiteSpace(joined)) continue;
+                //if (isBiat) joined = ConvertFrenchAbbrevDates(joined);
 
                 if (skippingSummaryTable)
                 {
@@ -515,7 +525,39 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     pendingDate = "";
                     continue;
                 }
+                // [BIAT forme 2] "Solde départ au JJ/MM/AAAA <montant>" (dates déjà converties
+                // par ConvertFrenchAbbrevDates plus haut).
+                var biatSoldeDepartMatch = Regex.Match(joined, @"Solde\s+d[ée]part\s+au\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                if (biatSoldeDepartMatch.Success)
+                {
+                    if (current != null)
+                    {
+                        current.RawSectionText = sectionRawText;
+                        sections.Add(current);
+                    }
+                    sectionRawText = joined + "\n";
 
+                    decimal biatDepartInit = ParseAmount(biatSoldeDepartMatch.Groups[1].Value);
+                    current = new BankAccountSection
+                    {
+                        AccountNumber = lastSeenAccountNumber,
+                        Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                        Currency = ExtractCurrency(fullText),
+                        SoldeInitial = biatDepartInit
+                    };
+                    previousSolde = biatDepartInit;
+                    pendingLibelleBuffer = "";
+                    pendingDate = "";
+                    continue;
+                }
+
+                // [BIAT forme 2] "Solde fin au JJ/MM/AAAA <montant>"
+                var biatSoldeFinAuMatch = Regex.Match(joined, @"Solde\s+fin\s+au\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                if (biatSoldeFinAuMatch.Success)
+                {
+                    if (current != null) current.SoldeFinal = ParseAmount(biatSoldeFinAuMatch.Groups[1].Value);
+                    continue;
+                }
                 // [BIAT] SOLDE AU ...
                 var biatSoldeAuMatch = Regex.Match(joined, @"SOLDE\s*AU\s*\d{1,2}\s+\d{1,2}\s+\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (biatSoldeAuMatch.Success)
@@ -1661,7 +1703,26 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             }
             return merged;
         }
+        private static readonly Dictionary<string, string> FrenchMonthsAbbrev = new(StringComparer.OrdinalIgnoreCase)
+        {
+            {"janv","01"}, {"fevr","02"}, {"févr","02"}, {"mars","03"}, {"avr","04"},
+            {"mai","05"}, {"juin","06"}, {"juil","07"}, {"aout","08"}, {"août","08"},
+            {"sept","09"}, {"oct","10"}, {"nov","11"}, {"dec","12"}, {"déc","12"},
+        };
 
+        private string ConvertFrenchAbbrevDates(string text)
+        {
+            return Regex.Replace(text, @"(\d{1,2})\s*([A-Za-zéûÉÛ]{3,5})\.?\s*(\d{2,4})", m =>
+            {
+                string day = m.Groups[1].Value.PadLeft(2, '0');
+                string monthRaw = m.Groups[2].Value;
+                string year = m.Groups[3].Value;
+                foreach (var kv in FrenchMonthsAbbrev)
+                    if (monthRaw.StartsWith(kv.Key, StringComparison.OrdinalIgnoreCase))
+                        return $"{day}/{kv.Value}/{(year.Length == 2 ? "20" + year : year)}";
+                return m.Value;
+            });
+        }
         private string ExtractBankName(string text)
         {
             var knownBanks = new (string Keyword, string FullName)[]
