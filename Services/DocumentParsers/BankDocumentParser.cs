@@ -134,7 +134,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             int? debitAnchor = null, creditAnchor = null, soldeAnchor = null, montantAnchor = null, dateAnchor = null; string documentRib = ExtractRib(fullText);
 
             // [BIAT] Récupérer l'année du document
-            int? documentYear = null;
+            /*int? documentYear = null;
             bool isBiat = fullText.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
             if (isBiat)
             {
@@ -146,6 +146,41 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     var soldeMatch = Regex.Match(fullText, @"SOLDE\s+AU\s+\d{1,2}\s+\d{1,2}\s+(\d{4})", RegexOptions.IgnoreCase);
                     if (soldeMatch.Success && int.TryParse(soldeMatch.Groups[1].Value, out year))
                         documentYear = year;
+                    else
+                    {
+                        var frDateMatch = Regex.Match(fullText,
+                            @"(?:Edit[ée]\s+le\s*:\s*|Solde\s+d[ée]part\s+au\s+)\d{1,2}\s+[A-Za-zÀ-ÿ]{3,6}\.?\s*(\d{2,4})",
+                            RegexOptions.IgnoreCase);
+                        if (frDateMatch.Success && int.TryParse(frDateMatch.Groups[1].Value, out year))
+                            documentYear = year < 100 ? 2000 + year : year;
+                    }
+                }
+            }*/
+            // [TOUTES BANQUES] Annee de reference utilisee comme repli quand une date individuelle
+            // (ex. "12janv." sans annee sur sa cellule) ne porte pas elle-meme un millesime. Calculee
+            // pour TOUT document, pas seulement BIAT : n'importe quel releve (BNA, Attijari, Zitouna,
+            // BH...) peut afficher des dates en mois-francais abrege sans annee repetee a chaque ligne.
+            int? documentYear = null;
+            bool isBiat = fullText.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
+
+            var dateMatch = Regex.Match(fullText, @"\b(\d{1,2})\s+(\d{1,2})\s+(\d{4})\b");
+            if (dateMatch.Success && int.TryParse(dateMatch.Groups[3].Value, out int year))
+                documentYear = year;
+            else
+            {
+                var soldeMatch = Regex.Match(fullText, @"SOLDE\s+AU\s+\d{1,2}\s+\d{1,2}\s+(\d{4})", RegexOptions.IgnoreCase);
+                if (soldeMatch.Success && int.TryParse(soldeMatch.Groups[1].Value, out year))
+                    documentYear = year;
+                else
+                {
+                    // Repli generique : n'importe quelle date "jj moisAbrege aa/aaaa" trouvee n'importe
+                    // ou dans le document (en-tete "Edité le", "Imprimé le", "Solde départ au", ou
+                    // simplement la premiere date rencontree dans le texte) donne l'annee du releve.
+                    var frDateMatch = Regex.Match(fullText,
+                        @"\d{1,2}\s+[A-Za-zÀ-ÿ]{3,6}\.?\s*(\d{2,4})",
+                        RegexOptions.IgnoreCase);
+                    if (frDateMatch.Success && int.TryParse(frDateMatch.Groups[1].Value, out year))
+                        documentYear = year < 100 ? 2000 + year : year;
                 }
             }
 
@@ -679,7 +714,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     continue;
 
                 // Normalisation de la date
-                string normalizedDate = GetNormalizedDateFromCells(cellTexts, isBiat ? documentYear : null);
+                string normalizedDate = GetNormalizedDateFromCells(cellTexts, documentYear);
 
                 // [BNA] La date d'une sous-ligne (Com..., TVA) est souvent dans une cellule qui
                 // n'est PAS en premiere position (elle est dans la colonne "Valeur", apres le
@@ -845,7 +880,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 {
                     var dateInLibelle = Regex.Match(joined, @"\b(\d{8})\b");
                     if (dateInLibelle.Success)
-                        normalizedDate = NormalizeDate(dateInLibelle.Groups[1].Value, isBiat ? documentYear : null);
+                        normalizedDate = NormalizeDate(dateInLibelle.Groups[1].Value, documentYear);
                 }
 
                 if (string.IsNullOrEmpty(normalizedDate))
