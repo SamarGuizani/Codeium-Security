@@ -54,6 +54,10 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             string bankName = ExtractBankName(fullText);
             bool isBiat = bankName.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
             bool isZitouna = fullText.Contains("ZITOUNA", StringComparison.OrdinalIgnoreCase);
+            bool isAbcBankDoc = fullText.Contains("Bank ABC", StringComparison.OrdinalIgnoreCase)
+     || fullText.Contains("BANK ABC", StringComparison.OrdinalIgnoreCase);
+
+
             bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
             bool isBna = fullText.Contains("BNA", StringComparison.OrdinalIgnoreCase);
             bool isWifak = fullText.Contains("WIFAK", StringComparison.OrdinalIgnoreCase);
@@ -85,7 +89,7 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 return bhDocument;
             }
             // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
-            if (isBiat || isZitouna || isBtk || isBna || isBh || isWifak || isUbci)
+            if ((isBiat || isZitouna || isBtk || isBna || isBh || isWifak || isUbci) && !isAbcBankDoc)
                 engine.VerticalTolerance = 1;
 
             var rows = engine.BuildTable(lines);
@@ -160,6 +164,8 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     .ToList();
             }
             bool isAmenDocument = fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) >= 0;
+            // [AMEN] Détection du format avec code opération en première colonne (58, 53, 71...)
+            bool isAmenWithOpCode = isAmenDocument && Regex.IsMatch(fullText, @"^\s*\d{2}\s+\d{2}/\d{2}/\d{4}", RegexOptions.Multiline);
             bool isBtk = fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase);
 
             // [BNA] Chaque operation "principale" (Date+Libelle+Valeur+Montant+Solde) est suivie
@@ -227,10 +233,17 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             }
             // Document utilise des montants signes (QNB, Zitouna, BIAT-extrait...) :
             // negatif = Debit, positif = Credit, strictement, partout dans ce document.
-            bool hasSignedAmounts = Regex.IsMatch(fullText, @"-\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
+            // bool hasSignedAmounts = Regex.IsMatch(fullText, @"-\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
+            bool isAbcBank = fullText.Contains("Bank ABC", StringComparison.OrdinalIgnoreCase)
+     || fullText.Contains("BANK ABC", StringComparison.OrdinalIgnoreCase);
 
+            bool hasSignedAmountsHeader = Regex.IsMatch(fullText,
+                @"\(-\)\s*D[ée]bit\s*/\s*Cr[ée]dit\s*\(\+\)|\(-\)\s*D[ée]bit.*Cr[ée]dit",
+                RegexOptions.IgnoreCase);
+
+            bool hasSignedAmounts = isAbcBank || hasSignedAmountsHeader;
             // [GENERIQUE] Detection de bruit d'en-tete/pied de page par repetition, independante
-            
+
             var repeatedLineCounts = new Dictionary<string, int>();
             foreach (var noiseRow in rows)
             {
@@ -525,6 +538,38 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                     pendingDate = "";
                     continue;
                 }
+                // [ABC / FORMAT SIGNÉ] "Solde de départ <montant>" sans date
+                var abcSoldeDepartMatch = Regex.Match(joined,
+                    @"^Solde\s+de\s+d[ée]part\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})$",
+                    RegexOptions.IgnoreCase);
+                if (!abcSoldeDepartMatch.Success)
+                {
+                    // essai sans ancrage strict (cas où la cellule contient du texte autour)
+                    abcSoldeDepartMatch = Regex.Match(joined,
+                        @"Solde\s+de\s+d[ée]part\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                        RegexOptions.IgnoreCase);
+                }
+                if (abcSoldeDepartMatch.Success)
+                {
+                    if (current != null)
+                    {
+                        current.RawSectionText = sectionRawText;
+                        sections.Add(current);
+                    }
+                    sectionRawText = joined + "\n";
+                    decimal abcDepartInit = ParseAmount(abcSoldeDepartMatch.Groups[1].Value);
+                    current = new BankAccountSection
+                    {
+                        AccountNumber = lastSeenAccountNumber,
+                        Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                        Currency = ExtractCurrency(fullText),
+                        SoldeInitial = abcDepartInit
+                    };
+                    previousSolde = abcDepartInit;
+                    pendingLibelleBuffer = "";
+                    pendingDate = "";
+                    continue;
+                }
                 // [BIAT forme 2] "Solde départ au JJ/MM/AAAA <montant>" (dates déjà converties
                 // par ConvertFrenchAbbrevDates plus haut).
                 var biatSoldeDepartMatch = Regex.Match(joined, @"Solde\s+d[ée]part\s+au\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
@@ -677,9 +722,17 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
                 // Normalisation de la date
                 string normalizedDate = GetNormalizedDateFromCells(cellTexts, documentYear);
-
+                // [AMEN avec code opération] La première cellule est un code (58, 53, 71...)
+                // → la date est dans la deuxième cellule
+                if (string.IsNullOrEmpty(normalizedDate) && isAmenWithOpCode && cellTexts.Count >= 2)
+                {
+                    if (Regex.IsMatch(cellTexts[0].Trim(), @"^\d{2}$"))
+                    {
+                        normalizedDate = NormalizeDate(cellTexts[1].Trim(), documentYear);
+                    }
+                }
                 // [BNA] La date d'une sous-ligne (Com..., TVA) est souvent dans une cellule qui
-               
+
                 if (isBna && string.IsNullOrEmpty(normalizedDate))
                 {
                     normalizedDate = GetDateFromAnyCell(cellTexts, null);
@@ -925,8 +978,11 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
                 if (current != null)
             {
-                // Cas normal : date + montant(s)
-                string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)))
+                    // [AMEN avec code opération] Sauter aussi la cellule du code opération (index 0)
+                    int skipCount = (isAmenWithOpCode && cellTexts.Count >= 2
+                        && Regex.IsMatch(cellTexts[0].Trim(), @"^\d{2}$")) ? 2 : 1;
+                    // Cas normal : date + montant(s)
+                    string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)))
                     .Trim(' ', '|', '[', ']', '-', '_');
                 description = Regex.Replace(description, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
                 description = Regex.Replace(description, @"\b\d{8}\b", "").Trim();
@@ -966,6 +1022,16 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 current.RawSectionText = sectionRawText;
                 sections.Add(current);
             }
+            // ↓↓↓ AJOUTE ICI ↓↓↓
+            // Fallback : si une section existe mais sans transactions, tenter parsing texte brut
+            foreach (var sec in sections)
+            {
+                if (sec.Transactions.Count == 0)
+                {
+                    TryFallbackLineParsing(fullText, sec, documentYear);
+                }
+            }
+            // ↑↑↑ FIN AJOUT ↑↑↑
 
             // Calcul des totaux pour chaque section
             foreach (var sec in sections)
@@ -993,8 +1059,119 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             return sections;
         }
 
-        
+        private void TryFallbackLineParsing(string fullText, BankAccountSection section, int? documentYear)
+        {
 
+            Console.WriteLine($"[FALLBACK] Tentative sur texte de {fullText.Length} chars");
+            Console.WriteLine($"[FALLBACK] Premiers 500 chars : {fullText.Substring(0, Math.Min(500, fullText.Length))}");
+
+            // teste directement sur les lignes
+            var lines = fullText.Split('\n');
+            Console.WriteLine($"[FALLBACK] Nombre de lignes : {lines.Length}");
+            foreach (var line in lines.Take(20))
+            {
+                Console.WriteLine($"[FALLBACK-LINE] '{line}'");
+            }
+            // Regex générique : capture toute ligne contenant une date dd/MM/yyyy
+            // et au moins un montant, quel que soit ce qui précède
+            var lineRegex = new Regex(
+                @"(?:^|\s)(\d{2}/\d{2}/\d{4})\s+(.+?)\s+(\d{2}/\d{2}/\d{4})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s*$",
+                RegexOptions.Multiline);
+
+            // Format AMEN : "58 01/07/2026 LIBELLE 07/07/2026 1,968"
+            var amenRegex = new Regex(
+                @"^\s*\d{2,3}\s+(\d{2}/\d{2}/\d{4})\s+(.+?)\s+(\d{2}/\d{2}/\d{4})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s*$",
+                RegexOptions.Multiline);
+
+            // Format simple : "01/07/2026 LIBELLE 1,968"
+            var simpleRegex = new Regex(
+                @"^\s*(\d{2}/\d{2}/\d{4})\s+(.+?)\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s*$",
+                RegexOptions.Multiline);
+
+            bool found = false;
+
+            // Essai 1 : format AMEN avec code opération
+            foreach (Match m in amenRegex.Matches(fullText))
+            {
+                string dateOp = m.Groups[1].Value;
+                string libelle = m.Groups[2].Value.Trim();
+                decimal montant = ParseAmount(m.Groups[4].Value);
+
+                // Ignorer les lignes de bruit
+                if (Regex.IsMatch(libelle, @"Totaux|Report|TOTAUX|Solde|Total|Page", RegexOptions.IgnoreCase))
+                    continue;
+
+                var tx = new Transaction
+                {
+                    Date = NormalizeDate(dateOp, documentYear),
+                    Libelle = libelle
+                };
+
+                if (montant < 0) tx.Debit = Math.Abs(montant);
+                else if (montant > 0) tx.Credit = montant;
+
+                if (!string.IsNullOrEmpty(tx.Date))
+                {
+                    section.Transactions.Add(tx);
+                    found = true;
+                }
+            }
+
+            if (found) return;
+
+            // Essai 2 : format avec date opération + date valeur + montant
+            foreach (Match m in lineRegex.Matches(fullText))
+            {
+                string dateOp = m.Groups[1].Value;
+                string libelle = m.Groups[2].Value.Trim();
+                decimal montant = ParseAmount(m.Groups[4].Value);
+
+                if (Regex.IsMatch(libelle, @"Totaux|Report|TOTAUX|Solde|Total|Page", RegexOptions.IgnoreCase))
+                    continue;
+
+                var tx = new Transaction
+                {
+                    Date = NormalizeDate(dateOp, documentYear),
+                    Libelle = libelle
+                };
+
+                if (montant < 0) tx.Debit = Math.Abs(montant);
+                else if (montant > 0) tx.Credit = montant;
+
+                if (!string.IsNullOrEmpty(tx.Date))
+                {
+                    section.Transactions.Add(tx);
+                    found = true;
+                }
+            }
+
+            if (found) return;
+
+            // Essai 3 : format simple date + libelle + montant
+            foreach (Match m in simpleRegex.Matches(fullText))
+            {
+                string dateOp = m.Groups[1].Value;
+                string libelle = m.Groups[2].Value.Trim();
+                decimal montant = ParseAmount(m.Groups[3].Value);
+
+                if (Regex.IsMatch(libelle, @"Totaux|Report|TOTAUX|Solde|Total|Page", RegexOptions.IgnoreCase))
+                    continue;
+
+                var tx = new Transaction
+                {
+                    Date = NormalizeDate(dateOp, documentYear),
+                    Libelle = libelle
+                };
+
+                if (montant < 0) tx.Debit = Math.Abs(montant);
+                else if (montant > 0) tx.Credit = montant;
+
+                if (!string.IsNullOrEmpty(tx.Date))
+                {
+                    section.Transactions.Add(tx);
+                }
+            }
+        }
         // ↓↓↓ NOUVEAU BLOC À INSÉRER ICI ↓↓↓
         private static readonly string[] BhKnownLibellePrefixes = {
               "COMFORC PRLV.", "VERSEMENT TPE", "VERS.CHQ.ORDIN", "VRST.AUT.AG.",
@@ -1557,18 +1734,31 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 if (amounts.Count == 1)
                 {
                     decimal val = amounts[0];
-                    if (val < 0) tx.Debit = Math.Abs(val);
-                    else if (val > 0) tx.Credit = val;
-                    soldeCourant = null;// reste null si pas de solde courant
-                  
+                    if (hasSignedAmounts)
+                    {
+                        if (val < 0) tx.Debit = Math.Abs(val);
+                        else if (val > 0) tx.Credit = val;
+                    }
+                    else
+                    {
+                        if (val < 0) tx.Debit = Math.Abs(val);
+                        else if (val > 0) tx.Credit = val;
+                    }
+                    soldeCourant = null;
                 }
-                
                 else
                 {
                     decimal mouvement = amounts[0];
                     decimal solde = amounts[amounts.Count - 1];
                     soldeCourant = solde;
-                    if (previousSolde.HasValue)
+                    if (hasSignedAmounts)
+                    {
+                        // colonne unique signée : tous les montants sont des mouvements, pas de solde
+                        if (mouvement < 0) tx.Debit = Math.Abs(mouvement);
+                        else if (mouvement > 0) tx.Credit = mouvement;
+                        soldeCourant = null;
+                    }
+                    else if (previousSolde.HasValue)
                     {
                         if (solde < previousSolde.Value) tx.Debit = mouvement;
                         else if (solde > previousSolde.Value) tx.Credit = mouvement;
@@ -1736,7 +1926,9 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 ("AMEN BANK", "Amen Bank"),
                 ("WIFAK", "Wifak Bank"),                      // ← AJOUT
                 ("BH", "Banque de l'Habitat (BH)"),
-                ("BTK", "Banque Tuniso-Koweitienne (BTK)")   // ← ajouter
+                ("BTK", "Banque Tuniso-Koweitienne (BTK)") ,
+                ("Bank ABC", "Bank ABC Tunisia"),
+                ("BANK ABC", "Bank ABC Tunisia")// ← ajouter
             };
 
             foreach (var bank in knownBanks)
