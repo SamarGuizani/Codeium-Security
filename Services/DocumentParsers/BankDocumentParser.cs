@@ -675,7 +675,8 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
              
                 if (current == null
                     && Regex.IsMatch(joined, @"\bSOLDE\b", RegexOptions.IgnoreCase)
-                    && Regex.IsMatch(joined, @"\d{1,2}[/\-. ]\d{1,2}[/\-. ]\d{2,4}|\d{1,2}\s+[A-Za-z]{3,4}\s+\d{2,4}"))
+                    && Regex.IsMatch(joined, @"\d{1,2}[/\-. ]\d{1,2}[/\-. ]\d{2,4}|\d{1,2}\s+[A-Za-z]{3,4}\s+\d{2,4}")
+                    && Regex.IsMatch(joined, @"\b(SOLDE|BALANCE|REPORT|ANCIEN)\b", RegexOptions.IgnoreCase))
                 {
                     var genericSoldeAmounts = AmountRegex.Matches(joined);
                     if (genericSoldeAmounts.Count == 1)
@@ -743,8 +744,14 @@ new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
                 {
                     normalizedDate = GetDateFromAnyCell(cellTexts, null);
                 }
+                // [GÉNÉRIQUE] Filet de sécurité pour toute banque inconnue : si aucune date
+                // n'a été trouvée dans les 3 premières cellules, chercher dans toutes les cellules
+                if (string.IsNullOrEmpty(normalizedDate))
+                {
+                    normalizedDate = GetDateFromAnyCell(cellTexts, documentYear);
+                }
                 // [UBCI] Filet de secours : uniquement si le chemin normal (inchangé) n'a rien
-                
+
                 if (isUbci && string.IsNullOrEmpty(normalizedDate) && !ubciClotureReached
                     && cellTexts.Count > 0 && Regex.IsMatch(cellTexts[0], @"^\d{9,10}$"))
                 {
