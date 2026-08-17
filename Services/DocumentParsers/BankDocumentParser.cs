@@ -2620,13 +2620,14 @@ namespace Codeium_Security.Services.DocumentParsers
                     @"bensalah|www\.ubci|Page\s*\d+\s*/|Soci[eé]t[eé]\s+Anonyme",
                     RegexOptions.IgnoreCase)) continue;
 
-               
 
-                int montantDebutX = debitAnchor.HasValue ? debitAnchor.Value - 40 : int.MaxValue;
-                int dateValeurX = dateValeurAnchor.HasValue ? dateValeurAnchor.Value - 20
-                                    : (creditAnchor.HasValue ? creditAnchor.Value + 60 : int.MaxValue);
+                int montantDebutX = debitAnchor.HasValue
+                    ? Math.Min(debitAnchor.Value, creditAnchor ?? debitAnchor.Value) - 60
+                    : int.MaxValue;
+                int montantFinX = dateValeurAnchor.HasValue
+                    ? dateValeurAnchor.Value + 15   // marge élargie : n'exclut plus les montants longs
+                    : int.MaxValue;
                 int tolerance = 50; // tolérance pour déterminer débit vs crédit
-
                 // Cellule date d'opération
                 TableCell? dateCellOp = cells.FirstOrDefault(c =>
                     c.Left <= dateOpMaxLeft &&
@@ -2657,9 +2658,10 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 // Cellules montant : dans la zone Débit/Crédit (avant date valeur)
                 var montantCells = cells
-                    .Where(c => c.Left >= montantDebutX && c.Left < dateValeurX
-                             && AmountRegex.IsMatch(c.Text.Trim()))
-                    .ToList();
+      .Where(c => c.Left >= montantDebutX && c.Left < montantFinX
+               && AmountRegex.IsMatch(c.Text.Trim())
+               && !Regex.IsMatch(c.Text.Trim(), @"^\d{2}[/.\-]\d{2}[/.\-]\d{2,4}$")) // jamais une date valeur
+      .ToList();
 
                 Console.WriteLine($"[UBCI-ROW] dateOp={dateCellOp?.Text ?? "NULL"} " +
                                   $"libelle='{libelleFromCells}' " +
