@@ -9,6 +9,7 @@ namespace Codeium_Security.Services.DocumentParsers
     {
         public DocumentType SupportedType => DocumentType.Bank;
 
+
         private static readonly Regex DateRegex =
             new(@"\d{2}[/\-.]\d{2}[/\-.]\d{4}|\d{8}");
 
@@ -73,13 +74,21 @@ namespace Codeium_Security.Services.DocumentParsers
                     && !fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase))
                 || fullText.Contains("Banque de Tunisie et des Emirats", StringComparison.OrdinalIgnoreCase);
 
-            bool bteColumnSignature = Regex.IsMatch(fullText, @"D\.?\s*Op[ée]\.?", RegexOptions.IgnoreCase)
-                && Regex.IsMatch(fullText, @"(D\.?\s*Valeur|Date\s*de\s*Valeur)", RegexOptions.IgnoreCase)
-                && Regex.IsMatch(fullText, @"\bD[ée]bit\b", RegexOptions.IgnoreCase)
-                && Regex.IsMatch(fullText, @"\bCr[ée]dit\b", RegexOptions.IgnoreCase);
+            // APRÈS
+           
+            int bteColumnHits =
+                  (Regex.IsMatch(fullText, @"D\.?\s*Op[ée]\.?", RegexOptions.IgnoreCase) ? 1 : 0)
+                + (Regex.IsMatch(fullText, @"(D\.?\s*Valeur|Date\s*de\s*Valeur)", RegexOptions.IgnoreCase) ? 1 : 0)
+                + (Regex.IsMatch(fullText, @"\bD[ée]bit\b", RegexOptions.IgnoreCase) ? 1 : 0)
+                + (Regex.IsMatch(fullText, @"\bCr[ée]dit\b", RegexOptions.IgnoreCase) ? 1 : 0);
+            bool bteColumnSignature = bteColumnHits >= 3;
+
+            bool bteDocumentTitleHit = Regex.IsMatch(fullText, @"Extrait\s+de\s+Compte", RegexOptions.IgnoreCase)
+                || Regex.IsMatch(fullText, @"Relev[ée]\s+de\s+Compte", RegexOptions.IgnoreCase);
 
             bool isBte = fullText.Contains("Banque de Tunisie et des Emirats", StringComparison.OrdinalIgnoreCase)
-                || (bteNameHit && bteColumnSignature);
+                || (bteNameHit && bteColumnSignature)
+                || (bteNameHit && bteDocumentTitleHit && bteColumnHits >= 2);
 
             bool bhSignalCompte = Regex.IsMatch(fullText, @"No\s*du\s*compte\s*[-:]", RegexOptions.IgnoreCase);
             bool bhSignalTitulaire = Regex.IsMatch(fullText, @"du\s*compte\s*:\s*\S", RegexOptions.IgnoreCase);
@@ -107,6 +116,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
             var rows = engine.BuildTable(lines);
             rows = SplitDuplicatedRows(rows);
+            rows = MergeContinuationLines(rows);   // ← LIGNE AJOUTÉE, une seule fois
             if (isUbci)
             {
                 var ubciDocument = new BankDocument
@@ -134,7 +144,116 @@ namespace Codeium_Security.Services.DocumentParsers
 
             return document;
         }
+        private enum LineCategory
+        {
+            TransactionStart, TransactionContinuation, TableHeader,
+            AccountMetadata, Total, Balance, DocumentFooter, Noise
+        }
 
+        // Date "opération"/"valeur" : separateurs classiques (/ . -) ET espace, ce dernier
+        // couvrant les tableaux ou la date est imprimee "jj mm aaaa" (ex. BTK/AMEN : "02 05
+        // 2025"). Sans l'espace, une date de continuation comme celle-ci ne serait jamais vue
+        // par ClassifyLine et la ligne porteuse serait, a tort, jugee "sans date".
+        private static readonly Regex ClassifyDateAnywhereRegex =
+            new(@"(?<!\d)\d{1,2}[\s/.\-]\d{1,2}[\s/.\-]\d{2,4}(?!\d)");
+
+        private static readonly Regex ClassifyAmountAnywhereRegex =
+            new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{1,3}");
+
+        // La colonne "operation" en tete de ligne n'est pas toujours une date complete : BIAT
+        // imprime "03 01" (jour mois, sans annee), ATB un simple "03" (jour seul, la vraie date
+        // est plus loin sur la meme ligne dans la colonne "Date Valeur"), BTE/QNB une date
+        // complete. Dans tous les cas, une VRAIE ligne d'operation commence par un chiffre ; une
+        // continuation/annotation (ex. "ECHEANCE 25/04/2025", "DONT TVA: 0,570") commence par un
+        // mot. C'est ce signal positionnel simple - pas le format exact de la date - qui est
+        // fiable a travers les banques.
+        private static readonly Regex LeadingDigitRegex = new(@"^\d");
+
+        private LineCategory ClassifyLine(TableRow row, bool hasOpenTransaction)
+        {
+            var orderedCells = row.Cells.OrderBy(c => c.Left).ToList();
+            string joined = string.Join(" ", orderedCells.Select(c => c.Text)).Trim();
+            if (string.IsNullOrWhiteSpace(joined)) return LineCategory.Noise;
+
+            if (Regex.IsMatch(joined, @"(D[ée]bit.{0,20}Cr[ée]dit)|(Cr[ée]dit.{0,20}D[ée]bit)|D\.?\s*Op[ée]\.?\s+Libell[ée]|^Page\s*\d|^Folio\s*\d+\s*$|^\d+\s*/\s*\d+\s*$", RegexOptions.IgnoreCase))
+                return LineCategory.TableHeader;
+
+            if (Regex.IsMatch(joined, @"Solde\s*(au|initial|final|pr[ée]c[ée]dent|d['’]ouverture|de\s*cl[ôo]ture)", RegexOptions.IgnoreCase))
+                return LineCategory.Balance;
+
+            if (Regex.IsMatch(joined, @"Totaux?\b|Encours", RegexOptions.IgnoreCase))
+                return LineCategory.Total;
+
+            if (Regex.IsMatch(joined, @"sauf\s+erreur|d[ée]lai\s+de\s+r[ée]clamation|jours?\s+[àa]\s+compter|tacitement|nos\s+[ée]critures|en\s+cas\s+de\s+contestation|si[èe]ge\s+social", RegexOptions.IgnoreCase))
+                return LineCategory.DocumentFooter;
+
+            if (Regex.IsMatch(joined, @"Compte\s*N[°o]|^\s*RIB\b|IBAN\b|Adresse\s*:|Agence\s*:|Intitul[ée]\s*:|Devise\s*:|Ville\s*:|P[ée]riode\s*:|Titulaire", RegexOptions.IgnoreCase))
+                return LineCategory.AccountMetadata;
+
+            bool hasDate = ClassifyDateAnywhereRegex.IsMatch(joined);
+            bool hasAmount = ClassifyAmountAnywhereRegex.IsMatch(joined);
+            bool hasLeadingDigit = orderedCells.Count > 0 && LeadingDigitRegex.IsMatch(orderedCells[0].Text.TrimStart());
+
+            // Une ligne qui porte a la fois une date (n'importe ou) ET un montant est toujours le
+            // debut d'une operation autonome (ex. "TVA 010546128672 19/06/25 1,330"), meme au
+            // milieu d'une transaction deja ouverte.
+            if (hasDate && hasAmount)
+                return LineCategory.TransactionStart;
+
+            // Meme sans date reconnue (jour seul, jour+mois sans annee, date valeur glissee sans
+            // separateur...), une ligne dont la premiere cellule commence par un chiffre ET qui
+            // porte une date OU un montant est une vraie ligne de la colonne operation - jamais
+            // une continuation, meme transaction deja ouverte. Une continuation/annotation
+            // commence toujours par un mot (ECHEANCE, DONT, Folio...), jamais par un chiffre.
+            if (hasLeadingDigit && (hasDate || hasAmount))
+                return LineCategory.TransactionStart;
+
+            // Pas de transaction ouverte : rien pour rattacher cette ligne a quoi que ce soit
+            // d'anterieur. Une date seule (montant a suivre sur la ligne d'apres) ou un montant
+            // seul (cas orphelin deja tolere) demarrent donc une nouvelle transaction.
+            if (!hasOpenTransaction)
+                return (hasDate || hasAmount) ? LineCategory.TransactionStart : LineCategory.Noise;
+
+            // Une transaction est deja ouverte, et cette ligne ne commence ni par un chiffre ni
+            // par une date+montant complets : c'est un detail rattache a l'operation en cours
+            // (ex. "ECHEANCE 25/04/2025", "DONT TVA: 0,570"), jamais une nouvelle transaction.
+            // Le texte est conserve (voir Transaction.Libelle), mais IsContinuationDetail (pose
+            // par MergeContinuationLines) empeche tout extracteur de le relire comme
+            // montant/date/reference de colonne.
+            return LineCategory.TransactionContinuation;
+        }
+        private List<TableRow> MergeContinuationLines(List<TableRow> rows)
+        {
+            var result = new List<TableRow>();
+            int? openTxIndex = null;
+
+            foreach (var row in rows)
+            {
+                string joined = string.Join(" ", row.Cells.Select(c => c.Text)).Trim();
+                var category = ClassifyLine(row, openTxIndex.HasValue);
+
+                switch (category)
+                {
+                    case LineCategory.TransactionContinuation:
+                        var lastCell = result[openTxIndex!.Value].Cells.LastOrDefault();
+                        int left = lastCell != null ? lastCell.Left + 1 : 0;
+                        
+                        result[openTxIndex.Value].Cells.Add(new TableCell { Text = joined, Left = left, IsContinuationDetail = true });
+                        break;
+
+                    case LineCategory.TransactionStart:
+                        result.Add(row);
+                        openTxIndex = result.Count - 1;
+                        break;
+
+                    default: // TableHeader, AccountMetadata, Total, Balance, DocumentFooter, Noise
+                        result.Add(row);
+                        openTxIndex = null; // une transaction ne peut jamais enjamber ces catégories
+                        break;
+                }
+            }
+            return result;
+        }
         private List<BankAccountSection> ExtractBteAccountSections(List<TableRow> rows, string fullText)
         {
             var sections = new List<BankAccountSection>();
@@ -255,8 +374,15 @@ namespace Codeium_Security.Services.DocumentParsers
                 var cells = row.Cells.OrderBy(c => c.Left).ToList();
                 if (cells.Count == 0) continue;
 
-                string joined = string.Join(" ", cells.Select(c => CleanWhitespace(c.Text)));
-                if (string.IsNullOrWhiteSpace(joined)) continue;
+                // "joined"/le regex de repli ne doivent jamais voir le texte des continuations
+                // (ex. "DONT TVA: 0,570", "ECHEANCE 25/04/2025") : leurs propres nombres/dates
+                // casseraient l'ancrage par colonne et le "$" du regex de repli plus bas. Le
+                // texte est conservé séparément et rattaché au libellé final, jamais perdu.
+                string joined = string.Join(" ", cells.Where(c => !c.IsContinuationDetail).Select(c => CleanWhitespace(c.Text)));
+                string continuationText = Regex.Replace(
+                    string.Join(" ", cells.Where(c => c.IsContinuationDetail).Select(c => CleanWhitespace(c.Text))),
+                    @"\s{2,}", " ").Trim();
+                if (string.IsNullOrWhiteSpace(joined) && string.IsNullOrWhiteSpace(continuationText)) continue;
 
                 if (IsHeaderOrMetadataNoise(joined)) continue;
                 if (!footerReached && LooksLikeFooter(joined))
@@ -264,9 +390,10 @@ namespace Codeium_Security.Services.DocumentParsers
                     footerReached = true;
                 }
 
-                    // Solde d'ouverture (plusieurs libellés possibles selon le modèle du relevé)
+                    // Solde d'ouverture (plusieurs libellés possibles selon le modèle du relevé).
+                    // "SOLDE AU" tolère un ":" optionnel avant la date (ex. "Solde au : 31/01/2026").
                     var soldeInitMatch = Regex.Match(joined,
-                    @"(SOLDE\s+PR[ée]C[ée]DENT|ANCIEN\s+SOLDE|SOLDE\s+D['’]OUVERTURE|SOLDE\s+INITIAL|SOLDE\s+AU\s+\d{2}[/.\-]\d{2}[/.\-]\d{2,4})" +
+                    @"(SOLDE\s+PR[ée]C[ée]DENT|ANCIEN\s+SOLDE|SOLDE\s+D['’]OUVERTURE|SOLDE\s+INITIAL|SOLDE\s+AU\s*:?\s*\d{2}[/.\-]\d{2}[/.\-]\d{2,4})" +
                     @"\D*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s*(CR|DB)?",
                     RegexOptions.IgnoreCase);
                 if (soldeInitMatch.Success && current.Transactions.Count == 0 && !current.SoldeInitial.HasValue)
@@ -302,7 +429,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
                 if (footerReached) continue;
                 // ── Classification des cellules de la ligne par ancre la plus proche ──
-                TableCell? dateOpeCell = cells.FirstOrDefault(c =>
+                TableCell? dateOpeCell = cells.Where(c => !c.IsContinuationDetail).FirstOrDefault(c =>
                     (!dateOpeAnchor.HasValue || c.Left <= dateOpeAnchor.Value + 40) &&
                     Regex.IsMatch(c.Text.Trim(), @"^\d{2}[/.\-]\d{2}[/.\-]\d{2,4}$"));
 
@@ -317,6 +444,14 @@ namespace Codeium_Security.Services.DocumentParsers
 
                     string txt = cell.Text.Trim();
                     if (string.IsNullOrEmpty(txt)) continue;
+
+                    // Cellule de continuation (ECHEANCE, DONT TVA, remarque...) : jamais une
+                    // colonne. Interdiction absolue de la faire passer par le classement par
+                    // ancre (référence/débit/crédit/solde/CR-DB) ci-dessous, quel que soit son
+                    // contenu apparent. Son texte est rattaché séparément via "continuationText"
+                    // (voir plus bas) pour éviter de le dupliquer dans le libellé.
+                    if (cell.IsContinuationDetail)
+                        continue;
 
                     // Sens du solde : toujours et uniquement rattaché au solde, jamais au libellé.
                     if (Regex.IsMatch(txt, @"^(CR|DB)$", RegexOptions.IgnoreCase))
@@ -375,13 +510,12 @@ namespace Codeium_Security.Services.DocumentParsers
                     var fm = lineFallbackRegex.Match(joined);
                     if (fm.Success)
                     {
-                        dateOpeCell = new TableCell { Text = fm.Groups[1].Value, Left = cells.First().Left };
+                        dateOpeCell = new TableCell { Text = fm.Groups[1].Value, Left = cells.First(c => !c.IsContinuationDetail).Left };
                         string middle = fm.Groups[2].Value.Trim();
                         var trailingRef = Regex.Match(middle, @"\s(\d{4,13})$");
                         if (trailingRef.Success) middle = middle.Substring(0, trailingRef.Index).Trim();
                         libelleText = middle; decimal montant = ParseAmount(fm.Groups[4].Value);
-                        string? sign = fm.Groups[5].Success ? fm.Groups[5].Value.ToUpperInvariant() : null;
-
+                        string? sign = fm.Groups[6].Success ? fm.Groups[6].Value.ToUpperInvariant() : null;
                         decimal montantMouv = ParseAmount(fm.Groups[4].Value);
                         if (fm.Groups[5].Success)
                         {
@@ -402,11 +536,14 @@ namespace Codeium_Security.Services.DocumentParsers
                             libelleText = (libelleText + $" [MONTANT A CLASSER: {montantMouv} - a verifier manuellement]").Trim();
                             hasAnyAmount = false;
                         }
-                        if (sign == "CR" || sign == "DB")
+                        // APRÈS
+                        if (hasAnyAmount)
                         {
-                            // Un CR/DB en fin de ligne appartient au Solde, jamais à un
-                            // montant de mouvement — donc ici, s'il apparaît, le nombre
-                            // capturé est en réalité un solde, pas Débit/Crédit.
+                            // Débit/Crédit déjà déduits de façon fiable par la comparaison de solde
+                            // ci-dessus : on ne les écrase plus par une heuristique positionnelle.
+                        }
+                        else if (sign == "CR" || sign == "DB")
+                        {
                             soldeVal = montant;
                             soldeSign = sign;
                             debitVal = null; creditVal = null;
@@ -414,10 +551,7 @@ namespace Codeium_Security.Services.DocumentParsers
                         }
                         else if (debitAnchor.HasValue && creditAnchor.HasValue)
                         {
-                            // On a des ancres : on peut encore essayer de positionner le
-                            // montant retrouvé en fin de ligne par proximité, s'il existe
-                            // une position X exploitable (dernière cellule de la ligne).
-                            var lastCell = cells.LastOrDefault(c => bteAmountRegex.IsMatch(c.Text));
+                            var lastCell = cells.Where(c => !c.IsContinuationDetail).LastOrDefault(c => bteAmountRegex.IsMatch(c.Text));
                             if (lastCell != null)
                             {
                                 int distDebit = Math.Abs(lastCell.Left - debitAnchor.Value);
@@ -427,12 +561,8 @@ namespace Codeium_Security.Services.DocumentParsers
                             }
                             else
                             {
-                                // Aucune position exploitable : le montant existe mais son
-                                // sens (Débit/Crédit) ne peut pas être déterminé
-                                // maintenant. On le CONSERVE explicitement au lieu de le
-                                // perdre ou de le classer arbitrairement.
                                 libelleText = (libelleText + $" [MONTANT A CLASSER: {montant.ToString(CultureInfo.InvariantCulture)} - a verifier manuellement]").Trim();
-                                hasAnyAmount = false; // volontairement : on ne remplit ni Debit ni Credit
+                                hasAnyAmount = false;
                             }
                         }
                         else
@@ -442,6 +572,13 @@ namespace Codeium_Security.Services.DocumentParsers
                         }
                     }
                 }
+
+                // Le regex de repli remplace entierement libelleText (fm.Groups[2]) : le texte
+                // des cellules de continuation, deja ecarte de "joined" plus haut pour ne pas
+                // casser ce regex, doit donc etre re-attache ici - jamais perdu.
+                if (!string.IsNullOrEmpty(continuationText))
+                    libelleText = string.IsNullOrEmpty(libelleText) ? continuationText : (libelleText + " " + continuationText).Trim();
+
                 decimal? SignedSolde() => soldeVal.HasValue
                     ? (string.Equals(soldeSign, "DB", StringComparison.OrdinalIgnoreCase) ? -Math.Abs(soldeVal.Value) : Math.Abs(soldeVal.Value))
                     : (decimal?)null;
@@ -646,7 +783,10 @@ namespace Codeium_Security.Services.DocumentParsers
             // [BNA] Chaque operation "principale" (Date+Libelle+Valeur+Montant+Solde) est suivie
            
             bool isBna = fullText.Contains("BNA", StringComparison.OrdinalIgnoreCase);
-
+            bool isAlBarakaDoc = fullText.Contains("AlBaraka", StringComparison.OrdinalIgnoreCase)
+            || fullText.Contains("albarakabank", StringComparison.OrdinalIgnoreCase);
+            bool isAlBarakaExtrait = isAlBarakaDoc && Regex.IsMatch(fullText, @"Montant\s+cr[ée]diteur|Montant\s+d[ée]biteur", RegexOptions.IgnoreCase);
+            bool isAlBarakaReleve = isAlBarakaDoc && !isAlBarakaExtrait;
             // [ATB] Meme detection que dans Parse() : la date n'est jamais dans les premieres
             // cellules, voir usage plus bas (GetDateFromAnyCell).
             bool isAtb = fullText.Contains("ATB", StringComparison.OrdinalIgnoreCase)
@@ -716,7 +856,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 @"\(-\)\s*D[ée]bit\s*/\s*Cr[ée]dit\s*\(\+\)|\(-\)\s*D[ée]bit.*Cr[ée]dit",
                 RegexOptions.IgnoreCase);
 
-            bool hasSignedAmounts = isAbcBank || hasSignedAmountsHeader;
+            bool hasSignedAmounts = isAbcBank || hasSignedAmountsHeader || isAlBarakaReleve;
             // [GENERIQUE] Detection de bruit d'en-tete/pied de page par repetition, independante
 
             var repeatedLineCounts = new Dictionary<string, int>();
@@ -1009,9 +1149,9 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     continue;
                 }
+
                 // [QNB - AMÉLIORÉ] "Solde Initial" avec montant
-                var soldeInitMatch = Regex.Match(joined, @"\bSolde\s+Initial\s*([-+]?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
-                if (soldeInitMatch.Success || Regex.IsMatch(joined, @"\bSolde\s+Initial\b", RegexOptions.IgnoreCase))
+                var soldeInitMatch = Regex.Match(joined, @"\bSolde\s+Initial\s*:?\s*([-+]?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase); if (soldeInitMatch.Success || Regex.IsMatch(joined, @"\bSolde\s+Initial\b", RegexOptions.IgnoreCase))
                 {
                     // Fermer la section précédente
                     if (current != null)
@@ -1216,7 +1356,27 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     continue;
                 }
-
+                // [ALBARAKA] Solde de clôture : "Solde fin période : x" (extrait) ou
+                // "SOLDE CREDITEUR/DEBITEUR : x" (relevé), toujours en dernière ligne.
+                var albarakaSoldeFinMatch = Regex.Match(joined,
+                    @"Solde\s+fin\s+p[ée]riode\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})|" +
+                    @"SOLDE\s+(CREDITEUR|DEBITEUR)\s*:\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                    RegexOptions.IgnoreCase);
+                if (albarakaSoldeFinMatch.Success)
+                {
+                    if (current != null)
+                    {
+                        if (albarakaSoldeFinMatch.Groups[1].Success)
+                            current.SoldeFinal = ParseAmount(albarakaSoldeFinMatch.Groups[1].Value);
+                        else
+                        {
+                            decimal v = ParseAmount(albarakaSoldeFinMatch.Groups[3].Value);
+                            current.SoldeFinal = albarakaSoldeFinMatch.Groups[2].Value.Equals("DEBITEUR", StringComparison.OrdinalIgnoreCase)
+                                ? -Math.Abs(v) : Math.Abs(v);
+                        }
+                    }
+                    continue;
+                }
                 // Ignorer les lignes de Total et de page
                 if (Regex.IsMatch(joined, @"\b(Total|Page\s*\d)\b", RegexOptions.IgnoreCase))
                     continue;
@@ -1286,21 +1446,25 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
 
                 // Fusion des signes "-" isolés
-                var mergedWithPos = new List<(int Left, string Text)>();
+                var mergedWithPos = new List<(int Left, string Text, bool IsContinuationDetail)>();
                 for (int i = 0; i < cells.Count; i++)
-                    mergedWithPos.Add((cells[i].Left, NormalizeSignSpacing(CleanWhitespace(cells[i].Text))));
+                    mergedWithPos.Add((cells[i].Left, NormalizeSignSpacing(CleanWhitespace(cells[i].Text)), cells[i].IsContinuationDetail));
                 for (int i = 0; i < mergedWithPos.Count - 1; i++)
                 {
                     if (mergedWithPos[i].Text.Trim() == "-")
                     {
-                        mergedWithPos[i + 1] = (mergedWithPos[i + 1].Left, "-" + mergedWithPos[i + 1].Text.TrimStart());
+                        mergedWithPos[i + 1] = (mergedWithPos[i + 1].Left, "-" + mergedWithPos[i + 1].Text.TrimStart(), mergedWithPos[i + 1].IsContinuationDetail);
                         mergedWithPos.RemoveAt(i);
                         i--;
                     }
                 }
 
+                // Une cellule de continuation (ex. "DONT TVA: 0,570", "ECHEANCE 25/04/2025")
+                // reste dans cellTexts/joined pour le libellé, mais ne doit jamais fournir de
+                // montant : elle est exclue ici de la détection debit/credit/solde, quelle que
+                // soit la banque.
                 var amountCandidates = mergedWithPos
-                    .Where(c => AmountRegex.IsMatch(c.Text))
+                    .Where(c => !c.IsContinuationDetail && AmountRegex.IsMatch(c.Text))
                     .Select(c => new { Left = c.Left, Value = ParseAmount(AmountRegex.Match(c.Text).Value) })
                     .ToList();
 
@@ -1320,6 +1484,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     bool shortAmountsAllowed = ((isUbci && !ubciClotureReached) || isBna) && Regex.IsMatch(joined, @"[A-Za-zÀ-ÿ]");
                     string bareDigitPattern = shortAmountsAllowed ? @"^-?\d{3,10}$" : @"^-?\d{5,10}$";
                     var bareDigitCandidates = mergedWithPos
+                        .Where(c => !c.IsContinuationDetail)
                         .Where(c => !AmountRegex.IsMatch(c.Text))
                         .Where(c => Regex.IsMatch(c.Text.Trim(), bareDigitPattern))
                         .Where(c =>
@@ -1408,8 +1573,9 @@ namespace Codeium_Security.Services.DocumentParsers
                         if (string.IsNullOrEmpty(pendingDate))
                         {
                             // [BTK] Une ligne de commission/TVA (ex: "COM & TVA RET. CARTE") suit
-                            
-                            if ((isBtk || isUbci || isBna) && current.Transactions.Count > 0)
+
+                            if (current.Transactions.Count > 0 && !isNoise)
+
                                 pendingDate = current.Transactions[current.Transactions.Count - 1].Date;
                             else
                                 continue;
@@ -2912,6 +3078,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 ("WIFAK", "Wifak Bank"),                      // ← AJOUT
                 ("BH", "Banque de l'Habitat (BH)"),
                 ("BTK", "Banque Tuniso-Koweitienne (BTK)") ,
+                ("ALBARAKA", "Al Baraka Bank Tunisia"),
                 ("Bank ABC", "Bank ABC Tunisia"),
                 ("BTE", "Banque Tuniso-Emiratie (BTE)"),          // ← AJOUT
                 ("BANK ABC", "Bank ABC Tunisia")// ← ajouter
