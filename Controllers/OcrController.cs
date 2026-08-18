@@ -122,96 +122,7 @@ namespace Codeium_Security.Controllers
             return Ok(allResults);
         }
 
-        [HttpPost("text")]
-        public async Task<IActionResult> ExtractPlainText(IFormFile file)
-        {
-            if (file == null || file.Length == 0)
-                return BadRequest("No file uploaded.");
-
-            Directory.CreateDirectory("Images");
-            var filePath = Path.Combine("Images", file.FileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            var ocrResult = await _processingService.RunOcrOnlyAsync(filePath, file.FileName);
-            string plainText = _processingService.FormatAsPlainText(file.FileName, ocrResult.PageTexts);
-
-            return Content(plainText, "text/plain; charset=utf-8");
-        }
-
-        [HttpGet("compare")]
-        public IActionResult Compare()
-        {
-            var writer = new StringWriter();
-            var originalOut = Console.Out;
-            Console.SetOut(writer);
-
-            CompareResults.Run();
-
-            Console.SetOut(originalOut);
-            return Content(writer.ToString(), "text/plain; charset=utf-8");
-        }
-        [HttpPost("debug-html")]
-        public async Task<IActionResult> DebugHtml(IFormFile file)
-        {
-            string tempPath = Path.Combine(Path.GetTempPath(), file.FileName);
-            using (var stream = new FileStream(tempPath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            var configBuilder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true);
-            var config = configBuilder.Build();
-
-            var ocrService = new TesseractOcrService(config);
-            var pdfConverter = new PdfToImageConverter(config);
-
-            string pagesFolder = Path.Combine("Images", "debug_" + Path.GetFileNameWithoutExtension(file.FileName));
-            var pageImagePaths = pdfConverter.ConvertPdfToImages(tempPath, pagesFolder);
-
-            var engine = new DocumentAnalysisEngine();
-            var html = new System.Text.StringBuilder();
-            html.Append("<html><head><meta charset='utf-8'><style>");
-            html.Append("body{font-family:monospace;background:#111;color:#eee;} ");
-            html.Append("table{border-collapse:collapse;margin-bottom:30px;width:100%;} ");
-            html.Append("td{border:1px solid #444;padding:4px 8px;font-size:12px;white-space:nowrap;} ");
-            html.Append("h2{color:#4ea;}");
-            html.Append("</style></head><body>");
-
-            int pageNum = 1;
-            foreach (var pageImagePath in pageImagePaths)
-            {
-                var ocrResult = await ocrService.ExtractTextAsync(pageImagePath);
-                var lines = engine.GroupWordsIntoLines(ocrResult.Words);
-                var rows = engine.BuildTable(lines);
-
-                html.Append($"<h2>Page {pageNum}</h2><table>");
-                foreach (var row in rows)
-                {
-                    html.Append("<tr>");
-                    foreach (var cell in row.Cells)
-                    {
-                        html.Append($"<td title='Left={cell.Left}'>{System.Net.WebUtility.HtmlEncode(cell.Text)}</td>");
-                    }
-                    html.Append("</tr>");
-                }
-                html.Append("</table>");
-                pageNum++;
-            }
-
-            html.Append("</body></html>");
-
-            string outputHtmlPath = Path.Combine("TrainingData", "RawResults", Path.GetFileNameWithoutExtension(file.FileName) + "_debug.html");
-            await System.IO.File.WriteAllTextAsync(outputHtmlPath, html.ToString());
-
-            return PhysicalFile(Path.GetFullPath(outputHtmlPath), "text/html");
-        }
-
+       
         [HttpPost("json-to-html")]
         public async Task<IActionResult> JsonToHtml(IFormFile file)
         {
@@ -295,6 +206,97 @@ namespace Codeium_Security.Controllers
 
             return PhysicalFile(Path.GetFullPath(outputPath), "text/html");
         }
+
+        [HttpPost("text")]
+        public async Task<IActionResult> ExtractPlainText(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("No file uploaded.");
+
+            Directory.CreateDirectory("Images");
+            var filePath = Path.Combine("Images", file.FileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            var ocrResult = await _processingService.RunOcrOnlyAsync(filePath, file.FileName);
+            string plainText = _processingService.FormatAsPlainText(file.FileName, ocrResult.PageTexts);
+
+            return Content(plainText, "text/plain; charset=utf-8");
+        }
+        [HttpGet("compare")]
+        public IActionResult Compare()
+        {
+            var writer = new StringWriter();
+            var originalOut = Console.Out;
+            Console.SetOut(writer);
+
+            CompareResults.Run();
+
+            Console.SetOut(originalOut);
+            return Content(writer.ToString(), "text/plain; charset=utf-8");
+        }
+        [HttpPost("debug-html")]
+        public async Task<IActionResult> DebugHtml(IFormFile file)
+        {
+            string tempPath = Path.Combine(Path.GetTempPath(), file.FileName);
+            using (var stream = new FileStream(tempPath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            var configBuilder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true);
+            var config = configBuilder.Build();
+
+            var ocrService = new TesseractOcrService(config);
+            var pdfConverter = new PdfToImageConverter(config);
+
+            string pagesFolder = Path.Combine("Images", "debug_" + Path.GetFileNameWithoutExtension(file.FileName));
+            var pageImagePaths = pdfConverter.ConvertPdfToImages(tempPath, pagesFolder);
+
+            var engine = new DocumentAnalysisEngine();
+            var html = new System.Text.StringBuilder();
+            html.Append("<html><head><meta charset='utf-8'><style>");
+            html.Append("body{font-family:monospace;background:#111;color:#eee;} ");
+            html.Append("table{border-collapse:collapse;margin-bottom:30px;width:100%;} ");
+            html.Append("td{border:1px solid #444;padding:4px 8px;font-size:12px;white-space:nowrap;} ");
+            html.Append("h2{color:#4ea;}");
+            html.Append("</style></head><body>");
+
+            int pageNum = 1;
+            foreach (var pageImagePath in pageImagePaths)
+            {
+                var ocrResult = await ocrService.ExtractTextAsync(pageImagePath);
+                var lines = engine.GroupWordsIntoLines(ocrResult.Words);
+                var rows = engine.BuildTable(lines);
+
+                html.Append($"<h2>Page {pageNum}</h2><table>");
+                foreach (var row in rows)
+                {
+                    html.Append("<tr>");
+                    foreach (var cell in row.Cells)
+                    {
+                        html.Append($"<td title='Left={cell.Left}'>{System.Net.WebUtility.HtmlEncode(cell.Text)}</td>");
+                    }
+                    html.Append("</tr>");
+                }
+                html.Append("</table>");
+                pageNum++;
+            }
+
+            html.Append("</body></html>");
+
+            string outputHtmlPath = Path.Combine("TrainingData", "RawResults", Path.GetFileNameWithoutExtension(file.FileName) + "_debug.html");
+            await System.IO.File.WriteAllTextAsync(outputHtmlPath, html.ToString());
+
+            return PhysicalFile(Path.GetFullPath(outputHtmlPath), "text/html");
+        }
+
+
         [HttpPost("process-batch")]
         public async Task<IActionResult> ProcessBatch(List<IFormFile>? files)
         {
