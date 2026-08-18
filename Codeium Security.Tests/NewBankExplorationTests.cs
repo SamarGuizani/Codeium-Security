@@ -28,8 +28,13 @@ namespace Codeium_Security.Tests
             {
                 @"BNA\BNA  7-2025.pdf",
                 @"BNA\BNA.pdf",
+                @"Qnb\EXTRAIT QNB 2024.pdf",
+                @"Qnb\QNB  MED 05-24.pdf",
+                @"El Baraka\ALBARAKA_EXTRAIT.pdf",
+                @"El Baraka\Relevé_de_Compte_07-2024 AL BARAKA.pdf",
                 @"BH\extrait BH.pdf",
                 @"BH\EXTRAIT BANCAIRE 02-2026.pdf",
+                @"BH\releve bh.pdf",
                 @"BTE\RELEVEE BTE 06-2026.pdf",
                 @"BTL\BTL.pdf",
                 @"BTL\btlextrait.pdf",

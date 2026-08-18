@@ -23,14 +23,7 @@ namespace Codeium_Security.Services.DocumentParsers
         private static readonly Regex ArabicScriptRegex = new("[؀-ۿ]");
 
         // [AMEN] "DU jj.mm.aaaa" est un echo (au format point) de la date d'operation qui peut
-        // apparaitre au milieu d'une cellule de libelle (ex. "R394 DU 01.07.2026 VMA"). Ce
-        // fragment correspond partiellement a AmountRegex (ex. "01.07" y est reconnu comme un
-        // montant), ce qui cree de faux montants (voir "1.07", "2.07"...) et fait exclure a tort
-        // la cellule entiere du libelle. La colonne OCR ou apparait cet echo est parfois coupee
-        // en largeur, ce qui tronque le dernier chiffre de l'annee (ex. "DU 21.07.202" au lieu
-        // de "DU 21.07.2026") : l'annee est donc acceptee de 2 a 4 chiffres. On neutralise ce
-        // motif avant toute detection de montant/texte, uniquement pour AMEN BANK (voir
-        // isAmenDocument) : les autres banques ne sont jamais concernees par ce nettoyage.
+       
         private static readonly Regex AmenEchoDateRegex =
             new(@"\bDU\s+\d{2}\.\d{2}\.\d{2,4}\b", RegexOptions.IgnoreCase);
 
@@ -57,11 +50,7 @@ namespace Codeium_Security.Services.DocumentParsers
         }
 
         // [BNA] Sur une ligne "Intéréts créd/déb", le taux (ex. "TEG14.4060") est colle sans
-        // espace au vrai montant qui suit (ex. "TEG14.4060 30 06 2026 2,354.301" - confirme sur
-        // BNA.pdf). AmountRegex, applique cellule par cellule, matche alors "14.4060" comme si
-        // c'etait un montant independant et IsMergedRow/SplitMergedRow scindent a tort la ligne
-        // en 2 transactions (l'une avec ce faux montant). Le taux n'est jamais un montant de
-        // mouvement : on le retire de la cellule avant toute detection de montant.
+        
         private static readonly Regex BnaRateLabelRegex =
             new(@"\bTEG\s*\d+(?:[.,]\d+)?", RegexOptions.IgnoreCase);
 
@@ -73,10 +62,7 @@ namespace Codeium_Security.Services.DocumentParsers
         }
 
         // [BNA-RELEVE] Le pied de page publicitaire/legal ("BNA H24, votre banque 100% digitale
-        // ..." puis le rappel legal "TOUTE ERREUR OU OMISSION EST A SIGNALER ...") se retrouve
-        // colle a la derniere operation du releve dans la meme TableRow (regroupement par
-        // proximite verticale). Coupe tout ce qui suit ces deux amorces reconnaissables, jamais
-        // une operation.
+     
         private static readonly Regex BnaFooterBoilerplateRegex =
             new(@"\bBNA\s+H24\b.*$|\bTOUTE\s+ERREUR\s+OU\s+OMISSION\b.*$", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
@@ -84,6 +70,21 @@ namespace Codeium_Security.Services.DocumentParsers
         {
             if (string.IsNullOrEmpty(text)) return text;
             string cleaned = BnaFooterBoilerplateRegex.Replace(text, "").Trim();
+            return Regex.Replace(cleaned, @"\s{2,}", " ");
+        }
+
+        // [ALBARAKA-EXTRAIT] Le rappel legal ("Cet extrait est considere exact et accepte...")
+        // et le bandeau marketing/entete de page suivant ("Compliments www.albarakabank.com.tn
+        // ... La banque pratique ...") se retrouvent colles, dans la MEME cellule de tableau,
+        // apres la derniere operation de chaque page (regroupement par proximite verticale,
+        // meme mecanisme que le pied de page BNA). Coupe tout ce qui suit ces deux amorces.
+        private static readonly Regex AlBarakaFooterBoilerplateRegex =
+            new(@"\bCet\s+extrait\s+est\s+consid[ée]r[ée]\b.*$|\bCompliments\s+www\.albarakabank\b.*$", RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+        private static string StripAlBarakaFooterBoilerplate(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            string cleaned = AlBarakaFooterBoilerplateRegex.Replace(text, "").Trim();
             return Regex.Replace(cleaned, @"\s{2,}", " ");
         }
 
@@ -151,16 +152,7 @@ namespace Codeium_Security.Services.DocumentParsers
             bool bteDocumentTitleHit = Regex.IsMatch(fullText, @"Extrait\s+de\s+Compte", RegexOptions.IgnoreCase)
                 || Regex.IsMatch(fullText, @"Relev[ée]\s+de\s+Compte", RegexOptions.IgnoreCase);
 
-            // [BTE] Repli structurel : certains scans BTE n'ont aucun texte OCR-isable pour le nom
-            // de la banque (en-tete/logo purement graphique, non reconnu par l'OCR) - bteNameHit
-            // reste alors a False alors que la mise en page (titre "Extrait de compte"/"Relevé de
-            // Compte" + les 4 en-tetes de colonnes D.Opé/D.Valeur/Débit/Crédit, tous presents) est
-            // sans ambiguite celle de BTE. Ce repli n'est active que si AUCUNE autre banque nommee
-            // n'a ete detectee dans le texte, pour ne jamais risquer de reclasser a tort un
-            // document d'une autre banque. N'affecte que les documents qui, avant ce correctif,
-            // tombaient dans le parseur generique faute de nom detecte (isBte=False) alors que la
-            // structure BTE est complete : aucun document deja correctement classe (isBte=True) ou
-            // appartenant a une autre banque nommee n'est concerne.
+
             bool bteStructuralFallback = !bteNameHit
                 && bteColumnHits >= 4
                 && bteDocumentTitleHit
@@ -237,23 +229,14 @@ namespace Codeium_Security.Services.DocumentParsers
             AccountMetadata, Total, Balance, DocumentFooter, Noise
         }
 
-        // Date "opération"/"valeur" : separateurs classiques (/ . -) ET espace, ce dernier
-        // couvrant les tableaux ou la date est imprimee "jj mm aaaa" (ex. BTK/AMEN : "02 05
-        // 2025"). Sans l'espace, une date de continuation comme celle-ci ne serait jamais vue
-        // par ClassifyLine et la ligne porteuse serait, a tort, jugee "sans date".
+        
         private static readonly Regex ClassifyDateAnywhereRegex =
             new(@"(?<!\d)\d{1,2}[\s/.\-]\d{1,2}[\s/.\-]\d{2,4}(?!\d)");
 
         private static readonly Regex ClassifyAmountAnywhereRegex =
             new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{1,3}");
 
-        // La colonne "operation" en tete de ligne n'est pas toujours une date complete : BIAT
-        // imprime "03 01" (jour mois, sans annee), ATB un simple "03" (jour seul, la vraie date
-        // est plus loin sur la meme ligne dans la colonne "Date Valeur"), BTE/QNB une date
-        // complete. Dans tous les cas, une VRAIE ligne d'operation commence par un chiffre ; une
-        // continuation/annotation (ex. "ECHEANCE 25/04/2025", "DONT TVA: 0,570") commence par un
-        // mot. C'est ce signal positionnel simple - pas le format exact de la date - qui est
-        // fiable a travers les banques.
+       
         private static readonly Regex LeadingDigitRegex = new(@"^\d");
 
         private LineCategory ClassifyLine(TableRow row, bool hasOpenTransaction)
@@ -287,11 +270,6 @@ namespace Codeium_Security.Services.DocumentParsers
             if (hasDate && hasAmount)
                 return LineCategory.TransactionStart;
 
-            // Meme sans date reconnue (jour seul, jour+mois sans annee, date valeur glissee sans
-            // separateur...), une ligne dont la premiere cellule commence par un chiffre ET qui
-            // porte une date OU un montant est une vraie ligne de la colonne operation - jamais
-            // une continuation, meme transaction deja ouverte. Une continuation/annotation
-            // commence toujours par un mot (ECHEANCE, DONT, Folio...), jamais par un chiffre.
             if (hasLeadingDigit && (hasDate || hasAmount))
                 return LineCategory.TransactionStart;
 
@@ -301,12 +279,7 @@ namespace Codeium_Security.Services.DocumentParsers
             if (!hasOpenTransaction)
                 return (hasDate || hasAmount) ? LineCategory.TransactionStart : LineCategory.Noise;
 
-            // Une transaction est deja ouverte, et cette ligne ne commence ni par un chiffre ni
-            // par une date+montant complets : c'est un detail rattache a l'operation en cours
-            // (ex. "ECHEANCE 25/04/2025", "DONT TVA: 0,570"), jamais une nouvelle transaction.
-            // Le texte est conserve (voir Transaction.Libelle), mais IsContinuationDetail (pose
-            // par MergeContinuationLines) empeche tout extracteur de le relire comme
-            // montant/date/reference de colonne.
+          
             return LineCategory.TransactionContinuation;
         }
         private List<TableRow> MergeContinuationLines(List<TableRow> rows)
@@ -532,11 +505,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     string txt = cell.Text.Trim();
                     if (string.IsNullOrEmpty(txt)) continue;
 
-                    // Cellule de continuation (ECHEANCE, DONT TVA, remarque...) : jamais une
-                    // colonne. Interdiction absolue de la faire passer par le classement par
-                    // ancre (référence/débit/crédit/solde/CR-DB) ci-dessous, quel que soit son
-                    // contenu apparent. Son texte est rattaché séparément via "continuationText"
-                    // (voir plus bas) pour éviter de le dupliquer dans le libellé.
+                  
                     if (cell.IsContinuationDetail)
                         continue;
 
@@ -779,9 +748,7 @@ namespace Codeium_Security.Services.DocumentParsers
         }
 
         // [BTE] Validation comptable générique : solde_final = solde_initial + total_crédit
-        // - total_débit, en tenant compte du signe CR/DB. Purement informatif (log), ne
-        // modifie aucune donnée — n'importe quel autre parser peut s'en inspirer plus tard
-        // sans que ça affecte BTE ni les autres banques aujourd'hui.
+    
         private void ValidateBteAccounting(BankAccountSection section)
         {
             if (!section.SoldeInitial.HasValue || !section.SoldeFinal.HasValue)
@@ -871,14 +838,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
             bool isBna = fullText.Contains("BNA", StringComparison.OrdinalIgnoreCase);
             // [BNA - format "RELEVE DE COMPTE"] Ce format (distinct de "EXTRAIT DU COMPTE", voir
-            // isBna plus bas) n'a pas de colonne Solde par ligne : chaque ligne montre seulement
-            // JOUR (jour d'operation seul, ex. "06") + Libelle + Valeur (date de valeur, qui peut
-            // tomber sur un autre mois que le jour d'operation, ex. jour=06/07 mais valeur=30/06)
-            // + Montant. Utiliser la date de Valeur comme date de transaction (comme le fait
-            // GetDateFromAnyCell) est donc faux : la vraie date d'operation se reconstruit a
-            // partir du jour (colonne JOUR) et du mois/annee du releve, imprime une seule fois en
-            // entete ("DU MOIS DE JUILLET 2026"). Non calcule pour l'autre format BNA (colonne
-            // Solde presente) qui n'en a pas besoin.
+            
             (int Month, int Year)? bnaReleveMonthYear = null;
             if (isBna)
             {
@@ -1032,6 +992,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 // toucher a l'OCR/DebugLines : positions de cellules, telles quelles avant tout
                 // traitement de date/montant.
                 if (isBna) Console.WriteLine("[BNA-DEBUG] Cellules: " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
+                if (isQnb || isAlBarakaDoc || isBh) Console.WriteLine("[DIAG-CELLS] " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
                 if (string.IsNullOrWhiteSpace(joined)) continue;
                 //if (isBiat) joined = ConvertFrenchAbbrevDates(joined);
 
@@ -1048,12 +1009,73 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (isQnb)
                 {
                     Console.WriteLine($"[QNB-DEBUG] joined='{joined}' | current==null: {current == null}");
+
+                    // [QNB-EXTRAIT] Le numero de compte ("Account Number : 2019112548001") est
+                    
+                    var qnbAccountOnRow = ExtractAccountNumber(joined);
+                    if (!string.IsNullOrWhiteSpace(qnbAccountOnRow)) lastSeenAccountNumber = qnbAccountOnRow;
+
+                    // [QNB-EXTRAIT] Format anglais ("...Account Statement") : le meme bloc
+                   
+                    var qnbOpeningBalanceMatch = Regex.Match(joined,
+                        @"Opening\s+Balance\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    if (qnbOpeningBalanceMatch.Success)
+                    {
+                        if (current == null)
+                        {
+                            current = new BankAccountSection
+                            {
+                                AccountNumber = lastSeenAccountNumber,
+                                Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                                Currency = ExtractCurrency(fullText),
+                                SoldeInitial = ParseAmount(qnbOpeningBalanceMatch.Groups[1].Value)
+                            };
+                            previousSolde = current.SoldeInitial;
+                            sectionRawText = joined + "\n";
+                        }
+                        continue;
+                    }
+
+                    // [QNB-EXTRAIT] Sur la toute derniere page, "Closing Balance" (et le
+       
+                    var qnbClosingBalanceMatch = Regex.Match(joined,
+                        @"Closing\s+Balance\s*:?\s*_?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    if (qnbClosingBalanceMatch.Success && current != null)
+                        current.SoldeFinal = ParseAmount(qnbClosingBalanceMatch.Groups[1].Value);
+
+                    // [QNB-EXTRAIT] Ces motifs de bruit (en-tete de page, recapitulatif de fin de
+                   
+                    bool qnbStartsWithDate = Regex.IsMatch(joined, @"^\d{2}/\d{2}/\d{4}\b");
+                    if (!qnbStartsWithDate &&
+                        (qnbClosingBalanceMatch.Success || Regex.IsMatch(joined, @"^Count\s*:\s*\d+\s+SUM", RegexOptions.IgnoreCase)))
+                        continue;
+
+                    if (!qnbStartsWithDate && Regex.IsMatch(joined,
+                        @"Equation\s+System|TH-Account\s+Statement|Produced\s+by\s*:|Statement\s+Reference|Qatar\s+National\s+Bank\s+Page|Tran\s+Date\s+Transaction\s+Description|^IBAN\s*:|^From\s*:|^Count\s*:\s*\d+\s+SUM",
+                        RegexOptions.IgnoreCase))
+                        continue;
+
+                    // [QNB-EXTRAIT] Sur ce format, les lignes de detail qui suivent une operation
+                  
                     var qnbMatch = Regex.Match(joined,
                         @"^(\d{2}/\d{2}/\d{4})\s+(.*?)\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})$", RegexOptions.IgnoreCase);
+                    if (!qnbMatch.Success)
+                        qnbMatch = Regex.Match(joined,
+                            @"^(\d{2}/\d{2}/\d{4})\s+(.*?)\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(.+)$", RegexOptions.IgnoreCase);
                     if (qnbMatch.Success)
                     {
                         string date = qnbMatch.Groups[1].Value;
                         string libelle = qnbMatch.Groups[2].Value.Trim();
+                        if (qnbMatch.Groups[5].Success)
+                        {
+                            // [QNB-EXTRAIT] Le texte de continuation glue en fin de ligne (voir
+                           
+                            string tail = Regex.Replace(qnbMatch.Groups[5].Value.Trim(),
+                                @"\bCount\s*:\s*\d+\s+SUM.*$|\bClosing\s+Balance\s*:.*$|\bQatar\s+National\s+Bank\s+Page.*$",
+                                "", RegexOptions.IgnoreCase).Trim();
+                            if (!string.IsNullOrEmpty(tail))
+                                libelle = (libelle + " " + tail).Trim();
+                        }
                         decimal debit = ParseAmount(qnbMatch.Groups[3].Value);
                         decimal solde = ParseAmount(qnbMatch.Groups[4].Value);
 
@@ -1518,10 +1540,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                 }
                 // [BNA-RELEVE] "SOLDE AU jj mm aaaa ... <montant>" (solde de cloture) et
-                // "TOTAUX DES MOUVEMENTS <debit> <credit>" : jamais des operations, seulement le
-                // recapitulatif de fin de releve - a exclure avant toute detection de montant
-                // pour ne pas devenir de fausses transactions (dernier montant de la ligne =
-                // solde de cloture, reellement imprime).
+              
                 if (isBna)
                 {
                     var bnaSoldeAuMatch = Regex.Match(joined, @"\bSOLDE\s+AU\b.*?(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s*$", RegexOptions.IgnoreCase);
@@ -1580,10 +1599,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     if (!soldeAnchor.HasValue)
                     {
                         // [BNA-RELEVE] Pas de colonne Solde : reconstruire JOUR + mois/annee du
-                        // releve (jamais la colonne Valeur, qui peut appartenir a un autre mois -
-                        // voir bnaReleveMonthYear). cellTexts[0] est le jour seul (ex. "06") sur
-                        // toute ligne de mouvement, y compris les lignes de commission/TVA qui
-                        // repetent elles aussi leur propre jour.
+                       
                         if (bnaReleveMonthYear.HasValue
                             && Regex.IsMatch(cellTexts.Count > 0 ? cellTexts[0].Trim() : "", @"^\d{1,2}$")
                             && int.TryParse(cellTexts[0].Trim(), out int bnaJour) && bnaJour >= 1 && bnaJour <= 31)
@@ -1594,16 +1610,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     else if (AmountRegex.Matches(joined).Count >= 2)
                     {
                         // [BNA-EXTRAIT] Une vraie ligne d'operation affiche Montant ET Solde (2
-                        // montants sur la ligne). Une sous-ligne de detail (Com..., TVA...)
-                        // n'affiche que son propre montant sans Solde (1 seul montant) : la seule
-                        // date qu'on y trouve est alors la date de Valeur (echo), pas une date
-                        // d'operation - GetDateFromAnyCell ne doit donc s'appliquer que si 2
-                        // montants sont presents, sinon la sous-ligne reste sans date et se
-                        // rattache (comme texte de continuation) a l'operation precedente au lieu
-                        // de devenir une fausse transaction isolee et mal datee. Variante tolerante
-                        // (GetDateFromAnyCellLenient) : la cellule contenant la date d'operation
-                        // porte parfois un glyphe OCR parasite colle devant (ex. "? 04/07/2025"),
-                        // ce qui la fait echouer sur une correspondance exacte et glisser a tort
+                       
                         // vers la date de Valeur suivante.
                         normalizedDate = GetDateFromAnyCellLenient(cellTexts, documentYear);
                     }
@@ -1614,12 +1621,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 {
                     normalizedDate = GetDateFromAnyCell(cellTexts, null);
                 }
-                // [GÉNÉRIQUE] Filet de sécurité pour toute banque inconnue : si aucune date
-                // n'a été trouvée dans les 3 premières cellules, chercher dans toutes les cellules
-                // BNA exclu : deja traite ci-dessus avec sa propre logique (delibere de laisser
-                // normalizedDate vide pour une sous-ligne EXTRAIT sans Solde) - ce filet generique
-                // appliquerait sinon GetDateFromAnyCell sans la garde "2 montants" et annulerait
-                // le correctif.
+               
                 if (!isBna && string.IsNullOrEmpty(normalizedDate))
                 {
                     normalizedDate = GetDateFromAnyCell(cellTexts, documentYear);
@@ -1759,9 +1761,21 @@ namespace Codeium_Security.Services.DocumentParsers
                 // suivent restent exclues jusqu'a la prochaine operation datee.
                 if (bnaNoiseHit) biatInNoiseZone = true;
 
+                // [ALBARAKA-EXTRAIT] Le rappel legal ("Cet extrait est considere exact et
+                // accepte...") et le bandeau marketing ("Compliments www.albarakabank.com.tn ...
+                // La banque pratique") se repetent en pied de CHAQUE page et se retrouvent colles
+                // en continuation a la derniere operation de la page (meme mecanisme que le pied
+                // de page BNA-RELEVE). N'affecte que les documents AlBaraka Extrait (isAlBarakaDoc
+                // reste vrai aussi pour le format Releve deja fonctionnel, mais celui-ci n'imprime
+                // jamais ce bandeau precis).
+                bool albarakaNoiseHit = isAlBarakaDoc && Regex.IsMatch(joined,
+                    @"Cet\s+extrait\s+est\s+consid[ée]r[ée]|Compliments\s+www\.albarakabank|La\s+banque\s+pratique", RegexOptions.IgnoreCase);
+                if (albarakaNoiseHit) biatInNoiseZone = true;
+
                 bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
                      || biatNoiseHit
                      || bnaNoiseHit
+                     || albarakaNoiseHit
                      || isRepeatedBoilerplate
                      || (isQnb && Regex.IsMatch(joined, @"Cette\s+d[ée]claration\s+sera\s+consid[ée]r[ée]e|dans\s+votre\s+situation\s+de\s+compte|Pour\s+toute\s+r[ée]clamation", RegexOptions.IgnoreCase));
                 // Si la date est vide, tenter de la trouver dans le libellé (date 8 chiffres)
@@ -1893,6 +1907,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     .Trim(' ', '|', '[', ']', '-', '_');
                 if (isAmenDocument) description = StripAmenEchoDate(description);
                 if (isBna && !soldeAnchor.HasValue) description = StripBnaFooterBoilerplate(StripBnaReleveValeurDate(description));
+                if (isAlBarakaDoc) description = StripAlBarakaFooterBoilerplate(description);
                 description = Regex.Replace(description, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
                 description = Regex.Replace(description, @"\b\d{8}\b", "").Trim();
                 description = Regex.Replace(description, @"\s{2,}", " ").Trim();
@@ -2337,7 +2352,10 @@ namespace Codeium_Security.Services.DocumentParsers
         private static readonly string[] BhKnownLibellePrefixes = {
               "COMFORC PRLV.", "VERSEMENT TPE", "VERS.CHQ.ORDIN", "VRST.AUT.AG.",
             "ENC.CHQ.TN", "ENC.EFFET TN", "Vers ESP RECU",
-            "COMMISSION", "T.V.A", "PRLV.", "VRST.",
+            // [BH - toutes formes] "TVA" s'imprime "T.V.A" (Extrait classique), "TV.A" (Releve,
+            // periode coupee a tort par l'OCR) ou "TVA" sans points du tout (Extrait bancaire) -
+            // les 3 variantes doivent etre reconnues au meme titre.
+            "COMMISSION", "T.V.A", "TV.A", "TVA", "PRLV.", "VRST.",
 
             };
         private string ExtractBhLibelle(string middle) {
@@ -2400,12 +2418,63 @@ namespace Codeium_Security.Services.DocumentParsers
                 SoldeInitial = null
             };
 
+            // [BH - toutes formes] La date d'operation s'imprime sous 3 formes reellement
+            // observees selon le format BH (Extrait classique, Extrait bancaire, Releve) :
+            // "dd/mm/yyyy" (annee complete), "dd-mm" (jour-mois seul, sans annee - le releve
+            // n'imprime l'annee qu'une fois en entete/pied de page) et, pour la date de valeur
+            // uniquement, le format ISO "yyyy-mm-dd". Un seul motif de date, reutilise pour la
+            // date d'operation ET la date de valeur, couvre les 3 sans branche par format.
+            const string BhDatePattern = @"\d{4}-\d{1,2}-\d{1,2}|\d{1,2}[/\-.]\d{1,2}(?:[/\-.]\d{2,4})?";
+
+            // [BH - format "dd-mm" sans annee] Necessite une annee de secours pour normaliser
+            // ces dates (ex. "01-06" -> 01/06/<annee>) : cherchee dans le document lui-meme
+            // (jamais inventee), en priorite une date complete (jj/mm/AAAA), sinon l'annee sur 2
+            // chiffres imprimee a cote de "SOLDE AU jj-mm-aa" ou en pied de page ("30-06-26").
+            int? documentYear = null;
+            var bhFullYearMatch = Regex.Match(fullText, @"\b\d{1,2}[/\-.]\d{1,2}[/\-.](\d{4})\b");
+            if (bhFullYearMatch.Success)
+            {
+                documentYear = int.Parse(bhFullYearMatch.Groups[1].Value);
+            }
+            else
+            {
+                var bhShortYearMatch = Regex.Match(fullText, @"\b\d{1,2}-\d{1,2}-(\d{2})\b");
+                if (bhShortYearMatch.Success)
+                    documentYear = 2000 + int.Parse(bhShortYearMatch.Groups[1].Value);
+            }
+
             var bhLineRegex = new Regex(
-            @"^(?:\d+\s+)?(\d{2}/\d{2}/\d{4})\s+(.+?)\s+(?:(\d{2}/\d{2}/\d{4})\s+)?(-?\d[\d\s.,]*\d|\d)\s*$",
+            $@"^(?:\d+\s+)?({BhDatePattern})\s+(.+?)\s+(?:({BhDatePattern})\s+)?(-?\d[\d\s.,]*\d|\d)\s*$",
             RegexOptions.IgnoreCase);
 
             var soldeOuvertureRegex = new Regex(@"^(-?\d[\d\s.,]*\d|\d)\s*$");
             var soldeAuLabelRegex = new Regex(@"Solde\s+au\s+\d{2}/\d{2}/\d{4}", RegexOptions.IgnoreCase);
+            // [BH-RELEVE] "SOLDE AU jj-mm-aa <montant>" tient sur une seule ligne (contrairement
+            // au format Extrait ou le montant et l'etiquette "Solde au jj/mm/aaaa" sont sur 2
+            // lignes separees, deja gere ci-dessous). Se repete a l'identique en entete de CHAQUE
+            // page (rappel du solde de debut de periode, pas un solde courant) : seule la 1ere
+            // occurrence doit etre gardee (SoldeInitial pas encore fixe).
+            // Signe capture separement du montant : l'OCR insere parfois un espace entre le "-"
+            // et le premier chiffre (ex. "Solde au 28/02/2026 - 76618,368"), ce qu'un simple
+            // "-?\d" ne reconnait pas comme negatif.
+            var soldeAuInlineRegex = new Regex(
+                @"SOLDE\s+AU\s+\d{1,2}[/\-.]\d{1,2}[/\-.]\d{2,4}\s+(-)?\s*(\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
+                RegexOptions.IgnoreCase);
+            // [BH-RELEVE] Solde de cloture : "jj-mm-aa DEBITEUR|CREDITEUR <montant>" en pied de
+            // periode. DEBITEUR => solde negatif (compte a decouvert), CREDITEUR => positif. Pas
+            // d'ancrage sur la date : du bruit OCR (ex. "24l") se glisse parfois entre la date et
+            // le mot-cle, et la date elle-meme n'est de toute facon pas utilisee ici.
+            var bhClotureRegex = new Regex(
+                @"\b(DEBITEUR|CREDITEUR)\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
+                RegexOptions.IgnoreCase);
+            // [BH-EXTRAIT BANCAIRE] Repli quand le montant de "Solde au ..." est rejete sur la
+            // ligne suivante par l'OCR (ex. "[Solde au 28/02/2026 -" puis, ligne d'apres,
+            // "76618,368|" seul) : soldeAuInlineRegex ci-dessus ne peut alors pas matcher en une
+            // seule ligne. Capture le signe eventuel laisse en fin de 1ere ligne ; le montant est
+            // relu sur la ligne suivante, tolerant du bruit OCR en tete/fin (ex. "|", "]").
+            var soldeAuLabelOnlyRegex = new Regex(
+                @"SOLDE\s+AU\s+\d{1,2}[/\-.]\d{1,2}[/\-.]\d{2,4}\s*(-)?\s*$", RegexOptions.IgnoreCase);
+            var bareAmountAnywhereRegex = new Regex(@"(\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})");
 
             var lines = fullText.Split('\n');
 
@@ -2425,10 +2494,100 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
+                // [BH - toutes formes] Capture prioritaire du montant si "Solde au ..." porte deja
+                // son montant sur la meme ligne (ex. "[Solde au 31/01/2026 57957,266" - Extrait
+                // bancaire ; "SOLDE AU 31-05-26 82 327,437" - Releve, repete a l'identique en
+                // entete de CHAQUE page - rappel du solde de DEBUT de periode, jamais un solde
+                // courant ; "Totaux ... Solde au 30/06/2026 50 752,690" - Extrait classique, la
+                // juste apres "Totaux" c'est alors la cloture). Doit passer AVANT le filtre
+                // generique juste en dessous, sinon cette ligne serait ignoree sans capturer son
+                // montant. Distingue ouverture/cloture par la proximite du mot "Totaux" (present
+                // seulement avant la cloture), pas par l'ordre d'apparition dans le texte : le
+                // Releve repete l'ouverture apres que des transactions aient deja ete ajoutees,
+                // ce qui la ferait sinon passer a tort pour une cloture.
+                // [BH - toutes formes] L'extraction PDF->texte insere par endroits des lignes
+                // vides entre blocs (jamais dans les DebugLines/lignes de tableau, seulement dans
+                // ce fullText brut ligne-a-ligne) : un decalage fixe (i-1, i+1...) tombe alors a
+                // tort sur une ligne vide au lieu du vrai contenu voisin. On saute les lignes
+                // vides pour trouver le vrai voisin non-vide (renvoie son index, -1 si aucun).
+                int NearbyNonBlankLineIndex(int startIndex, int step, int maxHops)
+                {
+                    int idx = startIndex;
+                    for (int hop = 0; hop < maxHops; hop++)
+                    {
+                        idx += step;
+                        if (idx < 0 || idx >= lines.Length) return -1;
+                        if (!string.IsNullOrWhiteSpace(lines[idx])) return idx;
+                    }
+                    return -1;
+                }
+
+                void AssignBhSoldeAu(int lineIndex, decimal soldeAuVal)
+                {
+                    bool precededByTotaux = false;
+                    int idx = lineIndex;
+                    for (int back = 0; back < 3; back++)
+                    {
+                        idx = NearbyNonBlankLineIndex(idx, -1, 20);
+                        if (idx < 0) break;
+                        // Tolere un caractere de bruit OCR isole en tete de ligne (ex. "[Total
+                        // des 489544,799 470883,697", "Total des mouvements" tronque sans le mot
+                        // "mouvements").
+                        if (Regex.IsMatch(lines[idx].Trim(), @"^\W{0,3}Tota(?:l|ux)\b", RegexOptions.IgnoreCase))
+                        {
+                            precededByTotaux = true;
+                            break;
+                        }
+                    }
+                    if (precededByTotaux)
+                        current.SoldeFinal = soldeAuVal;
+                    else if (!current.SoldeInitial.HasValue)
+                        current.SoldeInitial = soldeAuVal;
+                }
+
+                var soldeAuInlineMatch = soldeAuInlineRegex.Match(line);
+                if (soldeAuInlineMatch.Success)
+                {
+                    decimal soldeAuVal = ParseAmount(soldeAuInlineMatch.Groups[2].Value);
+                    if (soldeAuInlineMatch.Groups[1].Success) soldeAuVal = -soldeAuVal;
+                    AssignBhSoldeAu(i, soldeAuVal);
+                    continue;
+                }
+
+                // [BH-EXTRAIT BANCAIRE] "Solde au ..." sans montant sur cette ligne (le montant a
+                // ete rejete sur la ligne suivante par l'OCR) : le relire sur la premiere ligne
+                // non-vide qui suit.
+                var soldeAuLabelOnlyMatch = soldeAuLabelOnlyRegex.Match(line);
+                if (soldeAuLabelOnlyMatch.Success)
+                {
+                    int nextIdx = NearbyNonBlankLineIndex(i, 1, 20);
+                    string nextSoldeLine = nextIdx >= 0 ? lines[nextIdx].Trim() : "";
+                    var nextAmountMatch = bareAmountAnywhereRegex.Match(nextSoldeLine);
+                    if (nextAmountMatch.Success)
+                    {
+                        decimal soldeAuVal = ParseAmount(nextAmountMatch.Groups[1].Value);
+                        if (soldeAuLabelOnlyMatch.Groups[1].Success) soldeAuVal = -soldeAuVal;
+                        AssignBhSoldeAu(i, soldeAuVal);
+                    }
+                    continue;
+                }
+
                 if (soldeAuLabelRegex.IsMatch(line) && !Regex.IsMatch(line, @"^\d{2}/\d{2}/\d{4}"))
                     continue;
 
+                var bhClotureMatch = bhClotureRegex.Match(line);
+                if (bhClotureMatch.Success)
+                {
+                    decimal clotureVal = ParseAmount(bhClotureMatch.Groups[2].Value);
+                    current.SoldeFinal = bhClotureMatch.Groups[1].Value.Equals("DEBITEUR", StringComparison.OrdinalIgnoreCase)
+                        ? -Math.Abs(clotureVal) : Math.Abs(clotureVal);
+                    continue;
+                }
+
                 if (Regex.IsMatch(line, @"^-?\d[\d\s.,]*\s+-?\d[\d\s.,]*$"))
+                    continue;
+
+                if (Regex.IsMatch(line, @"^\W{0,3}Tota(?:l|ux)\b", RegexOptions.IgnoreCase))
                     continue;
 
                 if (Regex.IsMatch(line, @"Total\s+des\s+mouvements|^Solde\s+au\s+\d{2}/\d{2}/\d{4}\s*:", RegexOptions.IgnoreCase))
@@ -2455,7 +2614,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 var tx = new Transaction
                 {
-                    Date = NormalizeDate(dateOp, null),
+                    Date = NormalizeDate(dateOp, documentYear),
                     Libelle = libelle
                 };
 
@@ -3214,7 +3373,9 @@ namespace Codeium_Security.Services.DocumentParsers
      
         private static readonly string[] BhDebitKeywords =
         {
-            "PRLV.", "COMMISSION", "T.V.A", "COMFORC", "VIR.TN MM BQ"
+            // [BH - toutes formes] "TVA" est toujours un debit (taxe sur une commission/frais) ;
+            // voir BhKnownLibellePrefixes pour le detail des 3 variantes OCR observees.
+            "PRLV.", "COMMISSION", "T.V.A", "TV.A", "TVA", "COMFORC", "VIR.TN MM BQ"
         };
 
         private bool IsBhDebitLibelle(string libelle)
@@ -3306,6 +3467,18 @@ namespace Codeium_Security.Services.DocumentParsers
             {
                 return "Banque de Tunisie et des Emirats (BTE)";
             }
+            // [ALBARAKA-EXTRAIT] La liste knownBanks ci-dessous fait un Contains() sensible a la
+            // casse (comme pour toutes les autres banques) : ce format imprime "Albaraka Bank
+            // Tunisia" (A majuscule seule), jamais "ALBARAKA" tout en capitales, donc l'entree
+            // ALBARAKA de la liste ne matchait jamais et laissait BankName vide. isAlBarakaDoc
+            // (utilise pour le parsing des transactions, ailleurs dans ce fichier) detecte deja
+            // AlBaraka en insensible a la casse - ce correctif aligne juste le nom de banque
+            // affiche sur la meme detection, sans toucher au Contains() sensible a la casse des
+            // autres banques.
+            if (text.Contains("AlBaraka", StringComparison.OrdinalIgnoreCase))
+            {
+                return "Al Baraka Bank Tunisia";
+            }
             var knownBanks = new (string Keyword, string FullName)[]
             {
                 ("BNA", "Banque Nationale Agricole (BNA)"),
@@ -3319,6 +3492,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 ("BH", "Banque de l'Habitat (BH)"),
                 ("BTK", "Banque Tuniso-Koweitienne (BTK)") ,
                 ("ALBARAKA", "Al Baraka Bank Tunisia"),
+                ("QNB", "Qatar National Bank (QNB)"),
                 ("Bank ABC", "Bank ABC Tunisia"),
                 ("BTE", "Banque Tuniso-Emiratie (BTE)"),          // ← AJOUT
                 ("BANK ABC", "Bank ABC Tunisia")// ← ajouter
