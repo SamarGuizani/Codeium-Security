@@ -15,8 +15,14 @@ namespace Codeium_Security.Services
     {
         public string Text { get; set; } = "";
         public int Left { get; set; }
-         
-       // public int Right { get; set; } // le 05 aout j'ai ajouter ceci 
+
+        // Vrai quand cette cellule vient d'une ligne de continuation rattachee par
+        // MergeContinuationLines (BankDocumentParser) : son texte reste utilisable pour le
+        // libelle, mais elle ne doit jamais etre interpretee comme un montant/reference/date
+        // de colonne par un extracteur bancaire.
+        public bool IsContinuationDetail { get; set; }
+
+       // public int Right { get; set; } // le 05 aout j'ai ajouter ceci
     }
 
     public class TableRow

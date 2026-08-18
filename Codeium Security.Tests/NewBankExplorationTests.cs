@@ -27,6 +27,7 @@ namespace Codeium_Security.Tests
             string[] files =
             {
                 @"BNA\BNA  7-2025.pdf",
+                @"BNA\BNA.pdf",
                 @"BH\extrait BH.pdf",
                 @"BH\EXTRAIT BANCAIRE 02-2026.pdf",
                 @"BTE\RELEVEE BTE 06-2026.pdf",
@@ -56,6 +57,11 @@ namespace Codeium_Security.Tests
 
             _output.WriteLine($"===== {relativePath} =====");
             _output.WriteLine($"DetectedType: {result.DetectedType} | PageCount: {result.PageCount} | OcrConfidence: {result.OcrConfidence:F1} | NeedsReview: {result.NeedsReview}");
+
+            _output.WriteLine($"----- DebugLines ({result.DebugLines.Count}) -----");
+            for (int i = 0; i < result.DebugLines.Count; i++)
+                _output.WriteLine($"L{i:D3}: {result.DebugLines[i]}");
+            _output.WriteLine("----- FIN DebugLines -----");
 
             if (result.Document is BankDocument bankDoc)
             {
