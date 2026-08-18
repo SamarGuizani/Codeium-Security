@@ -1747,8 +1747,17 @@ namespace Codeium_Security.Services.DocumentParsers
                     && repeatedLineCounts.GetValueOrDefault(repeatedNoiseKey) >= 3;
 
                 // [BNA] "lSolde ... a ce jour sauf erreur ou omission ..." est le rappel de solde
-               
-                bool bnaNoiseHit = isBna && Regex.IsMatch(joined, @"ce\s*jour\s*sauf\s*erreur\s*ou\s*omission", RegexOptions.IgnoreCase);
+                // (format EXTRAIT) ; "BNA H24, votre banque 100% digitale ..." et "TOUTE ERREUR
+                // OU OMISSION EST A SIGNALER ..." sont le pied de page publicitaire/legal du
+                // format RELEVE, colle en continuation apres la derniere operation.
+                bool bnaNoiseHit = isBna && Regex.IsMatch(joined, @"ce\s*jour\s*sauf\s*erreur\s*ou\s*omission|\bBNA\s+H24\b|TOUTE\s+ERREUR\s+OU\s+OMISSION|EST\s+A\s+SIGNALER", RegexOptions.IgnoreCase);
+                // [BNA-RELEVE] Le pied de page publicitaire/legal s'etale sur plusieurs lignes de
+                // continuation consecutives (ex. "BNA H24..." puis "vos cartes et..." puis "que
+                // vous soyez..." puis le rappel legal) : une seule ligne porte le mot-cle detecte
+                // par bnaNoiseHit, les autres non. Reutilise le meme mecanisme de "zone de bruit"
+                // que BIAT (biatInNoiseZone) pour que TOUTES les lignes de continuation qui
+                // suivent restent exclues jusqu'a la prochaine operation datee.
+                if (bnaNoiseHit) biatInNoiseZone = true;
 
                 bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
                      || biatNoiseHit
