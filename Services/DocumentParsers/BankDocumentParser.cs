@@ -929,7 +929,25 @@ namespace Codeium_Security.Services.DocumentParsers
                 @"\(-\)\s*D[ée]bit\s*/\s*Cr[ée]dit\s*\(\+\)|\(-\)\s*D[ée]bit.*Cr[ée]dit",
                 RegexOptions.IgnoreCase);
 
-            bool hasSignedAmounts = isAbcBank || hasSignedAmountsHeader || isAlBarakaReleve;
+            // [FAMILLE "MONTANT SIGNE"] Detection structurelle, independante du nom de banque :
+            // pas de vraie colonne Débit/Crédit separee dans le document (HasGenuineSeparateDebit
+            // CreditHeader, qui ignore les faux positifs comme un libellé "Mouvement DEBIT ...")
+            // ET une quantite significative de montants explicitement signes "-" dans le texte
+            // (>= 5, pour ne jamais se fier a un seul montant négatif isolé - un OCR peut mal lire
+            // un "-" ailleurs). Ces deux indices combines, jamais un seul mot d'en-tête, evitent de
+            // dependre du nom de la banque : une nouvelle banque avec cette meme structure (Date |
+            // Libellé | Montant signé [| Solde]) est reconnue automatiquement. Vu sur ATB (format
+            // "Account Statement" anglais, colonne "Montant" seule) - jamais couvert par les 3
+            // signaux existants ci-dessus (tous nommes par banque), ce qui laissait tomber
+            // l'ancien chemin par défaut (comparaison au solde précédent, peu fiable et qui ne
+            // prenait pas la valeur absolue - un Débit/Crédit pouvait rester négatif).
+            bool hasGenuineSeparateDebitCreditHeader = HasGenuineSeparateDebitCreditHeader(rows, documentYear);
+            int signedAmountSignalCount = Regex.Matches(fullText, @"-\s?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}").Count;
+            bool structuralSignedAmountFamily = !hasGenuineSeparateDebitCreditHeader && signedAmountSignalCount >= 5;
+            if (structuralSignedAmountFamily)
+                Console.WriteLine($"[FAMILLE] Montant signé détecté structurellement (pas de colonne Débit/Crédit séparée, {signedAmountSignalCount} montants signés observés).");
+
+            bool hasSignedAmounts = isAbcBank || hasSignedAmountsHeader || isAlBarakaReleve || structuralSignedAmountFamily;
             // [GENERIQUE] Detection de bruit d'en-tete/pied de page par repetition, independante
 
             var repeatedLineCounts = new Dictionary<string, int>();
@@ -992,7 +1010,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 // toucher a l'OCR/DebugLines : positions de cellules, telles quelles avant tout
                 // traitement de date/montant.
                 if (isBna) Console.WriteLine("[BNA-DEBUG] Cellules: " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
-                if (isQnb || isAlBarakaDoc || isBh) Console.WriteLine("[DIAG-CELLS] " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
+                if (isQnb || isAlBarakaDoc || isBh || isAtb || isAbcBank || isBiat) Console.WriteLine($"[DIAG-CELLS] hasSignedAmounts={hasSignedAmounts} debitAnchor={debitAnchor} creditAnchor={creditAnchor} soldeAnchor={soldeAnchor} | " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
                 if (string.IsNullOrWhiteSpace(joined)) continue;
                 //if (isBiat) joined = ConvertFrenchAbbrevDates(joined);
 
@@ -1225,10 +1243,20 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
 
                
-                bool biatLooksLikeTransactionRow = isBiat && (debitCell != null || creditCell != null) &&
+                // [STRUCTURE - toutes banques] Une cellule "Débit"/"Crédit" ne signale une VRAIE
+                // ligne d'en-tête que si la ligne n'a par ailleurs ni date ni montant reconnu :
+                // un libellé d'operation qui contient litteralement le mot "Débit" (ex. ATB
+                // "Mouvement DEBIT ...", une commission "sur retrait débit"...) ne doit jamais
+                // être pris pour un en-tête sous pretexte qu'il contient ce mot - la ligne a par
+                // ailleurs une date et un montant, donc c'est une operation. Sans cette garde,
+                // l'operation entiere est silencieusement perdue (elle "devient" un ancrage de
+                // colonne au lieu d'une transaction). Generalise a partir d'une garde qui
+                // n'existait auparavant que pour BIAT (biatLooksLikeTransactionRow) : le meme
+                // risque existe pour n'importe quelle banque utilisant ce chemin generique.
+                bool looksLikeTransactionRow = (debitCell != null || creditCell != null) &&
                     (!string.IsNullOrEmpty(GetNormalizedDateFromCells(cellTexts, documentYear)) || cells.Any(c => AmountRegex.IsMatch(c.Text)));
 
-                if ((debitCell != null || creditCell != null) && !biatLooksLikeTransactionRow)
+                if ((debitCell != null || creditCell != null) && !looksLikeTransactionRow)
                 {
                     if (debitCell != null) debitAnchor = debitCell.Left;
                     if (creditCell != null) creditAnchor = creditCell.Left;
@@ -1717,6 +1745,8 @@ namespace Codeium_Security.Services.DocumentParsers
                     amountCandidates.AddRange(bareDigitCandidates);
                     amountCandidates = amountCandidates.OrderBy(a => a.Left).ToList();
                 }
+                if (isAlBarakaDoc)
+                    Console.WriteLine($"[ALBARAKA-DEBUG] joined='{joined}' | date='{normalizedDate}' | pendingDate='{pendingDate}' | amountCandidates=[{string.Join(", ", ((IEnumerable<dynamic>)amountCandidates).Select(a => $"{a.Left}:{a.Value}"))}]");
 
                 // Création d'une section par défaut si aucune détection précédente
                 if (current == null)
@@ -2379,6 +2409,30 @@ namespace Codeium_Security.Services.DocumentParsers
 
 
         
+        // [FAMILLE - detection structurelle, independante du nom de banque] Balaye les lignes du
+        // tableau pour verifier si une VRAIE ligne d'en-tête "Débit"/"Crédit" existe quelque part
+        // dans le document (colonnes separees), par opposition a un simple mot "Débit"/"Crédit"
+        // trouve dans le libellé d'une operation normale (ex. ATB "Mouvement DEBIT ..."). Reprend
+        // exactement la garde utilisee ligne par ligne plus haut (looksLikeTransactionRow) mais en
+        // pre-scan, pour pouvoir choisir la famille ("colonnes séparées" vs "montant signé") AVANT
+        // de commencer a construire des transactions.
+        private bool HasGenuineSeparateDebitCreditHeader(List<TableRow> rows, int? documentYear)
+        {
+            foreach (var row in rows)
+            {
+                var cells = row.Cells.OrderBy(c => c.Left).ToList();
+                bool hasDebitWord = cells.Any(c => Regex.IsMatch(c.Text, @"D[ée]bit", RegexOptions.IgnoreCase));
+                bool hasCreditWord = cells.Any(c => Regex.IsMatch(c.Text, @"Cr[ée]dit", RegexOptions.IgnoreCase));
+                if (!hasDebitWord && !hasCreditWord) continue;
+
+                var cellTexts = cells.Select(c => NormalizeSignSpacing(CleanWhitespace(c.Text))).ToList();
+                bool looksLikeTransaction = !string.IsNullOrEmpty(GetNormalizedDateFromCells(cellTexts, documentYear))
+                    || cells.Any(c => AmountRegex.IsMatch(c.Text));
+                if (!looksLikeTransaction) return true;
+            }
+            return false;
+        }
+
         private (int? debit, int? credit) InferAnchorsFromAmountPositions(List<TableRow> rows)
         {
             var positions = new List<int>();
