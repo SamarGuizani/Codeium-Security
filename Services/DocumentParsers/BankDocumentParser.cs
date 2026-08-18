@@ -19,8 +19,27 @@ namespace Codeium_Security.Services.DocumentParsers
         private static readonly Regex AmountRegex =
         new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
 
-       
+
         private static readonly Regex ArabicScriptRegex = new("[؀-ۿ]");
+
+        // [AMEN] "DU jj.mm.aaaa" est un echo (au format point) de la date d'operation qui peut
+        // apparaitre au milieu d'une cellule de libelle (ex. "R394 DU 01.07.2026 VMA"). Ce
+        // fragment correspond partiellement a AmountRegex (ex. "01.07" y est reconnu comme un
+        // montant), ce qui cree de faux montants (voir "1.07", "2.07"...) et fait exclure a tort
+        // la cellule entiere du libelle. La colonne OCR ou apparait cet echo est parfois coupee
+        // en largeur, ce qui tronque le dernier chiffre de l'annee (ex. "DU 21.07.202" au lieu
+        // de "DU 21.07.2026") : l'annee est donc acceptee de 2 a 4 chiffres. On neutralise ce
+        // motif avant toute detection de montant/texte, uniquement pour AMEN BANK (voir
+        // isAmenDocument) : les autres banques ne sont jamais concernees par ce nettoyage.
+        private static readonly Regex AmenEchoDateRegex =
+            new(@"\bDU\s+\d{2}\.\d{2}\.\d{2,4}\b", RegexOptions.IgnoreCase);
+
+        private static string StripAmenEchoDate(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            string cleaned = AmenEchoDateRegex.Replace(text, "").Trim();
+            return Regex.Replace(cleaned, @"\s{2,}", " ");
+        }
 
         private List<TableRow> SplitDuplicatedRows(List<TableRow> rows)
         {
@@ -89,6 +108,8 @@ namespace Codeium_Security.Services.DocumentParsers
             bool isBte = fullText.Contains("Banque de Tunisie et des Emirats", StringComparison.OrdinalIgnoreCase)
                 || (bteNameHit && bteColumnSignature)
                 || (bteNameHit && bteDocumentTitleHit && bteColumnHits >= 2);
+            Console.WriteLine($"[DIAG-BTE-TEMP] bteNameHit={bteNameHit} bteColumnHits={bteColumnHits} bteColumnSignature={bteColumnSignature} bteDocumentTitleHit={bteDocumentTitleHit} isBte={isBte}");
+            Console.WriteLine($"[DIAG-BTE-TEMP] fullText[0..800]={fullText.Substring(0, Math.Min(800, fullText.Length))}");
 
             bool bhSignalCompte = Regex.IsMatch(fullText, @"No\s*du\s*compte\s*[-:]", RegexOptions.IgnoreCase);
             bool bhSignalTitulaire = Regex.IsMatch(fullText, @"du\s*compte\s*:\s*\S", RegexOptions.IgnoreCase);
@@ -1448,7 +1469,10 @@ namespace Codeium_Security.Services.DocumentParsers
                 // Fusion des signes "-" isolés
                 var mergedWithPos = new List<(int Left, string Text, bool IsContinuationDetail)>();
                 for (int i = 0; i < cells.Count; i++)
-                    mergedWithPos.Add((cells[i].Left, NormalizeSignSpacing(CleanWhitespace(cells[i].Text)), cells[i].IsContinuationDetail));
+                {
+                    string cellRawText = isAmenDocument ? StripAmenEchoDate(cells[i].Text) : cells[i].Text;
+                    mergedWithPos.Add((cells[i].Left, NormalizeSignSpacing(CleanWhitespace(cellRawText)), cells[i].IsContinuationDetail));
+                }
                 for (int i = 0; i < mergedWithPos.Count - 1; i++)
                 {
                     if (mergedWithPos[i].Text.Trim() == "-")
@@ -1586,7 +1610,8 @@ namespace Codeium_Security.Services.DocumentParsers
                        
                         if (isAmenDocument || isBtk || isUbci || isBna)
                         {
-                            string currentNonAmount = string.Join(" ", cellTexts.Where(c => !AmountRegex.IsMatch(c))).Trim();
+                            string currentNonAmount = string.Join(" ", cellTexts.Where(c => !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c))).Trim();
+                            if (isAmenDocument) currentNonAmount = StripAmenEchoDate(currentNonAmount);
                             currentNonAmount = Regex.Replace(currentNonAmount, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
                             currentNonAmount = Regex.Replace(currentNonAmount, @"\b\d{8}\b", "").Trim();
                             if (!string.IsNullOrEmpty(currentNonAmount))
@@ -1662,7 +1687,8 @@ namespace Codeium_Security.Services.DocumentParsers
                         }
 
                         pendingDate = normalizedDate;
-                        string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)));
+                        string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c)));
+                        if (isAmenDocument) textOnly = StripAmenEchoDate(textOnly);
                         pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
                     }
                     continue;
@@ -1675,8 +1701,9 @@ namespace Codeium_Security.Services.DocumentParsers
                     int skipCount = (isAmenWithOpCode && cellTexts.Count >= 2
                         && Regex.IsMatch(cellTexts[0].Trim(), @"^\d{2}$")) ? 2 : 1;
                     // Cas normal : date + montant(s)
-                    string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(c)))
+                    string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c)))
                     .Trim(' ', '|', '[', ']', '-', '_');
+                if (isAmenDocument) description = StripAmenEchoDate(description);
                 description = Regex.Replace(description, @"\b\d{2}[/\-.]\d{2}[/\-.]\d{4}\b", "").Trim();
                 description = Regex.Replace(description, @"\b\d{8}\b", "").Trim();
                 description = Regex.Replace(description, @"\s{2,}", " ").Trim();
