@@ -130,7 +130,14 @@ namespace Codeium_Security.Services.DocumentParsers
             bool isWifak = fullText.Contains("WIFAK", StringComparison.OrdinalIgnoreCase);
             bool isAtb = fullText.Contains("ATB", StringComparison.OrdinalIgnoreCase)
             || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
-            bool isUbci = fullText.Contains("UBCI", StringComparison.OrdinalIgnoreCase);
+            // [UBCI] Repli structurel : sur un scan de mauvaise qualite (ex. ubci.pdf, meme
+            // releve que DURAWOOD TUNISIENNE - MAI.pdf mais rendu en image sans couche texte),
+            // l'OCR peut degrader le sigle "UBCI" jusqu'a le rendre meconnaissable partout dans
+            // le document (logo/bandeau) alors que la raison sociale complete, imprimee en toutes
+            // lettres dans le texte legal du pied de page, survit intacte. Signal independant du
+            // sigle, jamais vu chez une autre banque.
+            bool isUbci = fullText.Contains("UBCI", StringComparison.OrdinalIgnoreCase)
+                || Regex.IsMatch(fullText, @"UNION\s+BANCAIRE\s+POUR\s+LE\s+COMMERCE\s+ET\s+L['’]?\s*INDUSTRIE", RegexOptions.IgnoreCase);
             // [BTE] Même style de détection que pour les autres banques dédiées.
            
             // [BTE] Détection structurelle : le sigle seul (3 lettres) est ambigu avec BTK
@@ -1802,11 +1809,28 @@ namespace Codeium_Security.Services.DocumentParsers
                     @"Cet\s+extrait\s+est\s+consid[ée]r[ée]|Compliments\s+www\.albarakabank|La\s+banque\s+pratique", RegexOptions.IgnoreCase);
                 if (albarakaNoiseHit) biatInNoiseZone = true;
 
+                // [LIBELLE - toutes banques] En-tete/metadonnees de compte (repete en haut de
+                // CHAQUE page : "Periode :", "Devise du compte :", "Numero de compte :", "IBAN :",
+                // "Unite :", "Date de l'operation" en toutes lettres...). Sans ce filtre, une telle
+                // ligne - sans date ni montant reconnus - se retrouve collee au Libelle de la
+                // transaction en cours (pendingLibelleBuffer, plus bas) ou de la precedente
+                // (lastTx.Libelle), typiquement juste apres un saut de page. Reprend le meme motif
+                // deja utilise et valide ailleurs dans ce fichier pour la meme famille de
+                // metadonnees (ClassifyLine.AccountMetadata pour le pre-passage generique
+                // MergeContinuationLines, IsHeaderOrMetadataNoise pour BTE), etendu aux deux
+                // variantes non couvertes ("Numero de compte" dans cet ordre-la, et "Unite :").
+                bool isAccountHeaderNoise = Regex.IsMatch(joined,
+                    @"Compte\s*N[°o]|Num[ée]ro\s*(?:de\s*)?compte|^\s*RIB\b|IBAN\b|Adresse\s*:|" +
+                    @"Agence\s*:|Intitul[ée]\s*:|Devise\s*(du\s*compte)?\s*:|Ville\s*:|P[ée]riode\s*:|" +
+                    @"Titulaire|Unit[ée]\s*:|Date\s+de\s+l['’]op[ée]ration\b",
+                    RegexOptions.IgnoreCase);
+
                 bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
                      || biatNoiseHit
                      || bnaNoiseHit
                      || albarakaNoiseHit
                      || isRepeatedBoilerplate
+                     || isAccountHeaderNoise
                      || (isQnb && Regex.IsMatch(joined, @"Cette\s+d[ée]claration\s+sera\s+consid[ée]r[ée]e|dans\s+votre\s+situation\s+de\s+compte|Pour\s+toute\s+r[ée]clamation", RegexOptions.IgnoreCase));
                 // Si la date est vide, tenter de la trouver dans le libellé (date 8 chiffres)
                 if (string.IsNullOrEmpty(normalizedDate) && amountCandidates.Count > 0)
@@ -2880,7 +2904,13 @@ namespace Codeium_Security.Services.DocumentParsers
         {
             var sections = new List<BankAccountSection>();
             string documentRib = ExtractRib(fullText);
-            string accountNumber = ExtractAccountNumber(fullText);
+
+            // [UBCI] Le numero de compte generique (\d{10,20}, 1er match dans tout le document)
+           
+            string accountNumber = "";
+            var ubciAccountMatch = Regex.Match(fullText, @"\b(\d{15,25})\s*TND\b", RegexOptions.IgnoreCase);
+            if (ubciAccountMatch.Success)
+                accountNumber = ubciAccountMatch.Groups[1].Value;
 
             // ── Dédupliquer (PDF UBCI double-rendu image+texte) ──────────
             var seenRowKeys = new HashSet<string>();
@@ -3019,8 +3049,21 @@ namespace Codeium_Security.Services.DocumentParsers
             }
 
             // ── Boucle principale ─────────────────────────────────────────
-            foreach (var row in dedupedRows)
+            // [UBCI] Repli "montant sur la ligne suivante" : avec VerticalTolerance serre a 1
+            // (ligne 194), le label "TOTAL DU DEBIT ET DU CREDIT" / "SOLDE DE CLOTURE" et son/ses
+            // montant(s) atterrissent parfois sur deux rows distinctes au lieu d'une seule
+            // (observe sur dakhliubci.pdf et bq bidah 02-2025ubci.pdf : la ligne label ne
+            // contient alors aucun montant, qui n'apparait que sur la row suivante). D'ou le
+            // passage a une boucle indexee (pour pouvoir regarder la row suivante) et un index
+            // consomme quand son montant a deja ete recupere depuis le label precedent.
+            string JoinedRowText(TableRow r) =>
+                string.Join(" ", r.Cells.OrderBy(c => c.Left).Select(c => CleanWhitespace(c.Text).Trim()));
+            var consumedRowIndices = new HashSet<int>();
+
+            for (int rowIdx = 0; rowIdx < dedupedRows.Count; rowIdx++)
             {
+                if (consumedRowIndices.Contains(rowIdx)) continue;
+                var row = dedupedRows[rowIdx];
                 var cells = row.Cells.OrderBy(c => c.Left).ToList();
                 if (cells.Count == 0) continue;
 
@@ -3028,8 +3071,11 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (string.IsNullOrWhiteSpace(joined)) continue;
 
                 // ── Solde ouverture ──────────────────────────────────────
+                // Date d'ouverture parfois imprimee sur sa propre row, separee du label
+                // (dakhliubci.pdf) : non utilisee ici (seuls comptent le sens DEBITEUR/CREDITEUR
+                // et le montant), donc rendue optionnelle plutot que d'echouer tout le match.
                 var openMatch = Regex.Match(joined,
-                    @"SOLDE\s+(DEBITEUR|CREDITEUR)\s+AU\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[.,]\d{3})*[.,]\d{2,3})",
+                    @"SOLDE\s+(DEBITEUR|CREDITEUR)\s+AU\s+(?:\d{2}/\d{2}/\d{4}\s+)?(-?\d{1,3}(?:[.,]\d{3})*[.,]\d{2,3})",
                     RegexOptions.IgnoreCase);
                 if (openMatch.Success)
                 {
@@ -3045,6 +3091,13 @@ namespace Codeium_Security.Services.DocumentParsers
                     RegexOptions.IgnoreCase)) continue;
 
                 // ── Totaux / clôture ─────────────────────────────────────
+                // [UBCI] "TOTAL DU DEBIT ET DU CREDIT" marque, comme "SOLDE DE CLOTURE" juste en
+                // dessous, la fin du releve : rien de significatif ne suit. Sans le mecanisme
+                // ubciClotureReached applique ici aussi (avant, il n'etait arme que par SOLDE DE
+                // CLOTURE), un split de ses 2 montants sur plus d'une row (observe sur
+                // EXTRAIT DAKHLIubci.pdf : chaque montant sur SA PROPRE row, hors de portee du
+                // repli 1-row ci-dessous) les laissait fuiter comme deux "transactions" CAS3b
+                // fantomes portant les totaux du document entier.
                 if (Regex.IsMatch(joined, @"TOTAL\s+DU\s+DEBIT\s+ET\s+DU\s+CREDIT", RegexOptions.IgnoreCase))
                 {
                     var amounts = AmountRegex.Matches(joined);
@@ -3053,22 +3106,65 @@ namespace Codeium_Security.Services.DocumentParsers
                         current.TotalDebit = ParseAmount(amounts[0].Value);
                         current.TotalCredit = ParseAmount(amounts[1].Value);
                     }
+                    else if (rowIdx + 1 < dedupedRows.Count)
+                    {
+                        // Repli volontairement limite a la row suivante immediate (pas de
+                        // lookahead sur 2 rows) : etendre plus loin risquerait de capturer par
+                        // erreur le montant de la row "SOLDE DE CLOTURE" qui suit de pres, en la
+                        // marquant consommee et en lui faisant manquer son propre traitement plus
+                        // bas. ubciClotureReached ci-dessous protege deja contre la fuite en
+                        // transaction meme quand ce repli echoue a recuperer les totaux eux-memes.
+                        var nextAmounts = AmountRegex.Matches(JoinedRowText(dedupedRows[rowIdx + 1]));
+                        if (nextAmounts.Count >= 2)
+                        {
+                            current.TotalDebit = ParseAmount(nextAmounts[0].Value);
+                            current.TotalCredit = ParseAmount(nextAmounts[1].Value);
+                            consumedRowIndices.Add(rowIdx + 1);
+                        }
+                    }
+                    ubciClotureReached = true;
                     continue;
                 }
                 if (Regex.IsMatch(joined, @"SOLDE\s+DE\s+CLOTURE", RegexOptions.IgnoreCase))
                 {
                     var m = AmountRegex.Match(joined);
-                    if (m.Success) current.SoldeFinal = ParseAmount(m.Value);
+                    if (m.Success)
+                    {
+                        current.SoldeFinal = ParseAmount(m.Value);
+                    }
+                    else if (rowIdx + 1 < dedupedRows.Count)
+                    {
+                        // N'accepte que si la row suivante COMMENCE par ce montant (le pied de
+                        // page legal/bancaire, colle en continuation par MergeContinuationLines
+                        // faute d'operation suivante a laquelle s'accrocher - vu sur bq bidah
+                        // 02-2025ubci.pdf -, ne peut alors que suivre le montant, jamais le
+                        // precede) : evite de capturer par erreur le montant d'une transaction qui
+                        // suivrait tout en tolerant ce pied de page.
+                        string nextJoined = JoinedRowText(dedupedRows[rowIdx + 1]).Trim();
+                        var closingMatch = Regex.Match(nextJoined, @"^-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}\b");
+                        if (closingMatch.Success)
+                        {
+                            current.SoldeFinal = ParseAmount(closingMatch.Value);
+                            consumedRowIndices.Add(rowIdx + 1);
+                        }
+                    }
                     ubciClotureReached = true;
                     continue;
                 }
                 if (ubciClotureReached) continue;
 
                 // ── Bruit pied de page ───────────────────────────────────
+                // [UBCI] "Société Anonyme" seul ne suffit plus a filtrer ce bandeau : sur un scan
+                // degrade (ubci.pdf/DURAWOOD), l'OCR le rend parfois "Sociélé Anonyme" (t → l), ce
+                // qui echappait au motif Soci[eé]t[eé] et laissait passer la ligne. Ajout
+                // d'ancrages plus stables du meme bandeau (capital social, siège social, adresse)
+                // qui ne partagent pas cette confusion.
                 if (Regex.IsMatch(joined,
                     @"Cette\s+op[ée]ration\s+est\s+provisoire|^R\.?\s*N\.?\s*E\b|SWIFT|" +
                     @"Pour\s+plus\s+de\s+d[ée]tails|Vous\s+[êe]tes\s+tenu|L'UBCI\s+s'engage|" +
-                    @"bensalah|www\.ubci|Page\s*\d+\s*/|Soci[eé]t[eé]\s+Anonyme",
+                    @"bensalah|www\.ubci|Page\s*\d+\s*/|Soci[eé]t[eé]\s+Anonyme|" +
+                    @"capital\s+de\b|Si[eè]ge\s+Social|Identifiant\s+Unique|" +
+                    @"Tunis[\s\-]?Cedex|Tunis[\s\-]?Belv[eé]d[eè]re|Avenue\s+de\s+la\s+Libert",
                     RegexOptions.IgnoreCase)) continue;
 
 
@@ -3114,6 +3210,41 @@ namespace Codeium_Security.Services.DocumentParsers
                && !Regex.IsMatch(c.Text.Trim(), @"^\d{2}[/.\-]\d{2}[/.\-]\d{2,4}$")) // jamais une date valeur
       .ToList();
 
+                // [UBCI] L'OCR perd parfois la virgule decimale sur les petits montants (ex.
+                // "0750" au lieu de "0,750", vu sur dakhliubci.pdf/bq bidah 02-2025ubci.pdf) : ces
+                // montants ont toujours 3 decimales, donc un nombre brut sans separateur DANS la
+                // zone Debit/Credit (jamais ailleurs - une reference banque ou une date fusionnee
+                // y tombent aussi mais font >7 chiffres, hors de la plage acceptee ici) est repare
+                // en inserant la virgule avant les 3 derniers chiffres.
+                var bareDigitMontantCells = cells
+                    .Where(c => c.Left >= montantDebutX && c.Left < montantFinX
+                             && !AmountRegex.IsMatch(c.Text.Trim())
+                             && Regex.IsMatch(c.Text.Trim(), @"^-?\d{3,7}$"))
+                    .Select(c =>
+                    {
+                        string digits = c.Text.Trim();
+                        bool neg = digits.StartsWith("-");
+                        if (neg) digits = digits.Substring(1);
+                        string intPart = digits.Length > 3 ? digits.Substring(0, digits.Length - 3) : "0";
+                        string decPart = digits.Substring(digits.Length - 3);
+                        string repairedText = (neg ? "-" : "") + intPart + "," + decPart;
+                        return new TableCell { Text = repairedText, Left = c.Left };
+                    })
+                    .ToList();
+                montantCells.AddRange(bareDigitMontantCells);
+                montantCells = montantCells.OrderBy(c => c.Left).ToList();
+
+                // [UBCI] "100.007.645,000 Dinars" est le capital social de la banque, imprime tel
+                // quel dans le bandeau legal repete en pied de CHAQUE page - jamais un montant de
+                // transaction. Quand ce bandeau echappe au filtre "Bruit pied de page" ci-dessous
+                // (le libelle et le montant tombent alors sur deux rows distinctes a cause de la
+                // segmentation OCR, comme pour "SOLDE DE CLOTURE" plus haut, et le montant se
+                // retrouve seul sur une row par ailleurs vide), cette valeur constante et connue a
+                // l'avance reste identifiable independamment du texte environnant.
+                montantCells = montantCells
+                    .Where(c => ParseAmount(AmountRegex.Match(c.Text).Value) != 100007645.000m)
+                    .ToList();
+
                 Console.WriteLine($"[UBCI-ROW] dateOp={dateCellOp?.Text ?? "NULL"} " +
                                   $"libelle='{libelleFromCells}' " +
                                   $"montants={montantCells.Count} " +
@@ -3140,6 +3271,14 @@ namespace Codeium_Security.Services.DocumentParsers
                         ? libelleFromCells
                         : (pendingLibelle + " " + libelleFromCells).Trim();
                     pendingDate = ""; pendingLibelle = "";
+
+                    // [UBCI] Une date + un montant sans aucun libelle correspond, sur ces
+                    // documents, a une sous-ligne de frais (COMMISSION/TVA/PDL/EFFET RECU) dont le
+                    // libelle a atterri sur une autre row a cause de la segmentation OCR - jamais
+                    // a une vraie operation muette. Signale-le au lieu de produire une transaction
+                    // silencieuse sans libelle qui pourrait passer pour une donnee propre.
+                    if (string.IsNullOrWhiteSpace(fullLibelle))
+                        fullLibelle = "[LIBELLE MANQUANT - a verifier manuellement]";
 
                     foreach (var mc in montantCells)
                     {
@@ -3193,6 +3332,37 @@ namespace Codeium_Security.Services.DocumentParsers
                         ubciLastConfirmedDate = cd;
 
                     pendingDate = ""; pendingLibelle = "";
+                    continue;
+                }
+
+                // ── CAS 3b : SANS date, AVEC montant, AUCUN pending → montant orphelin
+                // (ex. le montant d'un "EFFET RECU" imprime sur sa propre row, decale de son
+                // libelle par l'OCR, alors qu'aucune transaction n'est en cours de construction -
+                // observe sur DURAWOOD TUNISIENNE - MAI.pdf/ubci.pdf). Sans ce repli, le montant
+                // serait perdu silencieusement (aucun CAS ci-dessus ne le prend en charge). On le
+                // rattache a la derniere date confirmee plutot que de le perdre, et on le marque
+                // explicitement : jamais fusionne avec une transaction voisine sans le signaler.
+                // Garde-fou : un vrai fragment de sous-frais n'a jamais un libelle long (quelques
+                // mots au plus). Un paragraphe de bruit qui aurait echappe au filtre "Bruit pied
+                // de page" ci-dessus (ex. bandeau legal/bancaire deforme par l'OCR d'une maniere
+                // imprevue) est beaucoup plus long : mieux vaut alors l'ignorer que produire une
+                // transaction avec un montant sans rapport (deja observe : "100.007.645,000" =
+                // le capital social de la banque, pris pour un montant de transaction).
+                if (dateCellOp == null && montantCells.Count > 0 && string.IsNullOrEmpty(pendingDate)
+                    && ubciLastConfirmedDate.HasValue
+                    && libelleFromCells.Length <= 60)
+                {
+                    string orphanDate = ubciLastConfirmedDate.Value.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    string orphanLibelle = (string.IsNullOrWhiteSpace(libelleFromCells) ? "" : libelleFromCells + " ")
+                        + "[MONTANT ORPHELIN - a verifier manuellement]";
+
+                    foreach (var mc in montantCells)
+                    {
+                        decimal montant = ParseAmount(AmountRegex.Match(mc.Text).Value);
+                        var tx = new Transaction { Date = orphanDate, Libelle = orphanLibelle };
+                        UbciAssignDebitCredit(tx, montant, mc.Left, debitAnchor, creditAnchor, tolerance);
+                        current.Transactions.Add(tx);
+                    }
                     continue;
                 }
 
