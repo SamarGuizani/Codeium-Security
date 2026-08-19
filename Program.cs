@@ -5,6 +5,7 @@ using Codeium_Security.Services;
 using Codeium_Security.Services.DocumentClassification;
 using Codeium_Security.Services.DocumentExtraction;
 using Codeium_Security.Services.DocumentParsers;
+using Codeium_Security.Services.Export;
 Codeium_Security.Tools.TestParser.RunTests();
 Codeium_Security.Tools.TestImageExtraction.RunTests();
 Codeium_Security.Tools.TestSkewGrouping.RunTests();
@@ -32,6 +33,7 @@ builder.Services.AddScoped<ImagePreprocessor>();
 builder.Services.AddScoped<IDocumentExtractor, PdfDocumentExtractor>();
 builder.Services.AddScoped<IDocumentExtractor, ImageDocumentExtractor>();
 builder.Services.AddScoped<DocumentProcessingService>();
+builder.Services.AddScoped<BankExcelExporter>();
 
 
 var app = builder.Build();

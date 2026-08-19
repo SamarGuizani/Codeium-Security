@@ -1,6 +1,7 @@
 ﻿using Codeium_Security.Models;
 using Codeium_Security.OCR;
 using Codeium_Security.Services;
+using Codeium_Security.Services.Export;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.IO.Compression;
@@ -15,6 +16,7 @@ namespace Codeium_Security.Controllers
     public class OcrController : ControllerBase
     {
         private readonly DocumentProcessingService _processingService;
+        private readonly BankExcelExporter _excelExporter;
         private static readonly string[] SupportedExtensions =
             { ".pdf", ".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".gif", ".webp" };
 
@@ -25,9 +27,10 @@ namespace Codeium_Security.Controllers
             Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
         };
 
-        public OcrController(DocumentProcessingService processingService)
+        public OcrController(DocumentProcessingService processingService, BankExcelExporter excelExporter)
         {
             _processingService = processingService;
+            _excelExporter = excelExporter;
         }
 
         // Ecrit un ou plusieurs fichiers JSON pour un resultat donne :
@@ -122,7 +125,32 @@ namespace Codeium_Security.Controllers
             return Ok(allResults);
         }
 
-       
+        [HttpPost("export-excel")]
+        public async Task<IActionResult> ExportExcel(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("No file uploaded.");
+
+            Directory.CreateDirectory("Images");
+            var filePath = Path.Combine("Images", file.FileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+                await file.CopyToAsync(stream);
+
+            var result = await _processingService.ProcessFileAsync(filePath, file.FileName);
+
+            if (result.Document is not BankDocument bankDoc)
+                return BadRequest($"'{file.FileName}' n'a pas ete reconnu comme un releve bancaire (type detecte : {result.DetectedType}).");
+
+            var xlsxBytes = _excelExporter.Export(bankDoc);
+            var downloadName = Path.GetFileNameWithoutExtension(file.FileName) + ".xlsx";
+
+            return File(xlsxBytes,
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                downloadName);
+        }
+
+
         [HttpPost("json-to-html")]
         public async Task<IActionResult> JsonToHtml(IFormFile file)
         {

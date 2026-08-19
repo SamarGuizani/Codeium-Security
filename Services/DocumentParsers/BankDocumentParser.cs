@@ -243,8 +243,53 @@ namespace Codeium_Security.Services.DocumentParsers
         private static readonly Regex ClassifyAmountAnywhereRegex =
             new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{1,3}");
 
-       
+
         private static readonly Regex LeadingDigitRegex = new(@"^\d");
+
+        // [LIBELLE - toutes banques, parseur generique] En-tete/pied de page de compte, jamais
+        // du contenu de transaction : numero de compte/RIB/IBAN/agence/devise/periode/titulaire
+        // (repete en haut de CHAQUE page), rappel legal/mediateur/siege social (repete en bas de
+        // CHAQUE page), et en-tete de colonnes du tableau (Date/Libelle/Debit/Credit, egalement
+        // repete par page). Reprend le meme motif que ClassifyLine.AccountMetadata/DocumentFooter/
+        // TableHeader (deja valide, utilise par MergeContinuationLines et par BTE), etendu aux
+        // variantes non couvertes ("Numero de compte" dans cet ordre-la, "Unite :", "Date de
+        // l'operation" en toutes lettres, "mediateur"). Utilise a deux granularites dans
+        // ExtractAccountSections : ligne entiere (isNoise) et cellule individuelle (description/
+        // textOnly), pour les cas ou une seule row contient a la fois du texte de bruit et une
+        // vraie transaction (page tres dense, plusieurs lignes physiques fusionnees dans la row).
+        private static readonly Regex LibelleHeaderFooterNoiseRegex = new(
+            @"Compte\s*N[°o]|Num[ée]ro\s*(?:de\s*)?compte|^\s*RIB\b|IBAN\b|Adresse\s*:|Agence\s*(:|N[°o])|" +
+            @"Intitul[ée]\s*:|Devise\s*(du\s*compte)?\s*:|Ville\s*:|P[ée]riode\s*:|Titulaire|Unit[ée]\s*:|" +
+            @"Date\s+de\s+[lI1]['’]op[ée]ration\b|Relev[ée]\s+de\s+Compte|Extrait\s+de\s+Compte|SWIFT|BIC\b|" +
+            @"sauf\s*erreur|sauf\s+avis\s+contraire|d[ée]lai\s+de\s+r[ée]clamation|jours?\s+[àa]\s+compter|" +
+            @"jours?\s+suivant\s+la\s+date|tacitement|nos\s+[ée]critures|en\s+cas\s+de\s+contestation|" +
+            @"si[èe]ge\s+social|m[ée]diateur|Boi?te\s+Postale|" +
+            // [AMEN] "Cette declaration sera consideree comme correcte et approuvee..." - deja
+            // filtre pour QNB seul (isQnb && ... plus bas dans ExtractAccountSections) sous un
+            // libelle quasi identique ; generalise ici puisque c'est le meme rappel de delai de
+            // reclamation standard, vu tel quel chez AMEN aussi. "Cher Client, <BANQUE> veille a"
+            // et "Division des Reclamations" sont le pendant du bandeau footer AMEN. "Cher Client"
+            // seul (sans exiger la suite "veille a...", parfois coupee par l'OCR sur une autre
+            // row) suffit deja comme signal fiable : jamais une formule de politesse bancaire
+            // n'apparait dans un vrai libelle de transaction.
+            @"Cette\s+d[ée]claration\s+sera\s+consid[ée]r[ée]e|Cher\s+Client\b|" +
+            @"Division\s+des\s+R[ée]clamations|" +
+            @"(D[ée]bit.{0,20}Cr[ée]dit)|(Cr[ée]dit.{0,20}D[ée]bit)|D\.?\s*Op[ée]\.?\s+Libell[ée]|" +
+            // [ABC] "Date de l'opération" arrive parfois fragmente sur 2 rows OCR distinctes
+            // ("... Date de" puis, seule sur la row suivante, "I'opération" - le "I" majuscule
+            // etant l'apostrophe suivie d'un "l" mal reconnue) : la 1ere moitie est deja couverte
+            // ci-dessus, ce complement couvre le fragment isole "l'operation"/"I'operation" quand
+            // il constitue TOUTE la row/cellule (jamais une simple sous-chaine, pour ne jamais
+            // couper un vrai libelle qui mentionnerait legitimement une "operation").
+            @"^[lI1]['’]op[ée]ration\.?\s*$|" +
+            // [ABC] Le pendant du fragment ci-dessus : la row qui precede se termine par "Date
+            // de" seul, sans "l'operation" (rejete sur la row suivante), juste apres les 2 dates
+            // de periode ("01/06/2025 30/06/2025 - Date de"). Anchore sur TOUTE la row (2 dates
+            // + rien d'autre que "Date de" optionnel) : ne risque jamais de couper une vraie
+            // mention de "Date de valeur"/"Date de l'echeance" dans un vrai libelle, puisque
+            // ceux-ci ne se limitent jamais a seulement 2 dates brutes sans aucun autre texte.
+            @"^\d{2}[/.\-]\d{2}[/.\-]\d{2,4}\s+\d{2}[/.\-]\d{2}[/.\-]\d{2,4}\s*-?\s*(Date\s+de)?\s*$",
+            RegexOptions.IgnoreCase);
 
         private LineCategory ClassifyLine(TableRow row, bool hasOpenTransaction)
         {
@@ -1592,7 +1637,9 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                 }
                 // Ignorer les lignes de Total et de page
-                if (Regex.IsMatch(joined, @"\b(Total|Page\s*\d)\b", RegexOptions.IgnoreCase))
+                // (Totaux, forme plurielle vue chez AMEN : "Total" seul, avec \b apres, ne
+                // matchait pas "Totaux" faute de limite de mot entre "l" et "x".)
+                if (Regex.IsMatch(joined, @"\b(Totaux?|Page\s*\d)\b", RegexOptions.IgnoreCase))
                     continue;
 
                 // [AMEN] Ligne d'echo de date au format POINT
@@ -1809,23 +1856,16 @@ namespace Codeium_Security.Services.DocumentParsers
                     @"Cet\s+extrait\s+est\s+consid[ée]r[ée]|Compliments\s+www\.albarakabank|La\s+banque\s+pratique", RegexOptions.IgnoreCase);
                 if (albarakaNoiseHit) biatInNoiseZone = true;
 
-                // [LIBELLE - toutes banques] En-tete/metadonnees de compte (repete en haut de
-                // CHAQUE page : "Periode :", "Devise du compte :", "Numero de compte :", "IBAN :",
-                // "Unite :", "Date de l'operation" en toutes lettres...). Sans ce filtre, une telle
-                // ligne - sans date ni montant reconnus - se retrouve collee au Libelle de la
-                // transaction en cours (pendingLibelleBuffer, plus bas) ou de la precedente
-                // (lastTx.Libelle), typiquement juste apres un saut de page. Reprend le meme motif
-                // deja utilise et valide ailleurs dans ce fichier pour la meme famille de
-                // metadonnees (ClassifyLine.AccountMetadata pour le pre-passage generique
-                // MergeContinuationLines, IsHeaderOrMetadataNoise pour BTE), etendu aux deux
-                // variantes non couvertes ("Numero de compte" dans cet ordre-la, et "Unite :").
-                bool isAccountHeaderNoise = Regex.IsMatch(joined,
-                    @"Compte\s*N[°o]|Num[ée]ro\s*(?:de\s*)?compte|^\s*RIB\b|IBAN\b|Adresse\s*:|" +
-                    @"Agence\s*:|Intitul[ée]\s*:|Devise\s*(du\s*compte)?\s*:|Ville\s*:|P[ée]riode\s*:|" +
-                    @"Titulaire|Unit[ée]\s*:|Date\s+de\s+l['’]op[ée]ration\b",
-                    RegexOptions.IgnoreCase);
+                // [LIBELLE - toutes banques] En-tete/metadonnees de compte et pied de page legal
+                // (repetes en haut/bas de CHAQUE page : "Periode :", "Devise du compte :", "Numero
+                // de compte :", "IBAN :", "Unite :", "Date de l'operation" en toutes lettres,
+                // "Siege social", "mediateur"...). Sans ce filtre, une telle ligne - sans date ni
+                // montant reconnus - se retrouve collee au Libelle de la transaction en cours
+                // (pendingLibelleBuffer, plus bas) ou de la precedente (lastTx.Libelle),
+                // typiquement juste apres un saut de page. Voir LibelleHeaderFooterNoiseRegex.
+                bool isAccountHeaderNoise = LibelleHeaderFooterNoiseRegex.IsMatch(joined);
 
-                bool isNoise = Regex.IsMatch(joined, @"\b(Total|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
+                bool isNoise = Regex.IsMatch(joined, @"\b(Totaux?|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
                      || biatNoiseHit
                      || bnaNoiseHit
                      || albarakaNoiseHit
@@ -1943,7 +1983,15 @@ namespace Codeium_Security.Services.DocumentParsers
                         }
 
                         pendingDate = normalizedDate;
-                        string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c)));
+                        // [LIBELLE] Filtre aussi au niveau cellule (pas seulement ligne entiere,
+                        // voir isAccountHeaderNoise plus haut) : une row tres dense (page peu
+                        // aeree) peut contenir a la fois une vraie cellule de transaction et une
+                        // cellule d'en-tete/pied de page fusionnee par la segmentation OCR - le
+                        // filtre ligne entiere ne s'applique pas puisque la row porte aussi une
+                        // vraie date/montant.
+                        string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c =>
+                            !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c)
+                            && !LibelleHeaderFooterNoiseRegex.IsMatch(c)));
                         if (isAmenDocument) textOnly = StripAmenEchoDate(textOnly);
                         pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
                     }
@@ -1956,8 +2004,10 @@ namespace Codeium_Security.Services.DocumentParsers
                     // [AMEN avec code opération] Sauter aussi la cellule du code opération (index 0)
                     int skipCount = (isAmenWithOpCode && cellTexts.Count >= 2
                         && Regex.IsMatch(cellTexts[0].Trim(), @"^\d{2}$")) ? 2 : 1;
-                    // Cas normal : date + montant(s)
-                    string description = string.Join(" ", cellTexts.Skip(1).Where(c => !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c)))
+                    // [LIBELLE] Meme filtre cellule-par-cellule que pour textOnly ci-dessus.
+                    string description = string.Join(" ", cellTexts.Skip(1).Where(c =>
+                        !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c)
+                        && !LibelleHeaderFooterNoiseRegex.IsMatch(c)))
                     .Trim(' ', '|', '[', ']', '-', '_');
                 if (isAmenDocument) description = StripAmenEchoDate(description);
                 if (isBna && !soldeAnchor.HasValue) description = StripBnaFooterBoilerplate(StripBnaReleveValeurDate(description));

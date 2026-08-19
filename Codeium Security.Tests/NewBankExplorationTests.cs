@@ -45,6 +45,12 @@ namespace Codeium_Security.Tests
                 @"zitouna\Relevé Zitouna 06.pdf",
                 @"WIFAK\EXTRAIT WIFAK.pdf",
                 @"WIFAK\wifak bank.pdf",
+                @"Amen\AMEN.pdf",
+                @"Amen\AMEN BQList.pdf",
+                @"BTK\BANK-TND (1)btk.pdf",
+                @"BTK\BANK-TNDbtk.pdf",
+                @"BTK\BTK Dahlia 2024.pdf",
+                @"BTK\Extrait BTK Janvier-2024.pdf",
             };
             foreach (var f in files)
                 yield return new object[] { f };
