@@ -14,7 +14,7 @@ namespace Codeium_Security.Services.DocumentParsers
             new(@"\d{2}[/\-.]\d{2}[/\-.]\d{4}|\d{8}");
 
         //private static readonly Regex AmountRegex =
-        //new(@"-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3}");
+        //new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
         //correction des nombres qui sont avec espaces done 
         private static readonly Regex AmountRegex =
         new(@"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
@@ -303,13 +303,33 @@ namespace Codeium_Security.Services.DocumentParsers
             if (Regex.IsMatch(joined, @"Solde\s*(au|initial|final|pr[ée]c[ée]dent|d['’]ouverture|de\s*cl[ôo]ture)", RegexOptions.IgnoreCase))
                 return LineCategory.Balance;
 
-            if (Regex.IsMatch(joined, @"Totaux?\b|Encours", RegexOptions.IgnoreCase))
+            // [AMEN] "A REPORTER" (bas de page) / "REPORT" (haut de page suivante) : ligne de
+            // sous-total cumule (jamais un vrai mouvement), signature typique = Debit ET Credit
+            // tous deux renseignes sur la meme ligne. Sans cette regle elle tombe dans les regles
+            // generiques hasDate/hasAmount plus bas et devient une fausse transaction avec Debit
+            // ET Credit renseignes en meme temps - jamais le cas d'une vraie operation - qui fausse
+            // les totaux Debit/Credit du releve.
+            if (Regex.IsMatch(joined, @"Totaux?\b|Encours|\bReport\b|\bA\s+[Rr]eporter\b", RegexOptions.IgnoreCase))
                 return LineCategory.Total;
 
             if (Regex.IsMatch(joined, @"sauf\s+erreur|d[ée]lai\s+de\s+r[ée]clamation|jours?\s+[àa]\s+compter|tacitement|nos\s+[ée]critures|en\s+cas\s+de\s+contestation|si[èe]ge\s+social", RegexOptions.IgnoreCase))
                 return LineCategory.DocumentFooter;
 
             if (Regex.IsMatch(joined, @"Compte\s*N[°o]|^\s*RIB\b|IBAN\b|Adresse\s*:|Agence\s*:|Intitul[ée]\s*:|Devise\s*:|Ville\s*:|P[ée]riode\s*:|Titulaire", RegexOptions.IgnoreCase))
+                return LineCategory.AccountMetadata;
+
+            // [ABC] Banniere de periode repetee en haut de CHAQUE page ("01/06/2025 30/06/2025 -
+            // Date de", fragment de "Date de l'operation" coupe par l'OCR) : commence par un
+            // chiffre et contient 2 dates, donc tombe sinon dans la regle generale "hasLeadingDigit
+            // && (hasDate || hasAmount)" plus bas et devient a tort un TransactionStart. Comme ce
+            // classement vole ensuite openTxIndex a la vraie transaction encore ouverte (le dernier
+            // "TRANSACTION TPE ..." de la page precedente), celle-ci se retrouve fusionnee comme
+            // continuation d'une AUTRE transaction et son montant (candidat de type Credit) est
+            // silencieusement exclu (les cellules IsContinuationDetail sont ignorees pour les
+            // montants) : releve sur abcbank.pdf, Total Credit sous-estime de 586.28 (une
+            // transaction TPE credit perdue par page). Reconnue ici en amont, avant la regle
+            // generale, pour ne jamais devenir TransactionStart ni continuation.
+            if (Regex.IsMatch(joined, @"^\d{2}[/.\-]\d{2}[/.\-]\d{2,4}\s+\d{2}[/.\-]\d{2}[/.\-]\d{2,4}\s*-?\s*(Date\s+de)?\s*$", RegexOptions.IgnoreCase))
                 return LineCategory.AccountMetadata;
 
             bool hasDate = ClassifyDateAnywhereRegex.IsMatch(joined);
@@ -1242,7 +1262,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (isUbci)
                 {
                     var ubciOpenMatch = Regex.Match(joined,
-                        @"SOLDE\s+(DEBITEUR|CREDITEUR)\s+AU\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                        @"SOLDE\s+(DEBITEUR|CREDITEUR)\s+AU\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
                         RegexOptions.IgnoreCase);
                     if (current == null && ubciOpenMatch.Success)
                     {
@@ -1270,7 +1290,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     // [UBCI] Solde de cloture : "SOLDE DE CLOTURE <montant>". Marque aussi la fin
                     // des reparations UBCI (dates/montants) pour cette section : tout ce qui suit
                     // est du pied de page (mentions legales, coordonnees), jamais une operation.
-                    var ubciCloseMatch = Regex.Match(joined, @"SOLDE\s+DE\s+CLOTURE\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    var ubciCloseMatch = Regex.Match(joined, @"SOLDE\s+DE\s+CLOTURE\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                     if (ubciCloseMatch.Success)
                     {
                         if (current != null) current.SoldeFinal = ParseAmount(ubciCloseMatch.Groups[1].Value);
@@ -1295,16 +1315,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
 
                
-                // [STRUCTURE - toutes banques] Une cellule "Débit"/"Crédit" ne signale une VRAIE
-                // ligne d'en-tête que si la ligne n'a par ailleurs ni date ni montant reconnu :
-                // un libellé d'operation qui contient litteralement le mot "Débit" (ex. ATB
-                // "Mouvement DEBIT ...", une commission "sur retrait débit"...) ne doit jamais
-                // être pris pour un en-tête sous pretexte qu'il contient ce mot - la ligne a par
-                // ailleurs une date et un montant, donc c'est une operation. Sans cette garde,
-                // l'operation entiere est silencieusement perdue (elle "devient" un ancrage de
-                // colonne au lieu d'une transaction). Generalise a partir d'une garde qui
-                // n'existait auparavant que pour BIAT (biatLooksLikeTransactionRow) : le meme
-                // risque existe pour n'importe quelle banque utilisant ce chemin generique.
+                
                 bool looksLikeTransactionRow = (debitCell != null || creditCell != null) &&
                     (!string.IsNullOrEmpty(GetNormalizedDateFromCells(cellTexts, documentYear)) || cells.Any(c => AmountRegex.IsMatch(c.Text)));
 
@@ -1329,7 +1340,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
 
                 // [ATTIJARI] Solde (TND) au ...
-                var soldeAuFinMatch = Regex.Match(joined, @"Solde\s*\(\w+\)\s*au\s*\d{2}/\d{2}/\d{4}\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                var soldeAuFinMatch = Regex.Match(joined, @"Solde\s*\(\w+\)\s*au\s*\d{2}/\d{2}/\d{4}\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (soldeAuFinMatch.Success)
                 {
                     if (current != null) current.SoldeFinal = ParseAmount(soldeAuFinMatch.Groups[1].Value);
@@ -1338,7 +1349,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 // [GÉNÉRIQUE] "Solde au : JJ/MM/AAAA <montant> [CR|DB]" — sert d'ouverture (current==null)
                 // ou de clôture (section déjà ouverte). Le suffixe DB indique un solde débiteur → négatif.
                 var soldeAuGenericMatch = Regex.Match(joined,
-                    @"Solde\s+au\s*:?\s*\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s*(CR|DB)?",
+                    @"Solde\s+au\s*:?\s*\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s*(CR|DB)?",
                     RegexOptions.IgnoreCase);
                 if (soldeAuGenericMatch.Success)
                 {
@@ -1370,7 +1381,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
 
                 // [QNB - AMÉLIORÉ] "Solde Initial" avec montant
-                var soldeInitMatch = Regex.Match(joined, @"\bSolde\s+Initial\s*:?\s*([-+]?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase); if (soldeInitMatch.Success || Regex.IsMatch(joined, @"\bSolde\s+Initial\b", RegexOptions.IgnoreCase))
+                var soldeInitMatch = Regex.Match(joined, @"\bSolde\s+Initial\s*:?\s*([-+]?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase); if (soldeInitMatch.Success || Regex.IsMatch(joined, @"\bSolde\s+Initial\b", RegexOptions.IgnoreCase))
                 {
                     // Fermer la section précédente
                     if (current != null)
@@ -1406,13 +1417,13 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
                 // [ABC / FORMAT SIGNÉ] "Solde de départ <montant>" sans date
                 var abcSoldeDepartMatch = Regex.Match(joined,
-                    @"^Solde\s+de\s+d[ée]part\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})$",
+                    @"^Solde\s+de\s+d[ée]part\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})$",
                     RegexOptions.IgnoreCase);
                 if (!abcSoldeDepartMatch.Success)
                 {
                     // essai sans ancrage strict (cas où la cellule contient du texte autour)
                     abcSoldeDepartMatch = Regex.Match(joined,
-                        @"Solde\s+de\s+d[ée]part\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                        @"Solde\s+de\s+d[ée]part\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
                         RegexOptions.IgnoreCase);
                 }
                 if (abcSoldeDepartMatch.Success)
@@ -1438,7 +1449,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
                 // [BIAT forme 2] "Solde départ au JJ/MM/AAAA <montant>" (dates déjà converties
                 // par ConvertFrenchAbbrevDates plus haut).
-                var biatSoldeDepartMatch = Regex.Match(joined, @"Solde\s+d[ée]part\s+au\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                var biatSoldeDepartMatch = Regex.Match(joined, @"Solde\s+d[ée]part\s+au\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (biatSoldeDepartMatch.Success)
                 {
                     if (current != null)
@@ -1463,14 +1474,14 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
 
                 // [BIAT forme 2] "Solde fin au JJ/MM/AAAA <montant>"
-                var biatSoldeFinAuMatch = Regex.Match(joined, @"Solde\s+fin\s+au\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                var biatSoldeFinAuMatch = Regex.Match(joined, @"Solde\s+fin\s+au\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (biatSoldeFinAuMatch.Success)
                 {
                     if (current != null) current.SoldeFinal = ParseAmount(biatSoldeFinAuMatch.Groups[1].Value);
                     continue;
                 }
                 // [BIAT] SOLDE AU ...
-                var biatSoldeAuMatch = Regex.Match(joined, @"SOLDE\s*AU\s*\d{1,2}\s+\d{1,2}\s+\d{4}\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                var biatSoldeAuMatch = Regex.Match(joined, @"SOLDE\s*AU\s*\d{1,2}\s+\d{1,2}\s+\d{4}\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (biatSoldeAuMatch.Success)
                 {
                     if (current != null)
@@ -1495,7 +1506,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
 
                 // [ZITOUNA] Solde actuel
-                var zitounaSoldeMatch = Regex.Match(joined, @"Solde\s+actuel\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                var zitounaSoldeMatch = Regex.Match(joined, @"Solde\s+actuel\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (zitounaSoldeMatch.Success)
                 {
                     if (current != null)
@@ -1531,7 +1542,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
 
                 // [BIAT] Devise SOLDE ...
-                var biatSoldeFinalMatch = Regex.Match(joined, @"\bSOLDE\b(?!\s*AU)\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                var biatSoldeFinalMatch = Regex.Match(joined, @"\bSOLDE\b(?!\s*AU)\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (biatSoldeFinalMatch.Success)
                 {
                     if (current != null) current.SoldeFinal = ParseAmount(biatSoldeFinalMatch.Groups[1].Value);
@@ -1564,7 +1575,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
                 // [GÉNÉRIQUE] "Total des mouvements : <débit> <crédit>"
                 var totalMouvementsMatch = Regex.Match(joined,
-                    @"Total\s+des\s+mouvements\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                    @"Total\s+des\s+mouvements\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
                     RegexOptions.IgnoreCase);
                 if (totalMouvementsMatch.Success)
                 {
@@ -1578,8 +1589,8 @@ namespace Codeium_Security.Services.DocumentParsers
                 // [ALBARAKA] Solde de clôture : "Solde fin période : x" (extrait) ou
                 // "SOLDE CREDITEUR/DEBITEUR : x" (relevé), toujours en dernière ligne.
                 var albarakaSoldeFinMatch = Regex.Match(joined,
-                    @"Solde\s+fin\s+p[ée]riode\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})|" +
-                    @"SOLDE\s+(CREDITEUR|DEBITEUR)\s*:\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})",
+                    @"Solde\s+fin\s+p[ée]riode\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})|" +
+                    @"SOLDE\s+(CREDITEUR|DEBITEUR)\s*:\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
                     RegexOptions.IgnoreCase);
                 if (albarakaSoldeFinMatch.Success)
                 {
@@ -1601,7 +1612,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 // premiere operation, current est donc encore null a ce stade.
                 if (isBna && current == null)
                 {
-                    var bnaSoldeDepartMatch = Regex.Match(joined, @"SOLDE\s+DEPART\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    var bnaSoldeDepartMatch = Regex.Match(joined, @"SOLDE\s+DEPART\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                     if (bnaSoldeDepartMatch.Success)
                     {
                         current = new BankAccountSection
@@ -1623,7 +1634,7 @@ namespace Codeium_Security.Services.DocumentParsers
               
                 if (isBna)
                 {
-                    var bnaSoldeAuMatch = Regex.Match(joined, @"\bSOLDE\s+AU\b.*?(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s*$", RegexOptions.IgnoreCase);
+                    var bnaSoldeAuMatch = Regex.Match(joined, @"\bSOLDE\s+AU\b.*?(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s*$", RegexOptions.IgnoreCase);
                     if (bnaSoldeAuMatch.Success)
                     {
                         if (current != null) current.SoldeFinal = ParseAmount(bnaSoldeAuMatch.Groups[1].Value);
@@ -1865,7 +1876,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 // typiquement juste apres un saut de page. Voir LibelleHeaderFooterNoiseRegex.
                 bool isAccountHeaderNoise = LibelleHeaderFooterNoiseRegex.IsMatch(joined);
 
-                bool isNoise = Regex.IsMatch(joined, @"\b(Totaux?|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+)", RegexOptions.IgnoreCase)
+                bool isNoise = Regex.IsMatch(joined, @"\b(Totaux?|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+|Report|A\s+[Rr]eporter)", RegexOptions.IgnoreCase)
                      || biatNoiseHit
                      || bnaNoiseHit
                      || albarakaNoiseHit
@@ -2066,17 +2077,17 @@ namespace Codeium_Security.Services.DocumentParsers
             foreach (var sec in sections)
             {
                 var totalDebitMatch = Regex.Match(sec.RawSectionText,
-                    @"Total\s*(?:des\s*)?D[ée]bit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    @"Total\s*(?:des\s*)?D[ée]bit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (totalDebitMatch.Success) sec.TotalDebit = ParseAmount(totalDebitMatch.Groups[1].Value);
 
                 var totalCreditMatch = Regex.Match(sec.RawSectionText,
-                    @"Total\s*(?:des\s*)?Cr[ée]dit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    @"Total\s*(?:des\s*)?Cr[ée]dit(?:s)?\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (totalCreditMatch.Success) sec.TotalCredit = ParseAmount(totalCreditMatch.Groups[1].Value);
 
                 if (!sec.TotalDebit.HasValue && !sec.TotalCredit.HasValue)
                 {
                     var totalTwoNumbers = Regex.Match(sec.RawSectionText,
-                        @"Total\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                        @"Total\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                     if (totalTwoNumbers.Success)
                     {
                         sec.TotalDebit = ParseAmount(totalTwoNumbers.Groups[1].Value);
@@ -3522,7 +3533,15 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                 }
 
-                if (!isBtk && !soldeCourant.HasValue && soldeAnchor.HasValue && amountCandidates.Count > 0)
+                // Repli "dernier candidat = solde" : seulement s'il existe un AUTRE candidat
+                // deja consomme par Debit/Credit ci-dessus (amountCandidates.Count > 1). Avec un
+                // seul candidat, celui-ci a deja ete classe Debit OU Credit dans la boucle
+                // au-dessus (jamais les deux) : le reutiliser aussi comme "solde" fait que
+                // previousSolde devient egal au montant du mouvement lui-meme au lieu du vrai
+                // solde courant, ce qui corrompt ensuite ApplyMovementFallback/l'arbitrage des
+                // candidats ambigus pour TOUTES les lignes suivantes (observe sur AlBaraka :
+                // un Credit invente de plusieurs milliers de dinars a la ligne suivante).
+                if (!isBtk && !soldeCourant.HasValue && soldeAnchor.HasValue && amountCandidates.Count > 1)
                     soldeCourant = amountCandidates[amountCandidates.Count - 1].Value;
 
                 foreach (var cand in ambiguous)

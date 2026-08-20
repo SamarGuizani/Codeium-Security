@@ -1,0 +1,94 @@
+@page "/analyse"
+@inject AppStateService AppState
+@inject MockAnalysisService AnalysisService
+@inject NavigationManager Nav
+
+<PageTitle>Analyse — Codeium Security</PageTitle>
+
+<div class="page">
+    <div class="page-header">
+        <div>
+            <div class="page-title">Analyse du document</div>
+            <div class="page-subtitle">Progression simulée du pipeline OCR → Parser → Export.</div>
+        </div>
+    </div>
+
+    @if (AppState.SelectedDocument is null)
+    {
+        <EmptyState Icon="analyse" Title="Aucun document sélectionné"
+                    Message="Choisissez un document depuis la page Documents pour lancer une simulation d'analyse.">
+            <a class="btn btn-primary" href="/documents">Aller à Documents</a>
+        </EmptyState>
+    }
+    else
+    {
+        <div class="card doc-summary">
+            <div class="doc-summary-icon"><Icon Name="file" Size="20" /></div>
+            <div class="doc-summary-info">
+                <span class="doc-summary-name">@AppState.SelectedDocument.FileName</span>
+                <span class="doc-summary-meta">@AppState.SelectedDocument.SizeDisplay</span>
+            </div>
+            <div class="doc-summary-progress">
+                <span class="progress-percent">@ProgressPercent%</span>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width:@(ProgressPercent)%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="steps-list">
+            @foreach (var step in AppState.AnalysisSteps)
+            {
+                <StepItem Step="step" />
+            }
+        </div>
+
+        @if (AppState.AnalysisCompleted)
+        {
+            <div class="analyze-done">
+                <div class="analyze-done-text">
+                    <Icon Name="check" Size="18" />
+                    Analyse simulée terminée avec succès.
+                </div>
+                <button class="btn btn-primary" @onclick="GoToResults">
+                    Voir les résultats
+                </button>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        if (AppState.SelectedDocument is null) return;
+
+        if (AppState.AnalysisSteps.Count == 0)
+        {
+            AppState.AnalysisSteps = AnalysisService.CreateSteps();
+        }
+
+        if (!AppState.AnalysisCompleted && !AppState.AnalysisRunning)
+        {
+            AppState.AnalysisRunning = true;
+            await AnalysisService.RunAsync(AppState.AnalysisSteps, () => InvokeAsync(StateHasChanged));
+            AppState.AnalysisRunning = false;
+            AppState.AnalysisCompleted = true;
+            AppState.CurrentResult = AnalysisService.GenerateMockResult(AppState.SelectedDocument);
+            StateHasChanged();
+        }
+    }
+
+    private void GoToResults() => Nav.NavigateTo("/resultats");
+
+    private int ProgressPercent
+    {
+        get
+        {
+            var steps = AppState.AnalysisSteps;
+            if (steps.Count == 0) return 0;
+            var done = steps.Count(s => s.Status == StepStatus.Termine);
+            return (int)Math.Round(done * 100.0 / steps.Count);
+        }
+    }
+}

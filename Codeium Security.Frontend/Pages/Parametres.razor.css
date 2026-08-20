@@ -1,0 +1,135 @@
+.settings-list {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.3s ease both;
+}
+
+.settings-list .settings-row:nth-child(1) { animation-delay: 0ms; }
+.settings-list .settings-row:nth-child(2) { animation-delay: 40ms; }
+.settings-list .settings-row:nth-child(3) { animation-delay: 80ms; }
+.settings-list .settings-row:nth-child(4) { animation-delay: 120ms; }
+
+.settings-row-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.settings-row-title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.settings-row-desc {
+    font-size: 12.5px;
+    color: var(--color-text-muted);
+}
+
+.settings-control {
+    max-width: 180px;
+}
+
+.settings-actions {
+    margin-top: 6px;
+    animation: fadeInUp 0.3s ease 0.16s both;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.theme-toggle-track {
+    width: 44px;
+    height: 24px;
+    border-radius: 999px;
+    background: var(--color-border);
+    position: relative;
+    transition: background-color 0.15s ease;
+}
+
+.theme-toggle-track.is-dark {
+    background: var(--color-primary);
+}
+
+.theme-toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.15s ease;
+}
+
+.theme-toggle-track.is-dark .theme-toggle-thumb {
+    transform: translateX(20px);
+}
+
+.settings-control-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    min-width: 46px;
+}
+
+.switch {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+    width: 44px;
+    height: 24px;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.switch-track {
+    width: 44px;
+    height: 24px;
+    border-radius: 999px;
+    background: var(--color-border);
+    position: relative;
+    transition: background-color 0.15s ease;
+}
+
+.switch input:checked ~ .switch-track {
+    background: var(--color-primary);
+}
+
+.switch-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.15s ease;
+}
+
+.switch input:checked ~ .switch-track .switch-thumb {
+    transform: translateX(20px);
+}

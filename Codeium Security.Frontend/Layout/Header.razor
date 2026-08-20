@@ -1,0 +1,35 @@
+@inject ToastService Toasts
+
+<header class="app-header">
+    <div class="header-left">
+        <button class="btn-icon-only mobile-menu-btn" @onclick="OnMenuClick" title="Menu">
+            <Icon Name="menu" Size="20" />
+        </button>
+        <div>
+            <div class="header-title">@Title</div>
+        </div>
+    </div>
+
+    <div class="header-right">
+        <button class="btn-icon-only" title="Notifications" @onclick="ShowNotifications">
+            <Icon Name="bell" Size="19" />
+            <span class="notif-dot"></span>
+        </button>
+
+        <div class="header-user">
+            <div class="user-avatar">SG</div>
+            <div class="user-meta">
+                <span class="user-name">Samar Guizani</span>
+                <span class="user-role">Analyste documentaire</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+@code {
+    [Parameter] public string Title { get; set; } = "Dashboard";
+    [Parameter] public EventCallback OnMenuClick { get; set; }
+
+    private void ShowNotifications() =>
+        Toasts.Show("Aucune nouvelle notification (données fictives).", ToastType.Info);
+}

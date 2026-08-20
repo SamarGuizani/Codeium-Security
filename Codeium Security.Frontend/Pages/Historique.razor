@@ -1,0 +1,109 @@
+@page "/historique"
+@inject MockHistoryService HistoryService
+@inject MockAnalysisService AnalysisService
+@inject AppStateService AppState
+@inject ToastService Toasts
+@inject NavigationManager Nav
+
+<PageTitle>Historique — Codeium Security</PageTitle>
+
+<div class="page">
+    <div class="page-header">
+        <div>
+            <div class="page-title">Historique des documents</div>
+            <div class="page-subtitle">Retrouvez ici les documents que vous avez analysés.</div>
+        </div>
+    </div>
+
+    <div class="card">
+        @if (_items.Count == 0)
+        {
+            <EmptyState Icon="historique" Title="Aucun document traité pour le moment."
+                        Message="Les documents que vous analyserez apparaîtront ici." />
+        }
+        else
+        {
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Document</th>
+                            <th>Banque</th>
+                            <th>Date</th>
+                            <th>Statut</th>
+                            <th>Transactions</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in _items)
+                        {
+                            <tr @key="item.Id">
+                                <td>
+                                    <div class="doc-cell"><Icon Name="file" Size="16" /><span>@item.NomDocument</span></div>
+                                </td>
+                                <td>@item.Banque</td>
+                                <td class="text-muted">@item.Date.ToString("dd/MM/yyyy")</td>
+                                <td><StatusBadge Status="item.Statut" /></td>
+                                <td class="text-muted">@(item.NombreTransactions > 0 ? item.NombreTransactions.ToString() : "—")</td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="btn-icon-only" title="Voir" @onclick="() => ViewItem(item)">
+                                            <Icon Name="eye" Size="16" />
+                                        </button>
+                                        <button class="btn-icon-only" title="Télécharger" @onclick="DownloadItem">
+                                            <Icon Name="download" Size="16" />
+                                        </button>
+                                        <button class="btn-icon-only danger" title="Supprimer" @onclick="() => RequestDelete(item)">
+                                            <Icon Name="trash" Size="16" />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>
+
+<ConfirmDialog IsOpen="_pendingDelete is not null"
+               Title="Supprimer ce document ?"
+               Message="@($"« {_pendingDelete?.NomDocument} » sera retiré de l'historique.")"
+               OnConfirm="ConfirmDelete"
+               OnCancel="() => _pendingDelete = null" />
+
+@code {
+    private List<HistoryItem> _items = new();
+    private HistoryItem? _pendingDelete;
+
+    protected override void OnInitialized()
+    {
+        _items = HistoryService.GetAll();
+    }
+
+    private void ViewItem(HistoryItem item)
+    {
+        AppState.CurrentResult = AnalysisService.GenerateMockResult(new DocumentViewModel
+        {
+            FileName = item.NomDocument,
+            Banque = item.Banque
+        });
+        Nav.NavigateTo("/resultats");
+    }
+
+    private void DownloadItem() =>
+        Toasts.Show("Téléchargement simulé — connexion backend à implémenter.", ToastType.Info);
+
+    private void RequestDelete(HistoryItem item) => _pendingDelete = item;
+
+    private void ConfirmDelete()
+    {
+        if (_pendingDelete is null) return;
+        HistoryService.Remove(_pendingDelete.Id);
+        Toasts.Show("Document supprimé de l'historique.", ToastType.Success);
+        _pendingDelete = null;
+        _items = HistoryService.GetAll();
+    }
+}

@@ -1,0 +1,111 @@
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.step-item + .step-item {
+    margin-top: 10px;
+}
+
+.step-item {
+    animation: fadeInUp 0.3s ease both;
+}
+
+.step-item.is-active {
+    border-color: var(--color-primary);
+    background: var(--color-primary-soft);
+    animation: fadeInUp 0.3s ease both, softPulse 1.8s ease-in-out infinite;
+}
+
+.step-item.is-done {
+    border-color: var(--color-border);
+}
+
+.step-marker {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--color-surface-alt);
+    color: var(--color-text-subtle);
+    border: 1.5px solid var(--color-border);
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.step-item.is-done .step-marker {
+    background: var(--color-success);
+    color: #fff;
+    border-color: var(--color-success);
+    animation: popIn 0.35s ease;
+}
+
+.step-item.is-active .step-marker {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.spinner {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary-soft);
+    border-top-color: var(--color-primary);
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.step-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.step-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.step-desc {
+    font-size: 12.5px;
+    color: var(--color-text-muted);
+}
+
+.step-status-text {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+}
+
+.step-item.is-active .step-status-text {
+    color: var(--color-primary);
+}
+
+.step-item.is-done .step-status-text {
+    color: var(--color-success);
+}
+
+@media (max-width: 560px) {
+    .step-desc { display: none; }
+}

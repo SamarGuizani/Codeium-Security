@@ -1,0 +1,24 @@
+<span class="status-badge @CssClass">
+    <span class="status-dot"></span>
+    @Label
+</span>
+
+@code {
+    [Parameter] public ProcessingStatus Status { get; set; }
+
+    private string Label => Status switch
+    {
+        ProcessingStatus.Termine => "Terminé",
+        ProcessingStatus.EnCours => "En cours",
+        ProcessingStatus.Erreur => "Erreur",
+        _ => "En attente"
+    };
+
+    private string CssClass => Status switch
+    {
+        ProcessingStatus.Termine => "status-success",
+        ProcessingStatus.EnCours => "status-info",
+        ProcessingStatus.Erreur => "status-danger",
+        _ => "status-warning"
+    };
+}

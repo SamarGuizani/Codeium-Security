@@ -1,0 +1,39 @@
+<div class="step-item @StatusClass">
+    <div class="step-marker">
+        @if (Step.Status == StepStatus.Termine)
+        {
+            <Icon Name="check" Size="14" />
+        }
+        else if (Step.Status == StepStatus.EnCours)
+        {
+            <span class="spinner"></span>
+        }
+        else
+        {
+            <span class="dot"></span>
+        }
+    </div>
+    <div class="step-body">
+        <span class="step-name">@Step.Nom</span>
+        <span class="step-desc">@Step.Description</span>
+    </div>
+    <div class="step-status-text">
+        @(Step.Status switch
+        {
+            StepStatus.Termine => "Terminé",
+            StepStatus.EnCours => "En cours…",
+            _ => "En attente"
+        })
+    </div>
+</div>
+
+@code {
+    [Parameter] public AnalysisStepModel Step { get; set; } = default!;
+
+    private string StatusClass => Step.Status switch
+    {
+        StepStatus.Termine => "is-done",
+        StepStatus.EnCours => "is-active",
+        _ => "is-pending"
+    };
+}

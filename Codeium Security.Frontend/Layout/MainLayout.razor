@@ -1,0 +1,81 @@
+@inherits LayoutComponentBase
+@inject NavigationManager Nav
+@implements IDisposable
+
+<div class="nav-progress @(_navLoading ? "active" : "")"></div>
+
+<div class="app-shell">
+    <Sidebar MobileOpen="_mobileOpen" OnCloseMobile="() => _mobileOpen = false" />
+
+    <div class="app-main">
+        <Header Title="@_pageTitle" OnMenuClick="() => _mobileOpen = !_mobileOpen" />
+        <main class="app-content">
+            @Body
+        </main>
+    </div>
+</div>
+
+<ToastContainer />
+
+@code {
+    private bool _mobileOpen;
+    private bool _navLoading;
+    private string _pageTitle = "Dashboard";
+    private CancellationTokenSource? _navProgressCts;
+
+    protected override void OnInitialized()
+    {
+        Nav.LocationChanged += OnLocationChanged;
+        UpdateTitle();
+    }
+
+    private void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        UpdateTitle();
+        _mobileOpen = false;
+        _ = FlashNavProgressAsync();
+        InvokeAsync(StateHasChanged);
+    }
+
+    private async Task FlashNavProgressAsync()
+    {
+        _navProgressCts?.Cancel();
+        var cts = new CancellationTokenSource();
+        _navProgressCts = cts;
+
+        _navLoading = true;
+        await InvokeAsync(StateHasChanged);
+        try
+        {
+            await Task.Delay(280, cts.Token);
+        }
+        catch (TaskCanceledException)
+        {
+            return;
+        }
+        if (cts.IsCancellationRequested) return;
+        _navLoading = false;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private void UpdateTitle()
+    {
+        var path = new Uri(Nav.Uri).AbsolutePath.Trim('/');
+        _pageTitle = path switch
+        {
+            "" => "Dashboard",
+            "documents" => "Documents",
+            "analyse" => "Analyse",
+            "resultats" => "Résultats",
+            "historique" => "Historique",
+            "parametres" => "Paramètres",
+            _ => "Codeium Security"
+        };
+    }
+
+    public void Dispose()
+    {
+        Nav.LocationChanged -= OnLocationChanged;
+        _navProgressCts?.Cancel();
+    }
+}

@@ -1,0 +1,16 @@
+<div class="stat-card card">
+    <div class="stat-icon @Tone">
+        <Icon Name="@Icon" Size="20" />
+    </div>
+    <div class="stat-body">
+        <span class="stat-value">@Value</span>
+        <span class="stat-label">@Label</span>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Label { get; set; } = "";
+    [Parameter] public string Value { get; set; } = "";
+    [Parameter] public string Icon { get; set; } = "inbox";
+    [Parameter] public string Tone { get; set; } = "primary";
+}

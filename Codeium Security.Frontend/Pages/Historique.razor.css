@@ -1,0 +1,41 @@
+.doc-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.doc-cell .icon {
+    color: var(--color-text-subtle);
+    flex-shrink: 0;
+}
+
+.row-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-icon-only {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-icon-only:hover {
+    background: var(--color-surface-alt);
+    color: var(--color-text);
+    transform: translateY(-1px);
+}
+
+.btn-icon-only.danger:hover {
+    background: var(--color-danger-soft);
+    color: var(--color-danger);
+    border-color: var(--color-danger-soft);
+}

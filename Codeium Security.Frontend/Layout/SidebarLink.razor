@@ -1,0 +1,17 @@
+<NavLink href="@Href" Match="@(Href == "/" ? NavLinkMatch.All : NavLinkMatch.Prefix)" class="sidebar-link" @onclick="HandleClick">
+    <span class="sidebar-link-icon"><Icon Name="@Icon" Size="20" /></span>
+    @if (!Collapsed)
+    {
+        <span class="sidebar-link-label">@Label</span>
+    }
+</NavLink>
+
+@code {
+    [Parameter] public string Href { get; set; } = "/";
+    [Parameter] public string Icon { get; set; } = "";
+    [Parameter] public string Label { get; set; } = "";
+    [Parameter] public bool Collapsed { get; set; }
+    [Parameter] public EventCallback OnNavigate { get; set; }
+
+    private Task HandleClick() => OnNavigate.InvokeAsync();
+}

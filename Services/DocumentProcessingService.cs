@@ -2,6 +2,7 @@ using Codeium_Security.Factories;
 using Codeium_Security.Interfaces;
 using Codeium_Security.Models;
 using Codeium_Security.OCR;
+using Codeium_Security.Services.Calculation;
 using Codeium_Security.Services.DocumentClassification;
 using Codeium_Security.Utilities;
 
@@ -15,6 +16,7 @@ namespace Codeium_Security.Services
         private readonly IDocumentClassifier _classifier;
         private readonly DocumentParserFactory _parserFactory;
         private readonly IConfiguration _configuration;
+        private readonly TransactionSumCalculator _sumCalculator = new();
 
         public DocumentProcessingService(
             IOcrService ocrService,
@@ -82,6 +84,12 @@ namespace Codeium_Security.Services
 
             bool needsReview = EvaluateNeedsReview(documentType, document, ocrResult.Confidence);
 
+            // Calcul automatique post-parsing de SUM(Debit)/SUM(Credit) uniquement (voir
+            // TransactionSumCalculator) : aucune validation, aucune comparaison avec le solde,
+            // aucune regle metier, et ne modifie jamais le document. Generique, s'applique a
+            // toutes les banques sans logique specifique.
+            var sums = document is BankDocument bankDoc ? _sumCalculator.Calculate(bankDoc) : null;
+
             return new DocumentProcessingResult
             {
                 FileName = originalFileName,
@@ -90,6 +98,7 @@ namespace Codeium_Security.Services
                 OcrConfidence = ocrResult.Confidence,
                 NeedsReview = needsReview,
                 Document = document,
+                Sums = sums,
                 DebugLines = lines.Select(l => l.FullLineText).ToList(),
                 Lines = lines.Select(l => new LineOutput
                 {

@@ -1,0 +1,28 @@
+@if (IsOpen)
+{
+    <div class="confirm-backdrop" @onclick="Cancel">
+        <div class="confirm-box" @onclick:stopPropagation="true">
+            <div class="confirm-icon">
+                <Icon Name="warning" Size="22" />
+            </div>
+            <h3 class="confirm-title">@Title</h3>
+            <p class="confirm-message">@Message</p>
+            <div class="confirm-actions">
+                <button class="btn btn-secondary" @onclick="Cancel">Annuler</button>
+                <button class="btn btn-danger" @onclick="Confirm">@ConfirmLabel</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public string Title { get; set; } = "Confirmer la suppression";
+    [Parameter] public string Message { get; set; } = "Cette action est irréversible.";
+    [Parameter] public string ConfirmLabel { get; set; } = "Supprimer";
+    [Parameter] public EventCallback OnConfirm { get; set; }
+    [Parameter] public EventCallback OnCancel { get; set; }
+
+    private Task Confirm() => OnConfirm.InvokeAsync();
+    private Task Cancel() => OnCancel.InvokeAsync();
+}

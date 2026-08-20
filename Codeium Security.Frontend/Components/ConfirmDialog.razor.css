@@ -1,0 +1,56 @@
+.confirm-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    padding: 16px;
+    animation: fadeIn 0.15s ease;
+}
+
+.confirm-box {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    max-width: 380px;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    animation: scaleIn 0.2s ease;
+}
+
+.confirm-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--color-danger-soft);
+    color: var(--color-danger);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+}
+
+.confirm-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.confirm-message {
+    color: var(--color-text-muted);
+    font-size: 13.5px;
+    margin: 0 0 20px;
+}
+
+.confirm-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.confirm-actions .btn {
+    flex: 1;
+    justify-content: center;
+}

@@ -1,0 +1,49 @@
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 56px 24px;
+    color: var(--color-text-muted);
+}
+
+.empty-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-surface-alt);
+    color: var(--color-text-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    animation: popIn 0.4s ease;
+}
+
+.empty-title {
+    animation: fadeInUp 0.3s ease 0.05s both;
+}
+
+.empty-message {
+    animation: fadeInUp 0.3s ease 0.1s both;
+}
+
+.empty-action {
+    animation: fadeInUp 0.3s ease 0.15s both;
+}
+
+.empty-title {
+    font-size: 15.5px;
+    color: var(--color-text);
+    margin-bottom: 6px;
+}
+
+.empty-message {
+    font-size: 13.5px;
+    max-width: 380px;
+    margin: 0;
+}
+
+.empty-action {
+    margin-top: 18px;
+}

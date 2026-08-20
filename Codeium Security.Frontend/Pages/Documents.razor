@@ -1,0 +1,90 @@
+@page "/documents"
+@inject AppStateService AppState
+@inject ToastService Toasts
+@inject NavigationManager Nav
+
+<PageTitle>Documents — Codeium Security</PageTitle>
+
+<div class="page">
+    <div class="page-header">
+        <div>
+            <div class="page-title">Documents</div>
+            <div class="page-subtitle">Sélectionnez un relevé bancaire (PDF ou image) pour lancer une analyse simulée.</div>
+        </div>
+    </div>
+
+    @if (_selectedFile is null)
+    {
+        <div class="dropzone @(_dragging ? "dragging" : "")"
+             @ondragenter="() => _dragging = true"
+             @ondragleave="() => _dragging = false"
+             @ondrop="() => _dragging = false">
+            <InputFile @key="_inputKey" OnChange="OnFileSelected" class="dropzone-input" />
+            <div class="dropzone-icon"><Icon Name="upload" Size="26" /></div>
+            <div class="dropzone-title">Glissez-déposez un fichier ici</div>
+            <div class="dropzone-subtitle">ou cliquez pour parcourir — PDF, JPG, PNG (démonstration)</div>
+        </div>
+    }
+    else
+    {
+        <div class="file-card card">
+            <div class="file-card-icon"><Icon Name="file" Size="22" /></div>
+            <div class="file-card-info">
+                <span class="file-card-name">@_selectedFile.Name</span>
+                <span class="file-card-meta">@FormatSize(_selectedFile.Size) · @(_selectedFile.ContentType is { Length: > 0 } ct ? ct : "type inconnu")</span>
+            </div>
+            <button class="btn-icon-only" title="Retirer le fichier" @onclick="RemoveFile">
+                <Icon Name="trash" Size="17" />
+            </button>
+        </div>
+
+        <div class="analyze-actions">
+            <button class="btn btn-primary" @onclick="AnalyzeDocument">
+                <Icon Name="analyse" Size="17" />
+                Analyser le document
+            </button>
+            <span class="analyze-hint">L'analyse est simulée côté frontend — aucune donnée n'est envoyée à un serveur.</span>
+        </div>
+    }
+</div>
+
+@code {
+    private IBrowserFile? _selectedFile;
+    private Guid _inputKey = Guid.NewGuid();
+    private bool _dragging;
+
+    private void OnFileSelected(InputFileChangeEventArgs e)
+    {
+        _selectedFile = e.File;
+        Toasts.Show($"Fichier « {e.File.Name} » sélectionné.", ToastType.Success);
+    }
+
+    private void RemoveFile()
+    {
+        _selectedFile = null;
+        _inputKey = Guid.NewGuid();
+    }
+
+    private void AnalyzeDocument()
+    {
+        if (_selectedFile is null) return;
+
+        AppState.SelectedDocument = new DocumentViewModel
+        {
+            FileName = _selectedFile.Name,
+            SizeBytes = _selectedFile.Size,
+            FileType = string.IsNullOrEmpty(_selectedFile.ContentType) ? "Inconnu" : _selectedFile.ContentType,
+            Status = ProcessingStatus.EnCours
+        };
+        AppState.AnalysisSteps = new();
+        AppState.AnalysisCompleted = false;
+        AppState.CurrentResult = null;
+
+        Toasts.Show("Analyse démarrée (simulation).", ToastType.Info);
+        Nav.NavigateTo("/analyse");
+    }
+
+    private static string FormatSize(long bytes) => bytes < 1024 * 1024
+        ? $"{bytes / 1024.0:0.#} Ko"
+        : $"{bytes / (1024.0 * 1024.0):0.##} Mo";
+}

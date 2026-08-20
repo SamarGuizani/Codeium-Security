@@ -1,0 +1,109 @@
+.doc-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    max-width: 640px;
+}
+
+.doc-summary-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.progress-percent {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-primary);
+    min-width: 34px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.progress-track {
+    width: 90px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--color-surface-alt);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-primary), #60a5fa);
+    transition: width 0.5s ease;
+}
+
+.doc-summary-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.doc-summary-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.doc-summary-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.doc-summary-meta {
+    font-size: 12.5px;
+    color: var(--color-text-muted);
+}
+
+.steps-list {
+    max-width: 640px;
+}
+
+.analyze-done {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 22px;
+    padding: 16px 18px;
+    max-width: 640px;
+    background: var(--color-success-soft);
+    border: 1px solid var(--color-success);
+    border-radius: var(--radius-md);
+    flex-wrap: wrap;
+    animation: scaleIn 0.3s ease;
+}
+
+.analyze-done-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-success);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .doc-summary {
+        flex-wrap: wrap;
+    }
+    .doc-summary-progress {
+        margin-left: 0;
+        width: 100%;
+    }
+    .progress-track {
+        flex: 1;
+    }
+}

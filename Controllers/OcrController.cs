@@ -1,6 +1,7 @@
 ﻿using Codeium_Security.Models;
 using Codeium_Security.OCR;
 using Codeium_Security.Services;
+using Codeium_Security.Services.Calculation;
 using Codeium_Security.Services.Export;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -168,7 +169,9 @@ namespace Codeium_Security.Controllers
             html.Append("th{background:#2a2a2a;} ");
             html.Append("tr:nth-child(even){background:#1a1a1a;} ");
             html.Append(".neg{color:#ff6b6b;} .pos{color:#6bff8f;} ");
-            html.Append("h2{color:#4ea;} h3{color:#8cf;}");
+            html.Append("h2{color:#4ea;} h3{color:#8cf;} ");
+            html.Append(".sums-box{border-radius:8px;padding:10px 16px;margin:10px 0 18px;background:#1b1b1b;border:1px solid #444;font-size:13.5px;} ");
+            html.Append(".sums-box b{color:#eee;}");
             html.Append("</style></head><body>");
 
             html.Append($"<h2>{System.Net.WebUtility.HtmlEncode(file.FileName)}</h2>");
@@ -176,6 +179,7 @@ namespace Codeium_Security.Controllers
             if (root.TryGetProperty("BankName", out var bankName))
                 html.Append($"<p><b>Banque:</b> {System.Net.WebUtility.HtmlEncode(bankName.GetString())}</p>");
 
+            var sumCalculator = new TransactionSumCalculator();
             var accountList = new List<System.Text.Json.JsonElement>();
 
             if (root.TryGetProperty("Accounts", out var accountsArr) && accountsArr.ValueKind == System.Text.Json.JsonValueKind.Array)
@@ -205,6 +209,27 @@ namespace Codeium_Security.Controllers
                 if (account.TryGetProperty("TotalDebit", out var td)) html.Append($"Total Debit: {td} &nbsp;&nbsp; ");
                 if (account.TryGetProperty("TotalCredit", out var tc)) html.Append($"Total Credit: {tc}");
                 html.Append("</p>");
+
+                // Total Debit / Total Credit uniquement (voir TransactionSumCalculator) :
+                // reconstruit un BankAccountSection depuis ce meme JSON pour reutiliser
+                // exactement la meme logique que le pipeline et l'export Excel, sans la
+                // dupliquer. Aucune validation, aucune comparaison avec le solde.
+                try
+                {
+                    var section = System.Text.Json.JsonSerializer.Deserialize<BankAccountSection>(account.GetRawText());
+                    if (section is not null)
+                    {
+                        var sums = sumCalculator.Calculate(section);
+                        html.Append("<div class='sums-box'>");
+                        html.Append($"<b>Total Débit :</b> {sums.TotalDebit.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture)} &nbsp;&nbsp; ");
+                        html.Append($"<b>Total Crédit :</b> {sums.TotalCredit.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture)}");
+                        html.Append("</div>");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[OcrController] Calcul des sommes HTML impossible pour ce compte : {ex.Message}");
+                }
 
                 html.Append("<table><tr><th>#</th><th>Date</th><th>Libelle</th><th>Debit</th><th>Credit</th><th>Solde</th></tr>");
 

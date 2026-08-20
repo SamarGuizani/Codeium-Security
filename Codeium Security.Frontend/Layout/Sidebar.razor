@@ -1,0 +1,55 @@
+@inject NavigationManager Nav
+
+<aside class="sidebar @(Collapsed ? "collapsed" : "") @(MobileOpen ? "mobile-open" : "")">
+    <div class="sidebar-brand">
+        <div class="brand-mark">CS</div>
+        @if (!Collapsed)
+        {
+            <div class="brand-text">
+                <span class="brand-name">Codeium Security</span>
+                <span class="brand-tagline">Traitement documentaire</span>
+            </div>
+        }
+    </div>
+
+    <nav class="sidebar-nav">
+        <SidebarLink Href="/" Icon="dashboard" Label="Dashboard" Collapsed="Collapsed" OnNavigate="CloseMobile" />
+        <SidebarLink Href="/documents" Icon="documents" Label="Documents" Collapsed="Collapsed" OnNavigate="CloseMobile" />
+        <SidebarLink Href="/analyse" Icon="analyse" Label="Analyse" Collapsed="Collapsed" OnNavigate="CloseMobile" />
+        <SidebarLink Href="/resultats" Icon="resultats" Label="Résultats" Collapsed="Collapsed" OnNavigate="CloseMobile" />
+        <SidebarLink Href="/historique" Icon="historique" Label="Historique" Collapsed="Collapsed" OnNavigate="CloseMobile" />
+        <SidebarLink Href="/parametres" Icon="parametres" Label="Paramètres" Collapsed="Collapsed" OnNavigate="CloseMobile" />
+    </nav>
+
+    <button class="sidebar-collapse-btn" @onclick="ToggleCollapse" title="Réduire / agrandir">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="@(Collapsed ? "transform:rotate(180deg)" : "")">
+            <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        @if (!Collapsed)
+        {
+            <span>Réduire</span>
+        }
+    </button>
+</aside>
+
+@if (MobileOpen)
+{
+    <div class="sidebar-backdrop" @onclick="CloseMobile"></div>
+}
+
+@code {
+    [Parameter] public bool MobileOpen { get; set; }
+    [Parameter] public EventCallback OnCloseMobile { get; set; }
+
+    private bool Collapsed { get; set; }
+
+    private void ToggleCollapse() => Collapsed = !Collapsed;
+
+    private async Task CloseMobile()
+    {
+        if (MobileOpen)
+        {
+            await OnCloseMobile.InvokeAsync();
+        }
+    }
+}

@@ -1,15 +1,19 @@
 using ClosedXML.Excel;
 using Codeium_Security.Models;
+using Codeium_Security.Services.Calculation;
 
 namespace Codeium_Security.Services.Export
 {
     // Prend un BankDocument deja parse (voir DocumentProcessingService/BankDocumentParser) et
-    // produit un classeur .xlsx : une feuille par BankAccountSection, avec un bloc d'en-tete
-    // (Banque/Compte/Devise/RIB/Soldes) suivi du tableau Date/Libelle/Debit/Credit. Ne touche
-    // jamais au parsing : ne lit que les proprietes deja presentes sur BankDocument.
+    // produit un classeur .xlsx : une feuille par BankAccountSection, avec Total Debit/Total
+    // Credit en haut (voir TransactionSumCalculator - aucune validation, aucune comparaison
+    // avec le solde), suivi du bloc d'en-tete (Banque/Compte/Devise/RIB/Soldes) puis du tableau
+    // Date/Libelle/Debit/Credit. Ne touche jamais au parsing : ne lit que les proprietes deja
+    // presentes sur BankDocument.
     public class BankExcelExporter
     {
         private static readonly char[] InvalidSheetChars = { '\\', '/', '?', '*', '[', ']', ':' };
+        private readonly TransactionSumCalculator _sumCalculator = new();
 
         public byte[] Export(BankDocument document)
         {
@@ -44,7 +48,10 @@ namespace Codeium_Security.Services.Export
         {
             var sheet = workbook.Worksheets.Add(BuildSheetName(account.AccountNumber, usedSheetNames));
 
-            int row = 1;
+            var sums = _sumCalculator.Calculate(account);
+            int row = WriteSumsSummary(sheet, sums);
+            row++; // ligne vide de separation
+
             sheet.Cell(row, 1).Value = "Banque :";
             sheet.Cell(row, 2).Value = bankName;
             row++;
@@ -102,6 +109,26 @@ namespace Codeium_Security.Services.Export
             sheet.Column(2).Width = 60;
             sheet.Column(3).Width = 16;
             sheet.Column(4).Width = 16;
+        }
+
+        // Ecrit uniquement Total Debit / Total Credit (voir TransactionSumCalculator) tout en
+        // haut de la feuille, avant le bloc Banque/Compte habituel. Aucune validation, aucune
+        // comparaison avec le solde. Retourne la prochaine ligne libre.
+        private static int WriteSumsSummary(IXLWorksheet sheet, TransactionSums sums)
+        {
+            int row = 1;
+
+            sheet.Cell(row, 1).Value = "Total Débit :";
+            sheet.Cell(row, 2).Value = sums.TotalDebit;
+            sheet.Range(row, 1, row, 2).Style.Font.Bold = true;
+            row++;
+
+            sheet.Cell(row, 1).Value = "Total Crédit :";
+            sheet.Cell(row, 2).Value = sums.TotalCredit;
+            sheet.Range(row, 1, row, 2).Style.Font.Bold = true;
+            row++;
+
+            return row;
         }
 
         private static int WriteOptionalAmount(IXLWorksheet sheet, int row, string label, decimal? value)

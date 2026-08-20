@@ -1,0 +1,78 @@
+@page "/parametres"
+@inject ThemeService Theme
+@inject ToastService Toasts
+
+<PageTitle>Paramètres — Codeium Security</PageTitle>
+
+<div class="page">
+    <div class="page-header">
+        <div>
+            <div class="page-title">Paramètres</div>
+            <div class="page-subtitle">Préférences locales à cette session (aucune synchronisation serveur).</div>
+        </div>
+    </div>
+
+    <div class="settings-list">
+        <div class="card settings-row">
+            <div class="settings-row-info">
+                <span class="settings-row-title">Langue</span>
+                <span class="settings-row-desc">Langue de l'interface (démonstration visuelle).</span>
+            </div>
+            <select class="input settings-control" @bind="_langue">
+                <option value="fr">Français</option>
+                <option value="en">Anglais</option>
+                <option value="ar">Arabe</option>
+            </select>
+        </div>
+
+        <div class="card settings-row">
+            <div class="settings-row-info">
+                <span class="settings-row-title">Thème</span>
+                <span class="settings-row-desc">Basculer entre l'affichage clair et sombre.</span>
+            </div>
+            <button class="theme-toggle" @onclick="ToggleTheme">
+                <span class="theme-toggle-track @(Theme.IsDark ? "is-dark" : "")">
+                    <span class="theme-toggle-thumb"></span>
+                </span>
+                <span class="settings-control-label">@(Theme.IsDark ? "Sombre" : "Clair")</span>
+            </button>
+        </div>
+
+        <div class="card settings-row">
+            <div class="settings-row-info">
+                <span class="settings-row-title">Notifications</span>
+                <span class="settings-row-desc">Recevoir des alertes lors du traitement des documents.</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" @bind="_notifications" />
+                <span class="switch-track"><span class="switch-thumb"></span></span>
+            </label>
+        </div>
+
+        <div class="card settings-row">
+            <div class="settings-row-info">
+                <span class="settings-row-title">Densité d'affichage</span>
+                <span class="settings-row-desc">Espacement des tableaux et des listes.</span>
+            </div>
+            <select class="input settings-control" @bind="_densite">
+                <option value="confortable">Confortable</option>
+                <option value="compact">Compact</option>
+            </select>
+        </div>
+
+        <div class="settings-actions">
+            <button class="btn btn-primary" @onclick="Save">Enregistrer les préférences</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string _langue = "fr";
+    private bool _notifications = true;
+    private string _densite = "confortable";
+
+    private async Task ToggleTheme() => await Theme.SetDarkAsync(!Theme.IsDark);
+
+    private void Save() =>
+        Toasts.Show("Préférences enregistrées (local uniquement).", ToastType.Success);
+}

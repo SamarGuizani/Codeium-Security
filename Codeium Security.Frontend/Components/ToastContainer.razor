@@ -1,0 +1,33 @@
+@inject ToastService Toasts
+@implements IDisposable
+
+<div class="toast-stack">
+    @foreach (var toast in Toasts.Messages.ToList())
+    {
+        <div class="toast @ToneClass(toast.Type)" @key="toast.Id">
+            <span class="toast-icon">
+                @(toast.Type switch
+                {
+                    ToastType.Success => "✓",
+                    ToastType.Error => "!",
+                    _ => "i"
+                })
+            </span>
+            <span class="toast-text">@toast.Text</span>
+            <button class="toast-close" @onclick="() => Toasts.Dismiss(toast.Id)">✕</button>
+        </div>
+    }
+</div>
+
+@code {
+    protected override void OnInitialized() => Toasts.OnChange += Refresh;
+    private void Refresh() => InvokeAsync(StateHasChanged);
+    public void Dispose() => Toasts.OnChange -= Refresh;
+
+    private string ToneClass(ToastType type) => type switch
+    {
+        ToastType.Success => "toast-success",
+        ToastType.Error => "toast-error",
+        _ => "toast-info"
+    };
+}

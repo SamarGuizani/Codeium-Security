@@ -59,14 +59,23 @@ namespace Codeium_Security.Tests
             Assert.Equal(2, sheetNames.Distinct().Count());
 
             var sheet1 = workbook.Worksheet(1);
-            Assert.Equal("Banque :", sheet1.Cell(1, 1).GetString());
-            Assert.Equal("Banque Test", sheet1.Cell(1, 2).GetString());
-            Assert.Equal("Compte :", sheet1.Cell(2, 1).GetString());
-            Assert.Equal("Solde initial :", sheet1.Cell(5, 1).GetString());
-            Assert.Equal(1000.500, sheet1.Cell(5, 2).GetDouble(), 3);
 
-            int headerRow = 9;
-            Assert.Equal("Date", sheet1.Cell(headerRow, 1).GetString());
+            // Total Debit / Total Credit en haut de la feuille (voir TransactionSumCalculator).
+            // Aucune validation, aucune comparaison avec le solde : juste la somme des montants.
+            Assert.Equal("Total Débit :", sheet1.Cell(1, 1).GetString());
+            Assert.Equal(100.250, sheet1.Cell(1, 2).GetDouble(), 3);
+            Assert.Equal("Total Crédit :", sheet1.Cell(2, 1).GetString());
+            Assert.Equal(500.000, sheet1.Cell(2, 2).GetDouble(), 3);
+
+            // Le bloc Banque/Compte/... existant est toujours present, juste decale vers le bas.
+            int bankRow = FindRow(sheet1, "Banque :");
+            Assert.Equal("Banque Test", sheet1.Cell(bankRow, 2).GetString());
+            Assert.Equal("Compte :", sheet1.Cell(bankRow + 1, 1).GetString());
+
+            int soldeInitialRow = FindRow(sheet1, "Solde initial :", bankRow);
+            Assert.Equal(1000.500, sheet1.Cell(soldeInitialRow, 2).GetDouble(), 3);
+
+            int headerRow = FindRow(sheet1, "Date");
             Assert.Equal("Libellé", sheet1.Cell(headerRow, 2).GetString());
             Assert.Equal("Débit", sheet1.Cell(headerRow, 3).GetString());
             Assert.Equal("Crédit", sheet1.Cell(headerRow, 4).GetString());
@@ -80,6 +89,26 @@ namespace Codeium_Security.Tests
             int secondTxRow = firstTxRow + 1;
             Assert.Equal(100.250, sheet1.Cell(secondTxRow, 3).GetDouble(), 3);
             Assert.True(sheet1.Cell(secondTxRow, 4).IsEmpty());
+
+            // Compte 2 : aucune transaction -> sommes a zero.
+            var sheet2 = workbook.Worksheet(2);
+            Assert.Equal("Total Débit :", sheet2.Cell(1, 1).GetString());
+            Assert.Equal(0, sheet2.Cell(1, 2).GetDouble(), 3);
+            Assert.Equal("Total Crédit :", sheet2.Cell(2, 1).GetString());
+            Assert.Equal(0, sheet2.Cell(2, 2).GetDouble(), 3);
+        }
+
+        // Cherche la ligne (a partir de `fromRow`) dont la colonne 1 contient exactement `label`.
+        // Rend les tests resilients a un decalage de mise en page (ex: ajout d'un resume en haut)
+        // plutot que de figer des numeros de ligne.
+        private static int FindRow(IXLWorksheet sheet, string label, int fromRow = 1)
+        {
+            for (int r = fromRow; r <= fromRow + 60; r++)
+            {
+                if (sheet.Cell(r, 1).GetString() == label)
+                    return r;
+            }
+            throw new Xunit.Sdk.XunitException($"Ligne avec le libelle '{label}' introuvable a partir de la ligne {fromRow}.");
         }
 
         [Fact]
@@ -129,7 +158,7 @@ namespace Codeium_Security.Tests
 
                 var sheet = workbook.Worksheet(1);
                 var account = bankDoc.Accounts[0];
-                int headerRow = 9;
+                int headerRow = FindRow(sheet, "Date");
                 Assert.Equal("Date", sheet.Cell(headerRow, 1).GetString());
 
                 int expectedLastRow = headerRow + account.Transactions.Count;
