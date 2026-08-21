@@ -121,6 +121,19 @@ namespace Codeium_Security.Services.DocumentParsers
             string bankName = ExtractBankName(fullText);
             bool isBiat = bankName.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
             bool isZitouna = fullText.Contains("ZITOUNA", StringComparison.OrdinalIgnoreCase);
+            // [ATTIJARI] Tableau dense (interligne serre entre la derniere ligne d'une operation
+            // multi-lignes et la premiere ligne de la suivante) : avec la tolerance verticale par
+            // defaut (10, voir DocumentAnalysisEngine.VerticalTolerance), BuildTable regroupe a
+            // tort la 1ere ligne de description d'une operation ("VIR RECU TN MEME AG ...") dans
+            // la ligne de continuation de l'operation PRECEDENTE (montant+solde+"DONT TVA: ..."),
+            // qui elle-meme se retrouve fusionnee comme continuation d'une operation encore plus
+            // en amont. Prouve sur attijari banque.pdf : "COMMISSION VIR MEME BQ 005353" (Debit
+            // attendu 2.380) disparait de son propre Libelle, et son montant 2.380 se retrouve
+            // attribue en Credit a la transaction "VIR RECU..." suivante (au lieu de son vrai
+            // montant 3,000.000) - un ecart Debit/Credit egal et oppose de 2.380 par occurrence.
+            // Meme remede deja applique a 8 autres banques a mise en page dense (ligne 201) :
+            // resserrer VerticalTolerance a 1 separe correctement les lignes.
+            bool isAttijari = fullText.Contains("ATTIJARI", StringComparison.OrdinalIgnoreCase);
             bool isAbcBankDoc = fullText.Contains("Bank ABC", StringComparison.OrdinalIgnoreCase)
             || fullText.Contains("BANK ABC", StringComparison.OrdinalIgnoreCase);
 
@@ -198,11 +211,28 @@ namespace Codeium_Security.Services.DocumentParsers
                 return bhDocument;
             }
             // [UBCI] Detection + contexte pour les 3 regles UBCI (solde, dates deformees,
-            if ((isBiat || isZitouna || isBtk || isBna || isBh || isWifak || isUbci || isBte) && !isAbcBankDoc) engine.VerticalTolerance = 1;
+            if ((isBiat || isZitouna || isBtk || isBna || isBh || isWifak || isUbci || isBte || isAttijari) && !isAbcBankDoc) engine.VerticalTolerance = 1;
 
             var rows = engine.BuildTable(lines);
             rows = SplitDuplicatedRows(rows);
-            rows = MergeContinuationLines(rows);   // ← LIGNE AJOUTÉE, une seule fois
+            // [BIAT] MergeContinuationLines fusionne a tort un fragment d'en-tete de page isole
+            // (ex. la cellule "Credit" seule, separee de "Debit"/"Solde" sur une autre ligne par
+            // l'OCR) dans la transaction precedente, avec une position (Left) fabriquee
+            // (dernier cellule + 1) au lieu de la vraie position OCR de la colonne. La detection
+            // d'ancres Debit/Credit de BIAT (plus bas dans ExtractAccountSections) lit ensuite
+            // cette position fabriquee et deplace ses ancres de colonne au milieu du document,
+            // ce qui bascule les montants Debit vers Credit pour toutes les transactions
+            // suivantes. Confirme par comparaison directe avec le commit 82d7449 (avant
+            // MergeContinuationLines) sur les 11 releves BIAT de reference : le nombre de
+            // transactions ne change pas, mais Debit/Credit sont errones. Ne desactive rien
+            // pour les autres banques (BTE/BH/BNA/Wifak/Al Baraka/UBCI/ATB/Attijari...) qui
+            // dependent de cette etape.
+            if (!isBiat) rows = MergeContinuationLines(rows);
+            if (isBtk)
+            {
+                foreach (var r in rows)
+                    Console.WriteLine("[BTK-ROWS] " + string.Join(" ~~ ", r.Cells.Select(c => $"[{(c.IsContinuationDetail ? "CONT" : "MAIN")}:{c.Left}]'{c.Text}'")));
+            }
             if (isUbci)
             {
                 var ubciDocument = new BankDocument
@@ -996,6 +1026,7 @@ namespace Codeium_Security.Services.DocumentParsers
             // bool hasSignedAmounts = Regex.IsMatch(fullText, @"-\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
             bool isAbcBank = fullText.Contains("Bank ABC", StringComparison.OrdinalIgnoreCase)
             || fullText.Contains("BANK ABC", StringComparison.OrdinalIgnoreCase);
+            bool isAttijari = fullText.Contains("ATTIJARI", StringComparison.OrdinalIgnoreCase);
 
             bool hasSignedAmountsHeader = Regex.IsMatch(fullText,
                 @"\(-\)\s*D[ée]bit\s*/\s*Cr[ée]dit\s*\(\+\)|\(-\)\s*D[ée]bit.*Cr[ée]dit",
@@ -1082,7 +1113,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 // toucher a l'OCR/DebugLines : positions de cellules, telles quelles avant tout
                 // traitement de date/montant.
                 if (isBna) Console.WriteLine("[BNA-DEBUG] Cellules: " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
-                if (isQnb || isAlBarakaDoc || isBh || isAtb || isAbcBank || isBiat) Console.WriteLine($"[DIAG-CELLS] hasSignedAmounts={hasSignedAmounts} debitAnchor={debitAnchor} creditAnchor={creditAnchor} soldeAnchor={soldeAnchor} | " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
+                if (isQnb || isAlBarakaDoc || isBh || isAtb || isAbcBank || isBiat || isAttijari || isBtk) Console.WriteLine($"[DIAG-CELLS] hasSignedAmounts={hasSignedAmounts} debitAnchor={debitAnchor} creditAnchor={creditAnchor} soldeAnchor={soldeAnchor} | " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
                 if (string.IsNullOrWhiteSpace(joined)) continue;
                 //if (isBiat) joined = ConvertFrenchAbbrevDates(joined);
 
@@ -1353,11 +1384,21 @@ namespace Codeium_Security.Services.DocumentParsers
                     RegexOptions.IgnoreCase);
                 if (soldeAuGenericMatch.Success)
                 {
+                    // Le suffixe CR/DB, quand present, fait foi sur le signe (certains formats
+                    // impriment "16.911 DB" sans "-" litteral, d'ou le Math.Abs prealable pour
+                    // annuler un signe deja capture avant de reappliquer celui du suffixe).
+                    // Mais SANS suffixe (ex. BTK "RELEVE DE COMPTE" : "Solde au 31/12/2023
+                    // -16,911", signe imprime directement, jamais de CR/DB), forcer Math.Abs()
+                    // ecrasait a tort un signe negatif deja correctement capture par le groupe
+                    // (-?\d{1,3}...) - le solde d'ouverture debiteur devenait positif. Sans
+                    // suffixe, garder le signe tel que parse.
                     decimal soldeAuVal = ParseAmount(soldeAuGenericMatch.Groups[1].Value);
-                    soldeAuVal = soldeAuGenericMatch.Groups[2].Success
-                        && soldeAuGenericMatch.Groups[2].Value.Equals("DB", StringComparison.OrdinalIgnoreCase)
-                        ? -Math.Abs(soldeAuVal)
-                        : Math.Abs(soldeAuVal);
+                    if (soldeAuGenericMatch.Groups[2].Success)
+                    {
+                        soldeAuVal = soldeAuGenericMatch.Groups[2].Value.Equals("DB", StringComparison.OrdinalIgnoreCase)
+                            ? -Math.Abs(soldeAuVal)
+                            : Math.Abs(soldeAuVal);
+                    }
 
                     if (current == null)
                     {
@@ -1812,6 +1853,8 @@ namespace Codeium_Security.Services.DocumentParsers
                 }
                 if (isAlBarakaDoc)
                     Console.WriteLine($"[ALBARAKA-DEBUG] joined='{joined}' | date='{normalizedDate}' | pendingDate='{pendingDate}' | amountCandidates=[{string.Join(", ", ((IEnumerable<dynamic>)amountCandidates).Select(a => $"{a.Left}:{a.Value}"))}]");
+                if (isBtk)
+                    Console.WriteLine($"[BTK-DEBUG] joined='{joined}' | date='{normalizedDate}' | pendingDate='{pendingDate}' | amountCandidates=[{string.Join(", ", ((IEnumerable<dynamic>)amountCandidates).Select(a => $"{a.Left}:{a.Value}"))}]");
 
                 // Création d'une section par défaut si aucune détection précédente
                 if (current == null)
@@ -1902,8 +1945,15 @@ namespace Codeium_Security.Services.DocumentParsers
                         if (string.IsNullOrEmpty(pendingDate))
                         {
                             // [BTK] Une ligne de commission/TVA (ex: "COM & TVA RET. CARTE") suit
-
-                            if (current.Transactions.Count > 0 && !isNoise)
+                            // une transaction sans reprendre sa propre date : on herite de la
+                            // date de la derniere transaction. [BIAT] exclu : ce document gere
+                            // deja ses lignes montant-seul via ses propres regex de solde plus
+                            // haut (Solde depart au / SOLDE AU / SOLDE) - heriter ici transforme
+                            // a tort des lignes de pied de page/solde en fausses transactions
+                            // (confirme sur BIAT 09-24.pdf face au commit 82d7449 : 2 transactions
+                            // fantomes, dont une avec Debit ET Credit renseignes simultanement -
+                            // jamais le cas d'une vraie operation).
+                            if (!isBiat && current.Transactions.Count > 0 && !isNoise)
 
                                 pendingDate = current.Transactions[current.Transactions.Count - 1].Date;
                             else
