@@ -175,6 +175,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
             var rows = engine.BuildTable(lines);
             rows = SplitDuplicatedRows(rows);
+            if (isAttijari) rows = ReattachAttijariOrphanLabel(rows);
             if (!isBiat) rows = MergeContinuationLines(rows);
             if (isBtk)
             {
@@ -310,6 +311,51 @@ namespace Codeium_Security.Services.DocumentParsers
                         openTxIndex = null;
                         break;
                 }
+            }
+            return result;
+        }
+
+        private static readonly Regex AttijariOrphanLabelRegex = new(@"^(COMMISSION\b|VIR\s+RECU\b)", RegexOptions.IgnoreCase);
+        private static readonly Regex TableCellDateRegex = new(@"^\d{2}[/.\-]\d{2}[/.\-]\d{2,4}$");
+
+        private List<TableRow> ReattachAttijariOrphanLabel(List<TableRow> rows)
+        {
+            var result = new List<TableRow>();
+            for (int i = 0; i < rows.Count; i++)
+            {
+                string joined = string.Join(" ", rows[i].Cells.Select(c => c.Text)).Trim();
+                bool hasDate = ClassifyDateAnywhereRegex.IsMatch(joined);
+                bool hasAmount = ClassifyAmountAnywhereRegex.IsMatch(joined);
+
+                if (!hasDate && !hasAmount && AttijariOrphanLabelRegex.IsMatch(joined) && i + 1 < rows.Count)
+                {
+                    var nextRow = rows[i + 1];
+                    string nextJoined = string.Join(" ", nextRow.Cells.Select(c => c.Text)).Trim();
+                    if (ClassifyDateAnywhereRegex.IsMatch(nextJoined) && ClassifyAmountAnywhereRegex.IsMatch(nextJoined))
+                    {
+                        var nextNonDateLefts = nextRow.Cells
+                            .Where(c => !TableCellDateRegex.IsMatch(c.Text.Trim()))
+                            .Select(c => c.Left)
+                            .ToList();
+                        int insertBase = nextNonDateLefts.Count > 0
+                            ? nextNonDateLefts.Min()
+                            : (nextRow.Cells.Count > 0 ? nextRow.Cells.Max(c => c.Left) + 1 : 0);
+
+                        var orphanCells = rows[i].Cells;
+                        for (int j = 0; j < orphanCells.Count; j++)
+                        {
+                            nextRow.Cells.Add(new TableCell
+                            {
+                                Text = orphanCells[j].Text,
+                                Left = insertBase - (orphanCells.Count - j),
+                                IsContinuationDetail = orphanCells[j].IsContinuationDetail
+                            });
+                        }
+                        continue;
+                    }
+                }
+
+                result.Add(rows[i]);
             }
             return result;
         }
@@ -924,6 +970,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     {
                         string t = NormalizeSignSpacing(CleanWhitespace(c.Text));
                         if (isBiat) t = ConvertFrenchAbbrevDates(t);
+                        if (isAttijari) t = Regex.Replace(t, @"^\s*_\s*(?=\d)", "-");
                         return t;
                     })
                     .ToList();
@@ -1529,6 +1576,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 {
                     string cellRawText = isAmenDocument ? StripAmenEchoDate(cells[i].Text) : cells[i].Text;
                     if (isBna) cellRawText = StripBnaRateLabel(cellRawText);
+                    if (isAttijari) cellRawText = Regex.Replace(cellRawText, @"^\s*_\s*(?=\d)", "-");
                     mergedWithPos.Add((cells[i].Left, NormalizeSignSpacing(CleanWhitespace(cellRawText)), cells[i].IsContinuationDetail));
                 }
                 for (int i = 0; i < mergedWithPos.Count - 1; i++)
@@ -1752,7 +1800,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     int skipCount = (isAmenWithOpCode && cellTexts.Count >= 2
                         && Regex.IsMatch(cellTexts[0].Trim(), @"^\d{2}$")) ? 2 : 1;
                     string description = string.Join(" ", cellTexts.Skip(1).Where(c =>
-                        !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c)
+                        (isAttijari ? !Regex.IsMatch(c.Trim(), @"^-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{1,3}$") : !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c))
                         && !LibelleHeaderFooterNoiseRegex.IsMatch(c)))
                     .Trim(' ', '|', '[', ']', '-', '_');
                 if (isAmenDocument) description = StripAmenEchoDate(description);
