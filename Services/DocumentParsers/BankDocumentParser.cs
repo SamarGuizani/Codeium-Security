@@ -390,6 +390,16 @@ namespace Codeium_Security.Services.DocumentParsers
 
             foreach (var row in rows)
             {
+                // "Solde" seul apparaît aussi dans des phrases hors-tableau plus haut dans le
+                // document (ex. "Solde au 28/02/2026 ... DB"), bien avant l'en-tete reel du
+                // tableau -- si on l'acceptait la, l'ancre Solde se figeait sur cette phrase et
+                // cassait ensuite toute la classification Débit/Crédit/Solde des lignes de
+                // transaction (le vrai montant pris pour un solde, le vrai solde pris pour un
+                // credit). On ne l'accepte donc que sur la ligne qui contient AUSSI l'en-tete
+                // Débit ou Crédit -- la vraie ligne d'en-tete de colonnes.
+                bool rowHasDebitOrCreditHeader = row.Cells.Any(c =>
+                    Regex.IsMatch(c.Text.Trim(), @"^D[ée]bit$|^Cr[ée]dit$", RegexOptions.IgnoreCase));
+
                 foreach (var cell in row.Cells.OrderBy(c => c.Left))
                 {
                     string t = cell.Text.Trim();
@@ -403,7 +413,7 @@ namespace Codeium_Security.Services.DocumentParsers
                         debitAnchor = cell.Left;
                     else if (!creditAnchor.HasValue && Regex.IsMatch(t, @"^Cr[ée]dit$", RegexOptions.IgnoreCase))
                         creditAnchor = cell.Left;
-                    else if (!soldeAnchor.HasValue && Regex.IsMatch(t, @"^Solde$", RegexOptions.IgnoreCase))
+                    else if (!soldeAnchor.HasValue && rowHasDebitOrCreditHeader && Regex.IsMatch(t, @"^Solde$", RegexOptions.IgnoreCase))
                         soldeAnchor = cell.Left;
                 }
                 if (dateOpeAnchor.HasValue && debitAnchor.HasValue && creditAnchor.HasValue && soldeAnchor.HasValue)
@@ -578,7 +588,24 @@ namespace Codeium_Security.Services.DocumentParsers
 
                     libelleParts.Add(txt);
                 }
-                
+
+                // Ce releve n'a en realite qu'UNE seule colonne de montant (Débit et Crédit ne
+                // sont pas deux colonnes visuellement separees malgre l'en-tete) : le sens reel
+                // (debit/credit) est donne par le marqueur textuel "DB"/"CR" en fin de ligne
+                // (deja capture ci-dessus dans soldeSign), pas par la position geometrique du
+                // chiffre -- qui reste la meme que l'operation soit un debit ou un credit. On
+                // utilise donc ce marqueur, quand present, pour corriger la classification faite
+                // par proximite ci-dessus.
+                if (soldeSign == "CR" && debitVal.HasValue && !creditVal.HasValue)
+                {
+                    creditVal = debitVal;
+                    debitVal = null;
+                }
+                else if (soldeSign == "DB" && creditVal.HasValue && !debitVal.HasValue)
+                {
+                    debitVal = creditVal;
+                    creditVal = null;
+                }
 
                 string libelleText = Regex.Replace(string.Join(" ", libelleParts), @"\s{2,}", " ").Trim();
                 bool hasAnyAmount = debitVal.HasValue || creditVal.HasValue || soldeVal.HasValue;
@@ -797,6 +824,39 @@ namespace Codeium_Security.Services.DocumentParsers
            
             int? documentYear = null;
             bool isBiat = fullText.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
+            bool isWifak = fullText.Contains("WIFAK", StringComparison.OrdinalIgnoreCase);
+
+            // Sous-format "Wifak relevé" (ex. RELEVEE SOGEPA 03-2024.pdf), distinct du "Wifak
+            // extrait" (deja fonctionnel, ne pas toucher) : signale par "Relevé de Compte" dans
+            // l'en-tete, contrairement a "Extrait de Compte" pour l'autre sous-format.
+            bool isWifakReleve = isWifak && Regex.IsMatch(fullText, @"Relev[ée]\s+de\s+Compte", RegexOptions.IgnoreCase);
+
+            // Ancres Débit/Crédit calculees des le depart a partir de la repartition reelle des
+            // montants (voir plus bas dans la boucle pour le detail du probleme), pour que les
+            // toutes premieres transactions du document en beneficient aussi -- pas seulement
+            // celles suivant la premiere ligne d'en-tete correctement relue par l'OCR.
+            if (isWifakReleve)
+            {
+                var (wifakInferredDebit, wifakInferredCredit) = InferAnchorsFromAmountPositions(rows);
+                if (wifakInferredDebit.HasValue) debitAnchor = wifakInferredDebit;
+                if (wifakInferredCredit.HasValue) creditAnchor = wifakInferredCredit;
+            }
+
+            // Sous-format "BIAT EXTRAIT" cible par ce correctif : entete "Date valeur | Libelle
+            // opération | Référence | Date opération | Montant" (une seule colonne Montant,
+            // signee), distincte des releves BIAT classiques dont l'entete est "Date | Libellé de
+            // l'opération | Date de valeur | Débit | Crédit" (noter "Date de valeur", avec "de",
+            // qui ne matche donc pas "Date\s+valeur" ci-dessous) -- verifie sur biat 01-2023.pdf,
+            // ou une detection isBiat generique causait une regression (une ligne de libelle
+            // contenant par coincidence une date etait scindee en 2 transactions au lieu d'une).
+            // Detection structurelle SEULE (pas de "isBiat &&") : sur "BIAT EXTRAIT 02.pdf", l'OCR
+            // ne lit jamais le mot "BIAT" nulle part dans le document (logo non reconnu), donc
+            // isBiat reste faux alors que le format est bien celui-ci -- verifie via DIAG-CELLS
+            // (0 ligne avec isBiat=true) sur ce fichier malgre un entete de tableau identique.
+            bool isBiatExtraitSignedMontant =
+                Regex.IsMatch(fullText, @"Date\s+valeur", RegexOptions.IgnoreCase)
+                && Regex.IsMatch(fullText, @"R[ée]f[ée]rence", RegexOptions.IgnoreCase)
+                && !Regex.IsMatch(fullText, @"D[ée]bit.{0,20}Cr[ée]dit", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
             var dateMatch = Regex.Match(fullText, @"\b(\d{1,2})\s+(\d{1,2})\s+(\d{4})\b");
             if (dateMatch.Success && int.TryParse(dateMatch.Groups[3].Value, out int year))
@@ -969,7 +1029,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     .Select(c =>
                     {
                         string t = NormalizeSignSpacing(CleanWhitespace(c.Text));
-                        if (isBiat) t = ConvertFrenchAbbrevDates(t);
+                        if (isBiat || isBiatExtraitSignedMontant) t = ConvertFrenchAbbrevDates(t);
                         if (isAttijari) t = Regex.Replace(t, @"^\s*_\s*(?=\d)", "-");
                         return t;
                     })
@@ -979,7 +1039,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 string joined = string.Join(" ", cellTexts);
                 joined = StripPrintArtifacts(joined);
                 if (isBna) Console.WriteLine("[BNA-DEBUG] Cellules: " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
-                if (isQnb || isAlBarakaDoc || isBh || isAtb || isAbcBank || isBiat || isAttijari || isBtk) Console.WriteLine($"[DIAG-CELLS] hasSignedAmounts={hasSignedAmounts} debitAnchor={debitAnchor} creditAnchor={creditAnchor} soldeAnchor={soldeAnchor} | " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
+                if (isQnb || isAlBarakaDoc || isBh || isAtb || isAbcBank || isBiat || isAttijari || isBtk || isWifak) Console.WriteLine($"[DIAG-CELLS] hasSignedAmounts={hasSignedAmounts} debitAnchor={debitAnchor} creditAnchor={creditAnchor} soldeAnchor={soldeAnchor} dateAnchor={dateAnchor} | " + string.Join(" || ", cellTexts.Select((c, ci) => $"[{ci}]='{c}'")));
                 if (string.IsNullOrWhiteSpace(joined)) continue;
 
                 if (skippingSummaryTable)
@@ -1194,13 +1254,17 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 if ((debitCell != null || creditCell != null) && !looksLikeTransactionRow)
                 {
-                    if (debitCell != null) debitAnchor = debitCell.Left;
-                    if (creditCell != null) creditAnchor = creditCell.Left;
+                    // Wifak relevé : la position du mot d'en-tete ne correspond pas a la position
+                    // reelle des colonnes de chiffres (voir InferAnchorsFromAmountPositions
+                    // ci-dessus, deja calculee au debut de la fonction) -- on ne laisse donc pas
+                    // une relecture d'en-tete l'ecraser par une valeur peu fiable.
+                    if (debitCell != null && !isWifakReleve) debitAnchor = debitCell.Left;
+                    if (creditCell != null && !isWifakReleve) creditAnchor = creditCell.Left;
                     if (soldeCell != null) soldeAnchor = soldeCell.Left;
                     if (dateCell != null) dateAnchor = dateCell.Left;
                     if (montantCell != null) montantAnchor = montantCell.Left;
 
-                    if (debitAnchor.HasValue && creditAnchor.HasValue && Math.Abs(debitAnchor.Value - creditAnchor.Value) < 40)
+                    if (!isWifakReleve && debitAnchor.HasValue && creditAnchor.HasValue && Math.Abs(debitAnchor.Value - creditAnchor.Value) < 40)
                     {
                         var (inferredDebit, inferredCredit) = InferAnchorsFromAmountPositions(rows);
                         if (inferredDebit.HasValue && inferredCredit.HasValue)
@@ -1402,6 +1466,34 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
+                // Attijari (ex. PSP EXTRAIT) : "Solde Veille" est le solde reporte, reimprime en
+                // tete de CHAQUE page. Seule la toute premiere occurrence (avant toute vraie
+                // transaction) vaut solde initial ; les suivantes ne sont ni un solde final ni
+                // une transaction et doivent etre ignorees.
+                if (isAttijari)
+                {
+                    var attijariSoldeVeilleMatch = Regex.Match(joined,
+                        @"Solde\s+Veille\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    if (attijariSoldeVeilleMatch.Success)
+                    {
+                        if (current == null)
+                        {
+                            current = new BankAccountSection
+                            {
+                                AccountNumber = lastSeenAccountNumber,
+                                Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                                Currency = ExtractCurrency(fullText),
+                                SoldeInitial = ParseAmount(attijariSoldeVeilleMatch.Groups[1].Value)
+                            };
+                            previousSolde = current.SoldeInitial;
+                            sectionRawText = joined + "\n";
+                            pendingLibelleBuffer = "";
+                            pendingDate = "";
+                        }
+                        continue;
+                    }
+                }
+
                 var biatSoldeFinalMatch = Regex.Match(joined, @"\bSOLDE\b(?!\s*AU)\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (biatSoldeFinalMatch.Success)
                 {
@@ -1555,6 +1647,11 @@ namespace Codeium_Security.Services.DocumentParsers
                     normalizedDate = GetDateFromAnyCell(cellTexts, documentYear);
                 }
 
+                if (isBiatExtraitSignedMontant && string.IsNullOrEmpty(normalizedDate))
+                {
+                    normalizedDate = GetDateFromAdjacentCellPairs(cellTexts, documentYear);
+                }
+
                 if (isUbci && string.IsNullOrEmpty(normalizedDate) && !ubciClotureReached
                     && cellTexts.Count > 0 && Regex.IsMatch(cellTexts[0], @"^\d{9,10}$"))
                 {
@@ -1673,12 +1770,27 @@ namespace Codeium_Security.Services.DocumentParsers
                     @"Cet\s+extrait\s+est\s+consid[ée]r[ée]|Compliments\s+www\.albarakabank|La\s+banque\s+pratique", RegexOptions.IgnoreCase);
                 if (albarakaNoiseHit) biatInNoiseZone = true;
 
+                // Wifak relevé : pied de page/coordonnees bancaires (souvent en francais+arabe
+                // melanges, sur plusieurs pages) qui se retrouvait colle au libelle de la
+                // derniere transaction lue avant lui, faute d'etre reconnu comme bruit. Egalement
+                // les lignes "Solde ..." intermediaires (solde reporte en bas de page, texte du
+                // milieu parfois illisible par l'OCR) qui ne sont jamais des transactions.
+                bool wifakReleveNoiseHit = isWifakReleve && (
+                    Regex.IsMatch(joined, @"^\s*Solde\b", RegexOptions.IgnoreCase)
+                    || Regex.IsMatch(joined,
+                        @"wifakbank\.com|Matricule\s+Fiscal|R\.C\s*:|Centre\s+d['’]affaires|Centre\s+d['’]Appel|" +
+                        @"Wifak\s+International\s+Bank|M[ée]diateur\s+bancaire|reclamations\.clients|" +
+                        @"Cher\s*\(e\)\s*client|d[ée]lai\s+qui\s+ne\s+d[ée]passe\s+pas|est\s+[àa]\s+votre\s+[ée]coute",
+                        RegexOptions.IgnoreCase));
+                if (wifakReleveNoiseHit) biatInNoiseZone = true;
+
                 bool isAccountHeaderNoise = LibelleHeaderFooterNoiseRegex.IsMatch(joined);
 
                 bool isNoise = Regex.IsMatch(joined, @"\b(Totaux?|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+|Report|A\s+[Rr]eporter)", RegexOptions.IgnoreCase)
                      || biatNoiseHit
                      || bnaNoiseHit
                      || albarakaNoiseHit
+                     || wifakReleveNoiseHit
                      || isRepeatedBoilerplate
                      || isAccountHeaderNoise
                      || (isQnb && Regex.IsMatch(joined, @"Cette\s+d[ée]claration\s+sera\s+consid[ée]r[ée]e|dans\s+votre\s+situation\s+de\s+compte|Pour\s+toute\s+r[ée]clamation", RegexOptions.IgnoreCase));
@@ -1695,11 +1807,25 @@ namespace Codeium_Security.Services.DocumentParsers
 
                     bool isPureAmountLine = amountCandidates.Count > 0;
 
+                    // Attijari : une ligne de continuation comme "DONT TVA: 0,161" contient un
+                    // montant mais n'EST pas un montant de transaction -- c'est du texte de
+                    // libelle qui mentionne un chiffre. On ne l'exclut du texte de continuation
+                    // (ci-dessous) que si aucune transaction n'attend deja son montant
+                    // (pendingDate vide) et qu'il reste du texte substantiel une fois le montant
+                    // retire ; sinon (ex. la ligne "1,012" qui complete reellement l'operation en
+                    // attente) le comportement existant est inchange.
+                    if (isAttijari && isPureAmountLine && string.IsNullOrEmpty(pendingDate))
+                    {
+                        string withoutAmount = AmountRegex.Replace(joined, "").Trim();
+                        if (withoutAmount.Length > 3)
+                            isPureAmountLine = false;
+                    }
+
                     if (isPureAmountLine)
                     {
                         if (string.IsNullOrEmpty(pendingDate))
                         {
-                            if (!isBiat && current.Transactions.Count > 0 && !isNoise)
+                            if (!isBiat && !isBiatExtraitSignedMontant && current.Transactions.Count > 0 && !isNoise)
 
                                 pendingDate = current.Transactions[current.Transactions.Count - 1].Date;
                             else
@@ -1740,12 +1866,12 @@ namespace Codeium_Security.Services.DocumentParsers
                         continue;
                     }
 
-                    if (amountCandidates.Count == 0)
+                    if (!isPureAmountLine)
                     {
                         if (current.Transactions.Count > 0 && string.IsNullOrEmpty(pendingDate))
                         {
                             var lastTx = current.Transactions[current.Transactions.Count - 1];
-                      
+
                             if (!isNoise && !biatInNoiseZone && !(isQnb && Regex.IsMatch(joined, @"support|hotline|N\.B", RegexOptions.IgnoreCase)))
                                 lastTx.Libelle = (lastTx.Libelle + " " + joined.Trim()).Trim();
                         }
@@ -1762,7 +1888,21 @@ namespace Codeium_Security.Services.DocumentParsers
              
                 if (amountCandidates.Count == 0)
                 {
-                   
+                    // Une ligne de header/pied de page (adresse, mentions legales, bandeau
+                    // repete a chaque page...) peut par coincidence contenir une date -- ex.
+                    // une date d'impression du document -- ce qui la faisait jusqu'ici passer
+                    // pour le debut (ou la fin, via "[MONTANT MANQUANT]") d'une transaction, en
+                    // l'absence de tout montant. isNoise/biatInNoiseZone sont deja calcules plus
+                    // haut sur cette meme ligne (motifs generiques + repetition structurelle via
+                    // isRepeatedBoilerplate, PAS une phrase specifique a un releve) et deja
+                    // utilises juste en dessous pour la branche a 1 seule cellule : on applique
+                    // ici la meme garde, par coherence, avant de fabriquer un pendingDate/une
+                    // transaction orpheline a partir de cette ligne.
+                    if (isNoise || biatInNoiseZone)
+                    {
+                        continue;
+                    }
+
                     if (cellTexts.Count == 1 && current.Transactions.Count > 0
                         && string.IsNullOrEmpty(pendingDate) && string.IsNullOrEmpty(pendingLibelleBuffer))
                     {
@@ -1772,7 +1912,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     else
                     {
-                       
+
                         if (!string.IsNullOrEmpty(pendingDate) && pendingDate != normalizedDate)
                         {
                             var orphanTx = new Transaction
@@ -1812,6 +1952,31 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 if (isQnb && Regex.IsMatch(description, @"support|hotline|N\.B|Pour toute|Cette déclaration", RegexOptions.IgnoreCase))
                     continue;
+
+                // BIAT EXTRAIT (montant signe unique) : cette ligne porte sa propre date ET son
+                // propre montant, donc pendingDate/pendingLibelleBuffer ne lui appartiennent pas
+                // s'ils viennent d'une operation precedente dont le montant n'a jamais ete
+                // reconnu (ex. montant illisible en OCR) -- sinon le libelle de cette operation
+                // orpheline se retrouve concatene devant celui de l'operation courante. On la
+                // publie donc a part, montant manquant signale, plutot que de la faire disparaitre
+                // dans la description de la transaction suivante.
+                // Wifak relevé : une operation peut arriver a la fois avec sa propre date ET son
+                // propre montant alors qu'une operation precedente (meme date, montant illisible
+                // par l'OCR, ex. "560" au lieu de "5 000,000") est encore en attente -- on la
+                // publie donc a part elle aussi, meme quand les deux dates sont identiques
+                // (contrairement au cas BIAT EXTRAIT ci-dessus ou l'inegalite de date reste
+                // exigee, comportement deja valide et volontairement inchange).
+                bool shouldFlushPendingOrphan = !string.IsNullOrEmpty(pendingDate)
+                    && ((isBiatExtraitSignedMontant && pendingDate != normalizedDate) || isWifakReleve);
+                if (shouldFlushPendingOrphan)
+                {
+                    current.Transactions.Add(new Transaction
+                    {
+                        Date = pendingDate,
+                        Libelle = (pendingLibelleBuffer.Trim() + " [MONTANT MANQUANT - a verifier manuellement]").Trim()
+                    });
+                    pendingLibelleBuffer = "";
+                }
 
                 string fullDescription = (pendingLibelleBuffer + " " + description).Trim();
                 pendingLibelleBuffer = "";
@@ -2512,6 +2677,26 @@ namespace Codeium_Security.Services.DocumentParsers
             return "";
         }
 
+        // BIAT EXTRAIT uniquement (voir isBiatExtraitSignedMontant) : GetNormalizedDateFromCells
+        // ne teste que les 3 premieres cellules jointes depuis le debut de la ligne (colonne
+        // "Date valeur"). Si l'OCR perd le mot du mois sur CETTE colonne precise (ex. "19" / "24"
+        // sans "JAN", le mot etant absent de la ligne au lieu d'etre simplement colle), la colonne
+        // "Date opération" plus loin sur la meme ligne (ex. "22 JAN" / "24") reste, elle, intacte.
+        // On cherche donc une paire de cellules adjacentes valides n'importe ou dans la ligne,
+        // en dernier recours seulement (jamais si GetNormalizedDateFromCells/GetDateFromAnyCell a
+        // deja trouve une date) : preferer une date legerement decalee (Date opération plutot que
+        // Date valeur) reste bien moins dommageable que perdre l'operation entiere.
+        private string GetDateFromAdjacentCellPairs(List<string> cellTexts, int? defaultYear)
+        {
+            for (int i = 0; i < cellTexts.Count - 1; i++)
+            {
+                string normalized = NormalizeDate(cellTexts[i] + " " + cellTexts[i + 1], defaultYear);
+                if (!string.IsNullOrEmpty(normalized))
+                    return normalized;
+            }
+            return "";
+        }
+
         private decimal ParseAmount(string raw)
         {
             int lastSepIndex = -1;
@@ -3100,7 +3285,18 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     else
                     {
-                        tx.Credit = value;
+                        // Ni signe ni delta de solde pour trancher (mise en page sans colonne
+                        // Solde, ex. Wifak releve Date/Libelle/DateValeur/Debit/Credit) : au lieu
+                        // de supposer Credit par defaut (biaisait systematiquement TOUS les
+                        // montants Debit non signes vers Credit des que leur position tombait dans
+                        // la zone de tolerance +/-15px, cf. colonnes Debit/Credit etroites et
+                        // adjacentes), on retient l'ancre géométriquement la plus proche -- coherent
+                        // avec la branche non-ambigue ci-dessus qui fait deja ce choix des que
+                        // l'ecart depasse la tolerance.
+                        int distDebitAmb = Math.Abs((int)cand.Left - debitAnchor.Value);
+                        int distCreditAmb = Math.Abs((int)cand.Left - creditAnchor.Value);
+                        if (distDebitAmb <= distCreditAmb) tx.Debit = value;
+                        else tx.Credit = value;
                     }
                 }
             }
@@ -3271,18 +3467,54 @@ namespace Codeium_Security.Services.DocumentParsers
             {"sept","09"}, {"oct","10"}, {"nov","11"}, {"dec","12"}, {"déc","12"},
         };
 
+        // Utilisee uniquement par ConvertFrenchAbbrevDates (BIAT EXTRAIT : "05 JAN 24") : les
+        // abreviations y sont en anglais (JAN, FEB, MAR...), contrairement a FrenchMonthsAbbrev
+        // ci-dessus (utilise par BNA notamment) qui ne reconnait que des abreviations francaises
+        // ("janv", "mars"...) et ne doit pas etre modifie pour ne pas affecter BNA.
+        private static readonly Dictionary<string, string> BiatMonthsAbbrev = new(StringComparer.OrdinalIgnoreCase)
+        {
+            {"janv","01"}, {"jan","01"}, {"fevr","02"}, {"févr","02"}, {"feb","02"},
+            {"mars","03"}, {"mar","03"}, {"avr","04"}, {"apr","04"},
+            {"mai","05"}, {"may","05"}, {"juin","06"}, {"jun","06"},
+            {"juil","07"}, {"jul","07"}, {"aout","08"}, {"août","08"}, {"aug","08"},
+            {"sept","09"}, {"sep","09"}, {"oct","10"}, {"nov","11"}, {"dec","12"}, {"déc","12"},
+        };
+
         private string ConvertFrenchAbbrevDates(string text)
         {
-            return Regex.Replace(text, @"(\d{1,2})\s*([A-Za-zéûÉÛ]{3,5})\.?\s*(\d{2,4})", m =>
+            // Cas 1 : jour + mois + annee tous dans la meme cellule (ex. "09JAN24", OCR sans
+            // espaces) -> conversion numerique complete directe.
+            text = Regex.Replace(text, @"(\d{1,2})\s*([A-Za-zéûÉÛ]{3,5})\.?\s*(\d{2,4})", m =>
             {
                 string day = m.Groups[1].Value.PadLeft(2, '0');
                 string monthRaw = m.Groups[2].Value;
                 string year = m.Groups[3].Value;
-                foreach (var kv in FrenchMonthsAbbrev)
+                foreach (var kv in BiatMonthsAbbrev)
                     if (monthRaw.StartsWith(kv.Key, StringComparison.OrdinalIgnoreCase))
                         return $"{day}/{kv.Value}/{(year.Length == 2 ? "20" + year : year)}";
                 return m.Value;
             });
+
+            // Cas 2 : jour + mois colles sans annee dans la cellule (ex. "05JAN", l'annee "24"
+            // etant dans la cellule suivante du tableau) -> on se contente d'inserer l'espace
+            // jour/mois manquant. GetNormalizedDateFromCells recompose ensuite "05 JAN" + "24" en
+            // "05 JAN 24", deja reconnu par NormalizeDate (format "dd MMM yy", InvariantCulture
+            // reconnait nativement JAN..DEC) : aucune duplication de logique de date ici.
+            text = Regex.Replace(text, @"^(\d{1,2})([A-Za-zéûÉÛ]{3,5})$", m =>
+            {
+                string monthRaw = m.Groups[2].Value;
+                foreach (var kv in BiatMonthsAbbrev)
+                    if (monthRaw.StartsWith(kv.Key, StringComparison.OrdinalIgnoreCase))
+                        return $"{m.Groups[1].Value} {monthRaw}";
+                return m.Value;
+            });
+
+            // Cas 3 : cellule "annee" polluee par un artefact d'impression isole (ex. "24 —")
+            // qui casse le TryParseExact strict de NormalizeDate en aval. Ne retire ce parasite
+            // que lorsque la cellule est purement numerique (jamais dans un libelle).
+            text = Regex.Replace(text, @"^(\d{2,4})\s*[—–]\s*$", "$1");
+
+            return text;
         }
         private string ExtractBankName(string text)
         {
