@@ -117,7 +117,21 @@ namespace Codeium_Security.Services.DocumentParsers
             || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
             bool isUbci = fullText.Contains("UBCI", StringComparison.OrdinalIgnoreCase)
                 || Regex.IsMatch(fullText, @"UNION\s+BANCAIRE\s+POUR\s+LE\s+COMMERCE\s+ET\s+L['’]?\s*INDUSTRIE", RegexOptions.IgnoreCase);
-           
+
+            // Banque Tuniso-Libyenne : releves "Extrait de compte" dont l'entete ("No du compte
+            // -", "... du compte : ...") declenche a tort les heuristiques isBh ci-dessous.
+            bool isBtl = fullText.Contains("TUNISO-LIBYENNE", StringComparison.OrdinalIgnoreCase)
+                || Regex.IsMatch(fullText, @"\bBTL\b", RegexOptions.IgnoreCase);
+
+            // Tunisian Saudi Bank : entete "D. Opé. Libellé Référence D. Valeur Débit Crédit
+            // Solde" + "Extrait de compte" declenche a tort bteStructuralFallback ci-dessous.
+            // Regex tolerante a l'OCR sur "Tunisian" (vu lu "Tunision" sur EXTRAIT TSB.pdf).
+            // "Ma banque et plus" (slogan TSB) : signal de secours pour un sous-format "Relevé de
+            // Compte" (ex. releve_compte (1).pdf) qui ne reimprime nulle part le nom de banque.
+            bool isTsb = Regex.IsMatch(fullText, @"Tunisi\w*\s+Saudi\s+Bank", RegexOptions.IgnoreCase)
+                || Regex.IsMatch(fullText, @"\bTSB\b", RegexOptions.IgnoreCase)
+                || fullText.Contains("Ma banque et plus", StringComparison.OrdinalIgnoreCase);
+
             bool bteNameHit = (Regex.IsMatch(fullText, @"\bBTE\b", RegexOptions.IgnoreCase)
                     && !fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase))
                 || fullText.Contains("Banque de Tunisie et des Emirats", StringComparison.OrdinalIgnoreCase);
@@ -137,7 +151,7 @@ namespace Codeium_Security.Services.DocumentParsers
             bool bteStructuralFallback = !bteNameHit
                 && bteColumnHits >= 4
                 && bteDocumentTitleHit
-                && !isBiat && !isZitouna && !isBtk && !isBna && !isWifak && !isAtb && !isUbci && !isAbcBankDoc
+                && !isBiat && !isZitouna && !isBtk && !isBna && !isWifak && !isAtb && !isUbci && !isAbcBankDoc && !isTsb
                 && fullText.IndexOf("AMEN", StringComparison.OrdinalIgnoreCase) < 0
                 && fullText.IndexOf("STB", StringComparison.OrdinalIgnoreCase) < 0
                 && fullText.IndexOf("UIB", StringComparison.OrdinalIgnoreCase) < 0
@@ -155,12 +169,13 @@ namespace Codeium_Security.Services.DocumentParsers
             bool bhSignalPeriode = Regex.IsMatch(fullText, @"Op[ée]rations\s+du\s+\d{2}/\d{2}/\d{4}\s+au\s+\d{2}/\d{2}/\d{4}", RegexOptions.IgnoreCase);
             int bhSignalCount = (bhSignalCompte ? 1 : 0) + (bhSignalTitulaire ? 1 : 0) + (bhSignalPeriode ? 1 : 0);
 
-            bool isBh = fullText.Contains("bhbank", StringComparison.OrdinalIgnoreCase)
+            bool isBh = !isBtl && (
+                fullText.Contains("bhbank", StringComparison.OrdinalIgnoreCase)
                 || fullText.Contains("BH BANK", StringComparison.OrdinalIgnoreCase)
                 || fullText.Contains("Banque de l'Habitat", StringComparison.OrdinalIgnoreCase)
                 || bankName.Contains("Habitat", StringComparison.OrdinalIgnoreCase)
                 || bankName.Contains("(BH)", StringComparison.OrdinalIgnoreCase)
-                || bhSignalCount >= 2;
+                || bhSignalCount >= 2);
 
             if (isBh)
             {
@@ -176,6 +191,23 @@ namespace Codeium_Security.Services.DocumentParsers
             var rows = engine.BuildTable(lines);
             rows = SplitDuplicatedRows(rows);
             if (isAttijari) rows = ReattachAttijariOrphanLabel(rows);
+
+            // BTL : dates abrégées ("19 JAN 24") jamais reconnues par ClassifyDateAnywhereRegex
+            // (format numérique DD/MM/YYYY uniquement) - utilisé par MergeContinuationLines pour
+            // décider si une ligne est une nouvelle transaction. Sans cette conversion prealable,
+            // une ligne dont le montant est en plus mal lu par l'OCR (ex. "9179499" sans séparateur
+            // décimal) perd ses deux seuls signaux (date ET montant) et se retrouve fusionnée dans
+            // le libellé de la transaction précédente au lieu d'être une transaction a part entière
+            // - observé sur bTLextrait (2).pdf. Conversion en dates numériques ici (avant la fusion
+            // de lignes) pour que ClassifyDateAnywhereRegex la reconnaisse, sans toucher au format
+            // affiché ensuite (NormalizeDate gère aussi bien "19 JAN 24" que "19/01/2024").
+            if (isBtl)
+            {
+                foreach (var r in rows)
+                    foreach (var c in r.Cells)
+                        c.Text = ConvertFrenchAbbrevDates(c.Text);
+            }
+
             if (!isBiat) rows = MergeContinuationLines(rows);
             if (isBtk)
             {
@@ -821,7 +853,95 @@ namespace Codeium_Security.Services.DocumentParsers
             bool biatInNoiseZone = false;
             int? debitAnchor = null, creditAnchor = null, soldeAnchor = null, montantAnchor = null, dateAnchor = null; string documentRib = ExtractRib(fullText);
 
-           
+            // BTL ("Extrait de compte") : le numero de compte n'apparait que dans l'en-tete
+            // ("Numero de Compte : 8901769223"), jamais reimprime a cote des transactions -
+            // contrairement au heuristique generique ExtractAccountNumber(joined) plus bas qui,
+            // applique ligne par ligne, capte a tort des numeros de reference (10-20 chiffres) au
+            // fil des transactions et ecrase ce numero par erreur. Fige ici, avant la boucle, pour
+            // que ces lignes ne l'ecrasent plus (voir le garde correspondant plus bas).
+            bool isBtlDoc = fullText.Contains("TUNISO-LIBYENNE", StringComparison.OrdinalIgnoreCase)
+                || Regex.IsMatch(fullText, @"\bBTL\b", RegexOptions.IgnoreCase);
+            if (isBtlDoc)
+            {
+                var btlAccountMatch = Regex.Match(fullText, @"Num[ée]ro\s*de\s*Compte\s*:?\s*(\d{6,20})", RegexOptions.IgnoreCase);
+                if (btlAccountMatch.Success)
+                    lastSeenAccountNumber = btlAccountMatch.Groups[1].Value;
+            }
+
+            // Tunisian Saudi Bank (TSB) : le libelle "Compte N :" est parfois lu correctement par
+            // l'OCR (ex. EXTRAIT TSB.pdf), parfois tronque a 1-2 chiffres (ex. extrait PSP
+            // 2025.pdf, "Compte N : 1"). Dans ce dernier cas, le compte se retrouve fiable dans le
+            // RIB (20 chiffres, sans prefixe "TN" contrairement aux autres banques) : positions
+            // [5..17] (13 chiffres) apres les 2 chiffres banque + 3 chiffres agence, avant les 2
+            // chiffres de cle - verifie sur RIB "21014014404700244107" -> compte "0144047002441",
+            // qui correspond bien au numero de compte imprime sur EXTRAIT TSB.pdf pour ce meme
+            // client (PROFESSIONAL SERVICE PARTS).
+            bool isTsbDoc = Regex.IsMatch(fullText, @"Tunisi\w*\s+Saudi\s+Bank", RegexOptions.IgnoreCase)
+                || Regex.IsMatch(fullText, @"\bTSB\b", RegexOptions.IgnoreCase)
+                || fullText.Contains("Ma banque et plus", StringComparison.OrdinalIgnoreCase);
+            if (isTsbDoc)
+            {
+                var tsbAccountMatch = Regex.Match(fullText, @"Compte\s*N[°o]?\s*:?\s*(\d{6,20})", RegexOptions.IgnoreCase);
+                if (tsbAccountMatch.Success && tsbAccountMatch.Groups[1].Value.Length >= 6)
+                {
+                    lastSeenAccountNumber = tsbAccountMatch.Groups[1].Value;
+                }
+                else
+                {
+                    // Sous-format "Relevé de Compte" (releve_compte (1).pdf) : le RIB (20
+                    // chiffres) suit l'entete "R.I.B" sur une ligne separee, pas immediatement
+                    // apres un label "RIB :" - on retombe donc sur le premier bloc de 20 chiffres
+                    // isole du document, fiable ici (aucun autre nombre a 20 chiffres attendu
+                    // avant le RIB dans ce sous-format).
+                    var tsbRibMatch = Regex.Match(fullText, @"RIB\s*:?\s*(\d{20})", RegexOptions.IgnoreCase);
+                    if (!tsbRibMatch.Success)
+                        tsbRibMatch = Regex.Match(fullText, @"(?<!\d)(\d{20})(?!\d)");
+                    if (tsbRibMatch.Success)
+                        lastSeenAccountNumber = tsbRibMatch.Groups[1].Value.Substring(5, 13);
+                }
+            }
+
+            // TSB a DEUX sous-formats bien distincts :
+            // - "Extrait de compte" (EXTRAIT TSB.pdf, extrait PSP 2025.pdf) : entete "... Débit
+            //   Crédit Solde" - CHAQUE ligne reimprime le solde courant signe ("<montant> DB|CR"),
+            //   utilisable pour corriger un sens Débit/Crédit devine a tort par le fallback
+            //   generique (voir plus bas).
+            // - "Relevé de Compte" (TSB_relevé.pdf) : entete "... Débit Crédit" SANS colonne Solde
+            //   - aucune ligne n'a de solde courant imprime. Appliquer la meme correction par
+            //   comparaison de solde y a ete teste et corrompt des transactions au hasard (le
+            //   dernier nombre decimal d'une ligne n'y est jamais un solde, juste le montant lui-
+            //   meme ou un fragment de texte fusionne) : la correction est donc reservee au premier
+            //   sous-format via ce drapeau.
+            bool tsbHasRunningSoldeColumn = isTsbDoc
+                && Regex.IsMatch(fullText, @"D[ée]bit[ \t]+Cr[ée]dit[ \t]+Solde", RegexOptions.IgnoreCase);
+            decimal? tsbPrevSignedSolde = null;
+            bool tsbPrevWasDebit = true;
+
+            // BTL "RELEVE DE COMPTE MENSUEL" : la ligne de solde de cloture, en toute fin de
+            // tableau, n'a plus aucun libelle ("Solde ..." perdu par l'OCR) - seule une ligne "TND"
+            // isolee (colonne devise) suivie d'une ligne ne contenant que deux montants (debit,
+            // credit) la distingue d'une transaction normale. Cherche sur tout le document (garde
+            // la derniere occurrence, la bonne en cas de plusieurs pages) et applique en toute fin
+            // de methode, uniquement si aucune autre regle n'a deja rempli SoldeFinal.
+            // Recherchee dans fullText (lignes brutes, avant regroupement en cellules) : une fois
+            // les rows fusionnees par MergeContinuationLines, la ligne "TND" isolee est absorbee
+            // comme cellule de continuation dans la transaction precedente et une recherche par
+            // ligne de rows ne la retrouve plus isolee - fullText echappe a ce probleme.
+            decimal? btlStructuralClosingBalance = null;
+            if (isBtlDoc)
+            {
+                var closingMatches = Regex.Matches(fullText,
+                    @"^\s*TND\s*$\r?\n(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s*$",
+                    RegexOptions.IgnoreCase | RegexOptions.Multiline);
+                foreach (Match m in closingMatches)
+                {
+                    decimal debitVal = ParseAmount(m.Groups[1].Value);
+                    decimal creditVal = ParseAmount(m.Groups[2].Value);
+                    btlStructuralClosingBalance = creditVal != 0 ? creditVal : -debitVal;
+                }
+            }
+
+
             int? documentYear = null;
             bool isBiat = fullText.Contains("BIAT", StringComparison.OrdinalIgnoreCase);
             bool isWifak = fullText.Contains("WIFAK", StringComparison.OrdinalIgnoreCase);
@@ -1189,7 +1309,9 @@ namespace Codeium_Security.Services.DocumentParsers
                     
                 }
                 var account = ExtractAccountNumber(joined);
-                if (!string.IsNullOrWhiteSpace(account))
+                if (!string.IsNullOrWhiteSpace(account)
+                    && !(isBtlDoc && !string.IsNullOrWhiteSpace(lastSeenAccountNumber))
+                    && !(isTsbDoc && !string.IsNullOrWhiteSpace(lastSeenAccountNumber)))
                     lastSeenAccountNumber = account;
 
                 var ribMatch = Regex.Match(joined, @"TN\d{2}[\s\d]{15,25}");
@@ -1311,7 +1433,12 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     else
                     {
-                        current.SoldeFinal = soldeAuVal;
+                        // TSB : "Solde au : <date ouverture> <montant>" est reimprime tel quel en
+                        // en-tete de CHAQUE page (contexte, pas une cloture) - sans cette garde,
+                        // la derniere page ecrasait SoldeFinal avec le solde d'OUVERTURE au lieu du
+                        // solde de cloture reel (jamais reimprime sous ce libelle dans ce format).
+                        if (!(isTsbDoc && soldeAuVal == current.SoldeInitial))
+                            current.SoldeFinal = soldeAuVal;
                     }
                     continue;
                 }
@@ -1378,6 +1505,75 @@ namespace Codeium_Security.Services.DocumentParsers
                     pendingDate = "";
                     continue;
                 }
+
+                // BTL : "Solde départ au" / "Solde fin au" sont suivis directement du montant, la
+                // date (ex. "07 NOV 23") atterrissant sur sa propre ligne/cellule apres le decoupage
+                // du tableau - contrairement au format ci-dessus (biatSoldeDepartMatch) qui exige
+                // une date numerique DD/MM/YYYY immediatement apres "au". Sans ce cas, ces lignes
+                // ne matchaient jamais et SoldeInitial/SoldeFinal restaient vides pour BTL.
+                if (isBtlDoc)
+                {
+                    var btlSoldeDepartMatch = Regex.Match(joined, @"Solde\s+d[ée]part\s+au\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    if (btlSoldeDepartMatch.Success)
+                    {
+                        if (current != null)
+                        {
+                            current.RawSectionText = sectionRawText;
+                            sections.Add(current);
+                        }
+                        sectionRawText = joined + "\n";
+
+                        decimal btlDepartInit = ParseAmount(btlSoldeDepartMatch.Groups[1].Value);
+                        current = new BankAccountSection
+                        {
+                            AccountNumber = lastSeenAccountNumber,
+                            Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                            Currency = ExtractCurrency(fullText),
+                            SoldeInitial = btlDepartInit
+                        };
+                        previousSolde = btlDepartInit;
+                        pendingLibelleBuffer = "";
+                        pendingDate = "";
+                        continue;
+                    }
+
+                    var btlSoldeFinMatch = Regex.Match(joined, @"Solde\s+fin\s+au\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
+                    if (btlSoldeFinMatch.Success)
+                    {
+                        if (current != null) current.SoldeFinal = ParseAmount(btlSoldeFinMatch.Groups[1].Value);
+                        continue;
+                    }
+
+                    // Autre sous-format BTL, "RELEVE DE COMPTE MENSUEL" (ex. BTL 02.pdf, BTL.pdf) :
+                    // la toute premiere ligne du tableau est "<date> Solde au: <date debut> <date
+                    // fin> <debit> <credit>" - le solde de report, pas une vraie transaction. Sans ce
+                    // cas elle finissait comptee comme transaction #0 et SoldeInitial restait vide.
+                    if (current == null)
+                    {
+                        var btlOpeningMatch = Regex.Match(joined,
+                            @"Solde\s+au\s*:?\s*\d{2}[/\-]\d{2}[/\-]\d{4}.*?(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s*$",
+                            RegexOptions.IgnoreCase);
+                        if (btlOpeningMatch.Success)
+                        {
+                            decimal btlOpeningDebit = ParseAmount(btlOpeningMatch.Groups[1].Value);
+                            decimal btlOpeningCredit = ParseAmount(btlOpeningMatch.Groups[2].Value);
+                            decimal btlOpeningInit = btlOpeningCredit != 0 ? btlOpeningCredit : -btlOpeningDebit;
+                            current = new BankAccountSection
+                            {
+                                AccountNumber = lastSeenAccountNumber,
+                                Rib = string.IsNullOrWhiteSpace(lastSeenRib) ? documentRib : lastSeenRib,
+                                Currency = ExtractCurrency(fullText),
+                                SoldeInitial = btlOpeningInit
+                            };
+                            previousSolde = btlOpeningInit;
+                            sectionRawText = joined + "\n";
+                            pendingLibelleBuffer = "";
+                            pendingDate = "";
+                            continue;
+                        }
+                    }
+                }
+
                 var biatSoldeDepartMatch = Regex.Match(joined, @"Solde\s+d[ée]part\s+au\s+\d{2}/\d{2}/\d{4}\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (biatSoldeDepartMatch.Success)
                 {
@@ -1912,7 +2108,6 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     else
                     {
-
                         if (!string.IsNullOrEmpty(pendingDate) && pendingDate != normalizedDate)
                         {
                             var orphanTx = new Transaction
@@ -1924,12 +2119,41 @@ namespace Codeium_Security.Services.DocumentParsers
                             pendingLibelleBuffer = "";
                         }
 
-                        pendingDate = normalizedDate;
                         string textOnly = string.Join(" ", cellTexts.Skip(1).Where(c =>
                             !AmountRegex.IsMatch(isAmenDocument ? StripAmenEchoDate(c) : c)
                             && !LibelleHeaderFooterNoiseRegex.IsMatch(c)));
                         if (isAmenDocument) textOnly = StripAmenEchoDate(textOnly);
-                        pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
+
+                        // BTL : une ligne sans montant reconnu (OCR ayant tronque le chiffre, ex.
+                        // "1 0" au lieu de "1 000,000") est normalement mise en attente puis
+                        // prefixee au libelle de la PROCHAINE transaction - correct quand elle en
+                        // est reellement la suite, mais quand elle commence par un mot-cle de
+                        // transaction BTL a part entiere (Versement, Retrait, Reglement Cheque,
+                        // Virement, Encaissement), c'est une operation distincte qui doit rester sa
+                        // propre ligne meme si la transaction suivante partage la meme date
+                        // (frequent : plusieurs operations le meme jour). Sans cette garde, elle se
+                        // retrouvait fondue dans le libelle d'une transaction sans rapport, sans
+                        // meme etre signalee.
+                        bool isBtlStandaloneOrphan = isBtlDoc
+                            && Regex.IsMatch(textOnly,
+                                @"^\s*\d*\s*(Versement|Retrait|Reglement\s+Cheque|Virement|Encaissement)",
+                                RegexOptions.IgnoreCase);
+
+                        if (isBtlStandaloneOrphan)
+                        {
+                            current.Transactions.Add(new Transaction
+                            {
+                                Date = normalizedDate,
+                                Libelle = (textOnly.Trim() + " [MONTANT A VERIFIER - lecture OCR incertaine]").Trim()
+                            });
+                            pendingDate = "";
+                            pendingLibelleBuffer = "";
+                        }
+                        else
+                        {
+                            pendingDate = normalizedDate;
+                            pendingLibelleBuffer = (pendingLibelleBuffer + " " + textOnly).Trim();
+                        }
                     }
                     continue;
                 }
@@ -1982,6 +2206,24 @@ namespace Codeium_Security.Services.DocumentParsers
                 pendingLibelleBuffer = "";
                 pendingDate = "";
 
+                // TSB (releve_compte (1).pdf) : la ligne "Total ... / الجديد الرصيد" (nouveau
+                // solde) et la mention legale de cloture ("... considérons approuvé la totalité
+                // des mouvements ... sans restrictions ni réserves ...", bilingue francais/arabe)
+                // ont chacune une date et un montant valides et se faisaient donc compter a tort
+                // comme de vraies transactions.
+                if (isTsbDoc && IsTsbClosingBoilerplate(fullDescription))
+                {
+                    continue;
+                }
+
+                // TSB : a un saut de page, le numero de reference d'une transaction (ex.
+                // "2101400337") atterrit parfois seul sur sa propre ligne au lieu de rester
+                // rattache au libelle de la transaction precedente, entrainant la creation d'une
+                // fausse transaction fantome (libelle = uniquement ce numero, sans aucun texte).
+                if (isTsbDoc && Regex.IsMatch(fullDescription.Trim(), @"^\d{6,15}$"))
+                {
+                    continue;
+                }
 
                 if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
                 {
@@ -1995,6 +2237,45 @@ namespace Codeium_Security.Services.DocumentParsers
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
                 AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, hasSignedAmounts, out  var soldeCourantTx);
                 ApplyMovementFallback(tx, soldeAvantTx, soldeCourantTx);
+
+                if (tsbHasRunningSoldeColumn && (tx.Debit.HasValue || tx.Credit.HasValue))
+                {
+                    // Le solde courant est le dernier montant decimal reconnaissable de la ligne
+                    // (colonne la plus a droite) - fiable meme quand la cellule Débit/Crédit
+                    // elle-meme est illisible par l'OCR (ex. "1 0" au lieu de "1 095,000"). Le
+                    // marqueur DB/CR qui le suit est parfois lui aussi corrompu (ex. lu "8" au lieu
+                    // de "DB") : dans ce cas on garde le signe de la ligne precedente (les
+                    // changements de signe DB<->CR sont rares et alors correctement lus).
+                    var tsbAmountMatches = Regex.Matches(joined, @"-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3}");
+                    if (tsbAmountMatches.Count > 0)
+                    {
+                        var lastAmountMatch = tsbAmountMatches[tsbAmountMatches.Count - 1];
+                        string afterAmount = joined.Substring(lastAmountMatch.Index + lastAmountMatch.Length);
+                        bool tsbIsDebit = Regex.IsMatch(afterAmount, @"\bCR\b", RegexOptions.IgnoreCase)
+                            ? false
+                            : (Regex.IsMatch(afterAmount, @"\bDB\b", RegexOptions.IgnoreCase) || tsbPrevWasDebit);
+                        decimal tsbSoldeVal = ParseAmount(lastAmountMatch.Value);
+                        decimal tsbSignedSolde = tsbIsDebit ? -Math.Abs(tsbSoldeVal) : Math.Abs(tsbSoldeVal);
+
+                        if (tsbPrevSignedSolde.HasValue)
+                        {
+                            decimal delta = tsbSignedSolde - tsbPrevSignedSolde.Value;
+                            if (Math.Abs(delta) > 0.001m)
+                            {
+                                bool expectDebit = delta < 0;
+                                bool actualIsCredit = tx.Credit.HasValue;
+                                bool actualIsDebit = tx.Debit.HasValue;
+                                if ((expectDebit && actualIsCredit) || (!expectDebit && actualIsDebit))
+                                {
+                                    (tx.Debit, tx.Credit) = (tx.Credit, tx.Debit);
+                                }
+                            }
+                        }
+                        tsbPrevSignedSolde = tsbSignedSolde;
+                        tsbPrevWasDebit = tsbIsDebit;
+                    }
+                }
+
                 current.Transactions.Add(tx);
                 if (isBna) Console.WriteLine($"[BNA-DEBUG] Transaction creee : Date='{tx.Date}' Libelle='{tx.Libelle}' Debit={tx.Debit} Credit={tx.Credit}");
                 biatInNoiseZone = false;
@@ -2035,6 +2316,24 @@ namespace Codeium_Security.Services.DocumentParsers
                         sec.TotalCredit = ParseAmount(totalTwoNumbers.Groups[2].Value);
                     }
                 }
+            }
+
+            if (isBtlDoc && btlStructuralClosingBalance.HasValue && sections.Count > 0)
+            {
+                var lastSection = sections[sections.Count - 1];
+                if (!lastSection.SoldeFinal.HasValue)
+                    lastSection.SoldeFinal = btlStructuralClosingBalance;
+            }
+
+            // TSB : filet de securite - la ligne de cloture "Total ... considérons approuvé ...
+            // sans restrictions ni réserves" (voir IsTsbClosingBoilerplate) est parfois assemblee
+            // par un chemin different de la boucle principale (fusion de lignes de continuation en
+            // fin de tableau) et manque alors le garde ci-dessus ; on la retire donc aussi ici,
+            // apres coup, quel que soit le chemin qui l'a creee.
+            if (isTsbDoc)
+            {
+                foreach (var sec in sections)
+                    sec.Transactions.RemoveAll(tx => IsTsbClosingBoilerplate(tx.Libelle ?? ""));
             }
 
             return sections;
@@ -3380,6 +3679,17 @@ namespace Codeium_Security.Services.DocumentParsers
         }
 
      
+        // TSB : mention legale de cloture de releve (bilingue francais/arabe, "considérons
+        // approuvé la totalité des mouvements ... sans restrictions ni réserves") et ligne "Total
+        // / nouveau solde" (الجديد الرصيد) - toutes deux porteuses d'une date et d'un montant
+        // valides, donc comptees a tort comme transactions par le moteur generique.
+        private static bool IsTsbClosingBoilerplate(string text)
+        {
+            return Regex.IsMatch(text,
+                @"الجديد\s*الرصيد|consid[ée]rons\s+approuv[ée]|restrictions\s+ni\s+r[ée]serves",
+                RegexOptions.IgnoreCase);
+        }
+
         private static bool IsBiatNoise(string text)
         {
             if (ArabicScriptRegex.IsMatch(text)) return true;
@@ -3415,10 +3725,15 @@ namespace Codeium_Security.Services.DocumentParsers
 
         private string ExtractCurrency(string text)
         {
-            if (text.Contains("TND")) return "TND";
-            if (text.Contains("DINAR")) return "TND";
-            if (text.Contains("EUR")) return "EUR";
-            if (text.Contains("USD")) return "USD";
+            // Comparaison insensible a la casse (ex. "Tnd" lu par l'OCR) et ajout de "Dinar
+            // Tunisien" en toutes lettres : avant ce correctif, un releve dont l'OCR ne
+            // reproduisait jamais "TND"/"DINAR" en MAJUSCULES exactes laissait Currency vide, ce
+            // qui faisait retomber l'export Excel sur le format a 2 decimales (BankExcelExporter)
+            // au lieu des 3 decimales attendues pour le dinar tunisien.
+            if (text.Contains("TND", StringComparison.OrdinalIgnoreCase)) return "TND";
+            if (text.Contains("DINAR", StringComparison.OrdinalIgnoreCase)) return "TND";
+            if (text.Contains("EUR", StringComparison.OrdinalIgnoreCase)) return "EUR";
+            if (text.Contains("USD", StringComparison.OrdinalIgnoreCase)) return "USD";
             return "";
         }
 
@@ -3522,6 +3837,17 @@ namespace Codeium_Security.Services.DocumentParsers
                 || Regex.IsMatch(text, @"\bBTE\b"))
             {
                 return "Banque de Tunisie et des Emirats (BTE)";
+            }
+            if (text.Contains("TUNISO-LIBYENNE", StringComparison.OrdinalIgnoreCase)
+                || Regex.IsMatch(text, @"\bBTL\b", RegexOptions.IgnoreCase))
+            {
+                return "Banque Tuniso-Libyenne (BTL)";
+            }
+            if (Regex.IsMatch(text, @"Tunisi\w*\s+Saudi\s+Bank", RegexOptions.IgnoreCase)
+                || Regex.IsMatch(text, @"\bTSB\b", RegexOptions.IgnoreCase)
+                || text.Contains("Ma banque et plus", StringComparison.OrdinalIgnoreCase))
+            {
+                return "Tunisian Saudi Bank (TSB)";
             }
             if (text.Contains("AlBaraka", StringComparison.OrdinalIgnoreCase))
             {

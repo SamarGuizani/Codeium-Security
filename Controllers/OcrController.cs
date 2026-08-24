@@ -350,6 +350,71 @@ namespace Codeium_Security.Controllers
         }
 
 
+        // Test direct : traite tous les PDF/images d'un dossier LOCAL (sur la machine qui execute
+        // ce serveur) et enregistre un .xlsx par fichier source dans un dossier de sortie -
+        // aucun upload HTTP requis, testable directement depuis Swagger avec de simples chemins.
+        // Un fichier illisible/non reconnu comme document bancaire n'interrompt pas le lot (voir
+        // Errors dans la reponse).
+        [HttpPost("export-excel-folder")]
+        public async Task<IActionResult> ExportExcelFolder([FromQuery] string inputFolder, [FromQuery] string? outputFolder = null)
+        {
+            if (string.IsNullOrWhiteSpace(inputFolder))
+                return BadRequest("Le parametre 'inputFolder' est requis (chemin local, ex. C:\\Users\\...\\MonDossier).");
+
+            if (!Directory.Exists(inputFolder))
+                return BadRequest($"Dossier introuvable : {inputFolder}");
+
+            outputFolder = string.IsNullOrWhiteSpace(outputFolder)
+                ? Path.Combine(inputFolder, "Excel")
+                : outputFolder;
+            Directory.CreateDirectory(outputFolder);
+
+            var filesToProcess = Directory.GetFiles(inputFolder)
+                .Where(f => SupportedExtensions.Contains(Path.GetExtension(f), StringComparer.OrdinalIgnoreCase))
+                .OrderBy(f => f)
+                .ToList();
+
+            if (filesToProcess.Count == 0)
+                return BadRequest($"Aucun fichier supporte trouve dans {inputFolder} (extensions attendues : {string.Join(", ", SupportedExtensions)}).");
+
+            var savedFiles = new List<string>();
+            var errors = new List<object>();
+
+            foreach (var filePath in filesToProcess)
+            {
+                var fileName = Path.GetFileName(filePath);
+                try
+                {
+                    var result = await _processingService.ProcessFileAsync(filePath, fileName);
+
+                    if (result.Document is not BankDocument bankDoc)
+                    {
+                        errors.Add(new { FileName = fileName, Error = $"Non reconnu comme releve bancaire (type detecte : {result.DetectedType})." });
+                        continue;
+                    }
+
+                    var xlsxBytes = _excelExporter.Export(bankDoc);
+                    var xlsxPath = Path.Combine(outputFolder, Path.GetFileNameWithoutExtension(fileName) + ".xlsx");
+                    await System.IO.File.WriteAllBytesAsync(xlsxPath, xlsxBytes);
+                    savedFiles.Add(xlsxPath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[OcrController] ERREUR export-excel-folder '{fileName}': {ex.Message}");
+                    errors.Add(new { FileName = fileName, Error = ex.Message });
+                }
+            }
+
+            return Ok(new
+            {
+                InputFolder = inputFolder,
+                OutputFolder = outputFolder,
+                Count = savedFiles.Count,
+                Files = savedFiles,
+                Errors = errors
+            });
+        }
+
         [HttpPost("process-batch")]
         public async Task<IActionResult> ProcessBatch(List<IFormFile>? files)
         {
