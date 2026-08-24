@@ -268,7 +268,11 @@ namespace Codeium_Security.Services.DocumentParsers
             @"Division\s+des\s+R[ée]clamations|" +
             @"(D[ée]bit.{0,20}Cr[ée]dit)|(Cr[ée]dit.{0,20}D[ée]bit)|D\.?\s*Op[ée]\.?\s+Libell[ée]|" +
             @"^[lI1]['’]op[ée]ration\.?\s*$|" +
-            @"^\d{2}[/.\-]\d{2}[/.\-]\d{2,4}\s+\d{2}[/.\-]\d{2}[/.\-]\d{2,4}\s*-?\s*(Date\s+de)?\s*$",
+            @"^\d{2}[/.\-]\d{2}[/.\-]\d{2,4}\s+\d{2}[/.\-]\d{2}[/.\-]\d{2,4}\s*-?\s*(Date\s+de)?\s*$|" +
+            // Bruit de bas/haut de page d'un export web (ex. BTK@DIRECT) : URL et compteur de
+            // page "X/Y" reimprimes sur chaque page, jamais du texte de transaction pour aucune
+            // banque - ajout purement additif, ne retire que ce type de bruit.
+            @"https?://\S+|^\s*\d{1,3}\s*/\s*\d{1,3}\s*$",
             RegexOptions.IgnoreCase);
 
         private LineCategory ClassifyLine(TableRow row, bool hasOpenTransaction)
@@ -962,17 +966,6 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (wifakInferredCredit.HasValue) creditAnchor = wifakInferredCredit;
             }
 
-            // Sous-format "BIAT EXTRAIT" cible par ce correctif : entete "Date valeur | Libelle
-            // opération | Référence | Date opération | Montant" (une seule colonne Montant,
-            // signee), distincte des releves BIAT classiques dont l'entete est "Date | Libellé de
-            // l'opération | Date de valeur | Débit | Crédit" (noter "Date de valeur", avec "de",
-            // qui ne matche donc pas "Date\s+valeur" ci-dessous) -- verifie sur biat 01-2023.pdf,
-            // ou une detection isBiat generique causait une regression (une ligne de libelle
-            // contenant par coincidence une date etait scindee en 2 transactions au lieu d'une).
-            // Detection structurelle SEULE (pas de "isBiat &&") : sur "BIAT EXTRAIT 02.pdf", l'OCR
-            // ne lit jamais le mot "BIAT" nulle part dans le document (logo non reconnu), donc
-            // isBiat reste faux alors que le format est bien celui-ci -- verifie via DIAG-CELLS
-            // (0 ligne avec isBiat=true) sur ce fichier malgre un entete de tableau identique.
             bool isBiatExtraitSignedMontant =
                 Regex.IsMatch(fullText, @"Date\s+valeur", RegexOptions.IgnoreCase)
                 && Regex.IsMatch(fullText, @"R[ée]f[ée]rence", RegexOptions.IgnoreCase)
@@ -1357,7 +1350,15 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 var debitCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"D[ée]bit", RegexOptions.IgnoreCase));
                 var creditCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"Cr[ée]dit", RegexOptions.IgnoreCase));
-                var soldeCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bSolde\b", RegexOptions.IgnoreCase));
+                // BTK (format "mobile") : "Solde au 30/09/2024" est la ligne du solde d'ouverture
+                // (une VALEUR, jamais un titre de colonne) mais contient quand meme le mot "Solde"
+                // - sans cette exclusion, sa position (tres a gauche des vraies colonnes
+                // Débit/Crédit/Solde) devenait a tort l'ancre soldeAnchor, ce qui faisait ensuite
+                // reconnaitre a tort des numeros de reference (ex. "161269") proches de cette
+                // fausse ancre comme des montants TND tronques (voir le "bare digit repair"
+                // plus bas).
+                var soldeCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bSolde\b", RegexOptions.IgnoreCase)
+                    && !(isBtk && Regex.IsMatch(c.Text, @"Solde\s+au\s+\d", RegexOptions.IgnoreCase)));
                 var montantCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"\bMontant\b", RegexOptions.IgnoreCase));
                 var dateCell = cells.FirstOrDefault(c => Regex.IsMatch(c.Text, @"^Date$|Date\s*op[ée]ration", RegexOptions.IgnoreCase));
                 if (isBiat)
@@ -1443,7 +1444,12 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
-                var soldeInitMatch = Regex.Match(joined, @"\bSolde\s+Initial\s*:?\s*([-+]?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase); if (soldeInitMatch.Success || Regex.IsMatch(joined, @"\bSolde\s+Initial\b", RegexOptions.IgnoreCase))
+                // Tolere un code devise entre parentheses juste apres "Initial" (ex. BTK : "Solde
+                // initial (TND): 27 196,527") : sans ce groupe optionnel, seul le declencheur bare
+                // "\bSolde\s+Initial\b" matchait (case ci-dessous), le montant n'etait jamais
+                // capture et SoldeInitial restait a 0. Strictement additif : un "Solde Initial :"
+                // sans parenthese continue de matcher exactement comme avant.
+                var soldeInitMatch = Regex.Match(joined, @"\bSolde\s+Initial\s*(?:\([A-Za-zÀ-ÿ]{2,10}\))?\s*:?\s*([-+]?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase); if (soldeInitMatch.Success || Regex.IsMatch(joined, @"\bSolde\s+Initial\b", RegexOptions.IgnoreCase))
                 {
                     if (current != null)
                     {
@@ -2003,6 +2009,26 @@ namespace Codeium_Security.Services.DocumentParsers
 
                     bool isPureAmountLine = amountCandidates.Count > 0;
 
+                    // BTK : un chiffre de detail imprime DANS la zone du libelle (ex. le montant de
+                    // la TVA repris a cote de "TVA/commission", tres a gauche des colonnes Débit/
+                    // Crédit reelles) generait une fausse transaction independante au lieu de
+                    // rester une precision textuelle du libelle de l'operation "COM & TVA ..." deja
+                    // comptabilisee juste au-dessus. Repere par la position : un montant dont AUCUN
+                    // candidat n'est proche (>300px) des ancres Débit/Crédit reelles ne peut pas etre
+                    // un vrai montant de transaction sur ce releve BTK. Ne change rien pour un
+                    // montant meme legerement proche d'une des deux ancres (comportement inchange).
+                    if (isBtk && isPureAmountLine && debitAnchor.HasValue && creditAnchor.HasValue)
+                    {
+                        bool allFarFromAmountColumns = true;
+                        foreach (var cand in amountCandidates)
+                        {
+                            int distD = Math.Abs((int)cand.Left - debitAnchor.Value);
+                            int distC = Math.Abs((int)cand.Left - creditAnchor.Value);
+                            if (distD <= 300 || distC <= 300) { allFarFromAmountColumns = false; break; }
+                        }
+                        if (allFarFromAmountColumns) isPureAmountLine = false;
+                    }
+
                     // Attijari : une ligne de continuation comme "DONT TVA: 0,161" contient un
                     // montant mais n'EST pas un montant de transaction -- c'est du texte de
                     // libelle qui mentionne un chiffre. On ne l'exclut du texte de continuation
@@ -2238,6 +2264,19 @@ namespace Codeium_Security.Services.DocumentParsers
                 AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, hasSignedAmounts, out  var soldeCourantTx);
                 ApplyMovementFallback(tx, soldeAvantTx, soldeCourantTx);
 
+                // BTK : "COM & TVA ..." (commission + TVA sur retrait carte, virement, etc.) est
+                // TOUJOURS un frais preleve au client, donc toujours un Débit - jamais un Crédit.
+                // La classification generique (distance aux ancres Débit/Crédit) le place parfois a
+                // tort en Crédit quand le petit montant de la commission tombe, par coincidence,
+                // plus proche geometriquement de la colonne Crédit. Correction par mot-cle, uniquement
+                // quand le libelle contient explicitement ce motif "COM ... TVA".
+                if (isBtk && tx.Credit.HasValue && !tx.Debit.HasValue
+                    && Regex.IsMatch(tx.Libelle ?? "", @"\bCOM\b.{0,10}&?.{0,10}\bTVA\b", RegexOptions.IgnoreCase))
+                {
+                    tx.Debit = tx.Credit;
+                    tx.Credit = null;
+                }
+
                 if (tsbHasRunningSoldeColumn && (tx.Debit.HasValue || tx.Credit.HasValue))
                 {
                     // Le solde courant est le dernier montant decimal reconnaissable de la ligne
@@ -2334,6 +2373,29 @@ namespace Codeium_Security.Services.DocumentParsers
             {
                 foreach (var sec in sections)
                     sec.Transactions.RemoveAll(tx => IsTsbClosingBoilerplate(tx.Libelle ?? ""));
+            }
+
+            // BTK (format "mobile", ex. Zouheir mobil BTK.pdf) : "Total des opérations <débit>
+            // <crédit>" est un CUMUL reimprime apres CHAQUE transaction (pas seulement en fin de
+            // page) - le motif generique "Total\s+<montant>\s+<montant>" plus haut ne matche pas
+            // ("des opérations" s'intercale entre "Total" et le premier montant) et, meme s'il
+            // matchait, prendrait la PREMIERE occurrence au lieu de la derniere (= le cumul final
+            // attendu). Cherche donc ici la derniere occurrence sur tout le document et l'applique
+            // sur la derniere section, uniquement si rien d'autre n'a deja rempli TotalDebit.
+            if (isBtk)
+            {
+                var btkTotalMatches = Regex.Matches(fullText,
+                    @"Total\s+des\s+op[ée]rations\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
+                    RegexOptions.IgnoreCase);
+                if (btkTotalMatches.Count > 0 && sections.Count > 0)
+                {
+                    var lastMatch = btkTotalMatches[btkTotalMatches.Count - 1];
+                    var lastBtkSection = sections[sections.Count - 1];
+                    if (!lastBtkSection.TotalDebit.HasValue)
+                        lastBtkSection.TotalDebit = ParseAmount(lastMatch.Groups[1].Value);
+                    if (!lastBtkSection.TotalCredit.HasValue)
+                        lastBtkSection.TotalCredit = ParseAmount(lastMatch.Groups[2].Value);
+                }
             }
 
             return sections;
@@ -3536,6 +3598,30 @@ namespace Codeium_Security.Services.DocumentParsers
                     trimmed.RemoveAt(trimmed.Count - 1);
                     classifiable = trimmed;
                 }
+                else if (isBtk && amountCandidates.Count == 1 && soldeAnchor.HasValue)
+                {
+                    // BTK : quand le montant Débit/Crédit de la ligne est illisible par l'OCR (ou
+                    // fusionne avec une autre ligne) et qu'il ne reste qu'UN seul montant detecte,
+                    // c'est presque toujours le solde courant (colonne la plus a droite) et non un
+                    // vrai montant - le laisser passer par la classification Débit/Crédit
+                    // ci-dessous (basee sur la distance aux ancres) le faisait atterrir a tort en
+                    // Crédit des que sa position tombait, par coincidence, plus proche de l'ancre
+                    // Crédit que de l'ancre Débit. Detecte ici via la distance a l'ancre Solde ;
+                    // laisse Débit/Crédit vides, ApplyMovementFallback (appele par l'appelant)
+                    // deduit ensuite le sens du mouvement a partir de la variation du solde
+                    // (Nouveau solde = Ancien solde - Débit + Crédit), conformement a l'integrite
+                    // comptable attendue.
+                    dynamic onlyCand = null;
+                    foreach (var c in amountCandidates) onlyCand = c;
+                    int distDebitOnly = debitAnchor.HasValue ? Math.Abs((int)onlyCand.Left - debitAnchor.Value) : int.MaxValue;
+                    int distCreditOnly = creditAnchor.HasValue ? Math.Abs((int)onlyCand.Left - creditAnchor.Value) : int.MaxValue;
+                    int distSoldeOnly = Math.Abs((int)onlyCand.Left - soldeAnchor.Value);
+                    if (distSoldeOnly <= distDebitOnly && distSoldeOnly <= distCreditOnly)
+                    {
+                        soldeCourant = onlyCand.Value;
+                        classifiable = new List<dynamic>();
+                    }
+                }
 
                 foreach (var cand in classifiable)
                 {
@@ -3838,6 +3924,17 @@ namespace Codeium_Security.Services.DocumentParsers
         }
         private string ExtractBankName(string text)
         {
+            // BTK@DIRECT / btknet.com : signal d'en-tete tres specifique (reimprime sur chaque
+            // page de l'export web BTK@DIRECT), verifie AVANT la boucle generique ci-dessous - sans
+            // cette priorite, un simple "BNA" trouve dans une ligne de transaction (ex. un
+            // libelle d'ATM tiers "ATM BNA CENTRE URBAIN", qui ne designe pas la banque du
+            // relevé) faisait perdre la partie a "BNA" dans la boucle generique, meme quand "BTK"
+            // apparait bien plus souvent (en-tete, URL, libelles ATM BTK) dans le meme document.
+            if (text.Contains("BTK@DIRECT", StringComparison.OrdinalIgnoreCase)
+                || text.Contains("btknet.com", StringComparison.OrdinalIgnoreCase))
+            {
+                return "Banque Tuniso-Koweitienne (BTK)";
+            }
             if (text.Contains("Banque de Tunisie et des Emirats", StringComparison.OrdinalIgnoreCase)
                 || Regex.IsMatch(text, @"\bBTE\b"))
             {
