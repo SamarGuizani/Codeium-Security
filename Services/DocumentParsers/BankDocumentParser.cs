@@ -3725,16 +3725,21 @@ namespace Codeium_Security.Services.DocumentParsers
 
         private string ExtractCurrency(string text)
         {
-            // Comparaison insensible a la casse (ex. "Tnd" lu par l'OCR) et ajout de "Dinar
-            // Tunisien" en toutes lettres : avant ce correctif, un releve dont l'OCR ne
-            // reproduisait jamais "TND"/"DINAR" en MAJUSCULES exactes laissait Currency vide, ce
-            // qui faisait retomber l'export Excel sur le format a 2 decimales (BankExcelExporter)
-            // au lieu des 3 decimales attendues pour le dinar tunisien.
-            if (text.Contains("TND", StringComparison.OrdinalIgnoreCase)) return "TND";
-            if (text.Contains("DINAR", StringComparison.OrdinalIgnoreCase)) return "TND";
-            if (text.Contains("EUR", StringComparison.OrdinalIgnoreCase)) return "EUR";
-            if (text.Contains("USD", StringComparison.OrdinalIgnoreCase)) return "USD";
-            return "";
+            // Comparaison insensible a la casse (ex. "Tnd" lu par l'OCR), "Dinar Tunisien" en
+            // toutes lettres, et surtout \b (limites de mot) : sans elles, "EUR" matchait a tort
+            // comme sous-chaine de "DEBITEUR" (terme bancaire francais courant, aucun rapport avec
+            // l'euro), faisant retomber a tort l'export Excel sur le format a 2 decimales
+            // (BankExcelExporter) au lieu des 3 decimales attendues pour le dinar tunisien.
+            if (Regex.IsMatch(text, @"\bTND\b", RegexOptions.IgnoreCase)) return "TND";
+            if (Regex.IsMatch(text, @"\bDINAR\b", RegexOptions.IgnoreCase)) return "TND";
+            if (Regex.IsMatch(text, @"\bEUR\b", RegexOptions.IgnoreCase)) return "EUR";
+            if (Regex.IsMatch(text, @"\bUSD\b", RegexOptions.IgnoreCase)) return "USD";
+
+            // Aucune devise mentionnee nulle part dans le texte (ex. AMEN BQList.pdf, export brut
+            // sans en-tete ni logo) : toutes les banques de cette application sont tunisiennes, TND
+            // est donc le defaut logique plutot que de laisser vide (ce qui faisait retomber a tort
+            // l'export Excel sur le format a 2 decimales au lieu de 3 pour le dinar tunisien).
+            return "TND";
         }
 
         private string CleanWhitespace(string text) =>
