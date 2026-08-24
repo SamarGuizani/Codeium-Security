@@ -856,6 +856,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
             bool biatInNoiseZone = false;
             int? debitAnchor = null, creditAnchor = null, soldeAnchor = null, montantAnchor = null, dateAnchor = null; string documentRib = ExtractRib(fullText);
+            bool btkAnchorsImplausible = false;
 
             // BTL ("Extrait de compte") : le numero de compte n'apparait que dans l'en-tete
             // ("Numero de Compte : 8901769223"), jamais reimprime a cote des transactions -
@@ -988,6 +989,15 @@ namespace Codeium_Security.Services.DocumentParsers
                         documentYear = year < 100 ? 2000 + year : year;
                 }
             }
+
+            // Garde-fou : une annee implausible (ex. ABC, ou ce dernier fallback matchait a tort un
+            // fragment de 3 chiffres ailleurs dans le document, produisant "documentYear=107" puis
+            // des dates de transaction du type "08/09/0107") ne doit jamais etre utilisee - mieux
+            // vaut retomber sur le defaut existant de NormalizeDate (DateTime.Now.Year quand
+            // defaultYear est null) qu'une annee absurde. Verification generique, sans condition de
+            // banque : une annee hors de cette plage n'est jamais correcte pour aucun releve ici.
+            if (documentYear.HasValue && (documentYear.Value < 2000 || documentYear.Value > 2100))
+                documentYear = null;
 
 
             bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
@@ -1386,6 +1396,20 @@ namespace Codeium_Security.Services.DocumentParsers
                     if (soldeCell != null) soldeAnchor = soldeCell.Left;
                     if (dateCell != null) dateAnchor = dateCell.Left;
                     if (montantCell != null) montantAnchor = montantCell.Left;
+
+                    // BTK (format "mobile", ex. Zouheir mobil BTK.pdf) : sur ce format, le mot
+                    // d'en-tete "Débit" est repere a une position qui correspond en realite a la
+                    // colonne Libellé (x<900), pas a la vraie colonne numerique Débit - alors que
+                    // sur les 3 autres formats BTK connus, cette detection tombe toujours dans la
+                    // zone x~1000-1500. Signale ici (drapeau memorise plus bas dans la boucle) pour
+                    // desactiver uniquement le "bare digit repair" (qui reprenait a tort un numero
+                    // de reference comme "161269" comme montant TND tronque) SANS reinferer les
+                    // ancres elles-memes - une tentative de reinference a cree une regression
+                    // differente (tout en Crédit) car ce document n'a pas de vraie colonne Crédit
+                    // sur cette page et l'ecart le plus large detecte etait en fait la colonne
+                    // Solde, pas Crédit.
+                    if (isBtk && debitAnchor.HasValue && debitAnchor.Value < 900)
+                        btkAnchorsImplausible = true;
 
                     if (!isWifakReleve && debitAnchor.HasValue && creditAnchor.HasValue && Math.Abs(debitAnchor.Value - creditAnchor.Value) < 40)
                     {
@@ -1898,9 +1922,9 @@ namespace Codeium_Security.Services.DocumentParsers
                     .GroupBy(c => new { c.Value, ZoneLeft = c.Left / 20 })
                     .Select(g => g.First())
                     .ToList();
-                if (debitAnchor.HasValue || creditAnchor.HasValue || soldeAnchor.HasValue)
+                if ((debitAnchor.HasValue || creditAnchor.HasValue || soldeAnchor.HasValue) && !btkAnchorsImplausible)
                 {
-                    
+
                     bool shortAmountsAllowed = ((isUbci && !ubciClotureReached) || isBna) && Regex.IsMatch(joined, @"[A-Za-zÀ-ÿ]");
                     string bareDigitPattern = shortAmountsAllowed ? @"^-?\d{3,10}$" : @"^-?\d{5,10}$";
                     var bareDigitCandidates = mergedWithPos
@@ -2079,7 +2103,7 @@ namespace Codeium_Security.Services.DocumentParsers
                         }
                         decimal? soldeAvant2 = previousSolde;
                         var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
-                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, hasSignedAmounts, out var soldeCourantTX);
+                        AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, hasSignedAmounts, out var soldeCourantTX, btkAnchorsImplausible);
                         ApplyMovementFallback(tx2, soldeAvant2, soldeCourantTX);
                         current.Transactions.Add(tx2);
                         if (isBna) Console.WriteLine($"[BNA-DEBUG] Transaction creee (ligne sans date propre) : Date='{tx2.Date}' Libelle='{tx2.Libelle}' Debit={tx2.Debit} Credit={tx2.Credit}");
@@ -2251,7 +2275,13 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
-                if (IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
+                // BTK (format "mobile") : IsMergedRow ne connait pas la convention BTK "dernier
+                // montant = solde courant" et, avec des ancres Débit/Crédit peu fiables sur cette
+                // page (voir btkAnchorsImplausible), comptait a tort une ligne normale (montant
+                // reel + solde) comme fusionnee - d'ou les "[LIGNE FUSIONNEE]" sur des transactions
+                // simples. Laisse alors la ligne passer par AssignAmounts (qui gere deja ce cas via
+                // soldeCourant + resolution par variation de solde, voir plus haut).
+                if (!(isBtk && btkAnchorsImplausible) && IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
                 {
                     foreach (var splitTx in SplitMergedRow(normalizedDate, fullDescription, amountCandidates, debitAnchor, creditAnchor))
                         current.Transactions.Add(splitTx);
@@ -2261,7 +2291,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 decimal? soldeAvantTx = previousSolde;
                 var tx = new Transaction { Date = normalizedDate, Libelle = fullDescription };
-                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, hasSignedAmounts, out  var soldeCourantTx);
+                AssignAmounts(tx, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, hasSignedAmounts, out  var soldeCourantTx, btkAnchorsImplausible);
                 ApplyMovementFallback(tx, soldeAvantTx, soldeCourantTx);
 
                 // BTK : "COM & TVA ..." (commission + TVA sur retrait carte, virement, etc.) est
@@ -3578,7 +3608,7 @@ namespace Codeium_Security.Services.DocumentParsers
             if (isDebit) tx.Debit = Math.Abs(montant);
             else tx.Credit = Math.Abs(montant);
         }
-        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, int? montantAnchor, bool isBtk, ref decimal? previousSolde , bool hasSignedAmounts, out decimal? soldeCourant)
+        private void AssignAmounts(Transaction tx, dynamic amountCandidates, int? debitAnchor, int? creditAnchor, int? soldeAnchor, int? montantAnchor, bool isBtk, ref decimal? previousSolde , bool hasSignedAmounts, out decimal? soldeCourant, bool btkAnchorsImplausible = false)
         {
             const int Tolerance = 15;
 
@@ -3628,6 +3658,19 @@ namespace Codeium_Security.Services.DocumentParsers
                     int distDebit = Math.Abs((int)cand.Left - debitAnchor.Value);
                     int distCredit = Math.Abs((int)cand.Left - creditAnchor.Value);
                     int distSolde = soldeAnchor.HasValue ? Math.Abs((int)cand.Left - soldeAnchor.Value) : int.MaxValue;
+
+                    // BTK (format "mobile") : quand les ancres Débit/Crédit du texte d'en-tete se
+                    // sont averees peu fiables pour cette page (voir btkAnchorsImplausible, repere
+                    // plus haut), la comparaison de distance ci-dessous placerait ce montant du
+                    // mauvais cote presque a chaque fois. On le passe donc en "ambigu" : plus bas,
+                    // il sera tranche par la variation du solde (Nouveau solde = Ancien solde -
+                    // Débit + Crédit), independante de la position, deja utilisee pour les autres
+                    // cas ambigus.
+                    if (isBtk && btkAnchorsImplausible)
+                    {
+                        ambiguous.Add(cand);
+                        continue;
+                    }
 
                     if (!isBtk && distSolde <= distDebit && distSolde <= distCredit)
                     {
