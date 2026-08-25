@@ -975,6 +975,15 @@ namespace Codeium_Security.Services.DocumentParsers
             var dateMatch = Regex.Match(fullText, @"\b(\d{1,2})\s+(\d{1,2})\s+(\d{4})\b");
             if (dateMatch.Success && int.TryParse(dateMatch.Groups[3].Value, out int year))
                 documentYear = year;
+            else if (Regex.Match(fullText, @"\b\d{1,2}[-.]\s?[A-Za-zÀ-ÿ]{3,9}[-.]\s?(\d{4})\b") is var hyphenDateMatch
+                && hyphenDateMatch.Success && int.TryParse(hyphenDateMatch.Groups[1].Value, out year))
+            {
+                // ABC : les dates completes n'apparaissent que dans le libelle des transactions
+                // (ex. "03-SEP-2025"), jamais sous forme "DD MM YYYY" espacee ni "SOLDE AU" - sans
+                // ce cas, seul le dernier fallback (tres permissif, voir plus bas) s'appliquait et
+                // pouvait capter par erreur un fragment sans rapport ailleurs dans le document.
+                documentYear = year;
+            }
             else
             {
                 var soldeMatch = Regex.Match(fullText, @"SOLDE\s+AU\s+\d{1,2}\s+\d{1,2}\s+(\d{4})", RegexOptions.IgnoreCase);
@@ -1387,12 +1396,29 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 if ((debitCell != null || creditCell != null) && !looksLikeTransactionRow)
                 {
+                    // ABC (entete "(-) Débit/Crédit (+)") : une seule colonne de montant signe,
+                    // PAS deux colonnes distinctes - "Débit" et "Crédit" sont ici detectes dans la
+                    // MEME cellule d'entete (debitCell == creditCell, meme objet). Sans ce
+                    // garde-fou, le test de proximite plus bas (Math.Abs(...) < 40) declenchait une
+                    // reinference de secours (InferAnchorsFromAmountPositions) qui fabriquait deux
+                    // fausses colonnes Débit/Crédit a partir du bruit de bas de page (mentions
+                    // legales, "68.000.000 TND", etc.) - un numero de reference proche de la fausse
+                    // ancre Débit (ex. "006000" dans "REGLEMENT TPE REF 006000") etait alors capte
+                    // a tort comme un second montant, place en Crédit. En laissant
+                    // debitAnchor/creditAnchor nuls ici, AssignAmounts bascule sur son chemin
+                    // "montant unique signe" (hasSignedAmounts), correct pour ce format.
+                    bool isCombinedSignedColumn = hasSignedAmountsHeader
+                        && debitCell != null && creditCell != null && debitCell == creditCell;
+
                     // Wifak relevé : la position du mot d'en-tete ne correspond pas a la position
                     // reelle des colonnes de chiffres (voir InferAnchorsFromAmountPositions
                     // ci-dessus, deja calculee au debut de la fonction) -- on ne laisse donc pas
                     // une relecture d'en-tete l'ecraser par une valeur peu fiable.
-                    if (debitCell != null && !isWifakReleve) debitAnchor = debitCell.Left;
-                    if (creditCell != null && !isWifakReleve) creditAnchor = creditCell.Left;
+                    if (!isCombinedSignedColumn)
+                    {
+                        if (debitCell != null && !isWifakReleve) debitAnchor = debitCell.Left;
+                        if (creditCell != null && !isWifakReleve) creditAnchor = creditCell.Left;
+                    }
                     if (soldeCell != null) soldeAnchor = soldeCell.Left;
                     if (dateCell != null) dateAnchor = dateCell.Left;
                     if (montantCell != null) montantAnchor = montantCell.Left;
@@ -1963,7 +1989,16 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 if (current == null)
                 {
-                    if (!string.IsNullOrEmpty(normalizedDate) && amountCandidates.Count > 0)
+                    // ABC : la ligne d'en-tete "Du/Au JJ.MM.AAAA - JJ.MM.AAAA" (periode du releve,
+                    // avant "Solde de départ") est parfois OCRisee avec la 2e date isolee dans sa
+                    // propre cellule (ex. "31.05.2026") - AmountRegex la lit alors a tort comme un
+                    // montant decimal ("31.05"), et la 1ere date comme une date de transaction
+                    // valide, ce qui ouvrait ici une fausse section (AccountNumber vide, un seul
+                    // "montant" fantome) avant meme la vraie section demarree par abcSoldeDepartMatch
+                    // plus haut. ABC demarre TOUJOURS sa table par une ligne "Solde de départ" -
+                    // jusque-la, current doit rester nul (la ligne est ignoree) plutot que d'etre
+                    // cree par ce repli generique.
+                    if (!isAbcBank && !string.IsNullOrEmpty(normalizedDate) && amountCandidates.Count > 0)
                     {
                         current = new BankAccountSection
                         {
@@ -2010,6 +2045,25 @@ namespace Codeium_Security.Services.DocumentParsers
                         RegexOptions.IgnoreCase));
                 if (wifakReleveNoiseHit) biatInNoiseZone = true;
 
+                // ABC : pied de page legal (bilingue francais/arabe, "Tout débit ponctuel...",
+                // "conformément à l'article 672 du Code de Commerce", coordonnees Bank ABC, etc.)
+                // colle a la derniere transaction du releve et contenant, dans la meme zone, le
+                // solde de cloture encadre ("Le solde ... 6.380,751") - sans ce filtre, ce dernier
+                // finissait par generer une fausse transaction (le solde de cloture interprete a
+                // tort comme un Crédit). Une fois ce bruit rencontre, biatInNoiseZone reste actif
+                // jusqu'a la fin (pas de nouvelle transaction ensuite sur ce releve), ce qui
+                // empeche aussi les lignes suivantes du meme pied de page de se recoller au
+                // libelle de la derniere transaction reelle.
+                bool abcNoiseHit = isAbcBank && Regex.IsMatch(joined,
+                    @"Tout\b.{0,20}?d[ée]bit\s+ponctuel|d[ée]passement\s+.{0,15}?[ée]ventuel|" +
+                    @"En\s+cas\s+de\s+contestation|conform[ée]ment.{0,15}?article\s+672|Code\s+de\s+Commerce|" +
+                    @"Merci\s+d['’]avoir\s+choisi\s+Bank\s+ABC|" +
+                    @"www\.bank-abc\.com|Swift\s+Code|Bank\s+ABC\s*\(Arab\s+Banking\s+Corporation|" +
+                    @"adh[ée]rente.{0,25}syst[èe]me\s+de\s+garantie|D[ée]cret\s+n[°o]?\s*\d{4}-\d+|" +
+                    @"\bArticle\s+30\b|que\s+vous\s+avez\s+approuv[ée]|document\s+g[ée]n[ée]r[ée]\s+informatiquement",
+                    RegexOptions.IgnoreCase);
+                if (abcNoiseHit) biatInNoiseZone = true;
+
                 bool isAccountHeaderNoise = LibelleHeaderFooterNoiseRegex.IsMatch(joined);
 
                 bool isNoise = Regex.IsMatch(joined, @"\b(Totaux?|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+|Report|A\s+[Rr]eporter)", RegexOptions.IgnoreCase)
@@ -2017,6 +2071,7 @@ namespace Codeium_Security.Services.DocumentParsers
                      || bnaNoiseHit
                      || albarakaNoiseHit
                      || wifakReleveNoiseHit
+                     || abcNoiseHit
                      || isRepeatedBoilerplate
                      || isAccountHeaderNoise
                      || (isQnb && Regex.IsMatch(joined, @"Cette\s+d[ée]claration\s+sera\s+consid[ée]r[ée]e|dans\s+votre\s+situation\s+de\s+compte|Pour\s+toute\s+r[ée]clamation", RegexOptions.IgnoreCase));
@@ -2357,6 +2412,43 @@ namespace Codeium_Security.Services.DocumentParsers
                 current.RawSectionText = sectionRawText;
                 sections.Add(current);
             }
+
+            if (isAbcBank)
+            {
+                // ABC : le pied de page legal (bilingue) peut rester colle au libelle de la
+                // derniere transaction (fusionne en continuation avant meme cette boucle, voir
+                // MergeContinuationLines) malgre le filtre de bruit ci-dessus - on le retire donc
+                // ici aussi, apres coup. Meme motif d'ancrage que abcNoiseHit plus haut.
+                var abcBoilerplateAnchor = new Regex(
+                    @"\s*(Tout\b.{0,20}?d[ée]bit\s+ponctuel|d[ée]passement\s+.{0,15}?[ée]ventuel|" +
+                    @"En\s+cas\s+de\s+contestation|conform[ée]ment.{0,15}?article\s+672|Code\s+de\s+Commerce|" +
+                    @"Merci\s+d['’]avoir\s+choisi\s+Bank\s+ABC|" +
+                    @"www\.bank-abc\.com|Swift\s+Code|Bank\s+ABC\s*\(Arab\s+Banking\s+Corporation|" +
+                    @"adh[ée]rente.{0,25}syst[èe]me\s+de\s+garantie|D[ée]cret\s+n[°o]?\s*\d{4}-\d+|" +
+                    @"\bArticle\s+30\b|que\s+vous\s+avez\s+approuv[ée]|document\s+g[ée]n[ée]r[ée]\s+informatiquement).*$",
+                    RegexOptions.IgnoreCase);
+
+                foreach (var sec in sections)
+                {
+                    foreach (var tx in sec.Transactions)
+                        tx.Libelle = abcBoilerplateAnchor.Replace(tx.Libelle ?? "", "").Trim();
+
+                    // Le solde de cloture encadre ("Le solde ... 6.380,751") est imprime dans le
+                    // meme bloc que ce pied de page et se retrouvait, avant filtrage, transforme a
+                    // tort en fausse transaction Crédit - desormais supprime en amont par
+                    // abcNoiseHit. On le recalcule ici a partir du mouvement reel des transactions
+                    // plutot que de tenter de le relire depuis ce bloc bruite.
+                    sec.Transactions.RemoveAll(t => string.IsNullOrWhiteSpace(t.Libelle));
+
+                    if (!sec.SoldeFinal.HasValue && sec.SoldeInitial.HasValue)
+                    {
+                        decimal totalD = sec.Transactions.Sum(t => t.Debit ?? 0);
+                        decimal totalC = sec.Transactions.Sum(t => t.Credit ?? 0);
+                        sec.SoldeFinal = sec.SoldeInitial.Value - totalD + totalC;
+                    }
+                }
+            }
+
             foreach (var sec in sections)
             {
                 if (sec.Transactions.Count == 0)
