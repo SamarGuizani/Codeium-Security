@@ -19,6 +19,13 @@ namespace Codeium_Security.Tests
     {
         public DocumentProcessingService ProcessingService { get; }
 
+        // Exposes additionnelles (purement additives, ProcessingService reste inchange) pour les
+        // tests de diagnostic qui ont besoin de rejouer seulement l'etape de parsing (classification
+        // + parsing + sommes) sans refaire l'OCR Tesseract a chaque execution.
+        public DocumentAnalysisEngine AnalysisEngine { get; }
+        public IDocumentClassifier Classifier { get; }
+        public DocumentParserFactory ParserFactory { get; }
+
         public PipelineFixture()
         {
             var configuration = new ConfigurationBuilder()
@@ -55,6 +62,10 @@ namespace Codeium_Security.Tests
                 classifier,
                 parserFactory,
                 configuration);
+
+            AnalysisEngine = analysisEngine;
+            Classifier = classifier;
+            ParserFactory = parserFactory;
         }
 
         public void Dispose()

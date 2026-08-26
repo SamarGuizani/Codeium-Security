@@ -49,6 +49,19 @@ namespace Codeium_Security.Services.Export
             var sheet = workbook.Worksheets.Add(BuildSheetName(account.AccountNumber, usedSheetNames));
 
             var sums = _sumCalculator.Calculate(account);
+
+            // BIAT (voir BankDocumentParser, capture "TOTAUX <debit> <credit>") : quand le total
+            // imprime par la banque a pu etre lu sur le releve, on l'affiche a la place de la somme
+            // des transactions - il inclut le solde de depart comme mouvement (convention propre a
+            // ce releve) et correspond donc au chiffre que l'utilisateur voit sur le papier. Repli
+            // silencieux sur la somme calculee si absent (OCR n'a pas trouve la ligne). Gate sur le
+            // nom de banque : aucun changement pour les autres formats.
+            if (bankName.Contains("BIAT", StringComparison.OrdinalIgnoreCase))
+            {
+                if (account.TotalDebit.HasValue) sums.TotalDebit = account.TotalDebit.Value;
+                if (account.TotalCredit.HasValue) sums.TotalCredit = account.TotalCredit.Value;
+            }
+
             int row = WriteSumsSummary(sheet, sums);
             row++; // ligne vide de separation
 

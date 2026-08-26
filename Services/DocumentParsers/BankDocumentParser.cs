@@ -1684,6 +1684,31 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
+                // BIAT (sous-format "RELEVE DE COMPTE MENSUEL", ex. Pages_All (1).pdf) : la ligne
+                // "TOTAUX <debit> <credit>" imprimee par la banque en pied de page inclut le solde
+                // de depart ("SOLDE AU ...", capture ci-dessus dans biatSoldeAuMatch) comme s'il
+                // s'agissait d'un mouvement debit/credit de la page - ce n'est PAS une transaction
+                // (BankExcelExporter continue de calculer le sien a partir des transactions reelles
+                // uniquement) mais BankExcelExporter l'utilise en PRIORITE pour l'affichage du total
+                // BIAT afin de correspondre au chiffre imprime sur le releve. Capture generique
+                // (n'importe quelle banque pourrait avoir "TOTAUX x y") mais reservee a isBiat pour
+                // eviter tout effet de bord sur un autre format partageant cette meme fonction.
+                if (isBiat)
+                {
+                    var biatTotauxMatch = Regex.Match(joined,
+                        @"\bTOTAUX?\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
+                        RegexOptions.IgnoreCase);
+                    if (biatTotauxMatch.Success)
+                    {
+                        if (current != null)
+                        {
+                            current.TotalDebit = ParseAmount(biatTotauxMatch.Groups[1].Value);
+                            current.TotalCredit = ParseAmount(biatTotauxMatch.Groups[2].Value);
+                        }
+                        continue;
+                    }
+                }
+
                 var zitounaSoldeMatch = Regex.Match(joined, @"Solde\s+actuel\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})", RegexOptions.IgnoreCase);
                 if (zitounaSoldeMatch.Success)
                 {
@@ -1938,9 +1963,57 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                 }
 
+                // BIAT "EXTRAIT" a montant signe unique (ex. EXTRAIT (1)biat.pdf, export TEMENOS) :
+                // le separateur de milliers "espace" du Montant (ex. "-1 350,000") est parfois lu
+                // par l'OCR comme DEUX cellules distinctes ("-1" et "350,000") a cause de
+                // l'espacement visuel entre les groupes de chiffres. ParseAmount sait deja
+                // reconstituer un montant "espace"-separe recu en un seul texte (voir plus bas),
+                // mais seulement si les deux fragments sont d'abord reunis ici : le petit fragment
+                // ("-1", 1 a 3 chiffres, aucune decimale) ne matche jamais AmountRegex seul et etait
+                // jusqu'ici purement perdu (ni le millier ni le signe negatif n'atteignaient le
+                // montant final). Reserve a isBiatExtraitSignedMontant : les autres formats BIAT
+                // (colonnes Debit/Credit separees, deja fonctionnels) n'utilisent jamais cette
+                // reunification.
+                if (isBiatExtraitSignedMontant)
+                {
+                    for (int i = 0; i < mergedWithPos.Count - 1; i++)
+                    {
+                        if (mergedWithPos[i].IsContinuationDetail || mergedWithPos[i + 1].IsContinuationDetail)
+                            continue;
+                        string first = mergedWithPos[i].Text.Trim();
+                        string second = mergedWithPos[i + 1].Text.Trim();
+                        if (Regex.IsMatch(first, @"^-?\d{1,3}$") && AmountRegex.IsMatch(second))
+                        {
+                            mergedWithPos[i + 1] = (mergedWithPos[i + 1].Left, first + " " + mergedWithPos[i + 1].Text, mergedWithPos[i + 1].IsContinuationDetail);
+                            mergedWithPos.RemoveAt(i);
+                            i--;
+                        }
+                    }
+                }
+
+                // "DONT <libelle>: <montant>" (ex. "EFFET 818 DONT TVA: 0,570") est un sous-detail
+                // descriptif du libelle - l'equivalent francais de "of which" - jamais le vrai
+                // montant Debit/Credit de la transaction (qui reste plus loin sur la ligne, apres
+                // la colonne Date valeur). Sans cette exclusion, ce sous-detail (souvent le seul
+                // nombre a virgule complet de la ligne quand le vrai montant est mal lu par l'OCR,
+                // ex. reduit a un simple "0") etait pris a tort pour LE montant de la transaction.
+                // Verifie seulement sur les 2 cellules precedentes : le motif est toujours
+                // immediatement adjacent au montant qu'il annote - sans risque pour les autres
+                // lignes/banques, ou "DONT" n'apparait jamais juste avant un vrai montant.
+                bool IsPrecededByDontClause(int index)
+                {
+                    for (int back = 1; back <= 2 && index - back >= 0; back++)
+                    {
+                        if (Regex.IsMatch(mergedWithPos[index - back].Text, @"\bDONT\b", RegexOptions.IgnoreCase))
+                            return true;
+                    }
+                    return false;
+                }
+
                 var amountCandidates = mergedWithPos
-                    .Where(c => !c.IsContinuationDetail && AmountRegex.IsMatch(c.Text))
-                    .Select(c => new { Left = c.Left, Value = ParseAmount(AmountRegex.Match(c.Text).Value) })
+                    .Select((c, idx) => (Cell: c, Index: idx))
+                    .Where(x => !x.Cell.IsContinuationDetail && AmountRegex.IsMatch(x.Cell.Text) && !IsPrecededByDontClause(x.Index))
+                    .Select(x => new { Left = x.Cell.Left, Value = ParseAmount(AmountRegex.Match(x.Cell.Text).Value) })
                     .ToList();
 
                 
