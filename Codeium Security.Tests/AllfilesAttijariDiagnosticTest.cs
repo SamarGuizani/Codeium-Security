@@ -106,6 +106,27 @@ namespace Codeium_Security.Tests
                 yield return new object[] { f };
         }
 
+        public static IEnumerable<object[]> AllPdfFiles()
+        {
+            if (!Directory.Exists(AllfilesDir)) yield break;
+            foreach (var f in Directory.EnumerateFiles(AllfilesDir, "*.pdf").OrderBy(f => f))
+                yield return new object[] { f };
+        }
+
+        [Theory]
+        [MemberData(nameof(AllPdfFiles))]
+        public async Task DiagnoseMetadataAllBanks(string pdfPath)
+        {
+            var ocr = await GetOcrCachedAsync(pdfPath);
+            var lines = _fixture.AnalysisEngine.GroupWordsIntoLines(ocr.Words);
+            var rows = _fixture.AnalysisEngine.BuildTable(lines);
+
+            var metadata = new GenericDocumentMetadataExtractor().Extract(ocr.FullText, rows);
+
+            _output.WriteLine(
+                $"[{Path.GetFileName(pdfPath)}] CustomerName='{metadata.CustomerName}' Period.Start='{metadata.Period?.Start}' Period.End='{metadata.Period?.End}'");
+        }
+
         [Theory]
         [MemberData(nameof(AttijariFiles))]
         public async Task DiagnoseMetadata(string pdfPath)

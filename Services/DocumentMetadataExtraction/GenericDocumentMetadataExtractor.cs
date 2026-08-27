@@ -132,17 +132,81 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         private static string CleanCustomerName(string raw) =>
             Regex.Replace(raw.Trim().Trim(':', '-', ' '), @"\s{2,}", " ");
 
+        // ----- Rejet generique de candidats (structure, jamais un nom de banque precis) ---
+        //
+        // Ces regles s'appliquent a TOUTE valeur candidate (qu'elle vienne d'un label explicite
+        // ou du repli sans label) : une valeur qui a la forme d'un titre de document, d'un nom
+        // d'etablissement bancaire, d'une date, ou de bruit OCR/texte arabe non latin n'est
+        // jamais un nom de client - quelle que soit la banque. Rien ici ne cite un nom de
+        // banque particulier (BIAT/BNA/ATB/UIB/...) : les regles portent uniquement sur la
+        // FORME de la ligne (longueur, alphabet, presence du mot generique "banque/bank",
+        // token court tout-majuscule sans espace, motif de date).
+
+        private static readonly Regex ArabicCharRegex = new("[؀-ۿ]");
+
+        // Titre de document generique, quelle que soit la banque : "Relevé (de/du) Compte",
+        // "Extrait (de/du) Compte", "Statement (of Account)", "Bulletin de Compte". Le "de/du"
+        // est volontairement optionnel : l'OCR le perd parfois ("RELEVE COMPTE").
+        private static readonly Regex DocumentTitleLineRegex = new(
+            @"^\s*(RELEV[ÉE]\s*(DE\s+|DU\s+)?COMPTE|EXTRAIT\s*(DE\s+|DU\s+)?COMPTE|BULLETIN\s+DE\s+COMPTE|STATEMENT(\s+OF\s+ACCOUNT)?|ACCOUNT\s+STATEMENT)\s*[:\-]?\s*$",
+            RegexOptions.IgnoreCase);
+
+        // Mot generique "banque/bank" (pas un nom d'etablissement precis) : une ligne qui le
+        // contient est l'en-tete de l'etablissement emetteur, jamais le client.
+        private static readonly Regex BankWordRegex = new(@"\b(BANQUE|BANK)\b", RegexOptions.IgnoreCase);
+
+        private static readonly string[] MonthNames =
+        {
+            "janvier", "f[ée]vrier", "mars", "avril", "mai", "juin", "juillet",
+            "ao[uû]t", "septembre", "octobre", "novembre", "d[ée]cembre",
+        };
+
+        private static readonly Regex SpelledDateRegex = new(
+            $@"\d{{1,2}}\s+(?:{string.Join("|", MonthNames)})\s+\d{{4}}", RegexOptions.IgnoreCase);
+
+        private static bool IsRejectableCandidate(string candidate)
+        {
+            string c = candidate.Trim();
+
+            // Trop court pour etre un nom plausible (bruit OCR type "au", "g").
+            if (c.Length < 3) return true;
+
+            // Texte majoritairement/partiellement arabe : dans ces en-tetes, le nom du client
+            // est toujours en caracteres latins - un melange avec de l'arabe est du bruit OCR.
+            if (ArabicCharRegex.IsMatch(c)) return true;
+
+            // Titre du document ("Relevé de Compte", "Extrait de Compte", "Statement"...).
+            if (DocumentTitleLineRegex.IsMatch(c)) return true;
+
+            // Nom de l'etablissement emetteur (contient le mot generique "banque"/"bank").
+            if (BankWordRegex.IsMatch(c)) return true;
+
+            // Une date (chiffree "30/03/2024" ou en toutes lettres "30 mars 2024") n'est
+            // jamais un nom de client.
+            if (Regex.IsMatch(c, DateToken) || SpelledDateRegex.IsMatch(c)) return true;
+
+            // Sigle court tout-majuscule sans espace (ex. "ATB", "UIB", "BIAT", "EZB") :
+            // tous les noms de clients valides sont multi-mots - un token isole de ce type est
+            // systematiquement le sigle/logo de la banque, jamais le client.
+            if (!c.Contains(' ') && c.Length <= 5 && Regex.IsMatch(c, @"^[A-Z0-9'.\-]+$"))
+                return true;
+
+            return false;
+        }
+
         private static string? ExtractCustomerName(List<string> headerLines)
         {
             // Priorite 1 et 2 : label explicite, valeur sur la meme ligne ou (si le label est
-            // seul sur sa ligne) sur la ligne suivante.
+            // seul sur sa ligne) sur la ligne suivante. Une valeur rejetee par le filtre
+            // generique (titre de document, nom de banque, date, bruit OCR) est ignoree et la
+            // recherche continue plutot que de s'arreter dessus.
             for (int i = 0; i < headerLines.Count; i++)
             {
                 var m = CustomerLabelLineRegex.Match(headerLines[i]);
                 if (m.Success)
                 {
                     string sameLine = m.Groups[1].Value.Trim();
-                    if (!string.IsNullOrWhiteSpace(sameLine))
+                    if (!string.IsNullOrWhiteSpace(sameLine) && !IsRejectableCandidate(sameLine))
                         return CleanCustomerName(sameLine);
                     continue;
                 }
@@ -153,18 +217,19 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 if (i + 1 < headerLines.Count)
                 {
                     string next = headerLines[i + 1].Trim();
-                    if (!string.IsNullOrWhiteSpace(next))
+                    if (!string.IsNullOrWhiteSpace(next) && !IsRejectableCandidate(next))
                         return CleanCustomerName(next);
                 }
             }
 
             // Priorite 3 : aucun label reconnu explicitement - premiere ligne d'en-tete qui
-            // n'est ni un autre label connu, ni une adresse, ni vide de toute lettre. On
-            // s'arrete a cette premiere ligne : jamais de concatenation avec les suivantes
-            // (donc jamais l'adresse absorbee dans le nom). Si la ligne contient malgre tout
-            // un ":" (un label non reconnu mais generiquement present, ex. OCR ayant perdu le
-            // mot "Titulaire" avant "du compte :"), on prend la partie APRES le ":" plutot
-            // que la ligne entiere - generique, pas specifique a un intitule precis.
+            // n'est ni un autre label connu, ni une adresse, ni rejetee par le filtre
+            // generique (titre de document / nom de banque / date / bruit OCR-arabe / sigle
+            // court). On s'arrete a cette premiere ligne valide : jamais de concatenation avec
+            // les suivantes (donc jamais l'adresse absorbee dans le nom). Si la ligne contient
+            // malgre tout un ":" (un label non reconnu mais generiquement present, ex. OCR
+            // ayant perdu le mot "Titulaire" avant "du compte :"), on prend la partie APRES le
+            // ":" plutot que la ligne entiere - generique, pas specifique a un intitule precis.
             foreach (var line in headerLines)
             {
                 if (string.IsNullOrWhiteSpace(line)) continue;
@@ -181,6 +246,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 }
 
                 if (!Regex.IsMatch(candidate, @"[A-Za-zÀ-ÿ]")) continue;
+                if (IsRejectableCandidate(candidate)) continue;
 
                 return CleanCustomerName(candidate);
             }
