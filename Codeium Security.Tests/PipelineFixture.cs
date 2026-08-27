@@ -4,6 +4,7 @@ using Codeium_Security.OCR;
 using Codeium_Security.Services;
 using Codeium_Security.Services.DocumentClassification;
 using Codeium_Security.Services.DocumentExtraction;
+using Codeium_Security.Services.DocumentMetadataExtraction;
 using Codeium_Security.Services.DocumentParsers;
 using Microsoft.Extensions.Configuration;
 using Xunit;
@@ -61,7 +62,8 @@ namespace Codeium_Security.Tests
                 extractors,
                 classifier,
                 parserFactory,
-                configuration);
+                configuration,
+                new GenericDocumentMetadataExtractor());
 
             AnalysisEngine = analysisEngine;
             Classifier = classifier;

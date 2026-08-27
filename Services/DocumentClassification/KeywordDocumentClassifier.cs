@@ -17,8 +17,15 @@ namespace Codeium_Security.Services.DocumentClassification
             };
 
             // Chaque mot-clé trouvé ajoute 1 point à sa catégorie
+            // "RELEV" (sans le "E"/"É" final) plutôt que "RELEVE" : l'OCR d'un "Relevé" accentué
+            // perd parfois l'accent d'une façon qui casse la comparaison exacte (ex. lu tel quel,
+            // "RELEVÉ" en majuscules reste "RELEVÉ", pas "RELEVE") - le radical sans dernière
+            // lettre matche les deux formes. "DEBIT" ajouté : un en-tête de colonne bancaire
+            // standard, jamais un faux positif pour Facture/Reçu/Relevé de notes, qui aide à
+            // départager les relevés dont le vocabulaire des libellés de transaction (paiement,
+            // caisse, espèces, reçu) chevauche par ailleurs les mots-clés Reçu ci-dessous.
             AddScoreIfContains(scores, text, DocumentType.Bank,
-                "RELEVE", "COMPTE", "SOLDE", "RIB", "IBAN", "BANQUE");
+                "RELEV", "COMPTE", "SOLDE", "RIB", "IBAN", "BANQUE", "DEBIT");
 
             AddScoreIfContains(scores, text, DocumentType.Invoice,
                 "FACTURE", "INVOICE", "TOTAL HT", "TOTAL TTC", "TVA", "FOURNISSEUR");

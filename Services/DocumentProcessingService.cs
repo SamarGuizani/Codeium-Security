@@ -4,6 +4,7 @@ using Codeium_Security.Models;
 using Codeium_Security.OCR;
 using Codeium_Security.Services.Calculation;
 using Codeium_Security.Services.DocumentClassification;
+using Codeium_Security.Services.DocumentMetadataExtraction;
 using Codeium_Security.Utilities;
 
 namespace Codeium_Security.Services
@@ -16,6 +17,7 @@ namespace Codeium_Security.Services
         private readonly IDocumentClassifier _classifier;
         private readonly DocumentParserFactory _parserFactory;
         private readonly IConfiguration _configuration;
+        private readonly IDocumentMetadataExtractor _metadataExtractor;
         private readonly TransactionSumCalculator _sumCalculator = new();
 
         public DocumentProcessingService(
@@ -24,7 +26,8 @@ namespace Codeium_Security.Services
             IEnumerable<IDocumentExtractor> extractors,
             IDocumentClassifier classifier,
             DocumentParserFactory parserFactory,
-            IConfiguration configuration)
+            IConfiguration configuration,
+            IDocumentMetadataExtractor metadataExtractor)
         {
             _ocrService = ocrService;
             _engine = engine;
@@ -32,6 +35,7 @@ namespace Codeium_Security.Services
             _classifier = classifier;
             _parserFactory = parserFactory;
             _configuration = configuration;
+            _metadataExtractor = metadataExtractor;
         }
 
         public async Task<OcrResult> RunOcrOnlyAsync(string filePath, string originalFileName)
@@ -82,6 +86,10 @@ namespace Codeium_Security.Services
             Console.WriteLine("===== TEXT SENT TO BANK PARSER END =====");
             object? document = parser?.Parse(ocrResult.FullText, lines);
 
+            // Metadonnees generiques d'en-tete (nom du client, periode de l'extrait) :
+            // module independant, ne modifie ni ne relit le resultat du parser ci-dessus.
+            var metadata = _metadataExtractor.Extract(ocrResult.FullText, diagRows);
+
             bool needsReview = EvaluateNeedsReview(documentType, document, ocrResult.Confidence);
 
             // Calcul automatique post-parsing de SUM(Debit)/SUM(Credit) uniquement (voir
@@ -98,6 +106,7 @@ namespace Codeium_Security.Services
                 OcrConfidence = ocrResult.Confidence,
                 NeedsReview = needsReview,
                 Document = document,
+                Metadata = metadata,
                 Sums = sums,
                 DebugLines = lines.Select(l => l.FullLineText).ToList(),
                 Lines = lines.Select(l => new LineOutput

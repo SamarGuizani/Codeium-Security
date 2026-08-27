@@ -115,7 +115,13 @@ namespace Codeium_Security.Services.DocumentParsers
             bool isWifak = fullText.Contains("WIFAK", StringComparison.OrdinalIgnoreCase);
             bool isAtb = fullText.Contains("ATB", StringComparison.OrdinalIgnoreCase)
             || fullText.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
-            bool isUbci = fullText.Contains("UBCI", StringComparison.OrdinalIgnoreCase)
+            // Un releve ATB peut mentionner "UBCI" en interne (ex. "Encaissement CHQ-UBCI ...",
+            // un cheque tire sur un compte UBCI encaisse par ce client ATB) sans etre lui-meme un
+            // releve UBCI - "ATB" apparait alors, lui, comme identifiant de banque explicite
+            // (en-tete/SWIFT). Le nom complet de la banque ("Union Bancaire...") reste, lui,
+            // un signal non ambigu meme si "ATB" est aussi present, et n'est donc pas concerne
+            // par cette exclusion.
+            bool isUbci = (fullText.Contains("UBCI", StringComparison.OrdinalIgnoreCase) && !isAtb)
                 || Regex.IsMatch(fullText, @"UNION\s+BANCAIRE\s+POUR\s+LE\s+COMMERCE\s+ET\s+L['’]?\s*INDUSTRIE", RegexOptions.IgnoreCase);
 
             // Banque Tuniso-Libyenne : releves "Extrait de compte" dont l'entete ("No du compte
@@ -132,8 +138,12 @@ namespace Codeium_Security.Services.DocumentParsers
                 || Regex.IsMatch(fullText, @"\bTSB\b", RegexOptions.IgnoreCase)
                 || fullText.Contains("Ma banque et plus", StringComparison.OrdinalIgnoreCase);
 
+            // Un releve ATB peut mentionner "BTE" en interne (ex. "Encaissement CHQ-BTE ...", un
+            // cheque tire sur un compte BTE encaisse par ce client ATB) sans etre lui-meme un
+            // releve BTE - meme classe de faux positif que l'exclusion BTK ci-dessus.
             bool bteNameHit = (Regex.IsMatch(fullText, @"\bBTE\b", RegexOptions.IgnoreCase)
-                    && !fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase))
+                    && !fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase)
+                    && !isAtb)
                 || fullText.Contains("Banque de Tunisie et des Emirats", StringComparison.OrdinalIgnoreCase);
 
            
@@ -539,8 +549,12 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
                 }
 
+                // "Total des mouvements" (ex. EXTR BTE 02 2026.pdf) est une autre formulation du
+                // meme recapitulatif que "TOTAUX" (deja gere ci-dessous, ex. RELEVEE BTE 06-2026.pdf)
+                // - ajoutee en alternative sans retirer "TOTAUX?" pour ne rien changer aux fichiers
+                // qui l'utilisent deja.
                 var totalMatch = Regex.Match(joined,
-                    @"TOTAUX?\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
+                    @"(?:TOTAUX?|Total\s+des\s+mouvements)\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
                     RegexOptions.IgnoreCase);
                 if (totalMatch.Success)
                 {
@@ -967,8 +981,16 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (wifakInferredCredit.HasValue) creditAnchor = wifakInferredCredit;
             }
 
-            bool isBiatExtraitSignedMontant =
-                Regex.IsMatch(fullText, @"Date\s+valeur", RegexOptions.IgnoreCase)
+            // isBiat ajoute explicitement : les 3 signaux structurels ci-dessous ("Date valeur" +
+            // "Référence" + Débit/Crédit absents ou inverses) ne suffisent pas a eux seuls a
+            // identifier ce sous-format BIAT precis - un releve Al Baraka (entete "... Référence
+            // ... Montant créditeur _ Montant débiteur ...", donc Crédit AVANT Débit) les
+            // satisfait tous sans etre du BIAT, ce qui declenchait a tort la reunification de
+            // cellules "petit entier + montant" plus bas (reservee a ce sous-format BIAT) sur des
+            // numeros de reference Al Baraka adjacents a un vrai montant (ex. "422" + "500.000"
+            // fusionnes en 422500,000).
+            bool isBiatExtraitSignedMontant = isBiat
+                && Regex.IsMatch(fullText, @"Date\s+valeur", RegexOptions.IgnoreCase)
                 && Regex.IsMatch(fullText, @"R[ée]f[ée]rence", RegexOptions.IgnoreCase)
                 && !Regex.IsMatch(fullText, @"D[ée]bit.{0,20}Cr[ée]dit", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
@@ -1329,7 +1351,12 @@ namespace Codeium_Security.Services.DocumentParsers
                 var ribMatch = Regex.Match(joined, @"TN\d{2}[\s\d]{15,25}");
                 if (ribMatch.Success) lastSeenRib = Regex.Replace(ribMatch.Value, @"\s+", "").Trim();
                
-                if (Regex.IsMatch(joined, @"Type\s*d['’]op[ée]ration|Montant\s*Min|Montant\s*Max|Date\s*D[ée]but|Date\s*Fin\b|Agence\s*:|Intitul[ée]\s*de\s*compte|Solde\s*actuel\s*:", RegexOptions.IgnoreCase))
+                // "... du compte au : JJ/MM/AAAA" (ex. releves STB, pied de page "50106 du compte
+                // au: 31/03/2025 -808.669 ...") : rappel de la date d'edition du releve, jamais une
+                // transaction - sans cette exclusion, la date qu'elle contient etait prise pour
+                // une date d'operation et son montant (le solde comptable de cloture, souvent
+                // negatif) pour un debit/credit.
+                if (Regex.IsMatch(joined, @"Type\s*d['’]op[ée]ration|Montant\s*Min|Montant\s*Max|Date\s*D[ée]but|Date\s*Fin\b|Agence\s*:|Intitul[ée]\s*de\s*compte|Solde\s*actuel\s*:|du\s+compte\s+au\s*:", RegexOptions.IgnoreCase))
                     continue;
 
                 if (isUbci)
@@ -1814,6 +1841,30 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                     continue;
                 }
+
+                // Ligne recapitulative generique "TOTAL <debit> <credit>" ou "TOTAUX <debit>
+                // <credit>" (ex. releves STB : "TOTAL 33 207.861 40 860.745") : un total de
+                // periode imprime en pied de tableau, jamais une transaction - contrairement a
+                // totalMouvementsMatch ci-dessus qui exige la formulation precise "Total des
+                // mouvements", cette variante couvre le mot seul, utilise par d'autres banques.
+                // Sans cette exclusion, cette ligne (aucune date, mais deux montants complets)
+                // finissait comptee comme une transaction a part entiere, doublant quasiment le
+                // total reel du compte (Debit ET Credit tous les deux non nuls). Ancree en debut
+                // de ligne et sans date : ne peut pas confondre une vraie transaction avec un
+                // libelle commencant par "Total".
+                var genericTotalLineMatch = Regex.Match(joined,
+                    @"^\s*TOTA(?:UX|L)\b.{0,30}?(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
+                    RegexOptions.IgnoreCase);
+                if (genericTotalLineMatch.Success && !ClassifyDateAnywhereRegex.IsMatch(joined))
+                {
+                    if (current != null)
+                    {
+                        current.TotalDebit = ParseAmount(genericTotalLineMatch.Groups[1].Value);
+                        current.TotalCredit = ParseAmount(genericTotalLineMatch.Groups[2].Value);
+                    }
+                    continue;
+                }
+
                 var albarakaSoldeFinMatch = Regex.Match(joined,
                     @"Solde\s+fin\s+p[ée]riode\s*:?\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})|" +
                     @"SOLDE\s+(CREDITEUR|DEBITEUR)\s*:\s*(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})",
@@ -1962,6 +2013,7 @@ namespace Codeium_Security.Services.DocumentParsers
                         i--;
                     }
                 }
+
 
                 // BIAT "EXTRAIT" a montant signe unique (ex. EXTRAIT (1)biat.pdf, export TEMENOS) :
                 // le separateur de milliers "espace" du Montant (ex. "-1 350,000") est parfois lu
@@ -3136,7 +3188,7 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 string dateOp = match.Groups[1].Value;
                 string libelle = ExtractBhLibelle(match.Groups[2].Value);
-                decimal montant = ParseAmount(match.Groups[4].Value);
+                string montantRaw = match.Groups[4].Value;
 
                 var tx = new Transaction
                 {
@@ -3144,10 +3196,32 @@ namespace Codeium_Security.Services.DocumentParsers
                     Libelle = libelle
                 };
 
-                if (IsBhDebitLibelle(libelle))
-                    tx.Debit = montant;
-                else
-                    tx.Credit = montant;
+                // Sur certains scans, l'OCR perd le "/" d'une deuxieme date de ligne (Date valeur)
+                // ou le lit comme un chiffre ("1" ou "7") - ex. "24/02/2026" devient "25022026" ou
+                // "2410212026". bhLineRegex, tres permissif sur le montant final (n'importe quelle
+                // suite de chiffres), capturait alors cette date deformee comme SI c'etait le
+                // montant de la transaction (une valeur enorme et fausse). On la detecte ici et on
+                // laisse la transaction sans montant plutot que d'inventer une valeur absurde.
+                if (!IsLikelyGarbledBhDate(montantRaw))
+                {
+                    decimal montant = ParseAmount(montantRaw);
+
+                    // Garde-fou complementaire : sur les portions les plus degradees du scan, l'OCR
+                    // fusionne parfois plusieurs jetons (dates ET montants) d'une meme ligne en une
+                    // seule chaine que ParseAmount interprete comme un montant demesure (ex. deux
+                    // dates concatenees avec un vrai montant). Aucune operation courante de ce type
+                    // de compte (frais, prelevement, virement) n'atteint le million de dinars : au-
+                    // dela, c'est presque certainement un artefact OCR, pas un vrai montant - on
+                    // laisse alors la transaction sans montant plutot que d'additionner une valeur
+                    // absurde au total.
+                    if (Math.Abs(montant) < 1_000_000m)
+                    {
+                        if (IsBhDebitLibelle(libelle))
+                            tx.Debit = montant;
+                        else
+                            tx.Credit = montant;
+                    }
+                }
 
                 current.Transactions.Add(tx);
             }
@@ -3155,6 +3229,24 @@ namespace Codeium_Security.Services.DocumentParsers
             current.RawSectionText = fullText;
             sections.Add(current);
             return sections;
+        }
+
+        // Detecte une date "JJ/MM/AAAA" dont l'OCR a perdu les deux "/" (8 chiffres, ex.
+        // "25022026") ou les a lus comme un chiffre "1" ou "7" (10 chiffres, ex. "2410212026",
+        // "2470272026") - jamais un vrai montant BH plausible (aucune commission/prelevement de ce
+        // releve n'atteint des millions de dinars). Jour/mois/annee valides exiges pour eviter tout
+        // faux positif sur un montant a 8 chiffres genuinement enorme.
+        private static bool IsLikelyGarbledBhDate(string raw)
+        {
+            string s = raw.Trim();
+            var m = Regex.Match(s, @"^(\d{2})(\d{2})(\d{4})$");
+            if (!m.Success) m = Regex.Match(s, @"^(\d{2})[17](\d{2})[17](\d{4})$");
+            if (!m.Success) return false;
+
+            if (!int.TryParse(m.Groups[1].Value, out int day) || day < 1 || day > 31) return false;
+            if (!int.TryParse(m.Groups[2].Value, out int month) || month < 1 || month > 12) return false;
+            if (!int.TryParse(m.Groups[3].Value, out int year) || year < 2000 || year > 2099) return false;
+            return true;
         }
 
         private string NormalizeDate(string raw, int? defaultYear = null)
@@ -4143,8 +4235,13 @@ namespace Codeium_Security.Services.DocumentParsers
             {
                 return "Banque Tuniso-Koweitienne (BTK)";
             }
+            // Meme garde-fou que bteNameHit dans Parse() : un releve ATB peut mentionner "BTE" en
+            // interne (ex. "Encaissement CHQ-BTE ...", un cheque tire sur un compte BTE encaisse
+            // par ce client ATB) sans etre lui-meme un releve BTE.
+            bool looksLikeAtb = Regex.IsMatch(text, @"\bATB\b", RegexOptions.IgnoreCase)
+                || text.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
             if (text.Contains("Banque de Tunisie et des Emirats", StringComparison.OrdinalIgnoreCase)
-                || Regex.IsMatch(text, @"\bBTE\b"))
+                || (Regex.IsMatch(text, @"\bBTE\b") && !looksLikeAtb))
             {
                 return "Banque de Tunisie et des Emirats (BTE)";
             }
@@ -4182,9 +4279,23 @@ namespace Codeium_Security.Services.DocumentParsers
                 ("BANK ABC", "Bank ABC Tunisia")
             };
 
+            // Un releve peut mentionner le sigle d'une AUTRE banque uniquement comme reference a
+            // un cheque tiers encaisse (ex. "Encaissement CHQ-BNA ...", "CHEQUE STB ...") sans que
+            // cette autre banque soit celle du releve - ignore cette occurrence precise (une autre
+            // occurrence du meme sigle, hors contexte "cheque", continue elle de matcher
+            // normalement).
             foreach (var bank in knownBanks)
-                if (text.Contains(bank.Keyword))
+                // Sensible a la casse (comme l'ancien text.Contains(bank.Keyword) qu'il remplace) :
+                // un sigle en MAJUSCULES (ex. "UIB") ne doit jamais matcher sa version minuscule
+                // fortuitement presente au milieu d'un autre mot (ex. "Bourg-uib-a").
+                foreach (Match m in Regex.Matches(text, Regex.Escape(bank.Keyword)))
+                {
+                    int start = Math.Max(0, m.Index - 15);
+                    string before = text.Substring(start, m.Index - start);
+                    if (Regex.IsMatch(before, @"CH[EÉÈ]?QU?E?[\s\-]*$", RegexOptions.IgnoreCase))
+                        continue;
                     return bank.FullName;
+                }
 
             return "";
         }
