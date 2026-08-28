@@ -243,6 +243,15 @@ namespace Codeium_Security.Services.DocumentParsers
                 return bteDocument;
             }
 
+            // ExtractBankName() recherche "ATTIJARI" sensible a la casse (necessaire par
+            // ailleurs pour eviter qu'UIB matche a tort dans "Bourguiba") et rate donc les
+            // documents ou l'OCR rend le nom en casse mixte ("Attijari bank" au lieu de
+            // "ATTIJARI"), laissant bankName vide. isAttijari (ligne ~108, insensible a la
+            // casse) detecte deja correctement ces documents et pilote deja leur traitement de
+            // tableau : on reutilise ce meme signal existant comme filet de secours pour
+            // BankName plutot que de dupliquer une detection, sans toucher a ExtractBankName.
+            if (string.IsNullOrEmpty(bankName) && isAttijari) bankName = "Attijari Bank";
+
             var document = new BankDocument
             {
                 BankName = bankName,
@@ -2611,24 +2620,14 @@ namespace Codeium_Security.Services.DocumentParsers
                     lastSection.SoldeFinal = btlStructuralClosingBalance;
             }
 
-            // TSB : filet de securite - la ligne de cloture "Total ... considérons approuvé ...
-            // sans restrictions ni réserves" (voir IsTsbClosingBoilerplate) est parfois assemblee
-            // par un chemin different de la boucle principale (fusion de lignes de continuation en
-            // fin de tableau) et manque alors le garde ci-dessus ; on la retire donc aussi ici,
-            // apres coup, quel que soit le chemin qui l'a creee.
+            
             if (isTsbDoc)
             {
                 foreach (var sec in sections)
                     sec.Transactions.RemoveAll(tx => IsTsbClosingBoilerplate(tx.Libelle ?? ""));
             }
 
-            // BTK (format "mobile", ex. Zouheir mobil BTK.pdf) : "Total des opérations <débit>
-            // <crédit>" est un CUMUL reimprime apres CHAQUE transaction (pas seulement en fin de
-            // page) - le motif generique "Total\s+<montant>\s+<montant>" plus haut ne matche pas
-            // ("des opérations" s'intercale entre "Total" et le premier montant) et, meme s'il
-            // matchait, prendrait la PREMIERE occurrence au lieu de la derniere (= le cumul final
-            // attendu). Cherche donc ici la derniere occurrence sur tout le document et l'applique
-            // sur la derniere section, uniquement si rien d'autre n'a deja rempli TotalDebit.
+            
             if (isBtk)
             {
                 var btkTotalMatches = Regex.Matches(fullText,

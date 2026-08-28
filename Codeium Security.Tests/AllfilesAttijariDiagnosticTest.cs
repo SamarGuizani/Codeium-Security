@@ -127,6 +127,30 @@ namespace Codeium_Security.Tests
                 $"[{Path.GetFileName(pdfPath)}] CustomerName='{metadata.CustomerName}' Period.Start='{metadata.Period?.Start}' Period.End='{metadata.Period?.End}'");
         }
 
+        public static IEnumerable<object[]> UibFiles()
+        {
+            if (!Directory.Exists(AllfilesDir)) yield break;
+            foreach (var f in Directory.EnumerateFiles(AllfilesDir, "*.pdf")
+                         .Where(f => Path.GetFileName(f).Contains("uib", StringComparison.OrdinalIgnoreCase))
+                         .OrderBy(f => f))
+                yield return new object[] { f };
+        }
+
+        [Theory]
+        [MemberData(nameof(UibFiles))]
+        public async Task DiagnoseUibBankName(string pdfPath)
+        {
+            var ocr = await GetOcrCachedAsync(pdfPath);
+            var lines = _fixture.AnalysisEngine.GroupWordsIntoLines(ocr.Words);
+            var rows = _fixture.AnalysisEngine.BuildTable(lines);
+            var docType = _fixture.Classifier.Classify(ocr.FullText);
+            var parser = _fixture.ParserFactory.GetParser(docType);
+            var document = parser?.Parse(ocr.FullText, lines);
+            string bankName = (document as BankDocument)?.BankName ?? "<non-BankDocument>";
+
+            _output.WriteLine($"[{Path.GetFileName(pdfPath)}] BankName='{bankName}'");
+        }
+
         [Theory]
         [MemberData(nameof(AttijariFiles))]
         public async Task DiagnoseMetadata(string pdfPath)
@@ -136,9 +160,13 @@ namespace Codeium_Security.Tests
             var rows = _fixture.AnalysisEngine.BuildTable(lines);
 
             var metadata = new GenericDocumentMetadataExtractor().Extract(ocr.FullText, rows);
+            var docType = _fixture.Classifier.Classify(ocr.FullText);
+            var parser = _fixture.ParserFactory.GetParser(docType);
+            var document = parser?.Parse(ocr.FullText, lines);
+            string bankName = (document as BankDocument)?.BankName ?? "<non-BankDocument>";
 
             _output.WriteLine(
-                $"[{Path.GetFileName(pdfPath)}] CustomerName='{metadata.CustomerName}' Period.Start='{metadata.Period?.Start}' Period.End='{metadata.Period?.End}'");
+                $"[{Path.GetFileName(pdfPath)}] BankName='{bankName}' CustomerName='{metadata.CustomerName}' Period.Start='{metadata.Period?.Start}' Period.End='{metadata.Period?.End}'");
         }
     }
 }
