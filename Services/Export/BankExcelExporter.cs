@@ -15,14 +15,17 @@ namespace Codeium_Security.Services.Export
         private static readonly char[] InvalidSheetChars = { '\\', '/', '?', '*', '[', ']', ':' };
         private readonly TransactionSumCalculator _sumCalculator = new();
 
-        public byte[] Export(BankDocument document)
+        // metadata est optionnel (defaut null) : n'affecte aucun appelant existant qui ne le
+        // fournit pas encore. Ne contient que CustomerName/Period, deja produits par
+        // GenericDocumentMetadataExtractor - aucune nouvelle detection ici.
+        public byte[] Export(BankDocument document, DocumentMetadata? metadata = null)
         {
             using var workbook = new XLWorkbook();
             var usedSheetNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
             if (document.Accounts.Count == 0)
             {
-                AddAccountSheet(workbook, document.BankName, new BankAccountSection(), usedSheetNames);
+                AddAccountSheet(workbook, document.BankName, new BankAccountSection(), usedSheetNames, metadata);
             }
             else
             {
@@ -30,7 +33,7 @@ namespace Codeium_Security.Services.Export
                 {
                     try
                     {
-                        AddAccountSheet(workbook, document.BankName, account, usedSheetNames);
+                        AddAccountSheet(workbook, document.BankName, account, usedSheetNames, metadata);
                     }
                     catch (Exception ex)
                     {
@@ -44,7 +47,17 @@ namespace Codeium_Security.Services.Export
             return stream.ToArray();
         }
 
-        private void AddAccountSheet(XLWorkbook workbook, string bankName, BankAccountSection account, HashSet<string> usedSheetNames)
+        private static string FormatPeriod(ExtractionPeriod? period)
+        {
+            if (period == null) return "";
+            if (!string.IsNullOrWhiteSpace(period.Start) && !string.IsNullOrWhiteSpace(period.End))
+                return $"{period.Start} - {period.End}";
+            if (!string.IsNullOrWhiteSpace(period.End))
+                return $"au {period.End}";
+            return "";
+        }
+
+        private void AddAccountSheet(XLWorkbook workbook, string bankName, BankAccountSection account, HashSet<string> usedSheetNames, DocumentMetadata? metadata)
         {
             var sheet = workbook.Worksheets.Add(BuildSheetName(account.AccountNumber, usedSheetNames));
 
@@ -69,6 +82,10 @@ namespace Codeium_Security.Services.Export
             sheet.Cell(row, 2).Value = bankName;
             row++;
 
+            sheet.Cell(row, 1).Value = "Société :";
+            sheet.Cell(row, 2).Value = metadata?.CustomerName ?? "";
+            row++;
+
             sheet.Cell(row, 1).Value = "Compte :";
             sheet.Cell(row, 2).Value = account.AccountNumber;
             row++;
@@ -79,6 +96,10 @@ namespace Codeium_Security.Services.Export
 
             sheet.Cell(row, 1).Value = "RIB :";
             sheet.Cell(row, 2).Value = account.Rib;
+            row++;
+
+            sheet.Cell(row, 1).Value = "Période :";
+            sheet.Cell(row, 2).Value = FormatPeriod(metadata?.Period);
             row++;
 
             row = WriteOptionalAmount(sheet, row, "Solde initial :", account.SoldeInitial);

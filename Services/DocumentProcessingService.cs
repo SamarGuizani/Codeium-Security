@@ -90,6 +90,11 @@ namespace Codeium_Security.Services
             // module independant, ne modifie ni ne relit le resultat du parser ci-dessus.
             var metadata = _metadataExtractor.Extract(ocrResult.FullText, diagRows);
 
+            // BankName : reprise directe de la valeur DEJA calculee par BankDocumentParser
+            // ci-dessus (isAttijari/isBh/isUbci/ExtractBankName...) - aucune seconde detection
+            // de banque n'est creee ici, conformement au principe "reutiliser l'existant".
+            metadata.BankName = (document as BankDocument)?.BankName;
+
             bool needsReview = EvaluateNeedsReview(documentType, document, ocrResult.Confidence);
 
             // Calcul automatique post-parsing de SUM(Debit)/SUM(Credit) uniquement (voir

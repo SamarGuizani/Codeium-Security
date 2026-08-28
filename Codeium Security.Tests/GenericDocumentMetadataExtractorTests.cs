@@ -299,5 +299,97 @@ namespace Codeium_Security.Tests
             Assert.Equal("01/02/2026", result.Period!.Start);
             Assert.Equal("28/02/2026", result.Period!.End);
         }
+
+        [Fact]
+        public void CustomerName_LegalEntityPrefix_PreferredOverEarlierNoise()
+        {
+            // La ligne SARL/SA/STE peut ne pas etre la toute premiere ligne de l'en-tete
+            // (ex. une ligne de bruit d'agence avant elle) : elle doit tout de meme etre
+            // preferee au reste, quelle que soit sa position.
+            var rows = RowsFromLines(
+                "Agence Centre Ville",
+                "SARL NOUVELLE GENERATION TRADING",
+                "12 RUE DE LA LIBERTE",
+                "Date Libellé opération Débit Crédit Solde");
+
+            var result = _extractor.Extract("", rows);
+
+            Assert.Equal("SARL NOUVELLE GENERATION TRADING", result.CustomerName);
+        }
+
+        [Fact]
+        public void ExtractionPeriod_MonthlyWording_ComputesFirstAndLastDayOfMonth()
+        {
+            var rows = RowsFromLines(
+                "Du mois de Décembre 2024",
+                "Date Libellé opération Débit Crédit Solde");
+
+            var result = _extractor.Extract("", rows);
+
+            Assert.NotNull(result.Period);
+            Assert.Equal("01/12/2024", result.Period!.Start);
+            Assert.Equal("31/12/2024", result.Period!.End);
+        }
+
+        [Fact]
+        public void ExtractionPeriod_StatementAsOfSingleDate_ReleveAu()
+        {
+            var rows = RowsFromLines(
+                "Relevé au 31/05/2025",
+                "Date Libellé opération Débit Crédit Solde");
+
+            var result = _extractor.Extract("", rows);
+
+            Assert.NotNull(result.Period);
+            Assert.Null(result.Period!.Start);
+            Assert.Equal("31/05/2025", result.Period!.End);
+        }
+
+        [Fact]
+        public void ExtractionPeriod_StatementAsOfSingleDate_SoldeAu()
+        {
+            var rows = RowsFromLines(
+                "Solde au 30/04/2025",
+                "Date Libellé opération Débit Crédit Solde");
+
+            var result = _extractor.Extract("", rows);
+
+            Assert.NotNull(result.Period);
+            Assert.Null(result.Period!.Start);
+            Assert.Equal("30/04/2025", result.Period!.End);
+        }
+
+        [Fact]
+        public void CustomerName_LegalEntityMarker_MergedAtEndOfUnrelatedSentence()
+        {
+            // Reproduit un releve reel (25047000000121760245.pdf) : la fusion de colonnes OCR
+            // accole "SOCIETE AUTOSET 7 PIECES AUTO" a la fin d'une phrase d'accroche sans
+            // rapport, sur la MEME ligne physique. Seul le texte a partir du marqueur doit
+            // devenir CustomerName - jamais la phrase d'accroche qui le precede.
+            var rows = RowsFromLines(
+                "RIB 25047000000121760245 Date du 01/01/2025 au 31/01/2025",
+                "Cher client, nous avons l'honneur de vous adresser, ci-après, le relevé des",
+                "opérations portées à votre compte en vous souhaitant bonne réception SOCIETE AUTOSET 7 PIECES AUTO",
+                "AVENUE FRANCE N 70 2013 BEN AROUS",
+                "Date Libellé Opération Date valeur Débit Crédit");
+
+            var result = _extractor.Extract("", rows);
+
+            Assert.Equal("SOCIETE AUTOSET 7 PIECES AUTO", result.CustomerName);
+        }
+
+        [Fact]
+        public void ExtractionPeriod_DuAu_ToleratesArabicFillerBetweenLabelAndDates()
+        {
+            var rows = RowsFromLines(
+                "Date du ???????? ?? . 01/01/2025 au ??????? 31/01/2025",
+                "Date Libellé Opération Date valeur Débit Crédit");
+
+            var result = _extractor.Extract("", rows);
+
+            Assert.NotNull(result.Period);
+            Assert.Equal("01/01/2025", result.Period!.Start);
+            Assert.Equal("31/01/2025", result.Period!.End);
+        }
     }
 }

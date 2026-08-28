@@ -57,6 +57,7 @@ namespace Codeium_Security.Controllers
                         result.OcrConfidence,
                         result.NeedsReview,
                         BankName = bankDoc.BankName,
+                        Metadata = result.Metadata,
                         Account = account
                     };
 
@@ -143,7 +144,7 @@ namespace Codeium_Security.Controllers
             if (result.Document is not BankDocument bankDoc)
                 return BadRequest($"'{file.FileName}' n'a pas ete reconnu comme un releve bancaire (type detecte : {result.DetectedType}).");
 
-            var xlsxBytes = _excelExporter.Export(bankDoc);
+            var xlsxBytes = _excelExporter.Export(bankDoc, result.Metadata);
             var downloadName = Path.GetFileNameWithoutExtension(file.FileName) + ".xlsx";
 
             return File(xlsxBytes,
@@ -393,7 +394,7 @@ namespace Codeium_Security.Controllers
                         continue;
                     }
 
-                    var xlsxBytes = _excelExporter.Export(bankDoc);
+                    var xlsxBytes = _excelExporter.Export(bankDoc, result.Metadata);
                     var xlsxPath = Path.Combine(outputFolder, Path.GetFileNameWithoutExtension(fileName) + ".xlsx");
                     await System.IO.File.WriteAllBytesAsync(xlsxPath, xlsxBytes);
                     savedFiles.Add(xlsxPath);

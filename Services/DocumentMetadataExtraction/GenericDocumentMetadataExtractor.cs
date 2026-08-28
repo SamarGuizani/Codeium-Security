@@ -155,6 +155,20 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             @"\bEdit[ée]\b", RegexOptions.IgnoreCase);
         private static readonly Regex TrailingTimeRegex = new(@"\b\d{1,2}:\d{2}(:\d{2})?\b");
 
+        // Marqueur de forme juridique (STE, SOCIETE, SARL, SUARL, SA...) : signal positif
+        // generique d'un nom d'entreprise, quelle que soit la banque. Non ancre au debut de
+        // ligne : une fusion de colonnes OCR peut accoler ce marqueur a la fin d'une phrase
+        // sans rapport (ex. "...bonne reception SOCIETE AUTOSET 7 PIECES AUTO") - on cherche
+        // le marqueur n'importe ou sur la ligne et on ne garde que le texte a partir de la
+        // (voir usage ci-dessous), jamais la ligne entiere avec son prefixe parasite.
+        // "SA" reste volontairement sensible a la casse (via (?-i:...), meme si le reste du
+        // motif est insensible a la casse) : contrairement a STE/SOCIETE/SARL/SUARL, "sa" est
+        // aussi un mot francais courant (possessif) - cherche n'importe ou sur la ligne (donc
+        // sans l'ancrage de debut de ligne qui protegeait avant), un "sa" minuscule donnerait
+        // trop de faux positifs. "SA" majuscule reste, lui, un signal fiable de forme juridique.
+        private static readonly Regex LegalEntityPrefixRegex = new(
+            @"\b(STE\.?|SOCI[ÉE]T[ÉE]|SUARL|SARL|(?-i:SA))\b", RegexOptions.IgnoreCase);
+
         // Autres labels d'en-tete connus (numero de compte, RIB, adresse, devise, periode,
         // agence, coordonnees...) : une ligne qui matche l'un d'eux n'est jamais un nom de
         // client/societe.
@@ -376,7 +390,31 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 }
             }
 
-            // Priorite 3 : aucun label reconnu explicitement - premiere ligne d'en-tete qui
+            // Priorite 3a : un marqueur de forme juridique (STE, SOCIETE, SARL, SUARL, SA...)
+            // present sur une ligne de la zone d'en-tete est un signal positif fort de nom
+            // d'entreprise, quelle que soit sa position - on le prefere donc a n'importe
+            // quelle autre ligne non marquee qui le precederait (ex. une ligne de bruit
+            // d'en-tete de banque). Le marqueur n'est pas forcement en debut de ligne : une
+            // fusion de colonnes OCR peut l'accoler a la fin d'une phrase sans rapport (ex.
+            // "...bonne reception SOCIETE AUTOSET 7 PIECES AUTO") - on ne garde alors que le
+            // texte a partir du marqueur, jamais le prefixe parasite qui le precede.
+            // Structurel, jamais specifique a une banque.
+            foreach (var line in headerLines)
+            {
+                if (string.IsNullOrWhiteSpace(line)) continue;
+
+                var legalMatch = LegalEntityPrefixRegex.Match(line);
+                if (!legalMatch.Success) continue;
+
+                string candidateFromMarker = line[legalMatch.Index..].Trim();
+                if (OtherLabelLineRegex.IsMatch(candidateFromMarker)) continue;
+                if (LooksLikeAddressLine(candidateFromMarker)) continue;
+                if (IsRejectableCandidate(candidateFromMarker)) continue;
+
+                return CleanCustomerName(candidateFromMarker);
+            }
+
+            // Priorite 3b : aucun label reconnu explicitement - premiere ligne d'en-tete qui
             // n'est ni un autre label connu, ni une adresse, ni rejetee par le filtre
             // generique (titre de document / nom de banque / date / bruit OCR-arabe / sigle
             // court). On s'arrete a cette premiere ligne valide : jamais de concatenation avec
@@ -449,12 +487,18 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
 
         private const string DateToken = @"\d{1,2}[/\-.]\d{1,2}[/\-.]\d{2,4}";
 
+        // Filler tolere entre "du"/"au" et leur date respective : des mots intercales par une
+        // fusion de colonnes OCR (texte arabe, ponctuation parasite...) ne doivent pas
+        // empecher de retrouver la date qui suit - borne (30 caracteres, jamais au-dela d'une
+        // ligne via \n exclu) pour ne jamais deborder sur une autre partie du document.
+        private const string DateFiller = @"[^\d\n]{0,30}?";
+
         private static readonly Regex PeriodDuAuRegex = new(
-            $@"(?:Op[ée]rations\s+)?[Dd]u\s+({DateToken})\s+(?:[Aa]u|-)\s+({DateToken})",
+            $@"(?:Op[ée]rations\s+)?[Dd]u\b{DateFiller}({DateToken}){DateFiller}(?:[Aa]u|-){DateFiller}({DateToken})",
             RegexOptions.IgnoreCase);
 
         private static readonly Regex PeriodLabelRegex = new(
-            $@"P[ée]riode\s*:?\s*({DateToken})\s*(?:-|[Aa]u)\s*({DateToken})",
+            $@"P[ée]riode\s*:?{DateFiller}({DateToken})\s*(?:-|[Aa]u){DateFiller}({DateToken})",
             RegexOptions.IgnoreCase);
 
         private static readonly Regex DuOnlyLineRegex = new($@"^\s*[Dd]u\s+({DateToken})\s*$", RegexOptions.IgnoreCase);
@@ -465,6 +509,29 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         // UIB reel avec colonnes fortement melangees).
         private static readonly Regex DateThenAuOnlyLineRegex = new($@"^\s*({DateToken})\s*[Aa]u\s*$", RegexOptions.IgnoreCase);
         private static readonly Regex LoneDateLineRegex = new($@"^\s*({DateToken})\s*$");
+
+        // Periode mensuelle ("Du mois de Décembre 2024", "Mois de Décembre 2024") : un seul
+        // mois nomme plutot que deux dates - Start/End sont calcules comme le 1er et le
+        // dernier jour de ce mois (generique, aucune banque precise).
+        private static readonly Regex MonthlyPeriodRegex = new(
+            $@"(?:[Dd]u\s+)?[Mm]ois\s+de\s+({string.Join("|", MonthNames)})\s+(\d{{4}})",
+            RegexOptions.IgnoreCase);
+
+        // Date d'arret unique ("Relevé au 31/05/2025", "Solde au 30/04/2025") : pas
+        // d'intervalle, seule une date de fin est imprimee - Start reste null.
+        private static readonly Regex StatementAsOfDateRegex = new(
+            $@"(?:Relev[ée]|Solde)\s+au\s*:?\s*({DateToken})", RegexOptions.IgnoreCase);
+
+        // Retrouve l'index 1-12 du nom de mois capture (accent-tolerant, insensible a la
+        // casse) dans MonthNames - retourne 0 si non reconnu (ne devrait pas arriver, le
+        // motif appelant est construit a partir de ce meme tableau).
+        private static int MonthNameToNumber(string monthName)
+        {
+            for (int idx = 0; idx < MonthNames.Length; idx++)
+                if (Regex.IsMatch(monthName, $@"^(?:{MonthNames[idx]})$", RegexOptions.IgnoreCase))
+                    return idx + 1;
+            return 0;
+        }
 
         private static ExtractionPeriod? ExtractPeriod(List<string> headerLines)
         {
@@ -477,6 +544,22 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             m = PeriodLabelRegex.Match(joinedHeader);
             if (m.Success)
                 return new ExtractionPeriod { Start = m.Groups[1].Value, End = m.Groups[2].Value };
+
+            m = MonthlyPeriodRegex.Match(joinedHeader);
+            if (m.Success)
+            {
+                int month = MonthNameToNumber(m.Groups[1].Value);
+                int year = int.Parse(m.Groups[2].Value);
+                if (month >= 1 && month <= 12)
+                {
+                    int lastDay = DateTime.DaysInMonth(year, month);
+                    return new ExtractionPeriod
+                    {
+                        Start = $"01/{month:D2}/{year:D4}",
+                        End = $"{lastDay:D2}/{month:D2}/{year:D4}"
+                    };
+                }
+            }
 
             // Les deux dates sur deux lignes separees ("Du <date>" puis "Au <date>").
             for (int i = 0; i < headerLines.Count - 1; i++)
@@ -500,6 +583,12 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 if (loneDateMatch.Success)
                     return new ExtractionPeriod { Start = dateAuMatch.Groups[1].Value, End = loneDateMatch.Groups[1].Value };
             }
+
+            // Dernier recours : une seule date d'arret imprimee ("Relevé au ...", "Solde au
+            // ..."), sans intervalle - Start reste null, seul End est renseigne.
+            m = StatementAsOfDateRegex.Match(joinedHeader);
+            if (m.Success)
+                return new ExtractionPeriod { Start = null, End = m.Groups[1].Value };
 
             return null;
         }

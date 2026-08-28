@@ -70,7 +70,11 @@ namespace Codeium_Security.Tests
             // Le bloc Banque/Compte/... existant est toujours present, juste decale vers le bas.
             int bankRow = FindRow(sheet1, "Banque :");
             Assert.Equal("Banque Test", sheet1.Cell(bankRow, 2).GetString());
-            Assert.Equal("Compte :", sheet1.Cell(bankRow + 1, 1).GetString());
+            // Aucun DocumentMetadata fourni ici (Export(document) sans 2e argument) : la ligne
+            // "Société :" reste presente (structure du bloc toujours ecrite) mais vide.
+            Assert.Equal("Société :", sheet1.Cell(bankRow + 1, 1).GetString());
+            Assert.Equal("", sheet1.Cell(bankRow + 1, 2).GetString());
+            Assert.Equal("Compte :", sheet1.Cell(bankRow + 2, 1).GetString());
 
             int soldeInitialRow = FindRow(sheet1, "Solde initial :", bankRow);
             Assert.Equal(1000.500, sheet1.Cell(soldeInitialRow, 2).GetDouble(), 3);
@@ -109,6 +113,62 @@ namespace Codeium_Security.Tests
                     return r;
             }
             throw new Xunit.Sdk.XunitException($"Ligne avec le libelle '{label}' introuvable a partir de la ligne {fromRow}.");
+        }
+
+        [Fact]
+        public void Export_Writes_CustomerName_And_Period_When_Metadata_Provided()
+        {
+            var document = new BankDocument
+            {
+                BankName = "Attijari Bank",
+                Accounts = new List<BankAccountSection>
+                {
+                    new BankAccountSection { AccountNumber = "00010-0082693425-5", Currency = "TND" },
+                }
+            };
+            var metadata = new DocumentMetadata
+            {
+                BankName = "Attijari Bank",
+                CustomerName = "BLUE TUNISIE",
+                Period = new ExtractionPeriod { Start = "01/11/2024", End = "30/11/2024" }
+            };
+
+            var exporter = new BankExcelExporter();
+            byte[] bytes = exporter.Export(document, metadata);
+
+            using var stream = new MemoryStream(bytes);
+            using var workbook = new XLWorkbook(stream);
+            var sheet = workbook.Worksheet(1);
+
+            int societeRow = FindRow(sheet, "Société :");
+            Assert.Equal("BLUE TUNISIE", sheet.Cell(societeRow, 2).GetString());
+
+            int periodeRow = FindRow(sheet, "Période :");
+            Assert.Equal("01/11/2024 - 30/11/2024", sheet.Cell(periodeRow, 2).GetString());
+        }
+
+        [Fact]
+        public void Export_Writes_PeriodEndOnly_When_Start_Missing()
+        {
+            var document = new BankDocument
+            {
+                BankName = "BIAT",
+                Accounts = new List<BankAccountSection> { new BankAccountSection { AccountNumber = "123" } }
+            };
+            var metadata = new DocumentMetadata
+            {
+                Period = new ExtractionPeriod { Start = null, End = "31/05/2025" }
+            };
+
+            var exporter = new BankExcelExporter();
+            byte[] bytes = exporter.Export(document, metadata);
+
+            using var stream = new MemoryStream(bytes);
+            using var workbook = new XLWorkbook(stream);
+            var sheet = workbook.Worksheet(1);
+
+            int periodeRow = FindRow(sheet, "Période :");
+            Assert.Equal("au 31/05/2025", sheet.Cell(periodeRow, 2).GetString());
         }
 
         [Fact]
