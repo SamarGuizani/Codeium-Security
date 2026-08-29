@@ -197,6 +197,15 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         private static readonly Regex LegalEntityPrefixRegex = new(
             @"\b(STE\.?|SOCI[ÉE]T[ÉE]|SUARL|SARL|(?-i:SA))\b", RegexOptions.IgnoreCase);
 
+        // Formule de politesse de la lettre d'accompagnement standard ("Nous vous souhaitons
+        // bonne réception <NOM>") : le nom du client suit directement cette formule, avec ou
+        // sans ponctuation entre les deux - generique a tous les releves observes qui utilisent
+        // cette lettre-type, quelle que soit la banque. Ancre uniquement sur "réception" (sans
+        // exiger "bonne" devant) : le mot "bonne" est parfois lui-meme corrompu par l'OCR (ex.
+        // "l{onne réception" - releve reel), alors que "réception" survit systematiquement.
+        private static readonly Regex GoodReceptionAnchorRegex = new(
+            @"r[ée]ception\.?\s*[:,]?\s*", RegexOptions.IgnoreCase);
+
         // Autres labels d'en-tete connus (numero de compte, RIB, adresse, devise, periode,
         // agence, coordonnees...) : une ligne qui matche l'un d'eux n'est jamais un nom de
         // client/societe.
@@ -210,6 +219,13 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
 
             // "N°09 RUE ..." / "12 AVENUE ..." / "10 BD ..." (numero + type de voie)
             if (Regex.IsMatch(t, @"^(N[°o]\s*)?\d+[\s,]*(RUE|AVENUE|AV\.?|BD\b|BOULEVARD|ROUTE|IMPASSE|CIT[ée]|R[ée]SIDENCE|LOTISSEMENT)\b", RegexOptions.IgnoreCase))
+                return true;
+
+            // "ROUTE MORNAG KM 3 BOUJARDGA" (type de voie en tout debut de ligne, sans numero
+            // devant - le numero de voie a pu etre perdu par l'OCR ou n'existe pas pour ce type
+            // d'adresse rurale/routiere) : meme type de voie que ci-dessus, sans exiger le
+            // numero.
+            if (Regex.IsMatch(t, @"^(RUE|AVENUE|AV\.?|BD\b|BOULEVARD|ROUTE|IMPASSE|CIT[ée]|R[ée]SIDENCE|LOTISSEMENT)\b", RegexOptions.IgnoreCase))
                 return true;
 
             // "2013 BEN AROUS" (code postal en debut de ligne suivi de la ville)
@@ -523,6 +539,27 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 {
                     string next = headerLines[j].Trim();
                     if (string.IsNullOrWhiteSpace(next)) continue;
+
+                    // Une ligne qui COMMENCE par un autre label connu (RIB, N°/Numero de
+                    // compte...) suivi de son code numerique peut, par fusion de colonnes OCR,
+                    // avoir la vraie valeur du champ recherche accolee juste apres ce code sur
+                    // la MEME ligne (ex. "RIB : 08 105 00075 20 12395 9 56 Mr TRIMECHE MOHAMED
+                    // AZIZ" - releve BIAT reel, colonne RIB et colonne Titulaire fusionnees sur
+                    // la meme ligne de tableau) - on tente d'extraire ce reste plutot que de
+                    // jeter toute la ligne au premier test OtherLabelLineRegex.
+                    var labelPrefix = LabelThenNumericCodeRegex.Match(next);
+                    if (labelPrefix.Success)
+                    {
+                        string trailing = StripLeadingNumericCode(TruncateAtTrailingMarker(next[labelPrefix.Length..].Trim()));
+                        if (!string.IsNullOrWhiteSpace(trailing)
+                            && Regex.IsMatch(trailing, @"[A-Za-zÀ-ÿ]{2,}")
+                            && !OtherLabelLineRegex.IsMatch(trailing)
+                            && !LooksLikeAddressLine(trailing)
+                            && !IsRejectableCandidate(trailing, allowShortAcronym: true))
+                            return CleanCustomerName(trailing);
+                        continue;
+                    }
+
                     if (OtherLabelLineRegex.IsMatch(next)) continue;
                     if (LooksLikeAddressLine(next)) continue;
 
@@ -532,6 +569,28 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
 
                     return CleanCustomerName(nextCandidate);
                 }
+            }
+
+            // Priorite 2b : phrase-anchor generique "bonne réception" - dans le modele de lettre
+            // d'accompagnement standard ("Nous vous souhaitons bonne réception <NOM>"), le nom
+            // du client suit directement cette formule, avec ou sans ponctuation entre les
+            // deux (observe sur des releves reels BIAT/Zitouna : "...bonne reception SOCIETE
+            // AUTOSET 7 PIECES AUTO" et "...bonne réception BLUE TUNISIE SARL"). Utile en
+            // particulier quand la forme juridique du client est un SUFFIXE ("BLUE TUNISIE
+            // SARL") plutot qu'un prefixe ("SOCIETE AUTOSET...") : LegalEntityPrefixRegex
+            // (Priorite 3a plus bas) ne sait lire que le prefixe, jamais le suffixe.
+            foreach (var line in headerLines)
+            {
+                var receptionMatch = GoodReceptionAnchorRegex.Match(line);
+                if (!receptionMatch.Success) continue;
+
+                string afterReception = TruncateAtTrailingMarker(line[(receptionMatch.Index + receptionMatch.Length)..].Trim());
+                if (string.IsNullOrWhiteSpace(afterReception)) continue;
+                if (OtherLabelLineRegex.IsMatch(afterReception)) continue;
+                if (LooksLikeAddressLine(afterReception)) continue;
+                if (IsRejectableCandidate(afterReception, allowShortAcronym: true)) continue;
+
+                return CleanCustomerName(afterReception);
             }
 
             // Priorite 3a : un marqueur de forme juridique (STE, SOCIETE, SARL, SUARL, SA...)
