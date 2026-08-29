@@ -144,7 +144,9 @@ namespace Codeium_Security.Tests
             var lines = _fixture.AnalysisEngine.GroupWordsIntoLines(ocr.Words);
             var rows = _fixture.AnalysisEngine.BuildTable(lines);
 
+            Console.WriteLine($"[FILESTART] {Path.GetFileName(pdfPath)}");
             var metadata = new GenericDocumentMetadataExtractor().Extract(ocr.FullText, rows);
+            Console.WriteLine($"[FILEEND] {Path.GetFileName(pdfPath)}");
 
             _output.WriteLine(
                 $"[{Path.GetFileName(pdfPath)}] CustomerName='{metadata.CustomerName}' Period.Start='{metadata.Period?.Start}' Period.End='{metadata.Period?.End}'");
