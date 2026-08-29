@@ -96,6 +96,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             @"Compte\s+de",
             @"Account\s*holder",
             @"Customer",
+            @"Name",
             @"To",
         };
 
@@ -105,6 +106,16 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         // AUTO"), en avalant "SOCIETE" comme prefixe de label au lieu de faire partie du nom.
         private static readonly Regex CustomerLabelLineRegex = new(
             $@"^\s*(?:{string.Join("|", CustomerLabelAlternatives)})\b\s*:\s*(.*)$",
+            RegexOptions.IgnoreCase);
+
+        // Variante NON ancree en debut de ligne : le label + ":" peut se retrouver au MILIEU
+        // d'une ligne par fusion de colonnes OCR avec un AUTRE champ qui le precede (ex. "IBAN :
+        // TN59... Name: MOHAMED ZARRAGA ZPA" - releve QNB reel, ou "IBAN" et "Name" finissent
+        // sur la meme ligne physique). On cherche le label n'importe ou et on capture tout ce
+        // qui suit son ":", jusqu'a la fin de ligne - meme logique que LegalEntityPrefixRegex
+        // pour la forme juridique, appliquee ici aux labels explicites.
+        private static readonly Regex CustomerLabelMidLineRegex = new(
+            $@"(?:{string.Join("|", CustomerLabelAlternatives)})\b\s*:\s*(.+)$",
             RegexOptions.IgnoreCase);
 
         // Priorite 2 : la ligne entiere n'est QUE le label (avec ou sans ":" final, sans
@@ -214,6 +225,40 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
 
         private static string CleanCustomerName(string raw) =>
             Regex.Replace(raw.Trim().Trim(':', '-', ' '), @"\s{2,}", " ");
+
+        // Bloc numerique/code (numero de compte, fraction de periode "1/2024"...) en TETE de
+        // ligne, suivi du vrai texte : fusion de colonnes OCR frequente quand la valeur d'un
+        // champ label suit directement, sur la MEME ligne, le numero de compte et un fragment
+        // de periode (ex. "8901769223 1/2024 1/13 EZB" - le code client "EZB" est le vrai
+        // candidat, precede de bruit numerique). On ne garde que le texte apres ce bloc.
+        private static readonly Regex LeadingNumericCodeRegex = new(@"^[\d\s./\-:]{4,}");
+
+        private static string StripLeadingNumericCode(string line)
+        {
+            var m = LeadingNumericCodeRegex.Match(line);
+            return m.Success ? line[m.Length..].Trim() : line;
+        }
+
+        // Reconnaissance d'un label connu present comme mot isole EN FIN de ligne, avec un
+        // eventuel gloss anglais entre parentheses (ex. "Identifiant national de compte
+        // bancaire RIB Titulaire du compte (Account Owner)" - releve BTK reel, ou le vrai label
+        // "Titulaire du compte" est precede d'un prefixe non reconnu au lieu d'etre seul sur sa
+        // ligne). Traite comme CustomerLabelOnlyLineRegex : la valeur est alors recherchee en
+        // scannant vers l'avant. Seuls les labels "surs" (ColonOptionalLabelAlternatives, sans
+        // "Compte de"/"Société"/"Entreprise" qui peuvent demarrer un nom d'entreprise) sont
+        // concernes, pour les memes raisons que plus haut.
+        private static readonly Regex[] LabelNearEndOfLineRegexes = ColonOptionalLabelAlternatives
+            .Where(p => p != "To") // "To" en fin de ligne est trop ambigu (mot anglais courant en fin de phrase)
+            .Select(p => new Regex($@"\b{p}\b\s*(\([^)]{{0,40}}\))?\s*$", RegexOptions.IgnoreCase))
+            .ToArray();
+
+        // Un des mots-labels connus present QUELQUE PART sur une ligne COURTE (<=6 mots), sans
+        // pour autant que la ligne entiere soit reconnue comme le label pur (CustomerLabelOnlyLineRegex)
+        // - typiquement une fusion/duplication OCR autour du mot (ex. "S Titulaire itulai de
+        // compte" - releve BTL reel, ou "Titulaire" survit intact au milieu du bruit). Traite
+        // comme un label seul sur sa ligne : declenche le meme scan vers l'avant pour la valeur.
+        private static readonly Regex LooseLabelWordRegex = new(
+            @"\b(Titulaire|Intitul[ée])\b", RegexOptions.IgnoreCase);
 
         // Tronque une valeur (avec ou sans label explicite) au premier marqueur generique de
         // fin de valeur trouve sur la ligne - date toutes lettres, heure, mention "Edité/Edite
@@ -340,6 +385,16 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 && Regex.IsMatch(c, @"^(Titulaire\s+|Intitul[ée]\s+)?(du|de|des|le|la|l['’])\s*['’""]?\s*(compte|client)\b", RegexOptions.IgnoreCase))
                 return true;
 
+            // Meme idee mais pour un residu qui se TERMINE par "compte"/"client" plutot que de
+            // commencer par lui (ex. "e Compte" - releve BTL reel, reste de "le Compte"/"de
+            // Compte" mange par le bruit OCR autour du vrai label) : aucun nom de client reel
+            // n'observe ne se termine par ce mot - c'est toujours la fin du libelle du champ,
+            // jamais sa valeur. Borne a un candidat court (<=4 mots) pour ne jamais rejeter un
+            // nom d'entreprise legitime qui contiendrait "compte"/"client" en milieu de phrase.
+            if (c.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length <= 4
+                && Regex.IsMatch(c, @"(compte|client)['’""]?\s*$", RegexOptions.IgnoreCase))
+                return true;
+
             // Sigle court tout-majuscule sans espace (ex. "ATB", "UIB", "BIAT") ramasse SANS
             // label explicite : presque toujours le sigle/logo de la banque plutot qu'un nom
             // de client (les 5 exemples de reference sont tous multi-mots). Ne s'applique pas
@@ -366,13 +421,14 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             if (Regex.IsMatch(c, @"Transactions?\b.{0,20}\b(p[ée]riode|period)\b", RegexOptions.IgnoreCase))
                 return true;
 
-            // Moins de 2 caracteres alphabetiques au total (contigus ou non) : un nom (meme un
-            // sigle ponctue comme "E .Z.B") contient toujours au moins 2 lettres - un candidat
-            // qui n'en a aucune ou une seule est du bruit OCR pur (ponctuation/caracteres
-            // isoles, ex. "i,)"). Compte les lettres OU qu'elles soient dans la chaine
-            // (contrairement a un test de sequence contigue, qui rejetterait a tort un sigle
-            // ponctue comme "E .Z.B").
-            if (Regex.Matches(c, @"\p{L}").Count < 2) return true;
+            // Ni un mot d'au moins 3 lettres consecutives (un nom - personne ou societe -
+            // contient toujours un tel mot), ni un sigle ponctue de la forme "E.Z.B"/"E .Z.B"
+            // (lettres isolees separees par des points, motif de code client legitime observe
+            // en pratique) : le candidat est alors du bruit OCR pur (ponctuation/caracteres
+            // isoles, ex. "i,)", ou un mot outil court comme "au" accole a un chiffre "5 au").
+            bool hasSubstantialWord = Regex.IsMatch(c, @"\p{L}{3,}");
+            bool isDottedInitialism = Regex.IsMatch(c, @"^[A-Za-z](\s*[.\s]\s*[A-Za-z]){1,}\.?$");
+            if (!hasSubstantialWord && !isDottedInitialism) return true;
 
             return false;
         }
@@ -391,6 +447,18 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                     string sameLine = TruncateAtTrailingMarker(m.Groups[1].Value.Trim());
                     if (!string.IsNullOrWhiteSpace(sameLine) && !IsRejectableCandidate(sameLine, allowShortAcronym: true))
                         return CleanCustomerName(sameLine);
+                    continue;
+                }
+
+                // Label + ":" present mais PAS en debut de ligne (fusion de colonnes OCR avec
+                // un AUTRE champ qui le precede, ex. "IBAN : TN59... Name: MOHAMED ZARRAGA
+                // ZPA"). Meme validation que le cas ancre ci-dessus.
+                var midLineMatch = CustomerLabelMidLineRegex.Match(headerLines[i]);
+                if (midLineMatch.Success)
+                {
+                    string midLineValue = TruncateAtTrailingMarker(midLineMatch.Groups[1].Value.Trim());
+                    if (!string.IsNullOrWhiteSpace(midLineValue) && !IsRejectableCandidate(midLineValue, allowShortAcronym: true))
+                        return CleanCustomerName(midLineValue);
                     continue;
                 }
 
@@ -423,7 +491,19 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 }
                 if (triedValueForColonOptionalLabel) continue;
 
-                if (!CustomerLabelOnlyLineRegex.IsMatch(headerLines[i]))
+                // Le label occupe (a peu pres) toute la ligne, sans valeur derriere - trois
+                // formes tolerees : la ligne EST exactement le label (CustomerLabelOnlyLineRegex,
+                // ex. "To"), le label apparait en FIN de ligne avec un eventuel gloss anglais
+                // entre parentheses (ex. "...RIB Titulaire du compte (Account Owner)" - releve
+                // BTK reel), ou le mot-label est present quelque part sur une ligne courte sans
+                // etre reconnu comme le libelle exact (ex. "S Titulaire itulai de compte" -
+                // releve BTL reel, fusion/duplication OCR autour du mot). Dans les trois cas, la
+                // valeur est recherchee en scannant vers l'avant.
+                bool looksLikeLabelOnly = CustomerLabelOnlyLineRegex.IsMatch(headerLines[i])
+                    || LabelNearEndOfLineRegexes.Any(r => r.IsMatch(headerLines[i]))
+                    || (LooseLabelWordRegex.IsMatch(headerLines[i])
+                        && headerLines[i].Split(' ', StringSplitOptions.RemoveEmptyEntries).Length <= 6);
+                if (!looksLikeLabelOnly)
                     continue;
 
                 // Le label est seul sur sa ligne : sa valeur n'est pas forcement sur la toute
@@ -432,16 +512,25 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 // observe sur un releve UIB reel) peut l'eloigner de plusieurs lignes. On
                 // scanne donc vers l'avant dans le reste de la zone d'en-tete et on applique
                 // les memes filtres que la Priorite 3 (autre label connu, adresse, candidat
-                // rejetable) plutot que de prendre aveuglement headerLines[i+1].
+                // rejetable) plutot que de prendre aveuglement headerLines[i+1]. Un bloc
+                // numerique/code en tete de la ligne candidate (numero de compte, fraction de
+                // periode...) est retire avant validation : la vraie valeur peut le suivre
+                // directement sur la meme ligne, fusionnee par l'OCR (ex. "8901769223 1/2024
+                // 1/13 EZB" - releve BTL reel). allowShortAcronym: le label deja identifie
+                // (meme imparfaitement) garantit que ce qui suit est le client, comme pour un
+                // label explicite classique.
                 for (int j = i + 1; j < headerLines.Count; j++)
                 {
                     string next = headerLines[j].Trim();
                     if (string.IsNullOrWhiteSpace(next)) continue;
                     if (OtherLabelLineRegex.IsMatch(next)) continue;
                     if (LooksLikeAddressLine(next)) continue;
-                    if (IsRejectableCandidate(next)) continue;
 
-                    return CleanCustomerName(next);
+                    string nextCandidate = StripLeadingNumericCode(TruncateAtTrailingMarker(next));
+                    if (string.IsNullOrWhiteSpace(nextCandidate)) continue;
+                    if (IsRejectableCandidate(nextCandidate, allowShortAcronym: true)) continue;
+
+                    return CleanCustomerName(nextCandidate);
                 }
             }
 
@@ -672,10 +761,6 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         public DocumentMetadata Extract(string fullText, List<TableRow> rows)
         {
             var headerLines = GetHeaderZoneLines(rows, fullText);
-
-            if (Environment.GetEnvironmentVariable("METADATA_DEBUG_HEADERLINES") == "1")
-                foreach (var l in headerLines)
-                    Console.WriteLine($"[HEADERLINE] '{l}'");
 
             var customerName = ExtractCustomerName(headerLines);
             var period = ExtractPeriod(headerLines);
