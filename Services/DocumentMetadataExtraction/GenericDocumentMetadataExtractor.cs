@@ -87,7 +87,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         {
             @"Titulaire\s+du\s+compte",
             @"Titulaire",
-            @"Intitul[ée]\s+du\s+compte",
+            @"Intitul[ée]\s+(?:du|de)\s+compte",
             @"Intitul[ée]",
             @"Nom\s+du\s+client",
             @"Client",
@@ -125,7 +125,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         {
             @"Titulaire\s+du\s+compte",
             @"Titulaire",
-            @"Intitul[ée]\s+du\s+compte",
+            @"Intitul[ée]\s+(?:du|de)\s+compte",
             @"Intitul[ée]",
             @"Nom\s+du\s+client",
             @"Client",
@@ -328,13 +328,16 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             // LINDUSTRIE" = 7 mots) ; une ligne plus longue est une phrase, pas un nom propre.
             if (c.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length > 9) return true;
 
-            // Reste d'un libelle compose ("Titulaire DU COMPTE", "Nom DU CLIENT"...) dont le
-            // debut a ete rate (ex. par un caractere parasite OCR au milieu du libelle, comme
-            // "Titulaire du 'compte'" ou l'apostrophe casse la reconnaissance de la phrase
-            // complete) : un residu court de la forme "(du|de|des|le|la) [quote] compte/client"
-            // n'est jamais un nom, c'est la fin d'un champ, pas une valeur.
+            // Libelle compose ("Titulaire DU COMPTE", "Nom DU CLIENT"...) dont la reconnaissance
+            // a ete cassee par un caractere parasite OCR au milieu ("Titulaire du 'compte'", ou
+            // l'apostrophe empeche CustomerLabelOnlyLineRegex de matcher la ligne entiere, qui
+            // atterrit alors telle quelle en Priorite 3b) : un residu court de la forme
+            // "[Titulaire/Intitulé] (du|de|des|le|la) [quote] compte/client" n'est jamais un nom,
+            // c'est le libelle du champ lui-meme, pas sa valeur. Le prefixe de label est
+            // optionnel : couvre aussi bien le residu APRES qu'un label a deja ete strippe
+            // ailleurs que la ligne de label brute non reconnue.
             if (c.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length <= 3
-                && Regex.IsMatch(c, @"^(du|de|des|le|la|l['’])\s*['’""]?\s*(compte|client)\b", RegexOptions.IgnoreCase))
+                && Regex.IsMatch(c, @"^(Titulaire\s+|Intitul[ée]\s+)?(du|de|des|le|la|l['’])\s*['’""]?\s*(compte|client)\b", RegexOptions.IgnoreCase))
                 return true;
 
             // Sigle court tout-majuscule sans espace (ex. "ATB", "UIB", "BIAT") ramasse SANS
@@ -363,10 +366,13 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             if (Regex.IsMatch(c, @"Transactions?\b.{0,20}\b(p[ée]riode|period)\b", RegexOptions.IgnoreCase))
                 return true;
 
-            // Aucune sequence d'au moins 3 lettres nulle part : un nom (personne ou societe)
-            // contient toujours au moins un mot reconnaissable - un candidat qui n'en a aucun
-            // est du bruit OCR pur (ponctuation/caracteres isoles, ex. "i,)").
-            if (!Regex.IsMatch(c, @"\p{L}{3,}")) return true;
+            // Moins de 2 caracteres alphabetiques au total (contigus ou non) : un nom (meme un
+            // sigle ponctue comme "E .Z.B") contient toujours au moins 2 lettres - un candidat
+            // qui n'en a aucune ou une seule est du bruit OCR pur (ponctuation/caracteres
+            // isoles, ex. "i,)"). Compte les lettres OU qu'elles soient dans la chaine
+            // (contrairement a un test de sequence contigue, qui rejetterait a tort un sigle
+            // ponctue comme "E .Z.B").
+            if (Regex.Matches(c, @"\p{L}").Count < 2) return true;
 
             return false;
         }
