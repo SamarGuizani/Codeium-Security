@@ -87,6 +87,8 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         {
             @"Titulaire\s+du\s+compte",
             @"Titulaire",
+            @"Intitul[ée]\s+du\s+compte",
+            @"Intitul[ée]",
             @"Nom\s+du\s+client",
             @"Client",
             @"Soci[ée]t[ée]",
@@ -123,6 +125,8 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         {
             @"Titulaire\s+du\s+compte",
             @"Titulaire",
+            @"Intitul[ée]\s+du\s+compte",
+            @"Intitul[ée]",
             @"Nom\s+du\s+client",
             @"Client",
             @"Account\s*holder",
@@ -155,6 +159,19 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             @"\bEdit[ée]\b", RegexOptions.IgnoreCase);
         private static readonly Regex TrailingTimeRegex = new(@"\b\d{1,2}:\d{2}(:\d{2})?\b");
 
+        // "Période" (le champ periode d'extraction) suivi immediatement d'un chiffre (sa
+        // propre valeur "01/12/2024...") accole a la fin d'une valeur nom-de-client par fusion
+        // de colonnes OCR (ex. "SOCIETE GROUPE CHAKROUN D Période: 01/12/2024 31/12/2024",
+        // "CH CLEAN Période: 01/06/2025 30/06/2025" - releves reels). Le chiffre juste apres est
+        // requis (lookahead) pour ne pas tronquer une simple MENTION du mot "periode" sans
+        // valeur derriere (ex. un titre de section "Transactions pour la periode").
+        private static readonly Regex TrailingPeriodFieldRegex = new(
+            @"\bP[ée]riode\s*:?\s*(?=\d)", RegexOptions.IgnoreCase);
+
+        // Une date chiffree (ex. "01/12/2024") accolee en fin de valeur par fusion de colonnes
+        // OCR, meme sans le mot "Periode" devant (ex. reste d'un champ Date d'edition).
+        private static readonly Regex TrailingNumericDateRegex = new(DateToken);
+
         // Marqueur de forme juridique (STE, SOCIETE, SARL, SUARL, SA...) : signal positif
         // generique d'un nom d'entreprise, quelle que soit la banque. Non ancre au debut de
         // ligne : une fusion de colonnes OCR peut accoler ce marqueur a la fin d'une phrase
@@ -173,7 +190,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         // agence, coordonnees...) : une ligne qui matche l'un d'eux n'est jamais un nom de
         // client/societe.
         private static readonly Regex OtherLabelLineRegex = new(
-            @"^\s*(RIB|IBAN|N[°o]?\s*(du\s*|de\s*)?compte|Compte\s*:|Num[ée]ro\s*(du\s*|de\s*)?compte|Adresse|Devise|P[ée]riode|Agence|SWIFT|BIC|T[ée]l|Fax|Email|Extrait\s+de\s+Compte|Relev[ée]\s+de\s+Compte|Code\s*client|CIF|Domiciliation|Solde|Gestionnaire|C(?:om)?pte\s+Courant)\b",
+            @"^\s*(RIB|IBAN|N[°o]?\s*(du\s*|de\s*)?compte|Compte\s*:|Num[ée]ro\s*(du\s*|de\s*)?compte|Nature\s*(du\s*|de\s*)?compte|Adresse|Devise|P[ée]riode|Agence|SWIFT|BIC|T[ée]l|Fax|Email|Date|Heure|Extrait\s+de\s+Compte|Relev[ée]\s+de\s+Compte|Code\s*client|CIF|Domiciliation|Solde|Gestionnaire|C(?:om)?pte\s+Courant)\b",
             RegexOptions.IgnoreCase);
 
         private static bool LooksLikeAddressLine(string line)
@@ -198,14 +215,22 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         private static string CleanCustomerName(string raw) =>
             Regex.Replace(raw.Trim().Trim(':', '-', ' '), @"\s{2,}", " ");
 
-        // Tronque une valeur capturee sans ":" au premier marqueur generique de fin de valeur
-        // (date toutes lettres, heure, mention "Edité/Edite le") trouve sur la ligne - ces
-        // marqueurs indiquent qu'un AUTRE champ (date d'impression...) a ete accole a la
-        // valeur par fusion de colonnes OCR.
+        // Tronque une valeur (avec ou sans label explicite) au premier marqueur generique de
+        // fin de valeur trouve sur la ligne - date toutes lettres, heure, mention "Edité/Edite
+        // le", champ "Période" suivi de sa propre date, date chiffree isolee, ou texte arabe.
+        // Ces marqueurs indiquent qu'un AUTRE champ (periode, date d'impression, libelle
+        // bilingue arabe...) a ete accole a la valeur par fusion de colonnes OCR - on tronque
+        // plutot que de rejeter tout le candidat. Applique de facon identique quelle que soit
+        // la strategie qui a produit le candidat (label explicite, marqueur de forme juridique,
+        // ou repli sans label) : jamais specifique a un intitule ou une banque.
         private static string TruncateAtTrailingMarker(string value)
         {
             int cut = value.Length;
-            foreach (var regex in new[] { SpelledDateRegex, TrailingPrintMarkerRegex, TrailingTimeRegex })
+            foreach (var regex in new[]
+                     {
+                         SpelledDateRegex, TrailingPrintMarkerRegex, TrailingTimeRegex,
+                         TrailingPeriodFieldRegex, TrailingNumericDateRegex, ArabicCharRegex,
+                     })
             {
                 var m = regex.Match(value);
                 if (m.Success && m.Index < cut)
