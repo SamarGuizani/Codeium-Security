@@ -127,6 +127,29 @@ namespace Codeium_Security.Tests
                 $"[{Path.GetFileName(pdfPath)}] CustomerName='{metadata.CustomerName}' Period.Start='{metadata.Period?.Start}' Period.End='{metadata.Period?.End}'");
         }
 
+        private static readonly string FauxDir = Path.Combine(AllfilesDir, "faux");
+
+        public static IEnumerable<object[]> FauxFiles()
+        {
+            if (!Directory.Exists(FauxDir)) yield break;
+            foreach (var f in Directory.EnumerateFiles(FauxDir, "*.pdf").OrderBy(f => f))
+                yield return new object[] { f };
+        }
+
+        [Theory]
+        [MemberData(nameof(FauxFiles))]
+        public async Task DiagnoseMetadataFaux(string pdfPath)
+        {
+            var ocr = await GetOcrCachedAsync(pdfPath);
+            var lines = _fixture.AnalysisEngine.GroupWordsIntoLines(ocr.Words);
+            var rows = _fixture.AnalysisEngine.BuildTable(lines);
+
+            var metadata = new GenericDocumentMetadataExtractor().Extract(ocr.FullText, rows);
+
+            _output.WriteLine(
+                $"[{Path.GetFileName(pdfPath)}] CustomerName='{metadata.CustomerName}' Period.Start='{metadata.Period?.Start}' Period.End='{metadata.Period?.End}'");
+        }
+
         public static IEnumerable<object[]> UibFiles()
         {
             if (!Directory.Exists(AllfilesDir)) yield break;

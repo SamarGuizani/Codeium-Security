@@ -610,6 +610,10 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         {
             var headerLines = GetHeaderZoneLines(rows, fullText);
 
+            if (Environment.GetEnvironmentVariable("METADATA_DEBUG_HEADERLINES") == "1")
+                foreach (var l in headerLines)
+                    Console.WriteLine($"[HEADERLINE] '{l}'");
+
             var customerName = ExtractCustomerName(headerLines);
             var period = ExtractPeriod(headerLines);
 
