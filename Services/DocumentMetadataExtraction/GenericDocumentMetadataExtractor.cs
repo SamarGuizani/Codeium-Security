@@ -522,6 +522,13 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         private static readonly Regex StatementAsOfDateRegex = new(
             $@"(?:Relev[ée]|Solde)\s+au\s*:?\s*({DateToken})", RegexOptions.IgnoreCase);
 
+        // Dernier recours absolu : un simple "au <date>" (avec filler tolere), sans le "du
+        // <date>" qui le precede normalement - couvre le cas ou la date de DEBUT est
+        // completement detruite par l'OCR (aucun motif ne peut la retrouver, elle n'existe
+        // plus dans le texte) mais la date de FIN, elle, a survecu. Start reste null.
+        private static readonly Regex BareAuDateRegex = new(
+            $@"\b[Aa]u\b{DateFiller}({DateToken})", RegexOptions.IgnoreCase);
+
         // Retrouve l'index 1-12 du nom de mois capture (accent-tolerant, insensible a la
         // casse) dans MonthNames - retourne 0 si non reconnu (ne devrait pas arriver, le
         // motif appelant est construit a partir de ce meme tableau).
@@ -587,6 +594,10 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             // Dernier recours : une seule date d'arret imprimee ("Relevé au ...", "Solde au
             // ..."), sans intervalle - Start reste null, seul End est renseigne.
             m = StatementAsOfDateRegex.Match(joinedHeader);
+            if (m.Success)
+                return new ExtractionPeriod { Start = null, End = m.Groups[1].Value };
+
+            m = BareAuDateRegex.Match(joinedHeader);
             if (m.Success)
                 return new ExtractionPeriod { Start = null, End = m.Groups[1].Value };
 
