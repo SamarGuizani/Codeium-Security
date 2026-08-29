@@ -344,6 +344,30 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             if (!allowShortAcronym && !c.Contains(' ') && c.Length <= 5 && Regex.IsMatch(c, @"^[A-Z0-9'.\-]+$"))
                 return true;
 
+            // Formule de politesse d'ouverture de lettre ("Cher client,", "Cher Client, nous
+            // avons l'honneur...") : toujours du texte d'accroche, jamais un nom - generique a
+            // tous les releves bancaires tunisiens observes (BIAT, AMEN, ABC...).
+            if (Regex.IsMatch(c, @"^Cher\s+[Cc]lient\b", RegexOptions.IgnoreCase)) return true;
+
+            // Reste isole d'un titre de document coupe par l'OCR sur deux lignes (ex. "RELEVE
+            // COMPTE" / "DE MENSUEL" - le titre complet "RELEVE DE COMPTE MENSUEL" a ete
+            // scinde, DocumentTitleLineRegex ne matche que la premiere moitie) : un qualificatif
+            // de periodicite seul (avec ou sans "DE/DU" residuel devant) n'est jamais un nom.
+            if (Regex.IsMatch(c, @"^\s*(DE|DU|DES)?\s*(MENSUEL|ANNUEL|TRIMESTRIEL)\.?\s*$", RegexOptions.IgnoreCase))
+                return true;
+
+            // Titre de section d'export "Transactions pour la période"/"Transactions for the
+            // period" (fusionne par l'OCR avec le label "To" qui le precede sur les releves au
+            // format export - ex. "To Transactions pour la période") : jamais un nom, c'est
+            // l'intitule d'une section du document.
+            if (Regex.IsMatch(c, @"Transactions?\b.{0,20}\b(p[ée]riode|period)\b", RegexOptions.IgnoreCase))
+                return true;
+
+            // Aucune sequence d'au moins 3 lettres nulle part : un nom (personne ou societe)
+            // contient toujours au moins un mot reconnaissable - un candidat qui n'en a aucun
+            // est du bruit OCR pur (ponctuation/caracteres isoles, ex. "i,)").
+            if (!Regex.IsMatch(c, @"\p{L}{3,}")) return true;
+
             return false;
         }
 
@@ -358,7 +382,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 var m = CustomerLabelLineRegex.Match(headerLines[i]);
                 if (m.Success)
                 {
-                    string sameLine = m.Groups[1].Value.Trim();
+                    string sameLine = TruncateAtTrailingMarker(m.Groups[1].Value.Trim());
                     if (!string.IsNullOrWhiteSpace(sameLine) && !IsRejectableCandidate(sameLine, allowShortAcronym: true))
                         return CleanCustomerName(sameLine);
                     continue;
@@ -431,7 +455,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 var legalMatch = LegalEntityPrefixRegex.Match(line);
                 if (!legalMatch.Success) continue;
 
-                string candidateFromMarker = line[legalMatch.Index..].Trim();
+                string candidateFromMarker = TruncateAtTrailingMarker(line[legalMatch.Index..].Trim());
                 if (OtherLabelLineRegex.IsMatch(candidateFromMarker)) continue;
                 if (LooksLikeAddressLine(candidateFromMarker)) continue;
                 if (IsRejectableCandidate(candidateFromMarker)) continue;
@@ -461,7 +485,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 var labelPrefix = LabelThenNumericCodeRegex.Match(line);
                 if (labelPrefix.Success)
                 {
-                    string trailing = line[labelPrefix.Length..].Trim();
+                    string trailing = TruncateAtTrailingMarker(line[labelPrefix.Length..].Trim());
                     if (!string.IsNullOrWhiteSpace(trailing)
                         && Regex.IsMatch(trailing, @"[A-Za-zÀ-ÿ]{2,}")
                         && !OtherLabelLineRegex.IsMatch(trailing)
@@ -471,14 +495,22 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                     continue;
                 }
 
-                if (OtherLabelLineRegex.IsMatch(line)) continue;
-                if (LooksLikeAddressLine(line)) continue;
+                // Tronque d'abord au premier marqueur generique (periode+date, date chiffree,
+                // texte arabe...) avant meme les filtres label/adresse : sans cela, une date ou
+                // un code postal accole en fin de ligne par fusion de colonnes OCR peut faire
+                // ressembler a tort la ligne entiere a une adresse (LooksLikeAddressLine) alors
+                // que seul le TEXTE APRES troncature (le vrai nom) doit etre juge sur ce critere
+                // (ex. "CH CLEAN Période: 01/06/2025 30/06/2025" -> "CH CLEAN").
+                string truncatedLine = TruncateAtTrailingMarker(line);
 
-                string candidate = line;
-                int colonIndex = line.IndexOf(':');
-                if (colonIndex >= 0 && colonIndex < line.Length - 1)
+                if (OtherLabelLineRegex.IsMatch(truncatedLine)) continue;
+                if (LooksLikeAddressLine(truncatedLine)) continue;
+
+                string candidate = truncatedLine;
+                int colonIndex = truncatedLine.IndexOf(':');
+                if (colonIndex >= 0 && colonIndex < truncatedLine.Length - 1)
                 {
-                    string afterColon = line[(colonIndex + 1)..].Trim();
+                    string afterColon = TruncateAtTrailingMarker(truncatedLine[(colonIndex + 1)..].Trim());
                     if (!string.IsNullOrWhiteSpace(afterColon))
                         candidate = afterColon;
                 }
