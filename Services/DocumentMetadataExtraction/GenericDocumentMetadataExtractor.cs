@@ -94,6 +94,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             @"Soci[ée]t[ée]",
             @"Entreprise",
             @"Compte\s+de",
+            @"Destinataire",
             @"Account\s*holder",
             @"Customer",
             @"Name",
@@ -104,8 +105,11 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         // obligatoire ici : sans lui, un label comme "Societe" matcherait aussi en debut
         // du nom d'une entreprise qui commence par ce mot (ex. "SOCIETE AUTOSET 7 PIECES
         // AUTO"), en avalant "SOCIETE" comme prefixe de label au lieu de faire partie du nom.
+        // Separateur ":" ou "/" : certaines banques (ex. ABC) impriment systematiquement
+        // leurs labels d'en-tete suivis d'un "/" plutot que d'un ":" ("Du/", "RIB/",
+        // "Destinataire/"...) - meme role structurel, jamais specifique a une banque donnee.
         private static readonly Regex CustomerLabelLineRegex = new(
-            $@"^\s*(?:{string.Join("|", CustomerLabelAlternatives)})\b\s*:\s*(.*)$",
+            $@"^\s*(?:{string.Join("|", CustomerLabelAlternatives)})\b\s*[:/]\s*(.*)$",
             RegexOptions.IgnoreCase);
 
         // Variante NON ancree en debut de ligne : le label + ":" peut se retrouver au MILIEU
@@ -115,13 +119,13 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         // qui suit son ":", jusqu'a la fin de ligne - meme logique que LegalEntityPrefixRegex
         // pour la forme juridique, appliquee ici aux labels explicites.
         private static readonly Regex CustomerLabelMidLineRegex = new(
-            $@"(?:{string.Join("|", CustomerLabelAlternatives)})\b\s*:\s*(.+)$",
+            $@"(?:{string.Join("|", CustomerLabelAlternatives)})\b\s*[:/]\s*(.+)$",
             RegexOptions.IgnoreCase);
 
-        // Priorite 2 : la ligne entiere n'est QUE le label (avec ou sans ":" final, sans
+        // Priorite 2 : la ligne entiere n'est QUE le label (avec ou sans ":"/"/" final, sans
         // valeur derriere) - la valeur est alors sur la ligne suivante (ex. "To" / "CH CLEAN").
         private static readonly Regex CustomerLabelOnlyLineRegex = new(
-            $@"^\s*(?:{string.Join("|", CustomerLabelAlternatives)})\s*:?\s*$",
+            $@"^\s*(?:{string.Join("|", CustomerLabelAlternatives)})\s*[:/]?\s*$",
             RegexOptions.IgnoreCase);
 
         // Sous-ensemble de labels surs pour un appariement SANS ":" (label puis espace puis
@@ -140,6 +144,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             @"Intitul[ée]",
             @"Nom\s+du\s+client",
             @"Client",
+            @"Destinataire",
             @"Account\s*holder",
             @"Customer",
             @"To",
@@ -156,7 +161,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         private static readonly (Regex FullLine, Regex WithValue)[] ColonOptionalLabelRegexes =
             ColonOptionalLabelAlternatives
                 .Select(p => (
-                    FullLine: new Regex($@"^\s*{p}\s*:?\s*$", RegexOptions.IgnoreCase),
+                    FullLine: new Regex($@"^\s*{p}\s*[:/]?\s*$", RegexOptions.IgnoreCase),
                     WithValue: new Regex($@"^\s*{p}\b[ \t]+(.+)$", RegexOptions.IgnoreCase)))
                 .ToArray();
 
@@ -213,6 +218,15 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             @"^\s*(RIB|IBAN|N[°o]?\s*(du\s*|de\s*)?compte|Compte\s*:|Num[ée]ro\s*(du\s*|de\s*)?compte|Nature\s*(du\s*|de\s*)?compte|Adresse|Devise|P[ée]riode|Agence|SWIFT|BIC|T[ée]l|Fax|Email|Date|Heure|Extrait\s+de\s+Compte|Relev[ée]\s+de\s+Compte|Code\s*client|CIF|Domiciliation|Solde|Gestionnaire|C(?:om)?pte\s+Courant)\b",
             RegexOptions.IgnoreCase);
 
+        // Meme liste de labels connus que ci-dessus, mais recherchee N'IMPORTE OU sur la ligne
+        // (pas ancree en debut) - utilisee pour reperer la frontiere ou une ligne "continuation"
+        // de valeur (voir ci-dessous) bascule vers un AUTRE champ connu fusionne a sa suite par
+        // l'OCR (ex. "SERVICE PARTS (PSF) RIB : 7" - releve TSB reel, ou "RIB" marque la fin de
+        // la vraie continuation et le debut d'un tout autre champ).
+        private static readonly Regex OtherLabelAnywhereRegex = new(
+            @"\b(RIB|IBAN|N[°o]?\s*(du\s*|de\s*)?compte|Num[ée]ro\s*(du\s*|de\s*)?compte|Nature\s*(du\s*|de\s*)?compte|Adresse|Devise|P[ée]riode|Agence|SWIFT|BIC|T[ée]l|Fax|Email|Code\s*client|CIF|Domiciliation|Gestionnaire|C(?:om)?pte\s+Courant)\b",
+            RegexOptions.IgnoreCase);
+
         private static bool LooksLikeAddressLine(string line)
         {
             string t = line.Trim();
@@ -249,10 +263,56 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         // candidat, precede de bruit numerique). On ne garde que le texte apres ce bloc.
         private static readonly Regex LeadingNumericCodeRegex = new(@"^[\d\s./\-:]{4,}");
 
+        // Code IBAN en tete de ligne (ex. "TN5928009035547100000148 PROFESSIONNELLE
+        // DISTRIBUTION" - releve ABC reel, valeur IBAN et nom du destinataire fusionnes sur la
+        // meme ligne par l'OCR) : 2 lettres + 2 chiffres (prefixe pays + cle IBAN standard) puis
+        // au moins 6 caracteres alphanumeriques supplementaires SANS espace, suivis directement
+        // d'une frontiere (espace ou fin de ligne). Generique a tout IBAN, jamais specifique a
+        // une banque.
+        private static readonly Regex LeadingIbanCodeRegex = new(@"^[A-Z]{2}\d{2}[\dA-Z]{6,}(?=\s|$)");
+
+        // Code devise ISO en tete de ligne (ex. "TND PROFESSIONAL SERVICE PARTS" - releve TSB
+        // reel, valeur devise et nom du titulaire fusionnes sur la meme ligne par l'OCR ; ou
+        // "TND 1/17 AL BARAKA RENT A CAR" - releve BH reel). Liste fermee des devises
+        // usuellement observees sur les releves tunisiens - jamais un nom de banque.
+        private static readonly Regex LeadingCurrencyCodeRegex = new(
+            @"^(?:TND|USD|EUR|GBP|CHF|JPY|CAD|LYD|DZD|MAD|SAR|AED)(?=\s)");
+
+        // Numero de page en tete de ligne sous forme fraction ("1/17", "1 / 17") fusionne par
+        // l'OCR avec le vrai contenu qui le suit sur la meme ligne physique (ex. "1/17 AL
+        // BARAKA RENT A CAR" - releve BH reel). Deja en grande partie couvert par
+        // LeadingNumericCodeRegex (chiffres/espaces/"/" font partie de sa classe de caracteres),
+        // mais isole ici pour documenter l'intention et couvrir le cas ou une devise ISO le
+        // precede immediatement (auquel cas la boucle ci-dessous alterne entre les deux motifs).
+        private static readonly Regex LeadingPageFractionRegex = new(@"^\d{1,3}\s*/\s*\d{1,3}(?=\s|$)");
+
+        // Retire, en boucle, tout prefixe de bruit structurel connu (bloc numerique/code,
+        // IBAN, devise ISO, numero de page) en TETE de ligne : une fusion de colonnes OCR peut
+        // accoler PLUSIEURS de ces champs successivement avant le vrai texte (ex. "30-06-26 TND
+        // 1/17 AL BARAKA RENT A CAR" - releve BH reel : date, devise, puis pagination, avant le
+        // nom) - un seul passage ne suffit pas a tous les retirer. On s'arrete des qu'aucun
+        // motif ne matche plus en tete.
         private static string StripLeadingNumericCode(string line)
         {
-            var m = LeadingNumericCodeRegex.Match(line);
-            return m.Success ? line[m.Length..].Trim() : line;
+            string s = line;
+            bool changed;
+            do
+            {
+                changed = false;
+                var numeric = LeadingNumericCodeRegex.Match(s);
+                if (numeric.Success) { s = s[numeric.Length..].TrimStart(); changed = true; continue; }
+
+                var iban = LeadingIbanCodeRegex.Match(s);
+                if (iban.Success) { s = s[iban.Length..].TrimStart(); changed = true; continue; }
+
+                var currency = LeadingCurrencyCodeRegex.Match(s);
+                if (currency.Success) { s = s[currency.Length..].TrimStart(); changed = true; continue; }
+
+                var page = LeadingPageFractionRegex.Match(s);
+                if (page.Success) { s = s[page.Length..].TrimStart(); changed = true; continue; }
+            } while (changed);
+
+            return s.Trim();
         }
 
         // Reconnaissance d'un label connu present comme mot isole EN FIN de ligne, avec un
@@ -265,7 +325,7 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         // concernes, pour les memes raisons que plus haut.
         private static readonly Regex[] LabelNearEndOfLineRegexes = ColonOptionalLabelAlternatives
             .Where(p => p != "To") // "To" en fin de ligne est trop ambigu (mot anglais courant en fin de phrase)
-            .Select(p => new Regex($@"\b{p}\b\s*(\([^)]{{0,40}}\))?\s*$", RegexOptions.IgnoreCase))
+            .Select(p => new Regex($@"\b{p}\b\s*[:/]?\s*(\([^)]{{0,40}}\))?\s*$", RegexOptions.IgnoreCase))
             .ToArray();
 
         // Un des mots-labels connus present QUELQUE PART sur une ligne COURTE (<=6 mots), sans
@@ -326,8 +386,12 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
 
         // Mot generique "banque/bank" et ses derives usuels (bancaire, banking) - pas un nom
         // d'etablissement precis : une ligne qui le contient est l'en-tete de l'etablissement
-        // emetteur, jamais le client.
-        private static readonly Regex BankWordRegex = new(@"\b(BANQUE|BANCAIRES?|BANK|BANKING)\b", RegexOptions.IgnoreCase);
+        // emetteur, jamais le client. La seconde alternative couvre "B A N K" espace lettre par
+        // lettre (releve BH reel : le logo/mastheasd "BANK" est OCR'ise en cellules separees
+        // "B A" + "N K", ce qui empeche \bBANK\b de matcher un mot contigu) - motif ajoute pour
+        // cette variante precise observee, pas une normalisation generale de texte espace.
+        private static readonly Regex BankWordRegex = new(
+            @"\b(BANQUE|BANCAIRES?|BANK|BANKING)\b|\bB\s+A\s+N\s+K\b", RegexOptions.IgnoreCase);
 
         private static readonly string[] MonthNames =
         {
@@ -449,6 +513,46 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             return false;
         }
 
+        // Repli specifique : la valeur trouvee sur la ligne du label peut n'etre que le
+        // PREMIER fragment d'une valeur qui continue sur une AUTRE ligne physique, que
+        // l'assemblage de lignes OCR peut placer AVANT la ligne du label dans le tableau
+        // reconstruit - l'ordre du tableau n'est pas garanti egal a l'ordre visuel quand un
+        // meme texte imprime est segmente en deux TableRow distincts (observe sur un releve
+        // TSB reel : "Intitulé : PROFESSIONAL" au rang N, "SERVICE PARTS (PSF) RIB : 7" au
+        // rang N-1 - le fragment "SERVICE PARTS (PSF)" precede la ligne du label dans le
+        // tableau alors qu'il la suit visuellement). On ne regarde JAMAIS que la ligne
+        // IMMEDIATEMENT adjacente (i-1), et UNIQUEMENT si elle ne commence par AUCUN label
+        // connu (client ou autre) et n'est pas une adresse - sinon c'est un tout autre champ,
+        // jamais une continuation. Si un AUTRE label connu apparait plus loin sur cette ligne
+        // adjacente (fusion de colonnes OCR avec le champ suivant, ex. "RIB" dans l'exemple
+        // ci-dessus), seul le texte AVANT lui est retenu.
+        private static string ExtendWithAdjacentContinuation(string sameLineValue, List<string> headerLines, int labelLineIndex)
+        {
+            if (string.IsNullOrWhiteSpace(sameLineValue) || labelLineIndex <= 0)
+                return sameLineValue;
+
+            string prevLine = headerLines[labelLineIndex - 1];
+            if (string.IsNullOrWhiteSpace(prevLine))
+                return sameLineValue;
+
+            bool prevStartsWithKnownLabel = OtherLabelLineRegex.IsMatch(prevLine)
+                || Regex.IsMatch(prevLine, $@"^\s*(?:{string.Join("|", CustomerLabelAlternatives)})\b", RegexOptions.IgnoreCase);
+
+            if (prevStartsWithKnownLabel || LooksLikeAddressLine(prevLine))
+                return sameLineValue;
+
+            string continuation = TruncateAtTrailingMarker(StripLeadingNumericCode(prevLine));
+
+            var otherLabelMatch = OtherLabelAnywhereRegex.Match(continuation);
+            if (otherLabelMatch.Success)
+                continuation = continuation[..otherLabelMatch.Index].Trim();
+
+            if (string.IsNullOrWhiteSpace(continuation) || IsRejectableCandidate(continuation, allowShortAcronym: true))
+                return sameLineValue;
+
+            return $"{sameLineValue} {continuation}";
+        }
+
         private static string? ExtractCustomerName(List<string> headerLines)
         {
             // Priorite 1 et 2 : label explicite, valeur sur la meme ligne ou (si le label est
@@ -461,8 +565,9 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 if (m.Success)
                 {
                     string sameLine = TruncateAtTrailingMarker(m.Groups[1].Value.Trim());
-                    if (!string.IsNullOrWhiteSpace(sameLine) && !IsRejectableCandidate(sameLine, allowShortAcronym: true))
-                        return CleanCustomerName(sameLine);
+                    string extendedSameLine = ExtendWithAdjacentContinuation(sameLine, headerLines, i);
+                    if (!string.IsNullOrWhiteSpace(extendedSameLine) && !IsRejectableCandidate(extendedSameLine, allowShortAcronym: true))
+                        return CleanCustomerName(extendedSameLine);
                     continue;
                 }
 
@@ -515,10 +620,17 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 // etre reconnu comme le libelle exact (ex. "S Titulaire itulai de compte" -
                 // releve BTL reel, fusion/duplication OCR autour du mot). Dans les trois cas, la
                 // valeur est recherchee en scannant vers l'avant.
-                bool looksLikeLabelOnly = CustomerLabelOnlyLineRegex.IsMatch(headerLines[i])
-                    || LabelNearEndOfLineRegexes.Any(r => r.IsMatch(headerLines[i]))
-                    || (LooseLabelWordRegex.IsMatch(headerLines[i])
-                        && headerLines[i].Split(' ', StringSplitOptions.RemoveEmptyEntries).Length <= 6);
+                // Un gloss bilingue (arabe, ou date/heure d'edition) accole APRES le label par
+                // fusion de colonnes OCR (ex. "R.I.B CODE DEVISE TITULAIRE DU COMPTE ????? ????"
+                // - releve TSB reel, ou "TITULAIRE DU COMPTE" est suivi d'un gloss arabe non
+                // entre parentheses) empeche les motifs "fin de ligne" ci-dessous de matcher :
+                // on retire ce gloss avec le meme helper generique que pour une valeur, avant de
+                // tester si le LABEL occupe le reste de la ligne.
+                string lineForLabelCheck = TruncateAtTrailingMarker(headerLines[i]);
+                bool looksLikeLabelOnly = CustomerLabelOnlyLineRegex.IsMatch(lineForLabelCheck)
+                    || LabelNearEndOfLineRegexes.Any(r => r.IsMatch(lineForLabelCheck))
+                    || (LooseLabelWordRegex.IsMatch(lineForLabelCheck)
+                        && lineForLabelCheck.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length <= 6);
                 if (!looksLikeLabelOnly)
                     continue;
 
@@ -563,7 +675,12 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                     if (OtherLabelLineRegex.IsMatch(next)) continue;
                     if (LooksLikeAddressLine(next)) continue;
 
-                    string nextCandidate = StripLeadingNumericCode(TruncateAtTrailingMarker(next));
+                    // Le bruit de tete (code numerique, IBAN, devise, pagination) est retire
+                    // AVANT la troncature de fin de ligne : sinon un marqueur en tete absolue
+                    // (ex. une date en tout debut de ligne) fait croire a TruncateAtTrailingMarker
+                    // que la valeur entiere doit etre coupee a l'index 0, la vidant entierement
+                    // alors que le vrai contenu la suit.
+                    string nextCandidate = TruncateAtTrailingMarker(StripLeadingNumericCode(next));
                     if (string.IsNullOrWhiteSpace(nextCandidate)) continue;
                     if (IsRejectableCandidate(nextCandidate, allowShortAcronym: true)) continue;
 
@@ -625,8 +742,9 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
             // malgre tout un ":" (un label non reconnu mais generiquement present, ex. OCR
             // ayant perdu le mot "Titulaire" avant "du compte :"), on prend la partie APRES le
             // ":" plutot que la ligne entiere - generique, pas specifique a un intitule precis.
-            foreach (var line in headerLines)
+            for (int i = 0; i < headerLines.Count; i++)
             {
+                string line = headerLines[i];
                 if (string.IsNullOrWhiteSpace(line)) continue;
 
                 // Un label connu (RIB, Devise, N°/Numero de compte...) suivi directement d'un
@@ -649,13 +767,33 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                     continue;
                 }
 
-                // Tronque d'abord au premier marqueur generique (periode+date, date chiffree,
-                // texte arabe...) avant meme les filtres label/adresse : sans cela, une date ou
-                // un code postal accole en fin de ligne par fusion de colonnes OCR peut faire
-                // ressembler a tort la ligne entiere a une adresse (LooksLikeAddressLine) alors
-                // que seul le TEXTE APRES troncature (le vrai nom) doit etre juge sur ce critere
-                // (ex. "CH CLEAN Période: 01/06/2025 30/06/2025" -> "CH CLEAN").
-                string truncatedLine = TruncateAtTrailingMarker(line);
+                // Ligne SANS ":" (donc sans label - meme non reconnu - sur elle-meme) : si la
+                // ligne PRECEDENTE, elle, commence par un label connu (RIB, Devise,
+                // Domiciliation...), cette ligne est tres probablement la valeur ORPHELINE de ce
+                // champ - separee de son label par la segmentation OCR en lignes/TableRow
+                // distincts plutot que fusionnee sur la meme ligne (ex. releve STB reel :
+                // "Domiciliation \Utilisateur 4536E" sur une ligne, puis "BEN AROUS" seule sur la
+                // ligne suivante - "BEN AROUS" est la VILLE de domiciliation, jamais le client,
+                // meme si son contenu ne declenche par ailleurs aucun autre filtre de rejet).
+                // Restreint aux lignes SANS ":" : une ligne qui contient son propre ":" porte son
+                // propre label (meme non reconnu, ex. "du compte : AL BARAKA RENT A CAR" - releve
+                // BT2 reel) et n'est jamais la valeur orpheline d'un AUTRE champ. On ne regarde
+                // jamais que la ligne IMMEDIATEMENT precedente - jamais un balayage arriere plus
+                // large.
+                if (i > 0 && !line.Contains(':') && OtherLabelLineRegex.IsMatch(headerLines[i - 1]))
+                    continue;
+
+                // Retire d'abord le bruit de tete (code numerique, IBAN, devise, pagination),
+                // PUIS tronque au premier marqueur generique de fin (periode+date, date
+                // chiffree, texte arabe...) avant meme les filtres label/adresse : sans le
+                // retrait prealable du bruit de tete, une date EN TOUT DEBUT de ligne (ex.
+                // "30-06-26 TND 1/17 AL BARAKA RENT A CAR" - releve BH reel) ferait croire a
+                // TruncateAtTrailingMarker que la valeur entiere doit etre coupee des l'index 0,
+                // la vidant alors que le vrai nom la suit. Une fois le bruit de tete retire, la
+                // troncature de fin protege toujours contre un code postal/date accole en fin de
+                // ligne par fusion de colonnes OCR (ex. "CH CLEAN Période: 01/06/2025
+                // 30/06/2025" -> "CH CLEAN").
+                string truncatedLine = TruncateAtTrailingMarker(StripLeadingNumericCode(line));
 
                 if (OtherLabelLineRegex.IsMatch(truncatedLine)) continue;
                 if (LooksLikeAddressLine(truncatedLine)) continue;
