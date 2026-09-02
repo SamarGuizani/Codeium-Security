@@ -113,7 +113,9 @@ namespace Codeium_Security.Services.Export
             sheet.Cell(headerRow, 2).Value = "Libellé";
             sheet.Cell(headerRow, 3).Value = "Débit";
             sheet.Cell(headerRow, 4).Value = "Crédit";
-            sheet.Range(headerRow, 1, headerRow, 4).Style.Font.Bold = true;
+            sheet.Cell(headerRow, 5).Value = "Compte Débit";
+            sheet.Cell(headerRow, 6).Value = "Compte Crédit";
+            sheet.Range(headerRow, 1, headerRow, 6).Style.Font.Bold = true;
             row++;
 
             string amountFormat = string.Equals(account.Currency?.Trim(), "TND", StringComparison.OrdinalIgnoreCase)
@@ -122,27 +124,53 @@ namespace Codeium_Security.Services.Export
 
             foreach (var tx in account.Transactions)
             {
-                sheet.Cell(row, 1).Value = tx.Date;
-                sheet.Cell(row, 2).Value = tx.Libelle;
-
-                if (tx.Debit.HasValue)
+                if (LedgerAccountClassifier.IsRetraitEspeces(tx))
                 {
-                    sheet.Cell(row, 3).Value = tx.Debit.Value;
-                    sheet.Cell(row, 3).Style.NumberFormat.Format = amountFormat;
-                }
-                if (tx.Credit.HasValue)
-                {
-                    sheet.Cell(row, 4).Value = tx.Credit.Value;
-                    sheet.Cell(row, 4).Style.NumberFormat.Format = amountFormat;
+                    // Retrait especes : dedoublement comptable via le compte intermediaire
+                    // (voir LedgerAccountClassifier.IsRetraitEspeces) - deux lignes, comptes
+                    // inverses entre elles, au lieu du classement habituel Debit/Credit.
+                    row = WriteTransactionRow(sheet, row, tx.Date, tx.Libelle, tx.Debit, tx.Credit,
+                        LedgerAccountClassifier.CompteIntermediaire, LedgerAccountClassifier.CompteCaisse, amountFormat);
+                    row = WriteTransactionRow(sheet, row, tx.Date, tx.Libelle + " (dupliqué)", tx.Debit, tx.Credit,
+                        LedgerAccountClassifier.CompteCaisse, LedgerAccountClassifier.CompteIntermediaire, amountFormat);
+                    continue;
                 }
 
-                row++;
+                var (compteDebit, compteCredit) = LedgerAccountClassifier.Classify(tx, metadata?.CustomerName);
+                row = WriteTransactionRow(sheet, row, tx.Date, tx.Libelle, tx.Debit, tx.Credit, compteDebit, compteCredit, amountFormat);
             }
 
             sheet.Column(1).Width = 14;
             sheet.Column(2).Width = 60;
             sheet.Column(3).Width = 16;
             sheet.Column(4).Width = 16;
+            sheet.Column(5).Width = 16;
+            sheet.Column(6).Width = 16;
+        }
+
+        // Ecrit une ligne Date/Libelle/Debit/Credit/Compte Debit/Compte Credit et retourne la
+        // prochaine ligne libre. Factorise pour permettre au retrait especes d'ecrire deux
+        // lignes (voir la boucle d'appel dans AddAccountSheet).
+        private static int WriteTransactionRow(IXLWorksheet sheet, int row, string date, string libelle,
+            decimal? debit, decimal? credit, string? compteDebit, string? compteCredit, string amountFormat)
+        {
+            sheet.Cell(row, 1).Value = date;
+            sheet.Cell(row, 2).Value = libelle;
+
+            if (debit.HasValue)
+            {
+                sheet.Cell(row, 3).Value = debit.Value;
+                sheet.Cell(row, 3).Style.NumberFormat.Format = amountFormat;
+            }
+            if (credit.HasValue)
+            {
+                sheet.Cell(row, 4).Value = credit.Value;
+                sheet.Cell(row, 4).Style.NumberFormat.Format = amountFormat;
+            }
+            if (compteDebit != null) sheet.Cell(row, 5).Value = compteDebit;
+            if (compteCredit != null) sheet.Cell(row, 6).Value = compteCredit;
+
+            return row + 1;
         }
 
         // Ecrit uniquement Total Debit / Total Credit (voir TransactionSumCalculator) tout en
