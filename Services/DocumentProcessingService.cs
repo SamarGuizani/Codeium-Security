@@ -1,3 +1,4 @@
+using System.Globalization;
 using Codeium_Security.Factories;
 using Codeium_Security.Interfaces;
 using Codeium_Security.Models;
@@ -60,6 +61,33 @@ namespace Codeium_Security.Services
             return ocrResult;
         }
 
+        // Deduit une ExtractionPeriod des dates min/max parmi toutes les transactions de tous
+        // les comptes (Transaction.Date est deja normalise en "dd/MM/yyyy" par
+        // BankDocumentParser). Retourne null si aucune date exploitable (aucune transaction,
+        // ou toutes les dates sont vides/invalides).
+        private static ExtractionPeriod? DerivePeriodFromTransactionDates(BankDocument bankDoc)
+        {
+            DateTime? min = null;
+            DateTime? max = null;
+
+            foreach (var account in bankDoc.Accounts)
+            {
+                foreach (var tx in account.Transactions)
+                {
+                    if (!DateTime.TryParseExact(tx.Date, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsed))
+                        continue;
+
+                    if (min == null || parsed < min) min = parsed;
+                    if (max == null || parsed > max) max = parsed;
+                }
+            }
+
+            if (min == null || max == null)
+                return null;
+
+            return new ExtractionPeriod { Start = min.Value.ToString("dd/MM/yyyy"), End = max.Value.ToString("dd/MM/yyyy") };
+        }
+
         private List<TextLine> GroupLines(OcrResult ocrResult)
         {
             return ocrResult.SuggestedVerticalTolerance.HasValue
@@ -94,6 +122,20 @@ namespace Codeium_Security.Services
             // ci-dessus (isAttijari/isBh/isUbci/ExtractBankName...) - aucune seconde detection
             // de banque n'est creee ici, conformement au principe "reutiliser l'existant".
             metadata.BankName = (document as BankDocument)?.BankName;
+
+            // Repli Periode (voir ExtractPeriod dans GenericDocumentMetadataExtractor) : de
+            // nombreux releves (ex. BTK, AMEN, QNB, BIAT scannes) n'impriment aucun texte
+            // "Du ... au ...", "Periode :" etc. dans l'en-tete - seules les dates de transaction
+            // individuelles sont lisibles. Quand aucun texte de periode explicite n'a ete
+            // trouve, on deduit Start/End des dates min/max deja extraites par BankDocumentParser
+            // (aucune nouvelle regle de parsing, lecture seule des transactions).
+            if ((metadata.Period == null || (string.IsNullOrWhiteSpace(metadata.Period.Start) && string.IsNullOrWhiteSpace(metadata.Period.End)))
+                && document is BankDocument bankDocForPeriod)
+            {
+                var derivedPeriod = DerivePeriodFromTransactionDates(bankDocForPeriod);
+                if (derivedPeriod != null)
+                    metadata.Period = derivedPeriod;
+            }
 
             bool needsReview = EvaluateNeedsReview(documentType, document, ocrResult.Confidence);
 

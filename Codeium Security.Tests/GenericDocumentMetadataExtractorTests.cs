@@ -332,6 +332,36 @@ namespace Codeium_Security.Tests
         }
 
         [Fact]
+        public void ExtractionPeriod_MonthlyWording_DuVariant_ComputesFirstAndLastDayOfMonth()
+        {
+            // Releve Al Baraka reel ("Mois du Juillet 2024", pas "Mois de").
+            var rows = RowsFromLines(
+                "Mois du Juillet 2024",
+                "Date Libellé opération Débit Crédit Solde");
+
+            var result = _extractor.Extract("", rows);
+
+            Assert.NotNull(result.Period);
+            Assert.Equal("01/07/2024", result.Period!.Start);
+            Assert.Equal("31/07/2024", result.Period!.End);
+        }
+
+        [Fact]
+        public void ExtractionPeriod_StatementFromTo_EnglishWording()
+        {
+            // Releve ATB reel ("Statement from 01/07/2026 to 31/07/2026").
+            var rows = RowsFromLines(
+                "Statement from 01/07/2026 to 31/07/2026",
+                "Date Libellé opération Débit Crédit Solde");
+
+            var result = _extractor.Extract("", rows);
+
+            Assert.NotNull(result.Period);
+            Assert.Equal("01/07/2026", result.Period!.Start);
+            Assert.Equal("31/07/2026", result.Period!.End);
+        }
+
+        [Fact]
         public void ExtractionPeriod_StatementAsOfSingleDate_ReleveAu()
         {
             var rows = RowsFromLines(

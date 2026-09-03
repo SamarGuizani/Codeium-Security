@@ -3258,7 +3258,14 @@ namespace Codeium_Security.Services.DocumentParsers
                 candidate = Regex.Replace(raw.Trim(), @"\s+", "/");
             }
 
-            if (raw.Length == 8 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.'))
+            // Un numero de cheque/reference a 8 chiffres (ex. "10069302", "29112074") ressemble
+            // a une date "JJMMAAAA" sans separateurs, mais son "annee" tombe hors de toute plage
+            // plausible pour un releve (jamais dans le futur au-dela d'un an, jamais avant 1990)
+            // - sans ce garde-fou, DateTime.TryParseExact l'accepte quand meme (.NET n'a pas de
+            // limite d'annee < 9999) et produit une date absurde (ex. "10/06/9302", "29/11/2074"
+            // pour un chiffre d'annee mal lu par l'OCR, ex. "0" lu "7").
+            if (raw.Length == 8 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.')
+                && int.TryParse(raw.Substring(4, 4), out int rawYear) && rawYear >= 1990 && rawYear <= DateTime.Now.Year + 1)
                 candidate = $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}/{raw.Substring(4, 4)}";
             else if (raw.Length == 4 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.') && !raw.Contains(' '))
                 candidate = $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}";

@@ -863,7 +863,13 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
         // mois nomme plutot que deux dates - Start/End sont calcules comme le 1er et le
         // dernier jour de ce mois (generique, aucune banque precise).
         private static readonly Regex MonthlyPeriodRegex = new(
-            $@"(?:[Dd]u\s+)?[Mm]ois\s+de\s+({string.Join("|", MonthNames)})\s+(\d{{4}})",
+            $@"(?:[Dd]u\s+)?[Mm]ois\s+(?:de|du)\s+({string.Join("|", MonthNames)})\s+(\d{{4}})",
+            RegexOptions.IgnoreCase);
+
+        // Format anglais ("Statement from 01/07/2026 to 31/07/2026" - ex. releve ATB) : memes
+        // deux dates que PeriodDuAuRegex, mais mots-cles anglais.
+        private static readonly Regex StatementFromToRegex = new(
+            $@"Statement\s+from\s*{DateFiller}({DateToken})\s*to\s*{DateFiller}({DateToken})",
             RegexOptions.IgnoreCase);
 
         // Date d'arret unique ("Relevé au 31/05/2025", "Solde au 30/04/2025") : pas
@@ -898,6 +904,10 @@ namespace Codeium_Security.Services.DocumentMetadataExtraction
                 return new ExtractionPeriod { Start = m.Groups[1].Value, End = m.Groups[2].Value };
 
             m = PeriodLabelRegex.Match(joinedHeader);
+            if (m.Success)
+                return new ExtractionPeriod { Start = m.Groups[1].Value, End = m.Groups[2].Value };
+
+            m = StatementFromToRegex.Match(joinedHeader);
             if (m.Success)
                 return new ExtractionPeriod { Start = m.Groups[1].Value, End = m.Groups[2].Value };
 
