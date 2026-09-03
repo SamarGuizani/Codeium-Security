@@ -15,10 +15,11 @@ namespace Codeium_Security.Services.Export
     {
         private const string CompteBancaire = "532000";
 
-        private static readonly Regex CommissionPattern = new(@"\b(comm|commission|frais)\b", RegexOptions.Compiled);
+        private static readonly Regex CommissionPattern = new(@"\b(comm|commission|frais|rem)\b", RegexOptions.Compiled);
         private static readonly Regex TvaPattern = new(@"\btva\b", RegexOptions.Compiled);
         private static readonly Regex PrelevementPattern = new(@"\b(paiement|prelevement|min|minimum)\b", RegexOptions.Compiled);
-        private static readonly Regex EncaissementPattern = new(@"\b(commercant|virement|encaissement)\b", RegexOptions.Compiled);
+        private static readonly Regex EncaissementPattern = new(@"\b(commercant|virement|encaissement|redressement)\b", RegexOptions.Compiled);
+        private static readonly Regex BlocagePattern = new(@"\b(blocage|deblocage)\b", RegexOptions.Compiled);
         private static readonly Regex RetraitPattern = new(@"\bretrait\b", RegexOptions.Compiled);
         private static readonly Regex EspecesPattern = new(@"\bespece(s)?\b", RegexOptions.Compiled);
         private static readonly Regex VirementDebitPattern = new(@"\b(vir|virement)\b", RegexOptions.Compiled);
@@ -78,7 +79,7 @@ namespace Codeium_Security.Services.Export
                 if (PrelevementPattern.IsMatch(libelle))
                     return ("437001", CompteBancaire);
 
-                if (VirementDebitPattern.IsMatch(libelle) || (ReglementPattern.IsMatch(libelle) && ChequePattern.IsMatch(libelle)))
+                if (VirementDebitPattern.IsMatch(libelle) || (ReglementPattern.IsMatch(libelle) && ChequePattern.IsMatch(libelle)) || BlocagePattern.IsMatch(libelle))
                     return ("461000", CompteBancaire);
 
                 return (null, null);
@@ -86,6 +87,9 @@ namespace Codeium_Security.Services.Export
 
             if (tx.Credit.HasValue)
             {
+                if (CommissionPattern.IsMatch(libelle))
+                    return (CompteBancaire, "627000");
+
                 if (EncaissementPattern.IsMatch(libelle))
                 {
                     string compteCredit = IsClientCompany(customerName) ? "411000" : "461000";
