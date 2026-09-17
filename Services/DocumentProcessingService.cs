@@ -123,6 +123,15 @@ namespace Codeium_Security.Services
             // de banque n'est creee ici, conformement au principe "reutiliser l'existant".
             metadata.BankName = (document as BankDocument)?.BankName;
 
+            // Repli Banque Zitouna (2026-09-17) : ExtractBankName (BankDocumentParser) ne connait
+            // pas "ZITOUNA" dans sa table de banques, donc BankDocument.BankName reste vide pour ces
+            // relevés - meme signal deja calcule en interne par BankDocumentParser (isZitouna =
+            // fullText.Contains("ZITOUNA")), relu ici en couche orchestration, sans toucher au
+            // parser ni a l'OCR. Necessaire pour que BankExcelExporter/ZitounaLedgerAccountClassifier
+            // detectent correctement ces documents (voir ZitounaLedgerAccountClassifier.IsZitounaDocument).
+            if (string.IsNullOrEmpty(metadata.BankName) && ocrResult.FullText.Contains("ZITOUNA", StringComparison.OrdinalIgnoreCase))
+                metadata.BankName = "Banque Zitouna";
+
             // Repli Periode (voir ExtractPeriod dans GenericDocumentMetadataExtractor) : de
             // nombreux releves (ex. BTK, AMEN, QNB, BIAT scannes) n'impriment aucun texte
             // "Du ... au ...", "Periode :" etc. dans l'en-tete - seules les dates de transaction

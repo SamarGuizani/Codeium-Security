@@ -37,10 +37,19 @@ namespace Codeium_Security.Services.Export
         // correspond (cellules laissees vides, comme le classifieur generique).
         //
         // customerName est le titulaire du compte (DocumentMetadata.CustomerName, deja affiche dans
-        // la case "Societe :" de l'export) : c'est lui qui determine si on est en presence d'une
-        // "societe de la liste" (sections 5-9), pas le texte de la transaction elle-meme - un retrait
-        // DAB ou un versement especes est fait PAR le titulaire du compte, dont le nom n'apparait pas
-        // ligne par ligne dans le libelle. Meme parametre/convention que LedgerAccountClassifier.Classify.
+        // la case "Societe :" de l'export) : c'est lui qui determine en premier lieu si on est en
+        // presence d'une "societe de la liste" (sections 5-9) - un retrait DAB ou un versement
+        // especes est fait PAR le titulaire du compte. Meme parametre/convention que
+        // LedgerAccountClassifier.Classify.
+        //
+        // Cas particulier VERSEMENT ESP / RETRAIT ESP / DAB-WIB-GAB-GBH-DBH (sections 7-9) : comme la
+        // liste des 44 societes est tres restreinte, la tres grande majorite des comptes Zitouna n'en
+        // font pas partie - appliquer le dedoublement (580000/541000) a TOUS les titulaires "hors
+        // liste" en ferait le cas par defaut au lieu d'une exception. Le dedoublement reste donc
+        // volontairement rare : il ne se declenche que si le titulaire n'est PAS une societe de la
+        // liste ET que le libelle de cette transaction cite explicitement une des 44 societes. Dans
+        // tous les autres cas (titulaire de la liste, ou aucun signal special du tout), on retombe
+        // sur la regle simple normale (validee par l'utilisateur, 2026-09-17).
         public static IReadOnlyList<(string CompteDebit, string CompteCredit)> Classify(Transaction tx, string? customerName)
         {
             if (!tx.Debit.HasValue && !tx.Credit.HasValue)
@@ -48,35 +57,42 @@ namespace Codeium_Security.Services.Export
 
             bool inDebit = tx.Debit.HasValue;
             string libelle = NormalizeForMatch(tx.Libelle);
-            bool isSpecialCompany = IsListedCompany(customerName);
+            bool holderIsSpecialCompany = IsListedCompany(customerName);
 
             // --- Cas speciaux societes (section 5 a 9) : verifies avant toute regle generique ---
 
             if (VersementEspPattern.IsMatch(libelle))
             {
-                if (isSpecialCompany)
+                if (holderIsSpecialCompany)
                     // Section 7 : les 2 variantes sont donnees explicitement dans le cahier des charges.
                     return One(inDebit ? (CompteBancaire, CompteClientDivers) : (CompteClientDivers, CompteBancaire));
 
-                // Section 8 (hors liste) : cas Debit tel que donne dans le cahier des charges.
-                return Two(inDebit,
-                    (CompteBancaire, CompteIntermediaire),
-                    (CompteIntermediaire, CompteCaisse));
+                if (LibelleMentionsListedCompany(libelle))
+                    // Section 8 (titulaire hors liste, mais une des 44 societes est explicitement
+                    // citee dans le libelle de cette operation) : cas Debit tel que donne dans le
+                    // cahier des charges - dedoublement volontairement rare (voir commentaire de
+                    // Classify), declenche uniquement par ce signal textuel precis.
+                    return Two(inDebit,
+                        (CompteBancaire, CompteIntermediaire),
+                        (CompteIntermediaire, CompteCaisse));
+
+                // Aucun signal special : traitement conservateur, comme un versement normal.
+                return One(Pair(CompteClientDivers, CompteBancaire, inDebit));
             }
 
             if (RetraitEspPattern.IsMatch(libelle) || DabWibGabGbhDbhPattern.IsMatch(libelle))
             {
-                if (!isSpecialCompany)
-                    // Section 9 (hors liste) : cas Debit tel que donne dans le cahier des charges.
+                if (!holderIsSpecialCompany && LibelleMentionsListedCompany(libelle))
+                    // Section 9 (meme logique que section 8 ci-dessus) : cas Debit tel que donne.
                     return Two(inDebit,
                         (CompteIntermediaire, CompteBancaire),
                         (CompteCaisse, CompteIntermediaire));
 
-                // Societe de la liste : pas de regle speciale donnee -> regle DAB/retrait normale.
+                // Titulaire de la liste, ou aucun signal special : regle DAB/retrait normale.
                 return One(Pair(CompteFournisseurClient, CompteBancaire, inDebit));
             }
 
-            if (ContextSocietePattern.IsMatch(libelle) && isSpecialCompany)
+            if (ContextSocietePattern.IsMatch(libelle) && holderIsSpecialCompany)
                 // Section 6 : remplace 461000 par 411000 dans la regle virement/encaissement.
                 return One(Pair(CompteClientDivers, CompteBancaire, inDebit));
 
@@ -97,11 +113,21 @@ namespace Codeium_Security.Services.Export
             if (DebitDiversPattern.IsMatch(libelle))
                 return One(Pair("627000", CompteBancaire, inDebit));
 
-            if (CommissionPattern.IsMatch(libelle))
-                return One(Pair("627000", CompteBancaire, inDebit));
+            // Prelevement verifie avant Commission (2026-09-17) : la forme reelle "PRELEV COM" /
+            // "PRÉLÈV COM" (ex. "Prélèv com/ EPS ...") contient le mot "com", qui matcherait sinon
+            // la regle Commission generique (627000) avant meme d'atteindre celle-ci.
+            if (RejetPattern.IsMatch(libelle) && PrelevementPattern.IsMatch(libelle))
+                // "REJET PRELEV..." (ex. "Rejet prélèv 3315") : aucune regle comptable validee pour
+                // ce cas dans le cahier des charges - volontairement laisse sans imputation plutot
+                // que de deviner un traitement pour un rejet de prelevement. A confirmer avec
+                // l'utilisateur avant d'ajouter une regle.
+                return Array.Empty<(string, string)>();
 
             if (PrelevementPattern.IsMatch(libelle))
                 return One(Pair("437001", CompteBancaire, inDebit));
+
+            if (CommissionPattern.IsMatch(libelle))
+                return One(Pair("627000", CompteBancaire, inDebit));
 
             if (VirementPattern.IsMatch(libelle))
                 return One(Pair(CompteFournisseurClient, CompteBancaire, inDebit));
@@ -194,6 +220,18 @@ namespace Codeium_Security.Services.Export
             return false;
         }
 
+        // Signal textuel precis (voir commentaire de Classify) : une des 44 societes est citee
+        // explicitement dans le libelle de cette transaction, meme si le titulaire du compte est
+        // different. Contrairement a IsListedCompany, pas de correspondance inversee (le libelle est
+        // une ligne de texte bien plus longue qu'un nom de societe).
+        private static bool LibelleMentionsListedCompany(string normalizedLibelle)
+        {
+            foreach (var company in NormalizedSpecialCompanies)
+                if (normalizedLibelle.Contains(company))
+                    return true;
+            return false;
+        }
+
         // --- Motifs de reconnaissance (appliques a un libelle deja normalise : minuscules, sans
         // accents, espaces multiples reduits a un seul, apostrophes remplacees par un espace). ---
 
@@ -203,14 +241,21 @@ namespace Codeium_Security.Services.Export
         private static readonly Regex ContextSocietePattern = new(@"\b(virement|vir|encaissement|encaiss)\b|\brem\s+commercant\b", RegexOptions.Compiled);
 
         private static readonly Regex TvaDebitDiversPattern = new(@"\btva\s+debit\s+divers\b", RegexOptions.Compiled);
-        private static readonly Regex TvaSurComPattern = new(@"\btva\s*/\s*com\b|\btva\s+sur\s+com\b", RegexOptions.Compiled);
+        // comm? : accepte la forme reelle a 4 lettres "COMM" (ex. "TVA/COMM") en plus de "COM".
+        private static readonly Regex TvaSurComPattern = new(@"\btva\s*/\s*comm?\b|\btva\s+sur\s+comm?\b", RegexOptions.Compiled);
         private static readonly Regex TvaLeasingPattern = new(@"\btva\s+leasing\b", RegexOptions.Compiled);
         private static readonly Regex TvaPattern = new(@"\btva\b", RegexOptions.Compiled);
         private static readonly Regex DobctPattern = new(@"\bdobct\s+comptoir\s+de\s+tunis\s+reg\b", RegexOptions.Compiled);
         private static readonly Regex MouvementCommPattern = new(@"\bmouvement\s+comm\b", RegexOptions.Compiled);
         private static readonly Regex DebitDiversPattern = new(@"\bdebit\s+divers\b", RegexOptions.Compiled);
         private static readonly Regex CommissionPattern = new(@"\b(com|commission|frais|pdl)\b", RegexOptions.Compiled);
-        private static readonly Regex PrelevementPattern = new(@"\bprelevement\b|\bmin\s+de\s+fin\b|\bdeclaration\b", RegexOptions.Compiled);
+        // prelev (2026-09-17) : forme reelle abregee "PRÉLÈV" / "PRELEV" (ex. "Prélèv com/ EPS ...",
+        // "PRELEVEMENT" restant reconnu en plus pour compatibilite avec les libelles deja ecrits en
+        // entier).
+        private static readonly Regex PrelevementPattern = new(@"\bprelevement\b|\bprelev\b|\bmin\s+de\s+fin\b|\bdeclaration\b", RegexOptions.Compiled);
+        // Garde utilisee uniquement pour bloquer "REJET PRELEV..." (voir Classify) - ne bloque aucune
+        // autre regle.
+        private static readonly Regex RejetPattern = new(@"\brejet\b", RegexOptions.Compiled);
         private static readonly Regex VirementPattern = new(@"\b(virement|vir|effet)\b|\breglement\s+cheque\b|\benc\s+cheque\b|\bencaissement\b|\bencaiss\b", RegexOptions.Compiled);
         private static readonly Regex AgiosPattern = new(@"\bagios?\b", RegexOptions.Compiled);
         private static readonly Regex BlocagePattern = new(@"\bblocage\b", RegexOptions.Compiled);

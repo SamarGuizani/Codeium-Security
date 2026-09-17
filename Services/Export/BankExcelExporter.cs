@@ -127,7 +127,7 @@ namespace Codeium_Security.Services.Export
             // affectee par cette branche. Detection via RawSectionText (BankName reste vide pour
             // ces relevés aujourd'hui, voir ZitounaLedgerAccountClassifier.IsZitounaDocument) sans
             // toucher a BankDocumentParser.
-            bool isZitouna = ZitounaLedgerAccountClassifier.IsZitounaDocument(account, bankName);
+            bool isZitouna = ZitounaLedgerAccountClassifier.IsZitounaDocument(account, metadata?.BankName ?? bankName);
 
             foreach (var tx in account.Transactions)
             {
