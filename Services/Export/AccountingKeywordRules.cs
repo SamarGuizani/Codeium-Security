@@ -42,13 +42,11 @@ namespace Codeium_Security.Services.Export
             if (TvaDebitDiversPattern.IsMatch(libelle))
                 return One(Pair("436600", CompteBancaire, inDebit));
 
-            // TVA/COM(M) - "TVA sur COM(M)", "TVA/COMM", "TVA sur Commission" (2026-09-17, correction
-            // utilisateur) : traite comme une commission (627000), PAS comme de la TVA (436600) -
-            // verifie avant TvaPattern (bare "tva") pour eviter que celui-ci ne capture ces libelles.
-            if (TvaSurComPattern.IsMatch(libelle))
-                return One(Pair("627000", CompteBancaire, inDebit));
-
-            if (TvaLeasingPattern.IsMatch(libelle) || TvaPattern.IsMatch(libelle))
+            // TVA/COM(M) - "TVA sur COM(M)", "TVA/COMM", "TVA sur Commission" (2026-09-17, confirme
+            // par l'utilisateur apres une correction intermediaire : reste bien de la TVA, 436600 -
+            // PAS une commission) : verifie avant CommissionPattern pour que le mot entier
+            // "Commission" (ou l'abreviation "comm") ne fasse pas basculer ces libelles vers 627000.
+            if (TvaSurComPattern.IsMatch(libelle) || TvaLeasingPattern.IsMatch(libelle) || TvaPattern.IsMatch(libelle))
                 return One(Pair("436600", CompteBancaire, inDebit));
 
             if (DobctPattern.IsMatch(libelle))

@@ -64,9 +64,9 @@ namespace Codeium_Security.Tests
             Assert.Equal("436600", cc);
         }
 
-        // "TVA sur COM(M)" (2026-09-17, correction utilisateur) : traite comme une commission
-        // (627000), PAS comme de la TVA (436600) - remplace la version precedente de ces tests, qui
-        // attendaient 436600 avant cette correction.
+        // "TVA sur COM(M)"/"TVA/COMM" (2026-09-17, confirme par l'utilisateur apres une correction
+        // intermediaire vers 627000, revenue en arriere) : reste de la TVA, 436600 - prime sur la
+        // regle Commission generique.
         [Theory]
         [InlineData("TVA SUR COM")]
         [InlineData("TVA / COM")]
@@ -76,19 +76,9 @@ namespace Codeium_Security.Tests
         [InlineData("tva/comm")]
         [InlineData("TVA /COM")]
         [InlineData("TVA/ COMM")]
-        public void TvaSurCom_Donne_627000_532000(string libelle)
+        public void TvaSurCom_Donne_436600_532000_Et_Prime_Sur_La_Regle_Commission(string libelle)
         {
             var (cd, cc) = Single(DebitTx(libelle));
-            Assert.Equal("627000", cd);
-            Assert.Equal("532000", cc);
-        }
-
-        // "TVA" seule (sans COM/COMM a proximite) reste bien 436600 - non-regression de la
-        // distinction faite par l'utilisateur entre "TVA sur COM(M)" (commission) et "TVA" isolee.
-        [Fact]
-        public void TvaSeule_Sans_Com_Reste_436600_532000()
-        {
-            var (cd, cc) = Single(DebitTx("TVA CHG2401243846"));
             Assert.Equal("436600", cd);
             Assert.Equal("532000", cc);
         }

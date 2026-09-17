@@ -112,24 +112,15 @@ namespace Codeium_Security.Tests
         // --- Regles a priorite absolue (2026-09-17) : doivent primer sur les regles historiques
         // ci-dessus (CommissionPattern/PrelevementPattern), verifiees en tete de LedgerAccountClassifier.Classify --
 
-        // "TVA sur COM(M)"/"TVA/COMM" (2026-09-17, correction utilisateur) : traites comme une
-        // commission (627000), pas comme de la TVA (436600).
+        // TVA, y compris "TVA sur COM(M)"/"TVA/COMM"/"Tax on Charges" (2026-09-17, confirme par
+        // l'utilisateur apres une correction intermediaire vers 627000, revenue en arriere) : reste
+        // 436600, prime sur CommissionPattern generique.
         [Theory]
         [InlineData("Tva sur Commission 202608240011|2026-08-26 8808")]
         [InlineData("TVA/COMM 6752")]
-        public void TvaSurCom_Donne_627000_532000(string libelle)
-        {
-            var (cd, cc) = LedgerAccountClassifier.Classify(DebitTx(libelle));
-            Assert.Equal("627000", cd);
-            Assert.Equal("532000", cc);
-        }
-
-        // "TVA" seule / "Tax on Charges" (sans COM/COMM a proximite) restent 436600 et primes sur
-        // CommissionPattern generique.
-        [Theory]
         [InlineData("TVA CHG2401243846")]
         [InlineData("Tax on Charges 12345")]
-        public void TvaSeule_Prime_Sur_Commission_Generique_436600_532000(string libelle)
+        public void TvaFamille_Prime_Sur_Commission_Generique_436600_532000(string libelle)
         {
             var (cd, cc) = LedgerAccountClassifier.Classify(DebitTx(libelle));
             Assert.Equal("436600", cd);
