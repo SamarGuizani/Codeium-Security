@@ -945,19 +945,11 @@ namespace Codeium_Security.Services.DocumentParsers
             decimal? tsbPrevSignedSolde = null;
             bool tsbPrevWasDebit = true;
 
-            // BTL "RELEVE DE COMPTE MENSUEL" : la ligne de solde de cloture, en toute fin de
-            // tableau, n'a plus aucun libelle ("Solde ..." perdu par l'OCR) - seule une ligne "TND"
-            // isolee (colonne devise) suivie d'une ligne ne contenant que deux montants (debit,
-            // credit) la distingue d'une transaction normale. Cherche sur tout le document (garde
-            // la derniere occurrence, la bonne en cas de plusieurs pages) et applique en toute fin
-            // de methode, uniquement si aucune autre regle n'a deja rempli SoldeFinal.
-            // Recherchee dans fullText (lignes brutes, avant regroupement en cellules) : une fois
-            // les rows fusionnees par MergeContinuationLines, la ligne "TND" isolee est absorbee
-            // comme cellule de continuation dans la transaction precedente et une recherche par
-            // ligne de rows ne la retrouve plus isolee - fullText echappe a ce probleme.
+           
             decimal? btlStructuralClosingBalance = null;
             if (isBtlDoc)
             {
+
                 var closingMatches = Regex.Matches(fullText,
                     @"^\s*TND\s*$\r?\n(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s+(-?\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})\s*$",
                     RegexOptions.IgnoreCase | RegexOptions.Multiline);
@@ -980,9 +972,7 @@ namespace Codeium_Security.Services.DocumentParsers
             bool isWifakReleve = isWifak && Regex.IsMatch(fullText, @"Relev[ée]\s+de\s+Compte", RegexOptions.IgnoreCase);
 
             // Ancres Débit/Crédit calculees des le depart a partir de la repartition reelle des
-            // montants (voir plus bas dans la boucle pour le detail du probleme), pour que les
-            // toutes premieres transactions du document en beneficient aussi -- pas seulement
-            // celles suivant la premiere ligne d'en-tete correctement relue par l'OCR.
+          
             if (isWifakReleve)
             {
                 var (wifakInferredDebit, wifakInferredCredit) = InferAnchorsFromAmountPositions(rows);
@@ -990,14 +980,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (wifakInferredCredit.HasValue) creditAnchor = wifakInferredCredit;
             }
 
-            // isBiat ajoute explicitement : les 3 signaux structurels ci-dessous ("Date valeur" +
-            // "Référence" + Débit/Crédit absents ou inverses) ne suffisent pas a eux seuls a
-            // identifier ce sous-format BIAT precis - un releve Al Baraka (entete "... Référence
-            // ... Montant créditeur _ Montant débiteur ...", donc Crédit AVANT Débit) les
-            // satisfait tous sans etre du BIAT, ce qui declenchait a tort la reunification de
-            // cellules "petit entier + montant" plus bas (reservee a ce sous-format BIAT) sur des
-            // numeros de reference Al Baraka adjacents a un vrai montant (ex. "422" + "500.000"
-            // fusionnes en 422500,000).
+            
             bool isBiatExtraitSignedMontant = isBiat
                 && Regex.IsMatch(fullText, @"Date\s+valeur", RegexOptions.IgnoreCase)
                 && Regex.IsMatch(fullText, @"R[ée]f[ée]rence", RegexOptions.IgnoreCase)
