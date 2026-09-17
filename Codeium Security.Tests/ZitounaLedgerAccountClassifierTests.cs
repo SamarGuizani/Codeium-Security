@@ -64,6 +64,9 @@ namespace Codeium_Security.Tests
             Assert.Equal("436600", cc);
         }
 
+        // "TVA sur COM(M)" (2026-09-17, correction utilisateur) : traite comme une commission
+        // (627000), PAS comme de la TVA (436600) - remplace la version precedente de ces tests, qui
+        // attendaient 436600 avant cette correction.
         [Theory]
         [InlineData("TVA SUR COM")]
         [InlineData("TVA / COM")]
@@ -73,20 +76,19 @@ namespace Codeium_Security.Tests
         [InlineData("tva/comm")]
         [InlineData("TVA /COM")]
         [InlineData("TVA/ COMM")]
-        public void TvaSurCom_Donne_436600_532000_Et_Prime_Sur_La_Regle_Tva_Generique(string libelle)
+        public void TvaSurCom_Donne_627000_532000(string libelle)
         {
             var (cd, cc) = Single(DebitTx(libelle));
-            Assert.Equal("436600", cd);
+            Assert.Equal("627000", cd);
             Assert.Equal("532000", cc);
         }
 
+        // "TVA" seule (sans COM/COMM a proximite) reste bien 436600 - non-regression de la
+        // distinction faite par l'utilisateur entre "TVA sur COM(M)" (commission) et "TVA" isolee.
         [Fact]
-        public void TvaSurComm_Ne_Tombe_Pas_Dans_Commission_Generique()
+        public void TvaSeule_Sans_Com_Reste_436600_532000()
         {
-            // Regression du bug rapporte (2026-09-17) : "TVA/COMM" sortait en 627000/532000
-            // (bucket Commission generique) au lieu de 436600/532000.
-            var (cd, cc) = Single(DebitTx("TVA/COMM"));
-            Assert.NotEqual("627000", cd);
+            var (cd, cc) = Single(DebitTx("TVA CHG2401243846"));
             Assert.Equal("436600", cd);
             Assert.Equal("532000", cc);
         }
@@ -117,41 +119,57 @@ namespace Codeium_Security.Tests
 
         // --- Prelevement -------------------------------------------------------------------
 
+        // 437001 reserve au precompte "MIN DES FINANCES" (2026-09-17, correction utilisateur :
+        // "437001 une seule fois par mois, seulement si paiement prelevement min de finance") -
+        // remplace la version precedente de ce test, qui attendait aussi 437001 pour "PRELEVEMENT"
+        // et "DECLARATION" seuls avant cette correction (voir tests ci-dessous pour leur nouveau
+        // comportement).
         [Theory]
-        [InlineData("PRELEVEMENT")]
         [InlineData("MIN DE FIN")]
-        [InlineData("DECLARATION")]
-        public void Prelevement_Donne_437001_532000(string libelle)
+        [InlineData("PRELEVEMENT MIN DES FINANCES")]
+        public void PrelevementMinFinances_Donne_437001_532000(string libelle)
         {
             var (cd, cc) = Single(DebitTx(libelle));
             Assert.Equal("437001", cd);
             Assert.Equal("532000", cc);
         }
 
-        // Forme reelle observee sur un vrai releve (2026-09-17) : "PRELEV"/"PRÉLÈV" abrege, souvent
-        // suivi de "COM" - doit rester dans le bucket Prelevement (437001) et NE PAS tomber dans le
-        // bucket Commission generique (627000) a cause du mot "com".
+        // "Prélèv com/..." (2026-09-17, correction utilisateur) : traite comme une commission
+        // (627000), pas comme un prelevement (437001) - remplace la version precedente de ce test.
         [Theory]
         [InlineData("Prélèv com/ EPS 120260701953508")]
-        [InlineData("PRELEV")]
         [InlineData("PRÉLÈV COM")]
-        public void PrelevAbrege_Donne_437001_532000_Et_Ne_Tombe_Pas_Dans_Commission(string libelle)
+        public void PrelevAbrege_Avec_Com_Donne_627000_532000(string libelle)
         {
             var (cd, cc) = Single(DebitTx(libelle));
-            Assert.Equal("437001", cd);
+            Assert.Equal("627000", cd);
             Assert.Equal("532000", cc);
         }
 
-        // "REJET PRELEV..." (ex. "Rejet prélèv 3315") : aucune regle comptable validee pour ce cas
-        // dans le cahier des charges (2026-09-17) - doit rester sans imputation (pas de 437001
-        // devine simplement parce que le mot "prelev" est present), en attendant confirmation.
+        // "PRELEVEMENT"/"PRELEV"/"DECLARATION" isoles (sans "com" ni "min de finance(s)") ne
+        // declenchent plus aucune regle depuis la correction du 2026-09-17 - restent sans imputation
+        // plutot que de deviner.
         [Theory]
-        [InlineData("Rejet prélèv 3315")]
-        [InlineData("Rejet prélèv 1403908")]
-        public void RejetPrelev_Reste_Non_Classifie_En_Attente_De_Confirmation(string libelle)
+        [InlineData("PRELEVEMENT")]
+        [InlineData("PRELEV")]
+        [InlineData("DECLARATION")]
+        public void PrelevementIsole_Reste_Non_Classifie(string libelle)
         {
             var lignes = ZitounaLedgerAccountClassifier.Classify(DebitTx(libelle), null);
             Assert.Empty(lignes);
+        }
+
+        // "REJET PRELEV..." (ex. "Rejet prélèv 3315") : regle comptable validee par l'utilisateur
+        // le 2026-09-17 (bucket Commissions et frais bancaires) - remplace la version precedente de
+        // ce test qui verifiait l'absence d'imputation (en attente de confirmation a l'epoque).
+        [Theory]
+        [InlineData("Rejet prélèv 3315")]
+        [InlineData("Rejet prélèv 1403908")]
+        public void RejetPrelev_Donne_627000_532000(string libelle)
+        {
+            var (cd, cc) = Single(DebitTx(libelle));
+            Assert.Equal("627000", cd);
+            Assert.Equal("532000", cc);
         }
 
         [Fact]
@@ -249,18 +267,15 @@ namespace Codeium_Security.Tests
             Assert.Equal("651000", cc);
         }
 
-        // "Intérêts créd/déb" (forme reelle abregee et combinee, 2026-09-17) : ne permet pas de
-        // determiner sans ambiguite s'il s'agit d'un interet debiteur ou crediteur (la colonne
-        // Debit/Credit seule ne suffit pas a lever l'ambiguite entre les 2 regles existantes) -
-        // doit rester sans imputation en attendant confirmation, plutot qu'une regle generale
-        // "contient INTERET" qui risquerait de mal classifier.
+        // "Intérêts créd/déb" (forme reelle abregee et combinee, 2026-09-17) : l'utilisateur a
+        // depuis valide un compte unique (651000/532000), sans distinction debiteur/crediteur -
+        // remplace la version precedente de ce test qui verifiait l'absence d'imputation.
         [Fact]
-        public void InteretsCredDeb_Combine_Reste_Non_Classifie_En_Attente_De_Confirmation()
+        public void InteretsCredDeb_Combine_Donne_651000_532000()
         {
-            var lignesDebit = ZitounaLedgerAccountClassifier.Classify(DebitTx("Intérêts créd/déb"), null);
-            var lignesCredit = ZitounaLedgerAccountClassifier.Classify(CreditTx("Intérêts créd/déb"), null);
-            Assert.Empty(lignesDebit);
-            Assert.Empty(lignesCredit);
+            var (cd, cc) = Single(DebitTx("Intérêts créd/déb"));
+            Assert.Equal("651000", cd);
+            Assert.Equal("532000", cc);
         }
 
         // --- Autres regles a mot-cle unique ----------------------------------------------------

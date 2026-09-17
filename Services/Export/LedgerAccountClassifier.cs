@@ -64,9 +64,38 @@ namespace Codeium_Security.Services.Export
             return RetraitPattern.IsMatch(libelle) && EspecesPattern.IsMatch(libelle);
         }
 
+        // TVA/COM(M) (2026-09-17, correction utilisateur) : "TVA sur COM(M)"/"TVA/COMM"/"TVA sur
+        // Commission" sont traites comme une commission (627000), PAS comme de la TVA - verifie
+        // avant TvaOuTaxOnChargesPattern pour eviter que ce dernier ne les capture en premier.
+        private static readonly Regex TvaSurComPattern = new(@"\btva\s*/\s*com\w*\b|\btva\s+sur\s+com\w*\b", RegexOptions.Compiled);
+        // TVA seule/Tax on Charges (2026-09-17, demande utilisateur explicite, generique a toutes
+        // les banques) : doit avoir PRIORITE ABSOLUE sur CommissionPattern ci-dessous - sans cette
+        // verification en tete de methode, un libelle comme "TVA sur Commission" ou "TVA/COMM"
+        // matchait CommissionPattern (le mot entier "Commission", ou l'abreviation "comm") avant
+        // meme que TVA soit regarde. CommissionPattern/TvaPattern ci-dessous restent inchanges
+        // (dorenavant inatteignables pour un libelle contenant "tva", ce qui est le comportement
+        // voulu, sans les supprimer).
+        private static readonly Regex TvaOuTaxOnChargesPattern = new(@"\btva\b|\btax\s+on\s+charges\b", RegexOptions.Compiled);
+        // "Paiement par Carte" (2026-09-17) : doit primer sur PrelevementPattern ci-dessous, dont le
+        // mot generique "paiement" matcherait sinon en premier (437001 au lieu de 461000).
+        private static readonly Regex PaiementParCartePattern = new(@"\bpaiement\s+par\s+carte\b", RegexOptions.Compiled);
+
         public static (string? CompteDebit, string? CompteCredit) Classify(Transaction tx, string? customerName = null)
         {
             string libelle = NormalizeForMatch(tx.Libelle);
+            bool inDebit = tx.Debit.HasValue;
+
+            if (!inDebit && !tx.Credit.HasValue)
+                return (null, null);
+
+            if (TvaSurComPattern.IsMatch(libelle))
+                return AccountingKeywordRules.Pair("627000", CompteBancaire, inDebit);
+
+            if (TvaOuTaxOnChargesPattern.IsMatch(libelle))
+                return AccountingKeywordRules.Pair("436600", CompteBancaire, inDebit);
+
+            if (PaiementParCartePattern.IsMatch(libelle))
+                return AccountingKeywordRules.Pair("461000", CompteBancaire, inDebit);
 
             if (tx.Debit.HasValue)
             {

@@ -42,7 +42,13 @@ namespace Codeium_Security.Services.Export
             if (TvaDebitDiversPattern.IsMatch(libelle))
                 return One(Pair("436600", CompteBancaire, inDebit));
 
-            if (TvaSurComPattern.IsMatch(libelle) || TvaLeasingPattern.IsMatch(libelle) || TvaPattern.IsMatch(libelle))
+            // TVA/COM(M) - "TVA sur COM(M)", "TVA/COMM", "TVA sur Commission" (2026-09-17, correction
+            // utilisateur) : traite comme une commission (627000), PAS comme de la TVA (436600) -
+            // verifie avant TvaPattern (bare "tva") pour eviter que celui-ci ne capture ces libelles.
+            if (TvaSurComPattern.IsMatch(libelle))
+                return One(Pair("627000", CompteBancaire, inDebit));
+
+            if (TvaLeasingPattern.IsMatch(libelle) || TvaPattern.IsMatch(libelle))
                 return One(Pair("436600", CompteBancaire, inDebit));
 
             if (DobctPattern.IsMatch(libelle))
@@ -96,7 +102,12 @@ namespace Codeium_Security.Services.Export
                     ? One(("627000", CompteBancaire))
                     : One((CompteBancaire, CompteFournisseurClient));
 
-            if (PrelevementPattern.IsMatch(libelle))
+            // 437001 reserve au precompte "MIN DES FINANCES" (2026-09-17, correction utilisateur :
+            // "437001 une seule fois par mois, seulement si paiement prelevement min de finance") -
+            // un "prelevement"/"prelev" isole (ex. "Prélèv com/ EPS...") n'est plus un declencheur de
+            // 437001 : il retombe sur la regle Commission generique ci-dessous (le mot "com" y est
+            // deja reconnu).
+            if (PrelevementMinFinancesPattern.IsMatch(libelle))
                 return One(Pair("437001", CompteBancaire, inDebit));
 
             if (CommissionPattern.IsMatch(libelle))
@@ -182,8 +193,9 @@ namespace Codeium_Security.Services.Export
             => new[] { line };
 
         private static readonly Regex TvaDebitDiversPattern = new(@"\btva\s+debit\s+divers\b", RegexOptions.Compiled);
-        // comm? : accepte la forme reelle a 4 lettres "COMM" (ex. "TVA/COMM") en plus de "COM".
-        private static readonly Regex TvaSurComPattern = new(@"\btva\s*/\s*comm?\b|\btva\s+sur\s+comm?\b", RegexOptions.Compiled);
+        // com\w* : accepte "COM", "COMM" et le mot entier "COMMISSION" (ex. "TVA/COMM", "TVA sur
+        // Commission").
+        private static readonly Regex TvaSurComPattern = new(@"\btva\s*/\s*com\w*\b|\btva\s+sur\s+com\w*\b", RegexOptions.Compiled);
         private static readonly Regex TvaLeasingPattern = new(@"\btva\s+leasing\b", RegexOptions.Compiled);
         private static readonly Regex TvaPattern = new(@"\btva\b", RegexOptions.Compiled);
         private static readonly Regex DobctPattern = new(@"\bdobct\s+comptoir\s+de\s+tunis\s+reg\b", RegexOptions.Compiled);
@@ -195,10 +207,10 @@ namespace Codeium_Security.Services.Export
         // lignes tombaient par accident dans une autre regle (a cause du mot "virement"/"effet"
         // present dans le meme libelle) ou restaient vides.
         private static readonly Regex CommissionPattern = new(@"\b(com|comm|commission|frais|pdl)\b", RegexOptions.Compiled);
-        // prelev (2026-09-17) : forme reelle abregee "PRÉLÈV" / "PRELEV" (ex. "Prélèv com/ EPS ...",
-        // "PRELEVEMENT" restant reconnu en plus pour compatibilite avec les libelles deja ecrits en
-        // entier).
-        private static readonly Regex PrelevementPattern = new(@"\bprelevement\b|\bprelev\b|\bmin\s+de\s+fin\b|\bdeclaration\b", RegexOptions.Compiled);
+        // min de(s) fin... (2026-09-17, correction utilisateur) : seul declencheur restant de 437001
+        // - couvre "MIN DE FIN", "MIN DES FINANCES" (le "PRELEVEMENT"/"PAIEMENT" qui l'accompagne
+        // n'est pas requis explicitement, cette phrase etant deja tres specifique a elle seule).
+        private static readonly Regex PrelevementMinFinancesPattern = new(@"\bmin\s+des?\s+fin\w*\b", RegexOptions.Compiled);
         private static readonly Regex RejetPattern = new(@"\brejet\b", RegexOptions.Compiled);
         private static readonly Regex VirementPattern = new(@"\b(virement|vir|effet)\b|\breglement\s+cheque\b|\benc\s+cheque\b|\bencaissement\b|\bencaiss\b", RegexOptions.Compiled);
         private static readonly Regex AgiosPattern = new(@"\bagios?\b", RegexOptions.Compiled);
