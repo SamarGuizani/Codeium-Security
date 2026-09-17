@@ -42,12 +42,23 @@ namespace Codeium_Security.Services.Export
             if (TvaDebitDiversPattern.IsMatch(libelle))
                 return One(Pair("436600", CompteBancaire, inDebit));
 
-            // TVA/COM(M) - "TVA sur COM(M)", "TVA/COMM", "TVA sur Commission" (2026-09-17, confirme
-            // par l'utilisateur apres une correction intermediaire : reste bien de la TVA, 436600 -
-            // PAS une commission) : verifie avant CommissionPattern pour que le mot entier
-            // "Commission" (ou l'abreviation "comm") ne fasse pas basculer ces libelles vers 627000.
-            if (TvaSurComPattern.IsMatch(libelle) || TvaLeasingPattern.IsMatch(libelle) || TvaPattern.IsMatch(libelle))
+            if (TvaLeasingPattern.IsMatch(libelle))
                 return One(Pair("436600", CompteBancaire, inDebit));
+
+            // COM vs TVA (2026-09-17, precision utilisateur : "si tu trouve le 1er mot com toujours
+            // commission 627000, si tu trouve le 1er mot tva c'est un tva 436600") : c'est le mot
+            // rencontre EN PREMIER dans le libelle qui tranche, pas simplement la presence de "tva"
+            // quelque part - couvre a la fois les formes ou TVA est en tete ("TVA/COMM", "TVA SUR
+            // COM(M)", "TVA sur Commission", "TVA" seule) ET le cas signale ou COM est en tete
+            // ("COM TVA...", "Com VirE...").
+            {
+                var comMatch = ComFamillePattern.Match(libelle);
+                var tvaMatch = TvaPattern.Match(libelle);
+                if (comMatch.Success && (!tvaMatch.Success || comMatch.Index < tvaMatch.Index))
+                    return One(Pair("627000", CompteBancaire, inDebit));
+                if (tvaMatch.Success)
+                    return One(Pair("436600", CompteBancaire, inDebit));
+            }
 
             if (DobctPattern.IsMatch(libelle))
                 return One(Pair("437001", CompteBancaire, inDebit));
@@ -57,6 +68,9 @@ namespace Codeium_Security.Services.Export
 
             if (DebitDiversPattern.IsMatch(libelle))
                 return One(Pair("627000", CompteBancaire, inDebit));
+
+            if (CreditDiversPattern.IsMatch(libelle))
+                return One(Pair(CompteFournisseurClient, CompteBancaire, inDebit));
 
             // Retrait especes / DAB-WIB-GAB-GBH-DBH : regle "normale" (sans acces a la liste des
             // societes speciales Zitouna, geree separement par ZitounaLedgerAccountClassifier avant
@@ -100,16 +114,22 @@ namespace Codeium_Security.Services.Export
                     ? One(("627000", CompteBancaire))
                     : One((CompteBancaire, CompteFournisseurClient));
 
-            // 437001 reserve au precompte "MIN DES FINANCES" (2026-09-17, correction utilisateur :
-            // "437001 une seule fois par mois, seulement si paiement prelevement min de finance") -
-            // un "prelevement"/"prelev" isole (ex. "Prélèv com/ EPS...") n'est plus un declencheur de
-            // 437001 : il retombe sur la regle Commission generique ci-dessous (le mot "com" y est
-            // deja reconnu).
+            // 437001 reserve au precompte "MIN DES FINANCES" / "DECLARATION" (2026-09-17, precision
+            // utilisateur) - un "prelevement"/"prelev" isole (ex. "Prélèv com/ EPS...") n'est plus un
+            // declencheur de 437001 : il retombe sur la regle Commission generique juste en dessous
+            // (le mot "com" y est deja reconnu), ou sinon sur PrelevementBarePattern (461000) plus
+            // bas si aucun mot-cle Commission n'est present.
             if (PrelevementMinFinancesPattern.IsMatch(libelle))
                 return One(Pair("437001", CompteBancaire, inDebit));
 
             if (CommissionPattern.IsMatch(libelle))
                 return One(Pair("627000", CompteBancaire, inDebit));
+
+            // "Prelevement"/"prelev" isole, sans "com" ni "min de finance(s)"/"declaration"
+            // (2026-09-17, precision utilisateur : "si tu trouve seulement prelevement tu mets
+            // 461000") - regle Virement/operations courantes par defaut.
+            if (PrelevementBarePattern.IsMatch(libelle))
+                return One(Pair(CompteFournisseurClient, CompteBancaire, inDebit));
 
             // "Donneur d'ordre" (2026-09-17) : encaissement, sens naturellement inverse (le montant
             // est en Credit dans la quasi-totalite des cas reels) - meme inversion generale que les
@@ -159,6 +179,12 @@ namespace Codeium_Security.Services.Export
             if (InteretCrediteursPattern.IsMatch(libelle))
                 return One(Pair(CompteBancaire, "651000", inDebit));
 
+            // "Interet(s) de retard" (2026-09-17, precision utilisateur : phrase complete, pas
+            // "interet" seul ni "retard" seul) : 461000, verifiee avant le bucket generique
+            // "interets" (651000) ci-dessous pour ne pas y tomber a la place.
+            if (InteretDeRetardPattern.IsMatch(libelle))
+                return One(Pair(CompteFournisseurClient, CompteBancaire, inDebit));
+
             // Interets, forme generique (2026-09-17) : couvre notamment "Intérêts créd/déb" (forme
             // combinee/abregee reelle, precedemment laissee volontairement sans imputation faute de
             // regle validee) - l'utilisateur a depuis valide un compte unique, sans distinction
@@ -191,24 +217,32 @@ namespace Codeium_Security.Services.Export
             => new[] { line };
 
         private static readonly Regex TvaDebitDiversPattern = new(@"\btva\s+debit\s+divers\b", RegexOptions.Compiled);
-        // com\w* : accepte "COM", "COMM" et le mot entier "COMMISSION" (ex. "TVA/COMM", "TVA sur
-        // Commission").
-        private static readonly Regex TvaSurComPattern = new(@"\btva\s*/\s*com\w*\b|\btva\s+sur\s+com\w*\b", RegexOptions.Compiled);
         private static readonly Regex TvaLeasingPattern = new(@"\btva\s+leasing\b", RegexOptions.Compiled);
         private static readonly Regex TvaPattern = new(@"\btva\b", RegexOptions.Compiled);
+        // "com"/"comm"/"commission" (2026-09-17) : utilise pour la comparaison de position avec
+        // TvaPattern ci-dessus (voir ClassifyByKeyword) - "frais"/"pdl" restent geres par
+        // CommissionPattern plus bas, non concernes par cette comparaison.
+        private static readonly Regex ComFamillePattern = new(@"\b(com|comm|commission)\b", RegexOptions.Compiled);
         private static readonly Regex DobctPattern = new(@"\bdobct\s+comptoir\s+de\s+tunis\s+reg\b", RegexOptions.Compiled);
         private static readonly Regex MouvementCommPattern = new(@"\bmouvement\s+comm\b", RegexOptions.Compiled);
         private static readonly Regex DebitDiversPattern = new(@"\bdebit\s+divers\b", RegexOptions.Compiled);
+        private static readonly Regex CreditDiversPattern = new(@"\bcredit\s+divers\b", RegexOptions.Compiled);
         private static readonly Regex RetraitEspOuDabPattern = new(@"\bretrait\s+esp\b|\b(dab|wib|gab|gbh|dbh)\b", RegexOptions.Compiled);
         // com|comm (2026-09-17) : "COMM" (4 lettres) est la forme la plus frequente sur les vrais
         // releves (ex. "COMM VIREMENT RECU EN TND", "COMM REGLEMENT EFFET") - sans ce complement ces
         // lignes tombaient par accident dans une autre regle (a cause du mot "virement"/"effet"
         // present dans le meme libelle) ou restaient vides.
         private static readonly Regex CommissionPattern = new(@"\b(com|comm|commission|frais|pdl)\b", RegexOptions.Compiled);
-        // min de(s) fin... (2026-09-17, correction utilisateur) : seul declencheur restant de 437001
-        // - couvre "MIN DE FIN", "MIN DES FINANCES" (le "PRELEVEMENT"/"PAIEMENT" qui l'accompagne
-        // n'est pas requis explicitement, cette phrase etant deja tres specifique a elle seule).
-        private static readonly Regex PrelevementMinFinancesPattern = new(@"\bmin\s+des?\s+fin\w*\b", RegexOptions.Compiled);
+        // min de(s) fin... / declaration (2026-09-17, precision utilisateur) : seuls declencheurs de
+        // 437001 - couvre "MIN DE FIN", "MIN DES FINANCES", "DECLARATION" (le "PRELEVEMENT"/
+        // "PAIEMENT" qui les accompagne n'est pas requis explicitement, ces phrases etant deja tres
+        // specifiques a elles seules).
+        private static readonly Regex PrelevementMinFinancesPattern = new(@"\bmin\s+des?\s+fin\w*\b|\bdeclaration\b", RegexOptions.Compiled);
+        // Prelevement isole (2026-09-17, precision utilisateur) : declencheur de repli 461000 quand
+        // ni "com" ni "min de finance(s)"/"declaration" ne sont presents (voir ClassifyByKeyword).
+        private static readonly Regex PrelevementBarePattern = new(@"\bprelevement\b|\bprelev\b", RegexOptions.Compiled);
+        // "Interet(s) de retard" : phrase complete, distincte du bucket generique "interets" plus bas.
+        private static readonly Regex InteretDeRetardPattern = new(@"\binterets?\s+de\s+retard\b", RegexOptions.Compiled);
         private static readonly Regex RejetPattern = new(@"\brejet\b", RegexOptions.Compiled);
         private static readonly Regex VirementPattern = new(@"\b(virement|vir|effet)\b|\breglement\s+cheque\b|\benc\s+cheque\b|\bencaissement\b|\bencaiss\b", RegexOptions.Compiled);
         private static readonly Regex AgiosPattern = new(@"\bagios?\b", RegexOptions.Compiled);
@@ -219,7 +253,10 @@ namespace Codeium_Security.Services.Export
         private static readonly Regex InteretDebiteursPattern = new(@"\binteret\s+debiteurs\b|\bcharges\s+d\s+interets?\b", RegexOptions.Compiled);
         private static readonly Regex InteretCrediteursPattern = new(@"\binteret\s+crediteurs\b", RegexOptions.Compiled);
         private static readonly Regex InteretsGeneriquePattern = new(@"\binterets?\b", RegexOptions.Compiled);
-        private static readonly Regex PaiementPrincipalePattern = new(@"\bpaiement\s+principale\b", RegexOptions.Compiled);
+        // \s* (au lieu de \s+) + principale? (2026-09-17, precision utilisateur : "tous paiement
+        // principale", pas seulement la forme exacte avec espace) : couvre aussi la forme reelle
+        // accolee "PAIEMENTPRINCIPAL" (sans espace, sans e final).
+        private static readonly Regex PaiementPrincipalePattern = new(@"\bpaiement\s*principale?\b", RegexOptions.Compiled);
         private static readonly Regex CotisationCartePattern = new(@"\bcotisation\s+carte\b", RegexOptions.Compiled);
         private static readonly Regex AchatAmiraPattern = new(@"\bachat\s+amira\b", RegexOptions.Compiled);
         private static readonly Regex MutuellePattern = new(@"\bmutuelle\b", RegexOptions.Compiled);

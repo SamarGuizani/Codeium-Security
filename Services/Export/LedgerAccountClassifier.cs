@@ -64,19 +64,38 @@ namespace Codeium_Security.Services.Export
             return RetraitPattern.IsMatch(libelle) && EspecesPattern.IsMatch(libelle);
         }
 
-        // TVA/Tax on Charges (2026-09-17, demande utilisateur explicite, generique a toutes les
-        // banques ; couvre aussi "TVA sur COM(M)"/"TVA/COMM"/"TVA sur Commission" - confirme par
-        // l'utilisateur apres une correction intermediaire : ca reste bien de la TVA, 436600, pas
-        // une commission) : doit avoir PRIORITE ABSOLUE sur CommissionPattern ci-dessous - sans
-        // cette verification en tete de methode, un libelle comme "TVA sur Commission" ou
-        // "TVA/COMM" matchait CommissionPattern (le mot entier "Commission", ou l'abreviation
-        // "comm") avant meme que TVA soit regarde. CommissionPattern/TvaPattern ci-dessous restent
-        // inchanges (dorenavant inatteignables pour un libelle contenant "tva", ce qui est le
-        // comportement voulu, sans les supprimer).
-        private static readonly Regex TvaOuTaxOnChargesPattern = new(@"\btva\b|\btax\s+on\s+charges\b", RegexOptions.Compiled);
+        // Tax on Charges (EN, 2026-09-17) : pas d'equivalent "com" a departager, prime directement
+        // sur CommissionPattern ci-dessous.
+        private static readonly Regex TaxOnChargesPattern = new(@"\btax\s+on\s+charges\b", RegexOptions.Compiled);
         // "Paiement par Carte" (2026-09-17) : doit primer sur PrelevementPattern ci-dessous, dont le
         // mot generique "paiement" matcherait sinon en premier (437001 au lieu de 461000).
         private static readonly Regex PaiementParCartePattern = new(@"\bpaiement\s+par\s+carte\b", RegexOptions.Compiled);
+        // "Paiement principale" (2026-09-17, precision utilisateur : toutes les variantes, pas
+        // seulement la forme exacte avec espace - couvre aussi "PAIEMENTPRINCIPAL" accole) : doit
+        // primer sur PrelevementPattern ci-dessous (mot generique "paiement").
+        private static readonly Regex PaiementPrincipaleCompletePattern = new(@"\bpaiement\s*principale?\b", RegexOptions.Compiled);
+        // 437001 reserve a "MIN DE(S) FIN(ANCES)"/"DECLARATION" (2026-09-17, precision utilisateur) -
+        // doit primer sur PrelevementPattern ci-dessous, qui donnerait sinon 437001 pour n'importe
+        // quel "prelevement"/"paiement"/"min" isole.
+        private static readonly Regex PrelevementMinFinDeclarationPattern = new(@"\bmin\s+des?\s+fin\w*\b|\bdeclaration\b", RegexOptions.Compiled);
+        // "com"/"comm"/"commission" (2026-09-17) : utilise pour la comparaison de position avec
+        // TvaPattern (voir Classify) - "frais"/"pdl" geres separement par FraisPdlPattern, non
+        // concernes par cette comparaison.
+        private static readonly Regex ComFamillePattern = new(@"\b(com|comm|commission)\b", RegexOptions.Compiled);
+        private static readonly Regex FraisPdlPattern = new(@"\b(frais|pdl)\b", RegexOptions.Compiled);
+        // Rejet / "Regl prelev" (2026-09-17) : verifies avant PrelevementBarePattern ci-dessous pour
+        // que "Rejet prélèv..." (627000, regle deja validee) et "Règl prélèv..." (dedoublement par
+        // seuil de montant, deja gere par le repli AccountingKeywordRules) ne soient pas intercepts
+        // par le nouveau repli 461000 de PrelevementBarePattern avant de les atteindre.
+        private static readonly Regex RejetPattern = new(@"\brejet\b", RegexOptions.Compiled);
+        private static readonly Regex ReglPrelevPattern = new(@"\bregl\w*\s+prelev", RegexOptions.Compiled);
+        // "Prelevement"/"prelev"/"paiement"/"min"/"minimum" isoles, sans "com" ni "min de
+        // finance(s)"/"declaration" (2026-09-17, precision utilisateur : "437001 reserve
+        // UNIQUEMENT a MIN DE(S) FIN(ANCES)/DECLARATION" + "si tu trouve seulement prelevement tu
+        // mets 461000") : doit primer sur PrelevementPattern historique ci-dessous, qui donnerait
+        // sinon 437001 pour n'importe quel "paiement"/"min"/"minimum" isole (pas seulement
+        // "prelevement") - couvre ainsi tous les cas que PrelevementPattern historique matchait.
+        private static readonly Regex PrelevementBarePattern = new(@"\bprelevement\b|\bprelev\b|\bpaiement\b|\bmin\b|\bminimum\b", RegexOptions.Compiled);
 
         public static (string? CompteDebit, string? CompteCredit) Classify(Transaction tx, string? customerName = null)
         {
@@ -86,10 +105,42 @@ namespace Codeium_Security.Services.Export
             if (!inDebit && !tx.Credit.HasValue)
                 return (null, null);
 
-            if (TvaOuTaxOnChargesPattern.IsMatch(libelle))
+            if (TaxOnChargesPattern.IsMatch(libelle))
                 return AccountingKeywordRules.Pair("436600", CompteBancaire, inDebit);
 
+            if (PrelevementMinFinDeclarationPattern.IsMatch(libelle))
+                return AccountingKeywordRules.Pair("437001", CompteBancaire, inDebit);
+
+            if (PaiementPrincipaleCompletePattern.IsMatch(libelle))
+                return AccountingKeywordRules.Pair("461000", CompteBancaire, inDebit);
+
             if (PaiementParCartePattern.IsMatch(libelle))
+                return AccountingKeywordRules.Pair("461000", CompteBancaire, inDebit);
+
+            // COM vs TVA (2026-09-17, precision utilisateur : "si tu trouve le 1er mot com toujours
+            // commission 627000, si tu trouve le 1er mot tva c'est un tva 436600") : c'est le mot
+            // rencontre EN PREMIER dans le libelle qui tranche, pas simplement la presence de "tva"
+            // quelque part dans le texte.
+            {
+                var comMatch = ComFamillePattern.Match(libelle);
+                var tvaMatch = TvaPattern.Match(libelle);
+                if (comMatch.Success && (!tvaMatch.Success || comMatch.Index < tvaMatch.Index))
+                    return AccountingKeywordRules.Pair("627000", CompteBancaire, inDebit);
+                if (tvaMatch.Success)
+                    return AccountingKeywordRules.Pair("436600", CompteBancaire, inDebit);
+            }
+
+            if (FraisPdlPattern.IsMatch(libelle))
+                return AccountingKeywordRules.Pair("627000", CompteBancaire, inDebit);
+
+            // "Rejet prélèv..." / "Règl prélèv..." : ces cas ont deja leur propre logique correcte
+            // dans le repli AccountingKeywordRules (627000 fixe pour Rejet, seuil de montant pour
+            // Regl prelev) - on y delegue directement plutot que de la dupliquer ici, pour eviter
+            // qu'ils ne soient interceptes par PrelevementBarePattern ci-dessous.
+            if (RejetPattern.IsMatch(libelle) || ReglPrelevPattern.IsMatch(libelle))
+                return FallbackToKeywordRules(tx);
+
+            if (PrelevementBarePattern.IsMatch(libelle))
                 return AccountingKeywordRules.Pair("461000", CompteBancaire, inDebit);
 
             if (tx.Debit.HasValue)

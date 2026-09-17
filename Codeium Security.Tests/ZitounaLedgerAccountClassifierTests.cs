@@ -107,6 +107,16 @@ namespace Codeium_Security.Tests
             Assert.Equal("532000", cc);
         }
 
+        // "CREDIT DIVERS" (2026-09-17, precision utilisateur) : 461000, distinct de "DEBIT DIVERS"
+        // (627000).
+        [Fact]
+        public void CreditDivers_Donne_461000_532000()
+        {
+            var (cd, cc) = Single(DebitTx("CREDIT DIVERS"));
+            Assert.Equal("461000", cd);
+            Assert.Equal("532000", cc);
+        }
+
         // --- Prelevement -------------------------------------------------------------------
 
         // 437001 reserve au precompte "MIN DES FINANCES" (2026-09-17, correction utilisateur :
@@ -136,17 +146,27 @@ namespace Codeium_Security.Tests
             Assert.Equal("532000", cc);
         }
 
-        // "PRELEVEMENT"/"PRELEV"/"DECLARATION" isoles (sans "com" ni "min de finance(s)") ne
-        // declenchent plus aucune regle depuis la correction du 2026-09-17 - restent sans imputation
-        // plutot que de deviner.
+        // "PRELEVEMENT"/"PRELEV" isole (sans "com" ni "min de finance(s)"/"declaration") : repli
+        // 461000 (2026-09-17, precision utilisateur : "si tu trouve seulement prelevement tu mets
+        // 461000").
         [Theory]
         [InlineData("PRELEVEMENT")]
         [InlineData("PRELEV")]
-        [InlineData("DECLARATION")]
-        public void PrelevementIsole_Reste_Non_Classifie(string libelle)
+        public void PrelevementIsole_Donne_461000_532000(string libelle)
         {
-            var lignes = ZitounaLedgerAccountClassifier.Classify(DebitTx(libelle), null);
-            Assert.Empty(lignes);
+            var (cd, cc) = Single(DebitTx(libelle));
+            Assert.Equal("461000", cd);
+            Assert.Equal("532000", cc);
+        }
+
+        // "DECLARATION" seule (2026-09-17, precision utilisateur : "regle de la declaration" ->
+        // 437001, au meme titre que "MIN DE FIN").
+        [Fact]
+        public void Declaration_Donne_437001_532000()
+        {
+            var (cd, cc) = Single(DebitTx("DECLARATION"));
+            Assert.Equal("437001", cd);
+            Assert.Equal("532000", cc);
         }
 
         // "REJET PRELEV..." (ex. "Rejet prélèv 3315") : regle comptable validee par l'utilisateur
@@ -268,12 +288,26 @@ namespace Codeium_Security.Tests
             Assert.Equal("532000", cc);
         }
 
+        // "Interet(s) de retard" (2026-09-17, precision utilisateur : phrase complete, pas "interet"
+        // seul ni "retard" seul) : 461000, distinct du bucket generique "interets" (651000).
+        [Fact]
+        public void InteretDeRetard_Donne_461000_532000()
+        {
+            var (cd, cc) = Single(DebitTx("INTERETS DE RETARD"));
+            Assert.Equal("461000", cd);
+            Assert.Equal("532000", cc);
+        }
+
         // --- Autres regles a mot-cle unique ----------------------------------------------------
 
-        [Fact]
-        public void PaiementPrincipale_Donne_461000_532000()
+        // "Paiement principale" (2026-09-17, precision utilisateur : toutes les variantes, y
+        // compris la forme reelle accolee "PAIEMENTPRINCIPAL" sans espace ni "e" final).
+        [Theory]
+        [InlineData("PAIEMENT PRINCIPALE")]
+        [InlineData("PAIEMENTPRINCIPAL IMPAYE")]
+        public void PaiementPrincipale_Donne_461000_532000(string libelle)
         {
-            var (cd, cc) = Single(DebitTx("PAIEMENT PRINCIPALE"));
+            var (cd, cc) = Single(DebitTx(libelle));
             Assert.Equal("461000", cd);
             Assert.Equal("532000", cc);
         }

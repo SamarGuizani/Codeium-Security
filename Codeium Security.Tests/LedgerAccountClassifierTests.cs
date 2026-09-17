@@ -248,5 +248,72 @@ namespace Codeium_Security.Tests
             Assert.Equal("461000", cdDebit);
             Assert.Equal("532000", ccDebit);
         }
+
+        // --- Precisions utilisateur du 2026-09-17 (message ulterieur) ----------------------------
+
+        [Fact]
+        public void CreditDivers_Donne_461000_532000()
+        {
+            var (cd, cc) = LedgerAccountClassifier.Classify(DebitTx("CREDIT DIVERS"));
+            Assert.Equal("461000", cd);
+            Assert.Equal("532000", cc);
+        }
+
+        [Fact]
+        public void InteretDeRetard_Donne_461000_532000()
+        {
+            var (cd, cc) = LedgerAccountClassifier.Classify(DebitTx("INTERETS DE RETARD"));
+            Assert.Equal("461000", cd);
+            Assert.Equal("532000", cc);
+        }
+
+        // "Paiement principale" : toutes variantes, y compris la forme reelle accolee
+        // "PAIEMENTPRINCIPAL" - doit primer sur PrelevementPattern historique (mot generique
+        // "paiement").
+        [Theory]
+        [InlineData("PAIEMENT PRINCIPALE")]
+        [InlineData("PAIEMENTPRINCIPAL IMPAYE")]
+        public void PaiementPrincipale_Complete_Donne_461000_532000(string libelle)
+        {
+            var (cd, cc) = LedgerAccountClassifier.Classify(DebitTx(libelle));
+            Assert.Equal("461000", cd);
+            Assert.Equal("532000", cc);
+        }
+
+        // "Prelevement"/"prelev" isole (sans "com" ni "min de finance(s)"/"declaration") : repli
+        // 461000, doit primer sur PrelevementPattern historique (qui donnerait sinon 437001).
+        [Theory]
+        [InlineData("PRELEVEMENT")]
+        [InlineData("PRELEV")]
+        public void PrelevementIsole_Donne_461000_532000(string libelle)
+        {
+            var (cd, cc) = LedgerAccountClassifier.Classify(DebitTx(libelle));
+            Assert.Equal("461000", cd);
+            Assert.Equal("532000", cc);
+        }
+
+        [Fact]
+        public void Declaration_Donne_437001_532000()
+        {
+            var (cd, cc) = LedgerAccountClassifier.Classify(DebitTx("DECLARATION"));
+            Assert.Equal("437001", cd);
+            Assert.Equal("532000", cc);
+        }
+
+        // Non-regression (2026-09-17) : avant correction, PrelevementPattern historique
+        // (paiement|prelevement|min|minimum) donnait encore 437001 pour un "paiement"/"min"/
+        // "minimum" isole (sans "de finance(s)"), en violation de la regle "437001 reserve
+        // UNIQUEMENT a MIN DE(S) FIN(ANCES)/DECLARATION".
+        [Theory]
+        [InlineData("PAIEMENT")]
+        [InlineData("MIN")]
+        [InlineData("MINIMUM")]
+        public void PaiementOuMinIsole_Ne_Donne_Plus_437001(string libelle)
+        {
+            var (cd, cc) = LedgerAccountClassifier.Classify(DebitTx(libelle));
+            Assert.NotEqual("437001", cd);
+            Assert.Equal("461000", cd);
+            Assert.Equal("532000", cc);
+        }
     }
 }
