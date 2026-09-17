@@ -82,7 +82,7 @@ namespace Codeium_Security.Services.Export
                 if (VirementDebitPattern.IsMatch(libelle) || (ReglementPattern.IsMatch(libelle) && ChequePattern.IsMatch(libelle)) || BlocagePattern.IsMatch(libelle))
                     return ("461000", CompteBancaire);
 
-                return (null, null);
+                return FallbackToKeywordRules(tx);
             }
 
             if (tx.Credit.HasValue)
@@ -96,10 +96,22 @@ namespace Codeium_Security.Services.Export
                     return (CompteBancaire, compteCredit);
                 }
 
-                return (null, null);
+                return FallbackToKeywordRules(tx);
             }
 
             return (null, null);
+        }
+
+        // Repli (2026-09-17, demande utilisateur explicite : "les regles que j'ai donner [s'appliquent]
+        // pour toutes les banques") sur AccountingKeywordRules (TVA, prelevement, commission,
+        // virement, agios, blocage... - vocabulaire bancaire tunisien generique). Les regles
+        // ci-dessus restent inchangees et prioritaires (deja validees pour BIAT/BTL/BNA/QNB/...) : ce
+        // repli ne s'applique QUE quand elles ne trouvent rien (case actuellement vide) - ne remplace
+        // jamais un resultat deja produit par les regles ci-dessus.
+        private static (string? CompteDebit, string? CompteCredit) FallbackToKeywordRules(Transaction tx)
+        {
+            var lignes = AccountingKeywordRules.ClassifyByKeyword(tx);
+            return lignes.Count > 0 ? (lignes[0].CompteDebit, lignes[0].CompteCredit) : (null, null);
         }
 
         private static bool IsClientCompany(string? customerName)

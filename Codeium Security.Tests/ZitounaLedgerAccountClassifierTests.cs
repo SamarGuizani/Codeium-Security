@@ -68,9 +68,25 @@ namespace Codeium_Security.Tests
         [InlineData("TVA SUR COM")]
         [InlineData("TVA / COM")]
         [InlineData("TVA/COM")]
+        [InlineData("TVA/COMM")]
+        [InlineData("TVA / COMM")]
+        [InlineData("tva/comm")]
+        [InlineData("TVA /COM")]
+        [InlineData("TVA/ COMM")]
         public void TvaSurCom_Donne_436600_532000_Et_Prime_Sur_La_Regle_Tva_Generique(string libelle)
         {
             var (cd, cc) = Single(DebitTx(libelle));
+            Assert.Equal("436600", cd);
+            Assert.Equal("532000", cc);
+        }
+
+        [Fact]
+        public void TvaSurComm_Ne_Tombe_Pas_Dans_Commission_Generique()
+        {
+            // Regression du bug rapporte (2026-09-17) : "TVA/COMM" sortait en 627000/532000
+            // (bucket Commission generique) au lieu de 436600/532000.
+            var (cd, cc) = Single(DebitTx("TVA/COMM"));
+            Assert.NotEqual("627000", cd);
             Assert.Equal("436600", cd);
             Assert.Equal("532000", cc);
         }
@@ -231,6 +247,20 @@ namespace Codeium_Security.Tests
             var (cd, cc) = Single(DebitTx("INTERET CREDITEURS"));
             Assert.Equal("532000", cd);
             Assert.Equal("651000", cc);
+        }
+
+        // "Intérêts créd/déb" (forme reelle abregee et combinee, 2026-09-17) : ne permet pas de
+        // determiner sans ambiguite s'il s'agit d'un interet debiteur ou crediteur (la colonne
+        // Debit/Credit seule ne suffit pas a lever l'ambiguite entre les 2 regles existantes) -
+        // doit rester sans imputation en attendant confirmation, plutot qu'une regle generale
+        // "contient INTERET" qui risquerait de mal classifier.
+        [Fact]
+        public void InteretsCredDeb_Combine_Reste_Non_Classifie_En_Attente_De_Confirmation()
+        {
+            var lignesDebit = ZitounaLedgerAccountClassifier.Classify(DebitTx("Intérêts créd/déb"), null);
+            var lignesCredit = ZitounaLedgerAccountClassifier.Classify(CreditTx("Intérêts créd/déb"), null);
+            Assert.Empty(lignesDebit);
+            Assert.Empty(lignesCredit);
         }
 
         // --- Autres regles a mot-cle unique ----------------------------------------------------
@@ -478,6 +508,18 @@ namespace Codeium_Security.Tests
         {
             var account = new BankAccountSection { RawSectionText = "BIAT - RELEVE DE COMPTE" };
             Assert.False(ZitounaLedgerAccountClassifier.IsZitounaDocument(account, bankName: "BIAT"));
+        }
+
+        // Cas reel (2026-09-17) : BankDocument.BankName reste vide pour Zitouna (ExtractBankName ne
+        // connait pas "ZITOUNA"), et RawSectionText (section 5 du releve) ne contient pas non plus
+        // l'en-tete - c'est DocumentMetadata.BankName (repli ajoute dans DocumentProcessingService,
+        // a partir du meme texte OCR complet que celui deja utilise en interne par
+        // BankDocumentParser) qui doit permettre la detection en pratique.
+        [Fact]
+        public void IsZitounaDocument_Vrai_Quand_Seul_MetadataBankName_Porte_Zitouna()
+        {
+            var account = new BankAccountSection { RawSectionText = "01/01/2026 COMMISSION 100.000" };
+            Assert.True(ZitounaLedgerAccountClassifier.IsZitounaDocument(account, bankName: "Banque Zitouna"));
         }
     }
 }
