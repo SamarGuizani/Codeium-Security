@@ -122,8 +122,37 @@ namespace Codeium_Security.Services.Export
                 ? "#,##0.000"
                 : "#,##0.00";
 
+            // Banque Zitouna : couche d'imputation dediee (voir ZitounaLedgerAccountClassifier),
+            // completement separee des regles generiques ci-dessous - aucune autre banque n'est
+            // affectee par cette branche. Detection via RawSectionText (BankName reste vide pour
+            // ces relevés aujourd'hui, voir ZitounaLedgerAccountClassifier.IsZitounaDocument) sans
+            // toucher a BankDocumentParser.
+            bool isZitouna = ZitounaLedgerAccountClassifier.IsZitounaDocument(account, bankName);
+
             foreach (var tx in account.Transactions)
             {
+                if (isZitouna)
+                {
+                    var lignes = ZitounaLedgerAccountClassifier.Classify(tx, metadata?.CustomerName);
+                    if (lignes.Count == 0)
+                    {
+                        row = WriteTransactionRow(sheet, row, tx.Date, tx.Libelle, tx.Debit, tx.Credit, null, null, amountFormat);
+                    }
+                    else if (lignes.Count == 1)
+                    {
+                        row = WriteTransactionRow(sheet, row, tx.Date, tx.Libelle, tx.Debit, tx.Credit,
+                            lignes[0].CompteDebit, lignes[0].CompteCredit, amountFormat);
+                    }
+                    else
+                    {
+                        row = WriteTransactionRow(sheet, row, tx.Date, tx.Libelle, tx.Debit, tx.Credit,
+                            lignes[0].CompteDebit, lignes[0].CompteCredit, amountFormat);
+                        row = WriteTransactionRow(sheet, row, tx.Date, tx.Libelle + " (dupliqué)", tx.Debit, tx.Credit,
+                            lignes[1].CompteDebit, lignes[1].CompteCredit, amountFormat);
+                    }
+                    continue;
+                }
+
                 if (LedgerAccountClassifier.IsRetraitEspeces(tx))
                 {
                     // Retrait especes : dedoublement comptable via le compte intermediaire
