@@ -29,8 +29,8 @@
     width: 36px;
     height: 36px;
     border-radius: 10px;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    color: #fff;
+    background: linear-gradient(135deg, #A3C651, #8BA845);
+    color: var(--color-on-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +42,7 @@
 
 .sidebar-brand:hover .brand-mark {
     transform: scale(1.06) rotate(-2deg);
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 4px 14px rgba(163, 198, 81, 0.4);
 }
 
 .brand-text {

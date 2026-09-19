@@ -1,0 +1,307 @@
+@page "/"
+@inject OcrApiService Api
+@inject ToastService Toasts
+@inject IJSRuntime JS
+
+<PageTitle>Export Excel — Codeium Security</PageTitle>
+
+<div class="page">
+    <div class="page-header">
+        <div>
+            <div class="page-title">Export Excel par dossier</div>
+            <div class="page-subtitle">
+                Traite en lot tous les relevés bancaires (PDF, images) d'un dossier et génère un
+                fichier <code>.xlsx</code> par document — identique à l'endpoint
+                <code>POST /api/Ocr/export-excel-folder</code> exposé dans Swagger.
+            </div>
+        </div>
+    </div>
+
+    <div class="card excel-form">
+        <span class="section-title">Paramètres du traitement</span>
+
+        <div class="excel-form-grid">
+            <label class="field">
+                <span class="field-label">Dossier source *</span>
+                <input class="input" placeholder="C:\Users\...\MonDossier"
+                       @bind="_inputFolder" @bind:event="oninput" disabled="@_running" />
+                <span class="field-hint">Chemin local à la machine du backend, contenant les documents à traiter.</span>
+            </label>
+
+            <label class="field">
+                <span class="field-label">Dossier de sortie (optionnel)</span>
+                <input class="input" placeholder="Par défaut : <dossier source>\Excel"
+                       @bind="_outputFolder" @bind:event="oninput" disabled="@_running" />
+                <span class="field-hint">Laissez vide pour créer automatiquement un sous-dossier « Excel ».</span>
+            </label>
+        </div>
+
+        <div class="excel-form-actions">
+            <button class="btn btn-primary" @onclick="RunExportAsync"
+                    disabled="@(_running || string.IsNullOrWhiteSpace(_inputFolder))">
+                @if (_running)
+                {
+                    <span class="spinner"></span>
+                    <span>Traitement en cours…</span>
+                }
+                else
+                {
+                    <Icon Name="folder" Size="17" />
+                    <span>Lancer l'export</span>
+                }
+            </button>
+            <span class="text-muted">Chaque fichier non reconnu comme relevé bancaire est listé en erreur, sans bloquer les autres.</span>
+        </div>
+    </div>
+
+    <div class="card excel-form">
+        <span class="section-title">Convertir un fichier depuis votre ordinateur</span>
+        <p class="field-hint upload-hint">
+            Cliquez ou glissez-déposez un relevé bancaire (PDF, image) — il est envoyé au backend
+            (<code>POST /api/Ocr/export-excel</code>) puis le fichier Excel généré est téléchargé automatiquement.
+        </p>
+
+        <div class="dropzone @(_dragging ? "dragging" : "")"
+             @ondragenter="() => _dragging = true"
+             @ondragleave="() => _dragging = false"
+             @ondrop="() => _dragging = false">
+            <InputFile OnChange="OnUploadFilesSelected" multiple class="dropzone-input" />
+            <div class="dropzone-icon"><Icon Name="upload" Size="24" /></div>
+            <div class="dropzone-title">Cliquez pour choisir un fichier, ou glissez-le ici</div>
+            <div class="dropzone-subtitle">PDF, PNG, JPG, TIFF…</div>
+        </div>
+
+        @if (_uploadItems.Count > 0)
+        {
+            <div class="upload-list">
+                @foreach (var item in _uploadItems)
+                {
+                    <div class="upload-item" @key="item.Id">
+                        <div class="upload-item-info">
+                            <Icon Name="file" Size="18" />
+                            <span class="upload-item-name">@item.File.Name</span>
+                            @if (item.Done)
+                            {
+                                <StatusBadge Status="ProcessingStatus.Termine" />
+                            }
+                            else if (item.Error is not null)
+                            {
+                                <StatusBadge Status="ProcessingStatus.Erreur" />
+                            }
+                        </div>
+                        <div class="upload-item-actions">
+                            @if (item.Done)
+                            {
+                                <button class="btn btn-secondary btn-sm" @onclick="() => RedownloadAsync(item)">
+                                    <Icon Name="download" Size="15" />
+                                    Retélécharger
+                                </button>
+                            }
+                            else
+                            {
+                                <button class="btn btn-primary btn-sm" disabled="@item.Busy" @onclick="() => ConvertUploadAsync(item)">
+                                    @if (item.Busy)
+                                    {
+                                        <span class="spinner"></span>
+                                        <span>Conversion…</span>
+                                    }
+                                    else
+                                    {
+                                        <Icon Name="folder" Size="15" />
+                                        <span>Convertir en Excel</span>
+                                    }
+                                </button>
+                            }
+                            <button class="btn-icon-only" title="Retirer" @onclick="() => _uploadItems.Remove(item)">
+                                <Icon Name="trash" Size="15" />
+                            </button>
+                        </div>
+                        @if (item.Error is not null)
+                        {
+                            <div class="upload-item-error">@item.Error</div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    @if (_error is not null)
+    {
+        <div class="card alert-card">
+            <Icon Name="warning" Size="18" />
+            <span>@_error</span>
+        </div>
+    }
+
+    @if (_lastResult is not null)
+    {
+        <div class="result-summary">
+            <StatCard Label="Fichiers exportés" Value="@_lastResult.Count.ToString()" Icon="check" Tone="success" />
+            <StatCard Label="Erreurs" Value="@_lastResult.Errors.Count.ToString()" Icon="warning"
+                      Tone="@(_lastResult.Errors.Count > 0 ? "danger" : "primary")" />
+            <div class="summary-item card output-folder-item">
+                <span class="summary-label">Dossier de sortie</span>
+                <span class="summary-value output-folder-value" title="@_lastResult.OutputFolder">@_lastResult.OutputFolder</span>
+            </div>
+        </div>
+
+        @if (_lastResult.Files.Count > 0)
+        {
+            <div class="card table-card">
+                <span class="section-title">Fichiers Excel générés</span>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead><tr><th>#</th><th>Fichier</th><th>Statut</th></tr></thead>
+                        <tbody>
+                            @for (var i = 0; i < _lastResult.Files.Count; i++)
+                            {
+                                var f = _lastResult.Files[i];
+                                <tr @key="f">
+                                    <td class="text-muted">@(i + 1)</td>
+                                    <td>@f</td>
+                                    <td><StatusBadge Status="ProcessingStatus.Termine" /></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+
+        @if (_lastResult.Errors.Count > 0)
+        {
+            <div class="card table-card">
+                <span class="section-title">Documents non traités</span>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead><tr><th>Fichier</th><th>Statut</th><th>Détail</th></tr></thead>
+                        <tbody>
+                            @foreach (var err in _lastResult.Errors)
+                            {
+                                <tr @key="err.FileName">
+                                    <td>@err.FileName</td>
+                                    <td><StatusBadge Status="ProcessingStatus.Erreur" /></td>
+                                    <td class="text-muted">@err.Error</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+    else if (!_running)
+    {
+        <div class="card recent-card">
+            <EmptyState Icon="folder" Title="Aucun export lancé pour le moment."
+                        Message="Indiquez un dossier source ci-dessus puis lancez l'export pour générer les fichiers Excel." />
+        </div>
+    }
+</div>
+
+@code {
+    private string _inputFolder = "";
+    private string? _outputFolder;
+    private bool _running;
+    private string? _error;
+    private ExcelFolderExportResult? _lastResult;
+
+    private readonly List<ExcelUploadItem> _uploadItems = new();
+    private bool _dragging;
+
+    private async Task RunExportAsync()
+    {
+        if (string.IsNullOrWhiteSpace(_inputFolder)) return;
+
+        _running = true;
+        _error = null;
+
+        try
+        {
+            _lastResult = await Api.ExportExcelFolderAsync(
+                _inputFolder.Trim(),
+                string.IsNullOrWhiteSpace(_outputFolder) ? null : _outputFolder.Trim());
+
+            Toasts.Show(
+                $"{_lastResult.Count} fichier(s) exporté(s) vers « {_lastResult.OutputFolder} ».",
+                _lastResult.Errors.Count > 0 ? ToastType.Info : ToastType.Success);
+        }
+        catch (ApiException ex)
+        {
+            _error = ex.Message;
+            Toasts.Show("Échec de l'export Excel.", ToastType.Error);
+        }
+        catch (Exception ex)
+        {
+            _error = $"Impossible de contacter le backend (http://localhost:5268) : {ex.Message}";
+            Toasts.Show("Backend injoignable.", ToastType.Error);
+        }
+        finally
+        {
+            _running = false;
+        }
+    }
+
+    private void OnUploadFilesSelected(InputFileChangeEventArgs e)
+    {
+        foreach (var file in e.GetMultipleFiles(20))
+        {
+            _uploadItems.Add(new ExcelUploadItem(file));
+        }
+    }
+
+    private async Task ConvertUploadAsync(ExcelUploadItem item)
+    {
+        item.Busy = true;
+        item.Error = null;
+        StateHasChanged();
+
+        try
+        {
+            var (bytes, fileName) = await Api.ExportExcelAsync(item.File);
+            item.Bytes = bytes;
+            item.DownloadName = fileName;
+            item.Done = true;
+            await TriggerDownloadAsync(bytes, fileName);
+            Toasts.Show($"« {fileName} » généré et téléchargé.", ToastType.Success);
+        }
+        catch (ApiException ex)
+        {
+            item.Error = ex.Message;
+            Toasts.Show($"Conversion impossible pour « {item.File.Name} ».", ToastType.Error);
+        }
+        catch (Exception ex)
+        {
+            item.Error = $"Backend injoignable (http://localhost:5268) : {ex.Message}";
+            Toasts.Show("Backend injoignable.", ToastType.Error);
+        }
+        finally
+        {
+            item.Busy = false;
+        }
+    }
+
+    private Task RedownloadAsync(ExcelUploadItem item) =>
+        item.Bytes is not null && item.DownloadName is not null
+            ? TriggerDownloadAsync(item.Bytes, item.DownloadName)
+            : Task.CompletedTask;
+
+    private Task TriggerDownloadAsync(byte[] bytes, string fileName) =>
+        JS.InvokeVoidAsync("downloadFileFromBytes", fileName,
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            Convert.ToBase64String(bytes)).AsTask();
+
+    private sealed class ExcelUploadItem
+    {
+        public ExcelUploadItem(IBrowserFile file) => File = file;
+
+        public Guid Id { get; } = Guid.NewGuid();
+        public IBrowserFile File { get; }
+        public bool Busy { get; set; }
+        public bool Done { get; set; }
+        public string? Error { get; set; }
+        public byte[]? Bytes { get; set; }
+        public string? DownloadName { get; set; }
+    }
+}

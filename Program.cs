@@ -20,6 +20,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Autorise le frontend Blazor WebAssembly (Codeium Security.Frontend, ports de dev
+// http://localhost:5209 / https://localhost:7204) a appeler cette API en local.
+const string FrontendCorsPolicy = "FrontendDev";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(FrontendCorsPolicy, policy =>
+        policy.WithOrigins("http://localhost:5209", "https://localhost:7204")
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
 builder.Services.AddSingleton<IOcrService, TesseractOcrService>();
 builder.Services.AddScoped<IDocumentParser, BankDocumentParser>();
 builder.Services.AddScoped<DocumentAnalysisEngine>();
@@ -45,6 +56,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 // app.UseHttpsRedirection(); // d�sactiv� temporairement pour �viter l'erreur de port pendant le dev
+
+app.UseCors(FrontendCorsPolicy);
 
 app.UseAuthorization();
 app.MapControllers();

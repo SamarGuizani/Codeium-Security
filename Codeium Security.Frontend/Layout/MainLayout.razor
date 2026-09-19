@@ -20,7 +20,7 @@
 @code {
     private bool _mobileOpen;
     private bool _navLoading;
-    private string _pageTitle = "Dashboard";
+    private string _pageTitle = "Export Excel";
     private CancellationTokenSource? _navProgressCts;
 
     protected override void OnInitialized()
@@ -63,7 +63,8 @@
         var path = new Uri(Nav.Uri).AbsolutePath.Trim('/');
         _pageTitle = path switch
         {
-            "" => "Dashboard",
+            "" => "Export Excel",
+            "ocr" => "Conversion OCR",
             "documents" => "Documents",
             "analyse" => "Analyse",
             "resultats" => "Résultats",

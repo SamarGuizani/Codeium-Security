@@ -39,7 +39,7 @@
 
 ::deep .sidebar-link.active {
     background: var(--sidebar-accent);
-    color: #fff;
+    color: var(--color-on-primary);
 }
 
 ::deep .sidebar-link.active::before {

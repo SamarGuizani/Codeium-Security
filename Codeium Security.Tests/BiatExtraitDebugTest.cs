@@ -20,12 +20,12 @@ namespace Codeium_Security.Tests
         }
 
         [Theory]
-        [InlineData("BIAT EXTRAIT 01.pdf")]
-        [InlineData("BIAT EXTRAIT 02.pdf")]
-        [InlineData("PSP EXTRAIT.pdf")]
-        [InlineData("RELEVEE SOGEPA 03-2024.pdf")]
-        [InlineData("EXTRAIT TSB.pdf")]
-        [InlineData("extrait PSP 2025.pdf")]
+        [InlineData("Relevé Biat Mai 2026type3.pdf")]
+        [InlineData("EXTRAIT (1)biat.pdf")]
+        [InlineData("extraitbiat.pdf")]
+        [InlineData("extraitbiat (1).pdf")]
+        [InlineData("extrait BH.pdf")]
+        [InlineData("releve bh.pdf")]
         public async Task DebugAccountStatement(string fileName)
         {
             string pdfPath = Path.Combine(

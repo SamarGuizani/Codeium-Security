@@ -1,0 +1,165 @@
+@page "/ocr"
+@inject OcrApiService Api
+@inject ToastService Toasts
+@inject IJSRuntime JS
+
+<PageTitle>Conversion OCR — Codeium Security</PageTitle>
+
+<div class="page">
+    <div class="page-header">
+        <div>
+            <div class="page-title">Conversion OCR</div>
+            <div class="page-subtitle">
+                Extrayez le texte brut d'un document (<code>POST /api/Ocr/text</code>) ou convertissez-le
+                directement en Excel (<code>POST /api/Ocr/export-excel</code>) — un fichier à la fois.
+            </div>
+        </div>
+    </div>
+
+    <div class="dropzone @(_dragging ? "dragging" : "")"
+         @ondragenter="() => _dragging = true"
+         @ondragleave="() => _dragging = false"
+         @ondrop="() => _dragging = false">
+        <InputFile OnChange="OnFilesSelected" multiple class="dropzone-input" />
+        <div class="dropzone-icon"><Icon Name="scan" Size="26" /></div>
+        <div class="dropzone-title">Glissez-déposez un ou plusieurs documents ici</div>
+        <div class="dropzone-subtitle">PDF, PNG, JPG, TIFF… — envoyés directement au backend OCR</div>
+    </div>
+
+    @if (_files.Count == 0)
+    {
+        <div class="card recent-card">
+            <EmptyState Icon="scan" Title="Aucun document sélectionné."
+                        Message="Ajoutez un document ci-dessus pour lancer une extraction OCR ou une conversion Excel." />
+        </div>
+    }
+    else
+    {
+        @foreach (var item in _files)
+        {
+            <div class="card ocr-item" @key="item.Id">
+                <div class="ocr-item-header">
+                    <div class="ocr-item-info">
+                        <Icon Name="file" Size="20" />
+                        <div>
+                            <div class="ocr-item-name">@item.File.Name</div>
+                            <div class="ocr-item-meta">@FormatSize(item.File.Size)</div>
+                        </div>
+                    </div>
+                    <div class="ocr-item-actions">
+                        <button class="btn btn-secondary btn-sm" disabled="@item.Busy" @onclick="() => ExtractTextAsync(item)">
+                            <Icon Name="eye" Size="15" />
+                            Aperçu texte (OCR)
+                        </button>
+                        <button class="btn btn-primary btn-sm" disabled="@item.Busy" @onclick="() => ExportExcelAsync(item)">
+                            <Icon Name="download" Size="15" />
+                            Convertir en Excel
+                        </button>
+                        <button class="btn-icon-only" title="Retirer" @onclick="() => RemoveFile(item)">
+                            <Icon Name="trash" Size="16" />
+                        </button>
+                    </div>
+                </div>
+
+                @if (item.Busy)
+                {
+                    <div class="ocr-item-status text-muted"><span class="spinner"></span> Traitement en cours…</div>
+                }
+                @if (item.Error is not null)
+                {
+                    <div class="ocr-item-status ocr-item-error">@item.Error</div>
+                }
+                @if (item.PlainText is not null)
+                {
+                    <pre class="ocr-text-preview">@item.PlainText</pre>
+                }
+            </div>
+        }
+    }
+</div>
+
+@code {
+    private readonly List<OcrFileItem> _files = new();
+    private bool _dragging;
+
+    private void OnFilesSelected(InputFileChangeEventArgs e)
+    {
+        foreach (var file in e.GetMultipleFiles(20))
+        {
+            _files.Add(new OcrFileItem(file));
+        }
+    }
+
+    private void RemoveFile(OcrFileItem item) => _files.Remove(item);
+
+    private async Task ExtractTextAsync(OcrFileItem item)
+    {
+        item.Busy = true;
+        item.Error = null;
+        StateHasChanged();
+
+        try
+        {
+            item.PlainText = await Api.ExtractTextAsync(item.File);
+        }
+        catch (ApiException ex)
+        {
+            item.Error = ex.Message;
+            Toasts.Show($"OCR impossible pour « {item.File.Name} ».", ToastType.Error);
+        }
+        catch (Exception ex)
+        {
+            item.Error = $"Backend injoignable (http://localhost:5268) : {ex.Message}";
+            Toasts.Show("Backend injoignable.", ToastType.Error);
+        }
+        finally
+        {
+            item.Busy = false;
+        }
+    }
+
+    private async Task ExportExcelAsync(OcrFileItem item)
+    {
+        item.Busy = true;
+        item.Error = null;
+        StateHasChanged();
+
+        try
+        {
+            var (bytes, fileName) = await Api.ExportExcelAsync(item.File);
+            var base64 = Convert.ToBase64String(bytes);
+            await JS.InvokeVoidAsync("downloadFileFromBytes", fileName,
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", base64);
+            Toasts.Show($"« {fileName} » téléchargé.", ToastType.Success);
+        }
+        catch (ApiException ex)
+        {
+            item.Error = ex.Message;
+            Toasts.Show($"Conversion Excel impossible pour « {item.File.Name} ».", ToastType.Error);
+        }
+        catch (Exception ex)
+        {
+            item.Error = $"Backend injoignable (http://localhost:5268) : {ex.Message}";
+            Toasts.Show("Backend injoignable.", ToastType.Error);
+        }
+        finally
+        {
+            item.Busy = false;
+        }
+    }
+
+    private static string FormatSize(long bytes) => bytes < 1024 * 1024
+        ? $"{bytes / 1024.0:0.#} Ko"
+        : $"{bytes / (1024.0 * 1024.0):0.##} Mo";
+
+    private sealed class OcrFileItem
+    {
+        public OcrFileItem(IBrowserFile file) => File = file;
+
+        public Guid Id { get; } = Guid.NewGuid();
+        public IBrowserFile File { get; }
+        public bool Busy { get; set; }
+        public string? PlainText { get; set; }
+        public string? Error { get; set; }
+    }
+}
