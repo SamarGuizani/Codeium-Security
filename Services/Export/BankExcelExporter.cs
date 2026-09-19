@@ -1,3 +1,4 @@
+using System.Globalization;
 using ClosedXML.Excel;
 using Codeium_Security.Models;
 using Codeium_Security.Services.Calculation;
@@ -183,7 +184,21 @@ namespace Codeium_Security.Services.Export
         private static int WriteTransactionRow(IXLWorksheet sheet, int row, string date, string libelle,
             decimal? debit, decimal? credit, string? compteDebit, string? compteCredit, string amountFormat)
         {
-            sheet.Cell(row, 1).Value = date;
+            // Ecrit une vraie date Excel (pas du texte) quand le format est reconnu, pour que le
+            // tri/filtre par date et les formules de date fonctionnent nativement dans Excel, sans
+            // que l'utilisateur ait besoin de convertir manuellement la colonne. Repli sur le texte
+            // brut si la date n'a pas pu etre normalisee par le parseur (valeur vide ou format
+            // inattendu) - aucune perte d'information dans ce cas rare.
+            if (DateTime.TryParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedDate))
+            {
+                sheet.Cell(row, 1).Value = parsedDate;
+                sheet.Cell(row, 1).Style.DateFormat.Format = "dd/mm/yyyy";
+            }
+            else
+            {
+                sheet.Cell(row, 1).Value = date;
+            }
+
             sheet.Cell(row, 2).Value = libelle;
 
             if (debit.HasValue)

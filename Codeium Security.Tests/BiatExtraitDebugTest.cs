@@ -20,12 +20,7 @@ namespace Codeium_Security.Tests
         }
 
         [Theory]
-        [InlineData("Relevé Biat Mai 2026type3.pdf")]
-        [InlineData("EXTRAIT (1)biat.pdf")]
-        [InlineData("extraitbiat.pdf")]
-        [InlineData("extraitbiat (1).pdf")]
-        [InlineData("extrait BH.pdf")]
-        [InlineData("releve bh.pdf")]
+        [InlineData(@"..\..\Images\Releve BH FAH DISTRIBUTION.pdf")]
         public async Task DebugAccountStatement(string fileName)
         {
             string pdfPath = Path.Combine(
@@ -36,21 +31,21 @@ namespace Codeium_Security.Tests
 
             var result = await _fixture.ProcessingService.ProcessFileAsync(pdfPath, Path.GetFileName(pdfPath));
 
-            _output.WriteLine($"===== RESULT {fileName} =====");
-            _output.WriteLine($"BankName='{(result.Document as BankDocument)?.BankName}'");
+            Console.WriteLine($"===== RESULT {fileName} =====");
+            Console.WriteLine($"BankName='{(result.Document as BankDocument)?.BankName}'");
             if (result.Document is BankDocument bankDoc)
             {
                 foreach (var acc in bankDoc.Accounts)
                 {
-                    _output.WriteLine($"AccountNumber='{acc.AccountNumber}' SoldeInitial={acc.SoldeInitial} SoldeFinal={acc.SoldeFinal} Tx={acc.Transactions.Count}");
+                    Console.WriteLine($"AccountNumber='{acc.AccountNumber}' SoldeInitial={acc.SoldeInitial} SoldeFinal={acc.SoldeFinal} Tx={acc.Transactions.Count}");
                     int i = 0;
                     foreach (var tx in acc.Transactions)
-                        _output.WriteLine($"[{i++}] {tx.Date} | D={tx.Debit} | C={tx.Credit} | {tx.Libelle}");
+                        Console.WriteLine($"[{i++}] {tx.Date} | D={tx.Debit} | C={tx.Credit} | {tx.Libelle}");
                 }
             }
             else
             {
-                _output.WriteLine($"Document non reconnu comme BankDocument : {result.Document?.GetType().Name ?? "null"}");
+                Console.WriteLine($"Document non reconnu comme BankDocument : {result.Document?.GetType().Name ?? "null"}");
             }
         }
     }

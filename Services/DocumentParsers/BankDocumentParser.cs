@@ -189,10 +189,18 @@ namespace Codeium_Security.Services.DocumentParsers
 
             if (isBh)
             {
+                // Reconstruction en table (positions X/Y des mots OCR) plutot que le texte brut
+                // ligne par ligne : sur certains releves BH (ex. "FAH DISTRIBUTION"), Tesseract lit
+                // la colonne Debit/Credit comme un bloc separe, loin des lignes Date/Libelle
+                // correspondantes, dans l'ordre de lecture brut - le texte plat perd alors tout
+                // lien entre une transaction et son montant (0 transaction extraite). BuildTable
+                // regroupe par position verticale reelle sur la page et reattache correctement
+                // chaque montant a sa ligne, independamment de l'ordre de lecture OCR.
+                var bhRows = engine.BuildTable(lines);
                 var bhDocument = new BankDocument
                 {
                     BankName = "Banque de l'Habitat (BH)",
-                    Accounts = ExtractBhAccountSections(fullText)
+                    Accounts = ExtractBhAccountSections(fullText, bhRows)
                 };
                 return bhDocument;
             }
@@ -1294,9 +1302,17 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 if (isBh)
                 {
-                    
+
                     var bhMatch = Regex.Match(joined,
                         @"^(\d{2}/\d{2}/\d{4})\s+(.+?)\s+(\d{2}/\d{2}/\d{4})\s*(-?\d[\d\s.,]*\d|\d)$");
+
+                    // Variante "FAH DISTRIBUTION" (et similaires) : dates JJMMAA compactes, sans
+                    // slash (ex. "050126 VRST. 2924352 060126 1 100,000"). BhCompactDatePattern
+                    // n'accepte que jour 01-31 / mois 01-12, ce qui empeche un numero de reference
+                    // a 6 chiffres (ex. "292435") d'etre pris a tort pour la date valeur.
+                    if (!bhMatch.Success)
+                        bhMatch = Regex.Match(joined,
+                            $@"^({BhCompactDatePattern})\s+(.+?)\s+({BhCompactDatePattern})\s*(-?\d[\d\s.,]*\d|\d)$");
 
                     if (bhMatch.Success)
                     {
@@ -3018,7 +3034,7 @@ namespace Codeium_Security.Services.DocumentParsers
             int rightCluster = (int)sorted.Skip(bestGapIndex + 1).Average();
             return (leftCluster, rightCluster);
         }
-        private List<BankAccountSection> ExtractBhAccountSections(string fullText)
+        private List<BankAccountSection> ExtractBhAccountSections(string fullText, List<TableRow> rows)
         {
             var sections = new List<BankAccountSection>();
             string documentRib = ExtractRib(fullText);
@@ -3032,7 +3048,7 @@ namespace Codeium_Security.Services.DocumentParsers
                 SoldeInitial = null
             };
 
-            const string BhDatePattern = @"\d{4}-\d{1,2}-\d{1,2}|\d{1,2}[/\-.]\d{1,2}(?:[/\-.]\d{2,4})?";
+            const string BhDatePattern = @"\d{4}-\d{1,2}-\d{1,2}|\d{1,2}[/\-.]\d{1,2}(?:[/\-.]\d{2,4})?|" + BhCompactDatePattern;
 
             int? documentYear = null;
             var bhFullYearMatch = Regex.Match(fullText, @"\b\d{1,2}[/\-.]\d{1,2}[/\-.](\d{4})\b");
@@ -3047,10 +3063,6 @@ namespace Codeium_Security.Services.DocumentParsers
                     documentYear = 2000 + int.Parse(bhShortYearMatch.Groups[1].Value);
             }
 
-            var bhLineRegex = new Regex(
-            $@"^(?:\d+\s+)?({BhDatePattern})\s+(.+?)\s+(?:({BhDatePattern})\s+)?(-?\d[\d\s.,]*\d|\d)\s*$",
-            RegexOptions.IgnoreCase);
-
             var soldeOuvertureRegex = new Regex(@"^(-?\d[\d\s.,]*\d|\d)\s*$");
             var soldeAuLabelRegex = new Regex(@"Solde\s+au\s+\d{2}/\d{2}/\d{4}", RegexOptions.IgnoreCase);
             var soldeAuInlineRegex = new Regex(
@@ -3063,7 +3075,13 @@ namespace Codeium_Security.Services.DocumentParsers
                 @"SOLDE\s+AU\s+\d{1,2}[/\-.]\d{1,2}[/\-.]\d{2,4}\s*(-)?\s*$", RegexOptions.IgnoreCase);
             var bareAmountAnywhereRegex = new Regex(@"(\d{1,3}(?:[ .,]?\d{3})*[.,]\d{2,3})");
 
-            var lines = fullText.Split('\n');
+            // Une "ligne" = une ligne de la table reconstruite par position (rows), pas une ligne
+            // de texte brut OCR : sur ce type de releve, l'ordre de lecture OCR separe parfois le
+            // montant (colonne Debit/Credit) de sa ligne Date/Libelle (voir commentaire dans Parse
+            // au niveau de l'appel a ExtractBhAccountSections). Toute la logique ci-dessous
+            // (regex, garde-fous SOLDE/CLOTURE...) reste inchangee : elle opere juste sur ces
+            // lignes reconstruites au lieu du texte brut.
+            var lines = rows.Select(r => string.Join(" ", r.Cells.Select(c => c.Text))).ToArray();
 
             for (int i = 0; i < lines.Length; i++)
             {
@@ -3166,16 +3184,59 @@ namespace Codeium_Security.Services.DocumentParsers
                 if (Regex.IsMatch(line, @"^Date\s+op[ée]ration|N[o°]\s*du\s+compte|Titulaire\s+du\s+compte|Op[ée]rations\s+du|Extrait\s+de\s+Compte", RegexOptions.IgnoreCase))
                     continue;
 
-                var match = bhLineRegex.Match(line);
-                if (!match.Success)
+                // Decoupage par POSITION des dates plutot qu'un regex monolithique (bhLineRegex,
+                // conserve plus bas pour Solde Ouverture/etc.) : sur les libelles contenant des
+                // fragments de reference isoles (ex. "VERSEMENT TPE 8 4 160126 1 62,400"), un seul
+                // regex avec libelle paresseux + date-valeur optionnelle capturait a tort le
+                // fragment "8" comme debut du groupe montant (qui n'a pas de longueur minimale),
+                // avalant ensuite la vraie date-valeur ET le vrai montant dans un seul bloc
+                // illisible -> transaction ajoutee sans montant (IsLikelyGarbledBhDate le rejetait
+                // ensuite). Chercher les dates par position (BhDatePattern ne matche que des jours
+                // 01-31/mois 01-12, donc jamais un fragment de reference isole) elimine cette
+                // ambiguite : 1ere date = date operation, derniere date trouvee ensuite = date
+                // valeur (si presente), tout ce qui suit = montant.
+                var bhDateTokenRegex = new Regex(BhDatePattern, RegexOptions.IgnoreCase);
+                var bhDateMatches = bhDateTokenRegex.Matches(line);
+                if (bhDateMatches.Count == 0)
                 {
                     Console.WriteLine($"[BH-WARN] Ligne non reconnue (ignorée) : {line}");
                     continue;
                 }
 
-                string dateOp = match.Groups[1].Value;
-                string libelle = ExtractBhLibelle(match.Groups[2].Value);
-                string montantRaw = match.Groups[4].Value;
+                string dateOp = bhDateMatches[0].Value;
+                string bhRestOfLine = line.Substring(bhDateMatches[0].Index + bhDateMatches[0].Length).TrimStart();
+
+                string rawLibelle;
+                string montantRaw;
+                var bhRestDateMatches = bhDateTokenRegex.Matches(bhRestOfLine);
+                if (bhRestDateMatches.Count > 0)
+                {
+                    var valeurDateMatch = bhRestDateMatches[bhRestDateMatches.Count - 1];
+                    rawLibelle = bhRestOfLine.Substring(0, valeurDateMatch.Index).Trim();
+                    montantRaw = bhRestOfLine.Substring(valeurDateMatch.Index + valeurDateMatch.Length).Trim();
+                }
+                else
+                {
+                    var bhTrailingAmountMatch = Regex.Match(bhRestOfLine, @"(-?\d[\d\s.,]*\d|\d)\s*$");
+                    if (bhTrailingAmountMatch.Success)
+                    {
+                        rawLibelle = bhRestOfLine.Substring(0, bhTrailingAmountMatch.Index).Trim();
+                        montantRaw = bhTrailingAmountMatch.Value.Trim();
+                    }
+                    else
+                    {
+                        rawLibelle = bhRestOfLine;
+                        montantRaw = "";
+                    }
+                }
+
+                if (string.IsNullOrWhiteSpace(rawLibelle) || string.IsNullOrWhiteSpace(montantRaw))
+                {
+                    Console.WriteLine($"[BH-WARN] Ligne non reconnue (ignorée) : {line}");
+                    continue;
+                }
+
+                string libelle = ExtractBhLibelle(rawLibelle);
 
                 var tx = new Transaction
                 {
@@ -3257,6 +3318,14 @@ namespace Codeium_Security.Services.DocumentParsers
                 candidate = $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}/{raw.Substring(4, 4)}";
             else if (raw.Length == 4 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.') && !raw.Contains(' '))
                 candidate = $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}";
+            // Format compact "JJMMAA" (6 chiffres, sans separateur) : certains releves BH
+            // (ex. "FAH DISTRIBUTION") impriment les dates ainsi plutot qu'en JJ/MM/AAAA.
+            // Valide jour/mois avant conversion pour eviter de confondre avec un numero de
+            // reference a 6 chiffres (ex. "292435", mois="24" invalide -> rejete ci-dessous).
+            else if (raw.Length == 6 && !raw.Contains('/') && !raw.Contains('-') && !raw.Contains('.') && !raw.Contains(' ')
+                && int.TryParse(raw.Substring(0, 2), out int compactDay) && compactDay >= 1 && compactDay <= 31
+                && int.TryParse(raw.Substring(2, 2), out int compactMonth) && compactMonth >= 1 && compactMonth <= 12)
+                candidate = $"{raw.Substring(0, 2)}/{raw.Substring(2, 2)}/{raw.Substring(4, 2)}";
 
         
             var formatsWithYear = new[]
@@ -4089,8 +4158,14 @@ namespace Codeium_Security.Services.DocumentParsers
      
         private static readonly string[] BhDebitKeywords =
         {
-            "PRLV.", "COMMISSION", "T.V.A", "TV.A", "TVA", "COMFORC", "VIR.TN MM BQ"
+            "PRLV.", "COMMISSION", "T.V.A", "TV.A", "TVA", "COMFORC", "VIR.TN MM BQ",
+            "VIR.ORDON", "PAIEMENT CHQ", "RETRAIT"
         };
+
+        // Date "JJMMAA" compacte (6 chiffres, sans slash) utilisee par certains releves BH -
+        // jour 01-31 / mois 01-12 uniquement, pour ne jamais confondre avec un numero de
+        // reference a 6 chiffres (voir usages dans NormalizeDate et le parsing des lignes BH).
+        private const string BhCompactDatePattern = @"(?:0[1-9]|[12]\d|3[01])(?:0[1-9]|1[0-2])\d{2}";
 
         private bool IsBhDebitLibelle(string libelle)
         {
