@@ -206,7 +206,7 @@ button { font-family: inherit; }
   left: 0;
   height: 3px;
   width: 0%;
-  background: linear-gradient(90deg, var(--color-primary), #bfd785);
+  background: var(--color-primary);
   z-index: 300;
   opacity: 0;
   transition: width 0.25s ease, opacity 0.15s ease;

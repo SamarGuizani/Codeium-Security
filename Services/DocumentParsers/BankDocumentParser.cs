@@ -2455,6 +2455,11 @@ namespace Codeium_Security.Services.DocumentParsers
                 // soldeCourant + resolution par variation de solde, voir plus haut).
                 if (!(isBtk && btkAnchorsImplausible) && IsMergedRow(amountCandidates, debitAnchor, creditAnchor, soldeAnchor))
                 {
+                    if (isBiat)
+                    {
+                        Console.WriteLine($"[DIAG-MERGE] libelle='{fullDescription}' debitAnchor={debitAnchor} creditAnchor={creditAnchor} soldeAnchor={soldeAnchor} candidates=" +
+                            string.Join(" || ", ((IEnumerable<dynamic>)amountCandidates).Select(c => $"Left={c.Left} Value={c.Value}")));
+                    }
                     foreach (var splitTx in SplitMergedRow(normalizedDate, fullDescription, amountCandidates, debitAnchor, creditAnchor))
                         current.Transactions.Add(splitTx);
                     biatInNoiseZone = false;
