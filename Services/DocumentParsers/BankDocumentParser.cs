@@ -140,10 +140,15 @@ namespace Codeium_Security.Services.DocumentParsers
 
             // Un releve ATB peut mentionner "BTE" en interne (ex. "Encaissement CHQ-BTE ...", un
             // cheque tire sur un compte BTE encaisse par ce client ATB) sans etre lui-meme un
-            // releve BTE - meme classe de faux positif que l'exclusion BTK ci-dessus.
+            // releve BTE - meme classe de faux positif que l'exclusion BTK ci-dessus. Egalement
+            // vu sur un releve ATTIJARI dont une transaction referencait "BTE" comme tiers (meme
+            // defaut que la collision TSB/ATTIJARI documentee plus bas pour isTsbDoc) : sans cette
+            // exclusion, TOUT le document basculait a tort sur le parsing BTE, donnant 0
+            // transaction reconnue.
             bool bteNameHit = (Regex.IsMatch(fullText, @"\bBTE\b", RegexOptions.IgnoreCase)
                     && !fullText.Contains("BTK", StringComparison.OrdinalIgnoreCase)
-                    && !isAtb)
+                    && !isAtb
+                    && !fullText.Contains("ATTIJARI", StringComparison.OrdinalIgnoreCase))
                 || fullText.Contains("Banque de Tunisie et des Emirats", StringComparison.OrdinalIgnoreCase);
 
            
@@ -912,8 +917,19 @@ namespace Codeium_Security.Services.DocumentParsers
             // chiffres de cle - verifie sur RIB "21014014404700244107" -> compte "0144047002441",
             // qui correspond bien au numero de compte imprime sur EXTRAIT TSB.pdf pour ce meme
             // client (PROFESSIONAL SERVICE PARTS).
+            // Le motif isole "TSB" (sans "Tunisian Saudi Bank" en toutes lettres) declenchait a tort
+            // ce sous-format sur des releves d'une AUTRE banque des qu'une transaction mentionnait
+            // un commercant/point de vente nomme "TSB" (ex. "TSB BANK GAMMARTH" sur un releve
+            // ATTIJARI, ou "TSB" n'est que le nom du point de vente, pas la banque du client) -
+            // TOUT le document basculait alors sur le parsing specifique TSB, produisant un resultat
+            // totalement incorrect (transactions fusionnees, banque et periode faux). Restreindre
+            // aux premiers caracteres du document n'est pas fiable : l'ordre des pages dans le texte
+            // OCR concatene n'est pas garanti (verifie sur ce meme cas, ou le texte de la derniere
+            // page apparaissait tres tot dans fullText). Le motif isole "TSB" n'est donc retenu que
+            // si aucune autre banque connue et sans ambiguite n'est deja identifiee dans le document.
+            bool hasUnambiguousOtherBankName = Regex.IsMatch(fullText, @"ATTIJARI", RegexOptions.IgnoreCase);
             bool isTsbDoc = Regex.IsMatch(fullText, @"Tunisi\w*\s+Saudi\s+Bank", RegexOptions.IgnoreCase)
-                || Regex.IsMatch(fullText, @"\bTSB\b", RegexOptions.IgnoreCase)
+                || (!hasUnambiguousOtherBankName && Regex.IsMatch(fullText, @"\bTSB\b", RegexOptions.IgnoreCase))
                 || fullText.Contains("Ma banque et plus", StringComparison.OrdinalIgnoreCase);
             if (isTsbDoc)
             {
@@ -994,6 +1010,27 @@ namespace Codeium_Security.Services.DocumentParsers
                 && Regex.IsMatch(fullText, @"R[ée]f[ée]rence", RegexOptions.IgnoreCase)
                 && !Regex.IsMatch(fullText, @"D[ée]bit.{0,20}Cr[ée]dit", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
+            // ATTIJARI : les lignes de transaction ne portent que "DD MM" (jour/mois, sans annee -
+            // ex. "02 01"), et le champ "Au : DD/MM/YYYY" imprime en en-tete (date de cloture du
+            // releve) est trop proche du code-barres/logo pour etre lu de facon fiable par l'OCR
+            // (souvent tronque en "Au : 0"). Source bien plus fiable et systematiquement lisible :
+            // "SOLDE AU DD/MM/YYYY" (solde d'ouverture), toujours date de la VEILLE du debut de
+            // periode du releve - on en deduit l'annee (et le mois, pour le cas particulier ou la
+            // periode change d'annee, ex. solde au 31/12/2019 -> releve de janvier 2020) SANS
+            // dependre du champ "Au :" illisible. Verifie en priorite (avant le fallback generique
+            // ci-dessous, trop permissif et qui captait a tort un "2019" trouve ailleurs dans le
+            // texte OCR bruite, produisant des dates de transaction toutes fausses d'un an).
+            var attijariSoldeAuMatch = fullText.Contains("ATTIJARI", StringComparison.OrdinalIgnoreCase)
+                ? Regex.Match(fullText, @"SOLDE\s+AU\s+(\d{2})[/\-.](\d{2})[/\-.](\d{4})", RegexOptions.IgnoreCase)
+                : Match.Empty;
+            if (attijariSoldeAuMatch.Success
+                && int.TryParse(attijariSoldeAuMatch.Groups[2].Value, out int attijariSoldeMonth)
+                && int.TryParse(attijariSoldeAuMatch.Groups[3].Value, out int attijariSoldeYear))
+            {
+                documentYear = attijariSoldeMonth == 12 ? attijariSoldeYear + 1 : attijariSoldeYear;
+            }
+            else
+            {
             var dateMatch = Regex.Match(fullText, @"\b(\d{1,2})\s+(\d{1,2})\s+(\d{4})\b");
             if (dateMatch.Success && int.TryParse(dateMatch.Groups[3].Value, out int year))
                 documentYear = year;
@@ -1019,6 +1056,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     if (frDateMatch.Success && int.TryParse(frDateMatch.Groups[1].Value, out year))
                         documentYear = year < 100 ? 2000 + year : year;
                 }
+            }
             }
 
             // Garde-fou : une annee implausible (ex. ABC, ou ce dernier fallback matchait a tort un
@@ -3341,7 +3379,16 @@ namespace Codeium_Security.Services.DocumentParsers
                 return parsed.ToString("dd/MM/yyyy");
             }
 
-            var formatsNoYear = new[] { "dd/MM", "dd-MM", "dd.MM", "dd MM" };
+            // "dd M"/"d MM"/"d M" (mois ou jour a un seul chiffre) en plus de "dd MM" : sur
+            // certains formats (ex. ATTIJARI, colonne date "DD MM" sans annee, cellule mois lue par
+            // l'OCR "1" au lieu de "01"), "dd MM" echouait car "MM" exige strictement 2 chiffres,
+            // ce qui faisait perdre la date de la transaction (donc la ligne entiere, absorbee a
+            // tort dans le libelle de la transaction precedente). Variantes "/" EGALEMENT
+            // necessaires (pas seulement espace) : le bloc juste au-dessus convertit deja tout
+            // "DD MM" (espace) en "DD/M" (slash) avant d'arriver ici - sans "dd/M" etc., aucun des
+            // formats espace ci-dessus ne pouvait plus matcher (candidate ne contient plus
+            // d'espace a ce stade), ce qui annulait entierement cette correction.
+            var formatsNoYear = new[] { "dd/MM", "dd-MM", "dd.MM", "dd MM", "dd M", "d MM", "d M", "dd/M", "d/MM", "d/M" };
             if (DateTime.TryParseExact(candidate, formatsNoYear, CultureInfo.InvariantCulture,
                     DateTimeStyles.NoCurrentDateDefault, out var parsedNoYear))
             {
@@ -4304,13 +4351,26 @@ namespace Codeium_Security.Services.DocumentParsers
             {
                 return "Banque Tuniso-Koweitienne (BTK)";
             }
+            // "ATTIJARI" verifie avant tout sigle court d'une autre banque (BNA, BTE, TSB...) :
+            // ces sigles courts apparaissent couramment dans les libelles de transaction d'un
+            // releve ATTIJARI (nom de commercant, agence tierce, reference de cheque) et faisaient
+            // a tort basculer tout le document sur une autre banque (vu concretement sur
+            // MEJRI RABEB 0380052351368-2020-01/07.pdf, mal identifies TSB puis BTE puis BNA).
+            // "ATTIJARI" est un mot complet et distinctif, sans risque equivalent de collision.
+            if (Regex.IsMatch(text, @"ATTIJARI", RegexOptions.IgnoreCase))
+            {
+                return "Attijari Bank";
+            }
             // Meme garde-fou que bteNameHit dans Parse() : un releve ATB peut mentionner "BTE" en
             // interne (ex. "Encaissement CHQ-BTE ...", un cheque tire sur un compte BTE encaisse
             // par ce client ATB) sans etre lui-meme un releve BTE.
             bool looksLikeAtb = Regex.IsMatch(text, @"\bATB\b", RegexOptions.IgnoreCase)
                 || text.Contains("Arab Tunisian Bank", StringComparison.OrdinalIgnoreCase);
+            // Meme collision que le garde-fou looksLikeAttijariInstead plus bas (TSB) : un releve
+            // ATTIJARI dont une transaction referencait "BTE" comme tiers etait mal identifie.
+            bool looksLikeAttijari = Regex.IsMatch(text, @"ATTIJARI", RegexOptions.IgnoreCase);
             if (text.Contains("Banque de Tunisie et des Emirats", StringComparison.OrdinalIgnoreCase)
-                || (Regex.IsMatch(text, @"\bBTE\b") && !looksLikeAtb))
+                || (Regex.IsMatch(text, @"\bBTE\b") && !looksLikeAtb && !looksLikeAttijari))
             {
                 return "Banque de Tunisie et des Emirats (BTE)";
             }
@@ -4319,8 +4379,15 @@ namespace Codeium_Security.Services.DocumentParsers
             {
                 return "Banque Tuniso-Libyenne (BTL)";
             }
+            // Meme garde-fou que looksLikeAtb ci-dessus : le sigle isole "TSB" (sans "Tunisian
+            // Saudi Bank" en toutes lettres) matche aussi un simple libelle de transaction
+            // mentionnant un commercant/point de vente nomme "TSB" (ex. "TSB BANK GAMMARTH" sur un
+            // releve ATTIJARI, ou "TSB" n'est que le nom du point de vente, pas la banque du
+            // client) - sans cette exclusion, ce releve ATTIJARI etait entierement mal identifie
+            // comme un releve TSB (et parse avec les regles TSB, donnant un resultat faux).
+            bool looksLikeAttijariInstead = Regex.IsMatch(text, @"ATTIJARI", RegexOptions.IgnoreCase);
             if (Regex.IsMatch(text, @"Tunisi\w*\s+Saudi\s+Bank", RegexOptions.IgnoreCase)
-                || Regex.IsMatch(text, @"\bTSB\b", RegexOptions.IgnoreCase)
+                || (!looksLikeAttijariInstead && Regex.IsMatch(text, @"\bTSB\b", RegexOptions.IgnoreCase))
                 || text.Contains("Ma banque et plus", StringComparison.OrdinalIgnoreCase))
             {
                 return "Tunisian Saudi Bank (TSB)";
