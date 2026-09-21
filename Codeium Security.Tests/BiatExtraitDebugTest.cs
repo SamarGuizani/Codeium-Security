@@ -20,13 +20,14 @@ namespace Codeium_Security.Tests
         }
 
         [Theory]
-        [InlineData(@"..\..\Images\Releve BH FAH DISTRIBUTION.pdf")]
+        [InlineData(@"C:\Users\USER\Downloads\MEJRI RABEB 0350027246230 DU 01-01-2014 AU 05-02-2018 (CLOTURE).pdf")]
         public async Task DebugAccountStatement(string fileName)
         {
-            string pdfPath = Path.Combine(
-                AppContext.BaseDirectory, "..", "..", "..", "..",
-                "TrainingData", "SourceDocuments", fileName);
-            pdfPath = Path.GetFullPath(pdfPath);
+            string pdfPath = Path.IsPathRooted(fileName)
+                ? fileName
+                : Path.GetFullPath(Path.Combine(
+                    AppContext.BaseDirectory, "..", "..", "..", "..",
+                    "TrainingData", "SourceDocuments", fileName));
             Assert.True(File.Exists(pdfPath), $"Introuvable: {pdfPath}");
 
             var result = await _fixture.ProcessingService.ProcessFileAsync(pdfPath, Path.GetFileName(pdfPath));
