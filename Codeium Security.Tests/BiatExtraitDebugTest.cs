@@ -20,8 +20,7 @@ namespace Codeium_Security.Tests
         }
 
         [Theory]
-        [InlineData(@"C:\Users\USER\OneDrive\Desktop\MEJRI RABEB 0380052351368-2020-01.pdf")]
-        [InlineData(@"C:\Users\USER\OneDrive\Desktop\MEJRI RABEB 0380052351368-2020-07.pdf")]
+        [InlineData(@"C:\Users\USER\Downloads\banque\MEJRI RABEB 1880052351368 DU 26-01-2023 (OUVERTURE) AU 26-11-2024.pdf")]
         public async Task DebugAccountStatement(string fileName)
         {
             string pdfPath = Path.IsPathRooted(fileName)

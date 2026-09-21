@@ -304,7 +304,15 @@ namespace Codeium_Security.Services.DocumentParsers
             // Bruit de bas/haut de page d'un export web (ex. BTK@DIRECT) : URL et compteur de
             // page "X/Y" reimprimes sur chaque page, jamais du texte de transaction pour aucune
             // banque - ajout purement additif, ne retire que ce type de bruit.
-            @"https?://\S+|^\s*\d{1,3}\s*/\s*\d{1,3}\s*$",
+            @"https?://\S+|^\s*\d{1,3}\s*/\s*\d{1,3}\s*$|" +
+            // Bandeau ATTIJARI reimprime sur chaque page (logo/en-tete + pied de page legal
+            // bilingue) : sans ces motifs, ce texte se retrouvait colle au libelle de la
+            // transaction voisine (avant/apres un saut de page) au lieu d'etre ignore comme le
+            // bruit repetitif qu'il est. "I\.?B\.?A\.?N\.?" en plus de "IBAN\b" car imprime avec
+            // des points ("I.B.A.N.") qui cassent la limite de mot du \b existant.
+            @"Identit[ée]\s+Bancaire|I\.?B\.?A\.?N\.?|attijaribank\.com|R\.C\.B\s+\d{4,6}\s+\d{4}|" +
+            @"SA\s+au\s+capital|Site\s+Web\s*:|Attijari\s+bank\b|AGENCE\s+LE\s+KRAM|" +
+            @"Pensez\s+[àa]\s+informer\s+votre\s+agence|Mieux\s+vous\s+(connaitre|connaître|servir)",
             RegexOptions.IgnoreCase);
 
         private LineCategory ClassifyLine(TableRow row, bool hasOpenTransaction)
@@ -1023,11 +1031,25 @@ namespace Codeium_Security.Services.DocumentParsers
             var attijariSoldeAuMatch = fullText.Contains("ATTIJARI", StringComparison.OrdinalIgnoreCase)
                 ? Regex.Match(fullText, @"SOLDE\s+AU\s+(\d{2})[/\-.](\d{2})[/\-.](\d{4})", RegexOptions.IgnoreCase)
                 : Match.Empty;
+            // Sous-format ATTIJARI "EXTRAIT DE COMPTE" (distinct de "RELEVE DE COMPTE" ci-dessus,
+            // peut couvrir plusieurs annees, ex. 26/01/2023 au 26/11/2024) : l'en-tete "Du :
+            // DD/MM/YYYY Au : DD/MM/YYYY" est ici lu correctement par l'OCR (pas de code-barres a
+            // proximite comme sur l'autre sous-format) - utilise en repli quand "SOLDE AU" est
+            // absent. Donne l'annee de DEBUT de periode ; le suivi d'annee ligne a ligne
+            // (attijariRollingYear, plus bas dans la boucle principale) prend le relais pour les
+            // transactions qui basculent dans l'annee suivante au fil du releve.
+            var attijariDuAuMatch = (!attijariSoldeAuMatch.Success && fullText.Contains("ATTIJARI", StringComparison.OrdinalIgnoreCase))
+                ? Regex.Match(fullText, @"\bDu\s*:?\s*\d{2}[/\-.]\d{2}[/\-.](\d{4})", RegexOptions.IgnoreCase)
+                : Match.Empty;
             if (attijariSoldeAuMatch.Success
                 && int.TryParse(attijariSoldeAuMatch.Groups[2].Value, out int attijariSoldeMonth)
                 && int.TryParse(attijariSoldeAuMatch.Groups[3].Value, out int attijariSoldeYear))
             {
                 documentYear = attijariSoldeMonth == 12 ? attijariSoldeYear + 1 : attijariSoldeYear;
+            }
+            else if (attijariDuAuMatch.Success && int.TryParse(attijariDuAuMatch.Groups[1].Value, out int attijariDuYear))
+            {
+                documentYear = attijariDuYear;
             }
             else
             {
@@ -1068,6 +1090,14 @@ namespace Codeium_Security.Services.DocumentParsers
             if (documentYear.HasValue && (documentYear.Value < 2000 || documentYear.Value > 2100))
                 documentYear = null;
 
+            // ATTIJARI "EXTRAIT DE COMPTE" (voir attijariDuAuMatch plus haut) peut couvrir
+            // plusieurs annees (ex. 26/01/2023 au 26/11/2024) - un seul documentYear global ne
+            // suffit alors pas, puisque les dates "DD/MM" (sans annee) doivent basculer sur
+            // l'annee suivante au fil des lignes. Suivi ligne a ligne : demarre a documentYear
+            // (annee de DEBUT de periode), incremente des qu'un mois plus petit que le precedent
+            // est rencontre (retour de decembre a janvier).
+            int? attijariRollingYear = documentYear;
+            int attijariLastMonth = 0;
 
             bool isQnb = fullText.Contains("QNB", StringComparison.OrdinalIgnoreCase);
             List<string> qnbAccountNumbers = new List<string>();
@@ -1985,6 +2015,24 @@ namespace Codeium_Security.Services.DocumentParsers
                     continue;
 
                 string normalizedDate = GetNormalizedDateFromCells(cellTexts, documentYear);
+
+                // Voir attijariRollingYear plus haut : ce releve ATTIJARI peut couvrir plusieurs
+                // annees. Des qu'un mois retombe en dessous du precedent (retour de decembre a
+                // janvier), on avance l'annee suivie et on recalcule la date de cette ligne avec
+                // la bonne annee (documentYear seul, fige au debut de periode, restait bloque sur
+                // la premiere annee pour toutes les lignes suivantes).
+                if (isAttijari && !string.IsNullOrEmpty(normalizedDate)
+                    && DateTime.TryParseExact(normalizedDate, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var attijariRowDate))
+                {
+                    int rowMonth = attijariRowDate.Month;
+                    if (attijariLastMonth != 0 && rowMonth < attijariLastMonth - 6)
+                        attijariRollingYear = (attijariRollingYear ?? attijariRowDate.Year) + 1;
+                    attijariLastMonth = rowMonth;
+
+                    if (attijariRollingYear.HasValue && attijariRollingYear.Value != attijariRowDate.Year)
+                        normalizedDate = new DateTime(attijariRollingYear.Value, attijariRowDate.Month, attijariRowDate.Day).ToString("dd/MM/yyyy");
+                }
+
                 if (string.IsNullOrEmpty(normalizedDate) && isAmenWithOpCode && cellTexts.Count >= 2)
                 {
                     if (Regex.IsMatch(cellTexts[0].Trim(), @"^\d{2}$"))
@@ -2237,6 +2285,17 @@ namespace Codeium_Security.Services.DocumentParsers
 
                 bool isAccountHeaderNoise = LibelleHeaderFooterNoiseRegex.IsMatch(joined);
 
+                // Ligne majoritairement illisible par l'OCR (texte arabe non reconnu, remplace par
+                // des "?" - frequent sur les en-tetes/pieds de page bilingues, ex. ATTIJARI) :
+                // aucune information exploitable, et laissee telle quelle elle produisait de
+                // fausses transactions fantomes (date et montant pris au hasard dans ce charabia).
+                // Verifiee uniquement quand la ligne est assez longue (>=15 caracteres non-espace)
+                // pour ne jamais confondre un vrai libelle court contenant un point d'interrogation
+                // isole avec du bruit OCR.
+                string joinedNonSpace = joined.Replace(" ", "");
+                bool isMostlyUnreadable = joinedNonSpace.Length >= 15
+                    && joinedNonSpace.Count(ch => ch == '?') >= joinedNonSpace.Length / 3;
+
                 bool isNoise = Regex.IsMatch(joined, @"\b(Totaux?|Page\s*\d|Solde\s*(Initial|Final)|[ée]v[èe]nements?|\(\*\)|Solde\s*\(\w+\)\s*au|BTK@?DIRECT|https?://\S+|Report|A\s+[Rr]eporter)", RegexOptions.IgnoreCase)
                      || biatNoiseHit
                      || bnaNoiseHit
@@ -2245,7 +2304,19 @@ namespace Codeium_Security.Services.DocumentParsers
                      || abcNoiseHit
                      || isRepeatedBoilerplate
                      || isAccountHeaderNoise
+                     || isMostlyUnreadable
                      || (isQnb && Regex.IsMatch(joined, @"Cette\s+d[ée]claration\s+sera\s+consid[ée]r[ée]e|dans\s+votre\s+situation\s+de\s+compte|Pour\s+toute\s+r[ée]clamation", RegexOptions.IgnoreCase));
+
+                // Une ligne majoritairement illisible (voir isMostlyUnreadable ci-dessus) doit etre
+                // ignoree meme quand un fragment de chiffres qu'elle contient (ex. un numero de
+                // document/code agence comme "01091562") a ete pris a tort pour une date ET un
+                // montant valides par les heuristiques generiques plus bas - sinon elle produit une
+                // fausse transaction complete (date et montant inventes) au lieu d'etre sautee.
+                // Verifiee ici, AVANT toute utilisation de normalizedDate/amountCandidates,
+                // contrairement au isNoise generique plus bas qui n'est lu que si aucune date n'a
+                // ete detectee sur la ligne.
+                if (isMostlyUnreadable) continue;
+
                 if (string.IsNullOrEmpty(normalizedDate) && amountCandidates.Count > 0)
                 {
                     var dateInLibelle = Regex.Match(joined, @"\b(\d{8})\b");
@@ -3338,6 +3409,16 @@ namespace Codeium_Security.Services.DocumentParsers
         private string NormalizeDate(string raw, int? defaultYear = null)
         {
             raw = raw.Trim();
+
+            // Confusion OCR tres frequente (Tesseract) : le chiffre "0" lu comme la lettre "o"
+            // minuscule quand il est colle a un autre chiffre (ex. "o1" au lieu de "01", "17 o1"
+            // au lieu de "17 01") - sans cette normalisation, ce genre de cellule ne correspondait
+            // a aucun format de date ci-dessous, et la transaction entiere se retrouvait donc
+            // fondue dans le libelle de la transaction precedente au lieu d'etre reconnue comme
+            // une nouvelle ligne. Uniquement "o"/"O" directement adjacent a un chiffre (jamais un
+            // mot ordinaire), donc sans risque pour un libelle contenant par ailleurs cette lettre.
+            raw = Regex.Replace(raw, @"(?<=\d)[oO](?=\d)|(?<=\d)[oO]\b|\b[oO](?=\d)", "0");
+
             string candidate = raw;
 
             if (Regex.IsMatch(raw, @"^\d{1,2}\s+\d{1,2}\s*$") && !raw.Contains('/') && !raw.Contains('-'))
