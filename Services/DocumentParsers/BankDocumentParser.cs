@@ -2156,10 +2156,25 @@ namespace Codeium_Security.Services.DocumentParsers
                     return false;
                 }
 
+                // OCR echoue parfois a lire le tout premier chiffre d'un montant (ex. "1.796,298"
+                // devient "H .000,000"... la cellule ".796,298", ou "20. 000,000" avec un espace
+                // parasite qui casse l'adjacence des groupes de milliers) : AmountRegex, cherchant
+                // une sous-chaine, retrouve alors quand meme un montant plus petit mais FAUX
+                // ("796,298" au lieu de "1.796,298", voire "0,000" au lieu de "20.000,000") sans
+                // jamais echouer - une perte de valeur totalement silencieuse. Detecte ici via tout
+                // caractere non-espace laisse AVANT le match dans la meme cellule (une cellule de
+                // montant correctement lue ne contient jamais que le montant) ; la transaction
+                // correspondante est ensuite signalee pour verification manuelle plutot que de
+                // conserver ce montant tronque sans avertissement.
                 var amountCandidates = mergedWithPos
                     .Select((c, idx) => (Cell: c, Index: idx))
                     .Where(x => !x.Cell.IsContinuationDetail && AmountRegex.IsMatch(x.Cell.Text) && !IsPrecededByDontClause(x.Index))
-                    .Select(x => new { Left = x.Cell.Left, Value = ParseAmount(AmountRegex.Match(x.Cell.Text).Value) })
+                    .Select(x =>
+                    {
+                        var m = AmountRegex.Match(x.Cell.Text);
+                        bool suspect = m.Index > 0 && x.Cell.Text.Substring(0, m.Index).Trim().Length > 0;
+                        return new { Left = x.Cell.Left, Value = ParseAmount(m.Value), Suspect = suspect };
+                    })
                     .ToList();
 
                 
@@ -2194,7 +2209,7 @@ namespace Codeium_Security.Services.DocumentParsers
                             string decPart = digits.Substring(digits.Length - 3);
                             decimal val = decimal.Parse(intPart + "." + decPart, CultureInfo.InvariantCulture);
                             if (neg) val = -val;
-                            return new { Left = c.Left, Value = val };
+                            return new { Left = c.Left, Value = val, Suspect = false };
                         })
                         .ToList();
 
@@ -2402,6 +2417,7 @@ namespace Codeium_Security.Services.DocumentParsers
                         var tx2 = new Transaction { Date = pendingDate, Libelle = fullDesc };
                         AssignAmounts(tx2, amountCandidates, debitAnchor, creditAnchor, soldeAnchor, montantAnchor, isBtk, ref previousSolde, hasSignedAmounts, out var soldeCourantTX, btkAnchorsImplausible);
                         ApplyMovementFallback(tx2, soldeAvant2, soldeCourantTX);
+                        FlagSuspectAmount(tx2, amountCandidates);
                         current.Transactions.Add(tx2);
                         if (isBna) Console.WriteLine($"[BNA-DEBUG] Transaction creee (ligne sans date propre) : Date='{tx2.Date}' Libelle='{tx2.Libelle}' Debit={tx2.Debit} Credit={tx2.Credit}");
                         pendingDate = "";
@@ -2647,6 +2663,7 @@ namespace Codeium_Security.Services.DocumentParsers
                     }
                 }
 
+                FlagSuspectAmount(tx, amountCandidates);
                 current.Transactions.Add(tx);
                 if (isBna) Console.WriteLine($"[BNA-DEBUG] Transaction creee : Date='{tx.Date}' Libelle='{tx.Libelle}' Debit={tx.Debit} Credit={tx.Credit}");
                 biatInNoiseZone = false;
@@ -4225,6 +4242,24 @@ namespace Codeium_Security.Services.DocumentParsers
             decimal diff = soldeCourant.Value - soldeAvant.Value;
             if (diff < 0) tx.Debit = Math.Abs(diff);
             else if (diff > 0) tx.Credit = diff;
+        }
+
+        // Voir la construction de amountCandidates plus haut (marquage Suspect) : un montant dont
+        // le tout premier chiffre a ete perdu par l'OCR est signale ici plutot que garde tel quel,
+        // pour eviter qu'une valeur tronquee (donc fausse, presque toujours trop petite) ne se
+        // glisse dans les totaux sans aucun avertissement.
+        private void FlagSuspectAmount(Transaction tx, dynamic amountCandidates)
+        {
+            bool anySuspect = false;
+            foreach (var cand in amountCandidates)
+            {
+                if (cand.Suspect) { anySuspect = true; break; }
+            }
+            if (!anySuspect) return;
+            if (!(tx.Debit.HasValue || tx.Credit.HasValue)) return;
+            if ((tx.Libelle ?? "").Contains("MONTANT OCR INCERTAIN")) return;
+
+            tx.Libelle = (tx.Libelle + " [MONTANT OCR INCERTAIN - premier chiffre illisible, verifier le releve original]").Trim();
         }
 
         private void ApplyQnbSignRule(Transaction tx)
